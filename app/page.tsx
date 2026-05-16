@@ -56,8 +56,8 @@ export default function HomePage() {
     Hardware
   </Link>
 
-  <Link href="/docs" className="hover:text-black transition">
-    Docs
+  <Link href="/about-us" className="hover:text-black transition">
+    About Us
   </Link>
 
   <Link href="/support" className="hover:text-black transition">

@@ -19,6 +19,7 @@ export const authOptions: NextAuthOptions = {
             name: "Leonard Prenka",
             email: "admin@hoxxes.com",
             role: "admin",
+            organizationId: "hoxxes-main" // ✅ FIX KËTU
           };
         }
 

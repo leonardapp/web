@@ -1,4 +1,5 @@
-import Sidebar from "../navigation/Sidebar";
+import React from "react";
+import Sidebar from "../dashboard/navigation/Sidebar";
 import Topbar from "./Topbar";
 
 export default function DashboardLayout({
@@ -12,7 +13,7 @@ export default function DashboardLayout({
       {/* Sidebar */}
       <Sidebar />
 
-      {/* Main */}
+      {/* Main Area */}
       <div className="flex-1 flex flex-col">
 
         {/* Topbar */}
