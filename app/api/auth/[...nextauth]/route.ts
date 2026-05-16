@@ -10,14 +10,11 @@ const handler = NextAuth({
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        // 🔐 DEMO LOGIN (më vonë lidhet me DB)
         const email = credentials?.email;
         const password = credentials?.password;
 
-        if (
-          email === "admin@hoxxes.com" &&
-          password === "123456"
-        ) {
+        // 🔐 DEMO LOGIN (zëvendësohet me DB më vonë)
+        if (email === "admin@hoxxes.com" && password === "123456") {
           return {
             id: "1",
             name: "Hoxxes Admin",
@@ -40,8 +37,8 @@ const handler = NextAuth({
     async jwt({ token, user }) {
       if (user) {
         token.id = user.id;
-        token.role = user.role;
-        token.organizationId = user.organizationId;
+        token.role = (user as any).role;
+        token.organizationId = (user as any).organizationId;
       }
       return token;
     },
