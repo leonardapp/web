@@ -1,0 +1,72 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/* =========================
+   MULTI TENANT CORE
+========================= */
+
+model Organization {
+  id        String   @id @default(cuid())
+  name      String
+  slug      String   @unique
+  createdAt DateTime @default(now())
+
+  users     User[]
+  modules   Module[]
+}
+
+/* =========================
+   USERS & ROLES
+========================= */
+
+model User {
+  id             String   @id @default(cuid())
+  name           String?
+  email          String   @unique
+  password       String?
+  role           Role     @default(STAFF)
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id])
+
+  createdAt DateTime @default(now())
+}
+
+enum Role {
+  ADMIN
+  OWNER
+  STAFF
+}
+
+/* =========================
+   MODULES (CORE SAAS ENGINE)
+========================= */
+
+model Module {
+  id             String @id @default(cuid())
+  name           String
+  key            String // pos, qr, kitchen, analytics
+  enabled        Boolean @default(true)
+
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id])
+}
+
+/* =========================
+   SUBSCRIPTIONS (future Stripe)
+========================= */
+
+model Subscription {
+  id             String @id @default(cuid())
+  plan           String
+  status         String
+  organizationId String @unique
+
+  createdAt DateTime @default(now())
+}

@@ -1,0 +1,295 @@
+"use client";
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+
+type Step = 1 | 2 | 3 | 4;
+
+export default function HoloBoxPage() {
+  const [step, setStep] = useState<Step>(1);
+
+  // Campaign basics
+  const [brand, setBrand] = useState("");
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
+  // Media
+  const [file, setFile] = useState<File | null>(null);
+
+  // Targeting
+  const [targets, setTargets] = useState<string[]>([]);
+
+  // Schedule
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<string | null>(null);
+
+  function toggleTarget(value: string) {
+    setTargets((prev) =>
+      prev.includes(value)
+        ? prev.filter((t) => t !== value)
+        : [...prev, value]
+    );
+  }
+
+  async function submitCampaign() {
+    setLoading(true);
+    setStatus(null);
+
+    try {
+      const formData = new FormData();
+
+      formData.append("brand", brand);
+      formData.append("title", title);
+      formData.append("description", description);
+      formData.append("targets", JSON.stringify(targets));
+      formData.append("startDate", startDate);
+      formData.append("endDate", endDate);
+
+      if (file) {
+        formData.append("file", file);
+      }
+
+      const res = await fetch("/api/holobox/campaign", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setStatus(data.error || "Failed to create campaign");
+        setLoading(false);
+        return;
+      }
+
+      setStatus("Campaign submitted successfully.");
+
+      // Reset form
+      setStep(1);
+      setBrand("");
+      setTitle("");
+      setDescription("");
+      setFile(null);
+      setTargets([]);
+      setStartDate("");
+      setEndDate("");
+    } catch (error) {
+      setStatus("Error submitting campaign.");
+    }
+
+    setLoading(false);
+  }
+
+  return (
+    <div className="min-h-screen bg-white text-slate-900">
+      {/* HERO */}
+      <section className="max-w-4xl mx-auto px-6 py-16 text-center">
+        <div className="text-xs tracking-[0.35em] uppercase text-slate-400">
+          HoloBox Campaign Studio
+        </div>
+
+        <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
+          Create and Distribute Digital Campaigns
+        </h1>
+
+        <p className="mt-4 text-lg text-slate-500 max-w-2xl mx-auto">
+          Launch advertising campaigns across POS, KDS, kiosks,
+          mobile applications and digital signage.
+        </p>
+      </section>
+
+      {/* STEP INDICATOR */}
+      <section className="max-w-3xl mx-auto px-6">
+        <div className="grid grid-cols-4 gap-4 text-center text-sm">
+          {["Brand", "Content", "Targeting", "Schedule"].map((label, i) => (
+            <div
+              key={label}
+              className={`pb-3 border-b-2 ${
+                step === i + 1
+                  ? "border-black text-black font-medium"
+                  : "border-slate-200 text-slate-400"
+              }`}
+            >
+              {i + 1}. {label}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FORM */}
+      <motion.section
+        key={step}
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="max-w-3xl mx-auto px-6 py-10"
+      >
+        <div className="border rounded-3xl p-8 shadow-sm bg-white">
+          {/* STEP 1 */}
+          {step === 1 && (
+            <div className="space-y-5">
+              <div>
+                <label className="text-sm font-medium">Brand Name</label>
+                <input
+                  value={brand}
+                  onChange={(e) => setBrand(e.target.value)}
+                  placeholder="e.g. Coca-Cola"
+                  className="w-full mt-2 border rounded-xl px-4 py-3"
+                />
+              </div>
+
+              <div>
+                <label className="text-sm font-medium">Campaign Title</label>
+                <input
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                  placeholder="Summer Promotion 2026"
+                  className="w-full mt-2 border rounded-xl px-4 py-3"
+                />
+              </div>
+
+              <div>
+                <label className="text-sm font-medium">Description</label>
+                <textarea
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  placeholder="Describe the campaign objective and content."
+                  className="w-full mt-2 border rounded-xl px-4 py-3 h-32"
+                />
+              </div>
+            </div>
+          )}
+
+          {/* STEP 2 */}
+          {step === 2 && (
+            <div className="space-y-5">
+              <div>
+                <label className="text-sm font-medium">
+                  Upload Creative Assets
+                </label>
+
+                <input
+                  type="file"
+                  accept="video/*,image/*"
+                  onChange={(e) =>
+                    setFile(e.target.files?.[0] || null)
+                  }
+                  className="w-full mt-2"
+                />
+              </div>
+
+              {file && (
+                <div className="text-sm text-slate-500">
+                  Selected file: {file.name}
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* STEP 3 */}
+          {step === 3 && (
+            <div className="space-y-4">
+              <label className="text-sm font-medium">
+                Select Distribution Channels
+              </label>
+
+              {[
+                "POS Screens",
+                "KDS Screens",
+                "Kiosk",
+                "Mobile App",
+                "Digital Signage",
+              ].map((target) => (
+                <label
+                  key={target}
+                  className="flex items-center gap-3"
+                >
+                  <input
+                    type="checkbox"
+                    checked={targets.includes(target)}
+                    onChange={() => toggleTarget(target)}
+                  />
+                  <span>{target}</span>
+                </label>
+              ))}
+            </div>
+          )}
+
+          {/* STEP 4 */}
+          {step === 4 && (
+            <div className="space-y-5">
+              <div>
+                <label className="text-sm font-medium">
+                  Start Date
+                </label>
+                <input
+                  type="date"
+                  value={startDate}
+                  onChange={(e) => setStartDate(e.target.value)}
+                  className="w-full mt-2 border rounded-xl px-4 py-3"
+                />
+              </div>
+
+              <div>
+                <label className="text-sm font-medium">
+                  End Date
+                </label>
+                <input
+                  type="date"
+                  value={endDate}
+                  onChange={(e) => setEndDate(e.target.value)}
+                  className="w-full mt-2 border rounded-xl px-4 py-3"
+                />
+              </div>
+            </div>
+          )}
+
+          {/* ACTIONS */}
+          <div className="flex justify-between mt-10">
+            <button
+              type="button"
+              onClick={() =>
+                setStep((prev) =>
+                  Math.max(1, prev - 1) as Step
+                )
+              }
+              className="px-5 py-3 border rounded-xl"
+            >
+              Back
+            </button>
+
+            {step < 4 ? (
+              <button
+                type="button"
+                onClick={() =>
+                  setStep((prev) => (prev + 1) as Step)
+                }
+                className="px-5 py-3 bg-black text-white rounded-xl"
+              >
+                Next
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={submitCampaign}
+                disabled={loading}
+                className="px-5 py-3 bg-black text-white rounded-xl"
+              >
+                {loading ? "Publishing..." : "Publish Campaign"}
+              </button>
+            )}
+          </div>
+
+          {/* STATUS */}
+          {status && (
+            <div className="mt-6 text-center text-sm text-slate-500">
+              {status}
+            </div>
+          )}
+        </div>
+      </motion.section>
+    </div>
+  );
+}
