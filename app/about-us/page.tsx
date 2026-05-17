@@ -4,75 +4,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Logo from "@/components/Logo";
-
+import Header from "@/components/Header";
 /* HEADER */
-function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  return (
-    <header className="sticky top-0 z-50 bg-white/70 backdrop-blur border-b border-slate-200">
-
-      {/* MOBILE MENU */}
-      {menuOpen && (
-        <div className="fixed inset-0 z-[999] md:hidden">
-          <div
-            className="absolute inset-0 bg-black/40"
-            onClick={() => setMenuOpen(false)}
-          />
-
-          <div className="absolute right-0 top-0 h-full w-[80%] bg-white shadow-xl p-6 flex flex-col gap-6">
-            <button
-              onClick={() => setMenuOpen(false)}
-              className="self-end text-xl"
-            >
-              ✕
-            </button>
-
-            <Link href="/software" onClick={() => setMenuOpen(false)}>
-              Software
-            </Link>
-            <Link href="/hardware" onClick={() => setMenuOpen(false)}>
-              Hardware
-            </Link>
-            <Link href="/support" onClick={() => setMenuOpen(false)}>
-              Support
-            </Link>
-            <Link href="/contact-sales" onClick={() => setMenuOpen(false)}>
-              Contact Sales
-            </Link>
-          </div>
-        </div>
-      )}
-
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Logo size="md" />
-
-        <nav className="hidden md:flex gap-6 text-sm text-slate-500">
-          <Link href="/software">Software</Link>
-          <Link href="/hardware">Hardware</Link>
-          <Link href="/support">Support</Link>
-        </nav>
-
-        <div className="flex items-center gap-3">
-          <Link
-            href="/contact-sales"
-            className="px-4 py-2 bg-black text-white rounded-full text-sm"
-          >
-            Contact Sales
-          </Link>
-
-          {/* HAMBURGER */}
-          <button
-            onClick={() => setMenuOpen(true)}
-            className="md:hidden text-2xl"
-          >
-            ☰
-          </button>
-        </div>
-      </div>
-    </header>
-  );
-}
 
 /* FOOTER */
 function Footer() {

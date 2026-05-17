@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import Logo from "@/components/Logo";
+import Header from "@/components/Header";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -12,9 +13,6 @@ const fadeUp = {
 
 export default function HomePage() {
   const ref = useRef(null);
-
-  // ✅ ONLY ADDITION
-  const [menuOpen, setMenuOpen] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -26,42 +24,6 @@ export default function HomePage() {
 
   return (
     <div className="relative bg-white text-slate-900 overflow-hidden">
-
-      {/* ✅ MOBILE MENU (ONLY ADDITION) */}
-      {menuOpen && (
-        <div className="fixed inset-0 z-[999] md:hidden">
-          <div
-            className="absolute inset-0 bg-black/40"
-            onClick={() => setMenuOpen(false)}
-          />
-
-          <div className="absolute right-0 top-0 h-full w-[80%] bg-white shadow-xl p-6 flex flex-col gap-6">
-            <button
-              onClick={() => setMenuOpen(false)}
-              className="self-end text-xl"
-            >
-              ✕
-            </button>
-
-            <Link href="/software" onClick={() => setMenuOpen(false)}>
-              Software
-            </Link>
-            <Link href="/hardware" onClick={() => setMenuOpen(false)}>
-              Hardware
-            </Link>
-            <Link href="/about-us" onClick={() => setMenuOpen(false)}>
-              About Us
-            </Link>
-            <Link href="/support" onClick={() => setMenuOpen(false)}>
-              Support
-            </Link>
-            <Link href="/download" onClick={() => setMenuOpen(false)}>
-              Download Center
-            </Link>
-          </div>
-        </div>
-      )}
-
       {/* NOISE LAYER */}
       <div
         className="pointer-events-none fixed inset-0 opacity-[0.035] z-50"
@@ -80,65 +42,8 @@ export default function HomePage() {
         <div className="absolute bottom-[-300px] right-[-200px] w-[800px] h-[800px] bg-slate-200/40 blur-[180px] rounded-full" />
       </motion.div>
 
-      {/* NAV */}
-      <header className="sticky top-0 z-50 backdrop-blur-2xl bg-white/60 border-b border-slate-200/60">
-        <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-          <Logo size="md" />
-
-          <nav className="hidden md:flex gap-8 text-sm text-slate-500">
-            <Link href="/software" className="hover:text-black transition">
-              Software
-            </Link>
-
-            <Link href="/hardware" className="hover:text-black transition">
-              Hardware
-            </Link>
-
-            <Link href="/about-us" className="hover:text-black transition">
-              About Us
-            </Link>
-
-            <Link href="/support" className="hover:text-black transition">
-              Support
-            </Link>
-          </nav>
-
-          <Link
-            href="/download"
-            className="text-sm text-slate-500 hover:text-black transition"
-          >
-            Download Center
-          </Link>
-
-          <div className="flex gap-3">
-            <Magnetic>
-              <Link
-                href="https://pos.hoxxes.com/#/login"
-                className="px-4 py-2 border rounded-full text-sm"
-              >
-                POS
-              </Link>
-            </Magnetic>
-
-            <Magnetic>
-              <Link
-                href="https://backoffice.hoxxes.com/#/login"
-                className="px-4 py-2 bg-black text-white rounded-full text-sm"
-              >
-                Backoffice
-              </Link>
-            </Magnetic>
-
-            {/* ✅ HAMBURGER BUTTON */}
-            <button
-              onClick={() => setMenuOpen(true)}
-              className="md:hidden text-2xl"
-            >
-              ☰
-            </button>
-          </div>
-        </div>
-      </header>
+      {/* HEADER */}
+      <Header />
 
       {/* HERO */}
       <section
@@ -178,7 +83,7 @@ export default function HomePage() {
 
           <motion.div
             variants={fadeUp}
-            className="mt-10 flex justify-center gap-4"
+            className="mt-10 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 items-center"
           >
             <Magnetic>
               <Link
@@ -223,13 +128,14 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -6, scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 220 }}
                 className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-md"
               >
                 <h3 className="font-medium">{item[0]}</h3>
                 <p className="text-sm text-slate-500 mt-2">{item[1]}</p>
               </motion.div>
             ))}
-         </div>
+          </div>
         </div>
       </section>
 

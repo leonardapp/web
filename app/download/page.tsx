@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Logo from "@/components/Logo";
+import Header from "@/components/Header";
 
 type Platform = "Windows" | "Android" | "iOS";
 
@@ -51,6 +52,10 @@ export default function DownloadCenter() {
   return (
     <div className="relative min-h-screen bg-white text-slate-900 overflow-hidden">
 
+
+      <Header />
+
+
       {/* NOISE + AMBIENT */}
       <div className="pointer-events-none fixed inset-0 opacity-[0.04] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
@@ -61,30 +66,6 @@ export default function DownloadCenter() {
       <div className="absolute inset-0 -z-10">
         <div className="absolute bottom-[-250px] right-[-200px] w-[800px] h-[800px] bg-slate-200/40 blur-[160px] rounded-full" />
       </div>
-
-      {/* HEADER (IDENTIK SI HOMEPAGE) */}
-      <header className="sticky top-0 z-50 backdrop-blur-2xl bg-white/70 border-b border-slate-200/60">
-        <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-
-          <div className="flex items-center gap-3">
-  <Logo size="sm" />
-</div>
-
-          <nav className="hidden md:flex gap-8 text-sm text-slate-500">
-            <Link href="/software">Software</Link>
-            <Link href="/hardware">Hardware</Link>
-            <Link href="/support">Support</Link>
-            <Link href="/docs">Docs</Link>
-          </nav>
-
-          <Link
-            href="/"
-            className="text-sm px-4 py-2 border rounded-full hover:bg-black hover:text-white transition"
-          >
-            Back Home
-          </Link>
-        </div>
-      </header>
 
       {/* HERO */}
       <section className="max-w-4xl mx-auto px-6 pt-28 pb-16 text-center">

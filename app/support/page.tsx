@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Logo from "@/components/Logo";
+import Header from "@/components/Header";
 
 const supportOptions = [
   {
@@ -32,7 +32,10 @@ export default function SupportPage() {
   return (
     <div className="relative bg-white text-slate-900 overflow-hidden">
 
-      {/* NOISE + AMBIENT LIGHT (si homepage) */}
+      {/* HEADER */}
+      <Header />
+
+      {/* NOISE + AMBIENT */}
       <div
         className="pointer-events-none fixed inset-0 opacity-[0.04]"
         style={{
@@ -43,29 +46,6 @@ export default function SupportPage() {
 
       <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-emerald-200/30 blur-[160px] rounded-full" />
       <div className="absolute bottom-[-250px] right-[-150px] w-[700px] h-[700px] bg-slate-200/40 blur-[160px] rounded-full" />
-
-      {/* HEADER */}
-      <header className="sticky top-0 z-50 backdrop-blur-2xl bg-white/60 border-b border-slate-200/60">
-        <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-3">
-  <Logo size="sm" />
-</div>
-
-          <nav className="hidden md:flex gap-8 text-sm text-slate-500">
-            <Link href="/software">Software</Link>
-            <Link href="/hardware">Hardware</Link>
-            <Link href="/docs">Docs</Link>
-            <Link href="/download">Download</Link>
-          </nav>
-
-          <Link
-            href="/"
-            className="text-sm px-4 py-2 border rounded-full hover:bg-black hover:text-white transition"
-          >
-            Back Home
-          </Link>
-        </div>
-      </header>
 
       {/* HERO */}
       <section className="max-w-5xl mx-auto px-6 py-28 text-center">
@@ -88,7 +68,7 @@ export default function SupportPage() {
       <section className="max-w-6xl mx-auto px-6 pb-32">
         <div className="grid md:grid-cols-3 gap-6">
 
-          {supportOptions.map((item, index) => (
+          {supportOptions.map((item) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 20 }}

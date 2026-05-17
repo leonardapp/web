@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Logo from "@/components/Logo";
+import Header from "@/components/Header";
 
 /* MAGNETIC */
-function Magnetic({ children }: any) {
+function Magnetic({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
       whileHover={{ scale: 1.06 }}
@@ -18,63 +18,7 @@ function Magnetic({ children }: any) {
   );
 }
 
-/* HEADER (same as HomePage) */
-function Header() {
-  return (
-    <header className="sticky top-0 z-50 backdrop-blur-2xl bg-white/60 border-b border-slate-200/60">
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-        <Logo size="md" />
-
-        <nav className="hidden md:flex gap-8 text-sm text-slate-500">
-          <Link href="/software" className="hover:text-black transition">
-            Software
-          </Link>
-
-          <Link href="/hardware" className="hover:text-black transition">
-            Hardware
-          </Link>
-
-          <Link href="/about-us" className="hover:text-black transition">
-            About Us
-          </Link>
-
-          <Link href="/support" className="hover:text-black transition">
-            Support
-          </Link>
-        </nav>
-
-        <Link
-          href="/download"
-          className="text-sm text-slate-500 hover:text-black transition"
-        >
-          Download Center
-        </Link>
-
-        <div className="flex gap-3">
-          <Magnetic>
-            <Link
-              href="https://pos.hoxxes.com/#/login"
-              className="px-4 py-2 border rounded-full text-sm"
-            >
-              POS
-            </Link>
-          </Magnetic>
-
-          <Magnetic>
-            <Link
-              href="https://backoffice.hoxxes.com/#/login"
-              className="px-4 py-2 bg-black text-white rounded-full text-sm"
-            >
-              Backoffice
-            </Link>
-          </Magnetic>
-        </div>
-      </div>
-    </header>
-  );
-}
-
-/* FOOTER (same as HomePage) */
+/* FOOTER */
 function Footer() {
   return (
     <footer className="border-t py-10 text-sm text-slate-500">
@@ -104,7 +48,7 @@ export default function RequestDemoPage() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
     setError("");
@@ -132,7 +76,7 @@ export default function RequestDemoPage() {
 
       setSuccess(true);
       (e.target as HTMLFormElement).reset();
-    } catch (err) {
+    } catch {
       setError("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
@@ -161,6 +105,7 @@ export default function RequestDemoPage() {
       {/* FORM */}
       <section className="max-w-3xl mx-auto px-6 pb-32">
         <form onSubmit={handleSubmit} className="space-y-6">
+
           <input name="name" required placeholder="Full Name"
             className="w-full px-4 py-3 border rounded-2xl focus:ring-2 outline-none" />
 
@@ -181,11 +126,15 @@ export default function RequestDemoPage() {
             <option>20+ Locations</option>
           </select>
 
-          <textarea name="message" rows={5}
+          <textarea
+            name="message"
+            rows={5}
             placeholder="Tell us about your business..."
-            className="w-full px-4 py-3 border rounded-2xl focus:ring-2 outline-none" />
+            className="w-full px-4 py-3 border rounded-2xl focus:ring-2 outline-none"
+          />
 
           {error && <p className="text-red-500 text-sm">{error}</p>}
+
           {success && (
             <p className="text-green-600 text-sm">
               ✅ Request sent successfully. Our team will contact you soon.
