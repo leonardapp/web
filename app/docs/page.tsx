@@ -1,65 +1,252 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Logo from "@/components/Logo";
 
-const modules = [
-  {
-    title: "Products",
-    desc: "Product catalog & management system",
-    slug: "Products"
-  },
-  {
-    title: "Orders",
-    desc: "Order management system",
-    slug: "Orders"
-  },
-  {
-    title: "Payments",
-    desc: "Checkout & payment system",
-    slug: "Payments"
-  },
-  {
-    title: "Inventory",
-    desc: "Stock management system",
-    slug: "Inventory"
-  },
-  {
-    title: "Marketing & Loyalty",
-    desc: "CRM & loyalty system",
-    slug: "Marketing & Loyalty"
-  }
-];
+const DATA: Record<string, string[]> = {
+  "Products": [
+    "Menaxhimi i Kategorive.pdf",
+    "Shtimi ose Editimi i Produktit.pdf",
+    "Importimi i Produktit.pdf",
+    "Rreth Funksionit Çmim i Hapur.pdf",
+    "Modifikues (Modifier).pdf",
+    "Add-On.pdf",
+    "Operacionet Masive.pdf",
+    "Renditja e Produkteve.pdf"
+  ],
+  "Menu": [
+    "Menaxhimi i Menu-ve.pdf",
+    "QR Menu.pdf",
+    "Stili i Menu-së.pdf",
+    "HQ Menu.pdf",
+    "Cilësimet e Menusë HQ.pdf"
+  ],
+  "Tables & QR Code": [
+    "Seksioni i Tavolinave.pdf",
+    "Shtruktura e Tavolinave.pdf",
+    "Shtimi dhe modifikimi i tavolinave.pdf",
+    "Rreth tavolinës për takeaway.pdf",
+    "Rreth Table QR Code.pdf",
+    "QR i përkohshëm dhe QR statik.pdf",
+    "Shtimi i Table QR.pdf"
+  ],
+  "Orders": [
+    "Metoda e Shërbimit.pdf",
+    "Informacioni i Porosisë.pdf",
+    "Faqja e Porosisë.pdf",
+    "Statusi i Tavolinës.pdf",
+    "Abnormal Order.pdf"
+  ],
+  "Payments": [
+    "Ndërfaqja e Pagesës (Checkout Interface).pdf",
+    "Metodat e Pagesës (Payment Method).pdf",
+    "Zbritjet (Discount).pdf"
+  ],
+  "Reports": [
+    "Koha e Ciklit të Raportit Ditor (Daily Report Cycle Time).pdf",
+    "Llojet e Raporteve (Report Types).pdf",
+    "Raporti i HQ dhe dyqanit (HQ and Store Report).pdf"
+  ],
+  "Hardware integration": [
+    "Integrimi i Arkës.pdf",
+    "Si të përdorni Arkën.pdf",
+    "Llojet e Printerave.pdf",
+    "Konfigurimi i Printerit Lokal.pdf"
+  ],
+  "Inventory": [
+    "Inventari dhe Inventari i HQ.pdf",
+    "Si të përdorni menaxhimin e inventarit.pdf",
+    "Lista e Furnitorëve.pdf",
+    "Cilësimet e njësive matëse (Unit Settings).pdf",
+    "Konfigurimi i kategorive të stokut (Stock Category Setting).pdf",
+    "Konfigurimi i artikujve të stokut (Stock Item Setting).pdf",
+    "Konfigurimi i librave të recetave (Cookbook Setting).pdf"
+  ],
+  "Stock management": [
+    "Raporti i Inventarit (Inventory Report).pdf",
+    "Historiku i Stokut (Stock History).pdf",
+    "Numërimi i Stokut (Stock Counting).pdf",
+    "Transferimi i Stokut (Stock Transfer).pdf",
+    "Soku dalës (Outbound Stock).pdf",
+    "Si të menaxhoni stoku dalës (Outbound Stock).pdf",
+    "Stoku Hyrës (Inbound Stock).pdf",
+    "Lista e Inventarit (Inventory List).pdf"
+  ],
+  "Employee & Shift": [
+    "Menaxhimi i Roleve (Role Management).pdf",
+    "Menaxhimi i Llogarive (Account Management).pdf",
+    "Hyrja-Dalja në POS.pdf",
+    "Historia e Turneve (Shift History).pdf",
+    "Konfigurimi i Turneve (Shift Setting).pdf",
+    "Raporti i Turnit (Shift Report).pdf"
+  ],
+  "Attendance": [
+    "Cilësimet e Prezencës (Attendance Setting).pdf",
+    "Kartela e Punch-it (Punch Card).pdf",
+    "Çfarë është Time Card (Kartela e Orarit).pdf",
+    "Raporti i Prezencës (Attendance Report).pdf"
+  ],
+  "Settings": [
+    "Zëri i njoftimit.pdf",
+    "Cilësimi i gjuhës së sistemit.pdf",
+    "Menaxhimi i informacionit të dyqanit.pdf",
+    "Menaxhimi i degëve të dyqaneve.pdf"
+  ],
+  "Marketing & Loyalty": [
+    "Aktivitetet e Marketingut (Voucher Marketing).pdf",
+    "Kupona (Voucher).pdf",
+    "Menaxhimi i Klientëve (Shto, Fshi, Menaxho).pdf",
+    "Mini Program.pdf",
+    "Pikët e klientëve.pdf",
+    "Rimbushja e Membership-it.pdf",
+    "Si të Konfiguroni Mini Programin.pdf"
+  ]
+};
 
-export default function DocsHome() {
+const MODULES = Object.keys(DATA);
+
+export default function DocsPage() {
+  const [search, setSearch] = useState("");
+  const [active, setActive] = useState<string | null>(null);
+
+  const filteredModules = useMemo(() => {
+    return MODULES.filter((m) =>
+      m.toLowerCase().includes(search.toLowerCase())
+    );
+  }, [search]);
+
+  const files = active ? DATA[active] ?? [] : [];
+
   return (
-    <div className="space-y-10">
+    <div className="relative min-h-screen bg-white text-slate-900 overflow-hidden">
+
+      {/* BACKGROUND */}
+      <div className="pointer-events-none fixed inset-0 opacity-[0.04] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
       {/* HEADER */}
-      <div>
-        <h1 className="text-4xl font-semibold tracking-tight">
-          Hoxxes Documentation
+      <header className="sticky top-0 z-50 backdrop-blur-2xl bg-white/70 border-b border-slate-200/60">
+        <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+
+          <div className="flex items-center gap-3">
+            <Logo size="sm" />
+          </div>
+
+          <nav className="hidden md:flex gap-8 text-sm text-slate-500">
+            <Link href="/software">Software</Link>
+            <Link href="/hardware">Hardware</Link>
+            <Link href="/support">Support</Link>
+            <Link href="/download">Download</Link>
+          </nav>
+
+          <Link
+            href="/"
+            className="text-sm px-4 py-2 border rounded-full hover:bg-black hover:text-white transition"
+          >
+            Back Home
+          </Link>
+        </div>
+      </header>
+
+      {/* HERO */}
+      <section className="max-w-4xl mx-auto text-center px-6 py-24">
+        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
+          Documentation Center
         </h1>
-        <p className="text-slate-500 mt-3">
-          Enterprise SaaS documentation system
+
+        <p className="mt-4 text-slate-500">
+          Everything you need to operate Hoxxes systems.
         </p>
-      </div>
+
+        <div className="mt-10">
+          <input
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search modules..."
+            className="w-full md:w-[420px] px-5 py-3 border rounded-full outline-none focus:ring-2 focus:ring-black/10"
+          />
+        </div>
+      </section>
 
       {/* GRID */}
-      <div className="grid md:grid-cols-2 gap-5">
-        {modules.map((m) => (
-          <a
-            key={m.slug}
-            href={`https://hoxxes.app/udhezime/#module=${encodeURIComponent(m.slug)}`}
-            className="border rounded-2xl p-6 bg-white hover:shadow-lg transition"
-          >
-            <h2 className="text-lg font-semibold">{m.title}</h2>
-            <p className="text-slate-500 text-sm mt-2">{m.desc}</p>
-            <div className="text-xs text-slate-400 mt-4">
-              Open legacy documentation →
+      <section className="max-w-6xl mx-auto px-6 pb-32">
+        <div className="grid md:grid-cols-3 gap-6">
+
+          {filteredModules.map((m, i) => (
+            <motion.div
+              key={m}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6, scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 220 }}
+              onClick={() => setActive(m)}
+              className="cursor-pointer p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md"
+            >
+              <div className="text-xs text-slate-400 uppercase tracking-widest">
+                Module {i + 1}
+              </div>
+
+              <h3 className="text-lg font-medium mt-2">{m}</h3>
+
+              <p className="text-sm text-slate-500 mt-2">
+                {DATA[m].length} documents available
+              </p>
+
+              <div className="mt-6 text-sm text-black font-medium">
+                Open →
+              </div>
+            </motion.div>
+          ))}
+
+        </div>
+      </section>
+
+      {/* MODAL */}
+      {active && (
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-6">
+          <div className="bg-white w-full max-w-xl rounded-2xl p-6">
+
+            <div className="flex justify-between items-center">
+              <h2 className="text-lg font-semibold">{active}</h2>
+
+              <button onClick={() => setActive(null)} className="text-slate-500">
+                ✕
+              </button>
             </div>
-          </a>
-        ))}
-      </div>
+
+            <div className="mt-6 space-y-3 max-h-[400px] overflow-auto">
+
+              {files.map((file) => (
+                <a
+                  key={file}
+                  href={`https://hoxxes.app/udhezime/pdf/${encodeURIComponent(active!)}/${encodeURIComponent(file)}`}
+                  target="_blank"
+                  className="block p-3 border rounded-xl hover:bg-slate-50 text-sm"
+                >
+                  {file}
+                </a>
+              ))}
+
+            </div>
+
+          </div>
+        </div>
+      )}
+
+      {/* FOOTER */}
+      <footer className="border-t py-10 text-sm text-slate-500 mt-20">
+        <div className="max-w-6xl mx-auto px-6 flex justify-between">
+          <p>© {new Date().getFullYear()} Hoxxes</p>
+
+          <div className="flex gap-6">
+            <Link href="/software">Software</Link>
+            <Link href="/hardware">Hardware</Link>
+            <Link href="/support">Support</Link>
+          </div>
+        </div>
+      </footer>
 
     </div>
   );

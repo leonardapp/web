@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import AIAssistant from "@/components/AIAssistant";
 
 export const metadata: Metadata = {
   title: "Hoxxes",
@@ -19,7 +18,7 @@ export default function RootLayout({
         {children}
 
         {/* GLOBAL AI ASSISTANT (Stripe / Intercom style) */}
-        <AIAssistant />
+      
 
       </body>
     </html>

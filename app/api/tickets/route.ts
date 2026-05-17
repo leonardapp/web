@@ -4,46 +4,48 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
+    const formData = await req.formData();
 
-    const { name, email, subject, message } = body;
+    const Abonuesi = formData.get("Abonuesi")?.toString();
+    const Email = formData.get("Email")?.toString();
+    const Produkt = formData.get("Produkt")?.toString();
+    const Pershkrimi = formData.get("Përshkrimi")?.toString();
 
-    // 1. EMAIL TEK TI
+    if (!Email || !Abonuesi) {
+      return Response.json({ success: false, message: "Missing fields" }, { status: 400 });
+    }
+
     await resend.emails.send({
       from: "Hoxxes Tickets <onboarding@resend.dev>",
       to: "info@hoxxes.com",
-      subject: `🎫 New Ticket: ${subject}`,
+      subject: `🎫 New Ticket - ${Produkt}`,
       html: `
-        <h2>New Support Ticket</h2>
-        <p><b>Name:</b> ${name}</p>
-        <p><b>Email:</b> ${email}</p>
-        <p><b>Subject:</b> ${subject}</p>
-        <p><b>Message:</b><br/>${message}</p>
+        <h2>New Ticket</h2>
+        <p><b>Store:</b> ${Abonuesi}</p>
+        <p><b>Email:</b> ${Email}</p>
+        <p><b>Product:</b> ${Produkt}</p>
+        <p><b>Description:</b><br/>${Pershkrimi}</p>
       `,
     });
 
-    // 2. AUTO-REPLY CLIENT
     await resend.emails.send({
       from: "Hoxxes Support <onboarding@resend.dev>",
-      to: email,
-      subject: "We received your ticket 🎫",
+      to: Email,
+      subject: "Ticket received 🎫",
       html: `
-        <div style="font-family:Arial">
-          <h2>Hi ${name},</h2>
-          <p>We received your support ticket:</p>
-
-          <p><b>${subject}</b></p>
-
-          <p>Our team will respond shortly.</p>
-
-          <hr/>
-          <p>Hoxxes Support Team</p>
-        </div>
+        <p>Hi ${Abonuesi},</p>
+        <p>We received your ticket and will respond soon.</p>
       `,
     });
 
-    return Response.json({ success: true });
+    return Response.json({
+      success: true,
+      message: "Ticket sent successfully",
+    });
   } catch (error) {
-    return Response.json({ success: false }, { status: 500 });
+    return Response.json(
+      { success: false, message: "Server error" },
+      { status: 500 }
+    );
   }
 }

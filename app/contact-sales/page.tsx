@@ -1,10 +1,43 @@
 "use client";
 
 import Link from "next/link";
+import Logo from "@/components/Logo";
 
 export default function ContactSalesPage() {
   return (
     <div className="bg-white text-slate-900">
+
+      {/* HEADER (ADDED) */}
+<header className="sticky top-0 z-50 backdrop-blur-2xl bg-white/70 border-b border-slate-200">
+  <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+
+    {/* LOGO */}
+    <Logo size="md" />
+
+    {/* NAV (opsional, nëse e ke) */}
+    <nav className="hidden md:flex gap-8 text-sm text-slate-500">
+      <Link href="/software" className="hover:text-black transition">
+        Software
+      </Link>
+      <Link href="/hardware" className="hover:text-black transition">
+        Hardware
+      </Link>
+      <Link href="/support" className="hover:text-black transition">
+        Support
+      </Link>
+    </nav>
+
+    {/* CTA (opsional) */}
+    <Link
+      href="/download"
+      className="text-sm px-4 py-2 border rounded-full hover:bg-black hover:text-white transition"
+    >
+      Download
+    </Link>
+
+  </div>
+</header>
+
       {/* HERO */}
       <section className="max-w-3xl mx-auto px-6 py-32 text-center">
         <div className="text-xs uppercase tracking-[0.35em] text-slate-400">
@@ -72,6 +105,28 @@ export default function ContactSalesPage() {
           </div>
         </div>
       </section>
+
+      {/* FOOTER (ADDED) */}
+      <footer className="border-t border-slate-200 py-10 text-sm text-slate-500">
+        <div className="max-w-6xl mx-auto px-6 flex justify-between">
+
+          <p>© {new Date().getFullYear()} HOXXES</p>
+
+          <div className="flex gap-6">
+            <Link href="/software" className="hover:text-black transition">
+              Software
+            </Link>
+            <Link href="/hardware" className="hover:text-black transition">
+              Hardware
+            </Link>
+            <Link href="/support" className="hover:text-black transition">
+              Support
+            </Link>
+          </div>
+
+        </div>
+      </footer>
+
     </div>
   );
 }

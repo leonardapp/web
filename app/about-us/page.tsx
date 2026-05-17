@@ -1,112 +1,172 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
+import Logo from "@/components/Logo";
 
-export default function AboutPage() { return ( <div className="min-h-screen bg-white text-slate-900"> {/* HERO */} <section className="max-w-5xl mx-auto px-6 py-24 text-center"> <div className="text-xs tracking-[0.35em] uppercase text-slate-400"> About HOXXES </div>
+/* HEADER */
+function Header() {
+  return (
+    <header className="sticky top-0 z-50 bg-white/70 backdrop-blur border-b border-slate-200">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <Logo size="md" />
 
-<h1 className="mt-6 text-5xl font-semibold tracking-tight">
-      Building the Operating System for Modern Hospitality
-    </h1>
+        <nav className="hidden md:flex gap-6 text-sm text-slate-500">
+          <Link href="/software">Software</Link>
+          <Link href="/hardware">Hardware</Link>
+           <Link href="/support">Support</Link>
+        </nav>
 
-    <p className="mt-6 text-lg text-slate-500 leading-relaxed">
-      HOXXES is an enterprise Restaurant & Retail Operating System designed
-      to unify POS, kitchen operations, self-service ordering, and business
-      intelligence into one seamless platform.
-    </p>
-  </section>
-
-  {/* MISSION */}
-  <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="space-y-4"
-    >
-      <h2 className="text-2xl font-semibold">Our Mission</h2>
-      <p className="text-slate-600 leading-relaxed">
-        We help restaurants and retail businesses operate faster, smarter,
-        and more efficiently by eliminating fragmented systems and replacing
-        them with one unified platform.
-      </p>
-      <p className="text-slate-600 leading-relaxed">
-        From offline POS operations to real-time kitchen synchronization,
-        HOXXES is built for reliability at scale.
-      </p>
-    </motion.div>
-
-    <div className="p-10 border rounded-2xl bg-slate-50">
-      <div className="text-sm text-slate-500">Core Philosophy</div>
-      <div className="mt-4 text-lg font-medium">
-        Simplicity. Reliability. Scale.
+        <Link
+          href="/contact-sales"
+          className="px-4 py-2 bg-black text-white rounded-full text-sm"
+        >
+          Contact Sales
+        </Link>
       </div>
-    </div>
-  </section>
+    </header>
+  );
+}
 
-  {/* VALUES */}
-  <section className="max-w-6xl mx-auto px-6 py-16">
-    <h2 className="text-2xl font-semibold mb-10">What We Stand For</h2>
+/* FOOTER */
+function Footer() {
+  return (
+    <footer className="border-t border-slate-200 py-10 text-sm text-slate-500">
+      <div className="max-w-6xl mx-auto px-6 flex justify-between">
+        <p>© {new Date().getFullYear()} HOXXES</p>
 
-    <div className="grid md:grid-cols-3 gap-6">
-      {[
-        {
-          title: "Reliability First",
-          desc: "Systems designed to work even offline, ensuring business continuity at all times.",
-        },
-        {
-          title: "Enterprise Ready",
-          desc: "Built for single stores and multi-location chains with centralized control.",
-        },
-        {
-          title: "Real-Time Everything",
-          desc: "Orders, inventory, and operations synced instantly across all devices.",
-        },
-      ].map((v, i) => (
+        <div className="flex gap-6">
+          <Link href="/privacy">Privacy</Link>
+          <Link href="/terms">Terms</Link>
+          <Link href="/contact">Contact</Link>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+export default function AboutPage() {
+  return (
+    <div className="min-h-screen bg-white text-slate-900">
+      <Header />
+
+      {/* HERO */}
+      <section className="max-w-5xl mx-auto px-6 py-24 text-center">
+        <div className="text-xs tracking-[0.35em] uppercase text-slate-400">
+          About HOXXES
+        </div>
+
+        <h1 className="mt-6 text-5xl font-semibold tracking-tight">
+          Building the Operating System for Modern Hospitality
+        </h1>
+
+        <p className="mt-6 text-lg text-slate-500 leading-relaxed">
+          HOXXES is an enterprise Restaurant & Retail Operating System designed
+          to unify POS, kitchen operations, self-service ordering, and business
+          intelligence into one seamless platform.
+        </p>
+      </section>
+
+      {/* MISSION */}
+      <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
         <motion.div
-          key={i}
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="p-6 border rounded-2xl hover:shadow-sm transition"
+          className="space-y-4"
         >
-          <div className="font-semibold text-lg">{v.title}</div>
-          <p className="text-sm text-slate-500 mt-2">{v.desc}</p>
+          <h2 className="text-2xl font-semibold">Our Mission</h2>
+          <p className="text-slate-600 leading-relaxed">
+            We help restaurants and retail businesses operate faster, smarter,
+            and more efficiently by eliminating fragmented systems and replacing
+            them with one unified platform.
+          </p>
+          <p className="text-slate-600 leading-relaxed">
+            From offline POS operations to real-time kitchen synchronization,
+            HOXXES is built for reliability at scale.
+          </p>
         </motion.div>
-      ))}
+
+        <div className="p-10 border rounded-2xl bg-slate-50">
+          <div className="text-sm text-slate-500">Core Philosophy</div>
+          <div className="mt-4 text-lg font-medium">
+            Simplicity. Reliability. Scale.
+          </div>
+        </div>
+      </section>
+
+      {/* VALUES */}
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <h2 className="text-2xl font-semibold mb-10">What We Stand For</h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Reliability First",
+              desc: "Systems designed to work even offline, ensuring business continuity at all times.",
+            },
+            {
+              title: "Enterprise Ready",
+              desc: "Built for single stores and multi-location chains with centralized control.",
+            },
+            {
+              title: "Real-Time Everything",
+              desc: "Orders, inventory, and operations synced instantly across all devices.",
+            },
+          ].map((v, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="p-6 border rounded-2xl hover:shadow-sm transition"
+            >
+              <div className="font-semibold text-lg">{v.title}</div>
+              <p className="text-sm text-slate-500 mt-2">{v.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* STORY */}
+      <section className="max-w-5xl mx-auto px-6 py-20">
+        <h2 className="text-2xl font-semibold mb-6">Our Story</h2>
+
+        <p className="text-slate-600 leading-relaxed mb-4">
+          HOXXES started with a simple problem: restaurant systems were slow,
+          disconnected, and unreliable when it mattered most.
+        </p>
+
+        <p className="text-slate-600 leading-relaxed mb-4">
+          We built a platform that works even when the internet doesn’t — and
+          scales from small cafés to enterprise restaurant chains.
+        </p>
+
+        <p className="text-slate-600 leading-relaxed">
+          Today, HOXXES powers POS, KDS, kiosk, and mobile operations in a
+          unified ecosystem.
+        </p>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-black text-white text-center py-20">
+        <h2 className="text-3xl font-semibold">
+          Ready to modernize your operations?
+        </h2>
+
+        <p className="text-slate-300 mt-4">
+          Join the next generation of restaurant & retail systems.
+        </p>
+
+        <Link
+          href="/contact-sales"
+          className="mt-8 inline-block px-6 py-3 rounded-full bg-white text-black font-medium"
+        >
+          Contact Sales
+        </Link>
+      </section>
+
+      <Footer />
     </div>
-  </section>
-
-  {/* STORY */}
-  <section className="max-w-5xl mx-auto px-6 py-20">
-    <h2 className="text-2xl font-semibold mb-6">Our Story</h2>
-
-    <p className="text-slate-600 leading-relaxed mb-4">
-      HOXXES started with a simple problem: restaurant systems were slow,
-      disconnected, and unreliable when it mattered most.
-    </p>
-
-    <p className="text-slate-600 leading-relaxed mb-4">
-      We built a platform that works even when the internet doesn’t — and
-      scales from small cafés to enterprise restaurant chains.
-    </p>
-
-    <p className="text-slate-600 leading-relaxed">
-      Today, HOXXES powers POS, KDS, kiosk, and mobile operations in a
-      unified ecosystem.
-    </p>
-  </section>
-
-  {/* CTA */}
-  <section className="bg-black text-white text-center py-20">
-    <h2 className="text-3xl font-semibold">Ready to modernize your operations?</h2>
-    <p className="text-slate-300 mt-4">
-      Join the next generation of restaurant & retail systems.
-    </p>
-
-    <button className="mt-8 px-6 py-3 rounded-full bg-white text-black font-medium">
-      Contact Sales
-    </button>
-  </section>
-</div>
-
-); }
+  );
+}

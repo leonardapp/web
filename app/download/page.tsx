@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Logo from "@/components/Logo";
 
 type Platform = "Windows" | "Android" | "iOS";
 
@@ -16,10 +17,10 @@ const platforms = [
   },
   {
     platform: "Android" as Platform,
-    title: "HOXXES Android Apps",
-    desc: "POS Terminal, KDS, Kiosk & Mobile apps for Android ecosystem.",
+    title: "HOXXES Android Suite",
+    desc: "POS, KDS, Kiosk & Mobile apps for Android ecosystem.",
     link: "https://hoxxes.app/",
-    badge: "All Android Apps",
+    badge: "All Apps",
   },
   {
     platform: "iOS" as Platform,
@@ -48,7 +49,42 @@ export default function DownloadCenter() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="relative min-h-screen bg-white text-slate-900 overflow-hidden">
+
+      {/* NOISE + AMBIENT */}
+      <div className="pointer-events-none fixed inset-0 opacity-[0.04] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-emerald-200/25 blur-[160px] rounded-full" />
+      </div>
+
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute bottom-[-250px] right-[-200px] w-[800px] h-[800px] bg-slate-200/40 blur-[160px] rounded-full" />
+      </div>
+
+      {/* HEADER (IDENTIK SI HOMEPAGE) */}
+      <header className="sticky top-0 z-50 backdrop-blur-2xl bg-white/70 border-b border-slate-200/60">
+        <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+
+          <div className="flex items-center gap-3">
+  <Logo size="sm" />
+</div>
+
+          <nav className="hidden md:flex gap-8 text-sm text-slate-500">
+            <Link href="/software">Software</Link>
+            <Link href="/hardware">Hardware</Link>
+            <Link href="/support">Support</Link>
+            <Link href="/docs">Docs</Link>
+          </nav>
+
+          <Link
+            href="/"
+            className="text-sm px-4 py-2 border rounded-full hover:bg-black hover:text-white transition"
+          >
+            Back Home
+          </Link>
+        </div>
+      </header>
 
       {/* HERO */}
       <section className="max-w-4xl mx-auto px-6 pt-28 pb-16 text-center">
@@ -66,8 +102,8 @@ export default function DownloadCenter() {
         </p>
       </section>
 
-      {/* PLATFORM CARDS */}
-      <section className="max-w-5xl mx-auto px-6 pb-24">
+      {/* CARDS */}
+      <section className="max-w-5xl mx-auto px-6 pb-28">
         <div className="grid md:grid-cols-3 gap-6">
 
           {platforms.map((p, i) => (
@@ -75,7 +111,7 @@ export default function DownloadCenter() {
               key={i}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 220 }}
-              className="border rounded-2xl p-6 bg-white shadow-sm hover:shadow-lg transition"
+              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-lg"
             >
               <div className="text-xs text-slate-400 uppercase tracking-widest">
                 {p.badge}
@@ -92,7 +128,7 @@ export default function DownloadCenter() {
               <div className="mt-6">
                 <Link
                   href={p.link}
-                  className="inline-flex items-center text-sm font-medium text-black hover:underline"
+                  className="text-sm font-medium hover:underline"
                 >
                   Open →
                 </Link>
@@ -103,17 +139,16 @@ export default function DownloadCenter() {
         </div>
       </section>
 
-      {/* STRIPE STYLE FOOTER */}
+      {/* VALUE STRIP */}
       <section className="py-24 bg-black text-white text-center">
         <h2 className="text-3xl font-semibold">
           Enterprise-grade distribution system
         </h2>
 
         <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
-          HOXXES automatically delivers the right application for your device and role.
+          HOXXES automatically delivers the right application for your device.
         </p>
       </section>
-
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Logo from "@/components/Logo";
 
 const supportOptions = [
   {
@@ -9,12 +10,12 @@ const supportOptions = [
     description:
       "Step-by-step technical guides for all modules, hardware devices, and integrations inside the Hoxxes ecosystem.",
     cta: "Open Docs",
-    href: "https://hoxxes.app/udhezime",
+    href: "/docs",
   },
   {
     title: "Ticketing System",
     description:
-      "Submit technical issues, track progress, and receive real-time email notifications for every update.",
+      "Submit technical issues, track progress, and receive real-time updates for every request.",
     cta: "Open Tickets",
     href: "https://hoxxes.app/tiketa",
   },
@@ -29,7 +30,42 @@ const supportOptions = [
 
 export default function SupportPage() {
   return (
-    <div className="bg-white text-slate-900">
+    <div className="relative bg-white text-slate-900 overflow-hidden">
+
+      {/* NOISE + AMBIENT LIGHT (si homepage) */}
+      <div
+        className="pointer-events-none fixed inset-0 opacity-[0.04]"
+        style={{
+          backgroundImage:
+            "url('https://grainy-gradients.vercel.app/noise.svg')",
+        }}
+      />
+
+      <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-emerald-200/30 blur-[160px] rounded-full" />
+      <div className="absolute bottom-[-250px] right-[-150px] w-[700px] h-[700px] bg-slate-200/40 blur-[160px] rounded-full" />
+
+      {/* HEADER */}
+      <header className="sticky top-0 z-50 backdrop-blur-2xl bg-white/60 border-b border-slate-200/60">
+        <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+          <div className="flex items-center gap-3">
+  <Logo size="sm" />
+</div>
+
+          <nav className="hidden md:flex gap-8 text-sm text-slate-500">
+            <Link href="/software">Software</Link>
+            <Link href="/hardware">Hardware</Link>
+            <Link href="/docs">Docs</Link>
+            <Link href="/download">Download</Link>
+          </nav>
+
+          <Link
+            href="/"
+            className="text-sm px-4 py-2 border rounded-full hover:bg-black hover:text-white transition"
+          >
+            Back Home
+          </Link>
+        </div>
+      </header>
 
       {/* HERO */}
       <section className="max-w-5xl mx-auto px-6 py-28 text-center">
@@ -39,9 +75,7 @@ export default function SupportPage() {
 
         <h1 className="mt-6 text-5xl md:text-6xl font-semibold tracking-tight">
           Everything you need
-          <span className="block text-slate-500">
-            to stay operational
-          </span>
+          <span className="block text-slate-500">to stay operational</span>
         </h1>
 
         <p className="mt-6 text-lg text-slate-500 max-w-2xl mx-auto">
@@ -50,9 +84,9 @@ export default function SupportPage() {
         </p>
       </section>
 
-      {/* OPTIONS */}
-      <section className="max-w-6xl mx-auto px-6 pb-28">
-        <div className="grid md:grid-cols-3 gap-8">
+      {/* CARDS */}
+      <section className="max-w-6xl mx-auto px-6 pb-32">
+        <div className="grid md:grid-cols-3 gap-6">
 
           {supportOptions.map((item, index) => (
             <motion.div
@@ -60,8 +94,9 @@ export default function SupportPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              className="rounded-3xl border border-slate-200 p-8 bg-white shadow-sm hover:shadow-xl transition"
+              whileHover={{ y: -6, scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 220 }}
+              className="p-8 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-md"
             >
               <h2 className="text-xl font-semibold tracking-tight">
                 {item.title}
@@ -71,20 +106,15 @@ export default function SupportPage() {
                 {item.description}
               </p>
 
-              <a
+              <Link
                 href={item.href}
-                target={item.href.startsWith("http") ? "_blank" : undefined}
-                rel={
-                  item.href.startsWith("http")
-                    ? "noopener noreferrer"
-                    : undefined
-                }
                 className="mt-8 inline-flex px-5 py-3 bg-black text-white rounded-full text-sm font-medium hover:bg-slate-800 transition"
               >
                 {item.cta}
-              </a>
+              </Link>
             </motion.div>
           ))}
+
         </div>
       </section>
 
@@ -100,7 +130,7 @@ export default function SupportPage() {
             Our engineering team is available for urgent production issues.
           </p>
 
-          <div className="mt-8 space-y-2 text-base">
+          <div className="mt-8 space-y-2 text-base text-slate-600">
             <div>
               Email:{" "}
               <a className="font-medium hover:underline" href="mailto:info@hoxxes.com">
@@ -124,6 +154,19 @@ export default function SupportPage() {
           </Link>
         </div>
       </section>
+
+      {/* FOOTER */}
+      <footer className="border-t py-10 text-sm text-slate-500">
+        <div className="max-w-6xl mx-auto px-6 flex justify-between">
+          <p>© {new Date().getFullYear()} Hoxxes</p>
+
+          <div className="flex gap-6">
+            <Link href="/software">Software</Link>
+            <Link href="/hardware">Hardware</Link>
+            <Link href="/docs">Docs</Link>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

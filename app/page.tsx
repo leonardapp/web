@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Logo from "@/components/Logo";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -43,9 +44,7 @@ export default function HomePage() {
       {/* NAV */}
       <header className="sticky top-0 z-50 backdrop-blur-2xl bg-white/60 border-b border-slate-200/60">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-          <div className="font-semibold tracking-tight text-lg">
-            HOXXES
-          </div>
+          <Logo size="md" />
 
           <nav className="hidden md:flex gap-8 text-sm text-slate-500">
   <Link href="/software" className="hover:text-black transition">

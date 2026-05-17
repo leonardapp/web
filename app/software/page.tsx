@@ -2,6 +2,60 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Logo from "@/components/Logo";
+
+/* HEADER */
+function Header() {
+  return (
+    <header className="sticky top-0 z-50 bg-white/70 backdrop-blur border-b border-slate-200">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <Logo size="md" />
+
+        <nav className="hidden md:flex gap-6 text-sm text-slate-500">
+          <Link href="/hardware" className="hover:text-black transition">
+            Hardware
+          </Link>
+          <Link href="/download" className="hover:text-black transition">
+            Download
+          </Link>
+          <Link href="/support" className="hover:text-black transition">
+            Support
+          </Link>
+        </nav>
+
+        <Link
+          href="/request-demo"
+          className="px-4 py-2 bg-black text-white rounded-full text-sm"
+        >
+          Request Demo
+        </Link>
+      </div>
+    </header>
+  );
+}
+
+/* FOOTER */
+function Footer() {
+  return (
+    <footer className="border-t border-slate-200 py-10 text-sm text-slate-500">
+      <div className="max-w-6xl mx-auto px-6 flex justify-between">
+        <p>© {new Date().getFullYear()} HOXXES</p>
+
+        <div className="flex gap-6">
+          <Link href="/software" className="hover:text-black transition">
+            Software
+          </Link>
+          <Link href="/hardware" className="hover:text-black transition">
+            Hardware
+          </Link>
+          <Link href="/support" className="hover:text-black transition">
+            Support
+          </Link>
+        </div>
+      </div>
+    </footer>
+  );
+}
 
 const modules = [
   {
@@ -69,6 +123,8 @@ const modules = [
 export default function SoftwarePage() {
   return (
     <div className="bg-white text-slate-900">
+      <Header />
+
       {/* HERO */}
       <section className="max-w-5xl mx-auto px-6 py-32 text-center">
         <div className="text-xs uppercase tracking-[0.35em] text-slate-400">
@@ -91,14 +147,14 @@ export default function SoftwarePage() {
 
       {/* MODULE GRID */}
       <section className="max-w-7xl mx-auto px-6 pb-32">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {modules.map((module, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.03 }}
+              transition={{ delay: Math.min(index * 0.02, 0.2) }}
               whileHover={{ y: -6, scale: 1.02 }}
               className="p-8 border border-slate-200 rounded-3xl bg-white shadow-sm hover:shadow-lg transition"
             >
@@ -155,6 +211,8 @@ export default function SoftwarePage() {
           </Link>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }
