@@ -2,27 +2,73 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import Logo from "@/components/Logo";
 
 /* HEADER */
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 bg-white/70 backdrop-blur border-b border-slate-200">
+
+      {/* MOBILE MENU */}
+      {menuOpen && (
+        <div className="fixed inset-0 z-[999] md:hidden">
+          <div
+            className="absolute inset-0 bg-black/40"
+            onClick={() => setMenuOpen(false)}
+          />
+
+          <div className="absolute right-0 top-0 h-full w-[80%] bg-white shadow-xl p-6 flex flex-col gap-6">
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="self-end text-xl"
+            >
+              ✕
+            </button>
+
+            <Link href="/software" onClick={() => setMenuOpen(false)}>
+              Software
+            </Link>
+            <Link href="/hardware" onClick={() => setMenuOpen(false)}>
+              Hardware
+            </Link>
+            <Link href="/support" onClick={() => setMenuOpen(false)}>
+              Support
+            </Link>
+            <Link href="/contact-sales" onClick={() => setMenuOpen(false)}>
+              Contact Sales
+            </Link>
+          </div>
+        </div>
+      )}
+
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Logo size="md" />
 
         <nav className="hidden md:flex gap-6 text-sm text-slate-500">
           <Link href="/software">Software</Link>
           <Link href="/hardware">Hardware</Link>
-           <Link href="/support">Support</Link>
+          <Link href="/support">Support</Link>
         </nav>
 
-        <Link
-          href="/contact-sales"
-          className="px-4 py-2 bg-black text-white rounded-full text-sm"
-        >
-          Contact Sales
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link
+            href="/contact-sales"
+            className="px-4 py-2 bg-black text-white rounded-full text-sm"
+          >
+            Contact Sales
+          </Link>
+
+          {/* HAMBURGER */}
+          <button
+            onClick={() => setMenuOpen(true)}
+            className="md:hidden text-2xl"
+          >
+            ☰
+          </button>
+        </div>
       </div>
     </header>
   );
@@ -36,9 +82,9 @@ function Footer() {
         <p>© {new Date().getFullYear()} HOXXES</p>
 
         <div className="flex gap-6">
-          <Link href="/privacy">Privacy</Link>
-          <Link href="/terms">Terms</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/software">Software</Link>
+          <Link href="/hardware">Hardware</Link>
+          <Link href="/support">Support</Link>
         </div>
       </div>
     </footer>
@@ -81,10 +127,6 @@ export default function AboutPage() {
             and more efficiently by eliminating fragmented systems and replacing
             them with one unified platform.
           </p>
-          <p className="text-slate-600 leading-relaxed">
-            From offline POS operations to real-time kitchen synchronization,
-            HOXXES is built for reliability at scale.
-          </p>
         </motion.div>
 
         <div className="p-10 border rounded-2xl bg-slate-50">
@@ -103,15 +145,15 @@ export default function AboutPage() {
           {[
             {
               title: "Reliability First",
-              desc: "Systems designed to work even offline, ensuring business continuity at all times.",
+              desc: "Systems designed to work even offline.",
             },
             {
               title: "Enterprise Ready",
-              desc: "Built for single stores and multi-location chains with centralized control.",
+              desc: "Built for single stores and chains.",
             },
             {
               title: "Real-Time Everything",
-              desc: "Orders, inventory, and operations synced instantly across all devices.",
+              desc: "Instant sync across devices.",
             },
           ].map((v, i) => (
             <motion.div
@@ -133,18 +175,7 @@ export default function AboutPage() {
         <h2 className="text-2xl font-semibold mb-6">Our Story</h2>
 
         <p className="text-slate-600 leading-relaxed mb-4">
-          HOXXES started with a simple problem: restaurant systems were slow,
-          disconnected, and unreliable when it mattered most.
-        </p>
-
-        <p className="text-slate-600 leading-relaxed mb-4">
-          We built a platform that works even when the internet doesn’t — and
-          scales from small cafés to enterprise restaurant chains.
-        </p>
-
-        <p className="text-slate-600 leading-relaxed">
-          Today, HOXXES powers POS, KDS, kiosk, and mobile operations in a
-          unified ecosystem.
+          HOXXES started with a simple problem: systems were slow and disconnected.
         </p>
       </section>
 
@@ -153,10 +184,6 @@ export default function AboutPage() {
         <h2 className="text-3xl font-semibold">
           Ready to modernize your operations?
         </h2>
-
-        <p className="text-slate-300 mt-4">
-          Join the next generation of restaurant & retail systems.
-        </p>
 
         <Link
           href="/contact-sales"

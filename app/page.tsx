@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Logo from "@/components/Logo";
 
 const fadeUp = {
@@ -12,6 +12,9 @@ const fadeUp = {
 
 export default function HomePage() {
   const ref = useRef(null);
+
+  // ✅ ONLY ADDITION
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -23,6 +26,42 @@ export default function HomePage() {
 
   return (
     <div className="relative bg-white text-slate-900 overflow-hidden">
+
+      {/* ✅ MOBILE MENU (ONLY ADDITION) */}
+      {menuOpen && (
+        <div className="fixed inset-0 z-[999] md:hidden">
+          <div
+            className="absolute inset-0 bg-black/40"
+            onClick={() => setMenuOpen(false)}
+          />
+
+          <div className="absolute right-0 top-0 h-full w-[80%] bg-white shadow-xl p-6 flex flex-col gap-6">
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="self-end text-xl"
+            >
+              ✕
+            </button>
+
+            <Link href="/software" onClick={() => setMenuOpen(false)}>
+              Software
+            </Link>
+            <Link href="/hardware" onClick={() => setMenuOpen(false)}>
+              Hardware
+            </Link>
+            <Link href="/about-us" onClick={() => setMenuOpen(false)}>
+              About Us
+            </Link>
+            <Link href="/support" onClick={() => setMenuOpen(false)}>
+              Support
+            </Link>
+            <Link href="/download" onClick={() => setMenuOpen(false)}>
+              Download Center
+            </Link>
+          </div>
+        </div>
+      )}
+
       {/* NOISE LAYER */}
       <div
         className="pointer-events-none fixed inset-0 opacity-[0.035] z-50"
@@ -47,29 +86,29 @@ export default function HomePage() {
           <Logo size="md" />
 
           <nav className="hidden md:flex gap-8 text-sm text-slate-500">
-  <Link href="/software" className="hover:text-black transition">
-    Software
-  </Link>
+            <Link href="/software" className="hover:text-black transition">
+              Software
+            </Link>
 
-  <Link href="/hardware" className="hover:text-black transition">
-    Hardware
-  </Link>
+            <Link href="/hardware" className="hover:text-black transition">
+              Hardware
+            </Link>
 
-  <Link href="/about-us" className="hover:text-black transition">
-    About Us
-  </Link>
+            <Link href="/about-us" className="hover:text-black transition">
+              About Us
+            </Link>
 
-  <Link href="/support" className="hover:text-black transition">
-    Support
-  </Link>
-  
-</nav>
-<Link
-  href="/download"
-  className="text-sm text-slate-500 hover:text-black transition"
->
-  Download Center
-</Link>
+            <Link href="/support" className="hover:text-black transition">
+              Support
+            </Link>
+          </nav>
+
+          <Link
+            href="/download"
+            className="text-sm text-slate-500 hover:text-black transition"
+          >
+            Download Center
+          </Link>
 
           <div className="flex gap-3">
             <Magnetic>
@@ -89,6 +128,14 @@ export default function HomePage() {
                 Backoffice
               </Link>
             </Magnetic>
+
+            {/* ✅ HAMBURGER BUTTON */}
+            <button
+              onClick={() => setMenuOpen(true)}
+              className="md:hidden text-2xl"
+            >
+              ☰
+            </button>
           </div>
         </div>
       </header>
@@ -176,14 +223,13 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -6, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 220 }}
                 className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-md"
               >
                 <h3 className="font-medium">{item[0]}</h3>
                 <p className="text-sm text-slate-500 mt-2">{item[1]}</p>
               </motion.div>
             ))}
-          </div>
+         </div>
         </div>
       </section>
 

@@ -2,12 +2,51 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import Logo from "@/components/Logo";
 
 /* HEADER */
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 bg-white/70 backdrop-blur border-b border-slate-200">
+
+      {/* MOBILE MENU */}
+      {menuOpen && (
+        <div className="fixed inset-0 z-[999] md:hidden">
+          <div
+            className="absolute inset-0 bg-black/40"
+            onClick={() => setMenuOpen(false)}
+          />
+
+          <div className="absolute right-0 top-0 h-full w-[80%] bg-white shadow-xl p-6 flex flex-col gap-6">
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="self-end text-xl"
+            >
+              ✕
+            </button>
+
+            <Link href="/software" onClick={() => setMenuOpen(false)}>
+              Software
+            </Link>
+            <Link href="/hardware" onClick={() => setMenuOpen(false)}>
+              Hardware
+            </Link>
+            <Link href="/download" onClick={() => setMenuOpen(false)}>
+              Download
+            </Link>
+            <Link href="/support" onClick={() => setMenuOpen(false)}>
+              Support
+            </Link>
+            <Link href="/request-demo" onClick={() => setMenuOpen(false)}>
+              Request Demo
+            </Link>
+          </div>
+        </div>
+      )}
+
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Logo size="md" />
 
@@ -17,12 +56,22 @@ function Header() {
           <Link href="/support">Support</Link>
         </nav>
 
-        <Link
-          href="/request-demo"
-          className="px-4 py-2 bg-black text-white rounded-full text-sm"
-        >
-          Request Demo
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link
+            href="/request-demo"
+            className="px-4 py-2 bg-black text-white rounded-full text-sm"
+          >
+            Request Demo
+          </Link>
+
+          {/* HAMBURGER */}
+          <button
+            onClick={() => setMenuOpen(true)}
+            className="md:hidden text-2xl"
+          >
+            ☰
+          </button>
+        </div>
       </div>
     </header>
   );
@@ -106,7 +155,6 @@ export default function HardwarePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               whileHover={{ y: -8, scale: 1.02 }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
               className="group border border-slate-200 rounded-3xl bg-white shadow-sm hover:shadow-2xl overflow-hidden flex flex-col"
             >
               <div className="h-56 bg-slate-50 flex items-center justify-center p-6">
@@ -122,26 +170,28 @@ export default function HardwarePage() {
                   {item.highlight}
                 </div>
 
-                <h3 className="mt-2 text-lg font-semibold tracking-tight">
+                <h3 className="mt-2 text-lg font-semibold">
                   {item.title}
                 </h3>
 
-                <p className="text-sm text-slate-500 mt-2 leading-relaxed flex-1">
+                <p className="text-sm text-slate-500 mt-2 flex-1">
                   {item.description}
                 </p>
 
-                <div className="mt-6">
-                  <div className="text-2xl font-bold tracking-tight">
-                    {item.price}
-                  </div>
-                  <div className="text-xs text-slate-400">
-                    Starting price
-                  </div>
-                </div>
+                <div className="flex-1 flex items-center justify-center">
+  <div className="text-center">
+    <div className="text-2xl font-bold tracking-tight">
+      {item.price}
+    </div>
+    <div className="text-xs text-slate-400 mt-1">
+      Starting price
+    </div>
+  </div>
+</div>
 
                 <Link
                   href="/contact-sales"
-                  className="mt-6 inline-flex items-center justify-center w-full rounded-xl bg-black text-white py-3 text-sm font-medium hover:bg-slate-800 transition"
+                  className="mt-6 w-full text-center bg-black text-white py-3 rounded-xl text-sm"
                 >
                   Request Offer
                 </Link>
@@ -153,7 +203,7 @@ export default function HardwarePage() {
 
       {/* CTA */}
       <section className="py-28 bg-slate-50 border-y border-slate-200 text-center">
-        <h2 className="text-4xl font-semibold tracking-tight">
+        <h2 className="text-4xl font-semibold">
           One ecosystem. All your hardware connected.
         </h2>
 
@@ -165,14 +215,14 @@ export default function HardwarePage() {
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
           <Link
             href="/request-demo"
-            className="px-6 py-3 bg-black text-white rounded-full hover:bg-slate-800 transition"
+            className="px-6 py-3 bg-black text-white rounded-full"
           >
             Request Demo
           </Link>
 
           <Link
             href="/contact-sales"
-            className="px-6 py-3 border border-slate-300 rounded-full hover:bg-white transition"
+            className="px-6 py-3 border rounded-full"
           >
             Contact Sales
           </Link>
