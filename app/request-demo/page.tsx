@@ -150,19 +150,25 @@ export default function RequestDemoPage() {
           </button>
         </form>
 
-        <p className="mt-8 text-sm text-slate-500 text-center">
-          Or contact us directly:{" "}
-          <a className="text-black font-medium" href="mailto:info@hoxxes.com">
-            info@hoxxes.com
-          </a>{" "}
-          /{" "}
-          <a className="text-black font-medium" href="tel:+38348106060">
-            +383 48 10 60 60
-          </a>
-        </p>
-      </section>
+<div className="mt-8 text-sm text-slate-500 text-center flex flex-col items-center gap-2">
+  <p>Or contact us directly:</p>
 
-      <Footer />
+  <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+    <a className="text-black font-medium" href="mailto:info@hoxxes.com">
+      info@hoxxes.com
+    </a>
+
+    <span className="hidden sm:inline">/</span>
+
+    <a className="text-black font-medium" href="tel:+38348106060">
+      +383 48 10 60 60
+    </a>
+  </div>
+</div>
+
+</section>
+
+<Footer />
     </div>
   );
 }

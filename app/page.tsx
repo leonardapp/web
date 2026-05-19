@@ -83,7 +83,7 @@ export default function HomePage() {
 
           <motion.div
             variants={fadeUp}
-            className="mt-10 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 items-center"
+            className="mt-10 flex flex-col sm:flex-row sm:justify-center gap-3 sm:gap-4 items-stretch sm:items-center w-full"
           >
             <Magnetic>
               <Link
@@ -182,7 +182,7 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <div className="mt-10 flex gap-4">
+              <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center">
                 <Magnetic>
                   <Link
                     href="/hardware"

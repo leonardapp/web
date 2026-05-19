@@ -40,7 +40,6 @@ export default function Header() {
         {/* RIGHT: ACTION BUTTONS */}
         <div className="flex items-center gap-3">
 
-          {/* Download */}
           <Link
             href="/download"
             className="hidden md:block text-sm text-slate-600 hover:text-black transition"
@@ -48,7 +47,6 @@ export default function Header() {
             Download
           </Link>
 
-          {/* POS */}
           <Link
             href="https://pos.hoxxes.com/#/login"
             className="px-4 py-2 border rounded-full text-sm hover:bg-black hover:text-white transition"
@@ -56,7 +54,6 @@ export default function Header() {
             POS
           </Link>
 
-          {/* Backoffice */}
           <Link
             href="https://backoffice.hoxxes.com/#/login"
             className="px-4 py-2 bg-black text-white rounded-full text-sm hover:bg-slate-800 transition"
@@ -74,63 +71,75 @@ export default function Header() {
         </div>
       </div>
 
-      {/* MOBILE MENU */}
+      {/* ✅ BACKDROP / OVERLAY (OPTION 1) */}
       <AnimatePresence>
         {open && (
-          <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ type: "spring", stiffness: 260, damping: 25 }}
-            className="fixed top-0 right-0 h-full w-[80%] bg-white shadow-2xl z-50 p-6 flex flex-col gap-6 md:hidden"
-          >
-            {/* CLOSE */}
-            <button
+          <>
+            {/* BACKDROP */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               onClick={() => setOpen(false)}
-              className="self-end text-2xl"
+              className="fixed inset-0 bg-white/40 backdrop-blur-sm z-40 md:hidden"
+            />
+
+            {/* MOBILE MENU */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", stiffness: 260, damping: 25 }}
+              className="fixed top-0 right-0 h-full w-[80%] bg-white shadow-2xl z-50 p-6 flex flex-col gap-6 md:hidden"
             >
-              ✕
-            </button>
-
-            {/* LINKS */}
-            <div className="flex flex-col gap-5 text-lg">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="hover:text-black text-slate-700"
-                >
-                  {link.label}
-                </Link>
-              ))}
-
-              <Link
-                href="/download"
+              {/* CLOSE BUTTON */}
+              <button
                 onClick={() => setOpen(false)}
-                className="text-slate-600"
+                className="self-end text-2xl"
               >
-                Download Center
-              </Link>
-            </div>
+                ✕
+              </button>
 
-            {/* ACTIONS */}
-            <div className="mt-auto flex flex-col gap-3">
-              <Link
-                href="https://pos.hoxxes.com/#/login"
-                className="px-4 py-3 border rounded-full text-center"
-              >
-                POS Login
-              </Link>
+              {/* LINKS */}
+              <div className="flex flex-col gap-5 text-lg">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    className="hover:text-black text-slate-700"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
 
-              <Link
-                href="https://backoffice.hoxxes.com/#/login"
-                className="px-4 py-3 bg-black text-white rounded-full text-center"
-              >
-                Backoffice
-              </Link>
-            </div>
-          </motion.div>
+                <Link
+                  href="/download"
+                  onClick={() => setOpen(false)}
+                  className="text-slate-600"
+                >
+                  Download Center
+                </Link>
+              </div>
+
+              {/* ACTIONS */}
+              <div className="mt-auto flex flex-col gap-3">
+                <Link
+                  href="https://pos.hoxxes.com/#/login"
+                  className="px-4 py-3 border rounded-full text-center"
+                >
+                  POS Login
+                </Link>
+
+                <Link
+                  href="https://backoffice.hoxxes.com/#/login"
+                  className="px-4 py-3 bg-black text-white rounded-full text-center"
+                >
+                  Backoffice
+                </Link>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>

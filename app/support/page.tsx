@@ -17,7 +17,7 @@ const supportOptions = [
     description:
       "Submit technical issues, track progress, and receive real-time updates for every request.",
     cta: "Open Tickets",
-    href: "https://hoxxes.app/tiketa",
+    href: "/ticket/",
   },
   {
     title: "Direct Contact",
@@ -136,17 +136,52 @@ export default function SupportPage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t py-10 text-sm text-slate-500">
-        <div className="max-w-6xl mx-auto px-6 flex justify-between">
-          <p>© {new Date().getFullYear()} Hoxxes</p>
+<footer className="border-t border-slate-200 py-10 text-sm text-slate-500">
+  <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-6">
 
-          <div className="flex gap-6">
-            <Link href="/software">Software</Link>
-            <Link href="/hardware">Hardware</Link>
-            <Link href="/docs">Docs</Link>
-          </div>
-        </div>
-      </footer>
+    {/* LEFT */}
+    <p className="text-slate-500">
+      © {new Date().getFullYear()} <span className="font-medium text-slate-700">HOXXES</span>
+    </p>
+
+    {/* RIGHT LINKS */}
+    <div className="flex flex-wrap justify-center items-center gap-6 text-sm">
+
+      <Link
+        href="/software"
+        className="relative group transition hover:text-[#81c719]"
+      >
+        Software
+        <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#81c719] transition-all group-hover:w-full"></span>
+      </Link>
+
+      <Link
+        href="/hardware"
+        className="relative group transition hover:text-[#81c719]"
+      >
+        Hardware
+        <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#81c719] transition-all group-hover:w-full"></span>
+      </Link>
+
+      <Link
+        href="/support"
+        className="relative group transition hover:text-[#81c719]"
+      >
+        Support
+        <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#81c719] transition-all group-hover:w-full"></span>
+      </Link>
+
+      <Link
+        href="/ticket"
+        className="relative group transition hover:text-[#81c719]"
+      >
+        Tickets
+        <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#81c719] transition-all group-hover:w-full"></span>
+      </Link>
+
+    </div>
+  </div>
+</footer>
     </div>
   );
 }
