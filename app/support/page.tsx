@@ -35,20 +35,22 @@ export default function SupportPage() {
       {/* HEADER */}
       <Header />
 
-      {/* NOISE + AMBIENT */}
+      {/* NOISE LAYER (FIXED Z-INDEX) */}
       <div
-        className="pointer-events-none fixed inset-0 opacity-[0.04]"
+        className="pointer-events-none fixed inset-0 opacity-[0.04] z-0"
         style={{
           backgroundImage:
             "url('https://grainy-gradients.vercel.app/noise.svg')",
         }}
       />
 
-      <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-emerald-200/30 blur-[160px] rounded-full" />
-      <div className="absolute bottom-[-250px] right-[-150px] w-[700px] h-[700px] bg-slate-200/40 blur-[160px] rounded-full" />
+      {/* AMBIENT BLURS */}
+      <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-emerald-200/30 blur-[160px] rounded-full z-0" />
+      <div className="absolute bottom-[-250px] right-[-150px] w-[700px] h-[700px] bg-slate-200/40 blur-[160px] rounded-full z-0" />
 
       {/* HERO */}
-      <section className="max-w-5xl mx-auto px-6 py-28 text-center">
+      <section className="max-w-5xl mx-auto px-6 py-28 text-center relative z-10">
+
         <div className="text-xs uppercase tracking-[0.35em] text-slate-400">
           Support Infrastructure
         </div>
@@ -65,7 +67,8 @@ export default function SupportPage() {
       </section>
 
       {/* CARDS */}
-      <section className="max-w-6xl mx-auto px-6 pb-32">
+      <section className="max-w-6xl mx-auto px-6 pb-32 relative z-10">
+
         <div className="grid md:grid-cols-3 gap-6">
 
           {supportOptions.map((item) => (
@@ -99,7 +102,8 @@ export default function SupportPage() {
       </section>
 
       {/* CONTACT BLOCK */}
-      <section className="max-w-4xl mx-auto px-6 pb-32">
+      <section className="max-w-4xl mx-auto px-6 pb-32 relative z-10">
+
         <div className="rounded-3xl bg-slate-50 border border-slate-200 p-10 text-center">
 
           <h2 className="text-3xl font-semibold tracking-tight">
@@ -126,62 +130,49 @@ export default function SupportPage() {
             </div>
           </div>
 
+          {/* FIXED BUTTON (MOBILE SAFE) */}
           <Link
-  href="/contact-sales"
-  className="mt-8 inline-flex px-6 py-3 border rounded-full hover:bg-white transition"
->
-  Contact Sales
-</Link>
+            href="/contact-sales"
+            className="mt-8 inline-flex w-full sm:w-auto justify-center px-6 py-3 border border-slate-300 rounded-full text-sm font-medium hover:bg-white transition relative z-10"
+          >
+            Contact Sales
+          </Link>
+
         </div>
       </section>
 
       {/* FOOTER */}
-<footer className="border-t border-slate-200 py-10 text-sm text-slate-500">
-  <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-6">
+      <footer className="border-t border-slate-200 py-10 text-sm text-slate-500 relative z-10">
 
-    {/* LEFT */}
-    <p className="text-slate-500">
-      © {new Date().getFullYear()} <span className="font-medium text-slate-700">HOXXES</span>
-    </p>
+        <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-6">
 
-    {/* RIGHT LINKS */}
-    <div className="flex flex-wrap justify-center items-center gap-6 text-sm">
+          <p className="text-slate-500">
+            © {new Date().getFullYear()}{" "}
+            <span className="font-medium text-slate-700">HOXXES</span>
+          </p>
 
-      <Link
-        href="/software"
-        className="relative group transition hover:text-[#81c719]"
-      >
-        Software
-        <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#81c719] transition-all group-hover:w-full"></span>
-      </Link>
+          <div className="flex flex-wrap justify-center items-center gap-6 text-sm">
 
-      <Link
-        href="/hardware"
-        className="relative group transition hover:text-[#81c719]"
-      >
-        Hardware
-        <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#81c719] transition-all group-hover:w-full"></span>
-      </Link>
+            <Link href="/software" className="hover:text-[#81c719] transition">
+              Software
+            </Link>
 
-      <Link
-        href="/support"
-        className="relative group transition hover:text-[#81c719]"
-      >
-        Support
-        <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#81c719] transition-all group-hover:w-full"></span>
-      </Link>
+            <Link href="/hardware" className="hover:text-[#81c719] transition">
+              Hardware
+            </Link>
 
-      <Link
-        href="/ticket"
-        className="relative group transition hover:text-[#81c719]"
-      >
-        Tickets
-        <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#81c719] transition-all group-hover:w-full"></span>
-      </Link>
+            <Link href="/support" className="hover:text-[#81c719] transition">
+              Support
+            </Link>
 
-    </div>
-  </div>
-</footer>
+            <Link href="/ticket" className="hover:text-[#81c719] transition">
+              Tickets
+            </Link>
+
+          </div>
+
+        </div>
+      </footer>
     </div>
   );
 }

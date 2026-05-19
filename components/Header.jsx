@@ -12,19 +12,19 @@ export default function Header() {
     { href: "/software", label: "Software" },
     { href: "/hardware", label: "Hardware" },
     { href: "/about-us", label: "About Us" },
-    { href: "/support", label: "Support" }
+    { href: "/support", label: "Support" },
   ];
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-2xl bg-white/70 border-b border-slate-200/60">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 
-        {/* LEFT: LOGO */}
+        {/* LOGO */}
         <Link href="/" className="flex items-center">
           <Logo size="md" />
         </Link>
 
-        {/* CENTER: DESKTOP NAV */}
+        {/* DESKTOP NAV */}
         <nav className="hidden md:flex items-center gap-8 text-sm text-slate-600">
           {navLinks.map((link) => (
             <Link
@@ -37,7 +37,7 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* RIGHT: ACTION BUTTONS */}
+        {/* RIGHT ACTIONS */}
         <div className="flex items-center gap-3">
 
           <Link
@@ -71,43 +71,47 @@ export default function Header() {
         </div>
       </div>
 
-      {/* ✅ BACKDROP / OVERLAY (OPTION 1) */}
+      {/* MOBILE MENU */}
       <AnimatePresence>
         {open && (
           <>
-            {/* BACKDROP */}
+            {/* BACKDROP (SINGLE CLEAN ONE) */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setOpen(false)}
-              className="fixed inset-0 bg-white/95 backdrop-blur-xl z-40 md:hidden"
+              className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden"
             />
 
-            {/* MOBILE MENU */}
+            {/* DRAWER */}
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 260, damping: 25 }}
-              className="fixed top-0 right-0 h-full w-[80%] bg-white shadow-2xl z-50 p-6 flex flex-col gap-6 md:hidden"
+              className="fixed top-0 right-0 h-full w-full sm:w-[420px] bg-white z-50 md:hidden flex flex-col shadow-2xl"
             >
-              {/* CLOSE BUTTON */}
-              <button
-                onClick={() => setOpen(false)}
-                className="self-end text-2xl"
-              >
-                ✕
-              </button>
+              {/* HEADER */}
+              <div className="flex items-center justify-between px-6 py-5 border-b">
+                <span className="text-lg font-semibold">Menu</span>
+
+                <button
+                  onClick={() => setOpen(false)}
+                  className="text-2xl"
+                >
+                  ✕
+                </button>
+              </div>
 
               {/* LINKS */}
-              <div className="flex flex-col gap-5 text-lg">
+              <div className="flex flex-col gap-6 p-6 text-lg font-medium">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="hover:text-black text-slate-700"
+                    className="text-slate-700 hover:text-black transition"
                   >
                     {link.label}
                   </Link>
@@ -116,24 +120,24 @@ export default function Header() {
                 <Link
                   href="/download"
                   onClick={() => setOpen(false)}
-                  className="text-slate-600"
+                  className="text-slate-500 text-base pt-2 border-t"
                 >
                   Download Center
                 </Link>
               </div>
 
               {/* ACTIONS */}
-              <div className="mt-auto flex flex-col gap-3">
+              <div className="mt-auto p-6 flex flex-col gap-3 border-t">
                 <Link
                   href="https://pos.hoxxes.com/#/login"
-                  className="px-4 py-3 border rounded-full text-center"
+                  className="w-full text-center py-3 border rounded-full"
                 >
                   POS Login
                 </Link>
 
                 <Link
                   href="https://backoffice.hoxxes.com/#/login"
-                  className="px-4 py-3 bg-black text-white rounded-full text-center"
+                  className="w-full text-center py-3 bg-black text-white rounded-full"
                 >
                   Backoffice
                 </Link>

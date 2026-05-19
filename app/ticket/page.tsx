@@ -1,9 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import Logo from "@/components/Logo";
 import Header from "@/components/Header";
 
 function Footer() {
@@ -27,7 +24,6 @@ function Footer() {
           <Link href="/support" className="hover:text-black transition">
             Support
           </Link>
-        
         </div>
 
       </div>
@@ -37,18 +33,18 @@ function Footer() {
 
 export default function TiketaPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-white overflow-hidden">
 
       {/* HEADER */}
       <Header />
 
-      {/* IFRAME CONTENT */}
-      <div className="flex-1 w-full">
+      {/* MAIN CONTENT */}
+      <main className="flex-1 relative w-full">
         <iframe
           src="https://hoxxes.app/tiketa/"
-          className="w-full h-full min-h-[90vh] border-0"
+          className="absolute inset-0 w-full h-full border-0"
         />
-      </div>
+      </main>
 
       {/* FOOTER */}
       <Footer />
