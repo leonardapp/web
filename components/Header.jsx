@@ -81,7 +81,7 @@ export default function Header() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setOpen(false)}
-              className="fixed inset-0 bg-white/40 backdrop-blur-sm z-40 md:hidden"
+              className="fixed inset-0 bg-white/95 backdrop-blur-xl z-40 md:hidden"
             />
 
             {/* MOBILE MENU */}

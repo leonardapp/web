@@ -127,11 +127,11 @@ export default function SupportPage() {
           </div>
 
           <Link
-            href="/contact-sales"
-            className="mt-8 inline-flex px-6 py-3 border rounded-full hover:bg-white transition"
-          >
-            Contact Sales
-          </Link>
+  href="/contact-sales"
+  className="mt-8 inline-flex px-6 py-3 border rounded-full hover:bg-white transition"
+>
+  Contact Sales
+</Link>
         </div>
       </section>
 

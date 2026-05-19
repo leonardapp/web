@@ -82,27 +82,27 @@ export default function HomePage() {
           </motion.p>
 
           <motion.div
-            variants={fadeUp}
-            className="mt-10 flex flex-col sm:flex-row sm:justify-center gap-3 sm:gap-4 items-stretch sm:items-center w-full"
-          >
-            <Magnetic>
-              <Link
-                href="/request-demo"
-                className="px-6 py-3 bg-black text-white rounded-full"
-              >
-                Request Demo
-              </Link>
-            </Magnetic>
+  variants={fadeUp}
+  className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch"
+>
+  <Magnetic>
+    <Link
+      href="/request-demo"
+      className="w-full sm:w-auto inline-flex justify-center px-6 py-3 bg-black text-white rounded-full"
+    >
+      Request Demo
+    </Link>
+  </Magnetic>
 
-            <Magnetic>
-              <Link
-                href="/software"
-                className="px-6 py-3 border rounded-full"
-              >
-                Explore Platform
-              </Link>
-            </Magnetic>
-          </motion.div>
+  <Magnetic>
+    <Link
+      href="/software"
+      className="w-full sm:w-auto inline-flex justify-center px-6 py-3 border rounded-full"
+    >
+      Explore Platform
+    </Link>
+  </Magnetic>
+</motion.div>
         </motion.div>
       </section>
 
@@ -183,24 +183,24 @@ export default function HomePage() {
               </div>
 
               <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center">
-                <Magnetic>
-                  <Link
-                    href="/hardware"
-                    className="px-6 py-3 bg-black text-white rounded-full"
-                  >
-                    Explore Hardware
-                  </Link>
-                </Magnetic>
+            <Magnetic>
+            <Link
+              href="/hardware"
+              className="w-full sm:w-auto inline-flex justify-center px-6 py-3 bg-black text-white rounded-full"
+            >
+            Explore Hardware
+              </Link>
+            </Magnetic>
 
-                <Magnetic>
-                  <Link
-                    href="/request-demo"
-                    className="px-6 py-3 border rounded-full"
-                  >
-                    Request Demo
-                  </Link>
-                </Magnetic>
-              </div>
+  <Magnetic>
+    <Link
+      href="/request-demo"
+      className="w-full sm:w-auto inline-flex justify-center px-6 py-3 border rounded-full"
+    >
+      Request Demo
+    </Link>
+  </Magnetic>
+</div>
             </motion.div>
 
             {/* RIGHT VISUAL */}

@@ -1,7 +1,10 @@
 "use client";
 
-import Header from "@/components/Header";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import Logo from "@/components/Logo";
+import Header from "@/components/Header";
 
 function Footer() {
   return (
