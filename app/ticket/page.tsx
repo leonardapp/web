@@ -28,7 +28,6 @@ function Footer() {
 export default function TiketaPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white overflow-x-hidden">
-
       {/* HEADER FIXED OVERLAY */}
       <div className="fixed top-0 left-0 w-full z-[99999]">
         <Header />
@@ -36,18 +35,16 @@ export default function TiketaPage() {
 
       {/* PUSH CONTENT BELOW HEADER */}
       <div className="pt-[80px] flex-1 flex flex-col">
-
         {/* MAIN */}
-        <main className="flex-1 relative">
+        <main className="flex-1 relative z-0">
           <iframe
             src="https://hoxxes.app/tiketa/"
-            className="w-full h-[calc(100vh-80px)] border-0"
+            className="relative z-0 w-full h-[calc(100vh-80px)] border-0"
           />
         </main>
 
         {/* FOOTER */}
         <Footer />
-
       </div>
     </div>
   );

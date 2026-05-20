@@ -57,7 +57,7 @@ export default function DownloadCenter() {
       </div>
 
       {/* BACKGROUND LAYERS (SAFE Z-INDEX) */}
-      <div className="pointer-events-none fixed inset-0 opacity-[0.04] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+      <div className="pointer-events-none fixed inset-0 z-0 opacity-[0.04] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
       <div className="fixed inset-0 -z-10">
         <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-emerald-200/25 blur-[160px] rounded-full" />
