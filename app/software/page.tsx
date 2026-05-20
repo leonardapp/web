@@ -93,8 +93,7 @@ const modules = [
 export default function SoftwarePage() {
   return (
     <div className="bg-white text-slate-900">
-
-      {/* HEADER (CORRECT PLACE) */}
+      {/* HEADER */}
       <Header />
 
       {/* HERO */}
@@ -111,10 +110,27 @@ export default function SoftwarePage() {
         </h1>
 
         <p className="mt-6 max-w-3xl mx-auto text-lg text-slate-500 leading-relaxed">
-          HOXXES combines POS, QR ordering, kiosk systems, delivery,
-          kitchen displays, workforce tools and analytics into a
-          single enterprise operating system.
+          HOXXES combines POS, QR ordering, kiosk systems, delivery, kitchen
+          displays, workforce tools and analytics into a single enterprise
+          operating system.
         </p>
+
+        {/* CTA BUTTONS (SOFTWARE + HARDWARE) */}
+        <div className="mt-10 flex justify-center gap-4 flex-wrap">
+          <Link
+            href="/hardware"
+            className="px-6 py-3 border border-slate-300 rounded-full hover:bg-black hover:text-white transition"
+          >
+            Explore Hardware
+          </Link>
+
+          <Link
+            href="/request-demo"
+            className="px-6 py-3 bg-black text-white rounded-full hover:bg-slate-800 transition"
+          >
+            Request Demo
+          </Link>
+        </div>
       </section>
 
       {/* MODULE GRID */}
@@ -143,6 +159,20 @@ export default function SoftwarePage() {
           <h2 className="text-4xl font-semibold">
             Built for enterprise operations.
           </h2>
+
+          <p className="mt-4 text-slate-500">
+            Software and hardware working together as one ecosystem.
+          </p>
+
+          {/* HARDWARE LINK SECONDARY CTA */}
+          <div className="mt-8">
+            <Link
+              href="/hardware"
+              className="text-sm underline text-slate-600 hover:text-black"
+            >
+              View compatible hardware →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -152,11 +182,25 @@ export default function SoftwarePage() {
           Ready to modernize your operations?
         </h2>
 
-        <div className="mt-10 flex justify-center gap-4">
-          <Link href="/request-demo" className="px-6 py-3 bg-black text-white rounded-full">
+        <div className="mt-10 flex justify-center gap-4 flex-wrap">
+          <Link
+            href="/hardware"
+            className="px-6 py-3 border rounded-full hover:bg-black hover:text-white transition"
+          >
+            View Hardware
+          </Link>
+
+          <Link
+            href="/request-demo"
+            className="px-6 py-3 bg-black text-white rounded-full hover:bg-slate-800 transition"
+          >
             Request Demo
           </Link>
-          <Link href="/pricing" className="px-6 py-3 border rounded-full">
+
+          <Link
+            href="/pricing"
+            className="px-6 py-3 border rounded-full hover:bg-black hover:text-white transition"
+          >
             View Pricing
           </Link>
         </div>

@@ -20,7 +20,7 @@ const platforms = [
     platform: "Android" as Platform,
     title: "HOXXES Android Suite",
     desc: "POS, KDS, Kiosk & Mobile apps for Android ecosystem.",
-    link: "https://hoxxes.app/",
+    link: "/apk",
     badge: "All Apps",
   },
   {
