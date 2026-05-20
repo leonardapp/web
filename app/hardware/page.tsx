@@ -6,8 +6,6 @@ import { useState } from "react";
 import Logo from "@/components/Logo";
 import Header from "@/components/Header";
 
-
-
 /* FOOTER */
 function Footer() {
   return (
@@ -110,19 +108,22 @@ export default function HardwarePage() {
                 </p>
 
                 <div className="flex-1 flex items-center justify-center">
-  <div className="text-center">
-    <div className="text-2xl font-bold tracking-tight">
-      {item.price}
-    </div>
-    <div className="text-xs text-slate-400 mt-1">
-      Starting price
-    </div>
-  </div>
-</div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold tracking-tight">
+                      {item.price}
+                    </div>
+                    <div className="text-xs text-slate-400 mt-1">
+                      Starting price
+                    </div>
+                  </div>
+                </div>
 
+                {/* BUTTON UPGRADED ONLY */}
                 <Link
                   href="/contact-sales"
-                  className="mt-6 w-full text-center bg-black text-white py-3 rounded-xl text-sm"
+                  className="mt-6 w-full px-6 py-3 rounded-xl bg-black text-white 
+                  text-sm font-medium text-center hover:bg-slate-800 
+                  transition-all duration-300"
                 >
                   Request Offer
                 </Link>
@@ -143,20 +144,26 @@ export default function HardwarePage() {
           fully synced with your Hoxxes SaaS platform.
         </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+        {/* CTA BUTTONS UPGRADED ONLY */}
+        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+
           <Link
             href="/request-demo"
-            className="px-6 py-3 bg-black text-white rounded-full"
+            className="w-full sm:w-auto px-6 py-3 rounded-full bg-black text-white 
+            hover:bg-slate-800 transition-all duration-300 text-sm font-medium text-center"
           >
             Request Demo
           </Link>
 
           <Link
             href="/contact-sales"
-            className="px-6 py-3 border rounded-full"
+            className="w-full sm:w-auto px-6 py-3 rounded-full border border-slate-300 
+            text-slate-700 hover:bg-black hover:text-white hover:border-black 
+            transition-all duration-300 text-sm font-medium text-center"
           >
             Contact Sales
           </Link>
+
         </div>
       </section>
 

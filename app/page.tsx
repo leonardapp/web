@@ -5,10 +5,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Logo from "@/components/Logo";
 import Header from "@/components/Header";
+import Button from "@/components/Button";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0 }
+  show: { opacity: 1, y: 0 },
 };
 
 export default function HomePage() {
@@ -16,7 +17,7 @@ export default function HomePage() {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1 1"]
+    offset: ["0 1", "1 1"],
   });
 
   const y1 = useTransform(scrollYProgress, [0, 1], [0, -120]);
@@ -29,7 +30,7 @@ export default function HomePage() {
         className="pointer-events-none fixed inset-0 opacity-[0.035] z-50"
         style={{
           backgroundImage:
-            "url('https://grainy-gradients.vercel.app/noise.svg')"
+            "url('https://grainy-gradients.vercel.app/noise.svg')",
         }}
       />
 
@@ -46,10 +47,7 @@ export default function HomePage() {
       <Header />
 
       {/* HERO */}
-      <section
-        ref={ref}
-        className="max-w-4xl mx-auto text-center px-6 py-36"
-      >
+      <section ref={ref} className="max-w-4xl mx-auto text-center px-6 py-36">
         <motion.div
           initial="hidden"
           animate="show"
@@ -81,28 +79,19 @@ export default function HomePage() {
             businesses.
           </motion.p>
 
+          {/* ONLY BUTTON CHANGE */}
           <motion.div
-  variants={fadeUp}
-  className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch"
->
-  <Magnetic>
-    <Link
-      href="/request-demo"
-      className="w-full sm:w-auto inline-flex justify-center px-6 py-3 bg-black text-white rounded-full"
-    >
-      Request Demo
-    </Link>
-  </Magnetic>
+            variants={fadeUp}
+            className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch"
+          >
+            <Button href="/request-demo" variant="primary">
+              Request Demo
+            </Button>
 
-  <Magnetic>
-    <Link
-      href="/software"
-      className="w-full sm:w-auto inline-flex justify-center px-6 py-3 border rounded-full"
-    >
-      Explore Platform
-    </Link>
-  </Magnetic>
-</motion.div>
+            <Button href="/software" variant="outline">
+              Explore Platform
+            </Button>
+          </motion.div>
         </motion.div>
       </section>
 
@@ -120,7 +109,7 @@ export default function HomePage() {
               ["Kiosk OS", "Self-service restaurant flow"],
               ["Delivery Platform", "Branded ordering apps"],
               ["Kitchen System", "Live order orchestration layer"],
-              ["Staff Cloud", "Enterprise workforce control"]
+              ["Staff Cloud", "Enterprise workforce control"],
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -145,7 +134,7 @@ export default function HomePage() {
 
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* LEFT CONTENT */}
+            {/* LEFT */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -164,9 +153,9 @@ export default function HomePage() {
               </h2>
 
               <p className="mt-8 text-lg text-slate-500 leading-relaxed max-w-xl">
-                Android-based kiosk systems designed for high-volume
-                restaurant operations, seamlessly connected with POS,
-                kitchen displays, payments, and analytics.
+                Android-based kiosk systems designed for high-volume restaurant
+                operations, seamlessly connected with POS, kitchen displays,
+                payments, and analytics.
               </p>
 
               <div className="mt-10 grid grid-cols-2 gap-6 text-sm">
@@ -174,7 +163,7 @@ export default function HomePage() {
                   "24” dual-screen display",
                   "Integrated thermal printer",
                   "Payment terminal support",
-                  "Real-time cloud sync"
+                  "Real-time cloud sync",
                 ].map((feature) => (
                   <div key={feature} className="text-slate-600">
                     ✓ {feature}
@@ -182,28 +171,19 @@ export default function HomePage() {
                 ))}
               </div>
 
+              {/* ONLY BUTTON CHANGE */}
               <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center">
-            <Magnetic>
-            <Link
-              href="/hardware"
-              className="w-full sm:w-auto inline-flex justify-center px-6 py-3 bg-black text-white rounded-full"
-            >
-            Explore Hardware
-              </Link>
-            </Magnetic>
+                <Button href="/hardware" variant="primary">
+                  Explore Hardware
+                </Button>
 
-  <Magnetic>
-    <Link
-      href="/request-demo"
-      className="w-full sm:w-auto inline-flex justify-center px-6 py-3 border rounded-full"
-    >
-      Request Demo
-    </Link>
-  </Magnetic>
-</div>
+                <Button href="/request-demo" variant="outline">
+                  Request Demo
+                </Button>
+              </div>
             </motion.div>
 
-            {/* RIGHT VISUAL */}
+            {/* RIGHT */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -211,10 +191,8 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              {/* Glow */}
               <div className="absolute inset-0 bg-emerald-300/20 blur-[100px] rounded-full scale-125" />
 
-              {/* Device Mockup */}
               <div className="relative bg-white border border-slate-200 rounded-[2.5rem] shadow-2xl p-6">
                 <div className="aspect-[4/5] rounded-[2rem] bg-gradient-to-br from-slate-900 to-slate-700 flex items-center justify-center text-white text-center p-10">
                   <div>
@@ -254,32 +232,21 @@ export default function HomePage() {
 
       {/* CTA */}
       <section className="py-40 text-center">
-        <h2 className="text-3xl font-semibold">
-          Built for enterprise scale
-        </h2>
+        <h2 className="text-3xl font-semibold">Built for enterprise scale</h2>
 
         <p className="text-slate-500 mt-4">
           Start your digital transformation today.
         </p>
 
-        <div className="mt-10 flex justify-center gap-4">
-          <Magnetic>
-            <Link
-              href="/request-demo"
-              className="px-6 py-3 bg-black text-white rounded-full"
-            >
-              Request Demo
-            </Link>
-          </Magnetic>
+        {/* ONLY BUTTON CHANGE */}
+        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+          <Button href="/request-demo" variant="primary">
+            Request Demo
+          </Button>
 
-          <Magnetic>
-            <Link
-              href="/contact-sales"
-              className="px-6 py-3 border rounded-full"
-            >
-              Contact Sales
-            </Link>
-          </Magnetic>
+          <Button href="/contact-sales" variant="outline">
+            Contact Sales
+          </Button>
         </div>
       </section>
 
@@ -289,47 +256,12 @@ export default function HomePage() {
           <p>© {new Date().getFullYear()} Hoxxes</p>
 
           <div className="flex items-center gap-8 text-sm text-slate-500">
-  
-  <Link
-    href="/software"
-    className="relative group hover:text-black transition"
-  >
-    Software
-    <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-black transition-all group-hover:w-full"></span>
-  </Link>
-
-  <Link
-    href="/hardware"
-    className="relative group hover:text-black transition"
-  >
-    Hardware
-    <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-black transition-all group-hover:w-full"></span>
-  </Link>
-
-  <Link
-    href="/support"
-    className="relative group hover:text-black transition"
-  >
-    Support
-    <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-black transition-all group-hover:w-full"></span>
-  </Link>
-
-</div>
+            <Link href="/software">Software</Link>
+            <Link href="/hardware">Hardware</Link>
+            <Link href="/support">Support</Link>
+          </div>
         </div>
       </footer>
     </div>
-  );
-}
-
-/* MAGNETIC MICRO-INTERACTION SYSTEM */
-function Magnetic({ children }: any) {
-  return (
-    <motion.div
-      whileHover={{ scale: 1.06 }}
-      whileTap={{ scale: 0.97 }}
-      transition={{ type: "spring", stiffness: 320 }}
-    >
-      {children}
-    </motion.div>
   );
 }

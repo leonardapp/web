@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Logo from "@/components/Logo";
 import Header from "@/components/Header";
-/* HEADER */
 
 /* FOOTER */
 function Footer() {
@@ -112,7 +111,7 @@ export default function AboutPage() {
         </p>
       </section>
 
-      {/* CTA */}
+      {/* CTA (ONLY BUTTON IMPROVED) */}
       <section className="bg-black text-white text-center py-20">
         <h2 className="text-3xl font-semibold">
           Ready to modernize your operations?
@@ -120,7 +119,12 @@ export default function AboutPage() {
 
         <Link
           href="/contact-sales"
-          className="mt-8 inline-block px-6 py-3 rounded-full bg-white text-black font-medium"
+          className="mt-8 inline-flex items-center justify-center px-8 py-4 rounded-full
+                     bg-white text-black font-medium
+                     transition-all duration-300
+                     hover:scale-[1.03] hover:shadow-lg
+                     active:scale-95
+                     w-full sm:w-auto"
         >
           Contact Sales
         </Link>

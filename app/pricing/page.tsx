@@ -31,14 +31,14 @@ export default function PricingPage() {
           <div className="flex items-center gap-3">
             <Link
               href="/software"
-              className="hidden sm:block text-sm text-slate-500 hover:text-black"
+              className="hidden sm:block text-sm text-slate-500 hover:text-black transition"
             >
               Software
             </Link>
 
             <Link
               href="/request-demo"
-              className="text-xs sm:text-sm px-4 py-2 border rounded-full hover:bg-black hover:text-white transition"
+              className="w-full sm:w-auto text-xs sm:text-sm px-4 py-2 border border-slate-300 rounded-full hover:bg-black hover:text-white transition text-center"
             >
               Request Demo
             </Link>
@@ -140,9 +140,10 @@ export default function PricingPage() {
               )}
             </ul>
 
+            {/* BUTTON (FIXED) */}
             <Link
               href="/request-demo"
-              className="mt-6 block text-center bg-black text-white py-3 rounded-full hover:bg-slate-800 transition"
+              className="mt-6 w-full block text-center bg-black text-white py-3 rounded-full hover:bg-slate-800 transition"
             >
               Start Deployment
             </Link>
@@ -196,7 +197,7 @@ export default function PricingPage() {
 
             <Link
               href="/contact-sales"
-              className="mt-5 block text-center bg-black text-white py-2 rounded-full"
+              className="mt-5 w-full block text-center bg-black text-white py-2 rounded-full hover:bg-slate-800 transition"
             >
               Activate
             </Link>
@@ -218,7 +219,7 @@ export default function PricingPage() {
 
             <Link
               href="/contact-sales"
-              className="mt-5 block text-center bg-black text-white py-2 rounded-full"
+              className="mt-5 w-full block text-center bg-black text-white py-2 rounded-full hover:bg-slate-800 transition"
             >
               Request Setup
             </Link>

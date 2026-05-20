@@ -141,34 +141,39 @@ export default function RequestDemoPage() {
             </p>
           )}
 
+          {/* BUTTON FIXED */}
           <button
             disabled={loading}
             type="submit"
-            className="w-full px-6 py-4 bg-black text-white rounded-full font-medium hover:bg-slate-800 transition disabled:opacity-50"
+            className="w-full px-6 py-4 bg-black text-white rounded-full font-medium hover:bg-slate-800 transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? "Sending..." : "Submit Request"}
           </button>
         </form>
 
-<div className="mt-8 text-sm text-slate-500 text-center flex flex-col items-center gap-2">
-  <p>Or contact us directly:</p>
+        {/* CONTACT LINKS (BUTTON STYLE UNIFIED) */}
+        <div className="mt-8 text-sm text-slate-500 text-center flex flex-col items-center gap-3">
+          <p>Or contact us directly:</p>
 
-  <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-    <a className="text-black font-medium" href="mailto:info@hoxxes.com">
-      info@hoxxes.com
-    </a>
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
+            <a
+              className="px-5 py-2 border border-slate-300 rounded-full text-black hover:bg-black hover:text-white transition"
+              href="mailto:info@hoxxes.com"
+            >
+              Email Support
+            </a>
 
-    <span className="hidden sm:inline">/</span>
+            <a
+              className="px-5 py-2 border border-slate-300 rounded-full text-black hover:bg-black hover:text-white transition"
+              href="tel:+38348106060"
+            >
+              Call Us
+            </a>
+          </div>
+        </div>
+      </section>
 
-    <a className="text-black font-medium" href="tel:+38348106060">
-      +383 48 10 60 60
-    </a>
-  </div>
-</div>
-
-</section>
-
-<Footer />
+      <Footer />
     </div>
   );
 }

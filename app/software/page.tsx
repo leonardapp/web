@@ -93,6 +93,7 @@ const modules = [
 export default function SoftwarePage() {
   return (
     <div className="bg-white text-slate-900">
+
       {/* HEADER */}
       <Header />
 
@@ -115,21 +116,26 @@ export default function SoftwarePage() {
           operating system.
         </p>
 
-        {/* CTA BUTTONS (SOFTWARE + HARDWARE) */}
-        <div className="mt-10 flex justify-center gap-4 flex-wrap">
+        {/* CTA BUTTONS (ONLY IMPROVED) */}
+        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+
           <Link
             href="/hardware"
-            className="px-6 py-3 border border-slate-300 rounded-full hover:bg-black hover:text-white transition"
+            className="w-full sm:w-auto px-6 py-3 rounded-full border border-slate-300 
+            text-slate-700 hover:bg-black hover:text-white hover:border-black 
+            transition-all duration-300 text-sm font-medium text-center"
           >
             Explore Hardware
           </Link>
 
           <Link
             href="/request-demo"
-            className="px-6 py-3 bg-black text-white rounded-full hover:bg-slate-800 transition"
+            className="w-full sm:w-auto px-6 py-3 rounded-full bg-black text-white 
+            hover:bg-slate-800 transition-all duration-300 text-sm font-medium text-center"
           >
             Request Demo
           </Link>
+
         </div>
       </section>
 
@@ -164,13 +170,19 @@ export default function SoftwarePage() {
             Software and hardware working together as one ecosystem.
           </p>
 
-          {/* HARDWARE LINK SECONDARY CTA */}
+          {/* LINK IMPROVED ONLY */}
           <div className="mt-8">
             <Link
               href="/hardware"
-              className="text-sm underline text-slate-600 hover:text-black"
+              className="inline-flex items-center text-sm font-medium text-slate-600 
+              hover:text-black transition group"
             >
-              View compatible hardware →
+              <span className="border-b border-transparent group-hover:border-black transition">
+                View compatible hardware
+              </span>
+              <span className="ml-2 group-hover:translate-x-1 transition-transform">
+                →
+              </span>
             </Link>
           </div>
         </div>
@@ -182,27 +194,34 @@ export default function SoftwarePage() {
           Ready to modernize your operations?
         </h2>
 
-        <div className="mt-10 flex justify-center gap-4 flex-wrap">
+        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+
           <Link
             href="/hardware"
-            className="px-6 py-3 border rounded-full hover:bg-black hover:text-white transition"
+            className="w-full sm:w-auto px-6 py-3 rounded-full border border-slate-300 
+            text-slate-700 hover:bg-black hover:text-white hover:border-black 
+            transition-all duration-300 text-sm font-medium text-center"
           >
             View Hardware
           </Link>
 
           <Link
             href="/request-demo"
-            className="px-6 py-3 bg-black text-white rounded-full hover:bg-slate-800 transition"
+            className="w-full sm:w-auto px-6 py-3 rounded-full bg-black text-white 
+            hover:bg-slate-800 transition-all duration-300 text-sm font-medium text-center"
           >
             Request Demo
           </Link>
 
           <Link
             href="/pricing"
-            className="px-6 py-3 border rounded-full hover:bg-black hover:text-white transition"
+            className="w-full sm:w-auto px-6 py-3 rounded-full border border-slate-300 
+            text-slate-700 hover:bg-black hover:text-white hover:border-black 
+            transition-all duration-300 text-sm font-medium text-center"
           >
             View Pricing
           </Link>
+
         </div>
       </section>
 

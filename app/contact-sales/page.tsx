@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import Header from "@/components/Header";
+
 export default function ContactSalesPage() {
   return (
     <div className="bg-white text-slate-900">
@@ -58,17 +59,18 @@ export default function ContactSalesPage() {
             </div>
           </div>
 
+          {/* BUTTONS (FIXED) */}
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="mailto:info@hoxxes.com"
-              className="px-6 py-3 bg-black text-white rounded-full"
+              className="w-full sm:w-auto px-6 py-3 bg-black text-white rounded-full hover:bg-slate-800 transition text-center"
             >
               Email Sales
             </a>
 
             <Link
               href="/request-demo"
-              className="px-6 py-3 border rounded-full"
+              className="w-full sm:w-auto px-6 py-3 border border-slate-300 rounded-full hover:bg-black hover:text-white transition text-center"
             >
               Request Demo
             </Link>
@@ -76,10 +78,9 @@ export default function ContactSalesPage() {
         </div>
       </section>
 
-      {/* FOOTER (ADDED) */}
+      {/* FOOTER */}
       <footer className="border-t border-slate-200 py-10 text-sm text-slate-500">
         <div className="max-w-6xl mx-auto px-6 flex justify-between">
-
           <p>© {new Date().getFullYear()} HOXXES</p>
 
           <div className="flex gap-6">
@@ -93,10 +94,8 @@ export default function ContactSalesPage() {
               Support
             </Link>
           </div>
-
         </div>
       </footer>
-
     </div>
   );
 }
