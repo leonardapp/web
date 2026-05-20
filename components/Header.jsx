@@ -148,14 +148,14 @@ export default function Header() {
                   href="https://pos.hoxxes.com/#/login"
                   className="w-full text-center py-3 border border-slate-300 rounded-full font-medium"
                 >
-                  POS Login
+                  Web POS
                 </Link>
 
                 <Link
                   href="https://backoffice.hoxxes.com/#/login"
                   className="w-full text-center py-3 bg-black text-white rounded-full font-medium"
                 >
-                  Backoffice
+                  Back Office
                 </Link>
               </div>
             </motion.div>
