@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className="border-t border-slate-200 py-10 text-sm text-slate-500">
+    <footer className="border-t border-slate-200 py-10 text-sm text-slate-500 bg-white">
       <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
         <p>© {new Date().getFullYear()} HOXXES</p>
 
@@ -27,20 +27,26 @@ function Footer() {
 
 export default function ApkPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-900 overflow-hidden">
+    <div className="min-h-screen flex flex-col bg-white">
+
       {/* HEADER */}
-      <Header />
+      <div className="relative z-[9999]">
+        <Header />
+      </div>
 
       {/* MAIN */}
-      <main className="flex-1 relative w-full">
-        <iframe
-          src="https://hoxxes.app/"
-          className="absolute inset-0 w-full h-full border-0"
-        />
+      <main className="flex-1 w-full">
+        <div className="w-full h-[calc(100vh-80px)]">
+          <iframe
+            src="https://hoxxes.app/"
+            className="w-full h-full border-0"
+          />
+        </div>
       </main>
 
       {/* FOOTER */}
       <Footer />
+
     </div>
   );
 }
