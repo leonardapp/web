@@ -64,14 +64,14 @@ export default function Header() {
               href="https://pos.hoxxes.com/#/login"
               className="hidden sm:block px-4 py-2 border border-slate-300 bg-white rounded-full text-sm font-medium text-black hover:bg-black hover:text-white transition"
             >
-              POS
+              Web POS
             </Link>
 
             <Link
               href="https://backoffice.hoxxes.com/#/login"
               className="hidden sm:block px-4 py-2 bg-black text-white rounded-full text-sm font-medium hover:bg-slate-800 transition"
             >
-              Backoffice
+              Back Office
             </Link>
 
             {/* HAMBURGER */}
