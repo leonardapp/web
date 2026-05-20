@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import Logo from "@/components/Logo";
 import Header from "@/components/Header";
 
 type Platform = "Windows" | "Android" | "iOS";
@@ -50,20 +49,21 @@ export default function DownloadCenter() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-white text-slate-900 overflow-hidden">
+    <div className="relative min-h-screen bg-white text-slate-900 overflow-x-hidden">
 
+      {/* HEADER - ALWAYS ON TOP */}
+      <div className="relative z-[99999]">
+        <Header />
+      </div>
 
-      <Header />
-
-
-      {/* NOISE + AMBIENT */}
+      {/* BACKGROUND LAYERS (SAFE Z-INDEX) */}
       <div className="pointer-events-none fixed inset-0 opacity-[0.04] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
-      <div className="absolute inset-0 -z-10">
+      <div className="fixed inset-0 -z-10">
         <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-emerald-200/25 blur-[160px] rounded-full" />
       </div>
 
-      <div className="absolute inset-0 -z-10">
+      <div className="fixed inset-0 -z-10">
         <div className="absolute bottom-[-250px] right-[-200px] w-[800px] h-[800px] bg-slate-200/40 blur-[160px] rounded-full" />
       </div>
 
@@ -73,26 +73,26 @@ export default function DownloadCenter() {
           Download Center
         </div>
 
-        <h1 className="mt-6 text-5xl font-semibold tracking-tight">
+        <h1 className="mt-6 text-4xl md:text-5xl font-semibold tracking-tight">
           Get HOXXES Apps
         </h1>
 
-        <p className="mt-4 text-slate-500 text-lg">
+        <p className="mt-4 text-slate-500 text-base md:text-lg">
           Auto-detected platform:{" "}
           <span className="text-black font-medium">{os}</span>
         </p>
       </section>
 
       {/* CARDS */}
-      <section className="max-w-5xl mx-auto px-6 pb-28">
-        <div className="grid md:grid-cols-3 gap-6">
+      <section className="max-w-6xl mx-auto px-6 pb-28">
+        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-3">
 
           {platforms.map((p, i) => (
             <motion.div
               key={i}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 220 }}
-              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-lg"
+              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-lg flex flex-col"
             >
               <div className="text-xs text-slate-400 uppercase tracking-widest">
                 {p.badge}
@@ -102,18 +102,16 @@ export default function DownloadCenter() {
                 {p.title}
               </h2>
 
-              <p className="mt-2 text-sm text-slate-500">
+              <p className="mt-2 text-sm text-slate-500 flex-1">
                 {p.desc}
               </p>
 
-              <div className="mt-6">
-                <Link
-                  href={p.link}
-                  className="text-sm font-medium hover:underline"
-                >
-                  Open →
-                </Link>
-              </div>
+              <Link
+                href={p.link}
+                className="mt-6 text-sm font-medium hover:underline"
+              >
+                Open →
+              </Link>
             </motion.div>
           ))}
 
@@ -121,8 +119,8 @@ export default function DownloadCenter() {
       </section>
 
       {/* VALUE STRIP */}
-      <section className="py-24 bg-black text-white text-center">
-        <h2 className="text-3xl font-semibold">
+      <section className="py-20 bg-black text-white text-center px-6">
+        <h2 className="text-2xl md:text-3xl font-semibold">
           Enterprise-grade distribution system
         </h2>
 
@@ -130,6 +128,7 @@ export default function DownloadCenter() {
           HOXXES automatically delivers the right application for your device.
         </p>
       </section>
+
     </div>
   );
 }
