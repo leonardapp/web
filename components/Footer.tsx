@@ -8,8 +8,8 @@ export default function Footer() {
 
       {/* ambient glow */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-emerald-400/10 blur-[120px]" />
-      </div>
+  <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-emerald-400/10 blur-[120px]" />
+</div>
 
       <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-14 sm:py-16">
 

@@ -17,7 +17,7 @@ export async function POST(req: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Hoxxes <no-reply@hoxxes.com>",
+        from: "Hoxxes <info@hoxxes.com>",
         to: ["info@hoxxes.com"],
         subject: "New Demo Request",
         html: `
