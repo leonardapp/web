@@ -4,27 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 
-function Footer() {
-  return (
-    <footer className="border-t border-slate-200 py-10 text-sm text-slate-500 bg-white">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p>© {new Date().getFullYear()} HOXXES</p>
-
-        <div className="flex flex-wrap justify-center gap-6">
-          <Link href="/software" className="hover:text-black transition">
-            Software
-          </Link>
-          <Link href="/hardware" className="hover:text-black transition">
-            Hardware
-          </Link>
-          <Link href="/support" className="hover:text-black transition">
-            Support
-          </Link>
-        </div>
-      </div>
-    </footer>
-  );
-}
 
 export default function TiketaPage() {
   const [loading, setLoading] = useState(true);
@@ -55,8 +34,7 @@ export default function TiketaPage() {
         />
       </main>
 
-      {/* FOOTER */}
-      <Footer />
+  
     </div>
   );
 }

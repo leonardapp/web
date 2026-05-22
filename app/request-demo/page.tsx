@@ -18,31 +18,6 @@ function Magnetic({ children }: { children: React.ReactNode }) {
   );
 }
 
-/* FOOTER */
-function Footer() {
-  return (
-    <footer className="border-t py-10 text-sm text-slate-500">
-      <div className="max-w-6xl mx-auto px-6 flex justify-between">
-        <p>© {new Date().getFullYear()} Hoxxes</p>
-
-        <div className="flex items-center gap-8 text-sm text-slate-500">
-          <Link href="/software" className="hover:text-black transition">
-            Software
-          </Link>
-
-          <Link href="/hardware" className="hover:text-black transition">
-            Hardware
-          </Link>
-
-          <Link href="/support" className="hover:text-black transition">
-            Support
-          </Link>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
 export default function RequestDemoPage() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -88,38 +63,56 @@ export default function RequestDemoPage() {
       <Header />
 
       {/* HERO */}
-      <section className="max-w-3xl mx-auto px-6 py-28 text-center">
+      <section className="max-w-3xl mx-auto px-6 py-24 text-center">
         <div className="text-xs uppercase tracking-[0.35em] text-slate-400">
           Request Demo
         </div>
 
-        <h1 className="mt-6 text-5xl md:text-6xl font-semibold tracking-tight">
+        <h1 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight">
           See HOXXES in action.
         </h1>
 
-        <p className="mt-6 text-lg text-slate-500 leading-relaxed">
+        <p className="mt-5 text-base text-slate-500 leading-relaxed">
           Tell us about your business and we’ll schedule a personalized demo of the platform.
         </p>
       </section>
 
       {/* FORM */}
-      <section className="max-w-3xl mx-auto px-6 pb-32">
-        <form onSubmit={handleSubmit} className="space-y-6">
+      <section className="max-w-2xl mx-auto px-6 pb-24">
+        <form className="space-y-4" onSubmit={handleSubmit}>
 
-          <input name="name" required placeholder="Full Name"
-            className="w-full px-4 py-3 border rounded-2xl focus:ring-2 outline-none" />
+          <input
+            name="name"
+            required
+            placeholder="Full Name"
+            className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
+          />
 
-          <input name="company" required placeholder="Company Name"
-            className="w-full px-4 py-3 border rounded-2xl focus:ring-2 outline-none" />
+          <input
+            name="company"
+            required
+            placeholder="Company Name"
+            className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
+          />
 
-          <input name="email" type="email" required placeholder="Email Address"
-            className="w-full px-4 py-3 border rounded-2xl focus:ring-2 outline-none" />
+          <input
+            name="email"
+            type="email"
+            required
+            placeholder="Email Address"
+            className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
+          />
 
-          <input name="phone" placeholder="Phone Number"
-            className="w-full px-4 py-3 border rounded-2xl focus:ring-2 outline-none" />
+          <input
+            name="phone"
+            placeholder="Phone Number"
+            className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
+          />
 
-          <select name="locations"
-            className="w-full px-4 py-3 border rounded-2xl focus:ring-2 outline-none">
+          <select
+            name="locations"
+            className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
+          >
             <option>1 Location</option>
             <option>2–5 Locations</option>
             <option>6–20 Locations</option>
@@ -128,9 +121,9 @@ export default function RequestDemoPage() {
 
           <textarea
             name="message"
-            rows={5}
+            rows={4}
             placeholder="Tell us about your business..."
-            className="w-full px-4 py-3 border rounded-2xl focus:ring-2 outline-none"
+            className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
           />
 
           {error && <p className="text-red-500 text-sm">{error}</p>}
@@ -141,30 +134,29 @@ export default function RequestDemoPage() {
             </p>
           )}
 
-          {/* BUTTON FIXED */}
           <button
             disabled={loading}
             type="submit"
-            className="w-full px-6 py-4 bg-black text-white rounded-full font-medium hover:bg-slate-800 transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-6 py-3 bg-black text-white rounded-xl font-medium hover:bg-slate-800 transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? "Sending..." : "Submit Request"}
           </button>
         </form>
 
-        {/* CONTACT LINKS (BUTTON STYLE UNIFIED) */}
+        {/* CONTACT */}
         <div className="mt-8 text-sm text-slate-500 text-center flex flex-col items-center gap-3">
           <p>Or contact us directly:</p>
 
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
             <a
-              className="px-5 py-2 border border-slate-300 rounded-full text-black hover:bg-black hover:text-white transition"
+              className="px-5 py-2 border border-slate-200 rounded-full text-black hover:bg-black hover:text-white transition"
               href="mailto:info@hoxxes.com"
             >
               Email Support
             </a>
 
             <a
-              className="px-5 py-2 border border-slate-300 rounded-full text-black hover:bg-black hover:text-white transition"
+              className="px-5 py-2 border border-slate-200 rounded-full text-black hover:bg-black hover:text-white transition"
               href="tel:+38348106060"
             >
               Call Us
@@ -172,8 +164,6 @@ export default function RequestDemoPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

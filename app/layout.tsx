@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
@@ -42,6 +43,9 @@ export default function RootLayout({
 
         {/* APP */}
         {children}
+
+        {/* GLOBAL FOOTER */}
+        <Footer />
 
         {/* GLOBAL AI ASSISTANT (Stripe / Intercom style placeholder) */}
         <div id="ai-assistant-root" />

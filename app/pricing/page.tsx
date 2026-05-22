@@ -228,12 +228,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="border-t border-slate-200 py-8 text-xs text-slate-500">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          © {new Date().getFullYear()} HOXXES — Restaurant Operating System
-        </div>
-      </footer>
+    
 
     </div>
   );

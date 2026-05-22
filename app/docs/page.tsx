@@ -213,18 +213,7 @@ export default function DocsPage() {
         </div>
       )}
 
-      {/* FOOTER */}
-      <footer className="border-t py-10 text-sm text-slate-500 mt-20">
-        <div className="max-w-6xl mx-auto px-6 flex justify-between">
-          <p>© {new Date().getFullYear()} Hoxxes</p>
-
-          <div className="flex gap-6">
-            <Link href="/software">Software</Link>
-            <Link href="/hardware">Hardware</Link>
-            <Link href="/support">Support</Link>
-          </div>
-        </div>
-      </footer>
+      
 
     </div>
   );

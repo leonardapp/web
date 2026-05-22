@@ -24,7 +24,7 @@ export default function HomePage() {
   const y2 = useTransform(scrollYProgress, [0, 1], [0, 80]);
 
   return (
-    <div className="relative bg-white text-slate-900 overflow-hidden">
+    <div className="relative bg-white text-slate-900 overflow-hidden isolate">
       
       {/* NOISE LAYER */}
       <div
@@ -34,7 +34,12 @@ export default function HomePage() {
             "url('https://grainy-gradients.vercel.app/noise.svg')",
         }}
       />
+{/* ECOSYSTEM RIBBON (ambient SaaS layer) */}
+<div className="pointer-events-none absolute inset-0 overflow-hidden z-0">
+  <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[1400px] h-[300px] rotate-[-12deg] bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent blur-[60px] animate-pulse-slow" />
 
+  <div className="absolute bottom-[10%] right-[-300px] w-[1200px] h-[250px] rotate-[18deg] bg-gradient-to-r from-transparent via-emerald-300/20 to-transparent blur-[80px] animate-pulse-slower" />
+</div>
       {/* AMBIENT LIGHT */}
       <motion.div style={{ y: y1 }} className="absolute inset-0 -z-10">
         <div className="absolute top-[-250px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-emerald-200/25 blur-[180px] rounded-full" />
@@ -267,18 +272,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="border-t py-8 text-sm text-slate-500">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-4">
-          <p>© {new Date().getFullYear()} Hoxxes</p>
-
-          <div className="flex gap-6">
-            <Link href="/software">Software</Link>
-            <Link href="/hardware">Hardware</Link>
-            <Link href="/support">Support</Link>
-          </div>
-        </div>
-      </footer>
+    
 <style jsx global>{`
 @keyframes pulse-slow {
   0%, 100% {

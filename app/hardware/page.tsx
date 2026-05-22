@@ -4,28 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 
-/* FOOTER */
-function Footer() {
-  return (
-    <footer className="border-t border-slate-200 py-10 text-sm text-slate-500">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-4">
-        <p>© {new Date().getFullYear()} HOXXES</p>
 
-        <div className="flex gap-6">
-          <Link href="/software" className="hover:text-black transition">
-            Software
-          </Link>
-          <Link href="/hardware" className="hover:text-black transition">
-            Hardware
-          </Link>
-          <Link href="/support" className="hover:text-black transition">
-            Support
-          </Link>
-        </div>
-      </div>
-    </footer>
-  );
-}
 
 /* HARDWARE */
 const hardware = [
@@ -184,7 +163,7 @@ export default function HardwarePage() {
 
       </section>
 
-      <Footer />
+    
     </div>
   );
 }
