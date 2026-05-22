@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import Logo from "@/components/Logo";
+
 import Header from "@/components/Header";
 import Button from "@/components/Button";
 
@@ -25,16 +25,17 @@ export default function HomePage() {
 
   return (
     <div className="relative bg-white text-slate-900 overflow-hidden">
+      
       {/* NOISE LAYER */}
       <div
-        className="pointer-events-none fixed inset-0 opacity-[0.035] z-50"
+        className="pointer-events-none fixed inset-0 opacity-[0.03] z-50"
         style={{
           backgroundImage:
             "url('https://grainy-gradients.vercel.app/noise.svg')",
         }}
       />
 
-      {/* AMBIENT LIGHT SYSTEM */}
+      {/* AMBIENT LIGHT */}
       <motion.div style={{ y: y1 }} className="absolute inset-0 -z-10">
         <div className="absolute top-[-250px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-emerald-200/25 blur-[180px] rounded-full" />
       </motion.div>
@@ -47,7 +48,10 @@ export default function HomePage() {
       <Header />
 
       {/* HERO */}
-      <section ref={ref} className="max-w-4xl mx-auto text-center px-6 py-36">
+      <section
+        ref={ref}
+        className="max-w-5xl mx-auto text-center px-6 sm:px-8 lg:px-6 pt-28 sm:pt-32 lg:pt-36 pb-24"
+      >
         <motion.div
           initial="hidden"
           animate="show"
@@ -55,14 +59,23 @@ export default function HomePage() {
         >
           <motion.div
             variants={fadeUp}
-            className="text-xs tracking-[0.35em] text-slate-400 uppercase"
+            className="text-[10px] sm:text-xs tracking-[0.35em] text-slate-400 uppercase"
           >
             Restaurant & Retail Operating System
           </motion.div>
 
           <motion.h1
             variants={fadeUp}
-            className="mt-6 text-5xl md:text-6xl font-semibold leading-[1.05]"
+            className="
+              mt-6
+              text-3xl
+              sm:text-4xl
+              md:text-5xl
+              lg:text-6xl
+              font-semibold
+              leading-[1.05]
+              tracking-tight
+            "
           >
             Enterprise infrastructure for
             <span className="block text-slate-500 mt-2">
@@ -72,17 +85,25 @@ export default function HomePage() {
 
           <motion.p
             variants={fadeUp}
-            className="mt-6 text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed"
+            className="
+              mt-6
+              text-sm
+              sm:text-base
+              md:text-lg
+              text-slate-500
+              max-w-2xl
+              mx-auto
+              leading-relaxed
+            "
           >
             POS, QR ordering, kiosk systems, staff management, analytics —
-            unified into a single operating system for scalable hospitality
-            businesses.
+            unified into a single operating system for scalable hospitality businesses.
           </motion.p>
 
-          {/* ONLY BUTTON CHANGE */}
+          {/* BUTTONS */}
           <motion.div
             variants={fadeUp}
-            className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch"
+            className="mt-10 flex flex-col sm:flex-row gap-3 justify-center"
           >
             <Button href="/request-demo" variant="primary">
               Request Demo
@@ -96,13 +117,13 @@ export default function HomePage() {
       </section>
 
       {/* SOFTWARE */}
-      <section className="py-32 bg-slate-50 border-t">
+      <section className="py-20 sm:py-28 bg-slate-50 border-t">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl font-semibold mb-12">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-10">
             Software Ecosystem
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               ["QR Ordering", "Table-based ordering with real-time sync"],
               ["POS Engine", "High-speed transactional system"],
@@ -116,67 +137,64 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -6, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 220 }}
-                className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-md"
+                whileHover={{ y: -6 }}
+                className="p-5 sm:p-6 bg-white border border-slate-200 rounded-2xl shadow-sm"
               >
-                <h3 className="font-medium">{item[0]}</h3>
-                <p className="text-sm text-slate-500 mt-2">{item[1]}</p>
+                <h3 className="font-medium text-base sm:text-lg">
+                  {item[0]}
+                </h3>
+                <p className="text-sm text-slate-500 mt-2">
+                  {item[1]}
+                </p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* KIOSK FLAGSHIP SECTION */}
-      <section className="relative py-36 overflow-hidden">
+      {/* KIOSK */}
+      <section className="relative py-24 sm:py-36 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white" />
 
         <div className="relative max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
             {/* LEFT */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
             >
-              <div className="text-xs uppercase tracking-[0.35em] text-emerald-600 font-semibold mb-6">
+              <div className="text-xs tracking-[0.35em] text-emerald-600 font-semibold mb-5">
                 Flagship Hardware
               </div>
 
-              <h2 className="text-4xl md:text-6xl font-semibold leading-tight tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
                 Self-service kiosks,
                 <span className="block text-slate-400">
                   fully integrated.
                 </span>
               </h2>
 
-              <p className="mt-8 text-lg text-slate-500 leading-relaxed max-w-xl">
-                Android-based kiosk systems designed for high-volume restaurant
-                operations, seamlessly connected with POS, kitchen displays,
-                payments, and analytics.
+              <p className="mt-6 text-slate-500 leading-relaxed">
+                Android-based kiosk systems for high-volume restaurants with full POS + analytics sync.
               </p>
 
-              <div className="mt-10 grid grid-cols-2 gap-6 text-sm">
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-600">
                 {[
-                  "24” dual-screen display",
+                  "15.6” dual-screen display",
                   "Integrated thermal printer",
                   "Payment terminal support",
                   "Real-time cloud sync",
-                ].map((feature) => (
-                  <div key={feature} className="text-slate-600">
-                    ✓ {feature}
-                  </div>
+                ].map((f) => (
+                  <div key={f}>✓ {f}</div>
                 ))}
               </div>
 
-              {/* ONLY BUTTON CHANGE */}
-              <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center">
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
                 <Button href="/hardware" variant="primary">
                   Explore Hardware
                 </Button>
-
                 <Button href="/request-demo" variant="outline">
                   Request Demo
                 </Button>
@@ -188,18 +206,17 @@ export default function HomePage() {
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
               className="relative"
             >
               <div className="absolute inset-0 bg-emerald-300/20 blur-[100px] rounded-full scale-125" />
 
-              <div className="relative bg-white border border-slate-200 rounded-[2.5rem] shadow-2xl p-6">
-                <div className="aspect-[4/5] rounded-[2rem] bg-gradient-to-br from-slate-900 to-slate-700 flex items-center justify-center text-white text-center p-10">
+              <div className="relative bg-white border rounded-[2rem] shadow-2xl p-4 sm:p-6">
+                <div className="aspect-[4/5] bg-gradient-to-br from-slate-900 to-slate-700 rounded-2xl flex items-center justify-center text-white text-center p-8 sm:p-10">
                   <div>
-                    <div className="text-sm uppercase tracking-[0.3em] text-emerald-300 mb-4">
+                    <div className="text-xs tracking-[0.3em] text-emerald-300 mb-3">
                       HOXXES KIOSK
                     </div>
-                    <div className="text-3xl font-semibold leading-tight">
+                    <div className="text-xl sm:text-3xl font-semibold leading-tight">
                       Faster ordering.
                       <br />
                       Better experience.
@@ -208,42 +225,42 @@ export default function HomePage() {
                 </div>
               </div>
             </motion.div>
+
           </div>
         </div>
       </section>
 
       {/* VALUE STRIP */}
-      <section className="relative py-44 bg-black text-white text-center overflow-hidden">
+      <section className="relative py-28 sm:py-44 bg-black text-white text-center overflow-hidden">
         <div className="absolute inset-0">
-          <div className="w-[1000px] h-[1000px] bg-emerald-500 blur-[200px] opacity-20 mx-auto animate-pulse" />
-        </div>
+  <div className="w-[800px] sm:w-[1000px] h-[800px] sm:h-[1000px] bg-emerald-500 blur-[200px] opacity-20 mx-auto animate-pulse-slow" />
+</div>
 
-        <div className="relative">
-          <h2 className="text-4xl font-semibold tracking-tight">
+        <div className="relative px-6">
+          <h2 className="text-2xl sm:text-4xl font-semibold">
             One platform. Every operation.
           </h2>
 
-          <p className="text-slate-400 mt-6 max-w-2xl mx-auto leading-relaxed">
-            From single restaurants to multi-location enterprise chains —
-            Hoxxes becomes your operational infrastructure layer.
+          <p className="text-slate-400 mt-5 max-w-2xl mx-auto text-sm sm:text-base">
+            From single restaurants to enterprise chains — Hoxxes becomes your infrastructure layer.
           </p>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-40 text-center">
-        <h2 className="text-3xl font-semibold">Built for enterprise scale</h2>
+      <section className="py-24 sm:py-40 text-center px-6">
+        <h2 className="text-2xl sm:text-3xl font-semibold">
+          Built for enterprise scale
+        </h2>
 
-        <p className="text-slate-500 mt-4">
+        <p className="text-slate-500 mt-3">
           Start your digital transformation today.
         </p>
 
-        {/* ONLY BUTTON CHANGE */}
-        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+        <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
           <Button href="/request-demo" variant="primary">
             Request Demo
           </Button>
-
           <Button href="/contact-sales" variant="outline">
             Contact Sales
           </Button>
@@ -251,17 +268,49 @@ export default function HomePage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t py-10 text-sm text-slate-500">
-        <div className="max-w-6xl mx-auto px-6 flex justify-between">
+      <footer className="border-t py-8 text-sm text-slate-500">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-4">
           <p>© {new Date().getFullYear()} Hoxxes</p>
 
-          <div className="flex items-center gap-8 text-sm text-slate-500">
+          <div className="flex gap-6">
             <Link href="/software">Software</Link>
             <Link href="/hardware">Hardware</Link>
             <Link href="/support">Support</Link>
           </div>
         </div>
       </footer>
+<style jsx global>{`
+@keyframes pulse-slow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.45;
+  }
+}
+
+@keyframes pulse-slower {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.12;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 0.3;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 5s ease-in-out infinite;
+}
+
+.animate-pulse-slower {
+  animation: pulse-slower 6s ease-in-out infinite;
+}
+`}</style>
     </div>
+    
   );
 }

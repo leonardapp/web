@@ -2,8 +2,26 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Hoxxes",
+  title: {
+    default: "Hoxxes",
+    template: "%s | Hoxxes",
+  },
   description: "Enterprise Restaurant & Retail Operating System",
+  keywords: [
+    "POS system",
+    "Restaurant software",
+    "Retail OS",
+    "Kiosk system",
+    "Hospitality platform",
+  ],
+  metadataBase: new URL("https://hoxxes.com"),
+  openGraph: {
+    title: "Hoxxes",
+    description: "Enterprise Restaurant & Retail Operating System",
+    url: "https://hoxxes.com",
+    siteName: "Hoxxes",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -13,13 +31,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white text-slate-900 antialiased">
+      <head>
+        {/* Prevent layout shift + better mobile scaling */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
 
+      <body className="min-h-screen bg-white text-slate-900 antialiased selection:bg-emerald-200/50">
+        {/* GLOBAL BACKGROUND LAYER (optional future use) */}
+        <div className="fixed inset-0 -z-10 bg-white" />
+
+        {/* APP */}
         {children}
 
-        {/* GLOBAL AI ASSISTANT (Stripe / Intercom style) */}
-      
-
+        {/* GLOBAL AI ASSISTANT (Stripe / Intercom style placeholder) */}
+        <div id="ai-assistant-root" />
       </body>
     </html>
   );

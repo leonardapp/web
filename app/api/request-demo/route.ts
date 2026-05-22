@@ -14,7 +14,7 @@ export async function POST(req: Request) {
     if (resend) {
       // 1. Email për ekipin HOXXES
       await resend.emails.send({
-        from: "Hoxxes <onboarding@resend.dev>",
+        from: "Hoxxes <info@hoxxes.com>",
         to: "info@hoxxes.com",
         subject: `New Demo Request - ${company || "Unknown Company"}`,
         html: `
