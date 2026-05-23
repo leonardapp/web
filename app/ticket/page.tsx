@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
-
+import { spacing, text, layout } from "@/app/design-system";
 
 export default function TiketaPage() {
   const [loading, setLoading] = useState(true);

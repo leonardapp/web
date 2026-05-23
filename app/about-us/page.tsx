@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
-
+import { spacing, text, layout } from "@/app/design-system";
 
 export default function AboutPage() {
   return (

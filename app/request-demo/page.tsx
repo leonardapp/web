@@ -3,7 +3,7 @@
 import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
-
+import { spacing, text, layout } from "@/app/design-system";
 /* MAGNETIC */
 function Magnetic({ children }: { children: React.ReactNode }) {
   return (
@@ -63,7 +63,7 @@ export default function RequestDemoPage() {
   }
 
   return (
-    <div className="bg-white text-slate-900">
+    <div className="relative min-h-screen text-slate-900 overflow-hidden">
       <Header />
 
       {/* HERO */}

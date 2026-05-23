@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Header from "@/components/Header";
-
+import { spacing, text, layout } from "@/app/design-system";
 function Footer() {
   return (
     <footer className="border-t border-slate-200 py-10 text-sm text-slate-500 bg-white">
@@ -27,7 +27,7 @@ function Footer() {
 
 export default function ContactSalesPage() {
   return (
-    <div className="min-h-screen bg-white text-slate-900 flex flex-col overflow-x-hidden">
+    <div className="min-h-screen bg-transparent text-slate-900 flex flex-col overflow-x-hidden">
 
       {/* HEADER (GLOBAL SAAS) */}
       <Header />

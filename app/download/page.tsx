@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
-
+import { spacing, text, layout } from "@/app/design-system";
 type Platform = "Windows" | "Android" | "iOS";
 
 const platforms = [

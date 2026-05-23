@@ -1,5 +1,5 @@
 "use client";
-
+import { spacing, text, layout } from "@/app/design-system";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
@@ -70,10 +70,10 @@ export default function HomePage() {
             variants={fadeUp}
             className="
               mt-6
-              text-3xl
-              sm:text-4xl
-              md:text-5xl
-              lg:text-6xl
+              text-4xl
+              sm:text-5xl
+              md:text-6xl
+              lg:text-7xl
               font-semibold
               leading-[1.05]
               tracking-tight

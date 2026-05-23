@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import Header from "@/components/Header";
-
+import { spacing, text, layout } from "@/app/design-system";
 const DATA: Record<string, string[]> = {
   "Products": [
     "Menaxhimi i Kategorive.pdf",

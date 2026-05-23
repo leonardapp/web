@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Logo from "@/components/Logo";
-
+import { spacing, text, layout } from "@/app/design-system";
 /* PRICING LOGIC */
 function getPricePerLocation(locations: number) {
   if (locations <= 2) return 499;
@@ -21,7 +21,7 @@ export default function PricingPage() {
   const isEnterprise = locations >= 10;
 
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="relative min-h-screen text-slate-900 overflow-hidden">
 
       {/* HEADER */}
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
