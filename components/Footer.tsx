@@ -79,10 +79,10 @@ export default function Footer() {
 
             <div className="mt-5 flex flex-col gap-3 text-sm">
               <Link
-                href="/about"
+                href="/about-us"
                 className="text-slate-500 hover:text-slate-900 transition-colors"
               >
-                About
+                About Us
               </Link>
 
               <Link
