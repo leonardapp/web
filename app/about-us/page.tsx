@@ -23,7 +23,6 @@ export default function AboutPage() {
 
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
             Infrastructure
-            (Initial commit)
             <span className="block text-slate-500">
               for modern hospitality
             </span>
