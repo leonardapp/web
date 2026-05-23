@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function ApkPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-transparent">
 
       {/* HEADER */}
       <div className="relative z-[9999]">
@@ -18,7 +18,7 @@ export default function ApkPage() {
         <div className="w-full h-[calc(100vh-80px)]">
           <iframe
             src="https://hoxxes.app/"
-            className="w-full h-full border-0"
+            className="w-full h-full border-0 bg-transparent"
           />
         </div>
       </main>

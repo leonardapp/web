@@ -121,7 +121,7 @@ export default function DocsPage() {
   const files = active ? DATA[active] ?? [] : [];
 
   return (
-    <div className="relative min-h-screen bg-white text-slate-900 overflow-hidden">
+    <div className="relative min-h-screen bg-transparent text-slate-900 overflow-hidden">
 
       {/* HEADER (FIXED LOCATION) */}
       <Header />

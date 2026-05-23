@@ -4,8 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-slate-200 bg-white overflow-hidden">
-
+    <footer className="relative border-t border-slate-200 bg-white/80 backdrop-blur-xl overflow-hidden">
       {/* ambient glow */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
   <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-emerald-400/10 blur-[120px]" />

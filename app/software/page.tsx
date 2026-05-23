@@ -23,7 +23,7 @@ const modules = [
 
 export default function SoftwarePage() {
   return (
-    <div className="bg-white text-slate-900 overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
 
       {/* HEADER */}
       <Header />

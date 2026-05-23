@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import Background from "@/components/Background";
 
 export const metadata: Metadata = {
   title: {
@@ -33,22 +34,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Prevent layout shift + better mobile scaling */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
 
-      <body className="min-h-screen bg-white text-slate-900 antialiased selection:bg-emerald-200/50">
-        {/* GLOBAL BACKGROUND LAYER (optional future use) */}
-        <div className="fixed inset-0 -z-10 bg-white" />
+      <body className="min-h-screen overflow-x-hidden text-slate-900 antialiased selection:bg-emerald-200/50">
+
+        {/* BACKGROUND (GLOBAL) */}
+        <Background />
 
         {/* APP */}
-        {children}
+        <div className="relative z-10">
+          {children}
+          <Footer />
+        </div>
 
-        {/* GLOBAL FOOTER */}
-        <Footer />
-
-        {/* GLOBAL AI ASSISTANT (Stripe / Intercom style placeholder) */}
+        {/* AI ROOT */}
         <div id="ai-assistant-root" />
+
       </body>
     </html>
   );

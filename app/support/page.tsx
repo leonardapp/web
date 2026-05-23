@@ -30,7 +30,7 @@ const supportOptions = [
 
 export default function SupportPage() {
   return (
-    <div className="relative min-h-screen bg-white text-slate-900 overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden relative isolate">
       <Header />
 
       {/* BACKGROUND GLOW SYSTEM */}

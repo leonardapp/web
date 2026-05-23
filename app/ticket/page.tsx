@@ -9,13 +9,13 @@ export default function TiketaPage() {
   const [loading, setLoading] = useState(true);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white overflow-hidden">
+    <div className="min-h-screen flex flex-col bg-transparent overflow-hidden">
       
       {/* HEADER */}
       <Header />
 
       {/* MAIN */}
-      <main className="flex-1 relative bg-slate-50">
+      <main className="flex-1 relative bg-transparent">
 
         {/* LOADING OVERLAY */}
         {loading && (

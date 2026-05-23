@@ -24,7 +24,7 @@ export default function HomePage() {
   const y2 = useTransform(scrollYProgress, [0, 1], [0, 80]);
 
   return (
-    <div className="relative bg-white text-slate-900 overflow-hidden isolate">
+    <div className="relative text-slate-900 overflow-hidden isolate">
       
       {/* NOISE LAYER */}
       <div

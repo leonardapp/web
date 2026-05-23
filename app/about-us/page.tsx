@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white text-slate-900 overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       <Header />
 
       {/* HERO */}

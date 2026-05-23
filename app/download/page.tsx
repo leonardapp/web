@@ -49,7 +49,7 @@ export default function DownloadCenter() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-white text-slate-900 overflow-hidden">
+    <div className="relative min-h-screen bg-transparent text-slate-900 overflow-hidden">
 
       {/* HEADER */}
       <div className="relative z-50">
