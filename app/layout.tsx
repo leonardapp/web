@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+
 import Footer from "@/components/Footer";
 import Background from "@/components/Background";
 
@@ -9,13 +10,6 @@ export const metadata: Metadata = {
     template: "%s | Hoxxes",
   },
   description: "Enterprise Restaurant & Retail Operating System",
-  keywords: [
-    "POS system",
-    "Restaurant software",
-    "Retail OS",
-    "Kiosk system",
-    "Hospitality platform",
-  ],
   metadataBase: new URL("https://hoxxes.com"),
   openGraph: {
     title: "Hoxxes",
@@ -33,16 +27,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
+      <body className="relative min-h-screen overflow-x-hidden text-slate-900 antialiased selection:bg-emerald-200/50">
 
-      <body className="min-h-screen overflow-x-hidden text-slate-900 antialiased selection:bg-emerald-200/50">
+        {/* BACKGROUND LAYER (NO FIXED → prevents desktop shrink bugs) */}
+        <div className="absolute inset-0 -z-10 pointer-events-none">
+          <Background />
+        </div>
 
-        {/* BACKGROUND (GLOBAL) */}
-        <Background />
-
-        {/* APP */}
+        {/* MAIN APP */}
         <div className="relative z-10">
           {children}
           <Footer />
@@ -50,7 +42,6 @@ export default function RootLayout({
 
         {/* AI ROOT */}
         <div id="ai-assistant-root" />
-
       </body>
     </html>
   );
