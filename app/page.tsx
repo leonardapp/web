@@ -187,8 +187,9 @@ export default function HomePage() {
 
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-600">
                 {[
-                  "15.6” dual-screen display",
+                  "32” interactive display",
                   "Integrated thermal printer",
+                  "High-speed QR code scanner",
                   "Payment terminal support",
                   "Real-time cloud sync",
                 ].map((f) => (

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 
@@ -47,12 +46,17 @@ export default function RequestDemoPage() {
         body: JSON.stringify(data),
       });
 
-      if (!res.ok) throw new Error("Request failed");
+      const result = await res.json();
+
+      if (!res.ok) {
+        throw new Error(result?.error || "Request failed");
+      }
 
       setSuccess(true);
       (e.target as HTMLFormElement).reset();
-    } catch {
-      setError("Something went wrong. Please try again.");
+
+    } catch (err: any) {
+      setError(err.message || "Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -126,7 +130,9 @@ export default function RequestDemoPage() {
             className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
           />
 
-          {error && <p className="text-red-500 text-sm">{error}</p>}
+          {error && (
+            <p className="text-red-500 text-sm">{error}</p>
+          )}
 
           {success && (
             <p className="text-green-600 text-sm">
