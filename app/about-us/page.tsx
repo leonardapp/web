@@ -128,7 +128,7 @@ export default function AboutPage() {
           </p>
 
           <p>
-            We built a unified platform that connects ordering, kitchen operations,
+            We offer a unified platform that connects ordering, kitchen operations,
             payments, and analytics into one real-time ecosystem.
           </p>
 
