@@ -40,10 +40,7 @@ export default function HomePage() {
 
   <div className="absolute bottom-[10%] right-[-300px] w-[1200px] h-[250px] rotate-[18deg] bg-gradient-to-r from-transparent via-emerald-300/20 to-transparent blur-[80px] animate-pulse-slower" />
 </div>
-      {/* AMBIENT LIGHT */}
-      <motion.div style={{ y: y1 }} className="absolute inset-0 -z-10">
-        <div className="absolute top-[-250px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-emerald-200/25 blur-[180px] rounded-full" />
-      </motion.div>
+      
 
       <motion.div style={{ y: y2 }} className="absolute inset-0 -z-10">
         <div className="absolute bottom-[-300px] right-[-200px] w-[800px] h-[800px] bg-slate-200/40 blur-[180px] rounded-full" />
