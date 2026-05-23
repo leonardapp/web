@@ -22,11 +22,11 @@ export default function AboutPage() {
           </div>
 
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
-            Building the Operating System
-            <span className="block text-slate-500">
-              for modern hospitality
-            </span>
-          </h1>
+  Bringing the Operating System
+  <span className="block text-slate-500">
+    for modern hospitality
+  </span>
+</h1>
 
           <p className="mt-6 text-lg md:text-xl text-slate-500 leading-relaxed max-w-3xl mx-auto">
             HOXXES unifies POS, QR ordering, kiosks, kitchen operations, and analytics
