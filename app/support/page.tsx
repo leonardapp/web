@@ -33,11 +33,6 @@ export default function SupportPage() {
     <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden relative isolate">
       <Header />
 
-      {/* BACKGROUND GLOW SYSTEM */}
-      <div className="pointer-events-none fixed inset-0 opacity-[0.05] z-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
-
-      <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-emerald-200/30 blur-[180px] rounded-full" />
-      <div className="absolute bottom-[-250px] right-[-150px] w-[800px] h-[800px] bg-slate-200/40 blur-[180px] rounded-full" />
 
       {/* HERO */}
       <section className="relative z-10 max-w-5xl mx-auto px-6 pt-28 pb-20 text-center">

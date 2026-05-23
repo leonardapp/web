@@ -56,16 +56,10 @@ export default function DownloadCenter() {
         <Header />
       </div>
 
-      {/* BACKGROUND */}
-      <div className="pointer-events-none fixed inset-0 opacity-[0.04] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+      
+      
 
-      <div className="fixed inset-0 -z-10">
-        <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-emerald-200/25 blur-[160px] rounded-full" />
-      </div>
-
-      <div className="fixed inset-0 -z-10">
-        <div className="absolute bottom-[-250px] right-[-200px] w-[800px] h-[800px] bg-slate-200/40 blur-[160px] rounded-full" />
-      </div>
+    
 
       {/* HERO */}
       <section className="max-w-4xl mx-auto px-6 pt-28 pb-16 text-center">
