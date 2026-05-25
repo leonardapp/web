@@ -13,7 +13,7 @@ export default function ApkPage() {
       <main className="w-full h-[calc(100vh-80px)]">
         <iframe
           src="https://hoxxes.app/"
-          className="w-full h-full border-0 bg-white"
+          className="w-full h-full border-0 bg-transparent"
           style={{ isolation: "isolate" }}
         />
       </main>

@@ -26,7 +26,7 @@ export default function TiketaPage() {
 
         <iframe
           src="https://hoxxes.app/tiketa/"
-          className="w-full h-full border-0 bg-white"
+          className="w-full h-full border-0 bg-transparent"
           style={{ isolation: "isolate" }}
           onLoad={() => setLoading(false)}
         />
