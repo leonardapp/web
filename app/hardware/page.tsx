@@ -3,38 +3,42 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
-import { spacing, text, layout } from "@/app/design-system";
-
 
 /* HARDWARE */
 const hardware = [
   {
     title: "Kiosk Slim – Self Service",
-    price: "€1,399",
+    price: "€1,185",
+    preorderPrice: "€1,016",
+    preorderEnabled: true,
     image: "https://hoxxes.app/images/Kiosk.png",
     description:
       "Self-service kiosk with touchscreen ordering, QR integration and built-in receipt printing.",
     highlight: "Best for QSR & high-volume restaurants",
   },
+
   {
     title: "Android POS Terminal",
-    price: "€799",
+    price: "€677",
+    preorderPrice: "€593",
+    preorderEnabled: true,
     image: "https://hoxxes.app/images/POS.png",
     description:
       "Dual-screen POS system with cashier + customer display, built for fast retail & restaurant operations.",
     highlight: "Most popular POS setup",
   },
-  {
-    title: "HoloBox – 3D Marketing Display",
-    price: "€9,440",
-    image: "https://hoxxes.app/images/HoloBox.png",
-    description:
-      "Interactive holographic 3D display for premium branding and product presentation.",
-    highlight: "Premium marketing hardware",
-  },
 ];
 
+/* PREORDER LOGIC */
+const PREORDER_DEADLINE = "2026-06-15";
+
+function isPreorderActive() {
+  return new Date(PREORDER_DEADLINE).getTime() > new Date().getTime();
+}
+
 export default function HardwarePage() {
+  const preorderActive = isPreorderActive();
+
   return (
     <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
 
@@ -60,26 +64,40 @@ export default function HardwarePage() {
           from ordering to payments to customer experience.
         </p>
 
+        {/* ✅ VAT NOTE (ADDED) */}
+        <div className="mt-3 text-xs text-slate-400">
+          All prices are shown excl. VAT
+        </div>
+
       </section>
 
-      {/* GRID */}
+      {/* HARDWARE GRID */}
       <section className="max-w-7xl mx-auto px-6 pb-20 sm:pb-28">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 max-w-5xl mx-auto">
 
           {hardware.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -6 }}
               transition={{ type: "spring", stiffness: 200 }}
-              className="group border border-slate-200 rounded-3xl bg-white shadow-sm hover:shadow-2xl overflow-hidden flex flex-col"
+              className="group border border-slate-200 rounded-2xl bg-white shadow-sm hover:shadow-xl overflow-hidden flex flex-col"
             >
 
               {/* IMAGE */}
-              <div className="h-52 sm:h-56 bg-slate-50 flex items-center justify-center p-6">
+              <div className="relative h-44 sm:h-52 bg-slate-50 flex items-center justify-center p-4 overflow-hidden">
+
+                {item.preorderEnabled && preorderActive && (
+                  <div className="absolute top-3 left-3 z-10">
+                    <div className="px-2.5 py-1 rounded-full bg-black text-white text-[10px] font-medium tracking-wide uppercase">
+                      Preorder
+                    </div>
+                  </div>
+                )}
+
                 <img
                   src={item.image}
                   alt={item.title}
@@ -88,37 +106,65 @@ export default function HardwarePage() {
               </div>
 
               {/* CONTENT */}
-              <div className="p-6 sm:p-7 flex flex-col flex-1">
+              <div className="p-5 sm:p-6 flex flex-col flex-1">
 
                 <div className="text-[10px] sm:text-[11px] uppercase tracking-wider text-slate-400">
                   {item.highlight}
                 </div>
 
-                <h3 className="mt-2 text-base sm:text-lg font-semibold">
+                <h3 className="mt-1.5 text-base sm:text-lg font-semibold tracking-tight">
                   {item.title}
                 </h3>
 
-                <p className="text-sm text-slate-500 mt-2 leading-relaxed flex-1">
+                <p className="text-sm text-slate-500 mt-2 leading-relaxed">
                   {item.description}
                 </p>
 
                 {/* PRICE */}
-                <div className="mt-6 text-center">
-                  <div className="text-2xl font-bold tracking-tight">
-                    {item.price}
-                  </div>
-                  <div className="text-xs text-slate-400 mt-1">
-                    Starting price
-                  </div>
+                <div className="mt-5 text-center">
+
+                  {item.preorderEnabled && preorderActive ? (
+                    <>
+                      <div className="flex items-center justify-center gap-2">
+
+                        <span className="text-slate-400 line-through text-sm">
+                          {item.price}
+                        </span>
+
+                        <span className="text-2xl sm:text-3xl font-bold tracking-tight">
+                          {item.preorderPrice}
+                        </span>
+
+                      </div>
+
+                      <div className="mt-3 inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5">
+                        <span className="text-[11px] text-emerald-700 font-medium">
+                          Preorder valid until {PREORDER_DEADLINE}
+                        </span>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="text-2xl sm:text-3xl font-bold tracking-tight">
+                        {item.price}
+                      </div>
+
+                      <div className="text-xs text-slate-400 mt-1">
+                        Starting price
+                      </div>
+                    </>
+                  )}
+
                 </div>
 
                 {/* BUTTON */}
                 <Link
                   href="/contact-sales"
-                  className="mt-6 w-full px-6 py-3 rounded-xl bg-black text-white 
-                  text-sm font-medium text-center hover:bg-slate-800 transition"
+                  className="mt-5 w-full px-5 py-3 rounded-xl bg-black text-white text-sm font-medium text-center hover:bg-slate-800 transition"
                 >
-                  Request Offer
+                  {item.preorderEnabled && preorderActive
+                    ? "Preorder"
+                    : "Request Offer"}
                 </Link>
 
               </div>
@@ -129,32 +175,29 @@ export default function HardwarePage() {
 
       </section>
 
-      {/* CTA SECTION */}
+      {/* CTA */}
       <section className="py-20 sm:py-28 bg-slate-50 border-y border-slate-200 text-center px-6">
 
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight">
           One ecosystem. All your hardware connected.
         </h2>
 
-        <p className="mt-4 text-slate-500 max-w-2xl mx-auto text-sm sm:text-base">
-          Deploy POS, kiosk and marketing hardware fully synced with your SaaS platform.
+        <p className="mt-4 text-slate-500 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+          Deploy POS, kiosk and hardware fully synced with your SaaS platform.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
 
           <Link
             href="/request-demo"
-            className="px-6 py-3 rounded-full bg-black text-white 
-            hover:bg-slate-800 transition text-sm font-medium"
+            className="px-6 py-3 rounded-full bg-black text-white hover:bg-slate-800 transition text-sm font-medium"
           >
             Request Demo
           </Link>
 
           <Link
             href="/contact-sales"
-            className="px-6 py-3 rounded-full border border-slate-300 
-            text-slate-700 hover:bg-black hover:text-white hover:border-black 
-            transition text-sm font-medium"
+            className="px-6 py-3 rounded-full border border-slate-300 text-slate-700 hover:bg-black hover:text-white hover:border-black transition text-sm font-medium"
           >
             Contact Sales
           </Link>
@@ -163,7 +206,6 @@ export default function HardwarePage() {
 
       </section>
 
-    
     </div>
   );
 }

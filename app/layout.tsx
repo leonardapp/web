@@ -4,22 +4,6 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Background from "@/components/Background";
 
-export const metadata: Metadata = {
-  title: {
-    default: "Hoxxes",
-    template: "%s | Hoxxes",
-  },
-  description: "Enterprise Restaurant & Retail Operating System",
-  metadataBase: new URL("https://hoxxes.com"),
-  openGraph: {
-    title: "Hoxxes",
-    description: "Enterprise Restaurant & Retail Operating System",
-    url: "https://hoxxes.com",
-    siteName: "Hoxxes",
-    type: "website",
-  },
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -27,20 +11,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="relative min-h-screen overflow-x-hidden text-slate-900 antialiased selection:bg-emerald-200/50">
+      <body className="min-h-screen overflow-x-hidden text-slate-900 antialiased selection:bg-emerald-200/50 bg-white">
 
-        {/* BACKGROUND LAYER (NO FIXED → prevents desktop shrink bugs) */}
-        <div className="absolute inset-0 -z-10 pointer-events-none">
+        {/* BACKGROUND (fixed safe layer) */}
+        <div className="fixed inset-0 -z-10 pointer-events-none">
           <Background />
         </div>
 
-        {/* MAIN APP */}
-        <div className="relative z-10">
-          {children}
+        {/* GLOBAL CONTAINER */}
+        <div className="relative flex min-h-screen flex-col">
+          
+          {/* PAGE CONTENT */}
+          <main className="flex-1 w-full">
+            {children}
+          </main>
+
+          {/* FOOTER ALWAYS AT BOTTOM */}
           <Footer />
         </div>
 
-        {/* AI ROOT */}
         <div id="ai-assistant-root" />
       </body>
     </html>
