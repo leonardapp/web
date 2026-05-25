@@ -119,21 +119,21 @@ export default function HomePage() {
       </section>
 
       {/* SOFTWARE */}
-      <section className="py-20 sm:py-28 bg-slate-50 border-t">
+      <section className="py-20 sm:py-28 bg-slate-50 ">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-xl sm:text-2xl font-semibold mb-10">
             Software Ecosystem
           </h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {[
-              ["QR Ordering", "Table-based ordering with real-time sync"],
-              ["POS Engine", "High-speed transactional system"],
-              ["Kiosk OS", "Self-service restaurant flow"],
-              ["Delivery Platform", "Branded ordering apps"],
-              ["Kitchen System", "Live order orchestration layer"],
-              ["Staff Cloud", "Enterprise workforce control"],
-            ].map((item, i) => (
+  {[
+    ["QR Ordering", "Table-based ordering with real-time sync"],
+    ["POS Infrastructure", "Offline-capable transactional platform"],
+    ["Kiosk OS", "Self-service restaurant flow"],
+    ["Delivery Platform", "Branded ordering applications"],
+    ["Kitchen System", "Live kitchen orchestration layer"],
+    ["Back Office Cloud", "Analytics, workforce and operations"],
+  ].map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}

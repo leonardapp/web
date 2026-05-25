@@ -22,7 +22,7 @@ export default function AboutPage() {
           </div>
 
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
-            Infrastructure
+            Enterprise infrastructure
             <span className="block text-slate-500">
               for modern hospitality
             </span>
@@ -59,7 +59,7 @@ export default function AboutPage() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl font-semibold">Our Mission</h2>
+          <h2 className="text-2xl font-semibold">Infrastructure Vision</h2>
           <p className="mt-4 text-slate-600 leading-relaxed">
             We eliminate fragmented restaurant systems and replace them with one
             unified, real-time operating system that connects every device, order,
@@ -85,7 +85,7 @@ export default function AboutPage() {
 
       {/* VALUES */}
       <section className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-2xl font-semibold mb-10">What We Stand For</h2>
+        <h2 className="text-2xl font-semibold mb-10">Core Principles</h2>
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
@@ -133,8 +133,8 @@ export default function AboutPage() {
           </p>
 
           <p>
-            Today, HOXXES evolves into a full enterprise operating system for
-            modern hospitality infrastructure.
+            Today, HOXXES powers modern hospitality infrastructure
+across ordering, operations, and commerce.
           </p>
         </div>
       </section>
