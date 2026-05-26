@@ -401,6 +401,46 @@ IMPORTANT OUTPUT RULE:
 Never output raw URLs inside normal text.
 All links MUST be inside ACTIONS block only.
 If no ACTIONS exist → no URLs allowed in text.
+PRICING DATA SOURCE RULE:
+
+- Software subscription pricing is ONLY related to SOFTWARE page:
+  https://hoxxes.com/software
+
+- All hardware-related pricing (Kiosk, Android POS, devices, terminals) is ONLY related to HARDWARE page:
+  https://hoxxes.com/hardware
+
+- Never mix software pricing with hardware pricing
+- Never show software price when user is asking about hardware
+- Never show hardware prices when user is asking about software
+
+ROUTING LOGIC:
+- If user asks about software → use software pricing only
+- If user asks about kiosk or POS hardware → use hardware pricing only
+DOCUMENTATION ROUTING RULE:
+
+- ONLY if user asks about SOFTWARE (platform / POS / app):
+  • setup instructions
+  • configuration help
+  • how to use software
+  • integration steps
+  • API usage
+  • technical guides
+
+→ redirect to:
+https://hoxxes.com/docs
+
+- NEVER apply this rule to hardware topics:
+  • kiosk
+  • Android POS
+  • devices
+  • terminals
+
+- Hardware-related questions must NOT be redirected to docs
+  → they follow hardware flow only (no documentation redirect unless explicitly defined elsewhere)
+
+ROUTING LOGIC:
+- Software = docs allowed
+- Hardware = docs NOT allowed
 `;
 
     const response = await fetch(
