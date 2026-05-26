@@ -1,22 +1,29 @@
 "use client";
 
-import Header from "@/components/Header";
+import { useState } from "react";
 
 export default function ApkPage() {
+  const [loading, setLoading] = useState(true);
+
   return (
-    <div className="relative min-h-screen bg-transparent text-slate-900 overflow-hidden">
+    <div className="absolute inset-0 w-full h-full overflow-hidden">
 
-      {/* HEADER */}
-      <Header />
+      {/* LOADER */}
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center backdrop-blur-md bg-black/10 z-20">
+          <div className="text-sm text-slate-600 animate-pulse">
+            Loading APK System...
+          </div>
+        </div>
+      )}
 
-      {/* MAIN */}
-      <main className="w-full h-[calc(100vh-80px)]">
-        <iframe
-          src="https://hoxxes.app/"
-          className="w-full h-full border-0 bg-transparent"
-          style={{ isolation: "isolate" }}
-        />
-      </main>
+      {/* IFRAME */}
+      <iframe
+        src="https://hoxxes.app/"
+        className="absolute inset-0 w-full h-full border-0"
+        onLoad={() => setLoading(false)}
+        onError={() => setLoading(false)}
+      />
 
     </div>
   );

@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
 import "./globals.css";
 
 import Footer from "@/components/Footer";
 import Background from "@/components/Background";
+import HoxxesAIWidget from "@/components/HoxxesAIWidget";
 
 export default function RootLayout({
   children,
@@ -11,26 +11,30 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen overflow-x-hidden text-slate-900 antialiased selection:bg-emerald-200/50 bg-white">
+      <body className="min-h-screen overflow-x-hidden bg-white text-slate-900 antialiased selection:bg-emerald-200/50">
 
-        {/* BACKGROUND (fixed safe layer) */}
+        {/* BACKGROUND LAYER */}
         <div className="fixed inset-0 -z-10 pointer-events-none">
           <Background />
         </div>
 
-        {/* GLOBAL CONTAINER */}
-        <div className="relative flex min-h-screen flex-col">
-          
-          {/* PAGE CONTENT */}
-          <main className="flex-1 w-full">
+        {/* APP WRAPPER */}
+        <div className="flex min-h-screen flex-col">
+
+          {/* MAIN CONTENT */}
+          <main className="flex-1 w-full relative z-10">
             {children}
           </main>
 
-          {/* FOOTER ALWAYS AT BOTTOM */}
+          {/* FOOTER */}
           <Footer />
         </div>
 
-        <div id="ai-assistant-root" />
+        {/* AI WIDGET (GLOBAL FLOATING) */}
+        <div className="relative z-50">
+          <HoxxesAIWidget />
+        </div>
+
       </body>
     </html>
   );

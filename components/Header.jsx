@@ -62,7 +62,7 @@ export default function Header() {
               href="/download"
               className="hidden md:block text-sm text-slate-600 hover:text-black transition"
             >
-              Download
+              Download Center
             </Link>
 
             {/* CTA 1 */}
