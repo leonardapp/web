@@ -200,24 +200,24 @@ export default function HoxxesAIWidget() {
               duration: 0.2,
             }}
             className="
-              fixed
-              bottom-6
-              right-6
-              z-[9999]
-              flex
-              h-[720px]
-              w-[420px]
-              max-w-[calc(100vw-24px)]
-              flex-col
-              overflow-hidden
-              rounded-[34px]
-              border
-              border-white/10
-              bg-black/95
-              text-white
-              shadow-[0_30px_120px_rgba(0,0,0,0.65)]
-              backdrop-blur-2xl
-            "
+  fixed
+  bottom-4 md:bottom-6
+  right-6
+  z-[9999]
+  flex
+  h-[80vh] md:h-[720px]
+  w-[calc(100vw-24px)] md:w-[420px]
+  max-w-[calc(100vw-24px)]
+  flex-col
+  overflow-hidden
+  rounded-[34px]
+  border
+  border-white/10
+  bg-black/95
+  text-white
+  shadow-[0_30px_120px_rgba(0,0,0,0.65)]
+  backdrop-blur-2xl
+"
           >
             {/* TOP BAR */}
             <div className="flex items-center justify-between border-b border-white/10 px-6 py-5">
