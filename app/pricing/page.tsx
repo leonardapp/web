@@ -3,7 +3,9 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Logo from "@/components/Logo";
+
+import Header from "@/components/Header";
+
 /* PRICING LOGIC */
 function getPricePerLocation(locations: number) {
   if (locations <= 2) return 499;
@@ -22,29 +24,7 @@ export default function PricingPage() {
   return (
     <div className="relative min-h-screen text-slate-900 overflow-hidden">
 
-      {/* HEADER */}
-      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
-        <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
-          <Logo size="md" />
-
-          <div className="flex items-center gap-3">
-            <Link
-              href="/software"
-              className="hidden sm:block text-sm text-slate-500 hover:text-black transition"
-            >
-              Software
-            </Link>
-
-            <Link
-              href="/request-demo"
-              className="w-full sm:w-auto text-xs sm:text-sm px-4 py-2 border border-slate-300 rounded-full hover:bg-black hover:text-white transition text-center"
-            >
-              Request Demo
-            </Link>
-          </div>
-        </div>
-      </header>
-
+      <Header />
       {/* HERO */}
       <section className="text-center px-4 sm:px-6 pt-14 sm:pt-20 pb-10 sm:pb-14">
         
@@ -63,10 +43,27 @@ export default function PricingPage() {
   Transparent pricing designed to scale from single locations
   to enterprise operations.
 </p>
+<div className="mt-8 flex justify-center gap-3 flex-wrap">
+
+  <Link
+    href="/request-demo"
+    className="inline-flex items-center px-5 py-2 rounded-full bg-black text-white text-sm font-medium hover:bg-slate-800 transition"
+  >
+    Request Demo
+  </Link>
+
+  <Link
+    href="#pricing-calculator"
+    className="inline-flex items-center px-5 py-2 rounded-full border border-slate-300 text-sm font-medium hover:bg-black hover:text-white transition"
+  >
+    Calculate Pricing
+  </Link>
+
+</div>
       </section>
       
-      {/* CALCULATOR SECTION */}
-      {/* PRICING MODELS */}
+      
+        {/* PRICING MODELS */}
 <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
   <div className="text-center">
 
@@ -146,10 +143,41 @@ export default function PricingPage() {
 
   </div>
 </section>
+{/* INCLUDED WITH EVERY SUBSCRIPTION */}
+<section className="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
 
+  <div className="text-center">
+    <h2 className="text-2xl sm:text-3xl font-semibold">
+      Included with every subscription.
+    </h2>
+  </div>
+
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
+
+    {[
+      "Cloud Infrastructure",
+      "Real-Time Synchronization",
+      "Automatic Updates",
+      "Fiscalization Support",
+      "Documentation Center",
+      "User Permissions",
+    ].map((item) => (
+      <div
+        key={item}
+        className="p-6 rounded-2xl border border-slate-200 bg-white"
+      >
+        ✓ {item}
+      </div>
+    ))}
+
+  </div>
+
+</section>
 
       {/* CALCULATOR SECTION */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-20">
+      <section
+  id="pricing-calculator"
+  className="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
           {/* LEFT */}
@@ -260,36 +288,7 @@ export default function PricingPage() {
 
         </div>
       </section>
-      {/* INCLUDED WITH EVERY SUBSCRIPTION */}
-<section className="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
-
-  <div className="text-center">
-    <h2 className="text-2xl sm:text-3xl font-semibold">
-      Included with every subscription.
-    </h2>
-  </div>
-
-  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
-
-    {[
-      "Cloud Infrastructure",
-      "Real-Time Synchronization",
-      "Automatic Updates",
-      "Fiscalization Support",
-      "Documentation Center",
-      "User Permissions",
-    ].map((item) => (
-      <div
-        key={item}
-        className="p-6 rounded-2xl border border-slate-200 bg-white"
-      >
-        ✓ {item}
-      </div>
-    ))}
-
-  </div>
-
-</section>
+      
 
       {/* ADD-ONS */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
@@ -352,23 +351,23 @@ export default function PricingPage() {
     Schedule a demo and discover how HOXXES can modernize your operations.
   </p>
 
-  <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
+  <div className="mt-8 flex justify-center gap-3 flex-wrap">
 
-    <Link
-      href="/request-demo"
-      className="px-6 py-3 rounded-full bg-black text-white hover:bg-slate-800 transition"
-    >
-      Request Demo
-    </Link>
+  <Link
+    href="/request-demo"
+    className="inline-flex items-center px-5 py-2 rounded-full bg-black text-white text-sm font-medium hover:bg-slate-800 transition"
+  >
+    Request Demo
+  </Link>
 
-    <Link
-      href="/contact-sales"
-      className="px-6 py-3 rounded-full border border-slate-300 hover:bg-black hover:text-white transition"
-    >
-      Contact Sales
-    </Link>
+  <Link
+  href="/contact-sales"
+  className="inline-flex items-center px-5 py-2 rounded-full border border-slate-300 text-sm font-medium hover:bg-black hover:text-white transition"
+>
+  Contact Sales
+</Link>
 
-  </div>
+</div>
 
 </section>
     

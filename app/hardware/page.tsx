@@ -55,9 +55,10 @@ export default function HardwarePage() {
         <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
           Enterprise hardware
           <span className="block text-slate-500 mt-2">
-            built for scale, speed & reliability
+            for modern operations.
           </span>
         </h1>
+        
 
         <p className="mt-6 text-sm sm:text-base md:text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
           Fully integrated devices designed to run inside the Hoxxes SaaS ecosystem —
@@ -70,6 +71,38 @@ export default function HardwarePage() {
         </div>
 
       </section>
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 text-center">
+
+    <div className="p-6 sm:p-8 rounded-3xl border border-slate-200 bg-white">
+      <div className="text-3xl sm:text-4xl font-semibold">
+        Plug & Play
+      </div>
+      <div className="mt-2 text-sm sm:text-base text-slate-500">
+        Ready for deployment
+      </div>
+    </div>
+
+    <div className="p-6 sm:p-8 rounded-3xl border border-slate-200 bg-white">
+      <div className="text-3xl sm:text-4xl font-semibold">
+        Cloud Sync
+      </div>
+      <div className="mt-2 text-sm sm:text-base text-slate-500">
+        Connected to HOXXES
+      </div>
+    </div>
+
+    <div className="p-6 sm:p-8 rounded-3xl border border-slate-200 bg-white">
+      <div className="text-3xl sm:text-4xl font-semibold">
+        Enterprise
+      </div>
+      <div className="mt-2 text-sm sm:text-base text-slate-500">
+        Built for scale
+      </div>
+    </div>
+
+  </div>
+</section>
 
       {/* HARDWARE GRID */}
       <section className="max-w-7xl mx-auto px-6 pb-20 sm:pb-28">
@@ -196,10 +229,10 @@ export default function HardwarePage() {
           </Link>
 
           <Link
-            href="/contact-sales"
+            href="/pricing"
             className="px-6 py-3 rounded-full border border-slate-300 text-slate-700 hover:bg-black hover:text-white hover:border-black transition text-sm font-medium"
           >
-            Contact Sales
+            View Pricing
           </Link>
 
         </div>
