@@ -205,29 +205,29 @@ export default function HomePage() {
             </motion.div>
 
             {/* RIGHT */}
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="absolute inset-0 bg-emerald-300/20 blur-[100px] rounded-full scale-125" />
+           <motion.div
+  initial={{ opacity: 0, x: 40 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  className="relative flex justify-center items-center"
+>
+  {/* Emerald Glow */}
+  <div
+    className="absolute w-[650px] h-[650px] bg-emerald-400/25 rounded-full blur-[180px]"
+  />
 
-              <div className="relative bg-white border rounded-[2rem] shadow-2xl p-4 sm:p-6">
-                <div className="aspect-[4/5] bg-gradient-to-br from-slate-900 to-slate-700 rounded-2xl flex items-center justify-center text-white text-center p-8 sm:p-10">
-                  <div>
-                    <div className="text-xs tracking-[0.3em] text-emerald-300 mb-3">
-                      HOXXES KIOSK
-                    </div>
-                    <div className="text-xl sm:text-3xl font-semibold leading-tight">
-                      Faster ordering.
-                      <br />
-                      Better experience.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+  <img
+    src="https://hoxxes.app/images/kiosk.svg"
+    alt="Hoxxes Kiosk"
+    style={{
+      width: "900px",
+      maxWidth: "140%",
+      display: "block",
+      position: "relative",
+      zIndex: 10
+    }}
+  />
+</motion.div>
 
           </div>
         </div>
