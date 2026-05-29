@@ -115,6 +115,7 @@ export default function HomePage() {
               Explore Platform
             </Button>
           </motion.div>
+          
         </motion.div>
       </section>
 
@@ -124,7 +125,9 @@ export default function HomePage() {
           <h2 className="text-xl sm:text-2xl font-semibold mb-10">
             Software Ecosystem
           </h2>
-
+<div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-3">
+  Infrastructure Layer
+</div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
   {[
     ["QR Ordering", "Table-based ordering with real-time sync"],
@@ -139,12 +142,31 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -6 }}
-                className="p-5 sm:p-6 bg-white border border-slate-200 rounded-2xl shadow-sm"
+                whileHover={{
+  y: -8,
+  scale: 1.02,
+}}
+                className="p-5 sm:p-6 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-emerald-300 hover:shadow-xl transition-all duration-300"
               >
                 <h3 className="font-medium text-base sm:text-lg">
                   {item[0]}
                 </h3>
+                <div className="flex items-center gap-2 mt-3">
+  <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+
+  <span className="text-xs uppercase tracking-[0.15em] text-slate-400">
+  {
+    [
+      "Real-Time",
+      "Operational",
+      "Active",
+      "Online",
+      "Live",
+      "Synced",
+    ][i]
+  }
+</span>
+</div>
                 <p className="text-sm text-slate-500 mt-2">
                   {item[1]}
                 </p>
@@ -213,8 +235,8 @@ export default function HomePage() {
 >
   {/* Emerald Glow */}
   <div
-    className="absolute w-[650px] h-[650px] bg-emerald-400/25 rounded-full blur-[180px]"
-  />
+  className="absolute w-[500px] h-[500px] bg-emerald-400/25 rounded-full blur-[140px]"
+/>
 
   <img
     src="https://hoxxes.app/images/kiosk.svg"
