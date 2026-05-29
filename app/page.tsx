@@ -79,9 +79,9 @@ export default function HomePage() {
               tracking-tight
             "
           >
-            Enterprise infrastructure for
+            The Operating System
             <span className="block text-slate-500 mt-2">
-              modern hospitality
+              for modern hospitality
             </span>
           </motion.h1>
 
@@ -98,8 +98,9 @@ export default function HomePage() {
               leading-relaxed
             "
           >
-            POS, QR ordering, kiosk systems, staff management, analytics —
-            unified into a single operating system for scalable hospitality businesses.
+            Manage ordering, kitchen operations,
+payments, inventory, workforce and
+multiple locations from one platform.
           </motion.p>
 
           {/* BUTTONS */}
@@ -119,6 +120,7 @@ export default function HomePage() {
         </motion.div>
       </section>
 
+
       {/* SOFTWARE */}
       <section className="py-20 sm:py-28 bg-slate-50 ">
         <div className="max-w-6xl mx-auto px-6">
@@ -130,13 +132,15 @@ export default function HomePage() {
 </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
   {[
-    ["QR Ordering", "Table-based ordering with real-time sync"],
-    ["POS Infrastructure", "Offline-capable transactional platform"],
-    ["Kiosk OS", "Self-service restaurant flow"],
-    ["Delivery Platform", "Branded ordering applications"],
-    ["Kitchen System", "Live kitchen orchestration layer"],
-    ["Back Office Cloud", "Analytics, workforce and operations"],
-  ].map((item, i) => (
+  ["Ordering Ecosystem", "QR, POS, kiosk and online ordering unified across every channel"],
+  ["Kitchen Operations", "Real-time KDS orchestration and production workflows"],
+  ["Payments Infrastructure", "Fiscalization, payment terminals and transaction processing"],
+  ["Customer Commerce", "Memberships, loyalty, vouchers and digital wallet experiences"],
+  ["Workforce Management", "Staff permissions, attendance and operational control"],
+  ["Inventory Network", "Stock transfers, recipes and multi-location inventory"],
+  ["Analytics Cloud", "Operational, financial and performance intelligence"],
+  ["HQ Control Center", "Centralized management across all restaurant locations"],
+].map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -157,16 +161,19 @@ export default function HomePage() {
   <span className="text-xs uppercase tracking-[0.15em] text-slate-400">
   {
     [
-      "Real-Time",
-      "Operational",
-      "Active",
-      "Online",
-      "Live",
-      "Synced",
-    ][i]
+  "Real-Time",
+  "Operational",
+  "Secure",
+  "Commerce",
+  "Managed",
+  "Connected",
+  "Insight",
+  "Enterprise",
+][i]
   }
 </span>
 </div>
+
                 <p className="text-sm text-slate-500 mt-2">
                   {item[1]}
                 </p>
@@ -175,6 +182,73 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* PLATFORM FLOW */}
+<section className="py-24 sm:py-36 bg-transparent">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+
+    <div className="text-xs uppercase tracking-[0.3em] text-emerald-600 mb-4">
+      Unified Infrastructure
+    </div>
+
+    <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
+      One Platform. Four Ordering Channels.
+    </h2>
+
+    <p className="mt-5 text-slate-500 max-w-3xl mx-auto">
+      Every order, payment and operation flows through a single infrastructure layer,
+      delivering complete visibility across ordering, kitchen operations,
+      inventory, workforce and multi-location management.
+    </p>
+
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-16">
+      {[
+        "QR Ordering",
+        "POS Ordering",
+        "Kiosk Ordering",
+        "Online Ordering",
+      ].map((item) => (
+        <div
+          key={item}
+          className="bg-slate-50 border border-slate-200 rounded-2xl p-6"
+        >
+          <div className="text-sm font-medium">{item}</div>
+        </div>
+      ))}
+    </div>
+
+    <div className="my-10 text-slate-300 text-3xl">
+      ↓
+    </div>
+
+    <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-black text-white font-medium tracking-wide">
+      HOXXES CORE PLATFORM
+    </div>
+
+    <div className="my-10 text-slate-300 text-3xl">
+      ↓
+    </div>
+
+    <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
+      {[
+        "Kitchen Display",
+        "Inventory",
+        "Workforce",
+        "Analytics",
+        "HQ Control",
+      ].map((item) => (
+        <div
+          key={item}
+          className="bg-white border border-slate-200 rounded-2xl p-5"
+        >
+          <div className="text-sm text-slate-700">
+            {item}
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
 
       {/* KIOSK */}
       <section className="relative py-24 sm:py-36 overflow-hidden">
@@ -201,7 +275,7 @@ export default function HomePage() {
               </h2>
 
               <p className="mt-6 text-slate-500 leading-relaxed">
-                Android-based kiosk systems for high-volume restaurants with full POS + analytics sync.
+                Android-based self-service kiosks fully integrated with POS, KDS, fiscal printers and payment terminals.
               </p>
 
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-600">
@@ -263,11 +337,14 @@ export default function HomePage() {
 
         <div className="relative px-6">
           <h2 className="text-2xl sm:text-4xl font-semibold">
-            One platform. Every operation.
+            The infrastructure behind
+modern hospitality.
           </h2>
 
           <p className="text-slate-400 mt-5 max-w-2xl mx-auto text-sm sm:text-base">
-            From single restaurants to enterprise chains — Hoxxes becomes your infrastructure layer.
+            From single restaurants to enterprise chains —
+  Hoxxes connects ordering, payments,
+  operations and analytics into one platform.
           </p>
         </div>
       </section>

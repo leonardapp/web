@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
-import { spacing, text, layout } from "@/app/design-system";
 
 const supportOptions = [
   {
@@ -47,10 +46,10 @@ export default function SupportPage() {
           </div>
 
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
-            Everything you need
-            <span className="block text-slate-500">
-              to stay operational
-            </span>
+            Enterprise support
+<span className="block text-slate-500">
+  when operations matter.
+</span>
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-slate-500 leading-relaxed max-w-2xl mx-auto">
@@ -112,12 +111,38 @@ export default function SupportPage() {
           ))}
         </div>
       </section>
+      <section className="max-w-6xl mx-auto px-6 pb-24">
+  <div className="grid md:grid-cols-3 gap-6 text-center">
+
+    <div className="p-8 rounded-3xl border border-slate-200 bg-white">
+      <div className="text-4xl font-semibold">24/7</div>
+      <div className="mt-2 text-slate-500">
+        Ticket monitoring
+      </div>
+    </div>
+
+    <div className="p-8 rounded-3xl border border-slate-200 bg-white">
+      <div className="text-4xl font-semibold">99.9%</div>
+      <div className="mt-2 text-slate-500">
+        Infrastructure uptime
+      </div>
+    </div>
+
+    <div className="p-8 rounded-3xl border border-slate-200 bg-white">
+      <div className="text-4xl font-semibold">1 Platform</div>
+      <div className="mt-2 text-slate-500">
+        Unified support ecosystem
+      </div>
+    </div>
+
+  </div>
+</section>
 
       {/* EMERGENCY SUPPORT BLOCK */}
       <section className="relative z-10 max-w-4xl mx-auto px-6 pb-28">
         <div className="relative rounded-3xl border border-slate-200 bg-slate-50 p-10 text-center overflow-hidden">
 
-          <div className="absolute inset-0 bg-emerald-100/30 blur-3xl" />
+          <div className="absolute inset-0 bg-slate-100/30 blur-3xl" />
 
           <div className="relative">
             <h2 className="text-3xl md:text-4xl font-semibold">
@@ -162,6 +187,35 @@ export default function SupportPage() {
           </div>
         </div>
       </section>
+      <section className="py-24 text-center">
+
+  <h2 className="text-3xl sm:text-4xl font-semibold">
+    Need assistance?
+  </h2>
+
+  <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
+    Access documentation, contact our team or open a support ticket.
+  </p>
+
+  <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
+
+    <Link
+      href="/ticket"
+      className="px-6 py-3 rounded-full bg-black text-white hover:bg-slate-800 transition"
+    >
+      Open Ticket
+    </Link>
+
+    <Link
+      href="/docs"
+      className="px-6 py-3 rounded-full border border-slate-300 hover:bg-black hover:text-white transition"
+    >
+      Browse Documentation
+    </Link>
+
+  </div>
+
+</section>
 
       
     </div>

@@ -22,35 +22,90 @@ export default function AboutPage() {
           </div>
 
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
-            The infrastructure
+            Operating infrastructure
             <span className="block text-slate-500">
-              behind modern hospitality
+              for modern commerce.
             </span>
           </h1>
 
-          <p className="mt-6 text-lg md:text-xl text-slate-500 leading-relaxed max-w-3xl mx-auto">
-            HOXXES unifies POS, QR ordering, kiosks, kitchen operations, and analytics
-            into one real-time enterprise infrastructure layer — built for scale, speed,
-            and reliability.
-          </p>
+         <p className="mt-6 text-lg md:text-xl text-slate-500 leading-relaxed max-w-3xl mx-auto">
+  HOXXES unifies POS, QR ordering, kiosks, kitchen operations, and analytics
+  into one real-time enterprise infrastructure layer — built for scale, speed,
+  and reliability.
+</p>
 
-          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
-            <Link
-              href="/request-demo"
-              className="px-6 py-3 rounded-full bg-black text-white text-sm font-medium hover:bg-slate-800 transition"
-            >
-              Request Demo
-            </Link>
+<div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
+  <Link
+    href="/request-demo"
+    className="px-6 py-3 rounded-full bg-black text-white text-sm font-medium hover:bg-slate-800 transition"
+  >
+    Request Demo
+  </Link>
 
-            <Link
-              href="/software"
-              className="px-6 py-3 rounded-full border border-slate-300 text-sm font-medium hover:bg-black hover:text-white transition"
-            >
-              Explore Platform
-            </Link>
-          </div>
-        </motion.div>
-      </section>
+  <Link
+    href="/software"
+    className="px-6 py-3 rounded-full border border-slate-300 text-sm font-medium hover:bg-black hover:text-white transition"
+  >
+    Explore Platform
+  </Link>
+</div>
+ 
+</motion.div>
+</section>
+          {/* INDUSTRIES */}
+<section className="max-w-6xl mx-auto px-6 py-20">
+
+  <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+    Industries
+  </div>
+
+  <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+    Built for multiple business models.
+  </h2>
+
+  <div className="grid md:grid-cols-3 gap-6 mt-12">
+
+    <div className="p-8 border rounded-3xl">
+      <h3 className="font-semibold">Restaurants</h3>
+      <p className="mt-3 text-slate-500">
+        Ordering, kiosks, kitchen and guest experiences.
+      </p>
+    </div>
+
+    <div className="p-8 border rounded-3xl">
+      <h3 className="font-semibold">Retail</h3>
+      <p className="mt-3 text-slate-500">
+        Transactions, inventory and workforce management.
+      </p>
+    </div>
+
+    <div className="p-8 border rounded-3xl">
+      <h3 className="font-semibold">Enterprise</h3>
+      <p className="mt-3 text-slate-500">
+        Centralized infrastructure across multiple locations.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+{/* BUILT FOR SCALE */}
+<section className="max-w-6xl mx-auto px-6 py-20">
+
+  <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+    Built For Scale
+  </div>
+
+  <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+    From independent operators to enterprise networks.
+  </h2>
+
+  <p className="mt-5 text-slate-500 max-w-3xl">
+    HOXXES is designed to operate across restaurants,
+    retail stores and multi-location businesses with centralized control.
+  </p>
+
+</section>
 
       {/* MISSION */}
       <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
@@ -117,27 +172,42 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* STORY */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
-        <h2 className="text-2xl font-semibold mb-6">Our Story</h2>
+      {/* PLATFORM OVERVIEW */}
+<section className="max-w-6xl mx-auto px-6 py-20">
 
-        <div className="space-y-4 text-slate-600 leading-relaxed">
-          <p>
-            HOXXES started with a simple problem — restaurant systems were slow,
-            fragmented, and disconnected.
-          </p>
+  <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+    Platform Overview
+  </div>
 
-          <p>
-            We offer a unified platform that connects ordering, kitchen operations,
-            payments, and analytics into one real-time ecosystem.
-          </p>
+  <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+    One infrastructure layer.
+  </h2>
 
-          <p>
-            Today, HOXXES powers modern hospitality infrastructure
-across ordering, operations, and commerce.
-          </p>
-        </div>
-      </section>
+  <p className="mt-5 text-slate-500 max-w-3xl">
+    HOXXES connects ordering, payments, kitchen operations,
+    workforce management, inventory and analytics into a unified platform.
+  </p>
+
+  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
+
+    {[
+      "Ordering Ecosystem",
+      "Payments Infrastructure",
+      "Operational Intelligence",
+      "Multi-Location Control",
+    ].map((item) => (
+      <div
+        key={item}
+        className="p-6 rounded-2xl border border-slate-200 bg-white"
+      >
+        {item}
+      </div>
+    ))}
+
+  </div>
+
+</section>
+
 
       {/* CTA */}
       <section className="relative bg-black text-white text-center py-24 overflow-hidden">

@@ -4,7 +4,6 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Logo from "@/components/Logo";
-import { spacing, text, layout } from "@/app/design-system";
 /* PRICING LOGIC */
 function getPricePerLocation(locations: number) {
   if (locations <= 2) return 499;
@@ -48,21 +47,106 @@ export default function PricingPage() {
 
       {/* HERO */}
       <section className="text-center px-4 sm:px-6 pt-14 sm:pt-20 pb-10 sm:pb-14">
+        
         <div className="text-[10px] sm:text-xs tracking-[0.35em] text-slate-400 uppercase">
-          SaaS Pricing Engine
-        </div>
+  Pricing
+</div>
 
-        <h1 className="mt-5 text-3xl sm:text-5xl font-semibold leading-tight">
-          Pay per location
-          <span className="block text-slate-500">
-            scale with confidence
-          </span>
-        </h1>
+<h1 className="mt-5 text-3xl sm:text-5xl font-semibold leading-tight">
+  Flexible plans for
+  <span className="block text-slate-500">
+    restaurants, retail and enterprise.
+  </span>
+</h1>
 
-        <p className="mt-4 text-sm sm:text-base text-slate-500 max-w-2xl mx-auto">
-          Full restaurant operating system: POS, QR, KDS, kiosks, analytics.
-        </p>
+<p className="mt-4 text-sm sm:text-base text-slate-500 max-w-2xl mx-auto">
+  Transparent pricing designed to scale from single locations
+  to enterprise operations.
+</p>
       </section>
+      
+      {/* CALCULATOR SECTION */}
+      {/* PRICING MODELS */}
+<section className="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
+  <div className="text-center">
+
+    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+      Choose Your Plan
+    </div>
+
+    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+      Built for every business model.
+    </h2>
+
+    <p className="mt-5 text-slate-500 max-w-3xl mx-auto">
+      Whether you operate a restaurant, retail store or multi-location enterprise,
+      HOXXES adapts to your operational requirements.
+    </p>
+
+  </div>
+
+  <div className="grid lg:grid-cols-3 gap-6 mt-14">
+
+    {/* RESTAURANT */}
+    <div className="p-8 rounded-3xl border border-slate-200 bg-white hover:shadow-xl transition">
+      <div className="text-xs uppercase tracking-[0.25em] text-emerald-600">
+        Restaurant
+      </div>
+
+      <h3 className="mt-4 text-2xl font-semibold">
+        Hospitality Operations
+      </h3>
+
+      <ul className="mt-6 space-y-2 text-sm text-slate-600">
+        <li>✓ POS</li>
+        <li>✓ QR Ordering</li>
+        <li>✓ Kitchen Display System</li>
+        <li>✓ Kiosk Support</li>
+        <li>✓ Delivery & Pickup</li>
+      </ul>
+    </div>
+
+    {/* RETAIL */}
+    <div className="p-8 rounded-3xl border border-slate-200 bg-white hover:shadow-xl transition">
+      <div className="text-xs uppercase tracking-[0.25em] text-emerald-600">
+        Retail
+      </div>
+
+      <h3 className="mt-4 text-2xl font-semibold">
+        Store Operations
+      </h3>
+
+      <ul className="mt-6 space-y-2 text-sm text-slate-600">
+        <li>✓ POS Infrastructure</li>
+        <li>✓ Inventory Management</li>
+        <li>✓ Workforce Management</li>
+        <li>✓ Fiscalization</li>
+        <li>✓ Analytics</li>
+      </ul>
+    </div>
+
+    {/* ENTERPRISE */}
+    <div className="p-8 rounded-3xl border border-slate-200 bg-white hover:shadow-xl transition">
+      <div className="text-xs uppercase tracking-[0.25em] text-emerald-600">
+        Enterprise
+      </div>
+
+      <h3 className="mt-4 text-2xl font-semibold">
+        Multi-Location Infrastructure
+      </h3>
+
+      <ul className="mt-6 space-y-2 text-sm text-slate-600">
+        <li>✓ HQ Control Center</li>
+        <li>✓ Stock Transfers</li>
+        <li>✓ Central Reporting</li>
+        <li>✓ User Permissions</li>
+        <li>✓ Priority Support</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
 
       {/* CALCULATOR SECTION */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-20">
@@ -176,6 +260,36 @@ export default function PricingPage() {
 
         </div>
       </section>
+      {/* INCLUDED WITH EVERY SUBSCRIPTION */}
+<section className="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
+
+  <div className="text-center">
+    <h2 className="text-2xl sm:text-3xl font-semibold">
+      Included with every subscription.
+    </h2>
+  </div>
+
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
+
+    {[
+      "Cloud Infrastructure",
+      "Real-Time Synchronization",
+      "Automatic Updates",
+      "Fiscalization Support",
+      "Documentation Center",
+      "User Permissions",
+    ].map((item) => (
+      <div
+        key={item}
+        className="p-6 rounded-2xl border border-slate-200 bg-white"
+      >
+        ✓ {item}
+      </div>
+    ))}
+
+  </div>
+
+</section>
 
       {/* ADD-ONS */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
@@ -224,10 +338,39 @@ export default function PricingPage() {
               Request Setup
             </Link>
           </div>
-
+          
         </div>
       </section>
+{/* FINAL CTA */}
+<section className="py-24 text-center">
 
+  <h2 className="text-3xl sm:text-4xl font-semibold">
+    Ready to deploy HOXXES?
+  </h2>
+
+  <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
+    Schedule a demo and discover how HOXXES can modernize your operations.
+  </p>
+
+  <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
+
+    <Link
+      href="/request-demo"
+      className="px-6 py-3 rounded-full bg-black text-white hover:bg-slate-800 transition"
+    >
+      Request Demo
+    </Link>
+
+    <Link
+      href="/contact-sales"
+      className="px-6 py-3 rounded-full border border-slate-300 hover:bg-black hover:text-white transition"
+    >
+      Contact Sales
+    </Link>
+
+  </div>
+
+</section>
     
 
     </div>

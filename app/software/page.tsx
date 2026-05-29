@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { useState } from "react";
 
 import Header from "@/components/Header";
@@ -118,22 +117,23 @@ export default function SoftwarePage() {
       {/* HERO */}
       <section className="max-w-6xl mx-auto px-6 py-28 sm:py-32 text-center">
         
-        <div className="text-[10px] sm:text-xs uppercase tracking-[0.35em] text-slate-400">
-          Software Platform
-        </div>
+       <div className="text-[10px] sm:text-xs uppercase tracking-[0.35em] text-slate-400">
+  Restaurant • Retail • Enterprise
+</div>
 
-        <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
-          Every software module,
-          <span className="block text-slate-500 mt-2">
-            unified into one platform.
-          </span>
-        </h1>
+<h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
+  One platform,
+  <span className="block text-slate-500 mt-2">
+    multiple business models.
+  </span>
+</h1>
 
-        <p className="mt-6 max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-slate-500 leading-relaxed">
-          HOXXES combines POS, QR ordering, kiosk systems, delivery,
-          kitchen displays, workforce tools and analytics into a single
-          enterprise operating system.
-        </p>
+<p className="mt-6 max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-slate-500 leading-relaxed">
+  Built for restaurants, retail businesses and multi-location operations.
+  HOXXES unifies ordering, payments, workforce, inventory and analytics
+  into a single operating system.
+</p>
+
 
         {/* CTA */}
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
@@ -157,87 +157,260 @@ export default function SoftwarePage() {
 
         </div>
       </section>
+      {/* INFRASTRUCTURE TYPES */}
+<section className="py-20 sm:py-28">
+  <div className="max-w-7xl mx-auto px-6">
 
-      {/* MODULE GRID */}
-      <section className="max-w-7xl mx-auto px-6 pb-24 sm:pb-32">
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+    <div className="text-center">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Choose Your Infrastructure
+      </div>
 
-          {modules.map((m, i) => (
-            <motion.div
-              key={i}
-              onClick={() => setSelectedModule(m)}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -6 }}
-              transition={{ type: "spring", stiffness: 200 }}
-              className="cursor-pointer p-6 sm:p-8 border border-slate-200 rounded-3xl bg-white shadow-sm hover:shadow-lg transition"
-            >
-              <h3 className="text-base sm:text-lg font-semibold">
-                {m.title}
-              </h3>
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-tight">
+        Built for every stage of growth.
+      </h2>
 
-              <p className="mt-3 text-sm text-slate-500 leading-relaxed">
-                {m.desc}
-              </p>
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Whether you operate a single restaurant, a retail store,
+        or a multi-location enterprise, HOXXES adapts to your business model.
+      </p>
+    </div>
 
-              <div className="mt-4 text-xs text-emerald-600 font-medium">
-                Click for details →
-              </div>
-            </motion.div>
-          ))}
+    <div className="grid lg:grid-cols-3 gap-6 mt-16">
 
+      {/* RESTAURANTS */}
+      <div className="p-8 rounded-3xl border border-slate-200 bg-white hover:shadow-xl transition">
+        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600">
+          Restaurants
         </div>
-      </section>
 
-      {/* MODAL */}
-      {selectedModule && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center px-4"
-          onClick={() => setSelectedModule(null)}
+        <h3 className="mt-4 text-2xl font-semibold">
+          Hospitality Operations
+        </h3>
+
+        <p className="mt-4 text-slate-500">
+          Digital ordering, kiosks, kitchen operations and guest experiences.
+        </p>
+
+        <ul className="mt-6 space-y-2 text-sm text-slate-600">
+          <li>✓ QR Ordering</li>
+          <li>✓ Kiosk Self-Service</li>
+          <li>✓ Kitchen Display System</li>
+          <li>✓ Delivery & Pickup</li>
+          <li>✓ Loyalty & Memberships</li>
+        </ul>
+      </div>
+
+      {/* RETAIL */}
+      <div className="p-8 rounded-3xl border border-slate-200 bg-white hover:shadow-xl transition">
+        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600">
+          Retail
+        </div>
+
+        <h3 className="mt-4 text-2xl font-semibold">
+          Store Operations
+        </h3>
+
+        <p className="mt-4 text-slate-500">
+          Modern retail infrastructure with inventory and workforce control.
+        </p>
+
+        <ul className="mt-6 space-y-2 text-sm text-slate-600">
+          <li>✓ POS Infrastructure</li>
+          <li>✓ Inventory Management</li>
+          <li>✓ Workforce Control</li>
+          <li>✓ Fiscalization</li>
+          <li>✓ Reporting & Analytics</li>
+        </ul>
+      </div>
+
+      {/* ENTERPRISE */}
+      <div className="p-8 rounded-3xl border border-slate-200 bg-white hover:shadow-xl transition">
+        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600">
+          Enterprise
+        </div>
+
+        <h3 className="mt-4 text-2xl font-semibold">
+          Multi-Location Infrastructure
+        </h3>
+
+        <p className="mt-4 text-slate-500">
+          Centralized control across restaurants, stores and operational teams.
+        </p>
+
+        <ul className="mt-6 space-y-2 text-sm text-slate-600">
+          <li>✓ HQ Control Center</li>
+          <li>✓ Stock Transfers</li>
+          <li>✓ Central Reporting</li>
+          <li>✓ User Permissions</li>
+          <li>✓ Real-Time Monitoring</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+{/* DEPLOYMENT MODELS */}
+<section className="py-24 sm:py-32 border-t border-slate-100">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+
+    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+      Deployment Models
+    </div>
+
+    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+      Flexible deployment.
+    </h2>
+
+    <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+      Start with a single location and scale to a multi-location operation
+      without changing your infrastructure.
+    </p>
+
+    <div className="grid lg:grid-cols-3 gap-6 mt-14">
+
+      <div className="p-8 rounded-3xl border border-slate-200 bg-white">
+        <div className="text-sm font-medium">Single Location</div>
+        <p className="mt-3 text-sm text-slate-500">
+          Ideal for independent restaurants and retail stores.
+        </p>
+      </div>
+
+      <div className="p-8 rounded-3xl border border-slate-200 bg-white">
+        <div className="text-sm font-medium">Multi-Location</div>
+        <p className="mt-3 text-sm text-slate-500">
+          Centralized management across multiple branches.
+        </p>
+      </div>
+
+      <div className="p-8 rounded-3xl border border-slate-200 bg-white">
+        <div className="text-sm font-medium">Enterprise</div>
+        <p className="mt-3 text-sm text-slate-500">
+          Advanced reporting, permissions and HQ infrastructure.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+      {/* RESTAURANT SOLUTIONS */}
+<section className="py-24 sm:py-32 border-t border-slate-100">
+  <div className="max-w-6xl mx-auto px-6">
+
+    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+      Restaurant Solutions
+    </div>
+
+    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+      Everything restaurants need.
+    </h2>
+
+    <p className="mt-5 text-slate-500 max-w-3xl">
+      Built to streamline ordering, kitchen operations and customer experiences.
+    </p>
+
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
+
+      {[
+        "QR Table Ordering",
+        "Android POS & Web POS",
+        "Kiosk Self-Service",
+        "Kitchen Display System",
+        "Delivery & Pickup",
+        "Loyalty & Memberships",
+      ].map((item) => (
+        <div
+          key={item}
+          className="p-6 rounded-2xl border border-slate-200 bg-white"
         >
-          <motion.div
-            initial={{ scale: 0.92, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ type: "spring", stiffness: 220, damping: 20 }}
-            className="bg-white max-w-xl w-full rounded-3xl p-6 sm:p-8 shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="text-[10px] tracking-[0.35em] uppercase text-emerald-600 font-semibold">
-              HOXXES MODULE
-            </div>
+          {item}
+        </div>
+      ))}
 
-            <h2 className="mt-4 text-2xl font-semibold">
-              {selectedModule.title}
-            </h2>
+    </div>
 
-            <p className="mt-4 text-sm sm:text-base text-slate-500 leading-relaxed">
-              {selectedModule.detail}
-            </p>
+  </div>
+</section>
+{/* RETAIL SOLUTIONS */}
+<section className="py-24 sm:py-32 bg-slate-50">
+  <div className="max-w-6xl mx-auto px-6">
 
-            <div className="mt-6 p-4 rounded-2xl bg-emerald-50 border border-emerald-100">
-              <div className="text-sm font-medium text-slate-900">
-                Business impact
-              </div>
+    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+      Retail Solutions
+    </div>
 
-              <p className="mt-2 text-sm text-slate-600">
-                {selectedModule.benefit}
-              </p>
-            </div>
+    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+      Infrastructure for modern retail.
+    </h2>
 
-            <button
-              onClick={() => setSelectedModule(null)}
-              className="mt-8 text-sm text-slate-500 hover:text-black transition"
-            >
-              Close
-            </button>
-          </motion.div>
-        </motion.div>
-      )}
+    <p className="mt-5 text-slate-500 max-w-3xl">
+      Inventory, workforce and transaction infrastructure for growing businesses.
+    </p>
 
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
+
+      {[
+        "POS Infrastructure",
+        "Inventory Management",
+        "Printer Integration",
+        "Workforce Management",
+        "Check-In / Check-Out",
+        "Analytics & Reporting",
+      ].map((item) => (
+        <div
+          key={item}
+          className="p-6 rounded-2xl border border-slate-200 bg-white"
+        >
+          {item}
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
+{/* ENTERPRISE INFRASTRUCTURE */}
+<section className="py-24 sm:py-32">
+  <div className="max-w-6xl mx-auto px-6">
+
+    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+      Enterprise Infrastructure
+    </div>
+
+    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+      Multi-location operations.
+    </h2>
+
+    <p className="mt-5 text-slate-500 max-w-3xl">
+      Centralized control across restaurants, stores and operational teams.
+    </p>
+
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
+
+      {[
+        "HQ Control Center",
+        "Stock Transfers",
+        "Central Reporting",
+        "Support Ticket System",
+        "Documentation Center",
+        "User Permissions",
+      ].map((item) => (
+        <div
+          key={item}
+          className="p-6 rounded-2xl border border-slate-200 bg-white"
+        >
+          {item}
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>   
+
+    
       {/* ENTERPRISE BLOCK */}
       <section className="py-24 sm:py-32 bg-slate-50 border-y border-slate-200">
 
