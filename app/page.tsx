@@ -119,6 +119,62 @@ multiple locations from one platform.
           
         </motion.div>
       </section>
+     {/* TRUSTED BY */}
+<section className="pb-20">
+  <div className="max-w-6xl mx-auto px-6">
+
+    <div className="text-center">
+      <div className="text-xs uppercase tracking-[0.35em] text-slate-400">
+        Trusted by Businesses
+      </div>
+
+      <p className="mt-3 text-sm text-slate-500">
+        Powering restaurants and retail operations across multiple locations.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-8 mt-10 items-center">
+
+      <img
+        src="https://hoxxes.app/images/cheese.svg"
+        alt="Cheese"
+        className="h-10 md:h-12 lg:h-12 w-auto mx-auto object-contain opacity-70 hover:opacity-100 transition duration-300"
+      />
+
+      <img
+        src="https://hoxxes.app/images/dejavu.svg"
+        alt="Dejavu"
+        className="h-10 md:h-12 lg:h-12 w-auto mx-auto object-contain opacity-70 hover:opacity-100 transition duration-300"
+      />
+
+      <img
+        src="https://hoxxes.app/images/heavyhit.svg"
+        alt="Heavy Hit"
+        className="h-10 md:h-12 lg:h-12 w-auto mx-auto object-contain opacity-70 hover:opacity-100 transition duration-300"
+      />
+
+      <img
+        src="https://hoxxes.app/images/lejza.svg"
+        alt="Lejza"
+        className="h-10 md:h-12 lg:h-12 w-auto mx-auto object-contain opacity-70 hover:opacity-100 transition duration-300"
+      />
+
+      <img
+        src="https://hoxxes.app/images/pasa.svg"
+        alt="Pasa"
+        className="h-10 md:h-12 lg:h-12 w-auto mx-auto object-contain opacity-70 hover:opacity-100 transition duration-300"
+      />
+
+      <img
+        src="https://hoxxes.app/images/tomos.svg"
+        alt="Tomos"
+        className="h-10 md:h-12 lg:h-12 w-auto mx-auto object-contain opacity-70 hover:opacity-100 transition duration-300"
+      />
+
+    </div>
+
+  </div>
+</section> 
 
 
       {/* SOFTWARE */}
