@@ -1,6 +1,4 @@
 "use client";
-import { spacing, text, layout } from "@/app/design-system";
-import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -315,58 +313,79 @@ multiple locations from one platform.
 
             {/* LEFT */}
             <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-xs tracking-[0.35em] text-emerald-600 font-semibold mb-5">
-                Flagship Hardware
-              </div>
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.4 }}
+  transition={{
+    duration: 0.9,
+    ease: [0.22, 1, 0.36, 1],
+  }}
+>
+  <div className="text-xs tracking-[0.35em] text-emerald-600 font-semibold mb-5">
+    Flagship Hardware
+  </div>
 
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
-                Self-service kiosks,
-                <span className="block text-slate-400">
-                  fully integrated.
-                </span>
-              </h2>
+  <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
+    Self-service kiosks,
+    <span className="block text-slate-400">
+      fully integrated.
+    </span>
+  </h2>
 
-              <p className="mt-6 text-slate-500 leading-relaxed">
-                Android-based self-service kiosks fully integrated with POS, KDS, fiscal printers and payment terminals.
-              </p>
+  <p className="mt-6 text-slate-500 leading-relaxed">
+    Android-based self-service kiosks fully integrated with POS, KDS,
+    fiscal printers and payment terminals.
+  </p>
 
-              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-600">
-                {[
-                  "32” interactive display",
-                  "Integrated thermal printer",
-                  "High-speed QR code scanner",
-                  "Payment terminal support",
-                  "Real-time cloud sync",
-                ].map((f) => (
-                  <div key={f}>✓ {f}</div>
-                ))}
-              </div>
+  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-600">
+    {[
+      "32” interactive display",
+      "Integrated thermal printer",
+      "High-speed QR code scanner",
+      "Payment terminal support",
+      "Real-time cloud sync",
+    ].map((f) => (
+      <div key={f}>✓ {f}</div>
+    ))}
+  </div>
 
-              <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                <Button href="/hardware" variant="primary">
-                  Explore Hardware
-                </Button>
-                <Button href="/request-demo" variant="outline">
-                  Request Demo
-                </Button>
-              </div>
-            </motion.div>
+  <div className="mt-8 flex flex-col sm:flex-row gap-3">
+    <Button href="/hardware" variant="primary">
+      Explore Hardware
+    </Button>
+
+    <Button href="/request-demo" variant="outline">
+      Request Demo
+    </Button>
+  </div>
+</motion.div>
 
             {/* RIGHT */}
            <motion.div
-  initial={{ opacity: 0, x: 40 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  viewport={{ once: true }}
+  initial={{
+    opacity: 0,
+    y: 80,
+    scale: 0.92,
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+    scale: 1,
+  }}
+  viewport={{
+    once: true,
+    amount: 0.6,
+  }}
+  transition={{
+    duration: 1.2,
+    ease: [0.22, 1, 0.36, 1],
+  }}
   className="relative flex justify-center items-center"
 >
   {/* Emerald Glow */}
   <div
-  className="absolute w-[500px] h-[500px] bg-emerald-400/25 rounded-full blur-[140px]"
-/>
+    className="absolute w-[500px] h-[500px] bg-emerald-400/25 rounded-full blur-[140px]"
+  />
 
   <img
     src="https://hoxxes.app/images/kiosk.svg"
@@ -376,12 +395,12 @@ multiple locations from one platform.
       maxWidth: "140%",
       display: "block",
       position: "relative",
-      zIndex: 10
+      zIndex: 10,
     }}
   />
 </motion.div>
 
-          </div>
+           </div>
         </div>
       </section>
 
