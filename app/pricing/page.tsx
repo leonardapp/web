@@ -43,18 +43,21 @@ export default function PricingPage() {
   Transparent pricing designed to scale from single locations
   to enterprise operations.
 </p>
-<div className="mt-8 flex justify-center gap-3 flex-wrap">
+<div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
 
   <Link
     href="/request-demo"
-    className="inline-flex items-center px-5 py-2 rounded-full bg-black text-white text-sm font-medium hover:bg-slate-800 transition"
+    className="px-6 py-3 rounded-full border border-slate-300 
+            text-slate-700 hover:bg-black hover:text-white hover:border-black 
+            transition text-sm font-medium"
   >
     Request Demo
   </Link>
 
   <Link
     href="#pricing-calculator"
-    className="inline-flex items-center px-5 py-2 rounded-full border border-slate-300 text-sm font-medium hover:bg-black hover:text-white transition"
+    className="px-6 py-3 rounded-full bg-black text-white 
+            hover:bg-slate-800 transition text-sm font-medium"
   >
     Calculate Pricing
   </Link>
@@ -339,6 +342,7 @@ export default function PricingPage() {
           </div>
           
         </div>
+        {/* import button from "react" */}
       </section>
 {/* FINAL CTA */}
 <section className="py-24 text-center">
@@ -351,23 +355,23 @@ export default function PricingPage() {
     Schedule a demo and discover how HOXXES can modernize your operations.
   </p>
 
-  <div className="mt-8 flex justify-center gap-3 flex-wrap">
+  <div className="mt-8 flex justify-center items-center gap-3 flex-wrap">
 
-  <Link
-    href="/request-demo"
-    className="inline-flex items-center px-5 py-2 rounded-full bg-black text-white text-sm font-medium hover:bg-slate-800 transition"
-  >
-    Request Demo
-  </Link>
+    <Link
+      href="/request-demo"
+      className="inline-flex w-auto items-center justify-center px-5 py-2 rounded-full bg-black text-white text-sm font-medium hover:bg-slate-800 transition"
+    >
+      Request Demo
+    </Link>
 
-  <Link
-  href="/contact-sales"
-  className="inline-flex items-center px-5 py-2 rounded-full border border-slate-300 text-sm font-medium hover:bg-black hover:text-white transition"
->
-  Contact Sales
-</Link>
+    <Link
+      href="/contact-sales"
+      className="inline-flex w-auto items-center justify-center px-5 py-2 rounded-full border border-slate-300 text-sm font-medium hover:bg-black hover:text-white transition"
+    >
+      Contact Sales
+    </Link>
 
-</div>
+  </div>
 
 </section>
     

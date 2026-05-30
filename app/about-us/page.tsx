@@ -22,7 +22,7 @@ export default function AboutPage() {
           </div>
 
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
-            Operating infrastructure
+          Operating infrastructure
             <span className="block text-slate-500">
               for modern commerce.
             </span>

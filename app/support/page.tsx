@@ -186,35 +186,7 @@ export default function SupportPage() {
             </div>
           </div>
         </div>
-      </section>
-      <section className="py-24 text-center">
-
-  <h2 className="text-3xl sm:text-4xl font-semibold">
-    Need assistance?
-  </h2>
-
-  <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
-    Access documentation, contact our team or open a support ticket.
-  </p>
-
-  <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
-
-    <Link
-      href="/ticket"
-      className="px-6 py-3 rounded-full bg-black text-white hover:bg-slate-800 transition"
-    >
-      Open Ticket
-    </Link>
-
-    <Link
-      href="/docs"
-      className="px-6 py-3 rounded-full border border-slate-300 hover:bg-black hover:text-white transition"
-    >
-      Browse Documentation
-    </Link>
-
-  </div>
-
+     
 </section>
 
       
