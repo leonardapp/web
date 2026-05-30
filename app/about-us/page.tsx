@@ -11,7 +11,7 @@ export default function AboutPage() {
       <Header />
 
       {/* HERO */}
-      <section className="max-w-5xl mx-auto px-6 pt-28 pb-20 text-center">
+      <section className="max-w-5xl mx-auto px-6 pt-24 sm:pt-28 lg:pt-32 pb-20 text-center">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,7 +53,7 @@ export default function AboutPage() {
 </motion.div>
 </section>
           {/* INDUSTRIES */}
-<section className="max-w-6xl mx-auto px-6 py-20">
+<section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
 
   <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
     Industries
@@ -90,7 +90,7 @@ export default function AboutPage() {
 
 </section>
 {/* BUILT FOR SCALE */}
-<section className="max-w-6xl mx-auto px-6 py-20">
+<section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
 
   <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
     Built For Scale
@@ -139,7 +139,7 @@ export default function AboutPage() {
       </section>
 
       {/* VALUES */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
+      <section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
         <h2 className="text-2xl font-semibold mb-10">Core Principles</h2>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -173,7 +173,7 @@ export default function AboutPage() {
       </section>
 
       {/* PLATFORM OVERVIEW */}
-<section className="max-w-6xl mx-auto px-6 py-20">
+<section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
 
   <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
     Platform Overview
@@ -210,7 +210,7 @@ export default function AboutPage() {
 
 
       {/* CTA */}
-      <section className="relative bg-black text-white text-center py-24 overflow-hidden">
+     <section className="relative bg-black text-white text-center py-24 sm:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-emerald-500/20 blur-3xl" />
 
         <div className="relative max-w-3xl mx-auto px-6">

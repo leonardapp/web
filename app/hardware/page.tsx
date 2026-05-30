@@ -46,7 +46,7 @@ export default function HardwarePage() {
       <Header />
 
       {/* HERO */}
-      <section className="max-w-6xl mx-auto px-6 pt-28 sm:pt-32 pb-14 text-center">
+      <section className="max-w-6xl mx-auto px-6 pt-24 sm:pt-28 lg:pt-32 pb-20 text-center">
 
         <div className="text-[10px] sm:text-xs tracking-[0.35em] uppercase text-slate-400">
           Hardware Ecosystem
@@ -71,7 +71,7 @@ export default function HardwarePage() {
         </div>
 
       </section>
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
   <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 text-center">
 
     <div className="p-6 sm:p-8 rounded-3xl border border-slate-200 bg-white">
@@ -105,7 +105,7 @@ export default function HardwarePage() {
 </section>
 
       {/* HARDWARE GRID */}
-      <section className="max-w-7xl mx-auto px-6 pb-20 sm:pb-28">
+      <section className="max-w-7xl mx-auto px-6 pb-24 sm:pb-32">
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 max-w-5xl mx-auto">
 
@@ -209,7 +209,7 @@ export default function HardwarePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 sm:py-28 bg-slate-50 border-y border-slate-200 text-center px-6">
+      <section className="py-24 sm:py-32 bg-slate-50 border-y border-slate-200 text-center px-6">
 
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight">
           One ecosystem. All your hardware connected.

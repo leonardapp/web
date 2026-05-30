@@ -130,8 +130,8 @@ export default function DocsPage() {
       <div className="pointer-events-none fixed inset-0 opacity-[0.04] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
       {/* HERO */}
-      <section className="max-w-4xl mx-auto text-center px-6 py-24">
-        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
+      <section className="max-w-4xl mx-auto text-center px-6 pt-24 sm:pt-28 lg:pt-32 pb-20">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
           Documentation Center
         </h1>
 
@@ -150,7 +150,7 @@ export default function DocsPage() {
       </section>
 
       {/* GRID */}
-      <section className="max-w-6xl mx-auto px-6 pb-32">
+      <section className="max-w-6xl mx-auto px-6 pb-20 sm:pb-28">
         <div className="grid md:grid-cols-3 gap-6">
 
           {filteredModules.map((m, i) => (

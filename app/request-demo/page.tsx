@@ -31,13 +31,16 @@ export default function RequestDemoPage() {
     const form = new FormData(e.currentTarget);
 
     const data = {
-      name: form.get("name"),
-      company: form.get("company"),
-      email: form.get("email"),
-      phone: form.get("phone"),
-      locations: form.get("locations"),
-      message: form.get("message"),
-    };
+  name: form.get("name"),
+  company: form.get("company"),
+  businessType: form.get("businessType"),
+  email: form.get("email"),
+  phone: form.get("phone"),
+  country: form.get("country"),
+  locations: form.get("locations"),
+  interest: form.get("interest"),
+  message: form.get("message"),
+};
 
     try {
       const res = await fetch("/api/request-demo", {
@@ -67,108 +70,148 @@ export default function RequestDemoPage() {
       <Header />
 
       {/* HERO */}
-      <section className="max-w-3xl mx-auto px-6 py-24 text-center">
-        <div className="text-xs uppercase tracking-[0.35em] text-slate-400">
-          Request Demo
-        </div>
+<section className="max-w-3xl mx-auto px-6 py-24 text-center">
 
-        <h1 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight">
-          See HOXXES in action.
-        </h1>
+  <div className="text-xs uppercase tracking-[0.35em] text-slate-400">
+    Request Demo
+  </div>
 
-        <p className="mt-5 text-base text-slate-500 leading-relaxed">
-          Tell us about your business and we’ll schedule a personalized demo of the platform.
-        </p>
-      </section>
+  <h1 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight">
+    See HOXXES in action.
+  </h1>
+
+  <p className="mt-5 text-base text-slate-500 leading-relaxed">
+  Tell us about your business and discover how HOXXES can streamline
+  operations, ordering, payments and multi-location management.
+</p>
+
+</section>
 
       {/* FORM */}
       <section className="max-w-2xl mx-auto px-6 pb-24">
         <form className="space-y-4" onSubmit={handleSubmit}>
 
-          <input
-            name="name"
-            required
-            placeholder="Full Name"
-            className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
-          />
+  <input
+    name="name"
+    required
+    placeholder="Full Name"
+    className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
+  />
 
-          <input
-            name="company"
-            required
-            placeholder="Company Name"
-            className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
-          />
+  <input
+    name="company"
+    required
+    placeholder="Company Name"
+    className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
+  />
 
-          <input
-            name="email"
-            type="email"
-            required
-            placeholder="Email Address"
-            className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
-          />
+  <select
+    name="businessType"
+    required
+    className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
+  >
+    <option value="">Business Type</option>
+    <option>Restaurant</option>
+    <option>Fast Food / QSR</option>
+    <option>Cafe / Coffee Shop</option>
+    <option>Retail Store</option>
+    <option>Hotel</option>
+    <option>Enterprise</option>
+    <option>Other</option>
+  </select>
 
-          <input
-            name="phone"
-            placeholder="Phone Number"
-            className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
-          />
+  <input
+    name="email"
+    type="email"
+    required
+    placeholder="Email Address"
+    className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
+  />
 
-          <select
-            name="locations"
-            className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
-          >
-            <option>1 Location</option>
-            <option>2–5 Locations</option>
-            <option>6–20 Locations</option>
-            <option>20+ Locations</option>
-          </select>
+  <input
+    name="phone"
+    placeholder="Phone Number"
+    className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
+  />
 
-          <textarea
-            name="message"
-            rows={4}
-            placeholder="Tell us about your business..."
-            className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
-          />
+  <input
+    name="country"
+    placeholder="Country"
+    className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
+  />
 
-          {error && (
-            <p className="text-red-500 text-sm">{error}</p>
-          )}
+  <select
+    name="locations"
+    className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
+  >
+    <option>1 Location</option>
+    <option>2–5 Locations</option>
+    <option>6–20 Locations</option>
+    <option>20+ Locations</option>
+  </select>
 
-          {success && (
-            <p className="text-green-600 text-sm">
-              ✅ Request sent successfully. Our team will contact you soon.
-            </p>
-          )}
+  <select
+    name="interest"
+    className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
+  >
+    <option value="">Interested In</option>
+    <option>Software Platform</option>
+    <option>Hardware</option>
+    <option>Software + Hardware</option>
+    <option>Enterprise Infrastructure</option>
+  </select>
 
-          <button
-            disabled={loading}
-            type="submit"
-            className="w-full px-6 py-3 bg-black text-white rounded-xl font-medium hover:bg-slate-800 transition disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {loading ? "Sending..." : "Submit Request"}
-          </button>
-        </form>
+  <textarea
+    name="message"
+    rows={4}
+    placeholder="Tell us about your business..."
+    className="w-full px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 outline-none"
+  />
+
+  {error && (
+    <p className="text-red-500 text-sm">{error}</p>
+  )}
+
+  {success && (
+    <p className="text-green-600 text-sm">
+      ✅ Request sent successfully. Our team will contact you soon.
+    </p>
+  )}
+
+  <button
+    disabled={loading}
+    type="submit"
+    className="w-full px-6 py-3 bg-black text-white rounded-xl font-medium hover:bg-slate-800 transition disabled:opacity-50 disabled:cursor-not-allowed"
+  >
+    {loading ? "Sending..." : "Submit Request"}
+  </button>
+
+</form>
 
         {/* CONTACT */}
-        <div className="mt-8 text-sm text-slate-500 text-center flex flex-col items-center gap-3">
-          <p>Or contact us directly:</p>
+<div className="mt-8 text-sm text-slate-500 text-center flex flex-col items-center gap-3">
 
-          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
-            <a
-              className="px-5 py-2 border border-slate-200 rounded-full text-black hover:bg-black hover:text-white transition"
-              href="mailto:info@hoxxes.com"
-            >
-              Email Support
-            </a>
+  <p>Prefer speaking with our team?</p>
 
-            <a
-              className="px-5 py-2 border border-slate-200 rounded-full text-black hover:bg-black hover:text-white transition"
-              href="tel:+38348106060"
-            >
-              Call Us
-            </a>
-          </div>
-        </div>
+  <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
+
+    <a
+      className="px-5 py-2 border border-slate-200 rounded-full text-black hover:bg-black hover:text-white transition"
+      href="mailto:info@hoxxes.com"
+    >
+      Contact Sales
+    </a>
+
+    <a
+      className="px-5 py-2 border border-slate-200 rounded-full text-black hover:bg-black hover:text-white transition"
+      href="tel:+38348106060"
+    >
+      Call Sales
+    </a>
+
+  </div>
+
+</div>
       </section>
     </div>
   );

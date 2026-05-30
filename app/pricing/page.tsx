@@ -26,13 +26,13 @@ export default function PricingPage() {
 
       <Header />
       {/* HERO */}
-      <section className="text-center px-4 sm:px-6 pt-14 sm:pt-20 pb-10 sm:pb-14">
+      <section className="text-center px-4 sm:px-6 pt-24 sm:pt-28 lg:pt-32 pb-20">
         
         <div className="text-[10px] sm:text-xs tracking-[0.35em] text-slate-400 uppercase">
   Pricing
 </div>
 
-<h1 className="mt-5 text-3xl sm:text-5xl font-semibold leading-tight">
+<h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
   Flexible plans for
   <span className="block text-slate-500">
     restaurants, retail and enterprise.
@@ -43,21 +43,22 @@ export default function PricingPage() {
   Transparent pricing designed to scale from single locations
   to enterprise operations.
 </p>
-<div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
+<div className="mt-12 flex flex-col sm:flex-row justify-center gap-3">
 
   <Link
     href="/request-demo"
-    className="px-6 py-3 rounded-full border border-slate-300 
-            text-slate-700 hover:bg-black hover:text-white hover:border-black 
-            transition text-sm font-medium"
+    className="px-6 py-3 rounded-full bg-black text-white 
+            hover:bg-slate-800 transition text-sm font-medium"
+    
   >
     Request Demo
   </Link>
 
   <Link
     href="#pricing-calculator"
-    className="px-6 py-3 rounded-full bg-black text-white 
-            hover:bg-slate-800 transition text-sm font-medium"
+    className="px-6 py-3 rounded-full border border-slate-300 
+            text-slate-700 hover:bg-black hover:text-white hover:border-black 
+            transition text-sm font-medium"
   >
     Calculate Pricing
   </Link>
@@ -178,97 +179,119 @@ export default function PricingPage() {
 </section>
 
       {/* CALCULATOR SECTION */}
-      <section
+<section
   id="pricing-calculator"
-  className="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+  className="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-20"
+>
 
-          {/* LEFT */}
-          <div className="space-y-6">
-            <div>
-              <div className="text-sm text-slate-500">
-                Number of locations
-              </div>
+  {/* HEADER */}
+  <div className="text-center mb-12">
+    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+      Pricing Calculator
+    </div>
 
-              <div className="text-3xl sm:text-4xl font-semibold mt-2">
-                {locations}
-              </div>
-            </div>
+    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+      Estimate your yearly subscription.
+    </h2>
 
-            <input
-              type="range"
-              min="1"
-              max="20"
-              value={locations}
-              onChange={(e) => setLocations(Number(e.target.value))}
-              className="w-full accent-black"
-            />
+    <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
+      Adjust the number of locations and instantly calculate your annual
+      licensing cost.
+    </p>
+  </div>
 
-            <div className="text-xs text-slate-400">
-              Drag to simulate your annual pricing instantly
-            </div>
-          </div>
+  {/* CONTENT */}
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
-          {/* RIGHT CARD */}
-          <motion.div
-            key={locations}
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="border rounded-3xl p-5 sm:p-8 shadow-sm bg-white"
-          >
-
-            {isEnterprise && (
-              <div className="text-xs uppercase text-emerald-600 mb-2">
-                Enterprise Volume Pricing Active
-              </div>
-            )}
-
-            <div className="text-xs uppercase tracking-widest text-slate-400">
-              Pricing Tier
-            </div>
-
-            <div className="mt-3 text-3xl sm:text-4xl font-semibold">
-              €{price}
-              <span className="text-sm text-slate-400"> / year / location</span>
-            </div>
-
-            <div className="mt-4 text-2xl font-semibold">
-              €{total.toLocaleString()}
-            </div>
-
-            <div className="text-sm text-slate-500">
-              Total yearly cost (excl. VAT)
-            </div>
-
-            {/* FEATURES */}
-            <ul className="mt-6 space-y-2 text-sm text-slate-600">
-              <li>✔ POS + QR Ordering</li>
-              <li>✔ Kitchen Display System</li>
-              <li>✔ Staff Management</li>
-              <li>✔ Analytics Dashboard</li>
-
-              {isEnterprise && (
-                <>
-                  <li>✔ 30-Day Free Trial</li>
-                  <li>✔ Multi-location scaling tools</li>
-                </>
-              )}
-            </ul>
-
-            {/* BUTTON (FIXED) */}
-            <Link
-              href="/request-demo"
-              className="mt-6 w-full block text-center bg-black text-white py-3 rounded-full hover:bg-slate-800 transition"
-            >
-              Start Deployment
-            </Link>
-
-            <p className="text-xs text-slate-400 text-center mt-3">
-              VAT applies depending on region
-            </p>
-          </motion.div>
+    {/* LEFT */}
+    <div className="space-y-6">
+      <div>
+        <div className="text-sm text-slate-500">
+          Number of locations
         </div>
-      </section>
+
+        <div className="text-3xl sm:text-4xl font-semibold mt-2">
+          {locations}
+        </div>
+      </div>
+
+      <input
+        type="range"
+        min="1"
+        max="20"
+        value={locations}
+        onChange={(e) => setLocations(Number(e.target.value))}
+        className="w-full accent-black"
+      />
+
+      <div className="text-xs text-slate-400">
+        Drag to simulate your annual pricing instantly
+      </div>
+    </div>
+
+    {/* RIGHT CARD */}
+    <motion.div
+      key={locations}
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="border rounded-3xl p-5 sm:p-8 shadow-sm bg-white"
+    >
+
+      {isEnterprise && (
+        <div className="text-xs uppercase text-emerald-600 mb-2">
+          Enterprise Volume Pricing Active
+        </div>
+      )}
+
+      <div className="text-xs uppercase tracking-widest text-slate-400">
+        Pricing Tier
+      </div>
+
+      <div className="mt-3 text-3xl sm:text-4xl font-semibold">
+        €{price}
+        <span className="text-sm text-slate-400">
+          {" "} / year / location
+        </span>
+      </div>
+
+      <div className="mt-4 text-2xl font-semibold">
+        €{total.toLocaleString()}
+      </div>
+
+      <div className="text-sm text-slate-500">
+        Total yearly cost (excl. VAT)
+      </div>
+
+      <ul className="mt-6 space-y-2 text-sm text-slate-600">
+        <li>✔ POS + QR Ordering</li>
+        <li>✔ Kitchen Display System</li>
+        <li>✔ Staff Management</li>
+        <li>✔ Analytics Dashboard</li>
+
+        {isEnterprise && (
+          <>
+            <li>✔ 30-Day Free Trial</li>
+            <li>✔ Multi-location scaling tools</li>
+          </>
+        )}
+      </ul>
+
+      <Link
+        href="/request-demo"
+        className="mt-6 w-full block text-center bg-black text-white py-3 rounded-full hover:bg-slate-800 transition"
+      >
+        Start Deployment
+      </Link>
+
+      <p className="text-xs text-slate-400 text-center mt-3">
+        VAT applies depending on region
+      </p>
+
+    </motion.div>
+
+  </div>
+
+</section>
 
       {/* TIER GRID */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-14">
@@ -345,15 +368,16 @@ export default function PricingPage() {
         {/* import button from "react" */}
       </section>
 {/* FINAL CTA */}
-<section className="py-24 text-center">
+<section className="py-20 sm:py-28 text-center">
 
   <h2 className="text-3xl sm:text-4xl font-semibold">
-    Ready to deploy HOXXES?
-  </h2>
+  Ready to scale with HOXXES?
+</h2>
 
-  <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
-    Schedule a demo and discover how HOXXES can modernize your operations.
-  </p>
+<p className="mt-4 text-slate-500 max-w-2xl mx-auto">
+  Deploy a unified operating system across restaurants, 
+  retail stores and enterprise locations.
+</p>
 
   <div className="mt-8 flex justify-center items-center gap-3 flex-wrap">
 

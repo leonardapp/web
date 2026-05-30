@@ -14,7 +14,7 @@ export default function ContactSalesPage() {
       <main className="flex-1">
 
         {/* HERO */}
-        <section className="w-full px-6 pt-24 sm:pt-28 pb-14 text-center">
+        <section className="w-full px-6 pt-24 sm:pt-28 lg:pt-32 pb-20 text-center">
 
           <div className="text-xs uppercase tracking-[0.3em] text-slate-400">
             Contact Sales
@@ -91,6 +91,35 @@ export default function ContactSalesPage() {
 
           </div>
         </section>
+        <section className="py-24 sm:py-32 text-center px-6">
+
+  <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
+    Ready to deploy HOXXES?
+  </h2>
+
+  <p className="mt-4 text-slate-500">
+    Speak with our team about software, hardware and enterprise infrastructure.
+  </p>
+
+  <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
+
+    <a
+      href="mailto:info@hoxxes.com"
+      className="px-6 py-3 rounded-full bg-black text-white text-sm font-medium hover:bg-slate-800 transition"
+    >
+      Email Sales
+    </a>
+
+    <Link
+      href="/request-demo"
+      className="px-6 py-3 rounded-full border border-slate-300 text-sm font-medium hover:bg-black hover:text-white transition"
+    >
+      Request Demo
+    </Link>
+
+  </div>
+
+</section>
 
       </main>
 

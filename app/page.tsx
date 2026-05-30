@@ -178,7 +178,7 @@ multiple locations from one platform.
 
 
       {/* SOFTWARE */}
-      <section className="py-20 sm:py-28 bg-slate-50 ">
+      <section className="py-20 sm:py-28 bg-transparent">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-xl sm:text-2xl font-semibold mb-10">
             Software Ecosystem

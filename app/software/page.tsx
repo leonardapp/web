@@ -16,7 +16,7 @@ export default function SoftwarePage() {
       <Header />
 
       {/* HERO */}
-      <section className="max-w-6xl mx-auto px-6 py-28 sm:py-32 text-center">
+      <section className="max-w-6xl mx-auto px-6 pt-24 sm:pt-28 lg:pt-32 pb-20 text-center">
         
        <div className="text-[10px] sm:text-xs uppercase tracking-[0.35em] text-slate-400">
   Restaurant • Retail • Enterprise
@@ -38,7 +38,15 @@ export default function SoftwarePage() {
 
         {/* CTA */}
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
-          
+                   
+          <Link
+            href="/request-demo"
+            className="px-6 py-3 rounded-full bg-black text-white 
+            hover:bg-slate-800 transition text-sm font-medium"
+          >
+            Request Demo
+          </Link>
+
           <Link
             href="/hardware"
             className="px-6 py-3 rounded-full border border-slate-300 
@@ -48,18 +56,10 @@ export default function SoftwarePage() {
             Explore Hardware
           </Link>
 
-          <Link
-            href="/request-demo"
-            className="px-6 py-3 rounded-full bg-black text-white 
-            hover:bg-slate-800 transition text-sm font-medium"
-          >
-            Request Demo
-          </Link>
-
         </div>
       </section>
       {/* INFRASTRUCTURE TYPES */}
-<section className="py-20 sm:py-28">
+<section className="py-24 sm:py-32">
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="text-center">
@@ -344,7 +344,7 @@ export default function SoftwarePage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-20 sm:py-24 text-center px-6">
+      <section className="py-24 sm:py-32 text-center px-6">
 
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
           Ready to modernize your operations?

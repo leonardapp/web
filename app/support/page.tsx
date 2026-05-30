@@ -35,7 +35,7 @@ export default function SupportPage() {
 
 
       {/* HERO */}
-      <section className="relative z-10 max-w-5xl mx-auto px-6 pt-28 pb-20 text-center">
+      <section className="relative z-10 max-w-5xl mx-auto px-6 pt-24 sm:pt-28 lg:pt-32 pb-20 text-center">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ export default function SupportPage() {
       </section>
 
       {/* SUPPORT CARDS */}
-      <section className="relative z-10 max-w-6xl mx-auto px-6 pb-28">
+      <section className="relative z-10 max-w-6xl mx-auto px-6 pb-24 sm:pb-32">
         <div className="grid md:grid-cols-3 gap-6">
           {supportOptions.map((item, i) => (
             <motion.div
@@ -111,7 +111,7 @@ export default function SupportPage() {
           ))}
         </div>
       </section>
-      <section className="max-w-6xl mx-auto px-6 pb-24">
+      <section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
   <div className="grid md:grid-cols-3 gap-6 text-center">
 
     <div className="p-8 rounded-3xl border border-slate-200 bg-white">
@@ -139,7 +139,7 @@ export default function SupportPage() {
 </section>
 
       {/* EMERGENCY SUPPORT BLOCK */}
-      <section className="relative z-10 max-w-4xl mx-auto px-6 pb-28">
+      <section className="relative z-10 max-w-4xl mx-auto px-6 py-24 sm:py-32">
         <div className="relative rounded-3xl border border-slate-200 bg-slate-50 p-10 text-center overflow-hidden">
 
           <div className="absolute inset-0 bg-slate-100/30 blur-3xl" />
@@ -187,6 +187,38 @@ export default function SupportPage() {
           </div>
         </div>
      
+</section>
+<section className="py-24 sm:py-32 text-center px-6">
+
+  <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
+    Need assistance?
+  </h2>
+
+  <p className="mt-4 text-slate-500">
+    Access documentation, create tickets or contact our team directly.
+  </p>
+
+  <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
+
+    <Link
+      href="/docs"
+      className="px-6 py-3 rounded-full border border-slate-300
+      text-slate-700 hover:bg-black hover:text-white hover:border-black
+      transition text-sm font-medium"
+    >
+      Open Docs
+    </Link>
+
+    <Link
+      href="/ticket"
+      className="px-6 py-3 rounded-full bg-black text-white
+      hover:bg-slate-800 transition text-sm font-medium"
+    >
+      Create Ticket
+    </Link>
+
+  </div>
+
 </section>
 
       

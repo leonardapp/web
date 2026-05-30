@@ -55,14 +55,10 @@ export default function DownloadCenter() {
       <div className="relative z-50">
         <Header />
       </div>
-
-      
-      
-
-    
-
+   
+         
       {/* HERO */}
-      <section className="max-w-4xl mx-auto px-6 pt-28 pb-16 text-center">
+      <section className="max-w-4xl mx-auto px-6 pt-24 sm:pt-28 lg:pt-32 pb-20 text-center">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
@@ -72,7 +68,7 @@ export default function DownloadCenter() {
             Download Center
           </div>
 
-          <h1 className="mt-6 text-4xl md:text-5xl font-semibold tracking-tight">
+          <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
             Get HOXXES Apps
           </h1>
 
@@ -88,7 +84,7 @@ export default function DownloadCenter() {
       </section>
 
       {/* CARDS */}
-      <section className="max-w-6xl mx-auto px-6 pb-28">
+      <section className="max-w-6xl mx-auto px-6 pb-20 sm:pb-28">
         <div className="grid gap-6 md:grid-cols-3">
 
           {platforms.map((p, i) => (
@@ -131,7 +127,7 @@ export default function DownloadCenter() {
       </section>
 
       {/* VALUE STRIP */}
-      <section className="py-24 bg-black text-white text-center px-6 relative overflow-hidden">
+      <section className="py-20 sm:py-28 bg-black text-white text-center px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-emerald-500/20 blur-3xl" />
 
         <div className="relative max-w-3xl mx-auto">
