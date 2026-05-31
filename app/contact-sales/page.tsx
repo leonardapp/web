@@ -91,6 +91,109 @@ export default function ContactSalesPage() {
 
           </div>
         </section>
+        {/* SALES CONTACT OPTIONS */}
+<section className="max-w-6xl mx-auto px-6 pb-24">
+
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <div className="p-8 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition">
+      <div className="text-xs uppercase tracking-[0.3em] text-emerald-600">
+        Email
+      </div>
+
+      <h3 className="mt-4 text-xl font-semibold">
+        Sales Team
+      </h3>
+
+      <p className="mt-3 text-slate-500">
+        Contact us regarding software, hardware and deployments.
+      </p>
+
+      <a
+        href="mailto:info@hoxxes.com"
+        className="inline-block mt-5 text-black font-medium"
+      >
+        info@hoxxes.com
+      </a>
+    </div>
+
+    <div className="p-8 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition">
+      <div className="text-xs uppercase tracking-[0.3em] text-emerald-600">
+        Phone
+      </div>
+
+      <h3 className="mt-4 text-xl font-semibold">
+        Direct Contact
+      </h3>
+
+      <p className="mt-3 text-slate-500">
+        Speak directly with our sales specialists.
+      </p>
+
+      <a
+        href="tel:+38348106060"
+        className="inline-block mt-5 text-black font-medium"
+      >
+        +383 48 10 60 60
+      </a>
+    </div>
+
+    <div className="p-8 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition">
+      <div className="text-xs uppercase tracking-[0.3em] text-emerald-600">
+        Enterprise
+      </div>
+
+      <h3 className="mt-4 text-xl font-semibold">
+        Custom Deployments
+      </h3>
+
+      <p className="mt-3 text-slate-500">
+        Multi-location rollouts, integrations and partnerships.
+      </p>
+
+      <Link
+        href="/request-demo"
+        className="inline-block mt-5 text-black font-medium"
+      >
+        Request Consultation
+      </Link>
+    </div>
+
+  </div>
+
+</section>
+{/* SERVICES */}
+<section className="max-w-6xl mx-auto px-6 pb-24">
+
+  <div className="text-center mb-10">
+    <div className="text-xs uppercase tracking-[0.3em] text-emerald-600">
+      Solutions
+    </div>
+
+    <h2 className="mt-4 text-3xl font-semibold">
+      Everything you can deploy with HOXXES.
+    </h2>
+  </div>
+
+  <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+
+    {[
+      "Software Platform",
+      "Hardware Packages",
+      "Enterprise Infrastructure",
+      "Custom Integrations",
+    ].map((item) => (
+      <div
+        key={item}
+        className="p-6 rounded-2xl border border-slate-200 bg-white text-center shadow-sm hover:shadow-lg transition"
+      >
+        {item}
+      </div>
+    ))}
+
+  </div>
+
+</section>
         <section className="py-24 sm:py-32 text-center px-6">
 
   <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">

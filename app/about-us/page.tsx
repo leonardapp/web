@@ -21,14 +21,14 @@ export default function AboutPage() {
             About HOXXES
           </div>
 
-          <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
-          Operating infrastructure
-            <span className="block text-slate-500">
-              for modern commerce.
-            </span>
-          </h1>
+          <h1 className="mt-6 text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
+  Operating infrastructure
+  <span className="block text-slate-500">
+    for modern commerce.
+  </span>
+</h1>
 
-         <p className="mt-6 text-lg md:text-xl text-slate-500 leading-relaxed max-w-3xl mx-auto">
+         <p className="mt-6 text-base sm:text-lg md:text-xl text-slate-500 leading-relaxed max-w-3xl mx-auto">
   HOXXES unifies POS, QR ordering, kiosks, kitchen operations, and analytics
   into one real-time enterprise infrastructure layer — built for scale, speed,
   and reliability.
@@ -65,21 +65,21 @@ export default function AboutPage() {
 
   <div className="grid md:grid-cols-3 gap-6 mt-12">
 
-    <div className="p-8 border rounded-3xl">
+    <div className="p-8 border border-slate-200 rounded-3xl bg-white shadow-sm hover:shadow-xl transition">
       <h3 className="font-semibold">Restaurants</h3>
       <p className="mt-3 text-slate-500">
         Ordering, kiosks, kitchen and guest experiences.
       </p>
     </div>
 
-    <div className="p-8 border rounded-3xl">
+    <div className="p-8 border border-slate-200 rounded-3xl bg-white shadow-sm hover:shadow-xl transition">
       <h3 className="font-semibold">Retail</h3>
       <p className="mt-3 text-slate-500">
         Transactions, inventory and workforce management.
       </p>
     </div>
 
-    <div className="p-8 border rounded-3xl">
+    <div className="p-8 border border-slate-200 rounded-3xl bg-white shadow-sm hover:shadow-xl transition">
       <h3 className="font-semibold">Enterprise</h3>
       <p className="mt-3 text-slate-500">
         Centralized infrastructure across multiple locations.
@@ -89,24 +89,46 @@ export default function AboutPage() {
   </div>
 
 </section>
-{/* BUILT FOR SCALE */}
-<section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
 
-  <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-    Built For Scale
+<section className="max-w-6xl mx-auto px-6 pb-24">
+
+  <section className="max-w-6xl mx-auto px-6 pb-24">
+
+  <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+
+    <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition">
+      <div className="text-3xl sm:text-4xl font-semibold">POS</div>
+      <div className="text-slate-500 text-sm mt-2">
+        Infrastructure
+      </div>
+    </div>
+
+    <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition">
+      <div className="text-3xl sm:text-4xl font-semibold">QR</div>
+      <div className="text-slate-500 text-sm mt-2">
+        Ordering
+      </div>
+    </div>
+
+    <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition">
+      <div className="text-3xl sm:text-4xl font-semibold">KDS</div>
+      <div className="text-slate-500 text-sm mt-2">
+        Kitchen Ops
+      </div>
+    </div>
+
+    <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition">
+      <div className="text-3xl sm:text-4xl font-semibold">HQ</div>
+      <div className="text-slate-500 text-sm mt-2">
+        Control Center
+      </div>
+    </div>
+
   </div>
-
-  <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-    From independent operators to enterprise networks.
-  </h2>
-
-  <p className="mt-5 text-slate-500 max-w-3xl">
-    HOXXES is designed to operate across restaurants,
-    retail stores and multi-location businesses with centralized control.
-  </p>
 
 </section>
 
+</section>
       {/* MISSION */}
       <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
         <motion.div
@@ -116,9 +138,9 @@ export default function AboutPage() {
         >
           <h2 className="text-2xl font-semibold">Infrastructure Vision</h2>
           <p className="mt-4 text-slate-600 leading-relaxed">
-            We eliminate fragmented restaurant systems and replace them with one
-            unified, real-time operating system that connects every device, order,
-            and transaction.
+            We eliminate fragmented business systems and replace them with one
+unified, real-time operating infrastructure connecting devices,
+orders, payments and operations.
           </p>
         </motion.div>
 
@@ -126,7 +148,7 @@ export default function AboutPage() {
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="p-10 rounded-2xl border bg-slate-50 relative overflow-hidden"
+          className="p-10 rounded-3xl border border-slate-200 bg-white shadow-sm relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-emerald-100/40 blur-3xl opacity-60" />
           <div className="relative">
@@ -219,8 +241,8 @@ export default function AboutPage() {
           </h2>
 
           <p className="mt-4 text-slate-300">
-            Join the next generation of restaurant infrastructure systems.
-          </p>
+  One platform powering ordering, payments and operations at scale.
+</p>
 
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
             <Link

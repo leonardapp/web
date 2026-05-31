@@ -89,7 +89,7 @@ export default function PricingPage() {
   <div className="grid lg:grid-cols-3 gap-6 mt-14">
 
     {/* RESTAURANT */}
-    <div className="p-8 rounded-3xl border border-slate-200 bg-white hover:shadow-xl transition">
+    <div className="p-8 rounded-3xl border border-slate-200 bg-white hover:border-emerald-300 hover:shadow-xl transition-all duration-300">
       <div className="text-xs uppercase tracking-[0.25em] text-emerald-600">
         Restaurant
       </div>
@@ -168,8 +168,8 @@ export default function PricingPage() {
     ].map((item) => (
       <div
         key={item}
-        className="p-6 rounded-2xl border border-slate-200 bg-white"
-      >
+        className="p-6 rounded-2xl border border-slate-200 bg-white hover:border-emerald-300 hover:shadow-lg transition-all duration-300"
+>
         ✓ {item}
       </div>
     ))}
