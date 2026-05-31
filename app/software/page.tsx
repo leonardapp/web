@@ -34,7 +34,6 @@ export default function SoftwarePage() {
   into a single operating system.
 </p>
 
-
         {/* CTA */}
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
                    
@@ -56,6 +55,7 @@ export default function SoftwarePage() {
           </Link>
 
         </div>
+        </section> 
    {/* ANALYTICS DASHBOARD */}
 <section className="py-24 sm:py-32 bg-slate-50">
   <div className="max-w-7xl mx-auto px-6">
@@ -77,7 +77,7 @@ export default function SoftwarePage() {
 
     <div className="relative rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden">
 
-      <div className="absolute top-0 sm:top-4 left-1/2 -translate-x-1/2 z-20">
+      <div className="absolute top-3 sm:top-5 left-1/2 -translate-x-1/2 z-20">
         <div className="px-3 sm:px-5 py-1 sm:py-2 rounded-full bg-emerald-500 text-white text-[10px] sm:text-xs font-medium shadow-lg whitespace-nowrap">
           Analytics Cloud
         </div>
@@ -93,7 +93,7 @@ export default function SoftwarePage() {
 
   </div>
 </section>     
-      </section>
+    
       {/* INFRASTRUCTURE TYPES */}
 <section className="py-24 sm:py-32">
   <div className="max-w-7xl mx-auto px-6">
@@ -217,7 +217,7 @@ export default function SoftwarePage() {
       ].map((item) => (
         <div
           key={item}
-          className="p-6 rounded-2xl border border-slate-200 bg-white"
+          className="p-6 rounded-2xl border border-slate-200 bg-transparent"
         >
           {item}
         </div>
@@ -265,8 +265,37 @@ export default function SoftwarePage() {
 
   </div>
 </section>
-{/* ENTERPRISE INFRASTRUCTURE */}
+{/* ORDER CENTER */}
 <section className="py-24 sm:py-32 bg-slate-50">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Order Management
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Fast and intuitive order processing.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Manage dine-in, takeaway and delivery orders from a single interface
+        optimized for speed and operational efficiency.
+      </p>
+    </div>
+
+    <div className="relative rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden">
+  <img
+    src="https://hoxxes.app/images/order-center.png"
+    alt="HOXXES Order Center"
+    className="w-full rounded-2xl"
+  />
+</div>
+
+  </div>
+</section>
+{/* ENTERPRISE INFRASTRUCTURE */}
+<section className="py-24 sm:py-32 bg-white">
   <div className="max-w-6xl mx-auto px-6">
 
     <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
@@ -303,32 +332,32 @@ export default function SoftwarePage() {
 
   </div>
 </section>   
-{/* ORDER CENTER */}
+{/* HQ CONTROL CENTER */}
 <section className="py-24 sm:py-32 bg-slate-50">
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="text-center mb-14">
       <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        Order Management
+        HQ Control Center
       </div>
 
       <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-        Fast and intuitive order processing.
+        Manage every location from one place.
       </h2>
 
       <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-        Manage dine-in, takeaway and delivery orders from a single interface
-        optimized for speed and operational efficiency.
+        Centralized reporting, inventory management, workforce oversight
+        and operational control across all locations.
       </p>
     </div>
 
-    <div className="relative rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden">
-  <img
-    src="https://hoxxes.app/images/order-center.png"
-    alt="HOXXES Order Center"
-    className="w-full rounded-2xl"
-  />
-</div>
+    <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden">
+      <img
+        src="https://hoxxes.app/images/hq-dashboard.png"
+        alt="HOXXES HQ Control Center"
+        className="w-full rounded-2xl"
+      />
+    </div>
 
   </div>
 </section>
@@ -341,16 +370,16 @@ export default function SoftwarePage() {
             Built for enterprise operations.
           </h2>
 
-          <p className="mt-4 text-slate-500 text-sm sm:text-base">
-            Software and hardware working together as one ecosystem.
+          <p className="mt-4 text-slate-300 text-sm sm:text-base">
+            One platform connecting software, hardware and operations.
           </p>
 
           <div className="mt-8">
             <Link
               href="/hardware"
-              className="inline-flex items-center text-sm font-medium text-slate-600 hover:text-black transition group"
+              className="inline-flex items-center text-sm font-medium text-white hover:text-emerald-400 transition group"
             >
-              <span className="border-b border-transparent group-hover:border-black transition">
+              <span className="border-b border-transparent group-hover:border-emerald-400 transition">
                 View compatible hardware
               </span>
 

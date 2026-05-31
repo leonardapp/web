@@ -46,66 +46,85 @@ export default function HardwarePage() {
       <Header />
 
       {/* HERO */}
-      <section className="max-w-6xl mx-auto px-6 pt-24 sm:pt-28 lg:pt-32 pb-20 text-center">
+<section className="max-w-6xl mx-auto px-6 pt-24 sm:pt-28 lg:pt-32 pb-20 text-center">
 
-        <div className="text-[10px] sm:text-xs tracking-[0.35em] uppercase text-slate-400">
-          Hardware Ecosystem
-        </div>
+  <div className="text-[10px] sm:text-xs tracking-[0.35em] uppercase text-slate-400">
+    Hardware Ecosystem
+  </div>
 
-        <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
-          Enterprise hardware
-          <span className="block text-slate-500 mt-2">
-            for modern operations.
-          </span>
-        </h1>
-        
+  <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
+    Enterprise hardware
+    <span className="block text-slate-500 mt-2">
+      for modern operations.
+    </span>
+  </h1>
 
-        <p className="mt-6 text-sm sm:text-base md:text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
-          Fully integrated devices designed to run inside the Hoxxes SaaS ecosystem —
-          from ordering to payments to customer experience.
-        </p>
+  <p className="mt-6 text-sm sm:text-base md:text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
+    Fully integrated devices designed to run inside the Hoxxes SaaS ecosystem —
+    from ordering to payments to customer experience.
+  </p>
 
-        {/* ✅ VAT NOTE (ADDED) */}
-        <div className="mt-3 text-xs text-slate-400">
-          All prices are shown excl. VAT
-        </div>
+  <div className="relative mt-16 flex justify-center items-center">
+    <div className="absolute w-[500px] h-[500px] bg-emerald-400/20 rounded-full blur-[140px]" />
 
-      </section>
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 text-center">
+    <img
+      src="https://hoxxes.app/images/kiosk.svg"
+      alt="Hoxxes Kiosk"
+      className="relative z-10 w-full max-w-5xl object-contain"
+    />
+  </div>
+
+</section>
+
+{/* FEATURES */}
+<section className="max-w-6xl mx-auto px-4 sm:px-6 mt-8 pb-16">
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 text-center">
 
     <div className="p-6 sm:p-8 rounded-3xl border border-slate-200 bg-white">
-      <div className="text-3xl sm:text-4xl font-semibold">
-        Plug & Play
+      <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight">
+        32" Touchscreen
       </div>
-      <div className="mt-2 text-sm sm:text-base text-slate-500">
-        Ready for deployment
+
+      <div className="mt-2 text-sm sm:text-base text-slate-500 max-w-[220px] mx-auto">
+        Interactive ordering experience
       </div>
     </div>
 
     <div className="p-6 sm:p-8 rounded-3xl border border-slate-200 bg-white">
-      <div className="text-3xl sm:text-4xl font-semibold">
-        Cloud Sync
+      <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight">
+        Integrated Printer
       </div>
-      <div className="mt-2 text-sm sm:text-base text-slate-500">
-        Connected to HOXXES
+
+      <div className="mt-2 text-sm sm:text-base text-slate-500 max-w-[220px] mx-auto">
+        Built-in receipt printing
       </div>
     </div>
 
     <div className="p-6 sm:p-8 rounded-3xl border border-slate-200 bg-white">
-      <div className="text-3xl sm:text-4xl font-semibold">
-        Enterprise
+      <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight">
+        Cloud Connected
       </div>
-      <div className="mt-2 text-sm sm:text-base text-slate-500">
-        Built for scale
+
+      <div className="mt-2 text-sm sm:text-base text-slate-500 max-w-[220px] mx-auto">
+        Real-time platform synchronization
       </div>
     </div>
 
   </div>
+
+  <div className="text-center mt-8">
+    <span className="text-xs text-slate-400">
+      All prices shown exclude VAT
+    </span>
+  </div>
+
 </section>
+
 
       {/* HARDWARE GRID */}
       <section className="max-w-7xl mx-auto px-6 pb-24 sm:pb-32">
+        
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 max-w-5xl mx-auto">
 

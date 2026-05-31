@@ -50,7 +50,7 @@ export default function HomePage() {
       {/* HERO */}
       <section
         ref={ref}
-        className="max-w-5xl mx-auto text-center px-6 sm:px-8 lg:px-6 pt-28 sm:pt-32 lg:pt-36 pb-24"
+        className="max-w-5xl mx-auto text-center px-6 sm:px-8 lg:px-6 pt-28 sm:pt-32 lg:pt-36 pb-36 sm:pb-40"
       >
         <motion.div
           initial="hidden"
@@ -176,15 +176,26 @@ multiple locations from one platform.
 
 
       {/* SOFTWARE */}
-      <section className="py-20 sm:py-28 bg-transparent">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-xl sm:text-2xl font-semibold mb-10">
-            Software Ecosystem
-          </h2>
-<div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-3">
-  Infrastructure Layer
-</div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+<section className="py-20 sm:py-28 bg-transparent">
+  <div className="max-w-6xl mx-auto px-6">
+
+    <div className="mb-12">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600 mb-3">
+        Software Infrastructure
+      </div>
+
+      <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
+        Software Ecosystem
+      </h2>
+
+      <p className="mt-5 max-w-3xl text-slate-500">
+        Modular software infrastructure covering ordering,
+        operations, workforce management, inventory,
+        payments and analytics across every location.
+      </p>
+    </div>
+
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
   {[
   ["Ordering Ecosystem", "QR, POS, kiosk and online ordering unified across every channel"],
   ["Kitchen Operations", "Real-time KDS orchestration and production workflows"],
@@ -237,7 +248,7 @@ multiple locations from one platform.
         </div>
       </section>
       {/* PLATFORM FLOW */}
-<section className="py-24 sm:py-36 bg-slate-50">
+<section className="py-24 sm:py-36 bg-transparent">
   <div className="max-w-6xl mx-auto px-6 text-center">
 
     <div className="text-xs uppercase tracking-[0.3em] text-emerald-600 mb-4">
@@ -433,11 +444,11 @@ multiple locations from one platform.
 </motion.div>
 
             {/* RIGHT */}
-           <motion.div
+<motion.div
   initial={{
     opacity: 0,
-    y: 80,
-    scale: 0.92,
+    y: 40,
+    scale: 0.96,
   }}
   whileInView={{
     opacity: 1,
@@ -446,10 +457,10 @@ multiple locations from one platform.
   }}
   viewport={{
     once: true,
-    amount: 0.6,
+    amount: 0.15,
   }}
   transition={{
-    duration: 1.2,
+    duration: 0.7,
     ease: [0.22, 1, 0.36, 1],
   }}
   className="relative flex justify-center items-center"
