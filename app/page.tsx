@@ -471,16 +471,10 @@ multiple locations from one platform.
   />
 
   <img
-    src="https://hoxxes.app/images/kiosk.svg"
-    alt="Hoxxes Kiosk"
-    style={{
-      width: "900px",
-      maxWidth: "140%",
-      display: "block",
-      position: "relative",
-      zIndex: 10,
-    }}
-  />
+  src="https://hoxxes.app/images/kiosk.svg"
+  alt="Hoxxes Kiosk"
+  className="relative z-10 w-full max-w-[900px] sm:max-w-[900px] max-h-[500px] object-contain"
+/>
 </motion.div>
 
            </div>

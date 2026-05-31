@@ -117,9 +117,9 @@ export default function RequestDemoPage() {
   <div className="grid lg:grid-cols-2 gap-12 items-start">
 
     {/* LEFT COLUMN */}
-    <div>
+<div className="rounded-3xl border border-slate-200 bg-white shadow-sm p-6 sm:p-8 md:p-10">
 
-      <form className="space-y-4" onSubmit={handleSubmit}>
+  <form className="space-y-4" onSubmit={handleSubmit}>
 
         <input
           name="name"

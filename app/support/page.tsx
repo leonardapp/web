@@ -45,7 +45,7 @@ export default function SupportPage() {
             Support Infrastructure
           </div>
 
-          <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
+         <h1 className="mt-6 text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-tight">
             Enterprise support
 <span className="block text-slate-500">
   when operations matter.
@@ -77,7 +77,7 @@ export default function SupportPage() {
 
       {/* SUPPORT CARDS */}
       <section className="relative z-10 max-w-6xl mx-auto px-6 pb-24 sm:pb-32">
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {supportOptions.map((item, i) => (
             <motion.div
               key={i}
@@ -111,26 +111,40 @@ export default function SupportPage() {
           ))}
         </div>
       </section>
+      
       <section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
-  <div className="grid md:grid-cols-3 gap-6 text-center">
 
-    <div className="p-8 rounded-3xl border border-slate-200 bg-white">
-      <div className="text-4xl font-semibold">24/7</div>
-      <div className="mt-2 text-slate-500">
+  <div className="text-center mb-12">
+
+    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+      Support Metrics
+    </div>
+
+    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+      Infrastructure built for reliability.
+    </h2>
+
+  </div>
+        
+  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+
+    <div className="p-8 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition">
+      <div className="text-3xl sm:text-4xl font-semibold">24/7</div>
+      <div className="mt-2 text-sm leading-relaxed text-slate-500">
         Ticket monitoring
       </div>
     </div>
 
-    <div className="p-8 rounded-3xl border border-slate-200 bg-white">
-      <div className="text-4xl font-semibold">99.9%</div>
-      <div className="mt-2 text-slate-500">
+    <div className="p-8 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition">
+      <div className="text-3xl sm:text-4xl font-semibold">99.9%</div>
+      <div className="mt-2 text-sm leading-relaxed text-slate-500">
         Infrastructure uptime
       </div>
     </div>
 
-    <div className="p-8 rounded-3xl border border-slate-200 bg-white">
-      <div className="text-4xl font-semibold">1 Platform</div>
-      <div className="mt-2 text-slate-500">
+    <div className="p-8 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition">
+      <div className="text-3xl sm:text-4xl font-semibold">1 Platform</div>
+      <div className="mt-2 text-sm leading-relaxed text-slate-500">
         Unified support ecosystem
       </div>
     </div>
@@ -138,18 +152,19 @@ export default function SupportPage() {
   </div>
 </section>
 
+
       {/* EMERGENCY SUPPORT BLOCK */}
       <section className="relative z-10 max-w-4xl mx-auto px-6 py-24 sm:py-32">
-        <div className="relative rounded-3xl border border-slate-200 bg-slate-50 p-10 text-center overflow-hidden">
+        <div className="relative rounded-3xl border border-slate-200 bg-slate-50 p-6 sm:p-8 md:p-10 text-center overflow-hidden">
 
           <div className="absolute inset-0 bg-slate-100/30 blur-3xl" />
 
           <div className="relative">
-            <h2 className="text-3xl md:text-4xl font-semibold">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
               Production issue?
             </h2>
 
-            <p className="mt-4 text-slate-500">
+            <p className="mt-4 text-sm sm:text-base text-slate-500">
               Our engineering team is available for urgent enterprise incidents.
             </p>
 
