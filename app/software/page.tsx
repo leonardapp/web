@@ -16,8 +16,7 @@ export default function SoftwarePage() {
       <Header />
 
       {/* HERO */}
-      <section className="max-w-6xl mx-auto px-6 pt-24 sm:pt-28 lg:pt-32 pb-20 text-center">
-        
+      <section className="max-w-6xl mx-auto px-6 pt-24 sm:pt-28 lg:pt-32 pb-32 sm:pb-20 text-center">
        <div className="text-[10px] sm:text-xs uppercase tracking-[0.35em] text-slate-400">
   Restaurant • Retail • Enterprise
 </div>
@@ -57,6 +56,43 @@ export default function SoftwarePage() {
           </Link>
 
         </div>
+   {/* ANALYTICS DASHBOARD */}
+<section className="py-24 sm:py-32 bg-slate-50">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Analytics Cloud
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Complete operational visibility.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Monitor sales, inventory, workforce and multi-location performance
+        from a unified dashboard.
+      </p>
+    </div>
+
+    <div className="relative rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden">
+
+      <div className="absolute top-0 sm:top-4 left-1/2 -translate-x-1/2 z-20">
+        <div className="px-3 sm:px-5 py-1 sm:py-2 rounded-full bg-emerald-500 text-white text-[10px] sm:text-xs font-medium shadow-lg whitespace-nowrap">
+          Analytics Cloud
+        </div>
+      </div>
+
+      <img
+        src="https://hoxxes.app/images/dashboard-overview.png"
+        alt="HOXXES Analytics Dashboard"
+        className="w-full rounded-2xl"
+      />
+
+    </div>
+
+  </div>
+</section>     
       </section>
       {/* INFRASTRUCTURE TYPES */}
 <section className="py-24 sm:py-32">
@@ -151,53 +187,10 @@ export default function SoftwarePage() {
     </div>
   </div>
 </section>
-{/* DEPLOYMENT MODELS */}
-<section className="py-24 sm:py-32 border-t border-slate-100">
-  <div className="max-w-6xl mx-auto px-6 text-center">
 
-    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-      Deployment Models
-    </div>
-
-    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-      Flexible deployment.
-    </h2>
-
-    <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-      Start with a single location and scale to a multi-location operation
-      without changing your infrastructure.
-    </p>
-
-    <div className="grid lg:grid-cols-3 gap-6 mt-14">
-
-      <div className="p-8 rounded-3xl border border-slate-200 bg-white">
-        <div className="text-sm font-medium">Single Location</div>
-        <p className="mt-3 text-sm text-slate-500">
-          Ideal for independent restaurants and retail stores.
-        </p>
-      </div>
-
-      <div className="p-8 rounded-3xl border border-slate-200 bg-white">
-        <div className="text-sm font-medium">Multi-Location</div>
-        <p className="mt-3 text-sm text-slate-500">
-          Centralized management across multiple branches.
-        </p>
-      </div>
-
-      <div className="p-8 rounded-3xl border border-slate-200 bg-white">
-        <div className="text-sm font-medium">Enterprise</div>
-        <p className="mt-3 text-sm text-slate-500">
-          Advanced reporting, permissions and HQ infrastructure.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
 
       {/* RESTAURANT SOLUTIONS */}
-<section className="py-24 sm:py-32 border-t border-slate-100">
+<section className="py-24 sm:py-32 bg-slate-50">
   <div className="max-w-6xl mx-auto px-6">
 
     <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
@@ -235,7 +228,7 @@ export default function SoftwarePage() {
   </div>
 </section>
 {/* RETAIL SOLUTIONS */}
-<section className="py-24 sm:py-32 bg-slate-50">
+<section className="py-24 sm:py-32 bg-white">
   <div className="max-w-6xl mx-auto px-6">
 
     <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
@@ -273,7 +266,7 @@ export default function SoftwarePage() {
   </div>
 </section>
 {/* ENTERPRISE INFRASTRUCTURE */}
-<section className="py-24 sm:py-32">
+<section className="py-24 sm:py-32 bg-slate-50">
   <div className="max-w-6xl mx-auto px-6">
 
     <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
@@ -310,11 +303,38 @@ export default function SoftwarePage() {
 
   </div>
 </section>   
+{/* ORDER CENTER */}
+<section className="py-24 sm:py-32 bg-slate-50">
+  <div className="max-w-7xl mx-auto px-6">
 
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Order Management
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Fast and intuitive order processing.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Manage dine-in, takeaway and delivery orders from a single interface
+        optimized for speed and operational efficiency.
+      </p>
+    </div>
+
+    <div className="relative rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden">
+  <img
+    src="https://hoxxes.app/images/order-center.png"
+    alt="HOXXES Order Center"
+    className="w-full rounded-2xl"
+  />
+</div>
+
+  </div>
+</section>
     
       {/* ENTERPRISE BLOCK */}
-      <section className="py-24 sm:py-32 bg-slate-50 border-y border-slate-200">
-
+<section className="py-24 sm:py-32 bg-black text-white">
         <div className="max-w-5xl mx-auto px-6 text-center">
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">

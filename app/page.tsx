@@ -237,7 +237,7 @@ multiple locations from one platform.
         </div>
       </section>
       {/* PLATFORM FLOW */}
-<section className="py-24 sm:py-36 bg-transparent">
+<section className="py-24 sm:py-36 bg-slate-50">
   <div className="max-w-6xl mx-auto px-6 text-center">
 
     <div className="text-xs uppercase tracking-[0.3em] text-emerald-600 mb-4">
@@ -299,6 +299,78 @@ multiple locations from one platform.
           </div>
         </div>
       ))}
+    </div>
+
+  </div>
+</section>
+<section className="py-24 sm:py-32 bg-white">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Operational Intelligence
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Real-time visibility across your business.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Monitor sales, orders, inventory, workforce and multi-location
+        performance from one unified dashboard.
+      </p>
+    </div>
+
+    <div className="relative rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden">
+
+  {/* Floating Badge */}
+  <div className="absolute top-0 sm:top-4 left-1/2 -translate-x-1/2 z-20">
+  <div className="px-3 sm:px-5 py-1 sm:py-2 rounded-full bg-emerald-500 text-white text-[10px] sm:text-xs font-medium shadow-lg whitespace-nowrap">
+    Live Analytics
+  </div>
+</div>
+
+  <img
+    src="https://hoxxes.app/images/dashboard-overview.png"
+    alt="HOXXES Dashboard"
+    className="w-full rounded-2xl"
+  />
+
+</div>
+
+  </div>
+</section>
+<section className="py-24 sm:py-32 bg-slate-50">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Order Management
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+  Order management at operational speed.
+</h2>
+
+<p className="mt-5 max-w-3xl mx-auto text-slate-500">
+  Process dine-in, takeaway and delivery orders from a unified interface
+  designed for high-volume operations.
+</p>
+    </div>
+
+    <div className="relative rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden">
+
+      <div className="absolute top-0 sm:top-4 left-1/2 -translate-x-1/2 z-20">
+        <div className="px-3 sm:px-5 py-1 sm:py-2 rounded-full bg-emerald-500 text-white text-[10px] sm:text-xs font-medium shadow-lg whitespace-nowrap">
+          Order Center
+        </div>
+      </div>
+
+      <img
+        src="https://hoxxes.app/images/order-center.png"
+        alt="HOXXES Order Center"
+        className="w-full rounded-2xl"
+      />
     </div>
 
   </div>

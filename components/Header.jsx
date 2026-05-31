@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <>
       {/* HEADER */}
-      <header className="sticky top-0 z-[9999] backdrop-blur-xl bg-white/80 border-b border-slate-200">
+      <header className="fixed top-0 left-0 right-0 z-[9999] backdrop-blur-xl bg-white/80 border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 
           {/* LOGO */}
