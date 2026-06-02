@@ -15,10 +15,9 @@ type Message = {
 };
 
 const starterQuestions = [
-  "Product overview",
+  "Book a Demo",
   "View pricing",
-  "I need a kiosk",
-  "Download Center",
+  "Explore Hardware",
 ];
 
 export default function HoxxesAIWidget() {
@@ -30,7 +29,7 @@ export default function HoxxesAIWidget() {
     {
       role: "assistant",
       content:
-        "Hi, I’m Hoxxes AI — your restaurant infrastructure assistant.\n\nI can help you deploy POS, QR ordering, kiosks, printers, and full restaurant automation at scale.",
+        "Hi, I’m Hoxxes AI.\n\nHow can I help today?",
     },
   ]);
 
