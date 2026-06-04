@@ -22,9 +22,9 @@ export default function SoftwarePage() {
 </div>
 
 <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
-  One platform,
+  Built for restaurants,
   <span className="block text-slate-500 mt-2">
-    multiple business models.
+    retail and enterprise.
   </span>
 </h1>
 
