@@ -56,6 +56,74 @@ export default function SoftwarePage() {
 
         </div>
         </section> 
+        {/* INCLUDED WITH EVERY DEPLOYMENT */}
+<section className="py-24 sm:py-32 bg-white">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Included With Every Deployment
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        One platform. Every channel.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Every Hoxxes deployment includes ordering,
+        commerce, customer engagement and operational
+        management capabilities from a unified platform.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-6">
+
+      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-4">
+          Ordering Infrastructure
+        </div>
+
+        <div className="space-y-3 text-sm text-slate-700">
+          <div>✓ Web POS</div>
+          <div>✓ Android POS (Offline Ready)</div>
+          <div>✓ QR Ordering</div>
+          <div>✓ Android App</div>
+          <div>✓ iOS App</div>
+        </div>
+      </div>
+
+      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-4">
+          Commerce Infrastructure
+        </div>
+
+        <div className="space-y-3 text-sm text-slate-700">
+          <div>✓ Delivery & Pickup</div>
+          <div>✓ E-Shop</div>
+          <div>✓ Membership</div>
+          <div>✓ Loyalty</div>
+          <div>✓ Wallet & Vouchers</div>
+        </div>
+      </div>
+
+      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-4">
+          Operations Infrastructure
+        </div>
+
+        <div className="space-y-3 text-sm text-slate-700">
+          <div>✓ Analytics Dashboard</div>
+          <div>✓ Web Backoffice</div>
+          <div>✓ Inventory Management</div>
+          <div>✓ Workforce Management</div>
+          <div>✓ Multi-Location Control</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
    {/* ANALYTICS DASHBOARD */}
 <section className="py-24 sm:py-32 bg-slate-50">
   <div className="max-w-7xl mx-auto px-6">
@@ -88,6 +156,51 @@ export default function SoftwarePage() {
         alt="HOXXES Analytics Dashboard"
         className="w-full rounded-2xl"
       />
+
+    </div>
+
+  </div>
+</section>
+{/* ORDERING CHANNELS */}
+<section className="py-24 sm:py-32 bg-white">
+  <div className="max-w-6xl mx-auto px-6">
+
+    <div className="text-center">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Ordering Channels
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Reach customers everywhere.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Every channel connected to the same infrastructure,
+        inventory, pricing and reporting system.
+      </p>
+    </div>
+
+    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-14">
+
+      {[
+        "Web POS",
+        "Android POS",
+        "QR Ordering",
+        "Android App",
+        "iOS App",
+        "Delivery Mini App",
+        "E-Shop",
+        "Online Ordering",
+      ].map((item) => (
+        <div
+          key={item}
+          className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg transition"
+        >
+          <div className="font-medium">
+            {item}
+          </div>
+        </div>
+      ))}
 
     </div>
 

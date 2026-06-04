@@ -33,9 +33,9 @@ export default function PricingPage() {
 </div>
 
 <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
-  Flexible plans for
+  One platform.
   <span className="block text-slate-500">
-    restaurants, retail and enterprise.
+    Pricing that scales with you.
   </span>
 </h1>
 
@@ -72,17 +72,16 @@ export default function PricingPage() {
   <div className="text-center">
 
     <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-      Choose Your Plan
-    </div>
+Deployment Types
+</div>
 
-    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-      Built for every business model.
-    </h2>
+<h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+Pricing aligned with your operations.
+</h2>
 
-    <p className="mt-5 text-slate-500 max-w-3xl mx-auto">
-      Whether you operate a restaurant, retail store or multi-location enterprise,
-      HOXXES adapts to your operational requirements.
-    </p>
+<p className="mt-5 text-slate-500 max-w-3xl mx-auto">
+Choose the deployment model that best matches your operational requirements.
+</p>
 
   </div>
 
@@ -152,25 +151,69 @@ export default function PricingPage() {
 
   <div className="text-center">
     <h2 className="text-2xl sm:text-3xl font-semibold">
-      Included with every subscription.
+      Everything included from day one.  
     </h2>
+    <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
+Core platform capabilities are included with every subscription.
+</p>
   </div>
 
   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
 
     {[
-      "Cloud Infrastructure",
-      "Real-Time Synchronization",
-      "Automatic Updates",
-      "Fiscalization Support",
-      "Documentation Center",
-      "User Permissions",
-    ].map((item) => (
+  "Cloud Platform",
+  "Real-Time Synchronization",
+  "Automatic Updates",
+  "Fiscalization Support",
+  "HQ Control Center",
+  "User Permissions",
+].map((item) => (
       <div
         key={item}
         className="p-6 rounded-2xl border border-slate-200 bg-white hover:border-emerald-300 hover:shadow-lg transition-all duration-300"
 >
         ✓ {item}
+      </div>
+    ))}
+
+  </div>
+
+</section>
+{/* ONE LICENSE. MULTIPLE CHANNELS */}
+<section className="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
+
+  <div className="text-center">
+    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+      One License. Multiple Channels.
+    </div>
+
+    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+      Unified customer experiences.
+    </h2>
+
+    <p className="mt-5 text-slate-500 max-w-3xl mx-auto">
+      Every subscription includes all customer-facing channels
+      connected to the same infrastructure.
+    </p>
+  </div>
+
+  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
+
+    {[
+      "Web POS",
+      "Android POS",
+      "QR Ordering",
+      "Android App",
+      "iOS App",
+      "Delivery Mini App",
+      "E-Shop",
+      "Online Ordering",
+    ].map((item) => (
+      <div
+        key={item}
+        className="p-6 rounded-2xl border border-slate-200 bg-white"
+      >
+        {item}
       </div>
     ))}
 
@@ -191,7 +234,7 @@ export default function PricingPage() {
     </div>
 
     <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-      Estimate your yearly subscription.
+      Estimate your annual licensing cost.
     </h2>
 
     <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
@@ -263,10 +306,10 @@ export default function PricingPage() {
       </div>
 
       <ul className="mt-6 space-y-2 text-sm text-slate-600">
-        <li>✔ POS + QR Ordering</li>
-        <li>✔ Kitchen Display System</li>
-        <li>✔ Staff Management</li>
-        <li>✔ Analytics Dashboard</li>
+        <li>✔ Web POS & Android POS</li>
+        <li>✔ QR Ordering & Online Ordering</li>
+        <li>✔ Inventory & Workforce Management</li>
+        <li>✔ Analytics & HQ Control Center</li>
 
         {isEnterprise && (
           <>
@@ -314,6 +357,39 @@ export default function PricingPage() {
 
         </div>
       </section>
+      {/* OPTIONAL INFRASTRUCTURE */}
+<section className="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
+
+  <div className="text-center">
+    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+      Optional Platform Extensions
+    </div>
+
+    <h2 className="mt-4 text-3xl font-semibold">
+      Extend your deployment.
+    </h2>
+  </div>
+
+  <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-12">
+
+    {[
+      "Kitchen Display System",
+      "Customer Display System",
+      "Self-Service Kiosk",
+      "Caller ID",
+      "Payment Terminal Integration (Coming Soon)",
+    ].map((item) => (
+      <div
+        key={item}
+        className="rounded-2xl border border-slate-200 p-5 text-center bg-white"
+      >
+        {item}
+      </div>
+    ))}
+
+  </div>
+
+</section>
       
 
       {/* ADD-ONS */}
@@ -375,8 +451,8 @@ export default function PricingPage() {
 </h2>
 
 <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
-  Deploy a unified operating system across restaurants, 
-  retail stores and enterprise locations.
+  Deploy the infrastructure layer powering
+modern hospitality and retail operations.
 </p>
 
   <div className="mt-8 flex justify-center items-center gap-3 flex-wrap">

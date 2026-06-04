@@ -293,26 +293,153 @@ multiple locations from one platform.
       ↓
     </div>
 
-    <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
-      {[
-        "Kitchen Display",
-        "Inventory",
-        "Workforce",
-        "Analytics",
-        "HQ Control",
-      ].map((item) => (
-        <div
-          key={item}
-          className="bg-white border border-slate-200 rounded-2xl p-5"
-        >
-          <div className="text-sm text-slate-700">
-            {item}
-          </div>
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-10">
+
+  {[
+    "Kitchen Display System",
+    "Customer Display System",
+    "Self-Service Kiosk",
+    "Caller ID",
+    "Payment Terminal Integration",
+  ].map((item) => (
+    <div
+      key={item}
+      className="rounded-2xl border border-slate-200 p-5 text-center bg-slate-50"
+    >
+      <div className="text-sm font-medium">
+        {item}
+      </div>
+
+      {item === "Payment Terminal Integration" && (
+        <div className="mt-2">
+          <span className="inline-flex px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[10px] uppercase tracking-wider font-medium">
+            Coming Soon
+          </span>
         </div>
-      ))}
+      )}
     </div>
+  ))}
+
+</div>
 
   </div>
+</section>
+{/* EVERYTHING INCLUDED */}
+<section className="py-24 sm:py-32 bg-white">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Included With Every Deployment
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Everything you need from day one.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Every Hoxxes deployment includes ordering,
+        commerce, customer engagement and operational
+        management capabilities from a unified platform.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-6">
+
+      {/* Ordering */}
+      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-4">
+          Ordering Infrastructure
+        </div>
+
+        <div className="space-y-3 text-sm text-slate-700">
+          <div>✓ Web POS</div>
+          <div>✓ Android POS (Offline Ready)</div>
+          <div>✓ QR Ordering</div>
+          <div>✓ Android App</div>
+          <div>✓ iOS App</div>
+        </div>
+      </div>
+
+      {/* Commerce */}
+      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-4">
+          Commerce & Delivery
+        </div>
+
+        <div className="space-y-3 text-sm text-slate-700">
+          <div>✓ Delivery & Pickup</div>
+          <div>✓ E-Shop</div>
+          <div>✓ Online Ordering</div>
+          <div>✓ Membership</div>
+          <div>✓ Order History</div>
+        </div>
+      </div>
+
+      {/* Operations */}
+      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-4">
+          Operations & Analytics
+        </div>
+
+        <div className="space-y-3 text-sm text-slate-700">
+          <div>✓ Wallet & Vouchers</div>
+          <div>✓ Analytics Dashboard</div>
+          <div>✓ Web Backoffice</div>
+          <div>✓ Inventory Management</div>
+          <div>✓ Workforce Management</div>
+        </div>
+      </div>
+
+    </div>
+
+    {/* Optional Modules */}
+    <div className="mt-14 rounded-3xl border border-slate-200 bg-white p-8">
+
+      <div className="text-center">
+        <div className="text-xs uppercase tracking-[0.25em] text-slate-400">
+          Optional Infrastructure Modules
+        </div>
+        
+
+        <h3 className="mt-3 text-2xl font-semibold">
+          Extend your infrastructure.
+        </h3>
+
+        <p className="mt-3 text-slate-500">
+          Additional modules available based on operational requirements.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-10">
+
+  {[
+    "Kitchen Display System",
+    "Customer Display System",
+    "Self-Service Kiosk",
+    "Caller ID",
+    "Payment Terminal Integration",
+  ].map((item) => (
+    <div
+      key={item}
+      className="rounded-2xl border border-slate-200 p-5 text-center bg-slate-50"
+    >
+      <div className="text-sm font-medium">
+        {item}
+      </div>
+
+      {item === "Payment Terminal Integration" && (
+        <div className="mt-2 text-[10px] uppercase tracking-wider text-emerald-600 font-medium">
+          Coming Soon
+        </div>
+      )}
+    </div>
+  ))}
+
+</div>
+
+  </div>
+</div>
 </section>
 <section className="py-24 sm:py-32 bg-white">
   <div className="max-w-7xl mx-auto px-6">
@@ -502,24 +629,26 @@ modern hospitality.
       </section>
 
       {/* CTA */}
-      <section className="py-24 sm:py-40 text-center px-6">
-        <h2 className="text-2xl sm:text-3xl font-semibold">
-          Built for enterprise scale
-        </h2>
+<section className="py-24 sm:py-40 text-center px-6">
+  <h2 className="text-2xl sm:text-3xl font-semibold">
+    Ready to modernize your operations?
+  </h2>
 
-        <p className="text-slate-500 mt-3">
-          Start your digital transformation today.
-        </p>
+  <p className="text-slate-500 mt-3 max-w-2xl mx-auto">
+    Deploy a unified platform across restaurants,
+    retail stores and enterprise locations.
+  </p>
 
-        <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
-          <Button href="/request-demo" variant="primary">
-            Request Demo
-          </Button>
-          <Button href="/contact-sales" variant="outline">
-            Contact Sales
-          </Button>
-        </div>
-      </section>
+  <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
+    <Button href="/request-demo" variant="primary">
+      Request Demo
+    </Button>
+
+    <Button href="/contact-sales" variant="outline">
+      Contact Sales
+    </Button>
+  </div>
+</section>
 
     
 <style jsx global>{`
