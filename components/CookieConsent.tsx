@@ -29,7 +29,7 @@ export default function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 z-60">
+    <div className="fixed bottom-4 left-4 right-4 z-[60]">
       <div className="max-w-5xl mx-auto rounded-2xl border border-gray-200 bg-white shadow-xl p-5">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
