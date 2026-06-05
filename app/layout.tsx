@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Background from "@/components/Background";
 import HoxxesAIWidget from "@/components/HoxxesAIWidget";
+import CookieConsent from "@/components/CookieConsent";
 
 export default function RootLayout({
   children,
@@ -34,6 +35,8 @@ export default function RootLayout({
         <div className="relative z-50">
           <HoxxesAIWidget />
         </div>
+        {/* COOKIE CONSENT */}
+        <CookieConsent />
 
       </body>
     </html>

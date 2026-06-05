@@ -143,27 +143,29 @@ export default function HoxxesAIWidget() {
             }}
             onClick={() => setOpen(true)}
             className="
-              fixed
-              bottom-6
-              right-6
-              z-[9999]
-              flex
-              h-16
-              w-16
-              items-center
-              justify-center
-              rounded-full
-              border
-              border-white/10
-              bg-black/90
-              text-white
-              shadow-[0_20px_80px_rgba(0,0,0,0.45)]
-              backdrop-blur-2xl
-              transition-all
-              duration-300
-              hover:scale-110
-              hover:shadow-[0_20px_100px_rgba(255,255,255,0.08)]
-            "
+fixed
+bottom-4
+right-4
+md:bottom-6
+md:right-6
+z-[9999]
+flex
+h-16
+w-16
+items-center
+justify-center
+rounded-full
+border
+border-white/10
+bg-black/90
+text-white
+shadow-[0_20px_80px_rgba(0,0,0,0.45)]
+backdrop-blur-2xl
+transition-all
+duration-300
+hover:scale-110
+hover:shadow-[0_20px_100px_rgba(255,255,255,0.08)]
+"
           >
             {/* GLOW */}
             <div className="absolute inset-0 rounded-full bg-white/5 blur-xl" />

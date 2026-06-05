@@ -104,6 +104,24 @@ export default function Footer() {
 >
   Download Center
 </Link>
+<a
+  href="https://www.instagram.com/hoxxes_innovation/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-slate-500 hover:text-slate-900 transition-colors"
+>
+  Instagram
+</a>
+
+<a
+  href="https://www.facebook.com/profile.php?id=61569182421739"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-slate-500 hover:text-slate-900 transition-colors"
+>
+  Facebook
+</a>
+
             </div>
           </div>
         </div>
@@ -115,29 +133,33 @@ export default function Footer() {
             © {new Date().getFullYear()} Hoxxes. All rights reserved.
           </p>
 
-          <div className="flex items-center gap-6 text-sm font-medium">
+          <div className="flex flex-wrap items-center gap-6 text-sm font-medium">
 
-  <a
-    href="https://www.instagram.com/hoxxes_innovation/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-slate-400 hover:text-slate-900 transition-colors"
-  >
-    Instagram
-  </a>
+            <Link
+              href="/legal/privacy-policy"
+              className="text-slate-400 hover:text-slate-900 transition-colors"
+            >
+              Privacy Policy
+            </Link>
 
-  <a
-    href="https://www.facebook.com/profile.php?id=61569182421739"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-slate-400 hover:text-slate-900 transition-colors"
-  >
-    Facebook
-  </a>
+            <Link
+              href="/legal/terms-of-service"
+              className="text-slate-400 hover:text-slate-900 transition-colors"
+            >
+              Terms of Service
+            </Link>
 
-</div>
+            <Link
+              href="/legal/cookie-policy"
+              className="text-slate-400 hover:text-slate-900 transition-colors"
+            >
+              Cookie Policy
+            </Link>
+
+          </div>
         </div>
-      </div>
+        </div>
+    
     </footer>
   );
 }
