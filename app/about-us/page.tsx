@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
-import { spacing, text, layout } from "@/app/design-system";
 
 export default function AboutPage() {
   return (
@@ -90,7 +89,6 @@ export default function AboutPage() {
 
 </section>
 
-<section className="max-w-6xl mx-auto px-6 pb-24">
 
   <section className="max-w-6xl mx-auto px-6 pb-24">
 
@@ -126,7 +124,7 @@ export default function AboutPage() {
 
   </div>
 
-</section>
+
 
 </section>
       {/* MISSION */}

@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Background from "@/components/Background";
 import HoxxesAIWidget from "@/components/HoxxesAIWidget";
 import CookieConsent from "@/components/CookieConsent";
+import Providers from "./providers";
 
 export default function RootLayout({
   children,
