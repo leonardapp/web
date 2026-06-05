@@ -5,8 +5,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   MessageSquare,
   Send,
-  X,
   Sparkles,
+  ChevronDown,
 } from "lucide-react";
 
 type Message = {
@@ -236,26 +236,7 @@ hover:shadow-[0_20px_100px_rgba(255,255,255,0.08)]
                 </p>
               </div>
 
-              <button
-                onClick={() => setOpen(false)}
-                className="
-                  flex
-                  h-10
-                  w-10
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-white/10
-                  bg-white/[0.03]
-                  text-white/60
-                  transition
-                  hover:bg-white/[0.08]
-                  hover:text-white
-                "
-              >
-                <X className="h-4 w-4" />
-              </button>
+              
             </div>
 
             {/* MESSAGES */}
@@ -432,10 +413,34 @@ hover:shadow-[0_20px_100px_rgba(255,255,255,0.08)]
                   <Send className="h-4 w-4" />
                 </button>
               </div>
+              
 
-              <div className="mt-3 text-center text-[10px] tracking-wide text-white/25">
-                POWERED BY HOXXES AI CLOUD
-              </div>
+              <div className="py-2 flex justify-center">
+  <button
+  onClick={() => setOpen(false)}
+  className="
+    flex
+    h-11
+    w-11
+    items-center
+    justify-center
+    rounded-full
+    border
+    border-white/20
+    bg-white/5
+    text-white/80
+    transition
+    hover:bg-white/10
+    hover:text-white
+  "
+>
+  <ChevronDown className="h-6 w-6" />
+</button>
+</div>
+
+<div className="mt-2 text-center text-[10px] tracking-wide text-white/25">
+  POWERED BY HOXXES AI CLOUD
+</div>
             </div>
           </motion.div>
         )}
