@@ -1,5 +1,6 @@
 import Button from "@/components/Button";
 import Header from "@/components/Header";
+
 const OFFER_DEADLINE = "2026-06-30";
 
 function isOfferActive() {
@@ -15,7 +16,7 @@ export default function OffersPage() {
    const offerActive = isOfferActive();
   if (!offerActive) {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen overflow-x-hidden bg-transparent">
       <Header />
 
       <section className="flex min-h-[70vh] items-center justify-center px-6 text-center">
@@ -44,7 +45,7 @@ export default function OffersPage() {
   );
 }
   return (
-    <main className="min-h-screen overflow-x-hidden bg-white">
+    <main className="min-h-screen overflow-x-hidden transparent">
       <Header />
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-gray-100 pt-16">

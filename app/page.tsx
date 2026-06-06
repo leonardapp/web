@@ -58,31 +58,46 @@ export default function HomePage() {
         className="max-w-5xl mx-auto text-center px-6 sm:px-8 lg:px-6 pt-28 sm:pt-32 lg:pt-36 pb-36 sm:pb-40"
       >
         {offerActive && (
-  <motion.div variants={fadeUp} className="mb-6">
+  <motion.div
+  variants={fadeUp}
+  className="mb-6"
+  animate={{
+    scale: [1, 1.03, 1],
+    opacity: [1, 0.9, 1],
+  }}
+  transition={{
+    duration: 2.5,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+>
     <Link
       href="/offers"
       className="
-        inline-flex
-        items-center
-        gap-2
-        rounded-full
-        border
-        border-emerald-200
-        bg-emerald-50
-        px-4
-        py-2
-        text-xs
-        font-medium
-        uppercase
-        tracking-wider
-        text-emerald-700
-        transition-all
-        hover:bg-emerald-100
-        hover:border-emerald-300
-        hover:scale-[1.02]
-      "
+  inline-flex
+  cursor-pointer
+  items-center
+  justify-center
+  text-center
+  gap-2
+  rounded-full
+  border
+  border-emerald-200
+  bg-emerald-50
+  px-4
+  py-2
+  text-[11px] sm:text-xs
+  font-medium
+  uppercase
+  tracking-wider
+  text-emerald-700
+  transition-all
+  hover:bg-emerald-100
+  hover:border-emerald-300
+  hover:scale-[1.02]
+"
     >
-      🔥 Active Offer • 2 Kiosks + 12 Months Free Software
+      🔥 Active Offer • 2 Kiosks + 12 Months Free Software →
     </Link>
   </motion.div>
 )}
