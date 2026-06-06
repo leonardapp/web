@@ -4,7 +4,9 @@ import Footer from "@/components/Footer";
 import Background from "@/components/Background";
 import HoxxesAIWidget from "@/components/HoxxesAIWidget";
 import CookieConsent from "@/components/CookieConsent";
-import Providers from "./providers";
+
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function RootLayout({
   children,
@@ -15,29 +17,26 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen overflow-x-hidden bg-white text-slate-900 antialiased selection:bg-emerald-200/50">
 
-        {/* BACKGROUND LAYER */}
         <div className="fixed inset-0 -z-10 pointer-events-none">
           <Background />
         </div>
 
-        {/* APP WRAPPER */}
         <div className="flex min-h-screen flex-col">
-
-          {/* MAIN CONTENT */}
           <main className="flex-1 w-full relative z-10">
             {children}
           </main>
 
-          {/* FOOTER */}
           <Footer />
         </div>
 
-        {/* AI WIDGET (GLOBAL FLOATING) */}
         <div className="relative z-50">
           <HoxxesAIWidget />
         </div>
-        {/* COOKIE CONSENT */}
+
         <CookieConsent />
+
+        <Analytics />
+        <SpeedInsights />
 
       </body>
     </html>
