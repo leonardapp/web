@@ -1,9 +1,13 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-
+import Link from "next/link";
 import Header from "@/components/Header";
 import Button from "@/components/Button";
+const OFFER_END_DATE = "2026-06-30";
+
+const offerActive =
+  new Date(OFFER_END_DATE).getTime() > new Date().getTime();
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -46,12 +50,42 @@ export default function HomePage() {
 
       {/* HEADER */}
       <Header />
+      
 
       {/* HERO */}
       <section
         ref={ref}
         className="max-w-5xl mx-auto text-center px-6 sm:px-8 lg:px-6 pt-28 sm:pt-32 lg:pt-36 pb-36 sm:pb-40"
       >
+        {offerActive && (
+  <motion.div variants={fadeUp} className="mb-6">
+    <Link
+      href="/offers"
+      className="
+        inline-flex
+        items-center
+        gap-2
+        rounded-full
+        border
+        border-emerald-200
+        bg-emerald-50
+        px-4
+        py-2
+        text-xs
+        font-medium
+        uppercase
+        tracking-wider
+        text-emerald-700
+        transition-all
+        hover:bg-emerald-100
+        hover:border-emerald-300
+        hover:scale-[1.02]
+      "
+    >
+      🔥 Active Offer • 2 Kiosks + 12 Months Free Software
+    </Link>
+  </motion.div>
+)}
         <motion.div
           initial="hidden"
           animate="show"
@@ -109,6 +143,8 @@ multiple locations from one platform.
             <Button href="/request-demo" variant="primary">
               Request Demo
             </Button>
+           
+
 
             <Button href="/software" variant="outline">
               Explore Platform
