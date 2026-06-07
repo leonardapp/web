@@ -16,8 +16,8 @@ type Message = {
 
 const starterQuestions = [
   "Book a Demo",
-  "View pricing",
-  "Explore Hardware",
+  "How much does Hoxxes cost?",
+  "Which hardware do I need?",
 ];
 
 export default function HoxxesAIWidget() {
@@ -29,7 +29,7 @@ export default function HoxxesAIWidget() {
     {
       role: "assistant",
       content:
-        "Hi, I’m Hoxxes AI.\n\nHow can I help today?",
+        "Hi, I’m Hoxxes AI.\nHow can I help today?",
     },
   ]);
 
@@ -103,7 +103,10 @@ export default function HoxxesAIWidget() {
           history: messages,
         }),
       });
-
+      
+if (!response.ok) {
+  throw new Error("Request failed");
+}
       const data = await response.json();
 
       setMessages((prev) => [
@@ -203,12 +206,12 @@ hover:shadow-[0_20px_100px_rgba(255,255,255,0.08)]
             className="
   fixed
   bottom-4 md:bottom-6
-  right-6
+  right-4 md:right-6
   z-[9999]
   flex
   h-[80vh] md:h-[720px]
-  w-[calc(100vw-24px)] md:w-[420px]
-  max-w-[calc(100vw-24px)]
+  w-[calc(100vw-32px)]
+max-w-[calc(100vw-32px)]
   flex-col
   overflow-hidden
   rounded-[34px]
@@ -240,7 +243,7 @@ hover:shadow-[0_20px_100px_rgba(255,255,255,0.08)]
             </div>
 
             {/* MESSAGES */}
-            <div className="flex-1 overflow-y-auto px-5 py-5">
+            <div className="flex-1 overflow-y-auto overscroll-contain px-5 py-5">
               <div className="space-y-4">
                 {messages.map((message, index) => (
                   <div
@@ -376,9 +379,9 @@ hover:shadow-[0_20px_100px_rgba(255,255,255,0.08)]
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={(e) => {
-                    if (e.key === "Enter") {
-                      sendMessage();
-                    }
+                    if (e.key === "Enter" && !loading) {
+  sendMessage();
+}
                   }}
                   placeholder="Ask Hoxxes AI..."
                   className="

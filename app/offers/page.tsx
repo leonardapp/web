@@ -45,7 +45,7 @@ export default function OffersPage() {
   );
 }
   return (
-    <main className="min-h-screen overflow-x-hidden transparent">
+    <main className="min-h-screen overflow-x-hidden">
       <Header />
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-gray-100 pt-16">
@@ -54,7 +54,7 @@ export default function OffersPage() {
             LIMITED OFFER
           </div>
 
-          <h1 className="mt-6 max-w-4xl text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+          <h1 className="mt-6 max-w-4xl text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
   Get 2 Self-Service Kiosks
   <span className="block mt-2 text-emerald-600">
     + 12 Months FREE Software
@@ -66,7 +66,7 @@ export default function OffersPage() {
             POS integration and kitchen automation.
           </p>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button href="/request-demo?type=proforma&offer=kiosk-bundle">
   Request Proforma Invoice
 </Button>
@@ -124,29 +124,29 @@ export default function OffersPage() {
               </div>
 
               {/* Benefits */}
-              <div className="mt-10">
-                <h4 className="text-lg font-semibold text-gray-900">
-                  Why This Offer
-                </h4>
+<div className="mt-10">
+  <h4 className="text-lg font-semibold text-gray-900">
+    Why This Offer
+  </h4>
 
-                <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-2xl border border-gray-200 p-5">
-                    Reduce Waiting Lines
-                  </div>
+  <div className="mt-6 grid gap-4 sm:grid-cols-2">
+    <div className="rounded-2xl border border-gray-200 p-5 text-center font-medium text-gray-800">
+      ✓ Reduce Waiting Lines
+    </div>
 
-                  <div className="rounded-2xl border border-gray-200 p-5">
-                    Increase Order Volume
-                  </div>
+    <div className="rounded-2xl border border-gray-200 p-5 text-center font-medium text-gray-800">
+      ✓ Increase Order Volume
+    </div>
 
-                  <div className="rounded-2xl border border-gray-200 p-5">
-                    Improve Customer Experience
-                  </div>
+    <div className="rounded-2xl border border-gray-200 p-5 text-center font-medium text-gray-800">
+      ✓ Improve Customer Experience
+    </div>
 
-                  <div className="rounded-2xl border border-gray-200 p-5">
-                    Integrated With POS & Kitchen
-                  </div>
-                </div>
-              </div>
+    <div className="rounded-2xl border border-gray-200 p-5 text-center font-medium text-gray-800">
+      ✓ Fully Integrated with POS & Kitchen
+    </div>
+  </div>
+</div>
 
               {/* Included */}
               <div className="mt-10 rounded-2xl border border-gray-200 bg-gray-50 p-6">
@@ -160,7 +160,7 @@ export default function OffersPage() {
                   <li>• POS Integration</li>
                   <li>• Kitchen Display Integration</li>
                   <li>• Installation & Configuration</li>
-                  <li>• Expected Arrival: July 12</li>
+                  <li>• Delivery Scheduled for July</li>
                 </ul>
               </div>
 
@@ -198,7 +198,7 @@ export default function OffersPage() {
   <img
     src="https://hoxxes.app/images/kiosk.svg"
     alt="HOXXES Self-Service Kiosk"
-    className="w-full max-w-[500px] lg:max-w-[560px] object-contain"
+    className="w-full max-w-[500px] lg:max-w-[650px] object-contain"
   />
 </div>
           </div>
@@ -209,36 +209,14 @@ export default function OffersPage() {
       <section className="border-t border-gray-100 bg-gray-50">
         <div className="mx-auto max-w-7xl px-6 py-16 text-center sm:py-20">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            Ready to Reserve This Offer?
+            Reserve Before June 30
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base text-gray-600 sm:text-lg">
-            Reserve this offer before June 30 and receive
-12 Months of HOXXES Software at no additional cost.
+            Only a limited number of kiosk bundles are available.
           </p>
 
-          <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
-            <div className="rounded-2xl border border-gray-200 bg-white p-6">
-              <p className="text-sm uppercase tracking-widest text-gray-500">
-                Phone
-              </p>
-
-              <p className="mt-2 text-2xl font-semibold text-gray-900">
-                048 10 60 60
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-gray-200 bg-white p-6">
-              <p className="text-sm uppercase tracking-widest text-gray-500">
-                Email
-              </p>
-
-              <p className="mt-2 text-2xl font-semibold text-gray-900">
-                info@hoxxes.com
-              </p>
-            </div>
-          </div>
-
+        
           <div className="mt-10">
             <Button href="/contact-sales">
               Contact Sales
