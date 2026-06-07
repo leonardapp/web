@@ -140,7 +140,7 @@ Choose the deployment model that best matches your operational requirements.
         <li>✓ Stock Transfers</li>
         <li>✓ Central Reporting</li>
         <li>✓ User Permissions</li>
-        <li>✓ Priority Support</li>
+        <li>✓ Priority Technical Support</li>
       </ul>
     </div>
 
@@ -165,56 +165,32 @@ Core platform capabilities are included with every subscription.
   "Real-Time Synchronization",
   "Automatic Updates",
   "Fiscalization Support",
-  "HQ Control Center",
+  "Technical Support",
+  "Advanced Reporting",
   "User Permissions",
 ].map((item) => (
       <div
-        key={item}
-        className="p-6 rounded-2xl border border-slate-200 bg-white hover:border-emerald-300 hover:shadow-lg transition-all duration-300"
+  key={item}
+  className="
+    p-6
+    rounded-2xl
+    border
+    border-slate-200
+    bg-white
+    hover:border-emerald-300
+    hover:shadow-lg
+    transition-all
+    duration-300
+    flex
+    items-center
+    justify-center
+    text-center
+    min-h-[88px]
+    font-medium
+  "
 >
-        ✓ {item}
-      </div>
-    ))}
-
-  </div>
-
-</section>
-{/* ONE LICENSE. MULTIPLE CHANNELS */}
-<section className="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
-
-  <div className="text-center">
-    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-      One License. Multiple Channels.
-    </div>
-
-    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-      Unified customer experiences.
-    </h2>
-
-    <p className="mt-5 text-slate-500 max-w-3xl mx-auto">
-      Every subscription includes all customer-facing channels
-      connected to the same infrastructure.
-    </p>
-  </div>
-
-  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
-
-    {[
-      "Web POS",
-      "Android POS",
-      "QR Ordering",
-      "Android App",
-      "iOS App",
-      "Delivery Mini App",
-      "E-Shop",
-      "Online Ordering",
-    ].map((item) => (
-      <div
-        key={item}
-        className="p-6 rounded-2xl border border-slate-200 bg-white"
-      >
-        {item}
-      </div>
+  ✓ {item}
+</div>
     ))}
 
   </div>
@@ -312,11 +288,12 @@ Core platform capabilities are included with every subscription.
         <li>✔ Analytics & HQ Control Center</li>
 
         {isEnterprise && (
-          <>
-            <li>✔ 30-Day Free Trial</li>
-            <li>✔ Multi-location scaling tools</li>
-          </>
-        )}
+  <>
+    <li>✔ 30-Day Free Trial</li>
+    <li>✔ Priority Technical Support</li>
+    <li>✔ Multi-location scaling tools</li>
+  </>
+)}
       </ul>
 
       <Link
@@ -373,19 +350,29 @@ Core platform capabilities are included with every subscription.
   <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-12">
 
     {[
-      "Kitchen Display System",
-      "Customer Display System",
-      "Self-Service Kiosk",
-      "Caller ID",
-      "Payment Terminal Integration (Coming Soon)",
-    ].map((item) => (
-      <div
-        key={item}
-        className="rounded-2xl border border-slate-200 p-5 text-center bg-white"
-      >
-        {item}
+  "Kitchen Display System",
+  "Customer Display System",
+  "Self-Service Kiosk",
+  "Caller ID",
+  "Payment Terminal Integration",
+].map((item, i, arr) => (
+  <div
+    key={item}
+    className={`rounded-2xl border border-slate-200 p-5 text-center bg-slate-50 ${
+      i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""
+    }`}
+  >
+    <div className="text-sm font-medium">
+      {item}
+    </div>
+
+    {item === "Payment Terminal Integration" && (
+      <div className="mt-2 text-[10px] uppercase tracking-wider text-emerald-600 font-medium">
+        Coming Soon
       </div>
-    ))}
+    )}
+  </div>
+))}
 
   </div>
 

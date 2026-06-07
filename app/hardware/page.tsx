@@ -114,10 +114,10 @@ export default function HardwarePage() {
   </div>
 
   <div className="text-center mt-8">
-    <span className="text-xs text-slate-400">
-      All prices shown exclude VAT
-    </span>
-  </div>
+  <span className="text-xs text-slate-400">
+    All hardware prices shown exclude VAT and shipping.
+  </span>
+</div>
 
 </section>
 

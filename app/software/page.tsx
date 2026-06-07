@@ -186,11 +186,11 @@ export default function SoftwarePage() {
   "Web POS",
   "Android POS",
   "QR Ordering",
-  "Android App",
-  "iOS App",
-  "Delivery Mini App",
+  "Mobile Apps",
+  "Delivery",
   "E-Shop",
   "Online Ordering",
+  "Customer Wallet"
 ].map((item) => (
   <div
     key={item}
@@ -303,93 +303,7 @@ export default function SoftwarePage() {
   </div>
 </section>
 
-
-      {/* RESTAURANT SOLUTIONS */}
-<section className="py-24 sm:py-32 bg-slate-50">
-  <div className="max-w-6xl mx-auto px-6">
-
-    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-      Restaurant Solutions
-    </div>
-
-    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-      Everything restaurants need.
-    </h2>
-
-    <p className="mt-5 text-slate-500 max-w-3xl">
-      Built to streamline ordering, kitchen operations and customer experiences.
-    </p>
-
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
-
-      {[
-  "QR Table Ordering",
-  "Android POS & Web POS",
-  "Kiosk Self-Service",
-  "Kitchen Display System",
-  "Delivery & Pickup",
-  "Loyalty & Memberships",
-].map((item) => (
-  <div
-    key={item}
-    className="h-24 flex items-center justify-center sm:justify-start
-    text-center sm:text-left px-6
-    rounded-2xl border border-slate-200 bg-transparent
-    transition"
-  >
-    <div className="font-medium">
-      {item}
-    </div>
-  </div>
-))}
-
-    </div>
-
-  </div>
-</section>
-{/* RETAIL SOLUTIONS */}
-<section className="py-24 sm:py-32 bg-white">
-  <div className="max-w-6xl mx-auto px-6">
-
-    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-      Retail Solutions
-    </div>
-
-    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-      Infrastructure for modern retail.
-    </h2>
-
-    <p className="mt-5 text-slate-500 max-w-3xl">
-      Inventory, workforce and transaction infrastructure for growing businesses.
-    </p>
-
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
-
-      {[
-  "POS Infrastructure",
-  "Inventory Management",
-  "Printer Integration",
-  "Workforce Management",
-  "Check-In / Check-Out",
-  "Analytics & Reporting",
-].map((item) => (
-  <div
-    key={item}
-    className="h-24 flex items-center justify-center sm:justify-start
-    text-center sm:text-left px-6
-    rounded-2xl border border-slate-200 bg-white
-    transition"
-  >
-    <div className="font-medium">
-      {item}
-    </div>
-  </div>
-))}
-
-    </div>
-
-  </div>
-</section>
+      
 {/* ORDER CENTER */}
 <section className="py-24 sm:py-32 bg-slate-50">
   <div className="max-w-7xl mx-auto px-6">
@@ -423,22 +337,22 @@ export default function SoftwarePage() {
 <section className="py-24 sm:py-32 bg-white">
   <div className="max-w-6xl mx-auto px-6">
 
-    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-      Enterprise Infrastructure
-    </div>
+    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600 text-center lg:text-left">
+  Enterprise Infrastructure
+</div>
 
-    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-      Multi-location operations.
-    </h2>
+<h2 className="mt-4 text-3xl sm:text-4xl font-semibold text-center lg:text-left">
+  Multi-location operations.
+</h2>
 
-    <p className="mt-5 text-slate-500 max-w-3xl">
-      Centralized control across restaurants, stores and operational teams.
-    </p>
+<p className="mt-5 text-slate-500 max-w-3xl text-center lg:text-left mx-auto lg:mx-0">
+  Centralized control across restaurants, stores and operational teams.
+</p>
 
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
 
       {[
-  "HQ Control Center",
+  "Head Office Management",
   "Stock Transfers",
   "Central Reporting",
   "Support Ticket System",
