@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function TermsOfServicePage() {
   return (
-   <main className="max-w-4xl mx-auto px-6 pt-20 pb-12 sm:pt-24">
+   <div className="max-w-4xl mx-auto px-6 pt-20 pb-12 sm:pt-24">
   <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
     Terms of Service
   </h1>
@@ -275,6 +275,6 @@ export default function TermsOfServicePage() {
           <p>Email: info@hoxxes.com</p>
         </section>
       </div>
-    </main>
+    </div>
   );
 }
