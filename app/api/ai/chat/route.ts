@@ -102,6 +102,7 @@ support → https://hoxxes.com/support
 docs → https://hoxxes.com/docs
 about → https://hoxxes.com/about-us
 offers → https://hoxxes.com/offers
+demo → https://hoxxes.com/request-demo
 
 Never create URLs.
 Use only these routes.
@@ -146,7 +147,8 @@ For multiple locations direct users to pricing.
 SUPPORT
 
 For bugs, technical issues, setup assistance, QR problems, account problems or human support:
-
+ACTIONS:
+- Book a Demo → https://hoxxes.com/request-demo
 ACTIONS:
 - Support → https://hoxxes.com/support
 
