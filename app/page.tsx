@@ -332,44 +332,46 @@ multiple locations from one platform.
       ))}
     </div>
 
-    <div className="my-10 text-slate-300 text-3xl">
-      ↓
-    </div>
+    <div className="my-10 text-emerald-500 text-3xl">
+  ↓
+</div>
 
     <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-black text-white font-medium tracking-wide">
       HOXXES CORE PLATFORM
     </div>
 
-    <div className="my-10 text-slate-300 text-3xl">
+    <div className="my-10 text-emerald-500 text-3xl">
       ↓
     </div>
 
     <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-10">
 
   {[
-    "Kitchen Display System",
-    "Customer Display System",
-    "Self-Service Kiosk",
-    "Caller ID",
-    "Payment Terminal Integration",
-  ].map((item) => (
-    <div
-      key={item}
-      className="rounded-2xl border border-slate-200 p-5 text-center bg-slate-50"
-    >
-      <div className="text-sm font-medium">
-        {item}
-      </div>
-
-      {item === "Payment Terminal Integration" && (
-        <div className="mt-2">
-          <span className="inline-flex px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[10px] uppercase tracking-wider font-medium">
-            Coming Soon
-          </span>
-        </div>
-      )}
+  "Kitchen Display System",
+  "Customer Display System",
+  "Self-Service Kiosk",
+  "Caller ID",
+  "Payment Terminal Integration",
+].map((item, i, arr) => (
+  <div
+    key={item}
+    className={`rounded-2xl border border-slate-200 p-5 text-center bg-slate-50 ${
+      i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""
+    }`}
+  >
+    <div className="text-sm font-medium">
+      {item}
     </div>
-  ))}
+
+    {item === "Payment Terminal Integration" && (
+      <div className="mt-2">
+        <span className="inline-flex px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[10px] uppercase tracking-wider font-medium">
+          Coming Soon
+        </span>
+      </div>
+    )}
+  </div>
+))}
 
 </div>
 
@@ -465,27 +467,29 @@ multiple locations from one platform.
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-10">
 
   {[
-    "Kitchen Display System",
-    "Customer Display System",
-    "Self-Service Kiosk",
-    "Caller ID",
-    "Payment Terminal Integration",
-  ].map((item) => (
-    <div
-      key={item}
-      className="rounded-2xl border border-slate-200 p-5 text-center bg-slate-50"
-    >
-      <div className="text-sm font-medium">
-        {item}
-      </div>
-
-      {item === "Payment Terminal Integration" && (
-        <div className="mt-2 text-[10px] uppercase tracking-wider text-emerald-600 font-medium">
-          Coming Soon
-        </div>
-      )}
+  "Kitchen Display System",
+  "Customer Display System",
+  "Self-Service Kiosk",
+  "Caller ID",
+  "Payment Terminal Integration",
+].map((item, i, arr) => (
+  <div
+    key={item}
+    className={`rounded-2xl border border-slate-200 p-5 text-center bg-slate-50 ${
+      i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""
+    }`}
+  >
+    <div className="text-sm font-medium">
+      {item}
     </div>
-  ))}
+
+    {item === "Payment Terminal Integration" && (
+      <div className="mt-2 text-[10px] uppercase tracking-wider text-emerald-600 font-medium">
+        Coming Soon
+      </div>
+    )}
+  </div>
+))}
 
 </div>
 
@@ -665,11 +669,12 @@ multiple locations from one platform.
   <div className="w-[800px] sm:w-[1000px] h-[800px] sm:h-[1000px] bg-emerald-500 blur-[200px] opacity-20 mx-auto animate-pulse-slow" />
 </div>
 
-        <div className="relative px-6">
-          <h2 className="text-2xl sm:text-4xl font-semibold">
-            The infrastructure behind
-modern hospitality.
-          </h2>
+        <div className="relative z-10 px-6">
+  <h2 className="relative z-20 text-2xl sm:text-4xl font-semibold">
+    The infrastructure behind
+    <br />
+    modern hospitality.
+  </h2>
 
           <p className="text-slate-400 mt-5 max-w-2xl mx-auto text-sm sm:text-base">
             From single restaurants to enterprise chains —

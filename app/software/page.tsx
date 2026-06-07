@@ -183,24 +183,26 @@ export default function SoftwarePage() {
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-14">
 
       {[
-        "Web POS",
-        "Android POS",
-        "QR Ordering",
-        "Android App",
-        "iOS App",
-        "Delivery Mini App",
-        "E-Shop",
-        "Online Ordering",
-      ].map((item) => (
-        <div
-          key={item}
-          className="p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg transition"
-        >
-          <div className="font-medium">
-            {item}
-          </div>
-        </div>
-      ))}
+  "Web POS",
+  "Android POS",
+  "QR Ordering",
+  "Android App",
+  "iOS App",
+  "Delivery Mini App",
+  "E-Shop",
+  "Online Ordering",
+].map((item) => (
+  <div
+    key={item}
+    className="h-24 flex items-center justify-center text-center
+    rounded-2xl border border-slate-200 bg-white
+    hover:shadow-lg transition"
+  >
+    <div className="font-medium">
+      {item}
+    </div>
+  </div>
+))}
 
     </div>
 
@@ -321,20 +323,25 @@ export default function SoftwarePage() {
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
 
       {[
-        "QR Table Ordering",
-        "Android POS & Web POS",
-        "Kiosk Self-Service",
-        "Kitchen Display System",
-        "Delivery & Pickup",
-        "Loyalty & Memberships",
-      ].map((item) => (
-        <div
-          key={item}
-          className="p-6 rounded-2xl border border-slate-200 bg-transparent"
-        >
-          {item}
-        </div>
-      ))}
+  "QR Table Ordering",
+  "Android POS & Web POS",
+  "Kiosk Self-Service",
+  "Kitchen Display System",
+  "Delivery & Pickup",
+  "Loyalty & Memberships",
+].map((item) => (
+  <div
+    key={item}
+    className="h-24 flex items-center justify-center sm:justify-start
+    text-center sm:text-left px-6
+    rounded-2xl border border-slate-200 bg-transparent
+    transition"
+  >
+    <div className="font-medium">
+      {item}
+    </div>
+  </div>
+))}
 
     </div>
 
@@ -359,20 +366,25 @@ export default function SoftwarePage() {
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
 
       {[
-        "POS Infrastructure",
-        "Inventory Management",
-        "Printer Integration",
-        "Workforce Management",
-        "Check-In / Check-Out",
-        "Analytics & Reporting",
-      ].map((item) => (
-        <div
-          key={item}
-          className="p-6 rounded-2xl border border-slate-200 bg-white"
-        >
-          {item}
-        </div>
-      ))}
+  "POS Infrastructure",
+  "Inventory Management",
+  "Printer Integration",
+  "Workforce Management",
+  "Check-In / Check-Out",
+  "Analytics & Reporting",
+].map((item) => (
+  <div
+    key={item}
+    className="h-24 flex items-center justify-center sm:justify-start
+    text-center sm:text-left px-6
+    rounded-2xl border border-slate-200 bg-white
+    transition"
+  >
+    <div className="font-medium">
+      {item}
+    </div>
+  </div>
+))}
 
     </div>
 
@@ -426,20 +438,25 @@ export default function SoftwarePage() {
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
 
       {[
-        "HQ Control Center",
-        "Stock Transfers",
-        "Central Reporting",
-        "Support Ticket System",
-        "Documentation Center",
-        "User Permissions",
-      ].map((item) => (
-        <div
-          key={item}
-          className="p-6 rounded-2xl border border-slate-200 bg-white"
-        >
-          {item}
-        </div>
-      ))}
+  "HQ Control Center",
+  "Stock Transfers",
+  "Central Reporting",
+  "Support Ticket System",
+  "Documentation Center",
+  "User Permissions",
+].map((item) => (
+  <div
+    key={item}
+    className="h-24 flex items-center justify-center sm:justify-start
+    text-center sm:text-left px-6
+    rounded-2xl border border-slate-200 bg-white
+    transition"
+  >
+    <div className="font-medium">
+      {item}
+    </div>
+  </div>
+))}
 
     </div>
 

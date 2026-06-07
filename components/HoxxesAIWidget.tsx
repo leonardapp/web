@@ -16,8 +16,8 @@ type Message = {
 
 const starterQuestions = [
   "Book a Demo",
-  "How much does Hoxxes cost?",
-  "Which hardware do I need?",
+  "Enterprise Pricing",
+  "Hardware Recommendations",
 ];
 
 export default function HoxxesAIWidget() {
@@ -153,10 +153,11 @@ md:bottom-6
 md:right-6
 z-[9999]
 flex
-h-16
-w-16
 items-center
 justify-center
+gap-2
+h-14
+px-5
 rounded-full
 border
 border-white/10
@@ -166,7 +167,7 @@ shadow-[0_20px_80px_rgba(0,0,0,0.45)]
 backdrop-blur-2xl
 transition-all
 duration-300
-hover:scale-110
+hover:scale-105
 hover:shadow-[0_20px_100px_rgba(255,255,255,0.08)]
 "
           >
@@ -176,7 +177,12 @@ hover:shadow-[0_20px_100px_rgba(255,255,255,0.08)]
             {/* PULSE */}
             <div className="absolute h-full w-full animate-ping rounded-full bg-white/5 opacity-20" />
 
-            <Sparkles className="relative h-6 w-6" />
+            <>
+  <Sparkles className="relative h-5 w-5" />
+  <span className="relative text-sm font-medium">
+    AI Assistant
+  </span>
+</>
           </motion.button>
         )}
       </AnimatePresence>

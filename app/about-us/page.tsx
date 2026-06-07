@@ -211,18 +211,22 @@ orders, payments and operations.
   <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
 
     {[
-      "Ordering Ecosystem",
-      "Payments Infrastructure",
-      "Operational Intelligence",
-      "Multi-Location Control",
-    ].map((item) => (
-      <div
-        key={item}
-        className="p-6 rounded-2xl border border-slate-200 bg-white"
-      >
-        {item}
-      </div>
-    ))}
+  "Ordering Ecosystem",
+  "Payments Infrastructure",
+  "Operational Intelligence",
+  "Multi-Location Control",
+].map((item) => (
+  <div
+    key={item}
+    className="h-24 flex items-center justify-center sm:justify-start
+    text-center sm:text-left px-6
+    rounded-2xl border border-slate-200 bg-white"
+  >
+    <div className="font-medium">
+      {item}
+    </div>
+  </div>
+))}
 
   </div>
 
