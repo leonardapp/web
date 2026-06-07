@@ -166,7 +166,7 @@ export default function OffersPage() {
 
               {/* Deadline */}
               <div className="mt-10 rounded-2xl border border-red-200 bg-red-50 p-6">
-                <p className="text-sm uppercase tracking-widest text-red-600">
+                <p className="text-sm uppercase tracking-widest text-red-700">
                   Only Available Until June 30
                 </p>
 

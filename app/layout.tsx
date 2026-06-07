@@ -4,9 +4,55 @@ import Footer from "@/components/Footer";
 import Background from "@/components/Background";
 import HoxxesAIWidget from "@/components/HoxxesAIWidget";
 import CookieConsent from "@/components/CookieConsent";
-
+import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+export const metadata: Metadata = {
+  metadataBase: new URL("https://hoxxes.com"),
+
+  title: {
+    default: "HOXXES",
+    template: "%s | HOXXES",
+  },
+
+  description:
+    "Restaurant & Retail Operating System with POS, Self-Service Kiosks, Kitchen Display Systems, Hardware and Business Automation.",
+
+  keywords: [
+  "restaurant POS",
+  "self service kiosk",
+  "restaurant software",
+  "kitchen display system",
+  "retail software",
+  "restaurant operating system",
+  "program per restorant",
+  "sistem POS",
+  "kioske vetesherbyese",
+  "program per kafene",
+  "Hoxxes",
+],
+
+  openGraph: {
+    title: "HOXXES",
+    description:
+      "Restaurant & Retail Operating System with POS, Self-Service Kiosks, Kitchen Display Systems and Business Automation.",
+    url: "https://hoxxes.com",
+    siteName: "HOXXES",
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "HOXXES",
+    description:
+      "Restaurant & Retail Operating System with POS, Self-Service Kiosks and Business Automation.",
+  },
+
+  alternates: {
+    canonical: "https://hoxxes.com",
+  },
+};
 
 export default function RootLayout({
   children,

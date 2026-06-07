@@ -210,8 +210,8 @@ hover:shadow-[0_20px_100px_rgba(255,255,255,0.08)]
   z-[9999]
   flex
   h-[80vh] md:h-[720px]
-  w-[calc(100vw-32px)]
-max-w-[calc(100vw-32px)]
+  w-[calc(100vw-24px)] md:w-[420px]
+max-w-[calc(100vw-24px)]
   flex-col
   overflow-hidden
   rounded-[34px]
