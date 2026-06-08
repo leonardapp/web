@@ -230,21 +230,21 @@ multiple locations from one platform.
 <section className="py-20 sm:py-28 bg-transparent">
   <div className="max-w-6xl mx-auto px-6">
 
-    <div className="mb-12">
-      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600 mb-3">
-        Software Infrastructure
-      </div>
+    <div className="text-center mb-12">
+  <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+    Software Infrastructure
+  </div>
 
-      <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
-        Software Ecosystem
-      </h2>
+  <h2 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-tight">
+    Software Ecosystem
+  </h2>
 
-      <p className="mt-5 max-w-3xl text-slate-500">
-        Modular software infrastructure covering ordering,
-        operations, workforce management, inventory,
-        payments and analytics across every location.
-      </p>
-    </div>
+  <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+    Modular software infrastructure covering ordering,
+    operations, workforce management, inventory,
+    payments and analytics across every location.
+  </p>
+</div>
 
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
   {[
@@ -474,21 +474,23 @@ multiple locations from one platform.
   "Payment Terminal Integration",
 ].map((item, i, arr) => (
   <div
-    key={item}
-    className={`rounded-2xl border border-slate-200 p-5 text-center bg-slate-50 ${
-      i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""
-    }`}
-  >
-    <div className="text-sm font-medium">
-      {item}
-    </div>
-
-    {item === "Payment Terminal Integration" && (
-      <div className="mt-2 text-[10px] uppercase tracking-wider text-emerald-600 font-medium">
-        Coming Soon
-      </div>
-    )}
+  key={item}
+  className={`rounded-2xl border border-slate-200 p-5 bg-slate-50
+  flex flex-col items-center justify-center text-center
+  ${
+    i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""
+  }`}
+>
+  <div className="text-sm font-medium">
+    {item}
   </div>
+
+  {item === "Payment Terminal Integration" && (
+    <div className="mt-2 text-[10px] uppercase tracking-wider text-emerald-600 font-medium">
+      Coming Soon
+    </div>
+  )}
+</div>
 ))}
 
 </div>

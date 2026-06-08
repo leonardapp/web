@@ -54,13 +54,15 @@ export default function AboutPage() {
           {/* INDUSTRIES */}
 <section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
 
-  <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-    Industries
-  </div>
+  <div className="text-center">
+    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+      Industries
+    </div>
 
-  <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-    Built for multiple business models.
-  </h2>
+    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+      Built for multiple business models.
+    </h2>
+  </div>
 
   <div className="grid md:grid-cols-3 gap-6 mt-12">
 
@@ -88,59 +90,23 @@ export default function AboutPage() {
   </div>
 
 </section>
-
-
-  <section className="max-w-6xl mx-auto px-6 pb-24">
-
-  <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-
-    <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition">
-      <div className="text-3xl sm:text-4xl font-semibold">POS</div>
-      <div className="text-slate-500 text-sm mt-2">
-        Infrastructure
-      </div>
-    </div>
-
-    <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition">
-      <div className="text-3xl sm:text-4xl font-semibold">QR</div>
-      <div className="text-slate-500 text-sm mt-2">
-        Ordering
-      </div>
-    </div>
-
-    <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition">
-      <div className="text-3xl sm:text-4xl font-semibold">KDS</div>
-      <div className="text-slate-500 text-sm mt-2">
-        Kitchen Ops
-      </div>
-    </div>
-
-    <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition">
-      <div className="text-3xl sm:text-4xl font-semibold">HQ</div>
-      <div className="text-slate-500 text-sm mt-2">
-        Control Center
-      </div>
-    </div>
-
-  </div>
-
-
-
-</section>
       {/* MISSION */}
       <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-2xl font-semibold">Infrastructure Vision</h2>
-          <p className="mt-4 text-slate-600 leading-relaxed">
-            We eliminate fragmented business systems and replace them with one
-unified, real-time operating infrastructure connecting devices,
-orders, payments and operations.
-          </p>
-        </motion.div>
+  initial={{ opacity: 0, x: -20 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+>
+  <h2 className="text-2xl font-semibold text-center md:text-left">
+    Infrastructure Vision
+  </h2>
+
+  <p className="mt-4 text-slate-600 leading-relaxed">
+    We eliminate fragmented business systems and replace them with one
+    unified, real-time operating infrastructure connecting devices,
+    orders, payments and operations.
+  </p>
+</motion.div>
 
         <motion.div
           initial={{ opacity: 0, x: 20 }}
@@ -149,18 +115,26 @@ orders, payments and operations.
           className="p-10 rounded-3xl border border-slate-200 bg-white shadow-sm relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-emerald-100/40 blur-3xl opacity-60" />
-          <div className="relative">
-            <div className="text-sm text-slate-500">Core Philosophy</div>
-            <div className="mt-3 text-xl font-semibold">
-              Simplicity. Reliability. Scale.
-            </div>
-          </div>
+
+<div className="relative text-center">
+  <div className="text-sm text-slate-500">
+    Core Philosophy
+  </div>
+
+  <div className="mt-3 text-xl font-semibold">
+    Simplicity. Reliability. Scale.
+  </div>
+</div>
         </motion.div>
       </section>
 
       {/* VALUES */}
       <section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
-        <h2 className="text-2xl font-semibold mb-10">Core Principles</h2>
+       <div className="text-center mb-12">
+  <h2 className="text-3xl sm:text-4xl font-semibold">
+    Core Principles
+  </h2>
+</div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
@@ -195,40 +169,42 @@ orders, payments and operations.
       {/* PLATFORM OVERVIEW */}
 <section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
 
-  <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-    Platform Overview
+  <div className="text-center mb-12">
+    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+      Platform Overview
+    </div>
+
+    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+      One infrastructure layer.
+    </h2>
+
+    <p className="mt-5 text-slate-500 max-w-3xl mx-auto">
+      HOXXES connects ordering, payments, kitchen operations,
+      workforce management, inventory and analytics into a unified platform.
+    </p>
   </div>
-
-  <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-    One infrastructure layer.
-  </h2>
-
-  <p className="mt-5 text-slate-500 max-w-3xl">
-    HOXXES connects ordering, payments, kitchen operations,
-    workforce management, inventory and analytics into a unified platform.
-  </p>
 
   <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
 
-    {[
-  "Ordering Ecosystem",
-  "Payments Infrastructure",
-  "Operational Intelligence",
-  "Multi-Location Control",
-].map((item) => (
-  <div
-    key={item}
-    className="h-24 flex items-center justify-center sm:justify-start
-    text-center sm:text-left px-6
-    rounded-2xl border border-slate-200 bg-white"
-  >
-    <div className="font-medium">
-      {item}
+  {[
+    "Ordering Ecosystem",
+    "Payments Infrastructure",
+    "Operational Intelligence",
+    "Multi-Location Control",
+  ].map((item) => (
+    <div
+      key={item}
+      className="h-24 flex items-center justify-center
+      text-center px-6
+      rounded-2xl border border-slate-200 bg-white"
+    >
+      <div className="font-medium">
+        {item}
+      </div>
     </div>
-  </div>
-))}
+  ))}
 
-  </div>
+</div>
 
 </section>
 

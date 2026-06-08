@@ -337,15 +337,15 @@ export default function SoftwarePage() {
 <section className="py-24 sm:py-32 bg-white">
   <div className="max-w-6xl mx-auto px-6">
 
-    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600 text-center lg:text-left">
+    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600 text-center">
   Enterprise Infrastructure
 </div>
 
-<h2 className="mt-4 text-3xl sm:text-4xl font-semibold text-center lg:text-left">
+<h2 className="mt-4 text-3xl sm:text-4xl font-semibold text-center">
   Multi-location operations.
 </h2>
 
-<p className="mt-5 text-slate-500 max-w-3xl text-center lg:text-left mx-auto lg:mx-0">
+<p className="mt-5 text-slate-500 max-w-3xl text-center mx-auto">
   Centralized control across restaurants, stores and operational teams.
 </p>
 
@@ -361,10 +361,9 @@ export default function SoftwarePage() {
 ].map((item) => (
   <div
     key={item}
-    className="h-24 flex items-center justify-center sm:justify-start
-    text-center sm:text-left px-6
+    className="h-24 flex items-center justify-center text-center
     rounded-2xl border border-slate-200 bg-white
-    transition"
+    hover:shadow-lg transition"
   >
     <div className="font-medium">
       {item}
