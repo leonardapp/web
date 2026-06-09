@@ -142,15 +142,17 @@ export default function SoftwarePage() {
 
     <div
   className="
-    relative
-    w-[340px]
-    rounded-[40px]
-    border
-    border-slate-200
-    bg-white
-    p-3
-    shadow-[0_30px_80px_rgba(0,0,0,0.10)]
-      "
+  relative
+  w-[270px]
+  sm:w-[320px]
+  lg:w-[340px]
+  rounded-[40px]
+  border
+  border-slate-200
+  bg-white
+  p-3
+  shadow-[0_30px_80px_rgba(0,0,0,0.10)]
+"
     >
       <img
         src="https://hoxxes.app/images/qr-menu.jpg"
@@ -225,15 +227,17 @@ export default function SoftwarePage() {
 
     <div
   className="
-    relative
-    w-[340px]
-    rounded-[40px]
-    border
-    border-slate-200
-    bg-white
-    p-3
-    shadow-[0_30px_80px_rgba(0,0,0,0.10)]
-      "
+  relative
+  w-[270px]
+  sm:w-[320px]
+  lg:w-[340px]
+  rounded-[40px]
+  border
+  border-slate-200
+  bg-white
+  p-3
+  shadow-[0_30px_80px_rgba(0,0,0,0.10)]
+"
     >
       <img
         src="https://hoxxes.app/images/waiter-app.jpg"
