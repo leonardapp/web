@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Hoxxes",
@@ -9,9 +10,10 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 pt-20 pb-12 sm:pt-24">
-  <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-    Privacy Policy
-  </h1>
+      <Header />
+      <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+        Privacy Policy
+      </h1>
 
       <p className="text-gray-500 mb-10">
         Last Updated: June 2026

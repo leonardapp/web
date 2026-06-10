@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Cookie Policy | Hoxxes",
