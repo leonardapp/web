@@ -86,25 +86,23 @@ export default function SoftwarePage() {
   </div>
 
   {/* SCREENSHOT FLOATING */}
-  <div
+  {/* FLOATING SCREENSHOT */}
+<div
   className="
     absolute
     -right-2 sm:-right-6 lg:-right-10
     -bottom-2 sm:-bottom-6 lg:-bottom-10
     w-[55%] sm:w-[48%] lg:w-[42%]
-    rounded-3xl
-    border
-    border-slate-200
-    bg-white
-    p-2 sm:p-3
-    shadow-2xl
+    rounded-[24px]
+    overflow-hidden
+    shadow-[0_25px_60px_rgba(0,0,0,0.25)]
     z-10
   "
 >
   <img
     src="https://hoxxes.app/images/pos2.png"
     alt="HOXXES POS Software"
-    className="w-full rounded-2xl"
+    className="w-full"
   />
 </div>
 
@@ -142,27 +140,24 @@ export default function SoftwarePage() {
       />
 
       {/* FLOATING MOBILE SCREENSHOT */}
-      <div
-        className="
-          absolute
-          -right-2 sm:-right-6 lg:-right-10
-          -bottom-2 sm:-bottom-6 lg:-bottom-10
-          w-[28%] sm:w-[24%] lg:w-[18%]
-          rounded-3xl
-          border
-          border-slate-200
-          bg-white
-          p-2 sm:p-3
-          shadow-2xl
-          z-10
-        "
-      >
-        <img
-          src="https://hoxxes.app/images/qr-menu.jpg"
-          alt="HOXXES Digital Menu"
-          className="w-full rounded-2xl"
-        />
-      </div>
+<div
+  className="
+    absolute
+    -right-2 sm:-right-6 lg:-right-10
+    -bottom-2 sm:-bottom-6 lg:-bottom-10
+    w-[28%] sm:w-[24%] lg:w-[18%]
+    rounded-3xl
+    overflow-hidden
+    shadow-2xl
+    z-10
+  "
+>
+  <img
+    src="https://hoxxes.app/images/qr-menu.jpg"
+    alt="HOXXES Digital Menu"
+    className="w-full"
+  />
+</div>
 
     </div>
 
@@ -201,27 +196,25 @@ export default function SoftwarePage() {
     className="w-full rounded-[32px]"
   />
 
-  <div
-    className="
-      absolute
-      -left-2 sm:-left-6 lg:-left-10
-      -bottom-2 sm:-bottom-6 lg:-bottom-10
-      w-[55%] sm:w-[48%] lg:w-[42%]
-      rounded-3xl
-      border
-      border-slate-200
-      bg-white
-      p-2 sm:p-3
-      shadow-2xl
-      z-10
-    "
-  >
-    <img
-      src="https://hoxxes.app/images/kds.png"
-      alt="HOXXES KDS"
-      className="w-full rounded-2xl"
-    />
-  </div>
+  {/* FLOATING SCREENSHOT */}
+<div
+  className="
+    absolute
+    -left-2 sm:-left-6 lg:-left-10
+    -bottom-2 sm:-bottom-6 lg:-bottom-10
+    w-[55%] sm:w-[48%] lg:w-[42%]
+    rounded-[24px]
+    overflow-hidden
+    shadow-[0_25px_60px_rgba(0,0,0,0.25)]
+    z-10
+  "
+>
+  <img
+    src="https://hoxxes.app/images/kds.png"
+    alt="HOXXES KDS"
+    className="w-full"
+  />
+</div>
 </div>
 
   </div>
@@ -256,27 +249,24 @@ export default function SoftwarePage() {
       />
 
       {/* FLOATING SCREENSHOT */}
-      <div
-        className="
-          absolute
-          -right-2 sm:-right-6 lg:-right-10
-          -bottom-2 sm:-bottom-6 lg:-bottom-10
-          w-[28%] sm:w-[24%] lg:w-[18%]
-          rounded-3xl
-          border
-          border-slate-200
-          bg-white
-          p-2 sm:p-3
-          shadow-2xl
-          z-10
-        "
-      >
-        <img
-          src="https://hoxxes.app/images/waiter-app.jpg"
-          alt="HOXXES Waiter App"
-          className="w-full rounded-2xl"
-        />
-      </div>
+<div
+  className="
+    absolute
+    -right-2 sm:-right-6 lg:-right-10
+    -bottom-2 sm:-bottom-6 lg:-bottom-10
+    w-[28%] sm:w-[24%] lg:w-[18%]
+    rounded-3xl
+    overflow-hidden
+    shadow-2xl
+    z-10
+  "
+>
+  <img
+    src="https://hoxxes.app/images/waiter-app.jpg"
+    alt="HOXXES Waiter App"
+    className="w-full"
+  />
+</div>
 
     </div>
 
@@ -372,34 +362,31 @@ export default function SoftwarePage() {
     <div className="relative">
 
       {/* REAL IMAGE */}
-      <img
-        src="https://hoxxes.app/images/analytics-dashboard.png"
-        alt="HOXXES Analytics"
-        className="w-full rounded-[32px]"
-      />
+<img
+  src="https://hoxxes.app/images/analytics-dashboard.png"
+  alt="HOXXES Analytics"
+  className="w-full rounded-[32px]"
+/>
 
-      {/* FLOATING DASHBOARD */}
-      <div
-        className="
-          absolute
-          -left-2 sm:-left-6 lg:-left-10
-          -bottom-2 sm:-bottom-6 lg:-bottom-10
-          w-[55%] sm:w-[48%] lg:w-[42%]
-          rounded-3xl
-          border
-          border-slate-200
-          bg-white
-          p-2 sm:p-3
-          shadow-2xl
-          z-10
-        "
-      >
-        <img
-          src="https://hoxxes.app/images/dashboard-overview.png"
-          alt="HOXXES Analytics Dashboard"
-          className="w-full rounded-2xl"
-        />
-      </div>
+{/* FLOATING DASHBOARD */}
+<div
+  className="
+    absolute
+    -left-2 sm:-left-6 lg:-left-10
+    -bottom-2 sm:-bottom-6 lg:-bottom-10
+    w-[55%] sm:w-[48%] lg:w-[42%]
+    rounded-3xl
+    overflow-hidden
+    shadow-2xl
+    z-10
+  "
+>
+  <img
+    src="https://hoxxes.app/images/dashboard-overview.png"
+    alt="HOXXES Analytics Dashboard"
+    className="w-full"
+  />
+</div>
 
     </div>
 
