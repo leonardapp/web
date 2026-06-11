@@ -64,15 +64,19 @@ export default function HardwarePage() {
     from ordering to payments to customer experience.
   </p>
 
-  <div className="relative mt-16 flex justify-center items-center">
-    <div className="absolute w-[500px] h-[500px] bg-emerald-400/20 rounded-full blur-[140px]" />
-
-    <img
-      src="https://hoxxes.app/images/kiosk.svg"
-      alt="Hoxxes Kiosk"
-      className="relative z-10 w-full max-w-5xl object-contain"
-    />
-  </div>
+  <div className="relative mt-16">
+  <img
+    src="https://hoxxes.app/images/kiosk-ordering.png"
+    alt="Hoxxes Self Service Kiosk"
+    className="
+      w-full
+      rounded-[32px]
+      shadow-2xl
+      border
+      border-slate-200
+    "
+  />
+</div>
 
 </section>
 

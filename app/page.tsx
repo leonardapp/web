@@ -106,6 +106,7 @@ export default function HomePage() {
           animate="show"
           transition={{ staggerChildren: 0.08 }}
         >
+          
           <motion.div
             variants={fadeUp}
             className="text-[10px] sm:text-xs tracking-[0.35em] text-slate-400 uppercase"
@@ -219,8 +220,19 @@ multiple locations from one platform.
         alt="Tomos"
         className="h-10 md:h-12 lg:h-12 w-auto mx-auto object-contain opacity-70 hover:opacity-100 transition duration-300"
       />
+      
 
     </div>
+<motion.div
+  variants={fadeUp}
+  className="mt-16"
+>
+  <img
+    src="https://hoxxes.app/images/hero.png"
+    alt="Hoxxes Platform"
+    className="w-full max-w-5xl mx-auto rounded-3xl shadow-2xl"
+  />
+</motion.div>
 
   </div>
 </section> 

@@ -74,96 +74,104 @@ export default function SoftwarePage() {
       </p>
     </div>
 
-    <div className="
-      rounded-3xl
-      border
-      border-slate-200
-      bg-white
-      p-3
-      sm:p-4
-      shadow-xl
-      overflow-hidden
-    ">
-      <img
-        src="https://hoxxes.app/images/pos2.png"
-        alt="HOXXES POS"
-        className="w-full rounded-2xl"
-      />
-    </div>
+    <div className="relative mt-10">
+
+  {/* FOTO REALE */}
+  <div className="overflow-hidden rounded-[32px]">
+    <img
+      src="https://hoxxes.app/images/pos-operations.png"
+      alt="Restaurant POS Operations"
+      className="w-full object-cover"
+    />
+  </div>
+
+  {/* SCREENSHOT FLOATING */}
+  <div
+  className="
+    absolute
+    -right-2 sm:-right-6 lg:-right-10
+    -bottom-2 sm:-bottom-6 lg:-bottom-10
+    w-[55%] sm:w-[48%] lg:w-[42%]
+    rounded-3xl
+    border
+    border-slate-200
+    bg-white
+    p-2 sm:p-3
+    shadow-2xl
+    z-10
+  "
+>
+  <img
+    src="https://hoxxes.app/images/pos2.png"
+    alt="HOXXES POS Software"
+    className="w-full rounded-2xl"
+  />
+</div>
+
+</div>
 
   </div>
 </section>
+
 {/* DIGITAL MENU */}
 <section className="py-24 sm:py-32 bg-white">
   <div className="max-w-7xl mx-auto px-6">
 
-    <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-      {/* TEXT */}
-      <div>
-        <div className="text-center">
-  <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-    Digital Menu
-  </div>
-
-  <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-    QR ordering made simple.
-  </h2>
-</div>
-
-<p className="mt-5 text-slate-500 text-lg leading-relaxed">
-  Customers scan a QR code, browse the menu,
-  customize products and place orders directly
-  from their mobile device.
-</p>
-
-        <div className="mt-8 space-y-3 text-slate-600">
-          <div>✓ QR Ordering</div>
-          <div>✓ Contactless Experience</div>
-          <div>✓ Real-Time Menu Updates</div>
-          <div>✓ Multi-Language Support</div>
-          <div>✓ Integrated Payments</div>
-        </div>
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Digital Menu
       </div>
 
-      {/* PHONE */}
-<div className="flex justify-center">
-  <div className="relative">
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        QR ordering made simple.
+      </h2>
 
-    <div
-      className="
-        absolute
-        inset-0
-        bg-emerald-100/40
-        blur-3xl
-        scale-110
-      "
-    />
-
-    <div
-  className="
-  relative
-  w-[270px]
-  sm:w-[320px]
-  lg:w-[340px]
-  rounded-[40px]
-  border
-  border-slate-200
-  bg-white
-  p-3
-  shadow-[0_30px_80px_rgba(0,0,0,0.10)]
-"
-    >
-      <img
-        src="https://hoxxes.app/images/qr-menu.jpg"
-        alt="HOXXES Digital Menu"
-        className="w-full rounded-[28px]"
-      />
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Customers scan a QR code, browse the menu, customize products
+        and place orders directly from their mobile device.
+      </p>
     </div>
 
-  </div>
-</div>
+    <div className="relative">
 
+      {/* REAL IMAGE */}
+      <img
+        src="https://hoxxes.app/images/qr-ordering.png"
+        alt="HOXXES QR Ordering"
+        className="w-full rounded-[32px]"
+      />
+
+      {/* FLOATING MOBILE SCREENSHOT */}
+      <div
+        className="
+          absolute
+          -right-2 sm:-right-6 lg:-right-10
+          -bottom-2 sm:-bottom-6 lg:-bottom-10
+          w-[28%] sm:w-[24%] lg:w-[18%]
+          rounded-3xl
+          border
+          border-slate-200
+          bg-white
+          p-2 sm:p-3
+          shadow-2xl
+          z-10
+        "
+      >
+        <img
+          src="https://hoxxes.app/images/qr-menu.jpg"
+          alt="HOXXES Digital Menu"
+          className="w-full rounded-2xl"
+        />
+      </div>
+
+    </div>
+
+    <div className="mt-12 flex flex-wrap justify-center gap-4 text-slate-600">
+      <div>✓ QR Ordering</div>
+      <div>✓ Contactless Experience</div>
+      <div>✓ Real-Time Menu Updates</div>
+      <div>✓ Multi-Language Support</div>
+      <div>✓ Integrated Payments</div>
     </div>
 
   </div>
@@ -186,95 +194,89 @@ export default function SoftwarePage() {
       </p>
     </div>
 
-    <div
-      className="
-        rounded-3xl
-        border
-        border-slate-200
-        bg-white
-        p-3
-        sm:p-4
-        shadow-xl
-        overflow-hidden
-      "
-    >
-      <img
-        src="https://hoxxes.app/images/kds.png"
-        alt="HOXXES Kitchen Display System"
-        className="w-full rounded-2xl"
-      />
-    </div>
+    <div className="relative">
+  <img
+    src="https://hoxxes.app/images/kitchen-display-system.png"
+    alt="HOXXES Kitchen Display System"
+    className="w-full rounded-[32px]"
+  />
+
+  <div
+    className="
+      absolute
+      -left-2 sm:-left-6 lg:-left-10
+      -bottom-2 sm:-bottom-6 lg:-bottom-10
+      w-[55%] sm:w-[48%] lg:w-[42%]
+      rounded-3xl
+      border
+      border-slate-200
+      bg-white
+      p-2 sm:p-3
+      shadow-2xl
+      z-10
+    "
+  >
+    <img
+      src="https://hoxxes.app/images/kds.png"
+      alt="HOXXES KDS"
+      className="w-full rounded-2xl"
+    />
+  </div>
+</div>
 
   </div>
 </section>
+
+{/* WAITER APP */}
 <section className="py-24 sm:py-32 bg-white">
   <div className="max-w-7xl mx-auto px-6">
 
-    <div className="grid lg:grid-cols-2 gap-16 items-center">
-    {/* PHONE */}
-<div className="order-2 lg:order-1 flex justify-center">
-  <div className="relative">
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Waiter App
+      </div>
 
-    <div
-      className="
-        absolute
-        inset-0
-        bg-emerald-100/40
-        blur-3xl
-        scale-110
-      "
-    />
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Designed for modern service teams.
+      </h2>
 
-    <div
-  className="
-  relative
-  w-[270px]
-  sm:w-[320px]
-  lg:w-[340px]
-  rounded-[40px]
-  border
-  border-slate-200
-  bg-white
-  p-3
-  shadow-[0_30px_80px_rgba(0,0,0,0.10)]
-"
-    >
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Waiters can manage tables, create orders, send items directly
+        to the kitchen and process payments from a mobile device.
+      </p>
+    </div>
+
+    <div className="relative">
+
+      {/* REAL IMAGE */}
       <img
-        src="https://hoxxes.app/images/waiter-app.jpg"
-        alt="HOXXES Waiter App"
-        className="w-full rounded-[28px]"
+        src="https://hoxxes.app/images/waiter-operations.png"
+        alt="HOXXES Waiter Operations"
+        className="w-full rounded-[32px]"
       />
-    </div>
 
-  </div>
-</div>
-
-    {/* TEXT */}
-<div className="order-1 lg:order-2">
-  <div className="text-center">
-    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-      Waiter App
-    </div>
-
-    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-      Designed for modern service teams.
-    </h2>
-  </div>
-
-  <p className="mt-5 text-slate-500 text-lg leading-relaxed">
-    Waiters can manage tables, create orders,
-    send items directly to the kitchen and process
-    payments from a mobile device.
-  </p>
-
-  <div className="mt-8 space-y-3 text-slate-600">
-    <div>✓ Mobile Ordering</div>
-    <div>✓ Table Management</div>
-    <div>✓ Instant Kitchen Sync</div>
-    <div>✓ Split Bills</div>
-    <div>✓ Faster Service</div>
-  </div>
-</div>
+      {/* FLOATING SCREENSHOT */}
+      <div
+        className="
+          absolute
+          -right-2 sm:-right-6 lg:-right-10
+          -bottom-2 sm:-bottom-6 lg:-bottom-10
+          w-[28%] sm:w-[24%] lg:w-[18%]
+          rounded-3xl
+          border
+          border-slate-200
+          bg-white
+          p-2 sm:p-3
+          shadow-2xl
+          z-10
+        "
+      >
+        <img
+          src="https://hoxxes.app/images/waiter-app.jpg"
+          alt="HOXXES Waiter App"
+          className="w-full rounded-2xl"
+        />
+      </div>
 
     </div>
 
@@ -367,23 +369,38 @@ export default function SoftwarePage() {
       </p>
     </div>
 
-    <div
-      className="
-        rounded-3xl
-        border
-        border-slate-200
-        bg-white
-        p-3
-        sm:p-4
-        shadow-xl
-        overflow-hidden
-      "
-    >
+    <div className="relative">
+
+      {/* REAL IMAGE */}
       <img
-        src="https://hoxxes.app/images/dashboard-overview.png"
-        alt="HOXXES Analytics Dashboard"
-        className="w-full rounded-2xl"
+        src="https://hoxxes.app/images/analytics-dashboard.png"
+        alt="HOXXES Analytics"
+        className="w-full rounded-[32px]"
       />
+
+      {/* FLOATING DASHBOARD */}
+      <div
+        className="
+          absolute
+          -left-2 sm:-left-6 lg:-left-10
+          -bottom-2 sm:-bottom-6 lg:-bottom-10
+          w-[55%] sm:w-[48%] lg:w-[42%]
+          rounded-3xl
+          border
+          border-slate-200
+          bg-white
+          p-2 sm:p-3
+          shadow-2xl
+          z-10
+        "
+      >
+        <img
+          src="https://hoxxes.app/images/dashboard-overview.png"
+          alt="HOXXES Analytics Dashboard"
+          className="w-full rounded-2xl"
+        />
+      </div>
+
     </div>
 
   </div>
