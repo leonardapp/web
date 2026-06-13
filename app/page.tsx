@@ -129,7 +129,7 @@ export default function HomePage() {
           >
             The Operating System
             <span className="block text-slate-500 mt-2">
-              for modern hospitality
+              for Restaurants & Retail
             </span>
           </motion.h1>
 
