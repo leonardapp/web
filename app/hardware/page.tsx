@@ -13,9 +13,9 @@ const hardware = [
     preorderEnabled: true,
     image: "https://hoxxes.app/images/Kiosk.png",
     description:
-      "Self-service kiosk with touchscreen ordering, QR integration and built-in receipt printing.",
-    highlight: "Best for QSR & high-volume restaurants",
-  },
+      "Wall-mounted self-service kiosk with touchscreen ordering, QR integration and built-in receipt printing.",
+  highlight: "Space-saving self-service solution",
+},
 
   {
     title: "Android POS Terminal",
@@ -25,7 +25,7 @@ const hardware = [
     image: "https://hoxxes.app/images/POS.png",
     description:
       "Dual-screen POS system with cashier + customer display, built for fast retail & restaurant operations.",
-    highlight: "Most popular POS setup",
+    highlight: "Dual-screen restaurant & retail POS",
   },
 ];
 
@@ -91,7 +91,17 @@ export default function HardwarePage() {
       </div>
 
       <div className="mt-2 text-sm sm:text-base text-slate-500 max-w-[220px] mx-auto">
-        Interactive ordering experience
+        Interactive self-service ordering
+      </div>
+    </div>
+
+    <div className="p-6 sm:p-8 rounded-3xl border border-slate-200 bg-white">
+      <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight">
+        Wall-Mounted
+      </div>
+
+      <div className="mt-2 text-sm sm:text-base text-slate-500 max-w-[220px] mx-auto">
+        Space-saving installation design
       </div>
     </div>
 
@@ -105,26 +115,16 @@ export default function HardwarePage() {
       </div>
     </div>
 
-    <div className="p-6 sm:p-8 rounded-3xl border border-slate-200 bg-white">
-      <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight">
-        Cloud Connected
-      </div>
-
-      <div className="mt-2 text-sm sm:text-base text-slate-500 max-w-[220px] mx-auto">
-        Real-time platform synchronization
-      </div>
-    </div>
-
   </div>
 
-  <div className="text-center mt-8">
+  
+
+</section>
+<div className="text-center mt-4 mb-12">
   <span className="text-xs text-slate-400">
     All hardware prices shown exclude VAT and shipping.
   </span>
 </div>
-
-</section>
-
 
       {/* HARDWARE GRID */}
       <section className="max-w-7xl mx-auto px-6 pb-24 sm:pb-32">

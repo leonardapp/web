@@ -1,14 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-
 import Header from "@/components/Header";
 
-
 export default function SoftwarePage() {
-  const [selectedModule, setSelectedModule] = useState<any>(null);
-
+ 
   return (
     <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       
@@ -82,10 +78,10 @@ export default function SoftwarePage() {
       src="https://hoxxes.app/images/pos-operations.png"
       alt="Restaurant POS Operations"
       className="w-full object-cover"
+      loading="lazy"
     />
   </div>
 
-  {/* SCREENSHOT FLOATING */}
   {/* FLOATING SCREENSHOT */}
 <div
   className="
@@ -103,9 +99,18 @@ export default function SoftwarePage() {
     src="https://hoxxes.app/images/pos2.png"
     alt="HOXXES POS Software"
     className="w-full"
+    loading="lazy"
   />
 </div>
 
+</div>
+<div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
+  <div>✓ Table Management</div>
+  <div>✓ Takeaway Orders</div>
+  <div>✓ Delivery Orders</div>
+  <div>✓ Integrated Payments</div>
+  <div>✓ Customer Profiles</div>
+  <div>✓ Real-Time Reporting</div>
 </div>
 
   </div>
@@ -137,6 +142,7 @@ export default function SoftwarePage() {
         src="https://hoxxes.app/images/qr-ordering.png"
         alt="HOXXES QR Ordering"
         className="w-full rounded-[32px]"
+        loading="lazy"
       />
 
       {/* FLOATING MOBILE SCREENSHOT */}
@@ -145,8 +151,8 @@ export default function SoftwarePage() {
     absolute
     -right-2 sm:-right-6 lg:-right-10
     -bottom-2 sm:-bottom-6 lg:-bottom-10
-    w-[28%] sm:w-[24%] lg:w-[18%]
-    rounded-3xl
+    w-[18%] sm:w-[22%] lg:w-[18%]
+    rounded-2xl
     overflow-hidden
     shadow-2xl
     z-10
@@ -161,17 +167,41 @@ export default function SoftwarePage() {
 
     </div>
 
-    <div className="mt-12 flex flex-wrap justify-center gap-4 text-slate-600">
+    <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
       <div>✓ QR Ordering</div>
       <div>✓ Contactless Experience</div>
       <div>✓ Real-Time Menu Updates</div>
       <div>✓ Multi-Language Support</div>
-      <div>✓ Integrated Payments</div>
+      <div>✓ Call Waiter</div>
+      <div>✓ Live Bill Tracking</div>
     </div>
+    <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
+  <a
+    href="https://qr.hoxxes.com/qr/SSI718JKZ770"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      inline-flex
+      items-center
+      justify-center
+      px-6
+      py-3
+      rounded-full
+      bg-black
+      text-white
+      text-sm
+      font-medium
+      hover:bg-slate-800
+      transition
+    "
+  >
+    Try QR Ordering
+  </a>
+</div>
 
   </div>
 </section>
-<section className="py-24 sm:py-32 bg-slate-50">
+<section className="py-24 sm:py-32 bg-transparent">
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="text-center mb-14">
@@ -194,6 +224,7 @@ export default function SoftwarePage() {
     src="https://hoxxes.app/images/kitchen-display-system.png"
     alt="HOXXES Kitchen Display System"
     className="w-full rounded-[32px]"
+    loading="lazy"
   />
 
   {/* FLOATING SCREENSHOT */}
@@ -213,8 +244,17 @@ export default function SoftwarePage() {
     src="https://hoxxes.app/images/kds.png"
     alt="HOXXES KDS"
     className="w-full"
+    loading="lazy"
   />
 </div>
+</div>
+ <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
+  <div>✓ POS Integration</div>
+  <div>✓ QR Ordering</div>
+  <div>✓ Waiter App</div>
+  <div>✓ Online Ordering</div>
+  <div>✓ Customer Mini App</div>
+  <div>✓ Self-Service Kiosk</div>
 </div>
 
   </div>
@@ -246,6 +286,7 @@ export default function SoftwarePage() {
         src="https://hoxxes.app/images/waiter-operations.png"
         alt="HOXXES Waiter Operations"
         className="w-full rounded-[32px]"
+        loading="lazy"
       />
 
       {/* FLOATING SCREENSHOT */}
@@ -254,8 +295,8 @@ export default function SoftwarePage() {
     absolute
     -right-2 sm:-right-6 lg:-right-10
     -bottom-2 sm:-bottom-6 lg:-bottom-10
-    w-[28%] sm:w-[24%] lg:w-[18%]
-    rounded-3xl
+    w-[18%] sm:w-[22%] lg:w-[18%]
+    rounded-2xl
     overflow-hidden
     shadow-2xl
     z-10
@@ -265,15 +306,137 @@ export default function SoftwarePage() {
     src="https://hoxxes.app/images/waiter-app.jpg"
     alt="HOXXES Waiter App"
     className="w-full"
+    loading="lazy"
+  />
+</div>
+
+    </div>
+    <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
+      <div>✓ Mobile Ordering</div>
+      <div>✓ Table Management</div>
+      <div>✓ Split Bills</div>
+      <div>✓ Instant Payments</div>
+      <div>✓ Kitchen Sync</div>
+      <div>✓ Offline Ready</div>
+    </div>
+
+  </div>
+</section>
+  
+  {/* ONLINE ORDERING */}
+<section className="py-24 sm:py-32 bg-transparent">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Online Ordering
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Your own branded ordering page.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+  Every subscriber receives a unique ordering link and a branded customer
+  mini app for delivery, pickup, membership, loyalty rewards, wallet and
+  vouchers. Orders arrive instantly inside HOXXES POS and Kitchen Display
+  System.
+</p>
+    </div>
+
+    <div className="relative">
+      
+
+      {/* REAL IMAGE */}
+      <img
+        src="https://hoxxes.app/images/online-ordering.png"
+        alt="HOXXES Online Ordering"
+        className="w-full rounded-[32px]"
+        loading="lazy"
+      />
+      <div
+  className="
+    absolute
+    -left-2 sm:-right-6 lg:-right-10
+    -bottom-2 sm:-bottom-6 lg:-bottom-10
+    w-[18%] sm:w-[22%] lg:w-[18%]
+    rounded-2xl
+    overflow-hidden
+    shadow-2xl
+    z-10
+  "
+>
+  <img
+    src="https://hoxxes.app/images/member-app.png"
+    alt="HOXXES Membership App"
+    className="w-full"
+    loading="lazy"
   />
 </div>
 
     </div>
 
+    <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
+      <div>✓ Membership Program</div>
+      <div>✓ Loyalty Points</div>
+      <div>✓ Wallet & Vouchers</div>
+      <div>✓ Unique Ordering Link</div>
+      <div>✓ Branded Online Store</div>
+      <div>✓ Pickup</div>
+      <div>✓ Kitchen Sync</div>
+      <div>✓ Mobile & Desktop Ready</div>
+    </div>
+    <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
+  <a
+    href="https://order.hoxxes.com/store/4cbb7eb4-5ddc-4add-a203-fc535dc4686a"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      px-6 py-3
+      rounded-full
+      bg-black
+      text-white
+      text-sm
+      font-medium
+      text-center
+      justify-center
+      inline-flex
+      hover:bg-slate-800
+      transition
+    "
+  >
+    Try Live Ordering
+  </a>
+
+  <a
+  href="https://miniprogram.hoxxes.com/app/17420/4cbb7eb4-5ddc-4add-a203-fc535dc4686a"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    px-6 py-3
+    rounded-full
+    border border-slate-300
+    text-slate-700
+    text-sm
+    font-medium
+    text-center
+    justify-center
+    inline-flex
+    hover:bg-black
+    hover:text-white
+    hover:border-black
+    transition
+  "
+>
+  Join Membership
+</a>
+</div>
+
   </div>
 </section>
+
         {/* INCLUDED WITH EVERY DEPLOYMENT */}
-<section className="py-24 sm:py-32 bg-white">
+<section className="pt-20 pb-24 sm:pt-12 sm:pb-32 bg-white">
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="text-center mb-14">
@@ -341,7 +504,7 @@ export default function SoftwarePage() {
   </div>
 </section>
    {/* ANALYTICS DASHBOARD */}
-<section className="py-24 sm:py-32 bg-slate-50">
+<section className="py-24 sm:py-32 bg-transparent">
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="text-center mb-14">
@@ -366,27 +529,29 @@ export default function SoftwarePage() {
   src="https://hoxxes.app/images/analytics-dashboard.png"
   alt="HOXXES Analytics"
   className="w-full rounded-[32px]"
+  loading="lazy"
 />
-
-{/* FLOATING DASHBOARD */}
+{/* FLOATING SCREENSHOT */}
 <div
   className="
     absolute
     -left-2 sm:-left-6 lg:-left-10
     -bottom-2 sm:-bottom-6 lg:-bottom-10
     w-[55%] sm:w-[48%] lg:w-[42%]
-    rounded-3xl
+    rounded-[24px]
     overflow-hidden
-    shadow-2xl
+    shadow-[0_25px_60px_rgba(0,0,0,0.25)]
     z-10
   "
 >
   <img
     src="https://hoxxes.app/images/dashboard-overview.png"
-    alt="HOXXES Analytics Dashboard"
+    alt="HOXXES KDS"
     className="w-full"
+    loading="lazy"
   />
 </div>
+
 
     </div>
 
@@ -559,13 +724,14 @@ export default function SoftwarePage() {
     src="https://hoxxes.app/images/order-center.png"
     alt="HOXXES Order Center"
     className="w-full rounded-2xl"
+    loading="lazy"
   />
 </div>
 
   </div>
 </section>
 {/* ENTERPRISE INFRASTRUCTURE */}
-<section className="py-24 sm:py-32 bg-white">
+<section className="py-24 sm:py-32 bg-transparent">
   <div className="max-w-6xl mx-auto px-6">
 
     <div className="text-xs uppercase tracking-[0.35em] text-emerald-600 text-center">
@@ -627,9 +793,10 @@ export default function SoftwarePage() {
 
     <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden">
       <img
-        src="https://hoxxes.app/images/hq-dashboard.png"
+        src="https://hoxxes.app/images/dashboard-overview.png"
         alt="HOXXES HQ Control Center"
         className="w-full rounded-2xl"
+        loading="lazy"
       />
     </div>
 
