@@ -146,9 +146,9 @@ export default function HomePage() {
               leading-relaxed
             "
           >
-            Manage ordering, kitchen operations,
-payments, inventory, workforce and
-multiple locations from one platform.
+            Web POS, Android POS, QR Ordering, Mobile Apps,
+Online Ordering, Memberships and Analytics —
+all connected through one platform.
           </motion.p>
 
           {/* BUTTONS */}
@@ -264,6 +264,7 @@ multiple locations from one platform.
   ["Kitchen Operations", "Real-time KDS orchestration and production workflows"],
   ["Payments Infrastructure", "Fiscalization, payment terminals and transaction processing"],
   ["Customer Commerce", "Memberships, loyalty, vouchers and digital wallet experiences"],
+  ["Mobile Infrastructure", "Android and iOS applications for staff, managers, owners and customers"],
   ["Workforce Management", "Staff permissions, attendance and operational control"],
   ["Inventory Network", "Stock transfers, recipes and multi-location inventory"],
   ["Analytics Cloud", "Operational, financial and performance intelligence"],
@@ -293,6 +294,7 @@ multiple locations from one platform.
   "Operational",
   "Secure",
   "Commerce",
+  "Mobile",
   "Managed",
   "Connected",
   "Insight",
@@ -710,14 +712,20 @@ multiple locations from one platform.
   </p>
 
   <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
-    <Button href="/request-demo" variant="primary">
-      Request Demo
-    </Button>
 
-    <Button href="/contact-sales" variant="outline">
-      Contact Sales
-    </Button>
-  </div>
+  <Button href="/software" variant="outline">
+    Explore Platform
+  </Button>
+
+  <Button href="/request-demo" variant="primary">
+    Request Demo
+  </Button>
+
+  <Button href="/contact-sales" variant="outline">
+    Contact Sales
+  </Button>
+
+</div>
 </section>
 
     

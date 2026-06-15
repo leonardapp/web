@@ -61,13 +61,14 @@ export default function SoftwarePage() {
       </div>
 
       <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-        Manage tables, orders and payments.
+        Web POS & Android POS.
       </h2>
 
       <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-        Real-time table management, takeaway orders, delivery workflows
-        and payment processing from a single interface.
-      </p>
+    Operate from any browser or use the Android POS application with
+    offline capabilities. Manage tables, orders, payments and reporting
+    from a unified platform synchronized across all devices.
+  </p>
     </div>
 
     <div className="relative mt-10">
@@ -105,12 +106,16 @@ export default function SoftwarePage() {
 
 </div>
 <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
+  <div>✓ Web POS</div>
+  <div>✓ Android POS</div>
+  <div>✓ Offline Ready</div>
   <div>✓ Table Management</div>
   <div>✓ Takeaway Orders</div>
   <div>✓ Delivery Orders</div>
   <div>✓ Integrated Payments</div>
   <div>✓ Customer Profiles</div>
   <div>✓ Real-Time Reporting</div>
+  <div>✓ Multi-Location Ready</div>
 </div>
 
   </div>
@@ -130,9 +135,9 @@ export default function SoftwarePage() {
       </h2>
 
       <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-        Customers scan a QR code, browse the menu, customize products
-        and place orders directly from their mobile device.
-      </p>
+  Customers scan a QR code, browse the menu, place orders, call a waiter,
+  track their bill in real time and enjoy a fully contactless dining experience.
+</p>
     </div>
 
     <div className="relative">
@@ -175,6 +180,9 @@ export default function SoftwarePage() {
       <div>✓ Call Waiter</div>
       <div>✓ Live Bill Tracking</div>
     </div>
+    <p className="mt-10 text-sm text-slate-500 text-center">
+  See how customers browse, order and interact with your restaurant.
+</p>
     <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
   <a
     href="https://qr.hoxxes.com/qr/SSI718JKZ770"
@@ -195,7 +203,7 @@ export default function SoftwarePage() {
       transition
     "
   >
-    Try QR Ordering
+    Explore Live Menu
   </a>
 </div>
 
@@ -249,34 +257,39 @@ export default function SoftwarePage() {
 </div>
 </div>
  <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
-  <div>✓ POS Integration</div>
+   <div>✓ Web POS</div>
+  <div>✓ Android POS</div>
   <div>✓ QR Ordering</div>
-  <div>✓ Waiter App</div>
+  <div>✓ Mobile App</div>
   <div>✓ Online Ordering</div>
-  <div>✓ Customer Mini App</div>
   <div>✓ Self-Service Kiosk</div>
+  <div>✓ Customer Mini App</div>
+  <div>✓ Real-Time Status</div>
+  <div>✓ Station Routing</div>
+  <div>✓ Kitchen Prioritization</div>
 </div>
 
   </div>
 </section>
 
-{/* WAITER APP */}
+{/* MOBILE APP */}
 <section className="py-24 sm:py-32 bg-white">
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="text-center mb-14">
       <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        Waiter App
+        Mobile App
       </div>
 
       <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-        Designed for modern service teams.
+        Manage operations from anywhere.
       </h2>
 
       <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-        Waiters can manage tables, create orders, send items directly
-        to the kitchen and process payments from a mobile device.
-      </p>
+  A unified mobile application for staff, managers and business owners.
+  Create orders, manage tables, monitor sales, access reports and control
+  operations directly from Android and iOS devices.
+</p>
     </div>
 
     <div className="relative">
@@ -313,11 +326,13 @@ export default function SoftwarePage() {
     </div>
     <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
       <div>✓ Mobile Ordering</div>
-      <div>✓ Table Management</div>
-      <div>✓ Split Bills</div>
-      <div>✓ Instant Payments</div>
-      <div>✓ Kitchen Sync</div>
-      <div>✓ Offline Ready</div>
+  <div>✓ Table Management</div>
+  <div>✓ Live Sales Monitoring</div>
+  <div>✓ Backoffice Access</div>
+  <div>✓ Manager Dashboard</div>
+  <div>✓ Owner Dashboard</div>
+  <div>✓ Android App</div>
+  <div>✓ iOS App</div>
     </div>
 
   </div>
@@ -405,7 +420,7 @@ export default function SoftwarePage() {
       transition
     "
   >
-    Try Live Ordering
+    View Live Store
   </a>
 
   <a
@@ -428,7 +443,7 @@ export default function SoftwarePage() {
     transition
   "
 >
-  Join Membership
+  Open Membership App
 </a>
 </div>
 
@@ -545,7 +560,7 @@ export default function SoftwarePage() {
   "
 >
   <img
-    src="https://hoxxes.app/images/dashboard-overview.png"
+    src="https://hoxxes.app/images/analytics-dashboard screen.png"
     alt="HOXXES KDS"
     className="w-full"
     loading="lazy"
@@ -581,7 +596,7 @@ export default function SoftwarePage() {
       {[
   "Restaurant POS",
   "QR Ordering",
-  "Waiter App",
+  "Mobile App",
   "Kitchen Display System",
   "Self-Service Kiosk",
   "Online Ordering",
@@ -832,6 +847,31 @@ export default function SoftwarePage() {
 
         </div>
       </section>
+      <div className="max-w-6xl mx-auto px-6 py-20">
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+    <div>
+      <div className="text-3xl font-semibold">10+</div>
+      <div className="mt-2 text-slate-500">Ordering Channels</div>
+    </div>
+
+    <div>
+      <div className="text-3xl font-semibold">1</div>
+      <div className="mt-2 text-slate-500">Unified Platform</div>
+    </div>
+
+    <div>
+      <div className="text-3xl font-semibold">Android</div>
+      <div className="mt-2 text-slate-500">Offline Ready</div>
+    </div>
+
+    <div>
+      <div className="text-3xl font-semibold">24/7</div>
+      <div className="mt-2 text-slate-500">Cloud Infrastructure</div>
+    </div>
+
+  </div>
+</div>
 
       {/* FINAL CTA */}
       <section className="py-24 sm:py-32 text-center px-6">
@@ -839,6 +879,7 @@ export default function SoftwarePage() {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
           Ready to modernize your operations?
         </h2>
+        
 
         <p className="mt-4 text-slate-500">
           Enterprise-grade infrastructure for scalable hospitality systems.
@@ -871,10 +912,12 @@ export default function SoftwarePage() {
           >
             View Pricing
           </Link>
+          
 
         </div>
 
       </section>
+      
 
     </div>
   );
