@@ -86,7 +86,7 @@ export default function HardwarePage() {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 text-center">
 
     <div className="p-6 sm:p-8 rounded-3xl border border-slate-200 bg-white">
-      <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight">
+      <div className="text-xl sm:text-2xl lg:text-3xl font-semibold leading-tight">
         32" Touchscreen
       </div>
 
@@ -96,7 +96,7 @@ export default function HardwarePage() {
     </div>
 
     <div className="p-6 sm:p-8 rounded-3xl border border-slate-200 bg-white">
-      <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight">
+      <div className="text-xl sm:text-2xl lg:text-3xl font-semibold leading-tight">
         Wall-Mounted
       </div>
 
@@ -106,7 +106,7 @@ export default function HardwarePage() {
     </div>
 
     <div className="p-6 sm:p-8 rounded-3xl border border-slate-200 bg-white">
-      <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight">
+      <div className="text-xl sm:text-2xl lg:text-3xl font-semibold leading-tight">
         Integrated Printer
       </div>
 

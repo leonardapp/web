@@ -54,7 +54,7 @@ export default function OffersPage() {
             LIMITED OFFER
           </div>
 
-          <h1 className="mt-6 max-w-4xl text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+          <h1 className="mt-6 max-w-4xl text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-[56px]">
   Get 2 Self-Service Kiosks
   <span className="block mt-2 text-emerald-600">
     + 12 Months FREE Software
@@ -204,6 +204,95 @@ export default function OffersPage() {
           </div>
         </div>
       </section>
+      {/* Holobox Offer */}
+<section className="mx-auto max-w-7xl px-6 pb-16">
+  <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl">
+    <div className="grid grid-cols-1 lg:grid-cols-2">
+
+      {/* Left */}
+      <div className="p-6 sm:p-8 lg:p-14">
+
+        <div className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-700">
+          50% OFF • LIMITED OFFER
+        </div>
+        <div className="mt-6 flex items-center gap-3">
+  <span className="text-2xl text-slate-400 line-through">
+    €10,000
+  </span>
+
+  <span className="text-4xl font-bold text-emerald-600">
+    €5,000
+  </span>
+</div>
+
+<p className="mt-2 text-sm font-medium text-emerald-600">
+  Save €5,000 • 50% OFF
+</p>
+
+        <h2 className="mt-8 text-3xl font-bold text-gray-900 sm:text-4xl">
+          Holobox 86" Transparent Display
+        </h2>
+
+        <p className="mt-4 text-base text-gray-600 sm:text-lg">
+          Premium transparent touchscreen display designed for product showcases,
+          exhibitions and immersive brand experiences.
+        </p>
+
+        <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
+          <p className="text-xs font-medium uppercase tracking-widest text-amber-700">
+            Unique in Kosovo
+          </p>
+
+          <h3 className="mt-2 text-xl font-bold text-amber-700 sm:text-2xl">
+            The Only Holobox Available in Kosovo
+          </h3>
+
+          <p className="mt-2 text-sm text-amber-700">
+            Demo unit in excellent condition with 1 year technical warranty.
+          </p>
+        </div>
+
+        <div className="mt-8 rounded-2xl border border-red-200 bg-red-50 p-6">
+          <p className="text-sm uppercase tracking-widest text-red-700">
+            Offer Ends June 30
+          </p>
+
+          <div className="mt-2 text-3xl font-bold text-gray-900">
+            June 30
+          </div>
+
+          <p className="mt-2 text-gray-700">
+            Former showroom price €10,000. Available now for only €5,000 until June 30.
+          </p>
+        </div>
+
+        <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <Button href="/contact-sales">
+            Request Offer
+          </Button>
+
+          <a
+            href="tel:+38348106060"
+            className="inline-flex items-center justify-center rounded-full border border-gray-300 px-6 py-3 font-medium text-gray-900 transition hover:bg-gray-50"
+          >
+            Call Sales
+          </a>
+        </div>
+
+      </div>
+
+      {/* Right */}
+      <div className="flex items-center justify-center bg-gradient-to-br from-slate-50 to-amber-50 p-6 sm:p-10">
+        <img
+          src="https://hoxxes.app/images/HoloBox.png"
+          alt="Holobox 86 Transparent Display"
+          className="w-full max-w-[500px] lg:max-w-[650px] object-contain"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* Contact */}
       <section className="border-t border-gray-100 bg-gray-50">

@@ -97,7 +97,7 @@ export default function HomePage() {
   hover:scale-[1.02]
 "
     >
-      🔥 Active Offer • 2 Kiosks + 12 Months Free Software →
+      🔥 Active Offers • Limited-Time Business Deals →
     </Link>
   </motion.div>
 )}
