@@ -48,38 +48,44 @@ export default function OffersPage() {
     <main className="min-h-screen overflow-x-hidden">
       <Header />
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-gray-100 pt-16">
-        <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-24">
-          <div className="inline-flex items-center rounded-full border border-green-200 bg-green-50 px-4 py-2 text-sm font-semibold tracking-wide text-green-700">
-            LIMITED OFFER
-          </div>
+<section className="relative overflow-hidden border-b border-gray-100 pt-16">
+  <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-24">
 
-          <h1 className="mt-6 max-w-4xl text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-[56px]">
-  Special Offers for
-  <span className="block mt-2 text-emerald-600">
-    Modern Business Operations
-  </span>
-</h1>
+    <div className="max-w-4xl mx-auto text-center">
 
-          <p className="mt-6 max-w-3xl text-base text-gray-600 sm:text-lg">
-  Explore limited-time offers on self-service kiosks, enterprise hardware
-  and innovative display solutions designed for modern business operations.
-</p>
+      <div className="inline-flex items-center rounded-full border border-green-200 bg-green-50 px-4 py-2 text-sm font-semibold tracking-wide text-green-700">
+        LIMITED OFFER
+      </div>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <Button href="/request-demo?type=proforma&offer=kiosk-bundle">
-  Request Proforma Invoice
-</Button>
+      <h1 className="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-[56px]">
+        Special Offers for
+        <span className="block mt-2 text-emerald-600">
+          Modern Business Operations
+        </span>
+      </h1>
 
-            <a
-              href="tel:+38348106060"
-              className="inline-flex items-center justify-center rounded-full border border-gray-300 px-6 py-3 font-medium text-gray-900 transition hover:bg-gray-50"
-            >
-              Call Sales
-            </a>
-          </div>
-        </div>
-      </section>
+      <p className="mt-6 text-base text-gray-600 sm:text-lg">
+        Explore limited-time offers on self-service kiosks, enterprise hardware
+        and innovative display solutions designed for modern business operations.
+      </p>
+
+      <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
+        <Button href="/request-demo?type=proforma&offer=kiosk-bundle">
+          Request Proforma Invoice
+        </Button>
+
+        <a
+          href="tel:+38348106060"
+          className="inline-flex items-center justify-center rounded-full border border-gray-300 px-6 py-3 font-medium text-gray-900 transition hover:bg-gray-50"
+        >
+          Call Sales
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       {/* Social Proof */}
       <section className="border-b border-gray-100">
