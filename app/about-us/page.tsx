@@ -10,7 +10,7 @@ export default function AboutPage() {
       <Header />
 
       {/* HERO */}
-      <section className="max-w-5xl mx-auto px-6 pt-24 sm:pt-28 lg:pt-32 pb-20 text-center">
+      <section className="max-w-5xl mx-auto px-6 pt-24 sm:pt-28 lg:pt-28 pb-16 text-center">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
@@ -34,23 +34,70 @@ export default function AboutPage() {
 </p>
 
 <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
+
+<Link
+    href="/software"
+    className="px-6 py-3 rounded-full bg-black text-white text-sm font-medium hover:bg-slate-800 transition"
+  >
+    Explore Platform
+  </Link>
+
   <Link
     href="/request-demo"
-    className="px-6 py-3 rounded-full bg-black text-white text-sm font-medium hover:bg-slate-800 transition"
+    className="px-6 py-3 rounded-full border border-slate-300 text-sm font-medium hover:bg-black hover:text-white transition"
   >
     Request Demo
   </Link>
 
   <Link
-    href="/software"
+    href="/hardware"
     className="px-6 py-3 rounded-full border border-slate-300 text-sm font-medium hover:bg-black hover:text-white transition"
   >
-    Explore Platform
+    Explore Hardware
   </Link>
 </div>
  
 </motion.div>
 </section>
+{/* OUR STORY */}
+
+<section className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
+
+  <div className="text-center">
+
+<div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+  Our Story
+</div>
+
+<h2 className="mt-4 max-w-4xl mx-auto text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
+  Building the future on proven foundations.
+</h2>
+
+  </div>
+
+  <div className="mt-10 max-w-3xl mx-auto text-left">
+
+<p className="text-base sm:text-lg text-slate-600 leading-8">
+  HOXXES was founded in 2024 with a mission to bring enterprise-grade
+  commerce technology to businesses across the region.
+</p>
+
+<p className="mt-5 text-base sm:text-lg text-slate-600 leading-8">
+  Built on proven technology foundations, HOXXES was localized,
+  expanded and transformed into a complete operating infrastructure
+  for restaurants, retail businesses and multi-location enterprises.
+</p>
+
+<p className="mt-5 text-base sm:text-lg text-slate-600 leading-8">
+  Today, HOXXES combines software, hardware and operational support
+  into one unified ecosystem powering real-time commerce at scale.
+</p>
+
+  </div>
+
+</section>
+
+
           {/* INDUSTRIES */}
 <section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
 
@@ -139,15 +186,15 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              title: "Reliability First",
+              title: "Reliability",
               desc: "Systems designed to operate even offline with zero downtime logic.",
             },
             {
-              title: "Enterprise Ready",
+              title: "Enterprise Architecture",
               desc: "Built for single stores, franchises, and global chains.",
             },
             {
-              title: "Real-Time Everything",
+              title: "Operational Intelligence",
               desc: "Every order, payment, and update syncs instantly across devices.",
             },
           ].map((v, i) => (
@@ -187,10 +234,10 @@ export default function AboutPage() {
   <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
 
   {[
-    "Ordering Ecosystem",
+    "Ordering & Commerce",
     "Payments Infrastructure",
-    "Operational Intelligence",
-    "Multi-Location Control",
+    "Operations & Analytics",
+    "Multi-Location Management",
   ].map((item) => (
     <div
       key={item}

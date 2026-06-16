@@ -9,7 +9,8 @@ import Header from "@/components/Header";
 /* PRICING LOGIC */
 function getPricePerLocation(locations: number) {
   if (locations <= 2) return 499;
-  if (locations <= 9) return 449;
+  if (locations <= 5) return 449;
+  if (locations <= 9) return 399;
   return 349;
 }
 
@@ -315,25 +316,30 @@ Core platform capabilities are included with every subscription.
 
       {/* TIER GRID */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-14">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-center">
 
-          <div className="border rounded-2xl p-5">
-            <div className="font-medium">1–2</div>
-            <div className="text-sm text-slate-500">€499</div>
-          </div>
+    <div className="border rounded-2xl p-5">
+      <div className="font-medium">1–2 Locations</div>
+      <div className="text-sm text-slate-500">€499 / year</div>
+    </div>
 
-          <div className="border rounded-2xl p-5">
-            <div className="font-medium">3–9</div>
-            <div className="text-sm text-slate-500">€449</div>
-          </div>
+    <div className="border rounded-2xl p-5">
+      <div className="font-medium">3–5 Locations</div>
+      <div className="text-sm text-slate-500">€449 / year</div>
+    </div>
 
-          <div className="border rounded-2xl p-5">
-            <div className="font-medium">10–20</div>
-            <div className="text-sm text-slate-500">€349</div>
-          </div>
+    <div className="border rounded-2xl p-5">
+      <div className="font-medium">6–9 Locations</div>
+      <div className="text-sm text-slate-500">€399 / year</div>
+    </div>
 
-        </div>
-      </section>
+    <div className="border rounded-2xl p-5">
+      <div className="font-medium">10+ Locations</div>
+      <div className="text-sm text-slate-500">€349 / year</div>
+    </div>
+
+  </div>
+</section>
       {/* OPTIONAL INFRASTRUCTURE */}
 <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
 
@@ -358,9 +364,11 @@ Core platform capabilities are included with every subscription.
 ].map((item, i, arr) => (
   <div
     key={item}
-    className={`rounded-2xl border border-slate-200 p-5 text-center bg-slate-50 ${
-      i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""
-    }`}
+    className={`rounded-2xl border border-slate-200 p-5 bg-slate-50
+min-h-[120px] flex flex-col items-center justify-center text-center
+${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
+`}
+    
   >
     <div className="text-sm font-medium">
       {item}
@@ -384,7 +392,7 @@ Core platform capabilities are included with every subscription.
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
           {/* SUPPORT */}
-          <div className="border rounded-3xl p-6 sm:p-8 bg-slate-50">
+          <div className="border rounded-3xl p-6 sm:p-8 bg-slate-50 text-center">
             <h3 className="text-lg font-semibold">
               Operational Assistance
             </h3>
@@ -406,7 +414,7 @@ Core platform capabilities are included with every subscription.
           </div>
 
           {/* TOKEN */}
-          <div className="border rounded-3xl p-6 sm:p-8">
+          <div className="border rounded-3xl p-6 sm:p-8 text-center">
             <h3 className="text-lg font-semibold">
               POS Payment Token
             </h3>
@@ -416,7 +424,7 @@ Core platform capabilities are included with every subscription.
             </p>
 
             <div className="mt-4 text-sm font-medium">
-              One-time activation per device
+              Payment terminal integration licensing
             </div>
 
             <Link

@@ -97,7 +97,7 @@ export default function HomePage() {
   hover:scale-[1.02]
 "
     >
-      🔥 Active Offers • Limited-Time Business Deals →
+      Active Offers • Limited-Time Business Deals →
     </Link>
   </motion.div>
 )}

@@ -252,11 +252,11 @@ export default function HardwarePage() {
           </Link>
 
           <Link
-            href="/pricing"
-            className="px-6 py-3 rounded-full border border-slate-300 text-slate-700 hover:bg-black hover:text-white hover:border-black transition text-sm font-medium"
-          >
-            View Pricing
-          </Link>
+  href="/contact-sales"
+  className="px-6 py-3 rounded-full border border-slate-300 text-slate-700 hover:bg-black hover:text-white hover:border-black transition text-sm font-medium"
+>
+  Request Hardware Quote
+</Link>
 
         </div>
 
