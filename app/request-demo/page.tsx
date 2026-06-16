@@ -3,7 +3,7 @@
 import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
-import { spacing, text, layout } from "@/app/design-system";
+
 /* MAGNETIC */
 function Magnetic({ children }: { children: React.ReactNode }) {
   return (
@@ -79,7 +79,9 @@ export default function RequestDemoPage() {
   <h1 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight">
     See HOXXES in action.
   </h1>
-
+<p className="mt-3 text-sm text-emerald-600 font-medium">
+  Discover how HOXXES fits your business.
+</p>
   <p className="mt-5 text-base text-slate-500 leading-relaxed">
   Tell us about your business and discover how HOXXES can streamline
   operations, ordering, payments and multi-location management.

@@ -59,39 +59,77 @@ export default function AboutPage() {
  
 </motion.div>
 </section>
+
 {/* OUR STORY */}
 
-<section className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
+<section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
 
+  {/* HEADER */}
   <div className="text-center">
+    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+      Our Story
+    </div>
 
-<div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-  Our Story
-</div>
-
-<h2 className="mt-4 max-w-4xl mx-auto text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
-  Building the future on proven foundations.
-</h2>
-
+    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+      Building the future on proven foundations.
+    </h2>
   </div>
 
-  <div className="mt-10 max-w-3xl mx-auto text-left">
+  {/* CONTENT */}
+  <div className="mt-16 grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
-<p className="text-base sm:text-lg text-slate-600 leading-8">
-  HOXXES was founded in 2024 with a mission to bring enterprise-grade
-  commerce technology to businesses across the region.
-</p>
+    {/* LEFT CARD */}
+    <div className="relative p-8 sm:p-10 rounded-[32px] border border-slate-200 bg-white shadow-sm overflow-hidden">
 
-<p className="mt-5 text-base sm:text-lg text-slate-600 leading-8">
-  Built on proven technology foundations, HOXXES was localized,
-  expanded and transformed into a complete operating infrastructure
-  for restaurants, retail businesses and multi-location enterprises.
-</p>
+      <div className="absolute inset-0 bg-emerald-100/30 blur-3xl opacity-60" />
 
-<p className="mt-5 text-base sm:text-lg text-slate-600 leading-8">
-  Today, HOXXES combines software, hardware and operational support
-  into one unified ecosystem powering real-time commerce at scale.
-</p>
+      <div className="relative text-center">
+        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600">
+  HOXXES Vision
+</div>
+
+        <h3 className="mt-4 text-3xl font-semibold leading-tight">
+          One ecosystem.
+          <br />
+          Simpler operations.
+        </h3>
+
+        <div className="mt-6 flex justify-center">
+  <div className="w-14 h-[2px] bg-emerald-500 rounded-full" />
+</div>
+
+        <p className="mt-6 text-slate-600 leading-8">
+          Our goal is to help businesses replace fragmented tools with
+          one connected operational infrastructure powering ordering,
+          payments, operations and analytics in real time.
+        </p>
+      </div>
+
+    </div>
+
+    {/* RIGHT TEXT */}
+    <div className="text-left">
+
+      <p className="text-lg text-slate-600 leading-9">
+        HOXXES was founded in 2024 with a mission to bring
+        enterprise-grade commerce technology to businesses across
+        the region.
+      </p>
+
+      <p className="mt-8 text-lg text-slate-600 leading-9">
+        Built on proven technology foundations, HOXXES was localized,
+        expanded and transformed into a complete operating
+        infrastructure for restaurants, retail businesses and
+        multi-location enterprises.
+      </p>
+
+      <p className="mt-8 text-lg text-slate-600 leading-9">
+        Today, HOXXES combines software, hardware and operational
+        support into one unified ecosystem powering real-time
+        commerce at scale.
+      </p>
+
+    </div>
 
   </div>
 
@@ -99,7 +137,7 @@ export default function AboutPage() {
 
 
           {/* INDUSTRIES */}
-<section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
+<section className="max-w-6xl mx-auto px-6 py-20 sm:py-24">
 
   <div className="text-center">
     <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
@@ -137,44 +175,7 @@ export default function AboutPage() {
   </div>
 
 </section>
-      {/* MISSION */}
-      <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
-        <motion.div
-  initial={{ opacity: 0, x: -20 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  viewport={{ once: true }}
->
-  <h2 className="text-2xl font-semibold text-center md:text-left">
-    Infrastructure Vision
-  </h2>
-
-  <p className="mt-4 text-slate-600 leading-relaxed">
-    We eliminate fragmented business systems and replace them with one
-    unified, real-time operating infrastructure connecting devices,
-    orders, payments and operations.
-  </p>
-</motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="p-10 rounded-3xl border border-slate-200 bg-white shadow-sm relative overflow-hidden"
-        >
-          <div className="absolute inset-0 bg-emerald-100/40 blur-3xl opacity-60" />
-
-<div className="relative text-center">
-  <div className="text-sm text-slate-500">
-    Core Philosophy
-  </div>
-
-  <div className="mt-3 text-xl font-semibold">
-    Simplicity. Reliability. Scale.
-  </div>
-</div>
-        </motion.div>
-      </section>
-
+      
       {/* VALUES */}
       <section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
        <div className="text-center mb-12">

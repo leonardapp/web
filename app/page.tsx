@@ -97,7 +97,7 @@ export default function HomePage() {
   hover:scale-[1.02]
 "
     >
-      Active Offers • Limited-Time Business Deals →
+      Active Offers • Limited-Time Business Deals
     </Link>
   </motion.div>
 )}
@@ -369,9 +369,10 @@ all connected through one platform.
 ].map((item, i, arr) => (
   <div
     key={item}
-    className={`rounded-2xl border border-slate-200 p-5 text-center bg-slate-50 ${
-      i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""
-    }`}
+    className={`rounded-2xl border border-slate-200 p-5 bg-slate-50
+min-h-[120px] flex flex-col items-center justify-center text-center
+${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
+`}
   >
     <div className="text-sm font-medium">
       {item}

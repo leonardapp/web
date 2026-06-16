@@ -1,10 +1,20 @@
 import { NextResponse } from "next/server";
-import { spacing, text, layout } from "@/app/design-system";
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const { name, email, company, phone, locations, message } = body;
+    const {
+  name,
+  company,
+  businessType,
+  email,
+  phone,
+  country,
+  locations,
+  interest,
+  message,
+} = body;
 
     if (!email || !name) {
       return NextResponse.json({ error: "Missing fields" }, { status: 400 });
@@ -26,14 +36,28 @@ export async function POST(req: Request) {
         reply_to: email,
         subject: "New Demo Request",
         html: `
-          <h2>New Request Demo</h2>
-          <p><b>Name:</b> ${name}</p>
-          <p><b>Company:</b> ${company || "-"}</p>
-          <p><b>Email:</b> ${email}</p>
-          <p><b>Phone:</b> ${phone || "-"}</p>
-          <p><b>Locations:</b> ${locations || "-"}</p>
-          <p><b>Message:</b> ${message || "-"}</p>
-        `,
+  <h2>New Demo Request</h2>
+
+  <p><b>Name:</b> ${name}</p>
+  <p><b>Company:</b> ${company || "-"}</p>
+  <p><b>Business Type:</b> ${businessType || "-"}</p>
+
+  <hr />
+
+  <p><b>Email:</b> ${email}</p>
+  <p><b>Phone:</b> ${phone || "-"}</p>
+  <p><b>Country:</b> ${country || "-"}</p>
+
+  <hr />
+
+  <p><b>Locations:</b> ${locations || "-"}</p>
+  <p><b>Interest:</b> ${interest || "-"}</p>
+
+  <hr />
+
+  <p><b>Message:</b></p>
+  <p>${message || "-"}</p>
+`,
       }),
     });
 
