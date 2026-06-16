@@ -55,16 +55,16 @@ export default function OffersPage() {
           </div>
 
           <h1 className="mt-6 max-w-4xl text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-[56px]">
-  Get 2 Self-Service Kiosks
+  Special Offers for
   <span className="block mt-2 text-emerald-600">
-    + 12 Months FREE Software
+    Modern Business Operations
   </span>
 </h1>
 
           <p className="mt-6 max-w-3xl text-base text-gray-600 sm:text-lg">
-            Modernize your restaurant operations with self-service ordering,
-            POS integration and kitchen automation.
-          </p>
+  Explore limited-time offers on self-service kiosks, enterprise hardware
+  and innovative display solutions designed for modern business operations.
+</p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button href="/request-demo?type=proforma&offer=kiosk-bundle">
@@ -298,12 +298,12 @@ export default function OffersPage() {
       <section className="border-t border-gray-100 bg-gray-50">
         <div className="mx-auto max-w-7xl px-6 py-16 text-center sm:py-20">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            Reserve Before June 30
-          </h2>
+  Reserve Before June 30
+</h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base text-gray-600 sm:text-lg">
-            Only a limited number of kiosk bundles are available.
-          </p>
+<p className="mx-auto mt-6 max-w-2xl text-base text-gray-600 sm:text-lg">
+  Limited-time offers available while stock and promotional inventory last.
+</p>
 
         
           <div className="mt-10">

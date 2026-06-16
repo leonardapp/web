@@ -230,6 +230,24 @@ export default function HardwarePage() {
         </div>
 
       </section>
+      <section className="max-w-5xl mx-auto px-6 pb-20">
+  <div className="rounded-3xl border border-slate-200 bg-white p-8 text-center">
+
+    <div className="text-xs uppercase tracking-[0.3em] text-emerald-600">
+      Warranty & Support
+    </div>
+
+    <h3 className="mt-4 text-2xl font-semibold">
+      Deployment guidance included.
+    </h3>
+
+    <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
+      All hardware deployments include onboarding guidance,
+      warranty coverage and access to technical support resources.
+    </p>
+
+  </div>
+</section>
 
       {/* CTA */}
       <section className="py-24 sm:py-32 bg-slate-50 border-y border-slate-200 text-center px-6">
