@@ -209,6 +209,71 @@ export default function SoftwarePage() {
 
   </div>
 </section>
+{/* SELF-SERVICE KIOSK */}
+<section className="py-24 sm:py-32 bg-transparent">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Self-Service Kiosk
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Let customers order independently.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Reduce queues, increase average order value and improve
+        operational efficiency with a fully integrated self-service
+        ordering experience connected directly to HOXXES POS,
+        Kitchen Display System and Analytics Cloud.
+      </p>
+    </div>
+
+    <div className="relative">
+
+      <img
+        src="https://hoxxes.app/images/kiosk-ordering.png"
+        alt="HOXXES Self Service Kiosk"
+        className="w-full rounded-[32px]"
+        loading="lazy"
+      />
+
+      <div
+        className="
+          absolute
+          -left-2 sm:-left-6 lg:-left-10
+          -bottom-2 sm:-bottom-6 lg:-bottom-10
+          w-[18%] sm:w-[22%] lg:w-[18%]
+          rounded-2xl
+          overflow-hidden
+          shadow-2xl
+          z-10
+        "
+      >
+        <img
+          src="https://hoxxes.app/images/kioska.png"
+          alt="HOXXES Kiosk Interface"
+          className="w-full"
+          loading="lazy"
+        />
+      </div>
+
+    </div>
+
+    <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
+      <div>✓ Self Ordering</div>
+      <div>✓ Integrated Payments</div>
+      <div>✓ Loyalty & Membership</div>
+      <div>✓ Upselling Engine</div>
+      <div>✓ Kitchen Sync</div>
+      <div>✓ Real-Time Reporting</div>
+      <div>✓ Multi-Language Support</div>
+      <div>✓ Customer Wallet</div>
+    </div>
+
+  </div>
+</section>
 <section className="py-24 sm:py-32 bg-transparent">
   <div className="max-w-7xl mx-auto px-6">
 
@@ -450,7 +515,103 @@ export default function SoftwarePage() {
   </div>
 </section>
 
-        {/* INCLUDED WITH EVERY DEPLOYMENT */}
+        
+   {/* ANALYTICS DASHBOARD */}
+<section className="py-24 sm:py-32 bg-transparent">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Analytics Cloud
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Complete operational visibility.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Monitor sales, inventory, workforce and multi-location performance
+        from a unified dashboard.
+      </p>
+    </div>
+
+    <div className="relative">
+
+      {/* REAL IMAGE */}
+<img
+  src="https://hoxxes.app/images/analytics-dashboard.png"
+  alt="HOXXES Analytics"
+  className="w-full rounded-[32px]"
+  loading="lazy"
+/>
+{/* FLOATING SCREENSHOT */}
+<div
+  className="
+    absolute
+    -left-2 sm:-left-6 lg:-left-10
+    -bottom-2 sm:-bottom-6 lg:-bottom-10
+    w-[55%] sm:w-[48%] lg:w-[42%]
+    rounded-[24px]
+    overflow-hidden
+    shadow-[0_25px_60px_rgba(0,0,0,0.25)]
+    z-10
+  "
+>
+  <img
+    src="https://hoxxes.app/images/analytics-dashboard-screen.png"
+    alt="HOXXES Analytics Dashboard"
+    className="w-full"
+    loading="lazy"
+  />
+  
+</div>
+
+
+    </div>
+<div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
+  <div>✓ Sales Analytics</div>
+  <div>✓ Inventory Monitoring</div>
+  <div>✓ Workforce Performance</div>
+  <div>✓ Multi-Location Insights</div>
+  <div>✓ Real-Time Dashboards</div>
+  <div>✓ Financial Reporting</div>
+  <div>✓ KPI Tracking</div>
+  <div>✓ Executive Visibility</div>
+</div>
+  </div>
+</section> 
+       
+{/* HQ CONTROL CENTER */}
+<section className="py-24 sm:py-32 bg-slate-50">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        HQ Control Center
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Manage every location from one place.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Centralized reporting, inventory management, workforce oversight
+        and operational control across all locations.
+      </p>
+    </div>
+
+    <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden">
+      <img
+        src="https://hoxxes.app/images/dashboard-overview.png"
+        alt="HOXXES HQ Control Center"
+        className="w-full rounded-2xl"
+        loading="lazy"
+      />
+    </div>
+
+  </div>
+</section>
+{/* INCLUDED WITH EVERY DEPLOYMENT */}
 <section className="pt-20 pb-24 sm:pt-12 sm:pb-32 bg-white">
   <div className="max-w-7xl mx-auto px-6">
 
@@ -518,360 +679,7 @@ export default function SoftwarePage() {
 
   </div>
 </section>
-   {/* ANALYTICS DASHBOARD */}
-<section className="py-24 sm:py-32 bg-transparent">
-  <div className="max-w-7xl mx-auto px-6">
-
-    <div className="text-center mb-14">
-      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        Analytics Cloud
-      </div>
-
-      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-        Complete operational visibility.
-      </h2>
-
-      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-        Monitor sales, inventory, workforce and multi-location performance
-        from a unified dashboard.
-      </p>
-    </div>
-
-    <div className="relative">
-
-      {/* REAL IMAGE */}
-<img
-  src="https://hoxxes.app/images/analytics-dashboard.png"
-  alt="HOXXES Analytics"
-  className="w-full rounded-[32px]"
-  loading="lazy"
-/>
-{/* FLOATING SCREENSHOT */}
-<div
-  className="
-    absolute
-    -left-2 sm:-left-6 lg:-left-10
-    -bottom-2 sm:-bottom-6 lg:-bottom-10
-    w-[55%] sm:w-[48%] lg:w-[42%]
-    rounded-[24px]
-    overflow-hidden
-    shadow-[0_25px_60px_rgba(0,0,0,0.25)]
-    z-10
-  "
->
-  <img
-    src="https://hoxxes.app/images/analytics-dashboard screen.png"
-    alt="HOXXES KDS"
-    className="w-full"
-    loading="lazy"
-  />
-</div>
-
-
-    </div>
-
-  </div>
-</section>
-{/* ORDERING CHANNELS */}
-<section className="py-24 sm:py-32 bg-white">
-  <div className="max-w-6xl mx-auto px-6">
-
-    <div className="text-center">
-      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        Ordering Channels
-      </div>
-
-      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-        Reach customers everywhere.
-      </h2>
-
-      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-        Every channel connected to the same infrastructure,
-        inventory, pricing and reporting system.
-      </p>
-    </div>
-
-    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-14">
-
-      {[
-  "Restaurant POS",
-  "QR Ordering",
-  "Mobile App",
-  "Kitchen Display System",
-  "Self-Service Kiosk",
-  "Online Ordering",
-  "Delivery & Pickup",
-  "Customer Wallet"
-].map((item) => (
-  <div
-    key={item}
-    className="h-24 flex items-center justify-center text-center
-    rounded-2xl border border-slate-200 bg-white
-    hover:shadow-lg transition"
-  >
-    <div className="font-medium">
-      {item}
-    </div>
-  </div>
-))}
-
-    </div>
-
-  </div>
-</section>     
     
-      {/* INFRASTRUCTURE TYPES */}
-<section className="py-24 sm:py-32">
-  <div className="max-w-7xl mx-auto px-6">
-
-    <div className="text-center">
-      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        Choose Your Infrastructure
-      </div>
-
-      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-tight">
-        Built for every stage of growth.
-      </h2>
-
-      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-        Whether you operate a single restaurant, a retail store,
-        or a multi-location enterprise, HOXXES adapts to your business model.
-      </p>
-    </div>
-
-    <div className="grid lg:grid-cols-3 gap-6 mt-16">
-
-      {/* RESTAURANTS */}
-      <div className="p-8 rounded-3xl border border-slate-200 bg-white hover:shadow-xl transition">
-        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600">
-          Restaurants
-        </div>
-
-        <h3 className="mt-4 text-2xl font-semibold">
-          Hospitality Operations
-        </h3>
-
-        <p className="mt-4 text-slate-500">
-          Digital ordering, kiosks, kitchen operations and guest experiences.
-        </p>
-
-        <ul className="mt-6 space-y-2 text-sm text-slate-600">
-          <li>✓ QR Ordering</li>
-          <li>✓ Kiosk Self-Service</li>
-          <li>✓ Kitchen Display System</li>
-          <li>✓ Delivery & Pickup</li>
-          <li>✓ Loyalty & Memberships</li>
-        </ul>
-      </div>
-
-      {/* RETAIL */}
-      <div className="p-8 rounded-3xl border border-slate-200 bg-white hover:shadow-xl transition">
-        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600">
-          Retail
-        </div>
-
-        <h3 className="mt-4 text-2xl font-semibold">
-          Store Operations
-        </h3>
-
-        <p className="mt-4 text-slate-500">
-          Modern retail infrastructure with inventory and workforce control.
-        </p>
-
-        <ul className="mt-6 space-y-2 text-sm text-slate-600">
-          <li>✓ POS Infrastructure</li>
-          <li>✓ Inventory Management</li>
-          <li>✓ Workforce Control</li>
-          <li>✓ Fiscalization</li>
-          <li>✓ Reporting & Analytics</li>
-        </ul>
-      </div>
-
-      {/* ENTERPRISE */}
-      <div className="p-8 rounded-3xl border border-slate-200 bg-white hover:shadow-xl transition">
-        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600">
-          Enterprise
-        </div>
-
-        <h3 className="mt-4 text-2xl font-semibold">
-          Multi-Location Infrastructure
-        </h3>
-
-        <p className="mt-4 text-slate-500">
-          Centralized control across restaurants, stores and operational teams.
-        </p>
-
-        <ul className="mt-6 space-y-2 text-sm text-slate-600">
-          <li>✓ HQ Control Center</li>
-          <li>✓ Stock Transfers</li>
-          <li>✓ Central Reporting</li>
-          <li>✓ User Permissions</li>
-          <li>✓ Real-Time Monitoring</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-      
-{/* ORDER CENTER */}
-<section className="py-24 sm:py-32 bg-slate-50">
-  <div className="max-w-7xl mx-auto px-6">
-
-    <div className="text-center mb-14">
-      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        Order Management
-      </div>
-
-      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-        Fast and intuitive order processing.
-      </h2>
-
-      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-        Manage dine-in, takeaway and delivery orders from a single interface
-        optimized for speed and operational efficiency.
-      </p>
-    </div>
-
-    <div className="relative rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden">
-  <img
-    src="https://hoxxes.app/images/order-center.png"
-    alt="HOXXES Order Center"
-    className="w-full rounded-2xl"
-    loading="lazy"
-  />
-</div>
-
-  </div>
-</section>
-{/* ENTERPRISE INFRASTRUCTURE */}
-<section className="py-24 sm:py-32 bg-transparent">
-  <div className="max-w-6xl mx-auto px-6">
-
-    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600 text-center">
-  Enterprise Infrastructure
-</div>
-
-<h2 className="mt-4 text-3xl sm:text-4xl font-semibold text-center">
-  Multi-location operations.
-</h2>
-
-<p className="mt-5 text-slate-500 max-w-3xl text-center mx-auto">
-  Centralized control across restaurants, stores and operational teams.
-</p>
-
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
-
-      {[
-  "Head Office Management",
-  "Stock Transfers",
-  "Central Reporting",
-  "Support Ticket System",
-  "Documentation Center",
-  "User Permissions",
-].map((item) => (
-  <div
-    key={item}
-    className="h-24 flex items-center justify-center text-center
-    rounded-2xl border border-slate-200 bg-white
-    hover:shadow-lg transition"
-  >
-    <div className="font-medium">
-      {item}
-    </div>
-  </div>
-))}
-
-    </div>
-
-  </div>
-</section>   
-{/* HQ CONTROL CENTER */}
-<section className="py-24 sm:py-32 bg-slate-50">
-  <div className="max-w-7xl mx-auto px-6">
-
-    <div className="text-center mb-14">
-      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        HQ Control Center
-      </div>
-
-      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-        Manage every location from one place.
-      </h2>
-
-      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-        Centralized reporting, inventory management, workforce oversight
-        and operational control across all locations.
-      </p>
-    </div>
-
-    <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden">
-      <img
-        src="https://hoxxes.app/images/dashboard-overview.png"
-        alt="HOXXES HQ Control Center"
-        className="w-full rounded-2xl"
-        loading="lazy"
-      />
-    </div>
-
-  </div>
-</section>
-    
-      {/* ENTERPRISE BLOCK */}
-<section className="py-24 sm:py-32 bg-black text-white">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
-            Built for enterprise operations.
-          </h2>
-
-          <p className="mt-4 text-slate-300 text-sm sm:text-base">
-            One platform connecting software, hardware and operations.
-          </p>
-
-          <div className="mt-8">
-            <Link
-              href="/hardware"
-              className="inline-flex items-center text-sm font-medium text-white hover:text-emerald-400 transition group"
-            >
-              <span className="border-b border-transparent group-hover:border-emerald-400 transition">
-                View compatible hardware
-              </span>
-
-              <span className="ml-2 group-hover:translate-x-1 transition-transform">
-                →
-              </span>
-            </Link>
-          </div>
-
-        </div>
-      </section>
-      <div className="max-w-6xl mx-auto px-6 py-20">
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-
-    <div>
-      <div className="text-3xl font-semibold">10+</div>
-      <div className="mt-2 text-slate-500">Ordering Channels</div>
-    </div>
-
-    <div>
-      <div className="text-3xl font-semibold">1</div>
-      <div className="mt-2 text-slate-500">Unified Platform</div>
-    </div>
-
-    <div>
-      <div className="text-3xl font-semibold">Android</div>
-      <div className="mt-2 text-slate-500">Offline Ready</div>
-    </div>
-
-    <div>
-      <div className="text-3xl font-semibold">24/7</div>
-      <div className="mt-2 text-slate-500">Cloud Infrastructure</div>
-    </div>
-
-  </div>
-</div>
 
       {/* FINAL CTA */}
       <section className="py-24 sm:py-32 text-center px-6">
