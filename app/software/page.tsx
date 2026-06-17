@@ -119,6 +119,31 @@ export default function SoftwarePage() {
 </div>
 
   </div>
+  <p className="mt-10 max-w-3xl mx-auto text-center text-sm text-slate-500 leading-relaxed">
+  Pair HOXXES POS with Android POS terminals and customer-facing displays.
+  Operate fully offline while showcasing promotions, loyalty campaigns,
+  seasonal offers and branded content directly on customer screens.
+</p>
+
+<div className="mt-8 flex justify-center">
+  <Link
+    href="/hardware"
+    className="
+      px-6 py-3
+      rounded-full
+      border border-slate-300
+      text-slate-700
+      text-sm
+      font-medium
+      hover:bg-black
+      hover:text-white
+      hover:border-black
+      transition
+    "
+  >
+    Explore Compatible Hardware
+  </Link>
+</div>
 </section>
 
 {/* DIGITAL MENU */}
@@ -263,7 +288,7 @@ export default function SoftwarePage() {
 
     <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
       <div>✓ Self Ordering</div>
-      <div>✓ Integrated Payments</div>
+      <div>✓ Flexible Payment Options</div>
       <div>✓ Loyalty & Membership</div>
       <div>✓ Upselling Engine</div>
       <div>✓ Kitchen Sync</div>
@@ -273,6 +298,33 @@ export default function SoftwarePage() {
     </div>
 
   </div>
+  <p className="mt-10 max-w-3xl mx-auto text-center text-sm text-slate-500 leading-relaxed">
+  Designed for high-volume environments, HOXXES Self-Service Kiosk
+  helps businesses reduce queues, improve operational efficiency
+  and increase average order value through a fully integrated
+  ordering experience connected to POS, Kitchen Display System
+  and customer engagement tools.
+</p>
+
+<div className="mt-8 flex justify-center">
+  <Link
+    href="/hardware"
+    className="
+      px-6 py-3
+      rounded-full
+      border border-slate-300
+      text-slate-700
+      text-sm
+      font-medium
+      hover:bg-black
+      hover:text-white
+      hover:border-black
+      transition
+    "
+  >
+    Explore Compatible Hardware
+  </Link>
+</div>
 </section>
 <section className="py-24 sm:py-32 bg-transparent">
   <div className="max-w-7xl mx-auto px-6">

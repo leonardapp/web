@@ -15,15 +15,16 @@ type Message = {
 };
 
 const starterQuestions = [
-  "Book a Demo",
-  "Enterprise Pricing",
-  "Hardware Recommendations",
+  "Request a Demo",
+  "View Pricing",
+  "What hardware do I need?",
 ];
 
 export default function HoxxesAIWidget() {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showHint, setShowHint] = useState(false);
 
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -77,6 +78,28 @@ export default function HoxxesAIWidget() {
       behavior: "smooth",
     });
   }, [messages, loading]);
+  useEffect(() => {
+  const seen = localStorage.getItem(
+    "hoxxes-translation-hint"
+  );
+
+  if (!seen) {
+    const timer = setTimeout(() => {
+      setShowHint(true);
+
+      setTimeout(() => {
+        setShowHint(false);
+      }, 8000);
+
+      localStorage.setItem(
+        "hoxxes-translation-hint",
+        "true"
+      );
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }
+}, []);
 
   async function sendMessage(customMessage?: string) {
     const text = customMessage || input;
@@ -132,6 +155,39 @@ if (!response.ok) {
 
   return (
     <>
+    <AnimatePresence>
+  {showHint && !open && (
+    <motion.div
+      onClick={() => setShowHint(false)}
+      initial={{ opacity: 0, y: 20, scale: 0.95 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, y: 20, scale: 0.95 }}
+      className="
+  fixed
+  bottom-32
+  right-4
+  md:right-6
+  z-[9998]
+  max-w-[320px]
+  rounded-3xl
+  border
+  border-slate-200
+  bg-white
+  p-4
+  shadow-2xl
+  cursor-pointer
+"
+    >
+      <div className="text-sm font-semibold text-slate-900">
+  🌐 Language Support
+</div>
+
+<p className="mt-2 text-sm text-slate-500 leading-relaxed">
+  Viewing HOXXES from another country? Most modern browsers can automatically translate this website into your preferred language.
+</p>
+    </motion.div>
+  )}
+</AnimatePresence>
       {/* FLOATING AI BUTTON */}
       <AnimatePresence>
         {!open && (

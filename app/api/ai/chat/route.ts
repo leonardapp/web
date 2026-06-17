@@ -148,7 +148,7 @@ SUPPORT
 
 For bugs, technical issues, setup assistance, QR problems, account problems or human support:
 ACTIONS:
-- Book a Demo → https://hoxxes.com/request-demo
+- Request a Demo → https://hoxxes.com/request-demo
 ACTIONS:
 - Support → https://hoxxes.com/support
 
