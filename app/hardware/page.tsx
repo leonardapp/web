@@ -8,8 +8,8 @@ import Header from "@/components/Header";
 const hardware = [
   {
     title: "Kiosk Slim – Self Service",
-    price: "€1,185",
-    preorderPrice: "€1,016",
+    price: "€1,185 + VAT",
+    preorderPrice: "€1,016 + VAT",
     preorderEnabled: true,
     image: "https://hoxxes.app/images/Kiosk.png",
     description:
@@ -19,8 +19,8 @@ const hardware = [
 
   {
     title: "Android POS Terminal",
-    price: "€677",
-    preorderPrice: "€593",
+    price: "€677 + VAT",
+    preorderPrice: "€593 + VAT",
     preorderEnabled: true,
     image: "https://hoxxes.app/images/POS.png",
     description:
@@ -63,7 +63,7 @@ export default function HardwarePage() {
     Fully integrated devices designed to run inside the Hoxxes SaaS ecosystem —
     from ordering to payments to customer experience.
   </p>
-
+ 
   <div className="relative mt-16">
   <img
     src="https://hoxxes.app/images/kiosk-ordering.png"
@@ -120,11 +120,6 @@ export default function HardwarePage() {
   
 
 </section>
-<div className="text-center mt-4 mb-12">
-  <span className="text-xs text-slate-400">
-    All hardware prices shown exclude VAT and shipping.
-  </span>
-</div>
 
       {/* HARDWARE GRID */}
       <section className="max-w-7xl mx-auto px-6 pb-24 sm:pb-32">
@@ -215,13 +210,26 @@ export default function HardwarePage() {
 
                 {/* BUTTON */}
                 <Link
-                  href="/contact-sales"
-                  className="mt-5 w-full px-5 py-3 rounded-xl bg-black text-white text-sm font-medium text-center hover:bg-slate-800 transition"
-                >
-                  {item.preorderEnabled && preorderActive
-                    ? "Preorder"
-                    : "Request Offer"}
-                </Link>
+  href="/contact-sales"
+  className="
+    mt-5
+    w-full
+    px-6
+    py-3
+    rounded-full
+    bg-black
+    text-white
+    text-sm
+    font-medium
+    text-center
+    hover:bg-slate-800
+    transition
+  "
+>
+  {item.preorderEnabled && preorderActive
+    ? "Preorder"
+    : "Request Offer"}
+</Link>
 
               </div>
             </motion.div>

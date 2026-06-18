@@ -2,10 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
-import Logo from "@/components/Logo";
 import Header from "@/components/Header";
-import { spacing, text, layout } from "@/app/design-system";
 const DATA: Record<string, string[]> = {
   "Products": [
     "Menaxhimi i Kategorive.pdf",
@@ -135,9 +132,10 @@ export default function DocsPage() {
           Documentation Center
         </h1>
 
-        <p className="mt-4 text-slate-500">
-          Everything you need to operate Hoxxes systems.
-        </p>
+        <p className="mt-6 max-w-2xl mx-auto text-slate-500">
+  Access operational guides, product documentation, configuration manuals
+  and best practices across the entire HOXXES ecosystem.
+</p>
 
         <div className="mt-10">
           <input

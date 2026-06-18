@@ -119,23 +119,24 @@ export default function SoftwarePage() {
 </div>
 
   </div>
- <p className="mt-10 text-sm text-slate-500 text-center">
+ <p className="mt-10 max-w-md mx-auto text-sm text-slate-500 text-center px-4">
   Extend your POS with Android terminals and customer display solutions.
 </p>
 
-<div className="mt-8 flex justify-center">
+<div className="mt-8 flex justify-center px-4">
   <Link
     href="/hardware"
     className="
+      w-full sm:w-auto
+      max-w-md
       px-6 py-3
       rounded-full
-      border border-slate-300
-      text-slate-700
+      bg-black
+      text-white
       text-sm
       font-medium
-      hover:bg-black
-      hover:text-white
-      hover:border-black
+      text-center
+      hover:bg-slate-800
       transition
     "
   >
@@ -171,7 +172,6 @@ export default function SoftwarePage() {
         className="w-full rounded-[32px]"
         loading="lazy"
       />
-
 
 
       {/* FLOATING MOBILE SCREENSHOT */}
@@ -224,7 +224,7 @@ export default function SoftwarePage() {
     </span>
   </div>
 </div>
-    <p className="mt-10 text-sm text-slate-500 text-center">
+    <p className="mt-10 max-w-md mx-auto text-sm text-slate-500 text-center px-4">
   Experience a live digital ordering journey from scan to checkout.
 </p>
     <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
@@ -319,23 +319,24 @@ export default function SoftwarePage() {
     </div>
 
   </div>
- <p className="mt-10 text-sm text-slate-500 text-center">
+ <p className="mt-10 max-w-md mx-auto text-sm text-slate-500 text-center px-4">
    Discover the hardware behind the HOXXES self-service ecosystem.
 </p>
 
-<div className="mt-8 flex justify-center">
+<div className="mt-8 flex justify-center px-4">
   <Link
     href="/hardware"
     className="
+      w-full sm:w-auto
+      max-w-md
       px-6 py-3
       rounded-full
-      border border-slate-300
-      text-slate-700
+      bg-black
+      text-white
       text-sm
       font-medium
-      hover:bg-black
-      hover:text-white
-      hover:border-black
+      text-center
+      hover:bg-slate-800
       transition
     "
   >
@@ -504,7 +505,7 @@ export default function SoftwarePage() {
       <div
   className="
     absolute
-    -left-2 sm:-right-6 lg:-right-10
+    -left-2 sm:-left-6 lg:-left-10
     -bottom-2 sm:-bottom-6 lg:-bottom-10
     w-[18%] sm:w-[22%] lg:w-[18%]
     rounded-2xl
@@ -775,6 +776,14 @@ export default function SoftwarePage() {
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
+          
+           <Link
+            href="/request-demo"
+            className="px-6 py-3 rounded-full bg-black text-white 
+            hover:bg-slate-800 transition text-sm font-medium"
+          >
+            Request Demo
+          </Link>
 
           <Link
             href="/hardware"
@@ -783,14 +792,6 @@ export default function SoftwarePage() {
             transition text-sm font-medium"
           >
             View Hardware
-          </Link>
-
-          <Link
-            href="/request-demo"
-            className="px-6 py-3 rounded-full bg-black text-white 
-            hover:bg-slate-800 transition text-sm font-medium"
-          >
-            Request Demo
           </Link>
 
           <Link

@@ -87,16 +87,7 @@ export default function OffersPage() {
   </div>
 </section>
 
-      {/* Social Proof */}
-      <section className="border-b border-gray-100">
-        <div className="mx-auto max-w-7xl px-6 py-8">
-          <p className="text-center text-sm font-medium uppercase tracking-wide text-gray-500">
-            Trusted by restaurants and retail businesses across Kosovo
-          </p>
-        </div>
-      </section>
-
-      {/* Main Offer */}
+        {/* Main Offer */}
       <section className="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:py-20">
         <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -107,8 +98,12 @@ export default function OffersPage() {
               </div>
 
               <h2 className="mt-8 text-3xl font-bold text-gray-900 sm:text-4xl">
-                €2,500 incl. VAT
-              </h2>
+  2 Self-Service Kiosks
+</h2>
+
+<div className="mt-4 text-4xl font-bold text-emerald-600">
+  €2,118 + VAT
+</div>
 
               <p className="mt-4 text-base text-gray-600 sm:text-lg">
                 Receive 2 wall-mounted self-service kiosks and enjoy
@@ -207,6 +202,7 @@ export default function OffersPage() {
     className="w-full max-w-[500px] lg:max-w-[650px] object-contain"
   />
 </div>
+
           </div>
         </div>
       </section>
@@ -223,11 +219,11 @@ export default function OffersPage() {
         </div>
         <div className="mt-6 flex items-center gap-3">
   <span className="text-2xl text-slate-400 line-through">
-    €10,000
+    €10,000 + VAT
   </span>
 
   <span className="text-4xl font-bold text-emerald-600">
-    €5,000
+    €5,000 + VAT
   </span>
 </div>
 
@@ -268,8 +264,8 @@ export default function OffersPage() {
           </div>
 
           <p className="mt-2 text-gray-700">
-            Former showroom price €10,000. Available now for only €5,000 until June 30.
-          </p>
+  Former showroom price €10,000 + VAT. Available now for only €5,000 + VAT until June 30.
+</p>
         </div>
 
         <div className="mt-8 flex flex-col gap-4 sm:flex-row">
