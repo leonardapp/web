@@ -119,10 +119,8 @@ export default function SoftwarePage() {
 </div>
 
   </div>
- <p className="mt-10 max-w-lg mx-auto px-6 text-center text-sm text-slate-500 leading-relaxed">
-  Pair HOXXES POS with Android POS terminals and customer-facing displays.
-  Operate fully offline while showcasing promotions, loyalty campaigns,
-  seasonal offers and branded content directly on customer screens.
+ <p className="mt-10 text-sm text-slate-500 text-center">
+  Extend your POS with Android terminals and customer display solutions.
 </p>
 
 <div className="mt-8 flex justify-center">
@@ -298,12 +296,8 @@ export default function SoftwarePage() {
     </div>
 
   </div>
-  <p className="mt-10 max-w-lg mx-auto px-6 text-center text-sm text-slate-500 leading-relaxed">
-  Designed for high-volume environments, HOXXES Self-Service Kiosk
-  helps businesses reduce queues, improve operational efficiency
-  and increase average order value through a fully integrated
-  ordering experience connected to POS, Kitchen Display System
-  and customer engagement tools.
+ <p className="mt-10 text-sm text-slate-500 text-center">
+   Discover the hardware behind the HOXXES self-service ecosystem.
 </p>
 
 <div className="mt-8 flex justify-center">
