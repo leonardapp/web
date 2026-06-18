@@ -109,13 +109,13 @@ export default function SoftwarePage() {
   <div>✓ Web POS</div>
   <div>✓ Android POS</div>
   <div>✓ Offline Ready</div>
-  <div>✓ Table Management</div>
-  <div>✓ Takeaway Orders</div>
-  <div>✓ Delivery Orders</div>
-  <div>✓ Integrated Payments</div>
-  <div>✓ Customer Profiles</div>
-  <div>✓ Real-Time Reporting</div>
-  <div>✓ Multi-Location Ready</div>
+  <div>✓ Tables</div>
+  <div>✓ Takeaway</div>
+  <div>✓ Delivery</div>
+  <div>✓ Payments</div>
+  <div>✓ Customers</div>
+  <div>✓ Reporting</div>
+  <div>✓ Multi-Location</div>
 </div>
 
   </div>
@@ -150,16 +150,15 @@ export default function SoftwarePage() {
 
     <div className="text-center mb-14">
       <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        Digital Menu
+        QR Ordering Infrastructure
       </div>
 
       <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-        QR ordering made simple.
+        Every table becomes a digital ordering point.
       </h2>
 
       <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-  Customers scan a QR code, browse the menu, place orders, call a waiter,
-  track their bill in real time and enjoy a fully contactless dining experience.
+  Customers scan a QR code, browse the menu, place orders, call a waiter and track their bill in real time. Every table automatically becomes a digital ordering point with built-in QR management, analytics and real-time menu synchronization.
 </p>
     </div>
 
@@ -172,6 +171,8 @@ export default function SoftwarePage() {
         className="w-full rounded-[32px]"
         loading="lazy"
       />
+
+
 
       {/* FLOATING MOBILE SCREENSHOT */}
 <div
@@ -197,14 +198,34 @@ export default function SoftwarePage() {
 
     <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
       <div>✓ QR Ordering</div>
-      <div>✓ Contactless Experience</div>
-      <div>✓ Real-Time Menu Updates</div>
-      <div>✓ Multi-Language Support</div>
-      <div>✓ Call Waiter</div>
-      <div>✓ Live Bill Tracking</div>
+<div>✓ QR Generation</div>
+<div>✓ Temporary QR</div>
+<div>✓ Analytics</div>
+<div>✓ Contactless</div>
+<div>✓ Live Menus</div>
+<div>✓ Waiter Call</div>
+<div>✓ Bill Tracking</div>
+<div>✓ QR Printing</div>
+<div>✓ Multi-Language</div>      
     </div>
+    <div className="mt-10 text-center">
+  <div className="inline-flex flex-wrap justify-center gap-3 text-sm">
+    <span className="px-4 py-2 rounded-full bg-slate-100">
+      Unlimited Tables
+    </span>
+    <span className="px-4 py-2 rounded-full bg-slate-100">
+      Unlimited QR Codes
+    </span>
+    <span className="px-4 py-2 rounded-full bg-slate-100">
+      Dynamic Floor Management
+    </span>
+    <span className="px-4 py-2 rounded-full bg-slate-100">
+      Real-Time Analytics
+    </span>
+  </div>
+</div>
     <p className="mt-10 text-sm text-slate-500 text-center">
-  See how customers browse, order and interact with your restaurant.
+  Experience a live digital ordering journey from scan to checkout.
 </p>
     <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
   <a
@@ -232,6 +253,8 @@ export default function SoftwarePage() {
 
   </div>
 </section>
+
+
 {/* SELF-SERVICE KIOSK */}
 <section className="py-24 sm:py-32 bg-transparent">
   <div className="max-w-7xl mx-auto px-6">
@@ -285,14 +308,14 @@ export default function SoftwarePage() {
     </div>
 
     <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
-      <div>✓ Self Ordering</div>
-      <div>✓ Flexible Payment Options</div>
-      <div>✓ Loyalty & Membership</div>
-      <div>✓ Upselling Engine</div>
-      <div>✓ Kitchen Sync</div>
-      <div>✓ Real-Time Reporting</div>
-      <div>✓ Multi-Language Support</div>
-      <div>✓ Customer Wallet</div>
+       <div>✓ Self Ordering</div>
+  <div>✓ Payments</div>
+  <div>✓ Loyalty</div>
+  <div>✓ Upselling</div>
+  <div>✓ Kitchen Sync</div>
+  <div>✓ Reporting</div>
+  <div>✓ Languages</div>
+  <div>✓ Wallet</div>
     </div>
 
   </div>
@@ -368,16 +391,14 @@ export default function SoftwarePage() {
 </div>
 </div>
  <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
-   <div>✓ Web POS</div>
-  <div>✓ Android POS</div>
-  <div>✓ QR Ordering</div>
-  <div>✓ Mobile App</div>
-  <div>✓ Online Ordering</div>
-  <div>✓ Self-Service Kiosk</div>
-  <div>✓ Customer Mini App</div>
-  <div>✓ Real-Time Status</div>
-  <div>✓ Station Routing</div>
-  <div>✓ Kitchen Prioritization</div>
+   <div>✓ Live Orders</div>
+  <div>✓ Routing</div>
+  <div>✓ Prioritization</div>
+  <div>✓ Station View</div>
+  <div>✓ Order Status</div>
+  <div>✓ Kitchen Analytics</div>
+  <div>✓ Real-Time Sync</div>
+  <div>✓ Multi-Station</div>
 </div>
 
   </div>
@@ -436,14 +457,14 @@ export default function SoftwarePage() {
 
     </div>
     <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
-      <div>✓ Mobile Ordering</div>
-  <div>✓ Table Management</div>
-  <div>✓ Live Sales Monitoring</div>
-  <div>✓ Backoffice Access</div>
-  <div>✓ Manager Dashboard</div>
-  <div>✓ Owner Dashboard</div>
-  <div>✓ Android App</div>
-  <div>✓ iOS App</div>
+      <div>✓ Ordering</div>
+  <div>✓ Tables</div>
+  <div>✓ Live Sales</div>
+  <div>✓ Backoffice</div>
+  <div>✓ Manager View</div>
+  <div>✓ Owner View</div>
+  <div>✓ Android</div>
+  <div>✓ iOS</div>
     </div>
 
   </div>
@@ -503,14 +524,14 @@ export default function SoftwarePage() {
     </div>
 
     <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
-      <div>✓ Membership Program</div>
-      <div>✓ Loyalty Points</div>
-      <div>✓ Wallet & Vouchers</div>
-      <div>✓ Unique Ordering Link</div>
-      <div>✓ Branded Online Store</div>
-      <div>✓ Pickup</div>
-      <div>✓ Kitchen Sync</div>
-      <div>✓ Mobile & Desktop Ready</div>
+      <div>✓ Membership</div>
+  <div>✓ Loyalty</div>
+  <div>✓ Wallet</div>
+  <div>✓ Ordering Link</div>
+  <div>✓ Branded Store</div>
+  <div>✓ Pickup</div>
+  <div>✓ Kitchen Sync</div>
+  <div>✓ Mobile Ready</div>
     </div>
     <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
   <a
@@ -615,14 +636,14 @@ export default function SoftwarePage() {
 
     </div>
 <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
-  <div>✓ Sales Analytics</div>
-  <div>✓ Inventory Monitoring</div>
-  <div>✓ Workforce Performance</div>
-  <div>✓ Multi-Location Insights</div>
-  <div>✓ Real-Time Dashboards</div>
-  <div>✓ Financial Reporting</div>
+   <div>✓ Sales</div>
+  <div>✓ Inventory</div>
+  <div>✓ Workforce</div>
+  <div>✓ Multi-Location</div>
+  <div>✓ Dashboards</div>
+  <div>✓ Financials</div>
   <div>✓ KPI Tracking</div>
-  <div>✓ Executive Visibility</div>
+  <div>✓ Executive View</div>
 </div>
   </div>
 </section> 
@@ -654,9 +675,23 @@ export default function SoftwarePage() {
         loading="lazy"
       />
     </div>
-
+<div className="mt-10 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-3 text-sm">
+  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    Central Reporting
+  </span>
+  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    KPI Tracking
+  </span>
+  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    Multi-Location
+  </span>
+  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    Executive View
+  </span>
+</div>
   </div>
 </section>
+
 {/* INCLUDED WITH EVERY DEPLOYMENT */}
 <section className="pt-20 pb-24 sm:pt-12 sm:pb-32 bg-white">
   <div className="max-w-7xl mx-auto px-6">

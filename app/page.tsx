@@ -283,9 +283,9 @@ fully connected across every location.
   ],
 
   [
-    "QR & Online Ordering",
-    "QR ordering, online ordering and digital customer experiences."
-  ],
+  "Smart QR Ordering",
+  "Automatic QR generation, temporary QR codes, table analytics and digital ordering experiences."
+],
 
   [
     "Self-Service Kiosks",
@@ -427,6 +427,60 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
 ))}
 
 </div>
+
+  </div>
+</section>
+{/* QR ORDERING & TABLE MANAGEMENT */}
+<section className="py-24 sm:py-32 bg-slate-50">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Smart QR Ordering
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Every table becomes a digital ordering point.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Automatically generate QR codes for every table,
+        create temporary ordering points and track customer
+        engagement through real-time analytics.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div className="rounded-3xl border border-slate-200 bg-white p-6">
+        <h3 className="font-semibold">Automatic QR Generation</h3>
+        <p className="mt-2 text-sm text-slate-500">
+          Every table automatically receives its own QR code.
+        </p>
+      </div>
+
+      <div className="rounded-3xl border border-slate-200 bg-white p-6">
+        <h3 className="font-semibold">Temporary QR Codes</h3>
+        <p className="mt-2 text-sm text-slate-500">
+          Create temporary QR codes for events, terraces and VIP areas.
+        </p>
+      </div>
+
+      <div className="rounded-3xl border border-slate-200 bg-white p-6">
+        <h3 className="font-semibold">Real-Time Analytics</h3>
+        <p className="mt-2 text-sm text-slate-500">
+          Monitor scans, orders and table performance instantly.
+        </p>
+      </div>
+
+      <div className="rounded-3xl border border-slate-200 bg-white p-6">
+        <h3 className="font-semibold">One-Click Printing</h3>
+        <p className="mt-2 text-sm text-slate-500">
+          Download and print QR codes directly from the platform.
+        </p>
+      </div>
+
+    </div>
 
   </div>
 </section>
