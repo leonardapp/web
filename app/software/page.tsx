@@ -26,8 +26,8 @@ export default function SoftwarePage() {
 
 <p className="mt-6 max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-slate-500 leading-relaxed">
   Built for restaurants, retail businesses and multi-location operations.
-  HOXXES unifies ordering, payments, workforce, inventory and analytics
-  into a single operating system.
+HOXXES unifies ordering, payments, workforce, inventory, analytics,
+centralized product synchronization and menu management into a single operating system.
 </p>
 
         {/* CTA */}
@@ -663,8 +663,9 @@ export default function SoftwarePage() {
       </h2>
 
       <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-        Centralized reporting, inventory management, workforce oversight
-        and operational control across all locations.
+         Centralized reporting, inventory management, workforce oversight,
+  menu administration and operational control across all locations
+  from a single HQ dashboard.
       </p>
     </div>
 
@@ -689,7 +690,90 @@ export default function SoftwarePage() {
   <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
     Executive View
   </span>
+   <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    Product Sync
+  </span>
+  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    Menu Control
+  </span>
 </div>
+  </div>
+</section>
+{/* HQ PRODUCT & MENU SYNCHRONIZATION */}
+<section className="py-24 sm:py-32 bg-white">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        HQ Synchronization Engine
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        One change. Every location updated.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Create products, ingredients and menus from HQ and synchronize
+        them across all locations, kiosks, POS terminals and ordering
+        channels from a single control center.
+      </p>
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-8">
+
+      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+        <div className="text-lg font-medium mb-4">
+          Product Synchronization
+        </div>
+
+        <div className="space-y-3 text-slate-600">
+          <div>✓ Centralized Product Management</div>
+          <div>✓ One-Click Synchronization</div>
+          <div>✓ Multi-Location Deployment</div>
+          <div>✓ Real-Time Product Updates</div>
+          <div>✓ Category Synchronization</div>
+          <div>✓ Pricing Synchronization</div>
+        </div>
+      </div>
+
+      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+        <div className="text-lg font-medium mb-4">
+          Menu Management
+        </div>
+
+        <div className="space-y-3 text-slate-600">
+          <div>✓ Unlimited Menus</div>
+          <div>✓ Kiosk Menus</div>
+          <div>✓ QR Ordering Menus</div>
+          <div>✓ Online Ordering Menus</div>
+          <div>✓ Delivery Menus</div>
+          <div>✓ Product-Level Assignment</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div className="mt-10 flex flex-wrap justify-center gap-3 text-sm">
+      <span className="px-4 py-2 rounded-full bg-slate-100">
+        Time-Based Menus
+      </span>
+      <span className="px-4 py-2 rounded-full bg-slate-100">
+        Day Scheduling
+      </span>
+      <span className="px-4 py-2 rounded-full bg-slate-100">
+        Weekly Campaigns
+      </span>
+      <span className="px-4 py-2 rounded-full bg-slate-100">
+        Seasonal Menus
+      </span>
+      <span className="px-4 py-2 rounded-full bg-slate-100">
+        Ingredient Synchronization
+      </span>
+      <span className="px-4 py-2 rounded-full bg-slate-100">
+        Unlimited Locations
+      </span>
+    </div>
+
   </div>
 </section>
 

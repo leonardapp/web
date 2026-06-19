@@ -250,12 +250,12 @@ export default function RequestDemoPage() {
     {/* RIGHT COLUMN */}
     <div className="rounded-3xl border border-slate-200 bg-white p-8 sticky top-24">
 
-      <div className="text-xs uppercase tracking-[0.3em] text-emerald-600">
+      <div className="text-xs uppercase tracking-[0.3em] text-emerald-600 text-center">
         Why HOXXES
       </div>
 
       <h3 className="mt-4 text-2xl font-semibold">
-        Everything in one platform.
+        What to expect from your demo.
       </h3>
 
       <p className="mt-4 text-slate-500">
@@ -263,18 +263,53 @@ export default function RequestDemoPage() {
         unified platform built for restaurants, retail and enterprise.
       </p>
 
-      <div className="mt-8 space-y-4 text-slate-600">
+      <div className="mt-8 space-y-6">
 
-        <div>✓ POS Infrastructure</div>
-        <div>✓ Online & QR Ordering</div>
-        <div>✓ Self-Service Kiosks</div>
-        <div>✓ Kitchen Display System</div>
-        <div>✓ Customer Loyalty & Wallet</div>
-        <div>✓ Multi-Location Management</div>
-        <div>✓ Enterprise Analytics</div>
-        <div>✓ Hardware & Payment Integration</div>
-        
-      </div>
+  <div className="pb-5 border-b border-slate-100">
+    <div className="font-semibold">
+      Personalized Consultation
+    </div>
+
+    <p className="mt-1 text-sm text-slate-500">
+      Discuss your operational requirements, locations,
+      ordering channels and deployment goals.
+    </p>
+  </div>
+
+  <div className="pb-5 border-b border-slate-100">
+    <div className="font-semibold">
+      Live Platform Walkthrough
+    </div>
+
+    <p className="mt-1 text-sm text-slate-500">
+      Explore ordering, inventory, workforce management,
+      analytics and multi-location operations in real time.
+    </p>
+  </div>
+
+  <div className="pb-5 border-b border-slate-100">
+    <div className="font-semibold">
+      Infrastructure Planning
+    </div>
+
+    <p className="mt-1 text-sm text-slate-500">
+      Receive recommendations for software modules,
+      hardware deployment and operational workflows.
+    </p>
+  </div>
+
+  <div>
+    <div className="font-semibold">
+      Deployment Roadmap
+    </div>
+
+    <p className="mt-1 text-sm text-slate-500">
+      Understand implementation timelines,
+      onboarding and long-term scalability options.
+    </p>
+  </div>
+
+</div>
 
     </div>
 

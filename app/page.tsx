@@ -298,9 +298,9 @@ fully connected across every location.
   ],
 
   [
-    "Multi-Location HQ",
-    "Centralized menu management, pricing control and multi-store synchronization."
-  ],
+  "HQ Synchronization Engine",
+  "Synchronize products, ingredients, menus and pricing across unlimited locations from a centralized control center."
+],
 
   [
     "Customer Loyalty",
@@ -487,100 +487,130 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
 
       
 {/* MULTI-LOCATION MANAGEMENT */}
+
 <section className="py-24 sm:py-32 bg-white">
   <div className="max-w-7xl mx-auto px-6">
 
-    <div className="text-center mb-14">
-      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        Multi-Location Management
-      </div>
+<div className="text-center mb-14">
+  <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+    Multi-Location Management
+  </div>
 
-      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-        Manage every location from HQ.
-      </h2>
+  <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+    Manage every location from HQ.
+  </h2>
 
-      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-        Control products, pricing, promotions and operations
-        across all locations from a centralized management layer.
+  <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+    Control products, ingredients, menus, pricing and operations
+    across all locations from a centralized management layer.
+  </p>
+</div>
+
+<div className="grid lg:grid-cols-2 gap-10 items-center">
+
+  <div className="space-y-6">
+
+    <div className="rounded-3xl border border-slate-200 p-6">
+      <h3 className="font-semibold text-lg">
+        HQ Product & Menu Synchronization
+      </h3>
+
+      <p className="mt-2 text-slate-500 text-sm">
+        Create products, ingredients, categories and menus once,
+        then synchronize them across one, multiple or all locations
+        with a single action.
       </p>
     </div>
 
-    <div className="grid lg:grid-cols-2 gap-10 items-center">
+    <div className="rounded-3xl border border-slate-200 p-6">
+      <h3 className="font-semibold text-lg">
+        Unified Pricing & Promotion Control
+      </h3>
 
-      <div className="space-y-6">
+      <p className="mt-2 text-slate-500 text-sm">
+        Update prices, discounts and promotions centrally
+        without manually configuring every store.
+      </p>
+    </div>
 
-        <div className="rounded-3xl border border-slate-200 p-6">
-          <h3 className="font-semibold text-lg">
-            Centralized Menu Management
-          </h3>
+    <div className="rounded-3xl border border-slate-200 p-6">
+      <h3 className="font-semibold text-lg">
+        Real-Time Operational Visibility
+      </h3>
 
-          <p className="mt-2 text-slate-500 text-sm">
-            Create products, modifiers and categories once
-            and synchronize them across all locations.
-          </p>
-        </div>
+      <p className="mt-2 text-slate-500 text-sm">
+        Monitor sales, inventory, workforce and business
+        performance across every location from one dashboard.
+      </p>
+    </div>
 
-        <div className="rounded-3xl border border-slate-200 p-6">
-          <h3 className="font-semibold text-lg">
-            Unified Pricing Control
-          </h3>
+  </div>
 
-          <p className="mt-2 text-slate-500 text-sm">
-            Update prices and promotions centrally
-            without manually configuring every store.
-          </p>
-        </div>
+  <div className="rounded-3xl bg-slate-50 border border-slate-200 p-10">
 
-        <div className="rounded-3xl border border-slate-200 p-6">
-          <h3 className="font-semibold text-lg">
-            Real-Time Operational Visibility
-          </h3>
+    <div className="text-center">
 
-          <p className="mt-2 text-slate-500 text-sm">
-            Monitor sales, inventory, workforce and performance
-            across every location from one dashboard.
-          </p>
-        </div>
+      <div className="inline-flex px-6 py-3 rounded-2xl bg-black text-white font-medium">
+        HOXXES CONTROL CENTER
+      </div>
+
+      <div className="my-6 text-emerald-500 text-3xl">
+        ↓
+      </div>
+
+      <div className="grid grid-cols-2 gap-4">
+
+        {[
+          "Location A",
+          "Location B",
+          "Location C",
+          "Location D",
+        ].map((item) => (
+          <div
+            key={item}
+            className="rounded-2xl border border-slate-200 bg-white p-5"
+          >
+            {item}
+          </div>
+        ))}
 
       </div>
 
-      <div className="rounded-3xl bg-slate-50 border border-slate-200 p-10">
+      <div className="mt-8 flex flex-wrap justify-center gap-2 text-xs">
+        <span className="px-3 py-1 rounded-full bg-white border">
+          Products
+        </span>
 
-        <div className="text-center">
+        <span className="px-3 py-1 rounded-full bg-white border">
+          Ingredients
+        </span>
 
-          <div className="inline-flex px-6 py-3 rounded-2xl bg-black text-white font-medium">
-            HOXXES CONTROL CENTER
-          </div>
+        <span className="px-3 py-1 rounded-full bg-white border">
+          Menus
+        </span>
 
-          <div className="my-6 text-emerald-500 text-3xl">
-            ↓
-          </div>
+        <span className="px-3 py-1 rounded-full bg-white border">
+          Pricing
+        </span>
 
-          <div className="grid grid-cols-2 gap-4">
+        <span className="px-3 py-1 rounded-full bg-white border">
+          Promotions
+        </span>
 
-            {[
-              "Location A",
-              "Location B",
-              "Location C",
-              "Location D",
-            ].map((item) => (
-              <div
-                key={item}
-                className="rounded-2xl border border-slate-200 bg-white p-5"
-              >
-                {item}
-              </div>
-            ))}
-
-          </div>
-
-        </div>
-
+        <span className="px-3 py-1 rounded-full bg-white border">
+          Synchronization
+        </span>
       </div>
 
     </div>
+
+  </div>
+
+</div>
+
   </div>
 </section>
+
 {/* INVENTORY & COST CONTROL */}
 <section className="py-24 sm:py-32 bg-slate-50">
   <div className="max-w-7xl mx-auto px-6">

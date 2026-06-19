@@ -213,6 +213,7 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
+      
 
       {/* PLATFORM OVERVIEW */}
 <section className="max-w-6xl mx-auto px-6 py-24 sm:py-32">
@@ -238,7 +239,7 @@ export default function AboutPage() {
     "Ordering & Commerce",
     "Payments Infrastructure",
     "Operations & Analytics",
-    "Multi-Location Management",
+    "Multi-Location Infrastructure",
   ].map((item) => (
     <div
       key={item}

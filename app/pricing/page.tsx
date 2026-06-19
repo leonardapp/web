@@ -198,6 +198,7 @@ Core platform capabilities are included with every subscription.
 
 </section>
 
+
       {/* CALCULATOR SECTION */}
 <section
   id="pricing-calculator"
@@ -211,7 +212,7 @@ Core platform capabilities are included with every subscription.
     </div>
 
     <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-      Estimate your annual licensing cost.
+      Estimate your infrastructure licensing cost.
     </h2>
 
     <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
@@ -444,6 +445,7 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
   <h2 className="text-3xl sm:text-4xl font-semibold">
   Ready to scale with HOXXES?
 </h2>
+
 
 <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
   Deploy the infrastructure layer powering
