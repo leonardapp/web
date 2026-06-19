@@ -266,12 +266,14 @@ export default function RequestDemoPage() {
       <div className="mt-8 space-y-4 text-slate-600">
 
         <div>✓ POS Infrastructure</div>
-        <div>✓ QR Ordering</div>
+        <div>✓ Online & QR Ordering</div>
         <div>✓ Self-Service Kiosks</div>
         <div>✓ Kitchen Display System</div>
-        <div>✓ Workforce Management</div>
+        <div>✓ Customer Loyalty & Wallet</div>
+        <div>✓ Multi-Location Management</div>
         <div>✓ Enterprise Analytics</div>
-
+        <div>✓ Hardware & Payment Integration</div>
+        
       </div>
 
     </div>
