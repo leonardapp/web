@@ -127,18 +127,20 @@ centralized product synchronization and menu management into a single operating 
   <Link
     href="/hardware"
     className="
-      w-full sm:w-auto
-      max-w-md
-      px-6 py-3
-      rounded-full
-      bg-black
-      text-white
-      text-sm
-      font-medium
-      text-center
-      hover:bg-slate-800
-      transition
-    "
+w-full sm:w-auto
+max-w-md
+px-6 py-3
+rounded-full
+border border-slate-300
+text-slate-700
+text-sm
+font-medium
+text-center
+hover:bg-black
+hover:text-white
+hover:border-black
+transition
+"
   >
     Explore Compatible Hardware
   </Link>
@@ -229,27 +231,98 @@ centralized product synchronization and menu management into a single operating 
 </p>
     <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
   <a
-    href="https://qr.hoxxes.com/qr/SSI718JKZ770"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="
-      inline-flex
-      items-center
-      justify-center
-      px-6
-      py-3
-      rounded-full
-      bg-black
-      text-white
-      text-sm
-      font-medium
-      hover:bg-slate-800
-      transition
-    "
-  >
-    Explore Live Menu
-  </a>
+  href="https://qr.hoxxes.com/qr/SSI718JKZ770"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    inline-flex
+    items-center
+    justify-center
+    px-6
+    py-3
+    rounded-full
+    border border-slate-300
+    text-slate-700
+    text-sm
+    font-medium
+    hover:bg-black
+    hover:text-white
+    hover:border-black
+    transition
+  "
+>
+  Explore Live Menu
+</a>
 </div>
+
+  </div>
+</section>
+{/* PROMOTIONS & CAMPAIGN AUTOMATION */}
+<section className="py-24 sm:py-32 bg-white">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Promotions Automation
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Promotions that run themselves.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Schedule promotions once and let HOXXES automatically activate
+        and deactivate discounts, campaigns and loyalty benefits with
+        complete accuracy.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-6">
+
+      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+        <div className="text-lg font-medium mb-3">
+          Happy Hour Automation
+        </div>
+
+        <p className="text-sm text-slate-600">
+          Automatically activate and deactivate Happy Hour promotions
+          based on day and time schedules.
+        </p>
+      </div>
+
+      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+        <div className="text-lg font-medium mb-3">
+          Scheduled Discounts
+        </div>
+
+        <p className="text-sm text-slate-600">
+          Apply automatic discounts to products, categories or entire
+          menus without manual intervention.
+        </p>
+      </div>
+
+      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+        <div className="text-lg font-medium mb-3">
+          Loyalty Campaigns
+        </div>
+
+        <p className="text-sm text-slate-600">
+          Launch voucher, membership and loyalty campaigns that run
+          automatically across all channels.
+        </p>
+      </div>
+
+    </div>
+
+    <div className="mt-12 text-center">
+      <p className="text-sm sm:text-base text-slate-600">
+        No manual changes. No staff mistakes. No missed promotions.
+      </p>
+
+      <p className="mt-2 text-lg font-medium">
+        Set it once. Let HOXXES handle the rest.
+      </p>
+    </div>
 
   </div>
 </section>
@@ -327,18 +400,20 @@ centralized product synchronization and menu management into a single operating 
   <Link
     href="/hardware"
     className="
-      w-full sm:w-auto
-      max-w-md
-      px-6 py-3
-      rounded-full
-      bg-black
-      text-white
-      text-sm
-      font-medium
-      text-center
-      hover:bg-slate-800
-      transition
-    "
+w-full sm:w-auto
+max-w-md
+px-6 py-3
+rounded-full
+border border-slate-300
+text-slate-700
+text-sm
+font-medium
+text-center
+hover:bg-black
+hover:text-white
+hover:border-black
+transition
+"
   >
     Explore Compatible Hardware
   </Link>
@@ -659,13 +734,13 @@ centralized product synchronization and menu management into a single operating 
       </div>
 
       <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-        Manage every location from one place.
+        Control every location from a single HQ.
       </h2>
 
       <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-         Centralized reporting, inventory management, workforce oversight,
-  menu administration and operational control across all locations
-  from a single HQ dashboard.
+          Centralized reporting, inventory management, workforce oversight, 
+          product synchronization, menu administration, campaign scheduling 
+          and operational control across all locations from a single HQ dashboard.
       </p>
     </div>
 
@@ -679,101 +754,30 @@ centralized product synchronization and menu management into a single operating 
     </div>
 <div className="mt-10 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-3 text-sm">
   <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
-    Central Reporting
+    HQ Reporting
   </span>
   <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
-    KPI Tracking
+    Menu Control
+  </span>
+  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    Price Sync
+  </span>
+  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    Channel Menus
+  </span>
+   <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    Campaigns
+  </span>
+  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    HQ Deploy
   </span>
   <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
     Multi-Location
   </span>
   <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
-    Executive View
-  </span>
-   <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
-    Product Sync
-  </span>
-  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
-    Menu Control
+    KPI Tracking
   </span>
 </div>
-  </div>
-</section>
-{/* HQ PRODUCT & MENU SYNCHRONIZATION */}
-<section className="py-24 sm:py-32 bg-white">
-  <div className="max-w-7xl mx-auto px-6">
-
-    <div className="text-center mb-14">
-      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        HQ Synchronization Engine
-      </div>
-
-      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-        One change. Every location updated.
-      </h2>
-
-      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-        Create products, ingredients and menus from HQ and synchronize
-        them across all locations, kiosks, POS terminals and ordering
-        channels from a single control center.
-      </p>
-    </div>
-
-    <div className="grid lg:grid-cols-2 gap-8">
-
-      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
-        <div className="text-lg font-medium mb-4">
-          Product Synchronization
-        </div>
-
-        <div className="space-y-3 text-slate-600">
-          <div>✓ Centralized Product Management</div>
-          <div>✓ One-Click Synchronization</div>
-          <div>✓ Multi-Location Deployment</div>
-          <div>✓ Real-Time Product Updates</div>
-          <div>✓ Category Synchronization</div>
-          <div>✓ Pricing Synchronization</div>
-        </div>
-      </div>
-
-      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
-        <div className="text-lg font-medium mb-4">
-          Menu Management
-        </div>
-
-        <div className="space-y-3 text-slate-600">
-          <div>✓ Unlimited Menus</div>
-          <div>✓ Kiosk Menus</div>
-          <div>✓ QR Ordering Menus</div>
-          <div>✓ Online Ordering Menus</div>
-          <div>✓ Delivery Menus</div>
-          <div>✓ Product-Level Assignment</div>
-        </div>
-      </div>
-
-    </div>
-
-    <div className="mt-10 flex flex-wrap justify-center gap-3 text-sm">
-      <span className="px-4 py-2 rounded-full bg-slate-100">
-        Time-Based Menus
-      </span>
-      <span className="px-4 py-2 rounded-full bg-slate-100">
-        Day Scheduling
-      </span>
-      <span className="px-4 py-2 rounded-full bg-slate-100">
-        Weekly Campaigns
-      </span>
-      <span className="px-4 py-2 rounded-full bg-slate-100">
-        Seasonal Menus
-      </span>
-      <span className="px-4 py-2 rounded-full bg-slate-100">
-        Ingredient Synchronization
-      </span>
-      <span className="px-4 py-2 rounded-full bg-slate-100">
-        Unlimited Locations
-      </span>
-    </div>
-
   </div>
 </section>
 
