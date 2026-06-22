@@ -1064,6 +1064,94 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
            </div>
         </div>
       </section>
+      {/* HOLOBOX */}
+<section className="py-24 sm:py-36 bg-white overflow-hidden">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-16">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        HOXXES Innovation Lab
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
+        HOXXES HoloBox
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Transform customer attention into unforgettable experiences
+        with holographic presentations, AI-powered virtual presenters
+        and immersive visual engagement.
+      </p>
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      {/* IMAGE */}
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+        className="relative flex justify-center"
+      >
+        <div className="absolute w-[450px] h-[450px] bg-emerald-400/20 rounded-full blur-[120px]" />
+
+        <img
+          src="https://hoxxes.app/images/holo.png"
+          alt="HOXXES HoloBox"
+          className="relative z-10 w-full max-w-[500px] object-contain"
+        />
+      </motion.div>
+
+      {/* CONTENT */}
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+      >
+        <div className="inline-flex px-4 py-2 rounded-full bg-emerald-50 text-emerald-700 text-xs font-medium uppercase tracking-wider">
+          Interactive Experience Platform
+        </div>
+
+        <h3 className="mt-6 text-3xl font-semibold">
+          Bring products and experiences to life.
+        </h3>
+
+        <p className="mt-4 text-slate-500 leading-relaxed">
+          Designed for retail locations, exhibitions,
+corporate environments and hospitality venues,
+HoloBox combines holographic visuals, AI-powered
+presenters and interactive content to create
+memorable customer experiences.
+        </p>
+
+        <div className="mt-8 grid sm:grid-cols-2 gap-3 text-sm text-slate-700">
+          <div>✓ Holographic Product Showcase</div>
+          <div>✓ AI Virtual Presenter</div>
+          <div>✓ Product Demonstrations</div>
+          <div>✓ Corporate Presentations</div>
+          <div>✓ Events & Exhibitions</div>
+          <div>✓ Interactive Customer Engagement</div>
+        </div>
+
+        <div className="mt-10 flex flex-col sm:flex-row gap-3">
+          <Button href="/request-demo" variant="primary">
+            Request Demo
+          </Button>
+
+          <Button
+  href="https://hoxxes.app/holobox/upload_form.html"
+  variant="outline"
+>
+  Upload Content
+          </Button>
+        </div>
+      </motion.div>
+
+    </div>
+  </div>
+</section>
 
       {/* VALUE STRIP */}
       <section className="relative py-28 sm:py-44 bg-black text-white text-center overflow-hidden">
@@ -1085,6 +1173,7 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
           </p>
         </div>
       </section>
+      
 
       {/* CTA */}
 <section className="py-24 sm:py-40 text-center px-6">

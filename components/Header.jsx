@@ -150,7 +150,7 @@ export default function Header() {
               </div>
 
               {/* ACTIONS */}
-              <div className="mt-auto p-6 flex flex-col gap-3 border-t">
+              <div className="mt-auto px-6 pt-6 pb-20 flex flex-col gap-3 border-t">
                 <Link
                   href="https://pos.hoxxes.com/#/login"
                   className="w-full text-center py-3 border border-slate-300 rounded-full font-medium hover:bg-black hover:text-white transition"

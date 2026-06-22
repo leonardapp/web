@@ -191,6 +191,7 @@ export default function RequestDemoPage() {
           <option>Hardware</option>
           <option>Software + Hardware</option>
           <option>Enterprise Infrastructure</option>
+          <option>HoloBox & Interactive Experiences</option>
         </select>
 
         <textarea
