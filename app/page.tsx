@@ -72,33 +72,30 @@ export default function HomePage() {
   }}
 >
     <Link
-      href="/offers"
-      className="
-  inline-flex
-  cursor-pointer
-  items-center
-  justify-center
-  text-center
-  gap-2
-  rounded-full
-  border
-  border-emerald-200
-  bg-emerald-50
-  px-4
-  py-2
-  text-[11px] sm:text-xs
-  font-medium
-  uppercase
-  tracking-wider
-  text-emerald-700
-  transition-all
-  hover:bg-emerald-100
-  hover:border-emerald-300
-  hover:scale-[1.02]
-"
-    >
-      Active Offers • Limited-Time Business Deals
-    </Link>
+  href="/offers"
+  className="
+    inline-flex
+    items-center
+    rounded-full
+    border
+    border-emerald-200
+    bg-white
+    px-5
+    py-2.5
+    text-xs
+    font-semibold
+    tracking-[0.2em]
+    uppercase
+    text-emerald-700
+    shadow-[0_10px_40px_rgba(16,185,129,0.12)]
+    transition-all
+hover:border-emerald-400
+hover:shadow-[0_20px_60px_rgba(16,185,129,0.2)]
+hover:-translate-y-0.5
+  "
+>
+  Current Promotions & Offers
+</Link>
   </motion.div>
 )}
         <motion.div

@@ -131,19 +131,19 @@ export default function OffersPage() {
   </h4>
 
   <div className="mt-6 grid gap-4 sm:grid-cols-2">
-    <div className="rounded-2xl border border-gray-200 p-5 text-center font-medium text-gray-800">
+    <div className="rounded-2xl border border-gray-200 p-5 font-medium text-gray-800">
       ✓ Reduce Waiting Lines
     </div>
 
-    <div className="rounded-2xl border border-gray-200 p-5 text-center font-medium text-gray-800">
+    <div className="rounded-2xl border border-gray-200 p-5 font-medium text-gray-800">
       ✓ Increase Order Volume
     </div>
 
-    <div className="rounded-2xl border border-gray-200 p-5 text-center font-medium text-gray-800">
+    <div className="rounded-2xl border border-gray-200 p-5 font-medium text-gray-800">
       ✓ Improve Customer Experience
     </div>
 
-    <div className="rounded-2xl border border-gray-200 p-5 text-center font-medium text-gray-800">
+    <div className="rounded-2xl border border-gray-200 p-5 font-medium text-gray-800">
       ✓ Fully Integrated with POS & Kitchen
     </div>
   </div>
@@ -286,7 +286,7 @@ export default function OffersPage() {
       {/* Right */}
       <div className="flex items-center justify-center bg-gradient-to-br from-slate-50 to-amber-50 p-6 sm:p-10">
         <img
-          src="https://hoxxes.app/images/HoloBox.png"
+          src="https://hoxxes.app/images/holo.png"
           alt="Holobox 86 Transparent Display"
           className="w-full max-w-[500px] lg:max-w-[650px] object-contain"
         />
