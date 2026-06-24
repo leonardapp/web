@@ -233,7 +233,7 @@ export default function OffersPage() {
         </p>
 
         <h2 className="mt-8 text-3xl font-bold text-gray-900 sm:text-4xl">
-          Holobox 86" Transparent Display
+          HoloBox 86" Transparent Display
         </h2>
 
         <p className="mt-4 text-base text-gray-600 sm:text-lg">
@@ -248,10 +248,10 @@ export default function OffersPage() {
           </h4>
 
           <ul className="mt-4 space-y-3 text-gray-700">
-            <li>• Display: 86" Transparent LCD</li>
-            <li>• Resolution: 4K UHD (3840 × 2160)</li>
-            <li>• Dimensions: 208.2 × 124.3 × 60 cm</li>
-            <li>• Power: 220V</li>
+            <li>• 86" Transparent LCD</li>
+            <li>• 4K UHD (3840 × 2160)</li>
+            <li>• 208.2 × 124.3 × 60 cm</li>
+            <li>• 220V Power</li>
           </ul>
         </div>
 
@@ -262,10 +262,10 @@ export default function OffersPage() {
           </h4>
 
           <ul className="mt-4 space-y-3 text-gray-700">
-            <li>• 86" Transparent Touch LCD Display</li>
-            <li>• Integrated Windows Mini PC</li>
-            <li>• Preconfigured Windows Operating System</li>
-            <li>• 1 Year Technical Warranty</li>
+            <li>• 86" Touch LCD Display</li>
+            <li>• Integrated Mini PC</li>
+            <li>• Windows OS</li>
+            <li>• 1 Year Warranty</li>
           </ul>
         </div>
 
