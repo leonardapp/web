@@ -262,10 +262,9 @@ export default function OffersPage() {
           </h4>
 
           <ul className="mt-4 space-y-3 text-gray-700">
-            <li>• 86" Transparent Display</li>
-            <li>• Integrated Mini PC</li>
-            <li>• Content Management Software</li>
-            <li>• Remote Content Updates</li>
+            <li>• 86" Transparent Touch LCD Display</li>
+            <li>• Integrated Windows Mini PC</li>
+            <li>• Preconfigured Windows Operating System</li>
             <li>• 1 Year Technical Warranty</li>
           </ul>
         </div>
