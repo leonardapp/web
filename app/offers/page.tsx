@@ -217,29 +217,60 @@ export default function OffersPage() {
         <div className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-700">
           40% OFF • LIMITED OFFER
         </div>
+
         <div className="mt-6 flex items-center gap-3">
-  <span className="text-2xl text-slate-400 line-through">
-    €10,000 + VAT
-  </span>
+          <span className="text-2xl text-slate-400 line-through">
+            €10,000 + VAT
+          </span>
 
-  <span className="text-4xl font-bold text-emerald-600">
-    €6,000 + VAT
-  </span>
-</div>
+          <span className="text-4xl font-bold text-emerald-600">
+            €6,000 + VAT
+          </span>
+        </div>
 
-<p className="mt-2 text-sm font-medium text-emerald-600">
-  Save €4,000 • 40% OFF
-</p>
+        <p className="mt-2 text-sm font-medium text-emerald-600">
+          Save €4,000 • 40% OFF
+        </p>
 
         <h2 className="mt-8 text-3xl font-bold text-gray-900 sm:text-4xl">
           Holobox 86" Transparent Display
         </h2>
 
         <p className="mt-4 text-base text-gray-600 sm:text-lg">
-          Premium transparent touchscreen display designed for product showcases,
-          exhibitions and immersive brand experiences.
+          Premium transparent display designed for product showcases,
+          exhibitions, retail environments and immersive brand experiences.
         </p>
 
+        {/* Specifications */}
+        <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h4 className="text-lg font-semibold text-gray-900">
+            Specifications
+          </h4>
+
+          <ul className="mt-4 space-y-3 text-gray-700">
+            <li>• Display: 86" Transparent LCD</li>
+            <li>• Resolution: 4K UHD (3840 × 2160)</li>
+            <li>• Dimensions: 208.2 × 124.3 × 60 cm</li>
+            <li>• Power: 220V</li>
+          </ul>
+        </div>
+
+        {/* Included */}
+        <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h4 className="text-lg font-semibold text-gray-900">
+            What's Included
+          </h4>
+
+          <ul className="mt-4 space-y-3 text-gray-700">
+            <li>• 86" Transparent Display</li>
+            <li>• Integrated Mini PC</li>
+            <li>• Content Management Software</li>
+            <li>• Remote Content Updates</li>
+            <li>• 1 Year Technical Warranty</li>
+          </ul>
+        </div>
+
+        {/* Unique */}
         <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
           <p className="text-xs font-medium uppercase tracking-widest text-amber-700">
             Unique in Kosovo
@@ -254,6 +285,7 @@ export default function OffersPage() {
           </p>
         </div>
 
+        {/* Deadline */}
         <div className="mt-8 rounded-2xl border border-red-200 bg-red-50 p-6">
           <p className="text-sm uppercase tracking-widest text-red-700">
             Offer Ends June 30
@@ -264,10 +296,12 @@ export default function OffersPage() {
           </div>
 
           <p className="mt-2 text-gray-700">
-  Former showroom price €10,000 + VAT. Available now for only €6,000 + VAT until June 30.
-</p>
+            Former showroom price €10,000 + VAT. Available now for only
+            €6,000 + VAT until June 30.
+          </p>
         </div>
 
+        {/* CTA */}
         <div className="mt-8 flex flex-col gap-4 sm:flex-row">
           <Button href="/contact-sales">
             Request Offer
@@ -284,12 +318,33 @@ export default function OffersPage() {
       </div>
 
       {/* Right */}
-      <div className="flex items-center justify-center bg-gradient-to-br from-slate-50 to-amber-50 p-6 sm:p-10">
-        <img
-          src="https://hoxxes.app/images/holo.png"
-          alt="Holobox 86 Transparent Display"
-          className="w-full max-w-[500px] lg:max-w-[650px] object-contain"
-        />
+      <div className="flex flex-col items-center justify-center gap-6 bg-gradient-to-br from-slate-50 to-amber-50 p-6 sm:p-10">
+
+        {/* Real Product Photo */}
+        <a
+  href="https://hoxxes.app/images/holo-dimensions.png"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img
+    src="https://hoxxes.app/images/holo-dimensions.png"
+    alt="Holobox Dimensions"
+    className="w-full max-w-[650px] object-contain cursor-zoom-in transition hover:scale-[1.02]"
+  />
+</a>
+<p className="text-xs text-center text-slate-500">
+  Click to enlarge
+</p>
+
+        {/* Technical Drawing */}
+        <div className="w-full max-w-[500px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+          <img
+            src="https://hoxxes.app/images/holo.png"
+            alt="Holobox Technical Dimensions"
+            className="w-full object-contain"
+          />
+        </div>
+
       </div>
 
     </div>
