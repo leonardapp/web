@@ -66,8 +66,9 @@ centralized product synchronization and menu management into a single operating 
 
       <p className="mt-5 max-w-3xl mx-auto text-slate-500">
     Operate from any browser or use the Android POS application with
-    offline capabilities. Manage tables, orders, payments and reporting
-    from a unified platform synchronized across all devices.
+offline capabilities. Manage tables, orders, payments and reporting
+from a unified platform synchronized across all devices. Customize
+the login experience with your company logo.
   </p>
     </div>
 
@@ -107,15 +108,17 @@ centralized product synchronization and menu management into a single operating 
 </div>
 <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
   <div>✓ Web POS</div>
-  <div>✓ Android POS</div>
-  <div>✓ Offline Ready</div>
-  <div>✓ Tables</div>
-  <div>✓ Takeaway</div>
-  <div>✓ Delivery</div>
-  <div>✓ Payments</div>
-  <div>✓ Customers</div>
-  <div>✓ Reporting</div>
-  <div>✓ Multi-Location</div>
+<div>✓ Android POS</div>
+<div>✓ Tables</div>
+<div>✓ Offline Ready</div>
+<div>✓ Takeaway</div>
+<div>✓ Delivery</div>
+<div>✓ Payments</div>
+<div>✓ Customers</div>
+<div>✓ Reporting</div>
+<div>✓ Multi-Location</div>
+<div>✓ Custom Logo</div>
+<div>✓ Login Screen</div>
 </div>
 
   </div>
@@ -257,6 +260,7 @@ transition
 
   </div>
 </section>
+
 {/* PROMOTIONS & CAMPAIGN AUTOMATION */}
 <section className="py-24 sm:py-32 bg-white">
   <div className="max-w-7xl mx-auto px-6">
@@ -343,9 +347,10 @@ transition
 
       <p className="mt-5 max-w-3xl mx-auto text-slate-500">
         Reduce queues, increase average order value and improve
-        operational efficiency with a fully integrated self-service
-        ordering experience connected directly to HOXXES POS,
-        Kitchen Display System and Analytics Cloud.
+operational efficiency with a fully integrated self-service
+ordering experience connected directly to HOXXES POS,
+Kitchen Display System and Analytics Cloud. Fully customizable
+with your own branding and promotional content.
       </p>
     </div>
 
@@ -382,13 +387,15 @@ transition
 
     <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
        <div>✓ Self Ordering</div>
-  <div>✓ Payments</div>
-  <div>✓ Loyalty</div>
-  <div>✓ Upselling</div>
-  <div>✓ Kitchen Sync</div>
-  <div>✓ Reporting</div>
-  <div>✓ Languages</div>
-  <div>✓ Wallet</div>
+<div>✓ Payments</div>
+<div>✓ Upselling</div>
+<div>✓ Kitchen Sync</div>
+<div>✓ Reporting</div>
+<div>✓ Languages</div>
+<div>✓ Custom Logo</div>
+<div>✓ Brand Colors</div>
+<div>✓ Welcome Screen</div>
+<div>✓ Promo Slides</div>
     </div>
 
   </div>
@@ -657,9 +664,65 @@ transition
 
   </div>
 </section>
+       
+{/* HQ CONTROL CENTER */}
+<section className="py-24 sm:py-32 bg-slate-50">
+  <div className="max-w-7xl mx-auto px-6">
 
-        
-   {/* ANALYTICS DASHBOARD */}
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        HQ Control Center
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Control every location from a single HQ.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+          Centralized reporting, inventory management, workforce oversight, 
+          product synchronization, menu administration, campaign scheduling 
+          and operational control across all locations from a single HQ dashboard.
+      </p>
+    </div>
+
+    <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden">
+      <img
+        src="https://hoxxes.app/images/dashboard-overview.png"
+        alt="HOXXES HQ Control Center"
+        className="w-full rounded-2xl"
+        loading="lazy"
+      />
+    </div>
+<div className="mt-10 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-3 text-sm">
+  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    HQ Reporting
+  </span>
+  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    Menu Control
+  </span>
+  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    Price Sync
+  </span>
+  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    Channel Menus
+  </span>
+   <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    Campaigns
+  </span>
+  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    HQ Deploy
+  </span>
+  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    Multi-Location
+  </span>
+  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
+    KPI Tracking
+  </span>
+</div>
+  </div>
+</section>
+
+{/* ANALYTICS DASHBOARD */}
 <section className="py-24 sm:py-32 bg-transparent">
   <div className="max-w-7xl mx-auto px-6">
 
@@ -723,63 +786,6 @@ transition
 </div>
   </div>
 </section> 
-       
-{/* HQ CONTROL CENTER */}
-<section className="py-24 sm:py-32 bg-slate-50">
-  <div className="max-w-7xl mx-auto px-6">
-
-    <div className="text-center mb-14">
-      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        HQ Control Center
-      </div>
-
-      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-        Control every location from a single HQ.
-      </h2>
-
-      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-          Centralized reporting, inventory management, workforce oversight, 
-          product synchronization, menu administration, campaign scheduling 
-          and operational control across all locations from a single HQ dashboard.
-      </p>
-    </div>
-
-    <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden">
-      <img
-        src="https://hoxxes.app/images/dashboard-overview.png"
-        alt="HOXXES HQ Control Center"
-        className="w-full rounded-2xl"
-        loading="lazy"
-      />
-    </div>
-<div className="mt-10 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-3 text-sm">
-  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
-    HQ Reporting
-  </span>
-  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
-    Menu Control
-  </span>
-  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
-    Price Sync
-  </span>
-  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
-    Channel Menus
-  </span>
-   <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
-    Campaigns
-  </span>
-  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
-    HQ Deploy
-  </span>
-  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
-    Multi-Location
-  </span>
-  <span className="px-4 py-2 rounded-full bg-slate-100 text-center">
-    KPI Tracking
-  </span>
-</div>
-  </div>
-</section>
 
 {/* INCLUDED WITH EVERY DEPLOYMENT */}
 <section className="pt-20 pb-24 sm:pt-12 sm:pb-32 bg-white">

@@ -215,7 +215,7 @@ export default function OffersPage() {
       <div className="p-6 sm:p-8 lg:p-14">
 
         <div className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-700">
-          50% OFF • LIMITED OFFER
+          40% OFF • LIMITED OFFER
         </div>
         <div className="mt-6 flex items-center gap-3">
   <span className="text-2xl text-slate-400 line-through">
@@ -223,12 +223,12 @@ export default function OffersPage() {
   </span>
 
   <span className="text-4xl font-bold text-emerald-600">
-    €5,000 + VAT
+    €6,000 + VAT
   </span>
 </div>
 
 <p className="mt-2 text-sm font-medium text-emerald-600">
-  Save €5,000 • 50% OFF
+  Save €4,000 • 40% OFF
 </p>
 
         <h2 className="mt-8 text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -264,7 +264,7 @@ export default function OffersPage() {
           </div>
 
           <p className="mt-2 text-gray-700">
-  Former showroom price €10,000 + VAT. Available now for only €5,000 + VAT until June 30.
+  Former showroom price €10,000 + VAT. Available now for only €6,000 + VAT until June 30.
 </p>
         </div>
 

@@ -184,8 +184,8 @@ fully connected across every location.
     <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-8 mt-10 items-center">
 
       <img
-        src="https://hoxxes.app/images/cheese.svg"
-        alt="Cheese"
+        src="https://hoxxes.app/images/lejza.svg"
+        alt="Lejza"
         className="h-10 md:h-12 lg:h-12 w-auto mx-auto object-contain opacity-70 hover:opacity-100 transition duration-300"
       />
 
@@ -202,20 +202,20 @@ fully connected across every location.
       />
 
       <img
-        src="https://hoxxes.app/images/lejza.svg"
-        alt="Lejza"
+        src="https://hoxxes.app/images/tomos.svg"
+        alt="Tomos"
+        className="h-10 md:h-12 lg:h-12 w-auto mx-auto object-contain opacity-70 hover:opacity-100 transition duration-300"
+      />
+
+      <img
+        src="https://hoxxes.app/images/cheese.svg"
+        alt="Cheese"
         className="h-10 md:h-12 lg:h-12 w-auto mx-auto object-contain opacity-70 hover:opacity-100 transition duration-300"
       />
 
       <img
         src="https://hoxxes.app/images/pasa.svg"
         alt="Pasa"
-        className="h-10 md:h-12 lg:h-12 w-auto mx-auto object-contain opacity-70 hover:opacity-100 transition duration-300"
-      />
-
-      <img
-        src="https://hoxxes.app/images/tomos.svg"
-        alt="Tomos"
         className="h-10 md:h-12 lg:h-12 w-auto mx-auto object-contain opacity-70 hover:opacity-100 transition duration-300"
       />
       
