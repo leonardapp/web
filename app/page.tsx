@@ -196,14 +196,14 @@ fully connected across every location.
       />
 
       <img
-        src="https://hoxxes.app/images/heavyhit.svg"
-        alt="Heavy Hit"
+        src="https://hoxxes.app/images/tomos.svg"
+        alt="Tomos"
         className="h-10 md:h-12 lg:h-12 w-auto mx-auto object-contain opacity-70 hover:opacity-100 transition duration-300"
       />
 
       <img
-        src="https://hoxxes.app/images/tomos.svg"
-        alt="Tomos"
+        src="https://hoxxes.app/images/heavyhit.svg"
+        alt="Heavy Hit"
         className="h-10 md:h-12 lg:h-12 w-auto mx-auto object-contain opacity-70 hover:opacity-100 transition duration-300"
       />
 
