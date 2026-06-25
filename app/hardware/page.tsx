@@ -230,6 +230,34 @@ export default function HardwarePage() {
     ? "Preorder"
     : "Request Offer"}
 </Link>
+{item.title === "Kiosk Slim – Self Service" && (
+  <a
+    href="https://hoxxes.app/images/kiosk-dimensions.png"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      mt-3
+      w-full
+      inline-flex
+      items-center
+      justify-center
+      px-6
+      py-3
+      rounded-full
+      border
+      border-slate-300
+      text-slate-700
+      text-sm
+      font-medium
+      hover:bg-black
+      hover:text-white
+      hover:border-black
+      transition
+    "
+  >
+    View Technical Drawing
+  </a>
+)}
 
               </div>
             </motion.div>

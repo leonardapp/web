@@ -195,12 +195,37 @@ export default function OffersPage() {
             </div>
 
             {/* Right */}
-<div className="flex items-center justify-center bg-gradient-to-br from-slate-50 to-emerald-50 p-6 sm:p-10">
-  <img
-    src="https://hoxxes.app/images/kiosk.svg"
-    alt="HOXXES Self-Service Kiosk"
-    className="w-full max-w-[500px] lg:max-w-[650px] object-contain"
-  />
+<div className="flex flex-col items-center justify-center gap-6 bg-gradient-to-br from-slate-50 to-emerald-50 p-6 sm:p-10">
+
+  {/* Product Photo */}
+  <div className="w-full max-w-[500px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+    <img
+      src="https://hoxxes.app/images/kiosk.svg"
+      alt="HOXXES Self-Service Kiosk"
+      className="w-full object-contain"
+    />
+  </div>
+
+  {/* Technical Drawing */}
+  <a
+    href="https://hoxxes.app/images/kiosk-dimensions.png"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block"
+  >
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+      <img
+        src="https://hoxxes.app/images/kiosk-dimensions.png"
+        alt="HOXXES Kiosk Dimensions"
+        className="w-full max-w-[650px] object-contain transition hover:scale-[1.02]"
+      />
+    </div>
+
+    <p className="mt-2 text-center text-xs text-slate-500">
+      Click to enlarge
+    </p>
+  </a>
+
 </div>
 
           </div>
@@ -317,34 +342,51 @@ export default function OffersPage() {
       </div>
 
       {/* Right */}
-      <div className="flex flex-col items-center justify-center gap-6 bg-gradient-to-br from-slate-50 to-amber-50 p-6 sm:p-10">
+<div className="flex flex-col items-center justify-center gap-6 bg-gradient-to-br from-slate-50 to-amber-50 p-6 sm:p-10">
 
-        {/* Real Product Photo */}
-        <a
-  href="https://hoxxes.app/images/holo-dimensions.png"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <img
-    src="https://hoxxes.app/images/holo-dimensions.png"
-    alt="Holobox Dimensions"
-    className="w-full max-w-[650px] object-contain cursor-zoom-in transition hover:scale-[1.02]"
-  />
-</a>
-<p className="text-xs text-center text-slate-500">
-  Click to enlarge
-</p>
+  {/* Product Photo */}
+  <a
+    href="https://hoxxes.app/images/holo.png"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block"
+  >
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+      <img
+        src="https://hoxxes.app/images/holo.png"
+        alt="Holobox 86 Transparent Display"
+        className="w-full max-w-[500px] object-contain transition hover:scale-[1.02]"
+      />
+    </div>
 
-        {/* Technical Drawing */}
-        <div className="w-full max-w-[500px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-          <img
-            src="https://hoxxes.app/images/holo.png"
-            alt="Holobox Technical Dimensions"
-            className="w-full object-contain"
-          />
-        </div>
+    <p className="mt-2 text-center text-xs text-slate-500">
+      Click to enlarge
+    </p>
+  </a>
 
-      </div>
+  {/* Technical Drawing */}
+  <a
+    href="https://hoxxes.app/images/holo-dimensions.png"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block"
+  >
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+      <img
+        src="https://hoxxes.app/images/holo-dimensions.png"
+        alt="Holobox Dimensions"
+        className="w-full max-w-[650px] object-contain transition hover:scale-[1.02]"
+      />
+    </div>
+
+    <p className="mt-2 text-center text-xs text-slate-500">
+      Click to enlarge
+    </p>
+  </a>
+
+</div>
+
+ 
 
     </div>
   </div>
