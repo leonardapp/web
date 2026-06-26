@@ -84,27 +84,6 @@ the login experience with your company logo.
     />
   </div>
 
-  {/* FLOATING SCREENSHOT */}
-<div
-  className="
-    absolute
-    -right-2 sm:-right-6 lg:-right-10
-    -bottom-2 sm:-bottom-6 lg:-bottom-10
-    w-[55%] sm:w-[48%] lg:w-[42%]
-    rounded-[24px]
-    overflow-hidden
-    shadow-[0_25px_60px_rgba(0,0,0,0.25)]
-    z-10
-  "
->
-  <img
-    src="https://hoxxes.app/images/pos2.png"
-    alt="HOXXES POS Software"
-    className="w-full"
-    loading="lazy"
-  />
-</div>
-
 </div>
 <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
   <div>✓ Web POS</div>
@@ -177,27 +156,6 @@ transition
         className="w-full rounded-[32px]"
         loading="lazy"
       />
-
-
-      {/* FLOATING MOBILE SCREENSHOT */}
-<div
-  className="
-    absolute
-    -right-2 sm:-right-6 lg:-right-10
-    -bottom-2 sm:-bottom-6 lg:-bottom-10
-    w-[18%] sm:w-[22%] lg:w-[18%]
-    rounded-2xl
-    overflow-hidden
-    shadow-2xl
-    z-10
-  "
->
-  <img
-    src="https://hoxxes.app/images/qr-menu.jpg"
-    alt="HOXXES Digital Menu"
-    className="w-full"
-  />
-</div>
 
     </div>
 
@@ -363,26 +321,7 @@ with your own branding and promotional content.
         loading="lazy"
       />
 
-      <div
-        className="
-          absolute
-          -left-2 sm:-left-6 lg:-left-10
-          -bottom-2 sm:-bottom-6 lg:-bottom-10
-          w-[18%] sm:w-[22%] lg:w-[18%]
-          rounded-2xl
-          overflow-hidden
-          shadow-2xl
-          z-10
-        "
-      >
-        <img
-          src="https://hoxxes.app/images/kioska.png"
-          alt="HOXXES Kiosk Interface"
-          className="w-full"
-          loading="lazy"
-        />
-      </div>
-
+      
     </div>
 
     <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
@@ -452,26 +391,6 @@ transition
     loading="lazy"
   />
 
-  {/* FLOATING SCREENSHOT */}
-<div
-  className="
-    absolute
-    -left-2 sm:-left-6 lg:-left-10
-    -bottom-2 sm:-bottom-6 lg:-bottom-10
-    w-[55%] sm:w-[48%] lg:w-[42%]
-    rounded-[24px]
-    overflow-hidden
-    shadow-[0_25px_60px_rgba(0,0,0,0.25)]
-    z-10
-  "
->
-  <img
-    src="https://hoxxes.app/images/kds.png"
-    alt="HOXXES KDS"
-    className="w-full"
-    loading="lazy"
-  />
-</div>
 </div>
  <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
    <div>✓ Live Orders</div>
@@ -517,27 +436,7 @@ transition
         loading="lazy"
       />
 
-      {/* FLOATING SCREENSHOT */}
-<div
-  className="
-    absolute
-    -right-2 sm:-right-6 lg:-right-10
-    -bottom-2 sm:-bottom-6 lg:-bottom-10
-    w-[18%] sm:w-[22%] lg:w-[18%]
-    rounded-2xl
-    overflow-hidden
-    shadow-2xl
-    z-10
-  "
->
-  <img
-    src="https://hoxxes.app/images/waiter-app.jpg"
-    alt="HOXXES Waiter App"
-    className="w-full"
-    loading="lazy"
-  />
-</div>
-
+      
     </div>
     <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
       <div>✓ Ordering</div>
@@ -584,26 +483,7 @@ transition
         className="w-full rounded-[32px]"
         loading="lazy"
       />
-      <div
-  className="
-    absolute
-    -left-2 sm:-left-6 lg:-left-10
-    -bottom-2 sm:-bottom-6 lg:-bottom-10
-    w-[18%] sm:w-[22%] lg:w-[18%]
-    rounded-2xl
-    overflow-hidden
-    shadow-2xl
-    z-10
-  "
->
-  <img
-    src="https://hoxxes.app/images/member-app.png"
-    alt="HOXXES Membership App"
-    className="w-full"
-    loading="lazy"
-  />
-</div>
-
+      
     </div>
 
     <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
@@ -750,28 +630,6 @@ transition
   className="w-full rounded-[32px]"
   loading="lazy"
 />
-{/* FLOATING SCREENSHOT */}
-<div
-  className="
-    absolute
-    -left-2 sm:-left-6 lg:-left-10
-    -bottom-2 sm:-bottom-6 lg:-bottom-10
-    w-[55%] sm:w-[48%] lg:w-[42%]
-    rounded-[24px]
-    overflow-hidden
-    shadow-[0_25px_60px_rgba(0,0,0,0.25)]
-    z-10
-  "
->
-  <img
-    src="https://hoxxes.app/images/analytics-dashboard-screen.png"
-    alt="HOXXES Analytics Dashboard"
-    className="w-full"
-    loading="lazy"
-  />
-  
-</div>
-
 
     </div>
 <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">

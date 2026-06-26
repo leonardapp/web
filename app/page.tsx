@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Button from "@/components/Button";
+
 const OFFER_END_DATE = "2026-06-30";
 
 const offerActive =
@@ -53,7 +54,7 @@ export default function HomePage() {
       
 
       {/* HERO */}
-      <section
+      <section id="hero"
         ref={ref}
         className="max-w-5xl mx-auto text-center px-6 sm:px-8 lg:px-6 pt-28 sm:pt-32 lg:pt-36 pb-36 sm:pb-40"
       >
@@ -238,7 +239,7 @@ fully connected across every location.
 
 
       {/* SOFTWARE */}
-<section className="py-20 sm:py-28 bg-transparent">
+  <section id="software" className="py-20 sm:py-28 bg-transparent">
   <div className="max-w-6xl mx-auto px-6">
 
     <div className="text-center mb-12">
@@ -348,7 +349,8 @@ fully connected across every location.
       </section>
 
       {/* PLATFORM FLOW */}
-<section className="py-24 sm:py-36 bg-transparent">
+      
+<section id="platform-flow" className="py-24 sm:py-36 bg-transparent">
   <div className="max-w-6xl mx-auto px-6 text-center">
 
     <div className="text-xs uppercase tracking-[0.3em] text-emerald-600 mb-4">
@@ -428,7 +430,8 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
   </div>
 </section>
 {/* QR ORDERING & TABLE MANAGEMENT */}
-<section className="py-24 sm:py-32 bg-slate-50">
+
+<section id="qr-ordering" className="py-24 sm:py-32 bg-slate-50">
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="text-center mb-14">
@@ -485,7 +488,7 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
       
 {/* MULTI-LOCATION MANAGEMENT */}
 
-<section className="py-24 sm:py-32 bg-white">
+<section id="multi-location" className="py-24 sm:py-32 bg-white">
   <div className="max-w-7xl mx-auto px-6">
 
 <div className="text-center mb-14">
@@ -609,7 +612,8 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
 </section>
 
 {/* INVENTORY & COST CONTROL */}
-<section className="py-24 sm:py-32 bg-slate-50">
+
+<section id="inventory" className="py-24 sm:py-32 bg-slate-50">
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="text-center mb-16">
@@ -710,7 +714,8 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
 </section>
 
 {/* WORKFORCE MANAGEMENT */}
-<section className="py-24 sm:py-32 bg-white">
+
+<section id="workforce" className="py-24 sm:py-32 bg-white">
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="text-center mb-14">
@@ -894,7 +899,9 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
   </div>
 </div>
 </section>
-<section className="py-24 sm:py-32 bg-white">
+{/* ANALYTICS DASHBOARD */}
+
+<section id="analytics" className="py-24 sm:py-32 bg-white">
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="text-center mb-14">
@@ -931,7 +938,8 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
 
   </div>
 </section>
-<section className="py-24 sm:py-32 bg-slate-50">
+{/* Order management */}
+<section id="order-center" className="py-24 sm:py-32 bg-slate-50">
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="text-center mb-14">
@@ -968,7 +976,8 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
 </section>
 
       {/* KIOSK */}
-      <section className="relative py-24 sm:py-36 overflow-hidden">
+      
+      <section id="kiosk" className="relative py-24 sm:py-36 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white" />
 
         <div className="relative max-w-7xl mx-auto px-6">
@@ -1062,7 +1071,8 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
         </div>
       </section>
       {/* HOLOBOX */}
-<section className="py-24 sm:py-36 bg-white overflow-hidden">
+      
+<section id="holobox" className="py-24 sm:py-36 bg-white overflow-hidden">
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="text-center mb-16">
