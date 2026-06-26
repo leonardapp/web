@@ -153,12 +153,12 @@ export default function Footer() {
         </div>
 
         {/* BOTTOM */}
-        <div className="mt-4 md:mt-10 pt-6 border-t border-slate-200 flex flex-col items-center md:flex-row md:items-center justify-between gap-4">
+        <div className="mt-4 md:mt-10 pt-6 border-t border-slate-200 flex flex-col items-start md:flex-row md:items-start justify-between gap-4">
           <p className="order-2 md:order-1 text-xs sm:text-sm text-slate-400">
             © {new Date().getFullYear()} Hoxxes. All rights reserved.
           </p>
 
-         <div className="order-1 md:order-2 flex w-full md:w-auto flex-wrap justify-center md:justify-start items-center gap-x-5 md:gap-10 gap-y-2 text-xs sm:text-sm font-medium">
+         <div className="order-1 md:order-2 flex w-full md:w-auto flex-wrap justify-start md:justify-start items-start gap-x-5 md:gap-10 gap-y-2 text-xs sm:text-sm font-medium">
             <Link
               href="/legal/privacy-policy"
               className="text-slate-400 hover:text-slate-900 transition-colors"
