@@ -26,13 +26,7 @@ export default function HoxxesAIWidget() {
   const [loading, setLoading] = useState(false);
   const [showHint, setShowHint] = useState(false);
 
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      role: "assistant",
-      content:
-        "Hi, I’m Hoxxes AI.\nHow can I help today?",
-    },
-  ]);
+  const [messages, setMessages] = useState<Message[]>([]);
 
   const bottomRef = useRef<HTMLDivElement | null>(null);
 
@@ -74,11 +68,12 @@ export default function HoxxesAIWidget() {
 };
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({
-      behavior: "smooth",
-    });
-  }, [messages, loading]);
-  useEffect(() => {
+  bottomRef.current?.scrollIntoView({
+    behavior: "smooth",
+  });
+}, [messages, loading]);
+
+useEffect(() => {
   const seen = localStorage.getItem(
     "hoxxes-translation-hint"
   );
@@ -100,6 +95,29 @@ export default function HoxxesAIWidget() {
     return () => clearTimeout(timer);
   }
 }, []);
+
+// 👇 Shto këtë useEffect
+useEffect(() => {
+  if (!open) return;
+if (messages.length !== 0) return;
+
+  setLoading(true);
+
+  const timer = setTimeout(() => {
+    setMessages([
+      {
+        role: "assistant",
+        content:
+          "👋 Welcome to Hoxxes AI! What would you like to explore today?",
+      },
+    ]);
+
+    setLoading(false);
+  }, 1200);
+
+  return () => clearTimeout(timer);
+}, [open]);
+
 
   async function sendMessage(customMessage?: string) {
     const text = customMessage || input;
@@ -380,7 +398,7 @@ max-w-[calc(100vw-24px)]
                 {loading && (
                   <div className="flex justify-start">
                     <div className="rounded-[24px] border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white/60">
-                      Thinking...
+                      Hoxxes AI is typing...
                     </div>
                   </div>
                 )}
