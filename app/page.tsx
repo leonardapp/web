@@ -899,45 +899,7 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
   </div>
 </div>
 </section>
-{/* ANALYTICS DASHBOARD */}
 
-<section id="analytics" className="py-24 sm:py-32 bg-white">
-  <div className="max-w-7xl mx-auto px-6">
-
-    <div className="text-center mb-14">
-      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        Operational Intelligence
-      </div>
-
-      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-        Real-time visibility across your business.
-      </h2>
-
-      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-        Monitor sales, orders, inventory, workforce and multi-location
-        performance from one unified dashboard.
-      </p>
-    </div>
-
-    <div className="relative rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden">
-
-  {/* Floating Badge */}
-  <div className="absolute top-0 sm:top-4 left-1/2 -translate-x-1/2 z-20">
-  <div className="px-3 sm:px-5 py-1 sm:py-2 rounded-full bg-emerald-500 text-white text-[10px] sm:text-xs font-medium shadow-lg whitespace-nowrap">
-    Live Analytics
-  </div>
-</div>
-
-  <img
-    src="https://hoxxes.app/images/analytics-dashboard-screen.png"
-    alt="HOXXES Dashboard"
-    className="w-full rounded-2xl"
-  />
-
-</div>
-
-  </div>
-</section>
 {/* Order management */}
 <section id="order-center" className="py-24 sm:py-32 bg-slate-50">
   <div className="max-w-7xl mx-auto px-6">
@@ -1081,7 +1043,7 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
       </div>
 
       <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
-        HOXXES HoloBox
+        HoloBox
       </h2>
 
       <p className="mt-5 max-w-3xl mx-auto text-slate-500">
