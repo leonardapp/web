@@ -11,7 +11,7 @@ const hardware = [
     price: "€1,185 + VAT",
     preorderPrice: "€1,016 + VAT",
     preorderEnabled: true,
-    image: "https://hoxxes.app/images/Kiosk.png",
+    image: "https://hoxxes.app/images/kiosk.svg",
     description:
       "Wall-mounted self-service kiosk with touchscreen ordering, QR integration and built-in receipt printing.",
   highlight: "Space-saving self-service solution",
