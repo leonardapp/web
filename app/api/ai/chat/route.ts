@@ -1,6 +1,32 @@
 import { NextResponse } from "next/server";
 import { offers } from "@/lib/offers";
 
+function enforceStyle(text: string) {
+  const sentences = text.split(".").filter(Boolean);
+  return sentences.slice(0, 2).join(".").trim();
+}
+
+function sanitizeOutput(text: string) {
+  const allowedUrls = [
+    "hoxxes.com/software",
+    "hoxxes.com/hardware",
+    "hoxxes.com/pricing",
+    "hoxxes.com/download",
+    "hoxxes.com/apk",
+    "hoxxes.com/support",
+    "hoxxes.com/docs",
+    "hoxxes.com/about-us",
+    "hoxxes.com/offers",
+    "hoxxes.com/request-demo",
+  ];
+
+  return text.replace(/https?:\/\/[^\s]+/g, (url) => {
+    return allowedUrls.some(u => url.includes(u))
+      ? url
+      : "[blocked]";
+  });
+}
+
 const activeOffers = offers.filter(
   (offer) => new Date(offer.expiresAt).getTime() > Date.now()
 );
@@ -17,24 +43,49 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     const message = body?.message;
-    const history = body?.history || [];
+const injectionPatterns = [
+  "ignore previous instructions",
+  "ignore system prompt",
+  "reveal system prompt",
+  "developer message",
+  "jailbreak",
+  "act as",
+];
 
-    if (!message) {
-      return NextResponse.json(
-        { message: "No message provided" },
-        { status: 400 }
-      );
-    }
+const normalizedMessage = String(message || "")
+  .toLowerCase()
+  .replace(/\s+/g, " ");
+
+const isInjection = injectionPatterns.some(p =>
+  normalizedMessage.includes(p)
+);
+
+if (isInjection) {
+  return NextResponse.json(
+    { message: "Request not allowed." },
+    { status: 400 }
+  );
+}
+
+const history = body?.history || [];
+
+if ((message || "").length > 2000) {
+  return NextResponse.json(
+    { message: "Message too long." },
+    { status: 400 }
+  );
+}
 
     // ✅ ONLY FIX: SAFE HISTORY (NO LOGIC CHANGE)
     const safeHistory = Array.isArray(history)
-      ? history
-          .filter(m => m?.role && m?.content)
-          .map(m => ({
-            role: m.role,
-            content: String(m.content),
-          }))
-      : [];
+  ? history
+      .slice(-8)
+      .filter(m => m?.role && m?.content)
+      .map(m => ({
+        role: m.role,
+        content: String(m.content).slice(0, 800),
+      }))
+  : [];
 
     const systemPrompt = `
 You are Hoxxes AI.
@@ -211,11 +262,14 @@ Faleminderit → Faleminderit edhe juve!
 
     const data = await response.json();
 
-    const raw =
-      data?.choices?.[0]?.message?.content || "No response from AI";
+let raw =
+  data?.choices?.[0]?.message?.content || "No response from AI";
+
+raw = sanitizeOutput(raw.trim());
+const finalMessage = enforceStyle(raw);
 
     return NextResponse.json({
-      message: raw.trim(),
+      message: finalMessage,
     });
   } catch (error) {
     console.error("AI ERROR:", error);

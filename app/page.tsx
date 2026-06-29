@@ -145,10 +145,10 @@ hover:-translate-y-0.5
               leading-relaxed
             "
           >
-            POS, QR Ordering, Self-Service Kiosks,
-Inventory, Workforce Management, Analytics
-and Multi-Location Operations —
-fully connected across every location.
+            One ecosystem.
+Software. Hardware. Intelligence.
+      Hoxxes connects ordering, operations and customer experiences
+into one unified platform.
           </motion.p>
 
           {/* BUTTONS */}
@@ -169,6 +169,8 @@ fully connected across every location.
           
         </motion.div>
       </section>
+      
+
      {/* TRUSTED BY */}
 <section className="pb-20">
   <div className="max-w-6xl mx-auto px-6">
