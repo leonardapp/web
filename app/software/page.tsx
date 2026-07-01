@@ -193,7 +193,7 @@ transition
     <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
   <a
   href="https://qr.hoxxes.com/qr/SSI718JKZ770"
-  target="_blank"
+  target="black"
   rel="noopener noreferrer"
   className="
     inline-flex
