@@ -160,11 +160,7 @@ into one unified platform.
             variants={fadeUp}
             className="mt-10 flex flex-col sm:flex-row gap-3 justify-center"
           >
-            <Button href="/request-demo" variant="primary">
-              Request Demo
-            </Button>
-
-           <Button href="/software" variant="outline">
+            <Button href="/software" variant="primary">
               Explore Platform
             </Button>
 
@@ -178,7 +174,7 @@ into one unified platform.
       
 
      {/* TRUSTED BY */}
-<section className="pb-20">
+<section className="pb-4">
   <div className="max-w-6xl mx-auto px-6">
 
     <div className="text-center">
@@ -186,31 +182,23 @@ into one unified platform.
         Trusted by Businesses
       </div>
 
-      <p className="mt-3 text-sm text-slate-500">
+      <p className="mt-2 text-sm text-slate-500">
         Powering restaurants and retail operations across multiple locations.
       </p>
     </div>
 
-    <div className="relative overflow-hidden mt-10">
-
-  <LogoMarquee />
-
-</div>
-<motion.div
-  variants={fadeUp}
-  className="mt-16"
->
-  <img
-    src="https://hoxxes.app/images/hero.png"
-    alt="Hoxxes Platform"
-    className="w-full max-w-5xl mx-auto rounded-3xl shadow-2xl"
-  />
-</motion.div>
+    {/* LOGOS */}
+    <div className="relative overflow-hidden mt-4">
+      <LogoMarquee />
+    </div>
 
   </div>
-</section> 
+</section>
 
+{/* NO GAP AT ALL */}
+<div className="m-0 p-0 leading-none" />
 
+{/* FEATURES DIRECTLY */}
 <FeaturesGrid />
 
       {/* KIOSK */}
