@@ -156,7 +156,7 @@ export default function SoftwarePage() {
     href="/request-demo"
     className="px-5 py-2 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90"
   >
-    Request Demo
+    Demo
   </a>
 
   <a
