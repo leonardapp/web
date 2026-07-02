@@ -177,7 +177,18 @@ export default function SoftwarePage() {
             <p className="mt-4 text-xs text-white/50">
               Trusted by restaurants, retail & enterprise operators
             </p>
+            
           </div>
+          {active < slides.length - 1 && (
+  <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
+    
+    <div className="relative h-16 w-px overflow-hidden rounded-full bg-white/10">
+      <div className="absolute left-0 top-0 h-5 w-full bg-gradient-to-b from-white to-transparent animate-scroll-indicator" />
+    </div>
+
+  </div>
+)}
+          
         </div>
 
         {/* SCROLL INDICATORS */}
