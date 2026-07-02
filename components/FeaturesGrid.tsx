@@ -131,7 +131,20 @@ export default function HomeFeatures() {
                 href="/software"
                 className="snap-center shrink-0 w-[80%] sm:w-[45%] md:w-[30%]"
               >
-                <div className="relative h-[420px] rounded-2xl overflow-hidden shadow-xl">
+                <div
+  className={`relative h-[420px] rounded-2xl overflow-hidden shadow-xl
+  transition-all duration-500 ease-out
+  ${
+    i === activeIndex
+      ? "scale-100 z-30 blur-0"
+      : i === activeIndex - 1
+      ? "scale-[0.92] -translate-x-6 blur-[1px] opacity-70 z-20"
+      : "scale-[0.88] -translate-x-10 blur-[2px] opacity-50 z-10"
+  }`}
+  style={{
+    transformOrigin: "center left",
+  }}
+>
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -139,10 +152,10 @@ export default function HomeFeatures() {
                     className="object-cover"
                   />
 
-                  <div className="absolute inset-0 bg-black/40" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent backdrop-blur-[1px]" />
 
                   <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="text-lg font-semibold">
+                    <h3 className="text-lg font-semibold drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]">
                       {item.title}
                     </h3>
                   </div>
