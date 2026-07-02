@@ -66,7 +66,7 @@ export default function HardwarePage() {
  
   <div className="relative mt-16">
   <img
-    src="https://hoxxes.app/images/kiosk-ordering.png"
+    src="https://hoxxes.app/images/kiosk-ordering-2.png"
     alt="Hoxxes Self Service Kiosk"
     className="
       w-full
