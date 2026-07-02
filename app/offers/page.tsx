@@ -1,7 +1,7 @@
 import Button from "@/components/Button";
 import Header from "@/components/Header";
 
-const OFFER_DEADLINE = "2026-06-30";
+const OFFER_DEADLINE = "2026-07-17";
 
 function isOfferActive() {
   return new Date(OFFER_DEADLINE).getTime() > new Date().getTime();

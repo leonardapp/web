@@ -9,7 +9,7 @@ import FeaturesGrid from "@/components/FeaturesGrid";
 
 
 
-const OFFER_END_DATE = "2026-06-30";
+const OFFER_END_DATE = "2026-07-17";
 
 
 const offerActive =
