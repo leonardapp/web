@@ -10,48 +10,56 @@ const slides = [
     desc: "Control orders, tables and payments in real time.",
     benefits: ["Web POS", "Android POS", "Offline Mode", "Multi-location"],
     image: "https://hoxxes.app/images/pos-operations.png",
+    focus: "60% 50%"
   },
   {
     title: "QR Ordering",
     desc: "Customers order instantly from their table.",
     benefits: ["QR Scan", "Live Menu", "Waiter Call", "Sync"],
     image: "https://hoxxes.app/images/qr-ordering.png",
+    focus: "30% 70%"
   },
   {
     title: "Self-Service Kiosk",
     desc: "Fast ordering without queues.",
     benefits: ["Upselling", "Payments", "Branding", "Sync"],
     image: "https://hoxxes.app/images/kiosk-ordering.png",
+    focus: "0% 100%"
   },
   {
     title: "Kitchen Display System",
     desc: "Orders flow directly to kitchen stations.",
     benefits: ["Live Orders", "Routing", "Stations", "Priority"],
     image: "https://hoxxes.app/images/kitchen-display-system.png",
+    focus: "10% 100%"
   },
   {
     title: "Waiter Operations",
     desc: "Full control for staff mobility.",
     benefits: ["Tables", "Orders", "Live Updates", "Sync"],
     image: "https://hoxxes.app/images/waiter-operations.png",
+    focus: "40% 70%"
   },
   {
     title: "Online Ordering",
     desc: "Your branded ordering ecosystem.",
     benefits: ["Delivery", "Pickup", "Wallet", "Loyalty"],
     image: "https://hoxxes.app/images/online-ordering.png",
+    focus: "100% 50%"
   },
   {
     title: "HQ Control Center",
     desc: "Centralized multi-location management.",
     benefits: ["HQ View", "Sync", "Menus", "Campaigns"],
     image: "https://hoxxes.app/images/dashboard-overview.png",
+    focus: "15% 100%"
   },
   {
     title: "Analytics Cloud",
     desc: "Real-time business intelligence.",
     benefits: ["Sales", "KPI", "Reports", "Forecasting"],
     image: "https://hoxxes.app/images/analytics-dashboard.png",
+    focus: "50% 100%"
   },
 ];
 

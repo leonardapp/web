@@ -317,7 +317,7 @@ into one unified platform.
         Hologram BOX - HoloBox
       </h2>
 
-      <p className="mt-5 max-w-3xl mx-auto text-slate-500 text-left">
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500 text-center">
         Transform customer attention into unforgettable experiences
         with holographic presentations, AI-powered virtual presenters
         and immersive visual engagement.

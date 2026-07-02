@@ -5,16 +5,55 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const features = [
-  { title: "Restaurant POS", image: "https://hoxxes.app/images/pos-operations.png", focus: "60% 50%" },
-  { title: "QR Ordering", image: "https://hoxxes.app/images/qr-ordering.png", focus: "30% 70%" },
-  { title: "Self-Service Kiosk", image: "https://hoxxes.app/images/kiosk-ordering.png", focus: "0% 100%" },
-  { title: "Kitchen Display", image: "https://hoxxes.app/images/kitchen-display-system.png", focus: "10% 100%" },
-  { title: "Waiter Operations", image: "https://hoxxes.app/images/waiter-operations.png", focus: "40% 70%" },
-  { title: "Online Ordering", image: "https://hoxxes.app/images/online-ordering.png", focus: "100% 50%" },
-  { title: "HQ Control Center", image: "https://hoxxes.app/images/dashboard-overview.png", focus: "30% 70%" },
-  { title: "Analytics Cloud", image: "https://hoxxes.app/images/analytics-dashboard.png", focus: "20% 100%" },
+  {
+    title: "Restaurant POS",
+    image: "https://hoxxes.app/images/pos-operations.png",
+    focus: "60% 50%",
+    href: "/software#restaurant-pos",
+  },
+  {
+    title: "QR Ordering",
+    image: "https://hoxxes.app/images/qr-ordering.png",
+    focus: "30% 70%",
+    href: "/software#qr-ordering",
+  },
+  {
+    title: "Self-Service Kiosk",
+    image: "https://hoxxes.app/images/kiosk-ordering.png",
+    focus: "0% 100%",
+    href: "/software#self-service-kiosk",
+  },
+  {
+    title: "Kitchen Display",
+    image: "https://hoxxes.app/images/kitchen-display-system.png",
+    focus: "10% 100%",
+    href: "/software#kitchen-display",
+  },
+  {
+    title: "Waiter Operations",
+    image: "https://hoxxes.app/images/waiter-operations.png",
+    focus: "40% 70%",
+    href: "/software#waiter-operations",
+  },
+  {
+    title: "Online Ordering",
+    image: "https://hoxxes.app/images/online-ordering.png",
+    focus: "100% 50%",
+    href: "/software#online-ordering",
+  },
+  {
+    title: "HQ Control Center",
+    image: "https://hoxxes.app/images/dashboard-overview.png",
+    focus: "15% 100%",
+    href: "/software#hq-control-center",
+  },
+  {
+    title: "Analytics Cloud",
+    image: "https://hoxxes.app/images/analytics-dashboard.png",
+    focus: "50% 100%",
+    href: "/software#analytics-cloud",
+  },
 ];
-
 export default function HomeFeatures() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -56,6 +95,7 @@ export default function HomeFeatures() {
       el.removeEventListener("scroll", onScroll);
     };
   }, []);
+  
 
   // ✅ AUTO SCROLL (FIXED + SAFE)
   useEffect(() => {
@@ -127,10 +167,10 @@ export default function HomeFeatures() {
           >
             {features.map((item, i) => (
               <Link
-                key={i}
-                href="/software"
-                className="snap-center shrink-0 w-[92%] sm:w-[45%] md:w-[30%]"
-              >
+  key={i}
+  href={item.href}
+  className="snap-center shrink-0 w-[92%] sm:w-[45%] md:w-[30%]"
+>
                 <div
   className={`relative h-[420px] rounded-2xl overflow-hidden shadow-xl
   transition-all duration-500 ease-out
