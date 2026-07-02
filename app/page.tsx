@@ -65,43 +65,49 @@ export default function HomePage() {
       >
         {offerActive && (
   <motion.div
-  variants={fadeUp}
-  className="mb-6"
-  animate={{
-    scale: [1, 1.03, 1],
-    opacity: [1, 0.9, 1],
-  }}
-  transition={{
-    duration: 2.5,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
->
+    className="mb-10 relative inline-flex"
+    animate={{
+      scale: [1, 1.05, 1],
+    }}
+    transition={{
+      duration: 2.2,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+  >
+    {/* OUTER GLOW RING */}
+    <div className="absolute inset-0 -z-10 flex items-center justify-center">
+      <div className="w-[240px] h-[70px] bg-black blur-2xl opacity-25 rounded-full" />
+    </div>
+
     <Link
-  href="/offers"
-  className="
-    inline-flex
-    items-center
-    rounded-full
-    border
-    border-emerald-200
-    bg-white
-    px-5
-    py-2.5
-    text-xs
-    font-semibold
-    tracking-[0.2em]
-    uppercase
-    text-emerald-700
-    shadow-[0_10px_40px_rgba(16,185,129,0.12)]
-    transition-all
-hover:border-emerald-400
-hover:shadow-[0_20px_60px_rgba(16,185,129,0.2)]
-hover:-translate-y-0.5
-  "
->
-  Current Promotions & Offers
-</Link>
+      href="/offers"
+      className="
+  relative
+  inline-flex
+  items-center
+  rounded-full
+  bg-slate-900
+  px-7
+  py-3.5
+  text-xs
+  font-semibold
+  tracking-[0.25em]
+  uppercase
+  text-white
+  shadow-[0_25px_90px_rgba(15,23,42,0.45)]
+  border border-slate-800
+  transition-all
+  hover:scale-110
+  hover:bg-slate-800
+  hover:shadow-[0_35px_120px_rgba(15,23,42,0.6)]
+  hover:-translate-y-1
+  active:scale-95
+"
+    >
+      Current Promotions & Offers
+    </Link>
+
   </motion.div>
 )}
         <motion.div
@@ -219,11 +225,11 @@ into one unified platform.
     ease: [0.22, 1, 0.36, 1],
   }}
 >
-  <div className="text-xs tracking-[0.35em] text-emerald-600 font-semibold mb-5">
+  <div className="text-xs tracking-[0.35em] text-emerald-600 font-semibold mb-5 text-center">
     Flagship Hardware
   </div>
 
-  <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
+  <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-center">
     Self-service kiosks,
     <span className="block text-slate-400">
       fully integrated.
@@ -303,15 +309,15 @@ into one unified platform.
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="text-center mb-16">
-      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+      <div className="text-xs tracking-[0.35em] text-emerald-600 font-semibold mb-5 text-center">
         HOXXES Innovation Lab
       </div>
 
       <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
-        HoloBox
+        Hologram BOX - HoloBox
       </h2>
 
-      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500 text-left">
         Transform customer attention into unforgettable experiences
         with holographic presentations, AI-powered virtual presenters
         and immersive visual engagement.
@@ -370,8 +376,8 @@ memorable customer experiences.
         </div>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-3">
-          <Button href="/request-demo" variant="primary">
-            Request Demo
+          <Button href="/offers" variant="primary">
+            Order HoloBox
           </Button>
 
           <Button

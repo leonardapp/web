@@ -61,16 +61,16 @@ export default function SoftwarePage() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!containerRef.current) return;
+  if (!containerRef.current) return;
 
-      const top = containerRef.current.offsetTop;
-      const scrollY = window.scrollY;
+  const rect = containerRef.current.getBoundingClientRect();
+  const scrollProgress = Math.abs(rect.top);
 
-      const step = window.innerHeight * 0.9;
-      const index = Math.floor((scrollY - top) / step);
+  const step = window.innerHeight;
+  const index = Math.round(scrollProgress / step);
 
-      setActive(Math.max(0, Math.min(slides.length - 1, index)));
-    };
+  setActive(Math.max(0, Math.min(slides.length - 1, index)));
+};
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);

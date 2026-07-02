@@ -36,17 +36,17 @@ export default function AboutPage() {
 <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
 
 <Link
-    href="/software"
+    href="/request-demo"
     className="px-6 py-3 rounded-full bg-black text-white text-sm font-medium hover:bg-slate-800 transition"
   >
-    Explore Platform
+    Request Demo
   </Link>
 
   <Link
-    href="/request-demo"
+    href="/software"
     className="px-6 py-3 rounded-full border border-slate-300 text-sm font-medium hover:bg-black hover:text-white transition"
   >
-    Request Demo
+    Explore Platform
   </Link>
 
   <Link

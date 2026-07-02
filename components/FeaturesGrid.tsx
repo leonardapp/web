@@ -5,14 +5,14 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const features = [
-  { title: "Restaurant POS", image: "https://hoxxes.app/images/pos-operations.png" },
-  { title: "QR Ordering", image: "https://hoxxes.app/images/qr-ordering.png" },
-  { title: "Self-Service Kiosk", image: "https://hoxxes.app/images/kiosk-ordering.png" },
-  { title: "Kitchen Display", image: "https://hoxxes.app/images/kitchen-display-system.png" },
-  { title: "Waiter Operations", image: "https://hoxxes.app/images/waiter-operations.png" },
-  { title: "Online Ordering", image: "https://hoxxes.app/images/online-ordering.png" },
-  { title: "HQ Control Center", image: "https://hoxxes.app/images/dashboard-overview.png" },
-  { title: "Analytics Cloud", image: "https://hoxxes.app/images/analytics-dashboard.png" },
+  { title: "Restaurant POS", image: "https://hoxxes.app/images/pos-operations.png", focus: "60% 50%" },
+  { title: "QR Ordering", image: "https://hoxxes.app/images/qr-ordering.png", focus: "30% 70%" },
+  { title: "Self-Service Kiosk", image: "https://hoxxes.app/images/kiosk-ordering.png", focus: "0% 100%" },
+  { title: "Kitchen Display", image: "https://hoxxes.app/images/kitchen-display-system.png", focus: "10% 100%" },
+  { title: "Waiter Operations", image: "https://hoxxes.app/images/waiter-operations.png", focus: "40% 70%" },
+  { title: "Online Ordering", image: "https://hoxxes.app/images/online-ordering.png", focus: "100% 50%" },
+  { title: "HQ Control Center", image: "https://hoxxes.app/images/dashboard-overview.png", focus: "30% 70%" },
+  { title: "Analytics Cloud", image: "https://hoxxes.app/images/analytics-dashboard.png", focus: "20% 100%" },
 ];
 
 export default function HomeFeatures() {
@@ -129,7 +129,7 @@ export default function HomeFeatures() {
               <Link
                 key={i}
                 href="/software"
-                className="snap-center shrink-0 w-[80%] sm:w-[45%] md:w-[30%]"
+                className="snap-center shrink-0 w-[92%] sm:w-[45%] md:w-[30%]"
               >
                 <div
   className={`relative h-[420px] rounded-2xl overflow-hidden shadow-xl
@@ -146,11 +146,14 @@ export default function HomeFeatures() {
   }}
 >
                   <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover"
-                  />
+  src={item.image}
+  alt={item.title}
+  fill
+  className="object-cover"
+  style={{
+    objectPosition: item.focus,
+  }}
+/>
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent backdrop-blur-[1px]" />
 

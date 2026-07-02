@@ -2,320 +2,221 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import Header from "@/components/Header";
 
-/* HARDWARE */
 const hardware = [
   {
-    title: "Kiosk Slim – Self Service",
-    price: "€1,185 + VAT",
-    preorderPrice: "€1,016 + VAT",
-    preorderEnabled: true,
+    title: "Kiosk Slim",
+    subtitle: "Self-service ordering system",
     image: "https://hoxxes.app/images/kiosk.svg",
     description:
-      "Wall-mounted self-service kiosk with touchscreen ordering, QR integration and built-in receipt printing.",
-  highlight: "Space-saving self-service solution",
-},
-
+      "High-performance self-service kiosk fully integrated with POS, payments and ordering system.",
+  },
   {
-    title: "Android POS Terminal",
-    price: "€677 + VAT",
-    preorderPrice: "€593 + VAT",
-    preorderEnabled: true,
+    title: "POS Terminal",
+    subtitle: "Dual-screen enterprise POS",
     image: "https://hoxxes.app/images/POS.png",
     description:
-      "Dual-screen POS system with cashier + customer display, built for fast retail & restaurant operations.",
-    highlight: "Dual-screen restaurant & retail POS",
+      "Enterprise-grade POS system designed for speed, reliability and real-time operations.",
   },
 ];
 
-/* PREORDER LOGIC */
-const PREORDER_DEADLINE = "2026-06-15";
-
-function isPreorderActive() {
-  return new Date(PREORDER_DEADLINE).getTime() > new Date().getTime();
-}
-
 export default function HardwarePage() {
-  const preorderActive = isPreorderActive();
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
-
-      {/* HEADER */}
+    <div className="bg-white text-black overflow-hidden">
       <Header />
 
-      {/* HERO */}
-<section className="max-w-6xl mx-auto px-6 pt-24 sm:pt-28 lg:pt-32 pb-20 text-center">
+      {/* ================= HERO (APPLE KEYNOTE STYLE) ================= */}
+      <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
 
-  <div className="text-[10px] sm:text-xs tracking-[0.35em] uppercase text-slate-400">
-    Hardware Ecosystem
-  </div>
+        {/* BACKGROUND */}
+        <div className="absolute inset-0">
+          <img
+            src="https://hoxxes.app/images/kiosk-ordering.png"
+            className="w-full h-full object-cover scale-110"
+            alt="Hardware Hero"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black" />
+        </div>
 
-  <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
-    Enterprise hardware
-    <span className="block text-slate-500 mt-2">
-      for modern operations.
-    </span>
-  </h1>
+        {/* CONTENT */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="relative z-10 max-w-4xl px-6 text-white"
+        >
+          <div className="text-xs tracking-[0.35em] uppercase text-white/60">
+            Hardware System
+          </div>
 
-  <p className="mt-6 text-sm sm:text-base md:text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
-    Fully integrated devices designed to run inside the Hoxxes SaaS ecosystem —
-    from ordering to payments to customer experience.
-  </p>
- 
-  <div className="relative mt-16">
-  <img
-    src="https://hoxxes.app/images/kiosk-ordering-2.png"
-    alt="Hoxxes Self Service Kiosk"
-    className="
-      w-full
-      rounded-[32px]
-      shadow-2xl
-      border
-      border-slate-200
-    "
-  />
-</div>
+          <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight">
+            Built for
+            <span className="block text-white/70">
+              modern commerce.
+            </span>
+          </h1>
 
-</section>
+          <p className="mt-6 text-white/70 text-base sm:text-lg max-w-2xl mx-auto">
+            A unified hardware ecosystem designed for restaurants, retail and enterprise operations.
+          </p>
 
-{/* FEATURES */}
-<section className="max-w-6xl mx-auto px-4 sm:px-6 mt-8 pb-16">
-
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 text-center">
-
-    <div className="p-6 sm:p-8 rounded-3xl border border-slate-200 bg-white">
-      <div className="text-xl sm:text-2xl lg:text-3xl font-semibold leading-tight">
-        32" Touchscreen
-      </div>
-
-      <div className="mt-2 text-sm sm:text-base text-slate-500 max-w-[220px] mx-auto">
-        Interactive self-service ordering
-      </div>
-    </div>
-
-    <div className="p-6 sm:p-8 rounded-3xl border border-slate-200 bg-white">
-      <div className="text-xl sm:text-2xl lg:text-3xl font-semibold leading-tight">
-        Wall-Mounted
-      </div>
-
-      <div className="mt-2 text-sm sm:text-base text-slate-500 max-w-[220px] mx-auto">
-        Space-saving installation design
-      </div>
-    </div>
-
-    <div className="p-6 sm:p-8 rounded-3xl border border-slate-200 bg-white">
-      <div className="text-xl sm:text-2xl lg:text-3xl font-semibold leading-tight">
-        Integrated Printer
-      </div>
-
-      <div className="mt-2 text-sm sm:text-base text-slate-500 max-w-[220px] mx-auto">
-        Built-in receipt printing
-      </div>
-    </div>
-
-  </div>
-
-  
-
-</section>
-
-      {/* HARDWARE GRID */}
-      <section className="max-w-7xl mx-auto px-6 pb-24 sm:pb-32">
-        
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 max-w-5xl mx-auto">
-
-          {hardware.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -6 }}
-              transition={{ type: "spring", stiffness: 200 }}
-              className="group border border-slate-200 rounded-2xl bg-white shadow-sm hover:shadow-xl overflow-hidden flex flex-col"
+          <div className="mt-10 flex justify-center gap-3">
+            <Link
+              href="/request-demo"
+              className="px-6 py-3 rounded-full bg-white text-black font-medium hover:scale-105 transition"
             >
+              Request Demo
+            </Link>
 
-              {/* IMAGE */}
-              <div className="relative h-44 sm:h-52 bg-slate-50 flex items-center justify-center p-4 overflow-hidden">
+            <Link
+              href="/contact-sales"
+              className="px-6 py-3 rounded-full border border-white/30 text-white hover:bg-white/10 transition"
+            >
+              Contact Sales
+            </Link>
+          </div>
+        </motion.div>
+      </section>
 
-                {item.preorderEnabled && preorderActive && (
-                  <div className="absolute top-3 left-3 z-10">
-                    <div className="px-2.5 py-1 rounded-full bg-black text-white text-[10px] font-medium tracking-wide uppercase">
-                      Preorder
-                    </div>
-                  </div>
-                )}
+      {/* ================= INTRO ================= */}
+      <section className="py-32 text-center max-w-4xl mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-3xl sm:text-4xl font-semibold">
+            Hardware is not a device.
+            <span className="block text-slate-500">
+              It’s infrastructure.
+            </span>
+          </h2>
+
+          <p className="mt-6 text-slate-500 text-lg leading-relaxed">
+            Every device in the ecosystem is part of a unified operating system — connected, real-time, and intelligent.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* ================= HARDWARE SHOWCASE ================= */}
+      <section className="space-y-40 pb-32">
+
+        {hardware.map((item, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 1 }}
+            className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center"
+          >
+
+            {/* TEXT */}
+            <div className={i % 2 === 1 ? "md:order-2" : ""}>
+              <div className="text-xs tracking-[0.3em] uppercase text-slate-400">
+                Hardware
+              </div>
+
+              <h3 className="mt-4 text-4xl font-semibold">
+                {item.title}
+              </h3>
+
+              <p className="mt-4 text-slate-500 text-lg">
+                {item.subtitle}
+              </p>
+
+              <p className="mt-6 text-slate-400 leading-relaxed">
+                Engineered for reliability, speed and seamless integration
+                with POS, ordering and payment systems.
+              </p>
+
+              {/* LEARN MORE BUTTON (FIXED) */}
+              <button
+                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                className="inline-block mt-8 text-sm font-medium text-black/70 hover:text-black transition"
+              >
+                Learn more →
+              </button>
+
+              {/* EXPAND (APPLE STYLE REVEAL) */}
+              <motion.div
+                initial={false}
+                animate={{
+                  height: openIndex === i ? "auto" : 0,
+                  opacity: openIndex === i ? 1 : 0,
+                }}
+                transition={{ duration: 0.5 }}
+                className="overflow-hidden"
+              >
+                <p className="mt-4 text-slate-500 text-sm leading-relaxed">
+                  {item.description}
+                </p>
+              </motion.div>
+            </div>
+
+            {/* IMAGE */}
+            <div className={i % 2 === 1 ? "md:order-1" : ""}>
+              <div className="relative">
+                <div className="absolute inset-0 bg-emerald-400/20 blur-3xl rounded-full" />
 
                 <img
                   src={item.image}
+                  className="relative w-full rounded-2xl shadow-2xl"
                   alt={item.title}
-                  className="h-full object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
+            </div>
 
-              {/* CONTENT */}
-              <div className="p-5 sm:p-6 flex flex-col flex-1">
-
-                <div className="text-[10px] sm:text-[11px] uppercase tracking-wider text-slate-400">
-                  {item.highlight}
-                </div>
-
-                <h3 className="mt-1.5 text-base sm:text-lg font-semibold tracking-tight">
-                  {item.title}
-                </h3>
-
-                <p className="text-sm text-slate-500 mt-2 leading-relaxed">
-                  {item.description}
-                </p>
-
-                {/* PRICE */}
-                <div className="mt-5 text-center">
-
-                  {item.preorderEnabled && preorderActive ? (
-                    <>
-                      <div className="flex items-center justify-center gap-2">
-
-                        <span className="text-slate-400 line-through text-sm">
-                          {item.price}
-                        </span>
-
-                        <span className="text-2xl sm:text-3xl font-bold tracking-tight">
-                          {item.preorderPrice}
-                        </span>
-
-                      </div>
-
-                      <div className="mt-3 inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5">
-                        <span className="text-[11px] text-emerald-700 font-medium">
-                          Preorder valid until {PREORDER_DEADLINE}
-                        </span>
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <div className="text-2xl sm:text-3xl font-bold tracking-tight">
-                        {item.price}
-                      </div>
-
-                      <div className="text-xs text-slate-400 mt-1">
-                        Starting price
-                      </div>
-                    </>
-                  )}
-
-                </div>
-
-                {/* BUTTON */}
-                <Link
-  href="/contact-sales"
-  className="
-    mt-5
-    w-full
-    px-6
-    py-3
-    rounded-full
-    bg-black
-    text-white
-    text-sm
-    font-medium
-    text-center
-    hover:bg-slate-800
-    transition
-  "
->
-  {item.preorderEnabled && preorderActive
-    ? "Preorder"
-    : "Request Offer"}
-</Link>
-{item.title === "Kiosk Slim – Self Service" && (
-  <a
-    href="https://hoxxes.app/images/kiosk-dimensions.png"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="
-      mt-3
-      w-full
-      inline-flex
-      items-center
-      justify-center
-      px-6
-      py-3
-      rounded-full
-      border
-      border-slate-300
-      text-slate-700
-      text-sm
-      font-medium
-      hover:bg-black
-      hover:text-white
-      hover:border-black
-      transition
-    "
-  >
-    View Technical Drawing
-  </a>
-)}
-
-              </div>
-            </motion.div>
-          ))}
-
-        </div>
-
-      </section>
-      <section className="max-w-5xl mx-auto px-6 pb-20">
-  <div className="rounded-3xl border border-slate-200 bg-white p-8 text-center">
-
-    <div className="text-xs uppercase tracking-[0.3em] text-emerald-600">
-      Warranty & Support
-    </div>
-
-    <h3 className="mt-4 text-2xl font-semibold">
-      Deployment guidance included.
-    </h3>
-
-    <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
-      All hardware deployments include onboarding guidance,
-      warranty coverage and access to technical support resources.
-    </p>
-
-  </div>
-</section>
-
-      {/* CTA */}
-      <section className="py-24 sm:py-32 bg-slate-50 border-y border-slate-200 text-center px-6">
-
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight">
-          One ecosystem. All your hardware connected.
-        </h2>
-
-        <p className="mt-4 text-slate-500 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-          Deploy POS, kiosk and hardware fully synced with your SaaS platform.
-        </p>
-
-        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
-
-          <Link
-            href="/request-demo"
-            className="px-6 py-3 rounded-full bg-black text-white hover:bg-slate-800 transition text-sm font-medium"
-          >
-            Request Demo
-          </Link>
-
-          <Link
-  href="/contact-sales"
-  className="px-6 py-3 rounded-full border border-slate-300 text-slate-700 hover:bg-black hover:text-white hover:border-black transition text-sm font-medium"
->
-  Request Hardware Quote
-</Link>
-
-        </div>
-
+          </motion.div>
+        ))}
       </section>
 
+      {/* ================= FINAL CTA ================= */}
+      <section className="py-40 text-center bg-black text-white">
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+
+          <h2 className="text-3xl sm:text-4xl font-semibold">
+            One ecosystem.
+            <span className="block text-white/60">
+              All hardware connected.
+            </span>
+          </h2>
+
+          <p className="mt-6 text-white/60 max-w-2xl mx-auto">
+            Deploy POS, kiosks and infrastructure fully integrated with your SaaS platform.
+          </p>
+
+          <div className="mt-10 flex justify-center gap-3">
+            <Link
+              href="/request-demo"
+              className="px-6 py-3 rounded-full bg-white text-black hover:scale-105 transition"
+            >
+              Request Demo
+            </Link>
+
+            <Link
+              href="/contact-sales"
+              className="px-6 py-3 rounded-full border border-white/30 hover:bg-white/10 transition"
+            >
+              Contact Sales
+            </Link>
+          </div>
+
+        </motion.div>
+
+      </section>
     </div>
   );
 }
