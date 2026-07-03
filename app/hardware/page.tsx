@@ -9,6 +9,11 @@ const hardware = [
   {
     title: "Kiosk Slim",
     subtitle: "Self-service ordering system",
+    price: "€1,185 + VAT",
+    preorderPrice: "€1,050 + VAT",
+    stock: "10 units",
+    availableFrom: "15 July",
+    preorderAvailableFrom: "3 months",
     image: "https://hoxxes.app/images/kiosk.svg",
     description:
       "High-performance self-service kiosk fully integrated with POS, payments and ordering system.",
@@ -16,6 +21,11 @@ const hardware = [
   {
     title: "POS Terminal",
     subtitle: "Dual-screen enterprise POS",
+    price: "€677 + VAT",
+    preorderPrice: "€599 + VAT",
+    stock: "5 units",
+    availableFrom: "15 July",
+    preorderAvailableFrom: "3 months",
     image: "https://hoxxes.app/images/POS.png",
     description:
       "Enterprise-grade POS system designed for speed, reliability and real-time operations.",
@@ -24,18 +34,17 @@ const hardware = [
 
 export default function HardwarePage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openDimensions, setOpenDimensions] = useState(false);
 
   return (
-    <div className="bg-white text-black overflow-hidden">
+    <div className="bg-transparent text-black overflow-hidden">
       <Header />
 
-      {/* ================= HERO (APPLE KEYNOTE STYLE) ================= */}
+      {/* ================= HERO ================= */}
       <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
-
-        {/* BACKGROUND */}
         <div className="absolute inset-0">
           <img
-            src="https://hoxxes.app/images/kiosk-ordering.png"
+            src="https://hoxxes.app/images/hero.png"
             className="w-full h-full object-cover scale-110"
             alt="Hardware Hero"
           />
@@ -43,7 +52,6 @@ export default function HardwarePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black" />
         </div>
 
-        {/* CONTENT */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -56,9 +64,7 @@ export default function HardwarePage() {
 
           <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight">
             Built for
-            <span className="block text-white/70">
-              modern commerce.
-            </span>
+            <span className="block text-white/70">modern commerce.</span>
           </h1>
 
           <p className="mt-6 text-white/70 text-base sm:text-lg max-w-2xl mx-auto">
@@ -93,9 +99,7 @@ export default function HardwarePage() {
         >
           <h2 className="text-3xl sm:text-4xl font-semibold">
             Hardware is not a device.
-            <span className="block text-slate-500">
-              It’s infrastructure.
-            </span>
+            <span className="block text-slate-500">It’s infrastructure.</span>
           </h2>
 
           <p className="mt-6 text-slate-500 text-lg leading-relaxed">
@@ -104,9 +108,8 @@ export default function HardwarePage() {
         </motion.div>
       </section>
 
-      {/* ================= HARDWARE SHOWCASE ================= */}
+      {/* ================= HARDWARE ================= */}
       <section className="space-y-40 pb-32">
-
         {hardware.map((item, i) => (
           <motion.div
             key={i}
@@ -116,27 +119,37 @@ export default function HardwarePage() {
             transition={{ duration: 1 }}
             className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center"
           >
-
             {/* TEXT */}
             <div className={i % 2 === 1 ? "md:order-2" : ""}>
               <div className="text-xs tracking-[0.3em] uppercase text-slate-400">
                 Hardware
               </div>
 
-              <h3 className="mt-4 text-4xl font-semibold">
-                {item.title}
-              </h3>
+              <h3 className="mt-4 text-4xl font-semibold">{item.title}</h3>
 
-              <p className="mt-4 text-slate-500 text-lg">
-                {item.subtitle}
-              </p>
+              <p className="mt-4 text-slate-500 text-lg">{item.subtitle}</p>
+
+              {/* PRICE */}
+              <div className="mt-3 text-black font-medium text-lg">
+                {item.price}
+              </div>
+
+              {/* STOCK */}
+              <div className="mt-3 text-sm text-slate-600">
+                <span className="font-medium text-black">{item.stock}</span> available • Ships from{" "}
+                <span className="font-medium text-black">{item.availableFrom}</span>
+              </div>
+
+              {/* BADGE */}
+              <span className="inline-block mt-3 text-xs px-3 py-1 rounded-full bg-amber-100 text-amber-700">
+                Limited Stock • Pre-order now
+              </span>
 
               <p className="mt-6 text-slate-400 leading-relaxed">
-                Engineered for reliability, speed and seamless integration
-                with POS, ordering and payment systems.
+                Engineered for reliability, speed and seamless integration with POS, ordering and payment systems.
               </p>
 
-              {/* LEARN MORE BUTTON (FIXED) */}
+              {/* LEARN MORE */}
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="inline-block mt-8 text-sm font-medium text-black/70 hover:text-black transition"
@@ -144,7 +157,17 @@ export default function HardwarePage() {
                 Learn more →
               </button>
 
-              {/* EXPAND (APPLE STYLE REVEAL) */}
+              {/* VIEW DIMENSIONS (ONLY KIOSK) */}
+              {item.title === "Kiosk Slim" && (
+                <button
+                  onClick={() => setOpenDimensions(true)}
+                  className="block mt-4 text-sm font-medium text-black/70 hover:text-black underline transition"
+                >
+                  View Dimensions
+                </button>
+              )}
+
+              {/* EXPAND */}
               <motion.div
                 initial={false}
                 animate={{
@@ -158,6 +181,27 @@ export default function HardwarePage() {
                   {item.description}
                 </p>
               </motion.div>
+
+              {/* CTA */}
+<div className="mt-6 flex gap-3 flex-wrap">
+  <a
+  href={`mailto:info@hoxxes.com?subject=Pre-order%20Request%20-%20${encodeURIComponent(
+    item.title
+  )}&body=Hello%20Hoxxes,%0D%0A%0D%0AI am interested in pre-ordering your hardware.%0D%0A%0D%0AProduct:%20${encodeURIComponent(
+    item.title
+  )}%0D%0AQuantity:%0D%0ACompany:%0D%0A%0D%0AThank you.`}
+  className="px-5 py-2 rounded-full bg-black text-white text-sm hover:scale-105 transition inline-block"
+>
+  Pre-order Now
+</a>
+
+  <Link
+    href="/contact-sales"
+    className="px-5 py-2 rounded-full border border-black/20 text-sm hover:bg-black/5 transition"
+  >
+    Request Quote
+  </Link>
+</div>
             </div>
 
             {/* IMAGE */}
@@ -172,26 +216,47 @@ export default function HardwarePage() {
                 />
               </div>
             </div>
-
           </motion.div>
         ))}
       </section>
 
+      {/* ================= DIMENSIONS MODAL ================= */}
+      {openDimensions && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-6"
+          onClick={() => setOpenDimensions(false)}
+        >
+          <div
+            className="relative max-w-5xl w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src="https://hoxxes.app/images/kiosk-dimensions.png"
+              className="w-full max-h-[90vh] object-contain rounded-xl shadow-2xl"
+              alt="Kiosk Dimensions"
+            />
+
+            <button
+              onClick={() => setOpenDimensions(false)}
+              className="absolute top-3 right-3 bg-white text-black rounded-full px-3 py-1 text-sm"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* ================= FINAL CTA ================= */}
       <section className="py-40 text-center bg-black text-white">
-
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-
           <h2 className="text-3xl sm:text-4xl font-semibold">
             One ecosystem.
-            <span className="block text-white/60">
-              All hardware connected.
-            </span>
+            <span className="block text-white/60">All hardware connected.</span>
           </h2>
 
           <p className="mt-6 text-white/60 max-w-2xl mx-auto">
@@ -213,9 +278,7 @@ export default function HardwarePage() {
               Contact Sales
             </Link>
           </div>
-
         </motion.div>
-
       </section>
     </div>
   );
