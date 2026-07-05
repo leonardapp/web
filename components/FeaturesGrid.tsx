@@ -6,22 +6,22 @@ import { useEffect, useRef, useState } from "react";
 
 const features = [
   {
-    title: "Restaurant POS",
-    image: "https://hoxxes.app/images/pos-operations.png",
-    focus: "60% 50%",
-    href: "/software#restaurant-pos",
-  },
-  {
     title: "QR Ordering",
     image: "https://hoxxes.app/images/qr-ordering.png",
     focus: "30% 70%",
     href: "/software#qr-ordering",
   },
   {
-    title: "Self-Service Kiosk",
-    image: "https://hoxxes.app/images/kiosk-ordering.png",
-    focus: "0% 100%",
-    href: "/software#self-service-kiosk",
+    title: "Online Ordering",
+    image: "https://hoxxes.app/images/online-ordering.png",
+    focus: "100% 50%",
+    href: "/software#online-ordering",
+  },
+  {
+    title: "Restaurant POS",
+    image: "https://hoxxes.app/images/pos-operations.png",
+    focus: "60% 50%",
+    href: "/software#restaurant-pos",
   },
   {
     title: "Kitchen Display",
@@ -30,16 +30,16 @@ const features = [
     href: "/software#kitchen-display",
   },
   {
-    title: "Waiter Operations",
+    title: "Operations Hub",
     image: "https://hoxxes.app/images/waiter-operations.png",
     focus: "40% 70%",
     href: "/software#waiter-operations",
-  },
+  },  
   {
-    title: "Online Ordering",
-    image: "https://hoxxes.app/images/online-ordering.png",
-    focus: "100% 50%",
-    href: "/software#online-ordering",
+    title: "Self-Service Kiosk",
+    image: "https://hoxxes.app/images/kiosk-ordering.png",
+    focus: "0% 100%",
+    href: "/software#self-service-kiosk",
   },
   {
     title: "HQ Control Center",

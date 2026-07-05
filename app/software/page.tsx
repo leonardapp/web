@@ -5,61 +5,62 @@ import Image from "next/image";
 import Header from "@/components/Header";
 
 const slides = [
+{
+    title: "QR Ordering",
+    desc: "Orders flow directly to kitchen stations with live prioritization.",
+    benefits: ["QR Scan", "Live Menu", "Waiter Call", "Real-time Sync"],
+    image: "https://hoxxes.app/images/qr-ordering.png",
+    focus: "30% 70%",
+  },
+{
+    title: "Online Ordering",
+    desc: "Your fully branded ordering ecosystem.",
+    benefits: ["Delivery", "Pickup", "Wallet", "Loyalty"],
+    image: "https://hoxxes.app/images/online-ordering.png",
+    focus: "100% 50%",
+  },
   {
     title: "Restaurant POS",
-    desc: "Control orders, tables and payments in real time.",
-    benefits: ["Web POS", "Android POS", "Offline Mode", "Multi-location"],
+    desc: "Take orders, process payments and manage tables in real time.",
+    benefits: ["Web POS", "Android POS", "Offline Mode", "Multi-Location"],
     image: "https://hoxxes.app/images/pos-operations.png",
-    focus: "60% 50%"
-  },
-  {
-    title: "QR Ordering",
-    desc: "Customers order instantly from their table.",
-    benefits: ["QR Scan", "Live Menu", "Waiter Call", "Sync"],
-    image: "https://hoxxes.app/images/qr-ordering.png",
-    focus: "30% 70%"
-  },
-  {
-    title: "Self-Service Kiosk",
-    desc: "Fast ordering without queues.",
-    benefits: ["Upselling", "Payments", "Branding", "Sync"],
-    image: "https://hoxxes.app/images/kiosk-ordering.png",
-    focus: "0% 100%"
+    focus: "60% 50%",
   },
   {
     title: "Kitchen Display System",
-    desc: "Orders flow directly to kitchen stations.",
+    desc: "Orders flow directly into kitchen stations in real time.",
     benefits: ["Live Orders", "Routing", "Stations", "Priority"],
     image: "https://hoxxes.app/images/kitchen-display-system.png",
-    focus: "10% 100%"
+    focus: "10% 100%",
   },
   {
-    title: "Waiter Operations",
-    desc: "Full control for staff mobility.",
-    benefits: ["Tables", "Orders", "Live Updates", "Sync"],
+    title: "Operations Hub",
+    desc: "Unified role-based app for staff, managers and owners.",
+    benefits: ["Waiter Mode", "Manager Mode", "Owner Mode", "Real-time Sync"],
     image: "https://hoxxes.app/images/waiter-operations.png",
-    focus: "40% 70%"
+    focus: "40% 70%",
   },
+  
   {
-    title: "Online Ordering",
-    desc: "Your branded ordering ecosystem.",
-    benefits: ["Delivery", "Pickup", "Wallet", "Loyalty"],
-    image: "https://hoxxes.app/images/online-ordering.png",
-    focus: "100% 50%"
+    title: "Self-Service Kiosk",
+    desc: "Fast self-ordering experience without queues.",
+    benefits: ["Upselling", "Payments", "Branding", "Sync"],
+    image: "https://hoxxes.app/images/kiosk-ordering.png",
+    focus: "0% 100%",
   },
   {
     title: "HQ Control Center",
-    desc: "Centralized multi-location management.",
+    desc: "Centralized control for multi-location operations.",
     benefits: ["HQ View", "Sync", "Menus", "Campaigns"],
     image: "https://hoxxes.app/images/dashboard-overview.png",
-    focus: "15% 100%"
+    focus: "15% 100%",
   },
   {
     title: "Analytics Cloud",
-    desc: "Real-time business intelligence.",
+    desc: "Real-time business intelligence and performance tracking.",
     benefits: ["Sales", "KPI", "Reports", "Forecasting"],
     image: "https://hoxxes.app/images/analytics-dashboard.png",
-    focus: "50% 100%"
+    focus: "50% 100%",
   },
 ];
 
@@ -69,16 +70,16 @@ export default function SoftwarePage() {
 
   useEffect(() => {
     const handleScroll = () => {
-  if (!containerRef.current) return;
+      if (!containerRef.current) return;
 
-  const rect = containerRef.current.getBoundingClientRect();
-  const scrollProgress = Math.abs(rect.top);
+      const rect = containerRef.current.getBoundingClientRect();
+      const scrollProgress = Math.abs(rect.top);
 
-  const step = window.innerHeight;
-  const index = Math.round(scrollProgress / step);
+      const step = window.innerHeight;
+      const index = Math.round(scrollProgress / step);
 
-  setActive(Math.max(0, Math.min(slides.length - 1, index)));
-};
+      setActive(Math.max(0, Math.min(slides.length - 1, index)));
+    };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -90,21 +91,22 @@ export default function SoftwarePage() {
       <Header />
 
       {/* INTRO */}
-      <section className="pt-32 pb-10 text-center px-6">
-        <div className="text-xs uppercase tracking-[0.35em] text-slate-400">
-          HOXXES Platform
-        </div>
+<section className="pt-32 pb-10 text-center px-6">
+  <div className="text-xs uppercase tracking-[0.35em] text-slate-400">
+    HOXXES Platform
+  </div>
 
-        <h1 className="mt-4 text-3xl sm:text-5xl font-semibold">
-          One system for all operations
-        </h1>
+  <h1 className="mt-4 text-3xl sm:text-5xl font-semibold">
+    Every order. Every screen. One real-time system.
+  </h1>
 
-        <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
-          POS, QR Ordering, Kiosk, Kitchen, Mobile & HQ — unified into one ecosystem.
-        </p>
-      </section>
+  <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
+    A unified operating system that connects ordering, kitchen, payments and analytics into one live flow.
+  </p>
 
-      {/* VISION PRO SCROLL SECTION */}
+</section>
+
+      {/* SCROLL SECTION */}
       <section
         ref={containerRef}
         className="relative"
@@ -112,7 +114,7 @@ export default function SoftwarePage() {
       >
         <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
 
-          {/* BACKGROUND LAYERS */}
+          {/* BACKGROUND */}
           {slides.map((s, i) => (
             <div
               key={i}
@@ -135,7 +137,7 @@ export default function SoftwarePage() {
           {/* OVERLAY */}
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]" />
 
-          {/* TEXT */}
+          {/* CONTENT */}
           <div className="relative z-10 text-center max-w-2xl px-6 text-white">
 
             <h2 className="text-4xl sm:text-6xl font-semibold tracking-tight drop-shadow-xl">
@@ -146,60 +148,72 @@ export default function SoftwarePage() {
               {slides[active].desc}
             </p>
 
-            {/* BENEFITS */}
-            <div className="mt-6 flex flex-wrap justify-center gap-2">
+            {/* SPACER */}
+            <div className="mt-5" />
+
+            {/* BENEFITS (soft labels - NOT buttons) */}
+            <div className="flex flex-wrap justify-center gap-2">
               {slides[active].benefits.map((b, i) => (
                 <span
                   key={i}
-                  className="px-4 py-1 text-xs rounded-full bg-white/10 border border-white/20 backdrop-blur-md"
+                  className="px-3 py-1 text-xs rounded-full bg-white/5 text-white/70"
                 >
                   {b}
                 </span>
               ))}
             </div>
 
+            {/* DIVIDER */}
+            <div className="mt-6 h-px w-10 bg-white/10 mx-auto" />
+
             {/* CTA */}
-<div className="mt-8 flex justify-center gap-3">
-  <a
-    href="/request-demo"
-    className="px-5 py-2 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90"
-  >
-    Demo
-  </a>
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
 
-  <a
-    href="/hardware"
-    className="px-5 py-2 rounded-full border border-white/30 text-white text-sm hover:bg-white/10"
-  >
-    Hardware
-  </a>
+              {/* PRIMARY */}
+              <a
+                href="/request-demo"
+                className="px-6 py-2 rounded-full bg-white text-black text-sm font-medium hover:scale-105 transition shadow-[0_0_40px_rgba(255,255,255,0.15)]"
+              >
+                Request Demo
+              </a>
 
-  <a
-    href="/pricing"
-    className="px-5 py-2 rounded-full border border-white/30 text-white text-sm hover:bg-white/10"
-  >
-    Pricing
-  </a>
-</div>
+              {/* SECONDARY */}
+              <div className="flex gap-2">
+                <a
+                  href="/hardware"
+                  className="px-5 py-2 rounded-full border border-white/20 text-white text-sm hover:bg-white/10 transition"
+                >
+                  Hardware
+                </a>
+
+                <a
+                  href="/pricing"
+                  className="px-5 py-2 rounded-full border border-white/20 text-white text-sm hover:bg-white/10 transition"
+                >
+                  Pricing
+                </a>
+              </div>
+
+            </div>
 
             <p className="mt-4 text-xs text-white/50">
               Trusted by restaurants, retail & enterprise operators
             </p>
-            
-          </div>
-          {active < slides.length - 1 && (
-  <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
-    
-    <div className="relative h-16 w-px overflow-hidden rounded-full bg-white/10">
-      <div className="absolute left-0 top-0 h-5 w-full bg-gradient-to-b from-white to-transparent animate-scroll-indicator" />
-    </div>
 
-  </div>
-)}
-          
+          </div>
+
+          {/* SCROLL INDICATOR */}
+          {active < slides.length - 1 && (
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
+              <div className="relative h-16 w-px overflow-hidden rounded-full bg-white/10">
+                <div className="absolute left-0 top-0 h-5 w-full bg-gradient-to-b from-white to-transparent animate-scroll-indicator" />
+              </div>
+            </div>
+          )}
+
         </div>
 
-        {/* SCROLL INDICATORS */}
+        {/* DOTS */}
         <div className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col gap-2 z-20">
           {slides.map((_, i) => (
             <div
@@ -211,16 +225,35 @@ export default function SoftwarePage() {
           ))}
         </div>
       </section>
+      <section className="py-24 text-center">
+
+  <h2 className="text-3xl font-semibold">
+    Want to explore every feature?
+  </h2>
+
+  <p className="mt-4 text-slate-500">
+    View the complete documentation of every module included in HOXXES.
+  </p>
+
+
+  <a
+  href="/learn-more"
+  className="mt-8 inline-block px-6 py-3 rounded-full border border-slate-300 text-slate-700 text-sm font-medium hover:bg-black hover:text-white hover:border-black transition"
+>
+  Learn More
+</a>
+
+</section>
 
       {/* VALUE SECTION */}
       <section className="py-24 px-6 text-center max-w-6xl mx-auto">
 
         <h2 className="text-3xl sm:text-4xl font-semibold">
-          Built for real operational efficiency.
+          A system designed for real operational control.
         </h2>
 
         <p className="mt-4 text-black/60 max-w-2xl mx-auto">
-          Reduce errors, increase speed and unify all restaurant operations into one system.
+          Hoxxes replaces fragmented tools with a unified real-time operating layer.
         </p>
 
         <div className="mt-12 grid sm:grid-cols-4 gap-6">
@@ -247,6 +280,7 @@ export default function SoftwarePage() {
 
         </div>
       </section>
+      
 
     </div>
   );
