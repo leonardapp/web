@@ -89,25 +89,8 @@ export default function Footer() {
               >
                 Download Center
               </Link>
-              <div className="flex md:hidden items-center gap-4 pt-4">
-  <a
-    href="https://www.instagram.com/hoxxes_innovation/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-emerald-600 hover:text-emerald-500 transition-all duration-200"
-  >
-    <FaInstagram size={20} />
-  </a>
+              
 
-  <a
-    href="https://www.facebook.com/profile.php?id=61569182421739"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-emerald-600 hover:text-emerald-500 transition-all duration-200"
-  >
-    <FaFacebookF size={20} />
-  </a>
-</div>
 
             </div>
           </div>

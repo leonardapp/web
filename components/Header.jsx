@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "@/components/Logo";
+import { FaInstagram, FaFacebookF } from "react-icons/fa";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -126,6 +127,7 @@ export default function Header() {
                   ✕
                 </button>
               </div>
+              
 
               {/* LINKS */}
               <div className="flex flex-col gap-6 p-6 text-lg font-medium">
@@ -164,10 +166,31 @@ export default function Header() {
                 >
                   Back Office
                 </Link>
+                
               </div>
+              <div className="px-6 pb-6 flex items-center gap-4">
+  <a
+    href="https://www.instagram.com/hoxxes_innovation/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-emerald-600 hover:text-emerald-500 transition-all duration-200"
+  >
+    <FaInstagram size={20} />
+  </a>
+
+  <a
+    href="https://www.facebook.com/profile.php?id=61569182421739"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-emerald-600 hover:text-emerald-500 transition-all duration-200"
+  >
+    <FaFacebookF size={20} />
+  </a>
+</div>
             </motion.div>
           </>
         )}
+        
       </AnimatePresence>
     </>
   );
