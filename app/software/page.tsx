@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Header from "@/components/Header";
+import Button from "@/components/Button";
 
 const slides = [
 {
@@ -17,36 +18,35 @@ const slides = [
     desc: "Your fully branded ordering ecosystem.",
     benefits: ["Delivery", "Pickup", "Wallet", "Loyalty"],
     image: "https://hoxxes.app/images/online-ordering.png",
-    focus: "100% 50%",
+    focus: "90% 50%",
   },
   {
     title: "Restaurant POS",
     desc: "Take orders, process payments and manage tables in real time.",
     benefits: ["Web POS", "Android POS", "Offline Mode", "Multi-Location"],
     image: "https://hoxxes.app/images/pos-operations.png",
-    focus: "60% 50%",
+    focus: "50% 100%",
   },
   {
     title: "Kitchen Display System",
     desc: "Orders flow directly into kitchen stations in real time.",
     benefits: ["Live Orders", "Routing", "Stations", "Priority"],
     image: "https://hoxxes.app/images/kitchen-display-system.png",
-    focus: "10% 100%",
+    focus: "30% 100%",
   },
   {
     title: "Operations Hub",
     desc: "Unified role-based app for staff, managers and owners.",
     benefits: ["Waiter Mode", "Manager Mode", "Owner Mode", "Real-time Sync"],
     image: "https://hoxxes.app/images/waiter-operations.png",
-    focus: "40% 70%",
+    focus: "50% 70%",
   },
-  
-  {
+    {
     title: "Self-Service Kiosk",
     desc: "Fast self-ordering experience without queues.",
     benefits: ["Upselling", "Payments", "Branding", "Sync"],
     image: "https://hoxxes.app/images/kiosk-ordering.png",
-    focus: "0% 100%",
+    focus: "15% 100%",
   },
   {
     title: "HQ Control Center",
@@ -60,7 +60,7 @@ const slides = [
     desc: "Real-time business intelligence and performance tracking.",
     benefits: ["Sales", "KPI", "Reports", "Forecasting"],
     image: "https://hoxxes.app/images/analytics-dashboard.png",
-    focus: "50% 100%",
+    focus: "60% 100%",
   },
 ];
 
@@ -125,12 +125,15 @@ export default function SoftwarePage() {
               }}
             >
               <Image
-                src={s.image}
-                alt={s.title}
-                fill
-                className="object-cover"
-                priority={i === active}
-              />
+  src={s.image}
+  alt={s.title}
+  fill
+  className="object-cover"
+  style={{
+    objectPosition: s.focus,
+  }}
+  priority={i === active}
+/>
             </div>
           ))}
 
@@ -225,25 +228,7 @@ export default function SoftwarePage() {
           ))}
         </div>
       </section>
-      <section className="py-24 text-center">
-
-  <h2 className="text-3xl font-semibold">
-    Want to explore every feature?
-  </h2>
-
-  <p className="mt-4 text-slate-500">
-    View the complete documentation of every module included in HOXXES.
-  </p>
-
-
-  <a
-  href="/learn-more"
-  className="mt-8 inline-block px-6 py-3 rounded-full border border-slate-300 text-slate-700 text-sm font-medium hover:bg-black hover:text-white hover:border-black transition"
->
-  Learn More
-</a>
-
-</section>
+      
 
       {/* VALUE SECTION */}
       <section className="py-24 px-6 text-center max-w-6xl mx-auto">
@@ -280,6 +265,26 @@ export default function SoftwarePage() {
 
         </div>
       </section>
+      <section className="py-24 text-center">
+
+  <h2 className="text-3xl font-semibold">
+    Want to explore every feature?
+  </h2>
+
+  <p className="mt-4 text-slate-500">
+    View the complete documentation of every module included in HOXXES.
+  </p>
+
+
+<a
+  href="/learn-more"
+  className="mt-8 inline-block px-6 py-3 rounded-full border border-slate-300 text-slate-700 text-sm font-medium hover:bg-black hover:text-white hover:border-black transition"
+>
+  Learn More
+</a>
+
+
+</section>
       
 
     </div>

@@ -4,32 +4,31 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Header from "@/components/Header";
+import Button from "@/components/Button";
 
 const hardware = [
+ {
+  title: "Kiosk Slim",
+   subtitle: '32" wall-mounted self-service kiosk',
+  price: "€1,185 + VAT",
+  preorderPrice: "€1,050 + VAT",
+  availableFrom: "15 July",
+  preorderAvailableFrom: "3 months",
+  image: "https://hoxxes.app/images/kiosk.svg",
+  description:
+    "Space-saving 32-inch wall-mounted self-service kiosk fully integrated with POS, payment terminals and the HOXXES ordering ecosystem.",
+},
   {
-    title: "Kiosk Slim",
-    subtitle: "Self-service ordering system",
-    price: "€1,185 + VAT",
-    preorderPrice: "€1,050 + VAT",
-    stock: "10 units",
-    availableFrom: "15 July",
-    preorderAvailableFrom: "3 months",
-    image: "https://hoxxes.app/images/kiosk.svg",
-    description:
-      "High-performance self-service kiosk fully integrated with POS, payments and ordering system.",
-  },
-  {
-    title: "POS Terminal",
-    subtitle: "Dual-screen enterprise POS",
-    price: "€677 + VAT",
-    preorderPrice: "€599 + VAT",
-    stock: "5 units",
-    availableFrom: "15 July",
-    preorderAvailableFrom: "3 months",
-    image: "https://hoxxes.app/images/POS.png",
-    description:
-      "Enterprise-grade POS system designed for speed, reliability and real-time operations.",
-  },
+  title: "POS Terminal",
+  subtitle: "Enterprise dual-screen POS",
+  price: "€677 + VAT",
+  preorderPrice: "€599 + VAT",
+  availableFrom: "15 July",
+  preorderAvailableFrom: "3 months",
+  image: "https://hoxxes.app/images/POS.png",
+  description:
+  "Enterprise dual-screen POS terminal featuring Offline Mode for uninterrupted operations, high-speed transactions and seamless integration with the HOXXES ecosystem.",
+},
 ];
 
 export default function HardwarePage() {
@@ -44,10 +43,13 @@ export default function HardwarePage() {
       <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://hoxxes.app/images/hero.png"
-            className="w-full h-full object-cover scale-110"
-            alt="Hardware Hero"
-          />
+  src="https://hoxxes.app/images/hero.png"
+  alt="Hardware Hero"
+  className="w-full h-full object-cover scale-110"
+  style={{
+    objectPosition: "75% 20%",
+  }}
+/>
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black" />
         </div>
@@ -136,18 +138,18 @@ export default function HardwarePage() {
 
               {/* STOCK */}
               <div className="mt-3 text-sm text-slate-600">
-                <span className="font-medium text-black">{item.stock}</span> available • Ships from{" "}
-                <span className="font-medium text-black">{item.availableFrom}</span>
-              </div>
+  Ready for deployment • Available from{" "}
+  <span className="font-medium text-black">
+    {item.availableFrom}
+  </span>
+</div>
 
               {/* BADGE */}
               <span className="inline-block mt-3 text-xs px-3 py-1 rounded-full bg-amber-100 text-amber-700">
                 Limited Stock • Pre-order now
               </span>
 
-              <p className="mt-6 text-slate-400 leading-relaxed">
-                Engineered for reliability, speed and seamless integration with POS, ordering and payment systems.
-              </p>
+              <div className="h-0" />
 
               {/* LEARN MORE */}
               <button

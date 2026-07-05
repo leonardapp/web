@@ -660,23 +660,23 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
 
       {/* RIGHT SIDE */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="relative rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden"
-      >
-        <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20">
-          <div className="px-4 py-2 rounded-full bg-emerald-500 text-white text-xs font-medium shadow-lg">
-            Inventory Overview
-          </div>
-        </div>
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  className="relative rounded-3xl bg-white shadow-xl overflow-hidden"
+>
+  <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20">
+    <div className="px-4 py-2 rounded-full bg-emerald-500 text-white text-xs font-medium shadow-lg">
+      Inventory Overview
+    </div>
+  </div>
 
-        <img
-          src="https://hoxxes.app/images/dashboard-overview.png"
-          alt="Inventory Dashboard"
-          className="w-full rounded-2xl"
-        />
-      </motion.div>
+  <img
+    src="https://hoxxes.app/images/dashboard-overview.png"
+    alt="Inventory Dashboard"
+    className="w-full block"
+  />
+</motion.div>
 
     </div>
 
@@ -887,7 +887,7 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
 </p>
     </div>
 
-    <div className="relative rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden">
+    <div className="relative rounded-3xl overflow-hidden">
 
       <div className="absolute top-0 sm:top-4 left-1/2 -translate-x-1/2 z-20">
         <div className="px-3 sm:px-5 py-1 sm:py-2 rounded-full bg-emerald-500 text-white text-[10px] sm:text-xs font-medium shadow-lg whitespace-nowrap">
@@ -896,10 +896,10 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
       </div>
 
       <img
-        src="https://hoxxes.app/images/order-center.png"
-        alt="HOXXES Order Center"
-        className="w-full rounded-2xl"
-      />
+  src="https://hoxxes.app/images/order-center.png"
+  alt="HOXXES Order Center"
+  className="w-full block"
+/>
     </div>
 
   </div>

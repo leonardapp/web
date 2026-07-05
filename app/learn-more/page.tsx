@@ -414,7 +414,7 @@ transition
 
     <div className="text-center mb-14">
       <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        Mobile App
+        Operations Hub
       </div>
 
       <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
@@ -422,9 +422,8 @@ transition
       </h2>
 
       <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-  A unified mobile application for staff, managers and business owners.
-  Create orders, manage tables, monitor sales, access reports and control
-  operations directly from Android and iOS devices.
+  A unified control layer for staff, managers and business owners.
+        Manage orders, tables, sales, reporting and live operations from any device — anytime.
 </p>
     </div>
 
@@ -567,11 +566,11 @@ transition
       </p>
     </div>
 
-    <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-xl overflow-hidden">
+    <div className="relative">
       <img
         src="https://hoxxes.app/images/dashboard-overview.png"
         alt="HOXXES HQ Control Center"
-        className="w-full rounded-2xl"
+        className="w-full rounded-[32px]"
         loading="lazy"
       />
     </div>
@@ -745,7 +744,7 @@ transition
             text-slate-700 hover:bg-black hover:text-white hover:border-black 
             transition text-sm font-medium"
           >
-            View Hardware
+            Explore Hardware
           </Link>
 
           <Link
@@ -754,7 +753,7 @@ transition
             text-slate-700 hover:bg-black hover:text-white hover:border-black 
             transition text-sm font-medium"
           >
-            View Pricing
+            Pricing
           </Link>
           
 

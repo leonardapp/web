@@ -14,17 +14,17 @@ const features = [
   {
     title: "Online Ordering",
     image: "https://hoxxes.app/images/online-ordering.png",
-    focus: "100% 50%",
+    focus: "90% 60%",
     href: "/software#online-ordering",
   },
   {
     title: "Restaurant POS",
     image: "https://hoxxes.app/images/pos-operations.png",
-    focus: "60% 50%",
+    focus: "50% 50%",
     href: "/software#restaurant-pos",
   },
   {
-    title: "Kitchen Display",
+    title: "Kitchen Display System",
     image: "https://hoxxes.app/images/kitchen-display-system.png",
     focus: "10% 100%",
     href: "/software#kitchen-display",
@@ -32,19 +32,19 @@ const features = [
   {
     title: "Operations Hub",
     image: "https://hoxxes.app/images/waiter-operations.png",
-    focus: "40% 70%",
+    focus: "50% 100%",
     href: "/software#waiter-operations",
   },  
   {
     title: "Self-Service Kiosk",
     image: "https://hoxxes.app/images/kiosk-ordering.png",
-    focus: "0% 100%",
+    focus: "10% 100%",
     href: "/software#self-service-kiosk",
   },
   {
     title: "HQ Control Center",
     image: "https://hoxxes.app/images/dashboard-overview.png",
-    focus: "15% 100%",
+    focus: "0% 100%",
     href: "/software#hq-control-center",
   },
   {
@@ -169,7 +169,7 @@ export default function HomeFeatures() {
               <Link
   key={i}
   href={item.href}
-  className="snap-center shrink-0 w-[92%] sm:w-[45%] md:w-[30%]"
+  className="snap-center shrink-0 w-[95%] sm:w-[55%] md:w-[30%]"
 >
                 <div
   className={`relative h-[420px] rounded-2xl overflow-hidden shadow-xl
@@ -178,8 +178,8 @@ export default function HomeFeatures() {
     i === activeIndex
       ? "scale-100 z-30 blur-0"
       : i === activeIndex - 1
-      ? "scale-[0.92] -translate-x-6 blur-[1px] opacity-70 z-20"
-      : "scale-[0.88] -translate-x-10 blur-[2px] opacity-50 z-10"
+      ? "scale-[0.92] -translate-x-6 blur-0 opacity-70 z-20"
+      : "scale-[0.88] -translate-x-10 blur-0 opacity-50 z-10"
   }`}
   style={{
     transformOrigin: "center left",
