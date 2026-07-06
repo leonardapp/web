@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Button from "@/components/Button";
 import LogoMarquee from "@/components/LogoMarquee";
 import FeaturesGrid from "@/components/FeaturesGrid";
-
+import { QRCodeSVG } from "qrcode.react";
 
 
 const OFFER_END_DATE = "2026-07-17";
@@ -270,35 +270,52 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
 
     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-      <div className="rounded-3xl border border-slate-200 bg-white p-6">
-        <h3 className="font-semibold">Automatic QR Generation</h3>
-        <p className="mt-2 text-sm text-slate-500">
-          Every table automatically receives its own QR code.
-        </p>
-      </div>
+  <div className="rounded-3xl border border-slate-200 bg-white p-6">
+    <h3 className="font-semibold">Automatic QR Generation</h3>
+    <p className="mt-2 text-sm text-slate-500">
+      Every table automatically receives its own QR code.
+    </p>
+  </div>
 
-      <div className="rounded-3xl border border-slate-200 bg-white p-6">
-        <h3 className="font-semibold">Temporary QR Codes</h3>
-        <p className="mt-2 text-sm text-slate-500">
-          Create temporary QR codes for events, terraces and VIP areas.
-        </p>
-      </div>
+  <div className="rounded-3xl border border-slate-200 bg-white p-6">
+    <h3 className="font-semibold">Temporary QR Codes</h3>
+    <p className="mt-2 text-sm text-slate-500">
+      Create temporary QR codes for events, terraces and VIP areas.
+    </p>
+  </div>
 
-      <div className="rounded-3xl border border-slate-200 bg-white p-6">
-        <h3 className="font-semibold">Real-Time Analytics</h3>
-        <p className="mt-2 text-sm text-slate-500">
-          Monitor scans, orders and table performance instantly.
-        </p>
-      </div>
+  <div className="rounded-3xl border border-slate-200 bg-white p-6">
+    <h3 className="font-semibold">Real-Time Analytics</h3>
+    <p className="mt-2 text-sm text-slate-500">
+      Monitor scans, orders and table performance instantly.
+    </p>
+  </div>
 
-      <div className="rounded-3xl border border-slate-200 bg-white p-6">
-        <h3 className="font-semibold">One-Click Printing</h3>
-        <p className="mt-2 text-sm text-slate-500">
-          Download and print QR codes directly from the platform.
-        </p>
-      </div>
+  <div className="rounded-3xl border border-slate-200 bg-white p-6">
+    <h3 className="font-semibold">One-Click Printing</h3>
+    <p className="mt-2 text-sm text-slate-500">
+      Download and print QR codes directly from the platform.
+    </p>
+  </div>
 
-    </div>
+</div>
+
+
+{/* QR CODE */}
+<div className="mt-12 flex w-full flex-col items-center justify-center gap-4 text-center">
+  <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+    <QRCodeSVG
+      value="https://qr.hoxxes.com/qr/SSI718JKZ770"
+      size={160}
+      level="H"
+    />
+  </div>
+
+  <p className="text-sm text-slate-500">
+    Scan with your phone to experience live QR Ordering
+  </p>
+</div>
+    
 <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 text-center">
   <a
     href="https://qr.hoxxes.com/qr/SSI718JKZ770"
