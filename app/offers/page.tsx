@@ -84,7 +84,7 @@ export default function OffersPage() {
         </div>
 
         <h2 className="mt-8 text-3xl font-bold text-gray-900 sm:text-4xl">
-          Hoxxe sSubscription
+          Hoxxes Subscription
         </h2>
 
         <div className="mt-4 flex items-center gap-3">
