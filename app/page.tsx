@@ -299,9 +299,19 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
       </div>
 
     </div>
-
+<div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 text-center">
+  <a
+    href="https://qr.hoxxes.com/qr/SSI718JKZ770"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-full bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-slate-800"
+  >
+    Explore Live Menu
+  </a>
+</div>
   </div>
 </section>
+
 
 {/* EVERYTHING INCLUDED */}
 <section className="py-24 sm:py-32 bg-transparent">
