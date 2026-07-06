@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Button from "@/components/Button";
+import Link from "next/link";
 
 const slides = [
 {
@@ -174,51 +175,58 @@ export default function SoftwarePage() {
 
   {/* PRIMARY */}
   <a
-    href="/request-demo"
-    className="px-6 py-2 rounded-full bg-white text-black text-sm font-medium hover:scale-105 transition"
-  >
-    Request Demo
-  </a>
+  href="/request-demo"
+  className="px-6 py-3 rounded-full bg-white text-black text-sm font-semibold shadow-md hover:shadow-xl hover:scale-[1.03] active:scale-95 transition flex items-center gap-2"
+>
+  Request Demo
+  <span className="text-black/60"></span>
+</a>
 
   {/* SECONDARY */}
-  <div className="flex flex-wrap gap-2 justify-center">
+  <div className="flex flex-wrap gap-3 justify-center">
 
     <a
-      href="/hardware"
-      className="px-5 py-2 rounded-full border border-white/20 text-white text-sm hover:bg-white/10 transition"
-    >
-      Hardware
-    </a>
+  href="/hardware"
+  className="px-5 py-2.5 rounded-full border border-white/30 bg-white/5 text-white text-sm font-medium backdrop-blur-md hover:bg-white/10 hover:border-white/50 transition active:scale-95"
+>
+  Hardware
+</a>
 
     <a
-      href="/pricing"
-      className="px-5 py-2 rounded-full border border-white/20 text-white text-sm hover:bg-white/10 transition"
-    >
-      Pricing
-    </a>
+  href="/pricing"
+  className="px-5 py-2.5 rounded-full border border-white/30 bg-white/5 text-white text-sm font-medium backdrop-blur-md hover:bg-white/10 hover:border-white/50 transition active:scale-95"
+>
+  Pricing
+</a>
 
     <a
-      href="/learn-more"
-      className="px-5 py-2 rounded-full border border-white/20 text-white text-sm hover:bg-white/10 transition"
-    >
-      Learn More
-    </a>
+  href="/learn-more"
+  className="px-5 py-2.5 rounded-full border border-white/20 bg-white/0 text-white/70 text-sm font-medium hover:text-white hover:bg-white/5 transition active:scale-95"
+>
+  Learn More
+</a>
 
   </div>
 
 </div>
 
-          {/* SCROLL INDICATOR */}
-          {active < slides.length - 1 && (
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
-              <div className="relative h-16 w-px overflow-hidden rounded-full bg-white/10">
-                <div className="absolute left-0 top-0 h-5 w-full bg-gradient-to-b from-white to-transparent animate-scroll-indicator" />
-              </div>
-            </div>
-          )}
+        </div>
+        </div>
+       {/* SCROLL INDICATOR */}
+{active < slides.length - 1 && (
+  <div className="fixed bottom-15 left-1/2 -translate-x-1/2 z-50 pointer-events-none flex flex-col items-center gap-2">
+    
+    <span className="text-[10px] tracking-[0.3em] text-white/60 uppercase">
+      Scroll
+    </span>
 
-        </div>
-        </div>
+    {/* line */}
+    <div className="relative h-14 w-px bg-white/15 overflow-hidden rounded-full">
+      <div className="absolute top-0 left-0 w-full h-5 bg-gradient-to-b from-white to-transparent animate-scroll-indicator" />
+    </div>
+
+  </div>
+)}
 
         {/* DOTS */}
         <div className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col gap-2 z-20">
@@ -234,41 +242,43 @@ export default function SoftwarePage() {
       </section>
       
 
-      {/* VALUE SECTION */}
-      <section className="py-24 px-6 text-center max-w-6xl mx-auto">
+      {/* FINAL QUOTE */}
+<section className="py-28 px-6 border-t border-slate-200">
+  <div className="max-w-4xl mx-auto text-center">
 
-        <h2 className="text-3xl sm:text-4xl font-semibold">
-          A system designed for real operational control.
-        </h2>
+    <p className="text-3xl sm:text-5xl font-semibold leading-tight tracking-tight">
+      "The best restaurant software
+      <span className="block text-slate-400">
+        disappears into the operation."
+      </span>
+    </p>
 
-        <p className="mt-4 text-black/60 max-w-2xl mx-auto">
-          Hoxxes replaces fragmented tools with a unified real-time operating layer.
-        </p>
+    <p className="mt-8 text-lg text-slate-500 max-w-2xl mx-auto">
+      HOXXES connects every order, every device and every location into
+      one real-time operating system.
+    </p>
 
-        <div className="mt-12 grid sm:grid-cols-4 gap-6">
+    <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4">
 
-          <div className="p-6 rounded-2xl border border-black/10">
-            <div className="text-2xl font-semibold">-35%</div>
-            <p className="text-sm text-black/60 mt-2">Workload</p>
-          </div>
+      <Link
+        href="/request-demo"
+        className="px-7 py-3 rounded-full bg-black text-white hover:bg-slate-800 transition font-medium"
+      >
+        Request Demo
+      </Link>
 
-          <div className="p-6 rounded-2xl border border-black/10">
-            <div className="text-2xl font-semibold">+25%</div>
-            <p className="text-sm text-black/60 mt-2">Efficiency</p>
-          </div>
+      <Link
+        href="/pricing"
+        className="px-7 py-3 rounded-full border border-slate-300 hover:bg-black hover:text-white transition font-medium"
+      >
+        View Pricing
+      </Link>
 
-          <div className="p-6 rounded-2xl border border-black/10">
-            <div className="text-2xl font-semibold">-50%</div>
-            <p className="text-sm text-black/60 mt-2">Errors</p>
-          </div>
+    </div>
 
-          <div className="p-6 rounded-2xl border border-black/10">
-            <div className="text-2xl font-semibold">Revenue</div>
-            <p className="text-sm text-black/60 mt-2">Growth</p>
-          </div>
+  </div>
+</section>
 
-        </div>
-      </section>
        
 
     </div>

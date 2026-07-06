@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import Button from "./Button";
 
 const features = [
   {
@@ -159,6 +160,9 @@ export default function HomeFeatures() {
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="relative">
+          <div className="text-center mb-6">
+  
+</div>
 
           {/* CAROUSEL */}
           <div
@@ -206,6 +210,7 @@ export default function HomeFeatures() {
               </Link>
             ))}
           </div>
+          
 
           {/* CONTROL BAR */}
           <div className="flex justify-center mt-6">
@@ -241,6 +246,7 @@ export default function HomeFeatures() {
           </div>
 
         </div>
+        
 
         <style jsx>{`
           .no-scrollbar::-webkit-scrollbar {
@@ -251,8 +257,20 @@ export default function HomeFeatures() {
             scrollbar-width: none;
           }
         `}</style>
-
+        
+         <div className="mt-15 flex flex-col sm:flex-row justify-center gap-4">
+            <Button href="/software" variant="primary">
+              Explore Platform
+            </Button>
+        
+            <Button href="/request-demo" variant="outline">
+              Request Demo
+            </Button>
+          </div>
+        
+        
       </div>
     </section>
+    
   );
 }

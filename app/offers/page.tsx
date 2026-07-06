@@ -50,124 +50,78 @@ export default function OffersPage() {
       {/* Hero */}
 <section className="relative overflow-hidden border-b border-gray-100 pt-16">
   <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-24">
-
     <div className="max-w-4xl mx-auto text-center">
 
-      <div className="inline-flex items-center rounded-full border border-green-200 bg-green-50 px-4 py-2 text-sm font-semibold tracking-wide text-green-700">
-        LIMITED OFFER
+      <div className="inline-flex items-center rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold tracking-wide text-red-600">
+        -50% OFF • LIMITED TIME CAMPAIGN
       </div>
 
       <h1 className="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-[56px]">
-        Special Offers for
-        <span className="block mt-2 text-emerald-600">
-          Modern Business Operations
+        Transform Your Business with
+        <span className="block mt-2 text-red-600">
+          Exclusive Hoxxes Offers
         </span>
       </h1>
 
       <p className="mt-6 text-base text-gray-600 sm:text-lg">
-        Explore limited-time offers on self-service kiosks, enterprise hardware
-        and innovative display solutions designed for modern business operations.
+        Save up to 50% on selected and enterprise solutions.
+        Offer valid only until July 17.
       </p>
 
-      <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
-        <Button href="/request-demo?type=proforma&offer=kiosk-bundle">
-          Request Proforma Invoice
-        </Button>
-
-        <a
-          href="tel:+38348106060"
-          className="inline-flex items-center justify-center rounded-full border border-gray-300 px-6 py-3 font-medium text-gray-900 transition hover:bg-gray-50"
-        >
-          Call Sales
-        </a>
-      </div>
-
     </div>
-
   </div>
 </section>
-{/* Holobox Offer */}
-<section className="mx-auto max-w-7xl px-6 pb-16">
+{/* 50% OFF NEW OFFER */}
+<section className="mx-auto max-w-7xl px-6 py-4 sm:py-16 lg:py-20">
   <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl">
     <div className="grid grid-cols-1 lg:grid-cols-2">
 
-      {/* Left */}
+      {/* LEFT */}
       <div className="p-6 sm:p-8 lg:p-14">
 
-        <div className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-700">
-          40% OFF • LIMITED OFFER
+        <div className="inline-flex items-center rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-600">
+          50% OFF • SPECIAL CAMPAIGN
         </div>
-
-        <div className="mt-6 flex items-center gap-3">
-          <span className="text-2xl text-slate-400 line-through">
-            €10,000 + VAT
-          </span>
-
-          <span className="text-4xl font-bold text-emerald-600">
-            €6,000 + VAT
-          </span>
-        </div>
-
-        <p className="mt-2 text-sm font-medium text-emerald-600">
-          Save €4,000 • 40% OFF
-        </p>
 
         <h2 className="mt-8 text-3xl font-bold text-gray-900 sm:text-4xl">
-          HoloBox 86" Transparent Display
+          HoxxesSubscription
         </h2>
 
-        <p className="mt-4 text-base text-gray-600 sm:text-lg">
-          Premium transparent display designed for product showcases,
-          exhibitions, retail environments and immersive brand experiences.
-        </p>
+        <div className="mt-4 flex items-center gap-3">
+          <span className="text-2xl text-slate-400 line-through">
+            €499
+          </span>
 
-        {/* Specifications */}
-        <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-          <h4 className="text-lg font-semibold text-gray-900">
-            Specifications
-          </h4>
-
-          <ul className="mt-4 space-y-3 text-gray-700">
-            <li>• 86" Transparent LCD</li>
-            <li>• 4K UHD (3840 × 2160)</li>
-            <li>• 208.2 × 124.3 × 60 cm</li>
-            <li>• 220V Power</li>
-          </ul>
+          <span className="text-4xl font-bold text-red-600">
+            €249.5
+          </span>
         </div>
 
-        {/* Included */}
-        <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+        <p className="mt-4 text-base text-gray-600 sm:text-lg">
+          Complete digital ordering system including QR menu, POS integration
+          and live order management for restaurants.
+        </p>
+
+        {/* FEATURES */}
+        <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6">
           <h4 className="text-lg font-semibold text-gray-900">
             What's Included
           </h4>
 
           <ul className="mt-4 space-y-3 text-gray-700">
-            <li>• 86" Touch LCD Display</li>
-            <li>• Integrated Mini PC</li>
-            <li>• Windows OS</li>
-            <li>• 1 Year Warranty</li>
+             <li>• Restaurant POS System</li>
+            <li>• QR Ordering & Online Ordering</li>
+            <li>• Kitchen Display System (KDS)</li>
+            <li>• Inventory & Workforce Management</li>
+            <li>• HQ Multi-Location Control Center</li>
+            <li>• Analytics Cloud Dashboard</li>
           </ul>
         </div>
 
-        {/* Unique */}
-        <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
-          <p className="text-xs font-medium uppercase tracking-widest text-amber-700">
-            Unique in Kosovo
-          </p>
-
-          <h3 className="mt-2 text-xl font-bold text-amber-700 sm:text-2xl">
-            The Only Holobox Available in Kosovo
-          </h3>
-
-          <p className="mt-2 text-sm text-amber-700">
-            Demo unit in excellent condition with 1 year technical warranty.
-          </p>
-        </div>
-
-        {/* Deadline */}
+        {/* DEADLINE */}
         <div className="mt-8 rounded-2xl border border-red-200 bg-red-50 p-6">
           <p className="text-sm uppercase tracking-widest text-red-700">
-            Offer Ends July 17
+            50% Discount Ends July 17
           </p>
 
           <div className="mt-2 text-3xl font-bold text-gray-900">
@@ -175,15 +129,14 @@ export default function OffersPage() {
           </div>
 
           <p className="mt-2 text-gray-700">
-            Former showroom price €10,000 + VAT. Available now for only
-            €6,000 + VAT until July 17.
+            Only valid for payments completed before deadline.
           </p>
         </div>
 
         {/* CTA */}
         <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-          <Button href="/contact-sales">
-            Request Offer
+          <Button href="/request-demo?type=proforma&offer=smart-pos-50">
+            Claim 50% Offer
           </Button>
 
           <a
@@ -196,46 +149,22 @@ export default function OffersPage() {
 
       </div>
 
-      {/* Right */}
-<div className="flex flex-col items-center justify-center gap-6 bg-gradient-to-br from-slate-50 to-amber-50 p-6 sm:p-10">
+      {/* RIGHT */}
+      <div className="flex items-center justify-center bg-gradient-to-br from-slate-50 to-red-50 p-6 sm:p-10">
 
-    {/* Product Photo */}
-  <div className="w-full max-w-[500px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-    <img
-      src="https://hoxxes.app/images/holo.png"
-      alt="HOXXES Self-Service Kiosk"
-      className="w-full object-contain"
-    />
-  </div>
+        <div className="relative rounded-3xl overflow-hidden">
+          <img
+            src="https://hoxxes.app/images/pos-login.png"
+            alt="HOXXES POS System"
+            className="w-full object-contain"
+          />
+        </div>
 
-  {/* Technical Drawing */}
-  <a
-    href="https://hoxxes.app/images/holo-dimensions.png"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="block"
-  >
-    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-      <img
-        src="https://hoxxes.app/images/holo-dimensions.png"
-        alt="Holobox Dimensions"
-        className="w-full max-w-[650px] object-contain transition hover:scale-[1.02]"
-      />
-    </div>
-
-    <p className="mt-2 text-center text-xs text-slate-500">
-      Click to enlarge
-    </p>
-  </a>
-
-</div>
-
- 
+      </div>
 
     </div>
   </div>
 </section>
-
 
         {/* Main Offer */}
       <section className="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:py-20">
@@ -381,6 +310,153 @@ export default function OffersPage() {
           </div>
         </div>
       </section>
+      {/* Holobox Offer */}
+<section className="mx-auto max-w-7xl px-6 pb-16">
+  <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl">
+    <div className="grid grid-cols-1 lg:grid-cols-2">
+
+      {/* Left */}
+      <div className="p-6 sm:p-8 lg:p-14">
+
+        <div className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-700">
+          40% OFF • LIMITED OFFER
+        </div>
+
+        <div className="mt-6 flex items-center gap-3">
+          <span className="text-2xl text-slate-400 line-through">
+            €10,000 + VAT
+          </span>
+
+          <span className="text-4xl font-bold text-emerald-600">
+            €6,000 + VAT
+          </span>
+        </div>
+
+        <p className="mt-2 text-sm font-medium text-emerald-600">
+          Save €4,000 • 40% OFF
+        </p>
+
+        <h2 className="mt-8 text-3xl font-bold text-gray-900 sm:text-4xl">
+          HoloBox 86" Transparent Display
+        </h2>
+
+        <p className="mt-4 text-base text-gray-600 sm:text-lg">
+          Premium transparent display designed for product showcases,
+          exhibitions, retail environments and immersive brand experiences.
+        </p>
+
+        {/* Specifications */}
+        <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h4 className="text-lg font-semibold text-gray-900">
+            Specifications
+          </h4>
+
+          <ul className="mt-4 space-y-3 text-gray-700">
+            <li>• 86" Transparent LCD</li>
+            <li>• 4K UHD (3840 × 2160)</li>
+            <li>• 208.2 × 124.3 × 60 cm</li>
+            <li>• 220V Power</li>
+          </ul>
+        </div>
+
+        {/* Included */}
+        <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h4 className="text-lg font-semibold text-gray-900">
+            What's Included
+          </h4>
+
+          <ul className="mt-4 space-y-3 text-gray-700">
+            <li>• 86" Touch LCD Display</li>
+            <li>• Integrated Mini PC</li>
+            <li>• Windows OS</li>
+            <li>• 1 Year Warranty</li>
+          </ul>
+        </div>
+
+        {/* Unique */}
+        <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
+          <p className="text-xs font-medium uppercase tracking-widest text-amber-700">
+            Unique in Kosovo
+          </p>
+
+          <h3 className="mt-2 text-xl font-bold text-amber-700 sm:text-2xl">
+            The Only Holobox Available in Kosovo
+          </h3>
+
+          <p className="mt-2 text-sm text-amber-700">
+            Demo unit in excellent condition with 1 year technical warranty.
+          </p>
+        </div>
+
+        {/* Deadline */}
+        <div className="mt-8 rounded-2xl border border-red-200 bg-red-50 p-6">
+          <p className="text-sm uppercase tracking-widest text-red-700">
+            Offer Ends July 17
+          </p>
+
+          <div className="mt-2 text-3xl font-bold text-gray-900">
+            July 17
+          </div>
+
+          <p className="mt-2 text-gray-700">
+            Former showroom price €10,000 + VAT. Available now for only
+            €6,000 + VAT until July 17.
+          </p>
+        </div>
+
+        {/* CTA */}
+        <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <Button href="/contact-sales">
+            Request Offer
+          </Button>
+
+          <a
+            href="tel:+38348106060"
+            className="inline-flex items-center justify-center rounded-full border border-gray-300 px-6 py-3 font-medium text-gray-900 transition hover:bg-gray-50"
+          >
+            Call Sales
+          </a>
+        </div>
+
+      </div>
+
+      {/* Right */}
+<div className="flex flex-col items-center justify-center gap-6 bg-gradient-to-br from-slate-50 to-amber-50 p-6 sm:p-10">
+
+    {/* Product Photo */}
+  <div className="w-full max-w-[500px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+    <img
+      src="https://hoxxes.app/images/holo.png"
+      alt="HOXXES Self-Service Kiosk"
+      className="w-full object-contain"
+    />
+  </div>
+
+  {/* Technical Drawing */}
+  <a
+    href="https://hoxxes.app/images/holo-dimensions.png"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block"
+  >
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+      <img
+        src="https://hoxxes.app/images/holo-dimensions.png"
+        alt="Holobox Dimensions"
+        className="w-full max-w-[650px] object-contain transition hover:scale-[1.02]"
+      />
+    </div>
+
+    <p className="mt-2 text-center text-xs text-slate-500">
+      Click to enlarge
+    </p>
+  </a>
+
+</div>
+
+    </div>
+  </div>
+</section>
       
 
       {/* Contact */}

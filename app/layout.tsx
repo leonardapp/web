@@ -4,9 +4,12 @@ import Footer from "@/components/Footer";
 import Background from "@/components/Background";
 import HoxxesAIWidget from "@/components/HoxxesAIWidget";
 import CookieConsent from "@/components/CookieConsent";
+import OfferBadge from "@/components/offers/OfferBadge";
+
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://hoxxes.com"),
 
@@ -19,18 +22,18 @@ export const metadata: Metadata = {
     "Restaurant & Retail Operating System with POS, Self-Service Kiosks, Kitchen Display Systems, Hardware and Business Automation.",
 
   keywords: [
-  "restaurant POS",
-  "self service kiosk",
-  "restaurant software",
-  "kitchen display system",
-  "retail software",
-  "restaurant operating system",
-  "program per restorant",
-  "sistem POS",
-  "kioske vetesherbyese",
-  "program per kafene",
-  "Hoxxes",
-],
+    "restaurant POS",
+    "self service kiosk",
+    "restaurant software",
+    "kitchen display system",
+    "retail software",
+    "restaurant operating system",
+    "program per restorant",
+    "sistem POS",
+    "kioske vetesherbyese",
+    "program per kafene",
+    "Hoxxes",
+  ],
 
   openGraph: {
     title: "HOXXES",
@@ -63,10 +66,12 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen overflow-x-hidden bg-white text-slate-900 antialiased selection:bg-emerald-200/50">
 
+        {/* Background */}
         <div className="fixed inset-0 -z-10 pointer-events-none">
           <Background />
         </div>
 
+        {/* Page */}
         <div className="flex min-h-screen flex-col">
           <main className="flex-1 w-full relative z-10">
             {children}
@@ -75,12 +80,15 @@ export default function RootLayout({
           <Footer />
         </div>
 
+        {/* Floating UI */}
         <div className="relative z-50">
           <HoxxesAIWidget />
         </div>
 
         <CookieConsent />
+        <OfferBadge />
 
+        {/* Analytics (vetëm një herë!) */}
         <Analytics />
         <SpeedInsights />
 
