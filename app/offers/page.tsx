@@ -84,16 +84,16 @@ export default function OffersPage() {
         </div>
 
         <h2 className="mt-8 text-3xl font-bold text-gray-900 sm:text-4xl">
-          Hoxxes Subscription
+          HOXXES Subscription
         </h2>
 
         <div className="mt-4 flex items-center gap-3">
           <span className="text-2xl text-slate-400 line-through">
-            €499
+            €499 + VAT
           </span>
 
           <span className="text-4xl font-bold text-red-600">
-            €249.5
+            €249.5 + VAT
           </span>
         </div>
 
