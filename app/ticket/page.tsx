@@ -23,6 +23,7 @@ export default function TiketaPage() {
             </div>
           </div>
         )}
+        
 
         {/* IFRAME WRAPPER */}
         <div className="w-full h-[calc(100vh-80px)] md:h-[calc(100vh-96px)]">

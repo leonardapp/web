@@ -172,38 +172,41 @@ export default function SoftwarePage() {
             {/* CTA */}
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
 
-              {/* PRIMARY */}
-              <a
-                href="/request-demo"
-                className="px-6 py-2 rounded-full bg-white text-black text-sm font-medium hover:scale-105 transition shadow-[0_0_40px_rgba(255,255,255,0.15)]"
-              >
-                Request Demo
-              </a>
+  {/* PRIMARY */}
+  <a
+    href="/request-demo"
+    className="px-6 py-2 rounded-full bg-white text-black text-sm font-medium hover:scale-105 transition"
+  >
+    Request Demo
+  </a>
 
-              {/* SECONDARY */}
-              <div className="flex gap-2">
-                <a
-                  href="/hardware"
-                  className="px-5 py-2 rounded-full border border-white/20 text-white text-sm hover:bg-white/10 transition"
-                >
-                  Hardware
-                </a>
+  {/* SECONDARY */}
+  <div className="flex flex-wrap gap-2 justify-center">
 
-                <a
-                  href="/pricing"
-                  className="px-5 py-2 rounded-full border border-white/20 text-white text-sm hover:bg-white/10 transition"
-                >
-                  Pricing
-                </a>
-              </div>
+    <a
+      href="/hardware"
+      className="px-5 py-2 rounded-full border border-white/20 text-white text-sm hover:bg-white/10 transition"
+    >
+      Hardware
+    </a>
 
-            </div>
+    <a
+      href="/pricing"
+      className="px-5 py-2 rounded-full border border-white/20 text-white text-sm hover:bg-white/10 transition"
+    >
+      Pricing
+    </a>
 
-            <p className="mt-4 text-xs text-white/50">
-              Trusted by restaurants, retail & enterprise operators
-            </p>
+    <a
+      href="/learn-more"
+      className="px-5 py-2 rounded-full border border-white/20 text-white text-sm hover:bg-white/10 transition"
+    >
+      Learn More
+    </a>
 
-          </div>
+  </div>
+
+</div>
 
           {/* SCROLL INDICATOR */}
           {active < slides.length - 1 && (
@@ -214,6 +217,7 @@ export default function SoftwarePage() {
             </div>
           )}
 
+        </div>
         </div>
 
         {/* DOTS */}
@@ -265,27 +269,7 @@ export default function SoftwarePage() {
 
         </div>
       </section>
-      <section className="py-24 text-center">
-
-  <h2 className="text-3xl font-semibold">
-    Want to explore every feature?
-  </h2>
-
-  <p className="mt-4 text-slate-500">
-    View the complete documentation of every module included in HOXXES.
-  </p>
-
-
-<a
-  href="/learn-more"
-  className="mt-8 inline-block px-6 py-3 rounded-full border border-slate-300 text-slate-700 text-sm font-medium hover:bg-black hover:text-white hover:border-black transition"
->
-  Learn More
-</a>
-
-
-</section>
-      
+       
 
     </div>
   );
