@@ -185,29 +185,35 @@ export async function POST(req: Request) {
 
 
     // ===============================
-    // SAFE HISTORY
-    // ===============================
+// SAFE HISTORY
+// ===============================
 
-    const history =
-      Array.isArray(body?.history)
-      ? body.history
-          .slice(-8)
-          .filter(
-            item =>
+type ChatMessage = {
+  role: "user" | "assistant";
+  content: string;
+};
+
+const history: ChatMessage[] =
+  Array.isArray(body?.history)
+    ? body.history
+        .slice(-8)
+        .filter(
+          (item: unknown): item is ChatMessage =>
+            typeof item === "object" &&
+            item !== null &&
+            "role" in item &&
+            "content" in item &&
             (
-              item?.role === "user" ||
-              item?.role === "assistant"
-            )
-            &&
-            item?.content
-          )
-          .map(item=>({
-            role:item.role,
-            content:
-              String(item.content)
-              .slice(0,800)
-          }))
-      : [];
+              (item as ChatMessage).role === "user" ||
+              (item as ChatMessage).role === "assistant"
+            ) &&
+            typeof (item as ChatMessage).content === "string"
+        )
+        .map((item: ChatMessage) => ({
+          role: item.role,
+          content: item.content.slice(0, 800),
+        }))
+    : [];
 
 
 
