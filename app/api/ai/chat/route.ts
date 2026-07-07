@@ -1,138 +1,272 @@
 import { NextResponse } from "next/server";
 import { offers } from "@/lib/offers";
 
+
+// ===============================
+// STYLE CONTROL
+// ===============================
+
 function enforceStyle(text: string) {
-  const sentences = text.split(".").filter(Boolean);
-  return sentences.slice(0, 2).join(".").trim();
+  const actionsMatch = text.match(/ACTIONS:[\s\S]*/i);
+
+  const actions = actionsMatch
+    ? actionsMatch[0].trim()
+    : "";
+
+  let mainText = actions
+    ? text.replace(actions, "").trim()
+    : text.trim();
+
+
+  const sentences = mainText
+    .split(/(?<=[.!?])\s+/)
+    .filter(Boolean);
+
+
+  mainText = sentences
+    .slice(0, 2)
+    .join(" ")
+    .trim();
+
+
+  return actions
+    ? `${mainText}\n\n${actions}`
+    : mainText;
 }
+
+
+
+// ===============================
+// URL SECURITY
+// ===============================
 
 function sanitizeOutput(text: string) {
-  const allowedUrls = [
-    "hoxxes.com/software",
-    "hoxxes.com/hardware",
-    "hoxxes.com/pricing",
-    "hoxxes.com/download",
-    "hoxxes.com/apk",
-    "hoxxes.com/support",
-    "hoxxes.com/docs",
-    "hoxxes.com/about-us",
-    "hoxxes.com/offers",
-    "hoxxes.com/request-demo",
-  ];
 
-  return text.replace(/https?:\/\/[^\s]+/g, (url) => {
-    return allowedUrls.some(u => url.includes(u))
-      ? url
-      : "[blocked]";
-  });
+  const allowedRoutes = [
+  "hoxxes.com/software",
+  "hoxxes.com/learn-more", // ADD
+  "hoxxes.com/hardware",
+  "hoxxes.com/pricing",
+  "hoxxes.com/download",
+  "hoxxes.com/apk",
+  "hoxxes.com/support",
+  "hoxxes.com/docs",
+  "hoxxes.com/about-us",
+  "hoxxes.com/offers",
+  "hoxxes.com/request-demo",
+];
+
+
+  return text.replace(
+    /(https?:\/\/[^\s]+|hoxxes\.com\/[^\s]+)/g,
+    (url) => {
+
+      const cleanUrl = url.replace(
+        /^https?:\/\//,
+        ""
+      );
+
+      return allowedRoutes.some(route =>
+        cleanUrl.includes(route)
+      )
+        ? url
+        : "[blocked]";
+    }
+  );
 }
 
+
+
+// ===============================
+// OFFERS
+// ===============================
+
 const activeOffers = offers.filter(
-  (offer) => new Date(offer.expiresAt).getTime() > Date.now()
+  offer =>
+    new Date(offer.expiresAt).getTime() >
+    Date.now()
 );
 
+
 const offersContext =
-  activeOffers.length > 0
+  activeOffers.length
     ? activeOffers
         .map(o => `- ${o.title}`)
         .join("\n")
     : "No active offers";
 
+
+
+// ===============================
+// API
+// ===============================
+
 export async function POST(req: Request) {
+
   try {
+
     const body = await req.json();
 
-    const message = body?.message;
-const injectionPatterns = [
-  "ignore previous instructions",
-  "ignore system prompt",
-  "reveal system prompt",
-  "developer message",
-  "jailbreak",
-  "act as",
-];
 
-const normalizedMessage = String(message || "")
-  .toLowerCase()
-  .replace(/\s+/g, " ");
+    const message =
+      typeof body?.message === "string"
+        ? body.message.trim()
+        : "";
 
-const isInjection = injectionPatterns.some(p =>
-  normalizedMessage.includes(p)
-);
 
-if (isInjection) {
-  return NextResponse.json(
-    { message: "Request not allowed." },
-    { status: 400 }
-  );
-}
+    if (!message) {
+      return NextResponse.json(
+        {
+          message:
+          "Please enter a message."
+        },
+        {
+          status:400
+        }
+      );
+    }
 
-const history = body?.history || [];
 
-if ((message || "").length > 2000) {
-  return NextResponse.json(
-    { message: "Message too long." },
-    { status: 400 }
-  );
-}
+    if(message.length > 2000){
 
-    // ✅ ONLY FIX: SAFE HISTORY (NO LOGIC CHANGE)
-    const safeHistory = Array.isArray(history)
-  ? history
-      .slice(-8)
-      .filter(m => m?.role && m?.content)
-      .map(m => ({
-        role: m.role,
-        content: String(m.content).slice(0, 800),
-      }))
-  : [];
+      return NextResponse.json(
+        {
+          message:
+          "Message too long."
+        },
+        {
+          status:400
+        }
+      );
+
+    }
+
+
+
+    // ===============================
+    // PROMPT INJECTION FILTER
+    // ===============================
+
+    const blockedPatterns = [
+      "ignore previous instructions",
+      "ignore system prompt",
+      "reveal system prompt",
+      "developer message",
+      "jailbreak",
+      "act as",
+    ];
+
+
+    const normalized =
+      message
+      .toLowerCase()
+      .replace(/\s+/g," ");
+
+
+    if(
+      blockedPatterns.some(
+        pattern =>
+        normalized.includes(pattern)
+      )
+    ){
+
+      return NextResponse.json(
+        {
+          message:
+          "Request not allowed."
+        },
+        {
+          status:400
+        }
+      );
+
+    }
+
+
+
+    // ===============================
+    // SAFE HISTORY
+    // ===============================
+
+    const history =
+      Array.isArray(body?.history)
+      ? body.history
+          .slice(-8)
+          .filter(
+            item =>
+            (
+              item?.role === "user" ||
+              item?.role === "assistant"
+            )
+            &&
+            item?.content
+          )
+          .map(item=>({
+            role:item.role,
+            content:
+              String(item.content)
+              .slice(0,800)
+          }))
+      : [];
+
+
+
+
+    // ===============================
+    // SYSTEM PROMPT
+    // ===============================
 
     const systemPrompt = `
+
 You are Hoxxes AI.
 
-You help restaurants and retail businesses understand, evaluate and use HOXXES products and services.
+You represent HOXXES, a restaurant and retail operating system.
 
-Be professional, concise and helpful.
+Help businesses understand products, pricing, hardware and services.
 
-LANGUAGE
+Always be professional, concise and accurate.
 
-- Respond in the language of the user's latest message.
-- English → English
-- Albanian → Albanian
-- German → German
-- Never mix languages.
 
-LANGUAGE QUALITY
 
-- Use correct and professional Albanian.
-- Never invent words or expressions.
-- Never use slang unless the user uses it first.
-- Never start a sentence with words such as:
-  "Aso", "Ani", "Hm", "Epo", "Ose", "Pra" unless explicitly present in the user's message.
-- Use natural business language.
+LANGUAGE:
 
-STYLE
+Reply in the same language as the user.
 
-- Natural and human.
-- Very concise.
-- Prefer 1 sentence.
-- Maximum 2 short sentences.
-- Answer first.
-- Ask questions only when absolutely necessary.
-- Never repeat information.
-- Never sound robotic.
+English -> English
+Albanian -> Albanian
+German -> German
 
-OUTPUT STYLE
+Never mix languages.
 
-- Prefer responses under 20 words.
-- Keep answers brief and direct.
-- Answer first, then ACTIONS if needed.
+For Albanian:
+- Use standard Albanian language.
+- Use correct grammar and word order.
+- Do not translate word by word from English.
+- Avoid unnatural expressions.
+- Prefer simple professional Albanian sentences.
+- If unsure, use simpler Albanian instead of inventing words.
 
-HOXXES PRODUCTS
+For Albanian:
+- Avoid mixing English words when a clear Albanian word exists.
+- Use English product names only when they are official Hoxxes product names.
+
+STYLE:
+
+- Human and natural.
+- Maximum 2 short sentences unless ACTIONS are required.
+- Answer directly.
+- Keep responses concise but grammatically correct.
+- Prioritize clarity and correct language over extreme brevity.
+- Avoid robotic responses.
+- Do not use unnecessary explanations.
+
+
+
+PRODUCTS:
 
 - POS Software
 - QR Ordering
-- Kitchen Display System (KDS)
+- Kitchen Display System
 - Inventory Management
 - Workforce Management
 - Analytics Dashboard
@@ -140,143 +274,275 @@ HOXXES PRODUCTS
 - Android POS
 - Self-Service Kiosks
 
-Never invent products or features.
 
-OFFICIAL ROUTES
+Never invent products.
 
-software → https://hoxxes.com/software
-hardware → https://hoxxes.com/hardware
-pricing → https://hoxxes.com/pricing
-download → https://hoxxes.com/download
-apk → https://hoxxes.com/apk
-support → https://hoxxes.com/support
-docs → https://hoxxes.com/docs
-about → https://hoxxes.com/about-us
-offers → https://hoxxes.com/offers
-demo → https://hoxxes.com/request-demo
 
-Never create URLs.
-Use only these routes.
 
-ACTIONS
+OFFICIAL LINKS:
 
-Only show ACTIONS when the user is likely to take action.
+software:
+https://hoxxes.com/software
 
-Format:
+learn more:
+https://hoxxes.com/learn-more
+
+hardware:
+https://hoxxes.com/hardware
+
+pricing:
+https://hoxxes.com/pricing
+
+offers:
+https://hoxxes.com/offers
+
+demo:
+https://hoxxes.com/request-demo
+
+support:
+https://hoxxes.com/support
+
+LINK USAGE:
+
+- If the user asks for more details, deeper information, full explanation or wants to learn more about the software platform:
+Use:
+https://hoxxes.com/learn-more
+
+- If the user wants to explore the platform overview:
+Use:
+https://hoxxes.com/software
+
+- If the user wants pricing:
+Use:
+https://hoxxes.com/pricing
+
+- If the user wants a personal presentation:
+Use:
+https://hoxxes.com/request-demo
+
+ACTIONS:
+
+Only include ACTIONS when the user wants:
+- to visit a page
+- more details
+- pricing
+- a demo
+- support
+- to buy or contact sales
+
+Format exactly:
 
 ACTIONS:
 - Label → URL
 
-ACTIONS must always be the last part of the response.
+- Learn More → https://hoxxes.com/learn-more
 
-CONTACT
+ACTIONS must always be at the end.
 
-Official email:
+
+
+CONTACT:
+
+Email:
 info@hoxxes.com
 
-Official phone:
+Phone:
 048 10 60 60
 
-Never invent contact information.
 
-PRICING
+
+PRICING:
 
 Software:
-499€ per location per year (excl. VAT)
+499€ per location/year excl. VAT
+
 
 Self-Service Kiosk:
 1,185€ excl. VAT
-Promo: 1,016€
+Promo:
+1,016€
+
 
 Android POS:
 677€ excl. VAT
-Promo: 593€
+Promo:
+593€
+
 
 Never calculate multi-location totals.
-For multiple locations direct users to pricing.
 
-SUPPORT
 
-For bugs, technical issues, setup assistance, QR problems, account problems or human support:
+
+SUPPORT:
+
+For technical issues, account problems or assistance:
+
 ACTIONS:
-- Request a Demo → https://hoxxes.com/request-demo
-ACTIONS:
+- Request Demo → https://hoxxes.com/request-demo
 - Support → https://hoxxes.com/support
 
-ACTIVE OFFERS
+
+
+ACTIVE OFFERS:
 
 ${offersContext}
 
+
 Rules:
 
-- Only use offers listed above.
-- Never invent offers.
-- If a relevant offer exists, mention it naturally.
-- Suggest viewing the offers page for details.
-- If no active offers exist, say so.
-
-Greetings:
-
-Pershendetje → Përshëndetje!
-Hello → Hello!
-Hi → Hi!
-Hallo → Hallo!
-
-Thank you → You're welcome!
-Faleminderit → Faleminderit edhe juve!
-
-
+- Only mention active offers above.
+- Never create discounts.
+- Never create prices.
 `;
 
-    const response = await fetch(
-      "https://api.groq.com/openai/v1/chat/completions",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
-          "Content-Type": "application/json",
+
+
+
+    // ===============================
+    // GROQ REQUEST
+    // ===============================
+
+    const controller =
+      new AbortController();
+
+
+    const timeout =
+      setTimeout(
+        ()=>controller.abort(),
+        10000
+      );
+
+
+
+    const response =
+      await fetch(
+        "https://api.groq.com/openai/v1/chat/completions",
+        {
+
+          method:"POST",
+
+          signal:
+          controller.signal,
+
+          headers:{
+            Authorization:
+            `Bearer ${process.env.GROQ_API_KEY}`,
+
+            "Content-Type":
+            "application/json"
+          },
+
+
+          body:JSON.stringify({
+
+            model:
+            "llama-3.1-8b-instant",
+
+            messages:[
+              {
+                role:"system",
+                content:
+                systemPrompt
+              },
+
+              ...history,
+
+              {
+                role:"user",
+                content:
+                message
+              }
+            ],
+
+
+            temperature:
+            0.35,
+
+
+            max_tokens:
+            150
+
+          })
+
+        }
+      );
+
+
+    clearTimeout(timeout);
+
+
+
+    if(!response.ok){
+
+      return NextResponse.json(
+        {
+          message:
+          "AI service unavailable."
         },
-        body: JSON.stringify({
-          model: "llama-3.1-8b-instant",
+        {
+          status:502
+        }
+      );
 
-          messages: [
-            {
-              role: "system",
-              content: systemPrompt,
-            },
+    }
 
-            // ✅ ONLY ADDITION (NO LOGIC CHANGE)
-            ...safeHistory,
 
-            {
-              role: "user",
-              content: message,
-            },
-          ],
 
-          temperature: 0.6,
-          max_tokens: 120,
-        }),
+    const data =
+      await response.json();
+
+
+    let output =
+      data?.choices?.[0]
+      ?.message?.content
+      ||
+      "No response.";
+
+
+
+    output =
+      sanitizeOutput(
+        output.trim()
+      );
+
+
+    output =
+      enforceStyle(
+        output
+      );
+
+
+
+    return NextResponse.json({
+
+      message:
+      output
+
+    });
+
+
+
+  }
+
+
+  catch(error){
+
+    console.error(
+      "AI ERROR:",
+      error
+    );
+
+
+    return NextResponse.json(
+      {
+        message:
+        "AI service unavailable."
+      },
+      {
+        status:500
       }
     );
 
-    const data = await response.json();
-
-let raw =
-  data?.choices?.[0]?.message?.content || "No response from AI";
-
-raw = sanitizeOutput(raw.trim());
-const finalMessage = enforceStyle(raw);
-
-    return NextResponse.json({
-      message: finalMessage,
-    });
-  } catch (error) {
-    console.error("AI ERROR:", error);
-
-    return NextResponse.json(
-      { message: "AI service unavailable" },
-      { status: 500 }
-    );
   }
+
 }
