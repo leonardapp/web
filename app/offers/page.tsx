@@ -53,7 +53,7 @@ export default function OffersPage() {
     <div className="max-w-4xl mx-auto text-center">
 
       <div className="inline-flex items-center rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold tracking-wide text-red-600">
-        -50% OFF • LIMITED TIME CAMPAIGN
+        50% OFF • NEW SUBSCRIBERS • JULY 17 ONLY
       </div>
 
       <h1 className="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-[56px]">
@@ -80,11 +80,12 @@ export default function OffersPage() {
       <div className="p-6 sm:p-8 lg:p-14">
 
         <div className="inline-flex items-center rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-600">
-          50% OFF • SPECIAL CAMPAIGN
+          50% OFF • FOR NEW SUBSCRIBERS ONLY
         </div>
 
         <h2 className="mt-8 text-3xl font-bold text-gray-900 sm:text-4xl">
-          HOXXES Subscription
+          HOXXES Platform
+for New Subscribers
         </h2>
 
         <div className="mt-4 flex items-center gap-3">
@@ -129,14 +130,14 @@ export default function OffersPage() {
           </div>
 
           <p className="mt-2 text-gray-700">
-            Only valid for payments completed before deadline.
+            Valid only for new subscribers with payment completed before July 17, 2026.
           </p>
         </div>
 
         {/* CTA */}
         <div className="mt-8 flex flex-col gap-4 sm:flex-row">
           <Button href="/request-demo?type=proforma&offer=smart-pos-50">
-            Claim 50% Offer
+            Claim New Subscriber Offer
           </Button>
 
           <a
