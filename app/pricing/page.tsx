@@ -403,8 +403,8 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
             </p>
 
             <div className="mt-4 text-xl font-semibold">
-              €150 / month
-            </div>
+  €150 / month + VAT
+</div>
 
             <Link
               href="/contact-sales"

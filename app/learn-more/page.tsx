@@ -131,6 +131,161 @@ transition
 </div>
 </section>
 
+{/* MOBILE APP */}
+<section className="py-24 sm:py-32 bg-white">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Operations Hub
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Manage operations from anywhere.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+  A unified control layer for staff, managers and business owners.
+        Manage orders, tables, sales, reporting and live operations from any device — anytime.
+</p>
+    </div>
+
+    <div className="relative">
+
+      {/* REAL IMAGE */}
+      <img
+        src="https://hoxxes.app/images/waiter-operations.png"
+        alt="HOXXES Waiter Operations"
+        className="w-full rounded-[32px]"
+        loading="lazy"
+      />
+
+      
+    </div>
+    <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
+      <div>✓ Ordering</div>
+  <div>✓ Tables</div>
+  <div>✓ Live Sales</div>
+  <div>✓ Backoffice</div>
+  <div>✓ Manager View</div>
+  <div>✓ Owner View</div>
+  <div>✓ Android</div>
+  <div>✓ iOS</div>
+    </div>
+
+  </div>
+</section>
+
+{/* WORKFORCE MANAGEMENT */}
+
+<section className="py-24 sm:py-32 bg-transparent">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Workforce Management
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Smart attendance with location verification.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Manage employee attendance with desktop and mobile punch in/out.
+        Define allowed working zones, verify employee location and keep
+        accurate attendance records with intelligent status tracking.
+      </p>
+
+    </div>
+
+
+    {/* IMAGE */}
+
+    <div className="flex justify-center">
+
+      <div className="overflow-hidden rounded-[32px] max-w-5xl w-full">
+        <img
+          src="https://hoxxes.app/images/punch-desktop.png"
+          alt="HOXXES Workforce Management"
+          className="w-full h-auto object-cover"
+          loading="lazy"
+        />
+      </div>
+
+    </div>
+
+
+    {/* FEATURES */}
+
+    <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
+
+      <div>✓ Punch In</div>
+      <div>✓ Punch Out</div>
+      <div>✓ GPS Verification</div>
+      <div>✓ Location Radius</div>
+      <div>✓ 50m Range</div>
+      <div>✓ 100m Range</div>
+      <div>✓ 200m Range</div>
+      <div>✓ 300m Range</div>
+      <div>✓ 500m Range</div>
+      <div>✓ Attendance History</div>
+      <div>✓ Employee Records</div>
+      <div>✓ Real-Time Tracking</div>
+
+    </div>
+
+
+    {/* STATUS FILTERS */}
+
+    <div className="mt-12 grid md:grid-cols-4 gap-5">
+
+      <div className="rounded-3xl border border-slate-200 bg-white p-6">
+        <h3 className="font-semibold">
+          Normal
+        </h3>
+        <p className="mt-2 text-sm text-slate-500">
+          Employee attendance completed within approved location and schedule.
+        </p>
+      </div>
+
+
+      <div className="rounded-3xl border border-slate-200 bg-white p-6">
+        <h3 className="font-semibold">
+          Late In
+        </h3>
+        <p className="mt-2 text-sm text-slate-500">
+          Track employees arriving after their scheduled start time.
+        </p>
+      </div>
+
+
+      <div className="rounded-3xl border border-slate-200 bg-white p-6">
+        <h3 className="font-semibold">
+          Late Out
+        </h3>
+        <p className="mt-2 text-sm text-slate-500">
+          Monitor employees leaving after their scheduled end time.
+        </p>
+      </div>
+
+
+      <div className="rounded-3xl border border-slate-200 bg-white p-6">
+        <h3 className="font-semibold">
+          Abnormal
+        </h3>
+        <p className="mt-2 text-sm text-slate-500">
+          Identify unusual attendance activity or location mismatches.
+        </p>
+      </div>
+
+    </div>
+
+
+  </div>
+</section>
+
+
 {/* DIGITAL MENU */}
 <section className="py-24 sm:py-32 bg-white">
   <div className="max-w-7xl mx-auto px-6">
@@ -221,77 +376,6 @@ transition
   </div>
 </section>
 
-{/* PROMOTIONS & CAMPAIGN AUTOMATION */}
-<section className="py-24 sm:py-32 bg-white">
-  <div className="max-w-7xl mx-auto px-6">
-
-    <div className="text-center mb-14">
-      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        Promotions Automation
-      </div>
-
-      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-        Promotions that run themselves.
-      </h2>
-
-      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-        Schedule promotions once and let HOXXES automatically activate
-        and deactivate discounts, campaigns and loyalty benefits with
-        complete accuracy.
-      </p>
-    </div>
-
-    <div className="grid md:grid-cols-3 gap-6">
-
-      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
-        <div className="text-lg font-medium mb-3">
-          Happy Hour Automation
-        </div>
-
-        <p className="text-sm text-slate-600">
-          Automatically activate and deactivate Happy Hour promotions
-          based on day and time schedules.
-        </p>
-      </div>
-
-      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
-        <div className="text-lg font-medium mb-3">
-          Scheduled Discounts
-        </div>
-
-        <p className="text-sm text-slate-600">
-          Apply automatic discounts to products, categories or entire
-          menus without manual intervention.
-        </p>
-      </div>
-
-      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
-        <div className="text-lg font-medium mb-3">
-          Loyalty Campaigns
-        </div>
-
-        <p className="text-sm text-slate-600">
-          Launch voucher, membership and loyalty campaigns that run
-          automatically across all channels.
-        </p>
-      </div>
-
-    </div>
-
-    <div className="mt-12 text-center">
-      <p className="text-sm sm:text-base text-slate-600">
-        No manual changes. No staff mistakes. No missed promotions.
-      </p>
-
-      <p className="mt-2 text-lg font-medium">
-        Set it once. Let HOXXES handle the rest.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
 {/* SELF-SERVICE KIOSK */}
 <section className="py-24 sm:py-32 bg-transparent">
   <div className="max-w-7xl mx-auto px-6">
@@ -367,93 +451,8 @@ transition
   </Link>
 </div>
 </section>
-<section className="py-24 sm:py-32 bg-transparent">
-  <div className="max-w-7xl mx-auto px-6">
 
-    <div className="text-center mb-14">
-      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        Kitchen Display System
-      </div>
-
-      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-        Every order. Every station. In real time.
-      </h2>
-
-      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-        Orders flow directly from POS, QR and online channels into the
-        kitchen, helping teams prepare, prioritize and deliver faster.
-      </p>
-    </div>
-
-    <div className="relative">
-  <img
-    src="https://hoxxes.app/images/kitchen-display-system.png"
-    alt="HOXXES Kitchen Display System"
-    className="w-full rounded-[32px]"
-    loading="lazy"
-  />
-
-</div>
- <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
-   <div>✓ Live Orders</div>
-  <div>✓ Routing</div>
-  <div>✓ Prioritization</div>
-  <div>✓ Station View</div>
-  <div>✓ Order Status</div>
-  <div>✓ Kitchen Analytics</div>
-  <div>✓ Real-Time Sync</div>
-  <div>✓ Multi-Station</div>
-</div>
-
-  </div>
-</section>
-
-{/* MOBILE APP */}
-<section className="py-24 sm:py-32 bg-white">
-  <div className="max-w-7xl mx-auto px-6">
-
-    <div className="text-center mb-14">
-      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        Operations Hub
-      </div>
-
-      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-        Manage operations from anywhere.
-      </h2>
-
-      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-  A unified control layer for staff, managers and business owners.
-        Manage orders, tables, sales, reporting and live operations from any device — anytime.
-</p>
-    </div>
-
-    <div className="relative">
-
-      {/* REAL IMAGE */}
-      <img
-        src="https://hoxxes.app/images/waiter-operations.png"
-        alt="HOXXES Waiter Operations"
-        className="w-full rounded-[32px]"
-        loading="lazy"
-      />
-
-      
-    </div>
-    <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
-      <div>✓ Ordering</div>
-  <div>✓ Tables</div>
-  <div>✓ Live Sales</div>
-  <div>✓ Backoffice</div>
-  <div>✓ Manager View</div>
-  <div>✓ Owner View</div>
-  <div>✓ Android</div>
-  <div>✓ iOS</div>
-    </div>
-
-  </div>
-</section>
-  
-  {/* ONLINE ORDERING */}
+{/* ONLINE ORDERING */}
 <section className="py-24 sm:py-32 bg-transparent">
   <div className="max-w-7xl mx-auto px-6">
 
@@ -545,6 +544,127 @@ transition
 
   </div>
 </section>
+
+{/* KDS */}
+<section className="py-24 sm:py-32 bg-transparent">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Kitchen Display System
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Every order. Every station. In real time.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Orders flow directly from POS, QR and online channels into the
+        kitchen, helping teams prepare, prioritize and deliver faster.
+      </p>
+    </div>
+
+    <div className="relative">
+  <img
+    src="https://hoxxes.app/images/kitchen-display-system.png"
+    alt="HOXXES Kitchen Display System"
+    className="w-full rounded-[32px]"
+    loading="lazy"
+  />
+
+</div>
+ <div className="mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 text-slate-600 text-center">
+   <div>✓ Live Orders</div>
+  <div>✓ Routing</div>
+  <div>✓ Prioritization</div>
+  <div>✓ Station View</div>
+  <div>✓ Order Status</div>
+  <div>✓ Kitchen Analytics</div>
+  <div>✓ Real-Time Sync</div>
+  <div>✓ Multi-Station</div>
+</div>
+
+  </div>
+</section>
+
+
+
+
+
+{/* PROMOTIONS & CAMPAIGN AUTOMATION */}
+<section className="py-24 sm:py-32 bg-white">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Promotions Automation
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
+        Promotions that run themselves.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Schedule promotions once and let HOXXES automatically activate
+        and deactivate discounts, campaigns and loyalty benefits with
+        complete accuracy.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-6">
+
+      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+        <div className="text-lg font-medium mb-3">
+          Happy Hour Automation
+        </div>
+
+        <p className="text-sm text-slate-600">
+          Automatically activate and deactivate Happy Hour promotions
+          based on day and time schedules.
+        </p>
+      </div>
+
+      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+        <div className="text-lg font-medium mb-3">
+          Scheduled Discounts
+        </div>
+
+        <p className="text-sm text-slate-600">
+          Apply automatic discounts to products, categories or entire
+          menus without manual intervention.
+        </p>
+      </div>
+
+      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+        <div className="text-lg font-medium mb-3">
+          Loyalty Campaigns
+        </div>
+
+        <p className="text-sm text-slate-600">
+          Launch voucher, membership and loyalty campaigns that run
+          automatically across all channels.
+        </p>
+      </div>
+
+    </div>
+
+    <div className="mt-12 text-center">
+      <p className="text-sm sm:text-base text-slate-600">
+        No manual changes. No staff mistakes. No missed promotions.
+      </p>
+
+      <p className="mt-2 text-lg font-medium">
+        Set it once. Let HOXXES handle the rest.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+  
+  
        
 {/* HQ CONTROL CENTER */}
 <section className="py-24 sm:py-32 bg-slate-50">

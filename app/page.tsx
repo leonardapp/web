@@ -160,7 +160,103 @@ into one unified platform.
 {/* FEATURES DIRECTLY */}
 <FeaturesGrid />
 
+  {/* KIOSK */}
+      
+      <section id="kiosk" className="relative py-24 sm:py-36 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white" />
 
+        <div className="relative max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+            {/* LEFT */}
+            <motion.div
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.4 }}
+  transition={{
+    duration: 0.9,
+    ease: [0.22, 1, 0.36, 1],
+  }}
+>
+  <div className="text-xs tracking-[0.35em] text-emerald-600 font-semibold mb-5 text-center">
+    Flagship Hardware
+  </div>
+
+  <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-center">
+    Self-service kiosks,
+    <span className="block text-slate-400">
+      fully integrated.
+    </span>
+  </h2>
+
+  <p className="mt-6 text-slate-500 leading-relaxed">
+    Android-based self-service kiosks fully integrated with POS, KDS,
+    fiscal printers and payment terminals.
+  </p>
+  
+
+  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-600">
+    {[
+  "Fully Integrated With POS",
+  "Connected To Kitchen Display System",
+  "Centralized Menu Management",
+  "Real-Time Reporting",
+  "Multi-Location Deployment",
+  "Integrated Thermal Printer",
+].map((f) => (
+      <div key={f}>✓ {f}</div>
+    ))}
+  </div>
+
+  <div className="mt-8 flex flex-col sm:flex-row gap-3">
+    <Button href="/hardware" variant="primary">
+      Explore Hardware
+    </Button>
+
+    <Button href="/request-demo" variant="outline">
+      Request Demo
+    </Button>
+  </div>
+</motion.div>
+
+            {/* RIGHT */}
+<motion.div
+  initial={{
+    opacity: 0,
+    y: 40,
+    scale: 0.96,
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+    scale: 1,
+  }}
+  viewport={{
+    once: true,
+    amount: 0.15,
+  }}
+  transition={{
+    duration: 0.7,
+    ease: [0.22, 1, 0.36, 1],
+  }}
+  className="relative flex justify-center items-center scale-125 sm:scale-110 lg:scale-100"
+>
+
+  {/* Emerald Glow */}
+<div
+  className="absolute w-[700px] h-[700px] bg-emerald-400/25 rounded-full blur-[180px]"
+/>
+
+<img
+  src="https://hoxxes.app/images/kiosk.svg"
+  alt="Hoxxes Kiosk"
+  className="relative z-10 w-[125vw] sm:w-[90vw] lg:w-full lg:max-w-[1400px] object-contain"
+/>
+</motion.div>
+
+           </div>
+        </div>
+      </section>
 
 {/* PLATFORM FLOW */}
       
@@ -324,55 +420,55 @@ directly with your kitchen — without installing an app.
 <div className="mt-16 grid lg:grid-cols-2 gap-12 items-center">
 
 
-      <div className="flex justify-center">
+  <div className="flex justify-center">
 
-        <div className="w-[300px] rounded-[40px] bg-black p-3 shadow-xl">
+    <div className="w-[200px] sm:w-[220px] lg:w-[240px] rounded-[40px] bg-black p-3 shadow-xl">
 
-          <div className="rounded-[32px] overflow-hidden bg-white">
+      <div className="rounded-[32px] overflow-hidden bg-white">
 
-            <img
-              src="https://hoxxes.app/images/qr-menu.jpg"
-              alt="Digital Menu"
-              className="w-full"
-            />
-
-          </div>
-
-        </div>
+        <img
+          src="https://hoxxes.app/images/qr-menu.jpg"
+          alt="Digital Menu"
+          className="w-full"
+        />
 
       </div>
-
-
-
-      <div className="flex flex-col items-center">
-
-  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
-    <QRCodeSVG
-      value="https://qr.hoxxes.com/qr/SSI718JKZ770"
-      size={180}
-      level="H"
-    />
-  </div>
-
- <p className="mt-5 text-sm text-slate-500 text-center">
-  Scan the live demo and experience HOXXES Smart QR Ordering.
-</p>
-
-  <a
-    href="https://qr.hoxxes.com/qr/SSI718JKZ770"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="mt-6 rounded-full bg-black px-8 py-3 text-sm font-medium text-white transition hover:bg-slate-800"
-  >
-    Explore Live Menu
-  </a>
-
-</div>
-
 
     </div>
 
   </div>
+
+
+
+  <div className="flex flex-col items-center">
+
+    <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-lg">
+      <QRCodeSVG
+        value="https://qr.hoxxes.com/qr/SSI718JKZ770"
+        size={140}
+        level="H"
+      />
+    </div>
+
+    <p className="mt-5 text-sm text-slate-500 text-center">
+      Scan the live demo and experience Smart QR Ordering.
+    </p>
+
+  <a
+  href="https://qr.hoxxes.com/qr/SSI718JKZ770"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-6 w-full sm:w-auto rounded-full bg-black px-8 py-3 text-center text-sm font-medium text-white transition hover:bg-slate-800"
+>
+  Explore Live Menu
+</a>
+    
+
+  </div>
+ </div>
+
+</div>
+
 </section>
 
 
@@ -638,102 +734,7 @@ directly with your kitchen — without installing an app.
 </section>
 
 
-      {/* KIOSK */}
-      
-      <section id="kiosk" className="relative py-24 sm:py-36 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white" />
-
-        <div className="relative max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-            {/* LEFT */}
-            <motion.div
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.4 }}
-  transition={{
-    duration: 0.9,
-    ease: [0.22, 1, 0.36, 1],
-  }}
->
-  <div className="text-xs tracking-[0.35em] text-emerald-600 font-semibold mb-5 text-center">
-    Flagship Hardware
-  </div>
-
-  <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-center">
-    Self-service kiosks,
-    <span className="block text-slate-400">
-      fully integrated.
-    </span>
-  </h2>
-
-  <p className="mt-6 text-slate-500 leading-relaxed">
-    Android-based self-service kiosks fully integrated with POS, KDS,
-    fiscal printers and payment terminals.
-  </p>
-  
-
-  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-600">
-    {[
-  "Fully Integrated With POS",
-  "Connected To Kitchen Display System",
-  "Centralized Menu Management",
-  "Real-Time Reporting",
-  "Multi-Location Deployment",
-  "Integrated Thermal Printer",
-].map((f) => (
-      <div key={f}>✓ {f}</div>
-    ))}
-  </div>
-
-  <div className="mt-8 flex flex-col sm:flex-row gap-3">
-    <Button href="/hardware" variant="primary">
-      Explore Hardware
-    </Button>
-
-    <Button href="/request-demo" variant="outline">
-      Request Demo
-    </Button>
-  </div>
-</motion.div>
-
-            {/* RIGHT */}
-<motion.div
-  initial={{
-    opacity: 0,
-    y: 40,
-    scale: 0.96,
-  }}
-  whileInView={{
-    opacity: 1,
-    y: 0,
-    scale: 1,
-  }}
-  viewport={{
-    once: true,
-    amount: 0.15,
-  }}
-  transition={{
-    duration: 0.7,
-    ease: [0.22, 1, 0.36, 1],
-  }}
-  className="relative flex justify-center items-center"
->
-  {/* Emerald Glow */}
-  <div
-    className="absolute w-[500px] h-[500px] bg-emerald-400/25 rounded-full blur-[140px]"
-  />
-
-  <img
-  src="https://hoxxes.app/images/kiosk.svg"
-  alt="Hoxxes Kiosk"
-  className="relative z-10 w-full max-w-[900px] sm:max-w-[900px] max-h-[500px] object-contain"
-/>
-</motion.div>
-
-           </div>
-        </div>
-      </section>
+    
       {/* HOLOBOX */}
       
 <section id="holobox" className="py-24 sm:py-36 bg-white overflow-hidden">

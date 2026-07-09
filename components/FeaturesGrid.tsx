@@ -7,10 +7,28 @@ import Button from "./Button";
 
 const features = [
   {
+    title: "Restaurant POS",
+    image: "https://hoxxes.app/images/pos-operations.png",
+    focus: "50% 50%",
+    href: "/software#restaurant-pos",
+  },
+  {
+    title: "Operations Hub",
+    image: "https://hoxxes.app/images/waiter-operations.png",
+    focus: "50% 100%",
+    href: "/software#waiter-operations",
+  }, 
+  {
     title: "QR Ordering",
     image: "https://hoxxes.app/images/qr-ordering.png",
     focus: "30% 70%",
     href: "/software#qr-ordering",
+  },
+  {
+    title: "Self-Service Kiosk",
+    image: "https://hoxxes.app/images/kiosk-ordering.png",
+    focus: "10% 100%",
+    href: "/software#self-service-kiosk",
   },
   {
     title: "Online Ordering",
@@ -19,28 +37,10 @@ const features = [
     href: "/software#online-ordering",
   },
   {
-    title: "Restaurant POS",
-    image: "https://hoxxes.app/images/pos-operations.png",
-    focus: "50% 50%",
-    href: "/software#restaurant-pos",
-  },
-  {
     title: "Kitchen Display System",
     image: "https://hoxxes.app/images/kitchen-display-system.png",
     focus: "10% 100%",
     href: "/software#kitchen-display",
-  },
-  {
-    title: "Operations Hub",
-    image: "https://hoxxes.app/images/waiter-operations.png",
-    focus: "50% 100%",
-    href: "/software#waiter-operations",
-  },  
-  {
-    title: "Self-Service Kiosk",
-    image: "https://hoxxes.app/images/kiosk-ordering.png",
-    focus: "10% 100%",
-    href: "/software#self-service-kiosk",
   },
   {
     title: "HQ Control Center",

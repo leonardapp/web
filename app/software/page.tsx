@@ -8,66 +8,77 @@ import Link from "next/link";
 
 const slides = [
 {
-    title: "QR Ordering",
-    desc: "Orders flow directly to kitchen stations with live prioritization.",
-    benefits: ["QR Scan", "Live Menu", "Waiter Call", "Real-time Sync"],
-    image: "https://hoxxes.app/images/qr-ordering.png",
-    focus: "30% 70%",
-  },
-{
-    title: "Online Ordering",
-    desc: "Your fully branded ordering ecosystem.",
-    benefits: ["Delivery", "Pickup", "Wallet", "Loyalty"],
-    image: "https://hoxxes.app/images/online-ordering.png",
-    focus: "90% 50%",
-  },
-  {
     title: "Restaurant POS",
     desc: "Take orders, process payments and manage tables in real time.",
     benefits: ["Web POS", "Android POS", "Offline Mode", "Multi-Location"],
     image: "https://hoxxes.app/images/pos-operations.png",
-    focus: "50% 100%",
-  },
-  {
-    title: "Kitchen Display System",
-    desc: "Orders flow directly into kitchen stations in real time.",
-    benefits: ["Live Orders", "Routing", "Stations", "Priority"],
-    image: "https://hoxxes.app/images/kitchen-display-system.png",
-    focus: "30% 100%",
+    focusMobile: "50% 100%",
+    focusDesktop: "100% 20%",
   },
   {
     title: "Operations Hub",
     desc: "Unified role-based app for staff, managers and owners.",
     benefits: ["Waiter Mode", "Manager Mode", "Owner Mode", "Real-time Sync"],
     image: "https://hoxxes.app/images/waiter-operations.png",
-    focus: "50% 70%",
+    focusMobile: "50% 70%",
+    focusDesktop: "100% 10%",
   },
-    {
+  {
+    title: "QR Ordering",
+    desc: "Orders flow directly to kitchen stations with live prioritization.",
+    benefits: ["QR Scan", "Live Menu", "Waiter Call", "Real-time Sync"],
+    image: "https://hoxxes.app/images/qr-ordering.png",
+    ffocusMobile: "30% 70%",
+    focusDesktop: "50% 75%",
+  },
+  {
     title: "Self-Service Kiosk",
     desc: "Fast self-ordering experience without queues.",
     benefits: ["Upselling", "Payments", "Branding", "Sync"],
     image: "https://hoxxes.app/images/kiosk-ordering.png",
-    focus: "15% 100%",
+    focusMobile: "15% 100%",
+    focusDesktop: "100% 30%",
+  },
+{
+    title: "Online Ordering",
+    desc: "Your fully branded ordering ecosystem.",
+    benefits: ["Delivery", "Pickup", "Wallet", "Loyalty"],
+    image: "https://hoxxes.app/images/online-ordering.png",
+    focusMobile: "90% 50%",
+    focusDesktop: "50% 75%",
+  },
+  {
+    title: "Kitchen Display System",
+    desc: "Orders flow directly into kitchen stations in real time.",
+    benefits: ["Live Orders", "Routing", "Stations", "Priority"],
+    image: "https://hoxxes.app/images/kitchen-display-system.png",
+    focusMobile: "30% 100%",
+    focusDesktop: "100% 30%",
   },
   {
     title: "HQ Control Center",
     desc: "Centralized control for multi-location operations.",
     benefits: ["HQ View", "Sync", "Menus", "Campaigns"],
     image: "https://hoxxes.app/images/dashboard-overview.png",
-    focus: "15% 100%",
+    focusMobile: "15% 100%",
+    focusDesktop: "100% 20%",
   },
   {
     title: "Analytics Cloud",
     desc: "Real-time business intelligence and performance tracking.",
     benefits: ["Sales", "KPI", "Reports", "Forecasting"],
     image: "https://hoxxes.app/images/analytics-dashboard.png",
-    focus: "60% 100%",
+    focusMobile: "60% 100%",
+    focusDesktop: "75% 50%",
   },
 ];
 
-export default function SoftwarePage() {
+
+
+  export default function SoftwarePage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -83,7 +94,20 @@ export default function SoftwarePage() {
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
+
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    checkScreen();
+
+    window.addEventListener("resize", checkScreen);
+
+    return () => window.removeEventListener("resize", checkScreen);
   }, []);
 
   return (
@@ -125,13 +149,16 @@ export default function SoftwarePage() {
                 transform: i === active ? "scale(1)" : "scale(1.08)",
               }}
             >
+              
               <Image
   src={s.image}
   alt={s.title}
   fill
   className="object-cover"
   style={{
-    objectPosition: s.focus,
+    objectPosition: isDesktop
+      ? s.focusDesktop
+      : s.focusMobile,
   }}
   priority={i === active}
 />
