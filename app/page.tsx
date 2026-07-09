@@ -1,7 +1,6 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import Link from "next/link";
 import Header from "@/components/Header";
 import Button from "@/components/Button";
 import LogoMarquee from "@/components/LogoMarquee";
@@ -262,70 +261,117 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
       </h2>
 
       <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-        Automatically generate QR codes for every table,
-        create temporary ordering points and track customer
-        engagement through real-time analytics.
+        Transform every table into a direct ordering channel.
+Customers can browse menus, place orders and connect
+directly with your kitchen — without installing an app.
       </p>
     </div>
 
+
+    {/* FEATURES */}
+
     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-  <div className="rounded-3xl border border-slate-200 bg-white p-6">
-    <h3 className="font-semibold">Automatic QR Generation</h3>
-    <p className="mt-2 text-sm text-slate-500">
-      Every table automatically receives its own QR code.
-    </p>
-  </div>
+      <div className="rounded-3xl border border-slate-200 bg-white p-6">
+        <h3 className="font-semibold">
+          No App Required
+        </h3>
 
-  <div className="rounded-3xl border border-slate-200 bg-white p-6">
-    <h3 className="font-semibold">Temporary QR Codes</h3>
-    <p className="mt-2 text-sm text-slate-500">
-      Create temporary QR codes for events, terraces and VIP areas.
-    </p>
-  </div>
-
-  <div className="rounded-3xl border border-slate-200 bg-white p-6">
-    <h3 className="font-semibold">Real-Time Analytics</h3>
-    <p className="mt-2 text-sm text-slate-500">
-      Monitor scans, orders and table performance instantly.
-    </p>
-  </div>
-
-  <div className="rounded-3xl border border-slate-200 bg-white p-6">
-    <h3 className="font-semibold">One-Click Printing</h3>
-    <p className="mt-2 text-sm text-slate-500">
-      Download and print QR codes directly from the platform.
-    </p>
-  </div>
-
-</div>
+        <p className="mt-2 text-sm text-slate-500">
+          Customers scan, order and pay directly from their phone.
+        </p>
+      </div>
 
 
-{/* QR CODE */}
-<div className="mt-12 flex w-full flex-col items-center justify-center gap-4 text-center">
-  <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+      <div className="rounded-3xl border border-slate-200 bg-white p-6">
+        <h3 className="font-semibold">
+          Instant Menu Updates
+        </h3>
+
+        <p className="mt-2 text-sm text-slate-500">
+          Update prices, products and availability instantly across all tables.
+        </p>
+      </div>
+
+
+      <div className="rounded-3xl border border-slate-200 bg-white p-6">
+        <h3 className="font-semibold">
+          Kitchen Integration
+        </h3>
+
+        <p className="mt-2 text-sm text-slate-500">
+          Orders flow directly into your operational workflow.
+        </p>
+      </div>
+
+
+      <div className="rounded-3xl border border-slate-200 bg-white p-6">
+        <h3 className="font-semibold">
+          Customer Insights
+        </h3>
+
+        <p className="mt-2 text-sm text-slate-500">
+          Understand ordering behavior and improve your service.
+        </p>
+      </div>
+
+    </div>
+
+
+
+    {/* DIGITAL MENU PHONE PREVIEW */}
+
+<div className="mt-16 grid lg:grid-cols-2 gap-12 items-center">
+
+
+      <div className="flex justify-center">
+
+        <div className="w-[300px] rounded-[40px] bg-black p-3 shadow-xl">
+
+          <div className="rounded-[32px] overflow-hidden bg-white">
+
+            <img
+              src="https://hoxxes.app/images/qr-menu.jpg"
+              alt="Digital Menu"
+              className="w-full"
+            />
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div className="flex flex-col items-center">
+
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
     <QRCodeSVG
       value="https://qr.hoxxes.com/qr/SSI718JKZ770"
-      size={160}
+      size={180}
       level="H"
     />
   </div>
 
-  <p className="text-sm text-slate-500">
-    Scan with your phone to experience live QR Ordering
-  </p>
-</div>
-    
-<div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 text-center">
+ <p className="mt-5 text-sm text-slate-500 text-center">
+  Scan the live demo and experience HOXXES Smart QR Ordering.
+</p>
+
   <a
     href="https://qr.hoxxes.com/qr/SSI718JKZ770"
     target="_blank"
     rel="noopener noreferrer"
-    className="rounded-full bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-slate-800"
+    className="mt-6 rounded-full bg-black px-8 py-3 text-sm font-medium text-white transition hover:bg-slate-800"
   >
     Explore Live Menu
   </a>
+
 </div>
+
+
+    </div>
+
   </div>
 </section>
 
@@ -368,7 +414,7 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
       </div>
 
       {/* Commerce */}
-      <div className="rounded-3xl border border-slate-200 bg-transparent p-8">
+      <div className="rounded-3xl border border-slate-200 bg-white p-8">
         <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-4">
           Commerce & Delivery
         </div>
