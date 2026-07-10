@@ -156,17 +156,59 @@ export const hoxxesSchema = {
     {
   "@type": "Product",
   "@id": `${siteUrl}/#android-pos`,
-  name: "HOXXES Android POS Terminal",
-  brand: {
+  "name": "HOXXES Android POS Terminal",
+
+  "brand": {
     "@id": `${siteUrl}/#brand`
   },
-  category: "Restaurant POS Hardware",
-  description:
-    "Android POS hardware designed for restaurants and retail businesses, fully integrated with the HOXXES operating system.",
-  manufacturer: {
+
+  "manufacturer": {
     "@id": `${siteUrl}/#organization`
   },
-  url: `${siteUrl}/hardware`
+
+  "category": "Restaurant POS Hardware",
+
+  "description":
+    "Enterprise Android POS terminal designed for restaurants and retail businesses, fully integrated with the HOXXES operating system.",
+
+  "url": `${siteUrl}/hardware`,
+
+  "offers": {
+    "@type": "Offer",
+    "url": `${siteUrl}/hardware`,
+    "price": "677",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock"
+  }
+},
+{
+  "@type": "Product",
+  "@id": `${siteUrl}/#kiosk-slim`,
+
+  "name": "HOXXES Kiosk Slim 32\" Wall Mounted",
+
+  "brand": {
+    "@id": `${siteUrl}/#brand`
+  },
+
+  "manufacturer": {
+    "@id": `${siteUrl}/#organization`
+  },
+
+  "category": "Self-Service Kiosk Hardware",
+
+  "description":
+    "32-inch wall-mounted self-service kiosk integrated with HOXXES POS, payment terminals and restaurant ordering ecosystem.",
+
+  "url": `${siteUrl}/hardware`,
+
+  "offers": {
+    "@type": "Offer",
+    "url": `${siteUrl}/hardware`,
+    "price": "1185",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/PreOrder"
+  }
 },
 {
  "@type": "Service",
