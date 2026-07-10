@@ -244,7 +244,7 @@ into one unified platform.
 
   {/* Emerald Glow */}
 <div
-  className="absolute w-[700px] h-[700px] bg-emerald-400/25 rounded-full blur-[180px]"
+  className="absolute w-[700px] h-[700px] bg-emerald-400/20 rounded-full blur-[180px]"
 />
 
 <img
@@ -419,10 +419,14 @@ directly with your kitchen — without installing an app.
 
 <div className="mt-16 grid lg:grid-cols-2 gap-12 items-center">
 
-
   <div className="flex justify-center">
 
-    <div className="w-[200px] sm:w-[220px] lg:w-[240px] rounded-[40px] bg-black p-3 shadow-xl">
+    <div className="relative w-[200px] sm:w-[220px] lg:w-[240px] rounded-[40px] bg-black p-3 shadow-xl">
+
+      {/* Emerald Glow */}
+      <div className="absolute inset-0 -z-10 flex items-center justify-center">
+  <div className="w-[450px] h-[450px] absolute inset-0 bg-emerald-400/20 rounded-full blur-[140px]" />
+</div>
 
       <div className="rounded-[32px] overflow-hidden bg-white">
 
@@ -437,6 +441,8 @@ directly with your kitchen — without installing an app.
     </div>
 
   </div>
+
+
 
 
 
@@ -632,19 +638,19 @@ directly with your kitchen — without installing an app.
 
   <div className="space-y-6">
 
-    <div className="rounded-3xl border border-slate-200 p-6">
+    <div className="rounded-3xl border border-slate-200 p-6 bg-white">
       <h3 className="font-semibold text-lg">
         HQ Product & Menu Synchronization
       </h3>
 
-      <p className="mt-2 text-slate-500 text-sm">
+      <p className="mt-2 text-slate-500 text-sm ">
         Create products, ingredients, categories and menus once,
         then synchronize them across one, multiple or all locations
         with a single action.
       </p>
     </div>
 
-    <div className="rounded-3xl border border-slate-200 p-6">
+    <div className="rounded-3xl border border-slate-200 p-6 bg-white">
       <h3 className="font-semibold text-lg">
         Unified Pricing & Promotion Control
       </h3>
@@ -655,7 +661,7 @@ directly with your kitchen — without installing an app.
       </p>
     </div>
 
-    <div className="rounded-3xl border border-slate-200 p-6">
+    <div className="rounded-3xl border border-slate-200 p-6 bg-white">
       <h3 className="font-semibold text-lg">
         Real-Time Operational Visibility
       </h3>
