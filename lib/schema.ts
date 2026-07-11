@@ -223,7 +223,16 @@ export const hoxxesSchema = {
    "Restaurant Software Deployment",
    "POS Installation",
    "Hardware Setup",
-   "Technical Support"
+   "Technical Support",
+   "Restaurant Management Software",
+"Restaurant POS Software",
+"Restaurant POS System",
+"Program për Restorante",
+"Software për Restorante",
+"POS për Restorante",
+"QR Ordering",
+"Kitchen Display System",
+"Restaurant Automation"
  ]
 },
         {
