@@ -7,33 +7,44 @@ import Header from "@/components/Header";
 import Button from "@/components/Button";
 
 const hardware = [
- {
-  title: "Kiosk Slim",
-   subtitle: '32" wall-mounted self-service kiosk',
-  price: "€1,185 + VAT",
-  preorderPrice: "€1,050 + VAT",
-  availableFrom: "15 July",
-  preorderAvailableFrom: "3 months",
-  image: "https://hoxxes.app/images/kiosk.svg",
-  description:
-    "Space-saving 32-inch wall-mounted self-service kiosk fully integrated with POS, payment terminals and the HOXXES ordering ecosystem.",
-},
   {
-  title: "POS Terminal",
-  subtitle: "Enterprise dual-screen POS",
-  price: "€677 + VAT",
-  preorderPrice: "€599 + VAT",
-  availableFrom: "15 July",
-  preorderAvailableFrom: "3 months",
-  image: "https://hoxxes.app/images/POS.png",
-  description:
-  "Enterprise dual-screen POS terminal featuring Offline Mode for uninterrupted operations, high-speed transactions and seamless integration with the HOXXES ecosystem.",
-},
+    id: 1,
+    slug: "kiosk-slim",
+    title: "Kiosk Slim",
+    subtitle: '32" Wall-Mounted Self-Service Kiosk',
+    price: 1185,
+    stock: 10,
+    image: "https://hoxxes.app/images/kiosk.svg",
+    description:
+      "Space-saving 32-inch wall-mounted self-service kiosk fully integrated with POS, payment terminals and the HOXXES ordering ecosystem.",
+  },
+  {
+    id: 2,
+    slug: "pos-terminal",
+    title: "POS Terminal",
+    subtitle: "Enterprise Dual-Screen POS",
+    price: 677,
+    stock: 5,
+    image: "https://hoxxes.app/images/POS.png",
+    description:
+      "Enterprise dual-screen POS terminal featuring Offline Mode for uninterrupted operations.",
+  },
+  {
+    id: 3,
+    slug: "kds-display",
+    title: "Kitchen Display System",
+    subtitle: 'ALLNET Touch Display 21" (PoE) Android',
+    price: 415,
+    stock: 1,
+    image: "https://hoxxes.app/images/kds-allnet.png",
+    description:
+      "Recommended Android display for HOXXES Kitchen Display System.",
+  },
 ];
 
 export default function HardwarePage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [openDimensions, setOpenDimensions] = useState(false);
+ const [openDimensions, setOpenDimensions] = useState<string | null>(null);
 
   return (
     <div className="bg-transparent text-black overflow-hidden">
@@ -133,20 +144,23 @@ export default function HardwarePage() {
 
               {/* PRICE */}
               <div className="mt-3 text-black font-medium text-lg">
-                {item.price}
+                €{item.price.toLocaleString()} + VAT
               </div>
 
               {/* STOCK */}
-              <div className="mt-3 text-sm text-slate-600">
-  Ready for deployment • Available from{" "}
-  <span className="font-medium text-black">
-    {item.availableFrom}
+              <div className="mt-4 flex items-center gap-2">
+  <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+
+  <span className="text-sm text-slate-600">
+    {item.stock > 3
+      ? `${item.stock} Units Available`
+      : `Only ${item.stock} Left`}
   </span>
 </div>
 
               {/* BADGE */}
               <span className="inline-block mt-3 text-xs px-3 py-1 rounded-full bg-amber-100 text-amber-700">
-                Limited Stock • Pre-order now
+                Limited Stock • Buy now
               </span>
 
               <div className="h-0" />
@@ -160,14 +174,13 @@ export default function HardwarePage() {
               </button>
 
               {/* VIEW DIMENSIONS (ONLY KIOSK) */}
-              {item.title === "Kiosk Slim" && (
-                <button
-                  onClick={() => setOpenDimensions(true)}
-                  className="block mt-4 text-sm font-medium text-black/70 hover:text-black underline transition"
-                >
-                  View Dimensions
-                </button>
-              )}
+              <button
+  onClick={() => setOpenDimensions(item.slug)}
+  className="block mt-4 text-sm font-medium text-black/70 hover:text-black underline transition"
+>
+  View Dimensions
+</button>
+          
 
               {/* EXPAND */}
               <motion.div
@@ -186,16 +199,12 @@ export default function HardwarePage() {
 
               {/* CTA */}
 <div className="mt-6 flex gap-3 flex-wrap">
-  <a
-  href={`mailto:info@hoxxes.com?subject=Pre-order%20Request%20-%20${encodeURIComponent(
-    item.title
-  )}&body=Hello%20Hoxxes,%0D%0A%0D%0AI am interested in pre-ordering your hardware.%0D%0A%0D%0AProduct:%20${encodeURIComponent(
-    item.title
-  )}%0D%0AQuantity:%0D%0ACompany:%0D%0A%0D%0AThank you.`}
-  className="px-5 py-2 rounded-full bg-black text-white text-sm hover:scale-105 transition inline-block"
->
-  Pre-order Now
-</a>
+  <Link
+    href={`/hardware/${item.slug}`}
+    className="px-5 py-2 rounded-full bg-black text-white text-sm hover:scale-105 transition"
+  >
+    Buy Now
+  </Link>
 
   <Link
     href="/contact-sales"
@@ -209,7 +218,7 @@ export default function HardwarePage() {
             {/* IMAGE */}
             <div className={i % 2 === 1 ? "md:order-1" : ""}>
               <div className="relative">
-                <div className="absolute inset-0 bg-emerald-400/20 blur-3xl rounded-full" />
+                <div className="absolute inset-0 bg-white blur-3xl rounded-full" />
 
                 <img
                   src={item.image}
@@ -226,20 +235,20 @@ export default function HardwarePage() {
       {openDimensions && (
         <div
           className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-6"
-          onClick={() => setOpenDimensions(false)}
+          onClick={() => setOpenDimensions(null)}
         >
           <div
             className="relative max-w-5xl w-full"
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src="https://hoxxes.app/images/kiosk-dimensions.png"
-              className="w-full max-h-[90vh] object-contain rounded-xl shadow-2xl"
-              alt="Kiosk Dimensions"
-            />
+  src={`https://hoxxes.app/images/${openDimensions}-dimensions.png`}
+  className="w-full max-h-[90vh] object-contain rounded-xl shadow-2xl"
+  alt="Product Dimensions"
+/>
 
             <button
-              onClick={() => setOpenDimensions(false)}
+              onClick={() => setOpenDimensions(null)}
               className="absolute top-3 right-3 bg-white text-black rounded-full px-3 py-1 text-sm"
             >
               ✕

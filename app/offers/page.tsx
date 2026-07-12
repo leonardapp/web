@@ -288,14 +288,14 @@ for New Subscribers
 
   {/* Technical Drawing */}
   <a
-    href="https://hoxxes.app/images/kiosk-dimensions.png"
+    href="https://hoxxes.app/images/kiosk-slim-dimensions.png"
     target="_blank"
     rel="noopener noreferrer"
     className="block"
   >
     <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
       <img
-        src="https://hoxxes.app/images/kiosk-dimensions.png"
+        src="https://hoxxes.app/images/kiosk-slim-dimensions.png"
         alt="HOXXES Kiosk Dimensions"
         className="w-full max-w-[650px] object-contain transition hover:scale-[1.02]"
       />
