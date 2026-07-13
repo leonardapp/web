@@ -1,4 +1,3 @@
-export const dynamic = "force-dynamic";
 "use client";
 import Header from "@/components/Header";
 
@@ -110,6 +109,8 @@ window.location.href = "/order-success";
       <div className="absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-slate-300/20 blur-[150px]" />
 
     </div>
+    
+<main className="relative z-10">
 
       <div className="max-w-7xl mx-auto pt-28 pb-24 px-6 grid lg:grid-cols-3 gap-10">
 
@@ -450,6 +451,7 @@ window.location.href = "/order-success";
         </div>
 
       </div>
+      </main>
 
     </div>
   );
