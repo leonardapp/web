@@ -1,6 +1,8 @@
 "use client";
-import Header from "@/components/Header";
 
+export const dynamic = "force-dynamic";
+
+import Header from "@/components/Header";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
