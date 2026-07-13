@@ -52,7 +52,7 @@ export const products:Product[]=[
   description: "Android Kitchen Display",
   image: "https://hoxxes.app/images/kds-allnet.png",
   price: 415,
-  stock: 15,
+  stock: 1,
   vat: 8,
 }
 

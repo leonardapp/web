@@ -13,7 +13,7 @@ const hardware = [
     title: "Kiosk Slim",
     subtitle: '32" Wall-Mounted Self-Service Kiosk',
     price: 1185,
-    stock: 10,
+    availability: "in-stock",
     image: "https://hoxxes.app/images/kiosk.svg",
     description:
       "Space-saving 32-inch wall-mounted self-service kiosk fully integrated with POS, payment terminals and the HOXXES ordering ecosystem.",
@@ -24,7 +24,7 @@ const hardware = [
     title: "POS Terminal",
     subtitle: "Enterprise Dual-Screen POS",
     price: 677,
-    stock: 5,
+    availability: "in-stock",
     image: "https://hoxxes.app/images/POS.png",
     description:
       "Enterprise dual-screen POS terminal featuring Offline Mode for uninterrupted operations.",
@@ -35,7 +35,7 @@ const hardware = [
     title: "Kitchen Display System",
     subtitle: 'ALLNET Touch Display 21" (PoE) Android',
     price: 415,
-    stock: 1,
+    availability: "in-stock",
     image: "https://hoxxes.app/images/kds-allnet.png",
     description:
       "Recommended Android display for HOXXES Kitchen Display System.",
@@ -149,13 +149,23 @@ export default function HardwarePage() {
 
               {/* STOCK */}
               <div className="mt-4 flex items-center gap-2">
-  <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+
+  <div
+    className={`w-2 h-2 rounded-full ${
+      item.availability === "in-stock"
+        ? "bg-emerald-500"
+        : item.availability === "pre-order"
+        ? "bg-amber-500"
+        : "bg-red-500"
+    }`}
+  />
 
   <span className="text-sm text-slate-600">
-    {item.stock > 3
-      ? `${item.stock} Units Available`
-      : `Only ${item.stock} Left`}
+    {item.availability === "in-stock" && "In Stock"}
+    {item.availability === "pre-order" && "Pre-Order"}
+    {item.availability === "out-of-stock" && "Out of Stock"}
   </span>
+
 </div>
 
               {/* BADGE */}
