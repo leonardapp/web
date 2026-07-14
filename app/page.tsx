@@ -748,11 +748,11 @@ directly with your kitchen — without installing an app.
 
     <div className="text-center mb-16">
       <div className="text-xs tracking-[0.35em] text-emerald-600 font-semibold mb-5 text-center">
-        HOXXES Innovation Lab
+        Featured Hardware
       </div>
 
       <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
-        Hologram BOX - HoloBox
+        HoloBox Interactive Display
       </h2>
 
       <p className="mt-5 max-w-3xl mx-auto text-slate-500 text-center">
@@ -814,8 +814,8 @@ memorable customer experiences.
         </div>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-3">
-          <Button href="/offers" variant="primary">
-            Order HoloBox
+          <Button href="/hardware" variant="primary">
+            Explore Hardware
           </Button>
 
           <Button

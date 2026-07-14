@@ -6,6 +6,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Button from "@/components/Button";
 
+
 const hardware = [
   {
     id: 1,
@@ -40,6 +41,17 @@ const hardware = [
     description:
       "Recommended Android display for HOXXES Kitchen Display System.",
   },
+  {
+  id: 4,
+  slug: "holo",
+  title: 'HoloBox 86"',
+  subtitle: "Transparent Interactive Holographic Display",
+  price: 10000,
+  availability: "in-stock",
+  image: "https://hoxxes.app/images/holo.png",
+  description:
+    "Premium transparent holographic display designed for retail, hospitality, exhibitions and immersive customer experiences.",
+},
 ];
 
 export default function HardwarePage() {
@@ -223,12 +235,14 @@ export default function HardwarePage() {
 
               {/* CTA */}
 <div className="mt-6 flex gap-3 flex-wrap">
+  {item.slug !== "holo" && (
   <Link
     href={`/hardware/${item.slug}`}
     className="px-5 py-2 rounded-full bg-black text-white text-sm hover:scale-105 transition"
   >
     Buy Now
   </Link>
+)}
 
   <Link
     href="/contact-sales"
