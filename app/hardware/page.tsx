@@ -66,41 +66,55 @@ export default function HardwarePage() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="relative z-10 max-w-4xl px-6 text-white"
-        >
-          <div className="text-xs tracking-[0.35em] uppercase text-white/60">
-            Hardware System
-          </div>
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  className="relative z-10 max-w-4xl px-6 text-white"
+>
+  <div className="text-xs tracking-[0.35em] uppercase text-white/60">
+    Hardware System
+  </div>
 
-          <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight">
-            Built for
-            <span className="block text-white/70">modern commerce.</span>
-          </h1>
+  <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight">
+    Built for
+    <span className="block text-white/70">modern commerce.</span>
+  </h1>
 
-          <p className="mt-6 text-white/70 text-base sm:text-lg max-w-2xl mx-auto">
-            A unified hardware ecosystem designed for restaurants, retail and enterprise operations.
-          </p>
+  <p className="mt-6 text-white/70 text-base sm:text-lg max-w-2xl mx-auto">
+    A unified hardware ecosystem designed for restaurants, retail and enterprise operations.
+  </p>
 
-          <div className="mt-10 flex justify-center gap-3">
-            <Link
-              href="/request-demo"
-              className="px-6 py-3 rounded-full bg-white text-black font-medium hover:scale-105 transition"
-            >
-              Request Demo
-            </Link>
+  <div className="mt-10 flex justify-center gap-3">
+    <Link
+      href="/request-demo"
+      className="px-6 py-3 rounded-full bg-white text-black font-medium hover:scale-105 transition"
+    >
+      Request Demo
+    </Link>
 
-            <Link
-              href="/contact-sales"
-              className="px-6 py-3 rounded-full border border-white/30 text-white hover:bg-white/10 transition"
-            >
-              Contact Sales
-            </Link>
-          </div>
-        </motion.div>
-      </section>
+    <Link
+      href="/contact-sales"
+      className="px-6 py-3 rounded-full border border-white/30 text-white hover:bg-white/10 transition"
+    >
+      Contact Sales
+    </Link>
+  </div>
+
+  {/* SCROLL INDICATOR */}
+  <a
+    href="#products"
+    className="mt-16 flex flex-col items-center gap-2 text-white/60 hover:text-white transition"
+  >
+    <span className="text-[10px] tracking-[0.3em] uppercase">
+      Choose Your Hardware
+    </span>
+
+    <div className="relative h-14 w-px bg-white/15 overflow-hidden rounded-full">
+      <div className="absolute top-0 left-0 w-full h-5 bg-gradient-to-b from-white to-transparent animate-scroll-indicator" />
+    </div>
+  </a>
+</motion.div>
+</section>
 
       {/* ================= INTRO ================= */}
       <section className="py-32 text-center max-w-4xl mx-auto px-6">
