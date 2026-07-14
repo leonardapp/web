@@ -55,7 +55,7 @@ export default function HardwarePage() {
         <div className="absolute inset-0">
           <img
   src="https://hoxxes.app/images/hero.png"
-  alt="Hardware Hero"
+  alt="Hardware"
   className="w-full h-full object-cover scale-110"
   style={{
     objectPosition: "75% 20%",
