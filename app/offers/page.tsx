@@ -1,10 +1,10 @@
 import Button from "@/components/Button";
 import Header from "@/components/Header";
 
-const OFFER_DEADLINE = "2026-07-17";
+const OFFER_DEADLINE = new Date(2026, 6, 18, 0, 0, 0); // 18 Korrik 00:00
 
 function isOfferActive() {
-  return new Date(OFFER_DEADLINE).getTime() > new Date().getTime();
+  return Date.now() < OFFER_DEADLINE.getTime();
 }
 export const metadata = {
   title: "Offers | HOXXES",

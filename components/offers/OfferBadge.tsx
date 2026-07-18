@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 
-const OFFER_DEADLINE = "2026-07-17";
+const OFFER_DEADLINE = "2026-07-17T23:59:59+02:00";
 
 function isOfferActive() {
-  return new Date(OFFER_DEADLINE).getTime() > Date.now();
+  return Date.now() < new Date(OFFER_DEADLINE).getTime();
 }
 
 export default function OfferBadge() {

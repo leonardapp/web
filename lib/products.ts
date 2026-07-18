@@ -44,16 +44,5 @@ export const products:Product[]=[
   vat: 18, // Ndërroje nëse fatura e furnitorit tregon ndryshe
 },
 
-{
-  id: 3,
-  slug: "kds-display",
-  title: "Kitchen Display System",
-  subtitle: 'ALLNET Touch Display 21" (PoE)',
-  description: "Android Kitchen Display",
-  image: "https://hoxxes.app/images/kds-allnet.png",
-  price: 415,
-  stock: 1,
-  vat: 8,
-}
 
 ];
