@@ -8,7 +8,7 @@ import Button from "./Button";
 const features = [
   {
     title: "Restaurant POS",
-    image: "https://hoxxes.app/images/pos-operations.png",
+    image: "https://hoxxes.app/images/pos-operations2.png",
     focus: "50% 50%",
     href: "/software#restaurant-pos",
   },
@@ -26,7 +26,7 @@ const features = [
   },
   {
     title: "Self-Service Kiosk",
-    image: "https://hoxxes.app/images/kiosk-ordering.png",
+    image: "https://hoxxes.app/images/kiosk-ordering2.png",
     focus: "10% 100%",
     href: "/software#self-service-kiosk",
   },
