@@ -79,7 +79,7 @@ the login experience with your company logo.
   {/* FOTO REALE */}
   <div className="overflow-hidden rounded-[32px]">
     <img
-      src="https://hoxxes.app/images/pos-operations.png"
+      src="https://hoxxes.app/images/pos-operations2.png"
       alt="Restaurant POS Operations"
       className="w-full object-cover"
       loading="lazy"
@@ -401,7 +401,7 @@ with your own branding and promotional content.
     <div className="relative">
 
       <img
-        src="https://hoxxes.app/images/kiosk-ordering.png"
+        src="https://hoxxes.app/images/kiosk-ordering2.png"
         alt="HOXXES Self Service Kiosk"
         className="w-full rounded-[32px]"
         loading="lazy"
