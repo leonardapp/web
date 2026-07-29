@@ -16,6 +16,11 @@ export default function ProductClient({ product }: Props) {
   const isMadeToOrder =
   product.availability === "made-to-order" || product.stock <= 0;
 
+  const currency = new Intl.NumberFormat("en-US", {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2,
+});
+
   return (
     <div className="relative min-h-screen overflow-hidden bg-white text-slate-900">
 
@@ -85,7 +90,7 @@ export default function ProductClient({ product }: Props) {
               <div className="mt-10 flex items-end gap-3">
 
                 <span className="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight">
-  €{product.price.toLocaleString()}
+  €{currency.format(product.price)}
 </span>
 
               </div>
@@ -169,8 +174,8 @@ export default function ProductClient({ product }: Props) {
       </p>
 
       <h2 className="mt-2 text-4xl font-semibold tracking-tight text-slate-900">
-        €{(qty * product.price).toLocaleString()}
-      </h2>
+  €{currency.format(qty * product.price)}
+</h2>
 
     </div>
 
