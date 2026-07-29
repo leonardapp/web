@@ -279,7 +279,7 @@ return (
                       </span>
 
                       <span className="font-medium">
-                        HOXXES SH.P.K.
+                        HOXXES L.L.C.
                       </span>
                     </div>
 
