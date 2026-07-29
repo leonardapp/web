@@ -28,6 +28,11 @@ const safeProduct = product;
   const vatAmount = subtotal * (safeProduct.vat / 100);
   const total = subtotal + vatAmount;
 
+  const currency = new Intl.NumberFormat("en-US", {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2,
+});
+
   const [payment, setPayment] = useState("cod");
 
   const [fullName, setFullName] = useState("");
@@ -373,7 +378,7 @@ return (
                 </span>
 
                 <span>
-                  €{safeProduct.price.toLocaleString()}
+                  €{currency.format(safeProduct.price)}
                 </span>
 
               </div>
@@ -399,7 +404,7 @@ return (
                 </span>
 
                 <span>
-                  €{subtotal.toLocaleString()}
+                  €{currency.format(subtotal)}
                 </span>
 
               </div>
@@ -411,7 +416,7 @@ return (
                 </span>
 
                 <span>
-                  €{vatAmount.toFixed(2)}
+                  €{currency.format(vatAmount)}
                 </span>
 
               </div>
@@ -425,7 +430,7 @@ return (
                 </span>
 
                 <span>
-                  €{total.toFixed(2)}
+                  €{currency.format(total)}
                 </span>
 
               </div>

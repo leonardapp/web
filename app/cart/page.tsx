@@ -25,6 +25,12 @@ export default function CartPage() {
     (sum, item) => sum + item.price * item.quantity,
     0
   );
+
+  const currency = new Intl.NumberFormat("en-US", {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2,
+});
+
   const hasMadeToOrder = items.some(
   (item) => item.availability === "made-to-order"
 );
@@ -165,8 +171,8 @@ export default function CartPage() {
 
             </div>
 
-            <div className="text-xl font-semibold tracking-tight text-slate-900">
-  €{(item.price * item.quantity).toLocaleString()}
+           <div className="text-xl font-semibold tracking-tight text-slate-900">
+  €{currency.format(item.price * item.quantity)}
 </div>
 
           </div>
@@ -182,8 +188,8 @@ export default function CartPage() {
   </div>
 
   <div className="text-3xl font-bold tracking-tight text-slate-900">
-    €{total.toLocaleString()}
-  </div>
+  €{currency.format(total)}
+</div>
 
 </div>
 
