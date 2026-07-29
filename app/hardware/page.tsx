@@ -36,10 +36,10 @@ const hardware = [
     title: "Kitchen Display System",
     subtitle: 'ALLNET Touch Display 21" (PoE) Android',
     price: 415,
-    availability: "in-stock",
+    availability: "made-to-order",
     image: "https://hoxxes.app/images/kds-allnet.png",
     description:
-      "Recommended Android display for HOXXES Kitchen Display System.",
+      "Recommended Android display for HOXXES Kitchen Display System. This product is supplied on demand with an estimated delivery time of approximately 2 weeks.",
   },
   {
   id: 4,
@@ -148,7 +148,7 @@ export default function HardwarePage() {
       </section>
 
       {/* ================= HARDWARE ================= */}
-      <section className="space-y-40 pb-32">
+      <section id="products" className="space-y-40 pb-32">
         {hardware.map((item, i) => (
           <motion.div
             key={i}
@@ -180,7 +180,7 @@ export default function HardwarePage() {
     className={`w-2 h-2 rounded-full ${
       item.availability === "in-stock"
         ? "bg-emerald-500"
-        : item.availability === "pre-order"
+        : item.availability === "made-to-order"
         ? "bg-amber-500"
         : "bg-red-500"
     }`}
@@ -188,16 +188,24 @@ export default function HardwarePage() {
 
   <span className="text-sm text-slate-600">
     {item.availability === "in-stock" && "In Stock"}
-    {item.availability === "pre-order" && "Pre-Order"}
+    {item.availability === "made-to-order" && "Available on Order • 2 Weeks"}
     {item.availability === "out-of-stock" && "Out of Stock"}
   </span>
 
 </div>
 
               {/* BADGE */}
-              <span className="inline-block mt-3 text-xs px-3 py-1 rounded-full bg-amber-100 text-amber-700">
-                Limited Stock • Buy now
-              </span>
+              <span
+  className={`inline-block mt-3 text-xs px-3 py-1 rounded-full ${
+    item.availability === "made-to-order"
+      ? "bg-blue-100 text-blue-700"
+      : "bg-amber-100 text-amber-700"
+  }`}
+>
+  {item.availability === "made-to-order"
+    ? "Made to Order • Delivery in 2 Weeks"
+    : "Limited Stock • Buy Now"}
+</span>
 
               <div className="h-0" />
 

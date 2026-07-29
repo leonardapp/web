@@ -55,6 +55,13 @@ export async function POST(req: Request) {
           <p><strong>Product:</strong> ${product}</p>
           <p><strong>Quantity:</strong> ${quantity}</p>
 
+          ${product === "Kitchen Display System" ? `
+  <p><strong>Availability:</strong> Made to Order</p>
+  <p><strong>Estimated Delivery:</strong> Approximately 2 Weeks</p>
+` : `
+  <p><strong>Availability:</strong> In Stock</p>
+`}
+
           <hr/>
 
           <p><strong>Subtotal:</strong> €${subtotal}</p>

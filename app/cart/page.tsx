@@ -25,6 +25,9 @@ export default function CartPage() {
     (sum, item) => sum + item.price * item.quantity,
     0
   );
+  const hasMadeToOrder = items.some(
+  (item) => item.availability === "made-to-order"
+);
 
   if (items.length === 0) {
   return (
@@ -103,6 +106,11 @@ export default function CartPage() {
                   {item.title}
 
                 </div>
+                {item.availability === "made-to-order" && (
+  <div className="mt-2 inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
+    Made to Order • {item.leadTime}
+  </div>
+)}
 
                 <div className="flex items-center gap-3 mt-4">
 
@@ -169,25 +177,40 @@ export default function CartPage() {
 
       <div className="mt-12 border-t pt-8 flex justify-between items-center">
 
-        <div className="text-3xl font-bold">
+  <div className="text-3xl font-bold">
+    Total
+  </div>
 
-          Total
+  <div className="text-3xl font-bold tracking-tight text-slate-900">
+    €{total.toLocaleString()}
+  </div>
 
-        </div>
-
-       <div className="text-3xl font-bold tracking-tight text-slate-900">
-  €{total.toLocaleString()}
 </div>
 
-      </div>
+{hasMadeToOrder && (
+  <div className="mt-8 rounded-2xl border border-blue-200 bg-blue-50 p-5 text-sm text-blue-800">
+    <strong>Made to Order.</strong><br />
+    One or more items in your cart are supplied on demand and are not kept in local stock.
+    Estimated delivery time: approximately <strong>2 weeks</strong>.
+  </div>
+)}
 
-      {items.length > 0 && (
-  <Link
-    href={`/checkout?product=${items[0].slug}&qty=${items[0].quantity}`}
-    className="mt-10 w-full text-center inline-block bg-black text-white px-10 py-5 rounded-full hover:scale-[1.02] transition"
-  >
-    Secure Checkout
-  </Link>
+{items.length > 0 && (
+  <div className="mt-10 flex flex-col sm:flex-row gap-4">
+    <Link
+      href="/hardware"
+      className="flex-1 text-center rounded-full border border-slate-300 px-10 py-5 font-medium hover:bg-slate-100 transition"
+    >
+      Continue Shopping
+    </Link>
+
+    <Link
+      href={`/checkout?product=${items[0].slug}&qty=${items[0].quantity}`}
+      className="flex-1 text-center rounded-full bg-black text-white px-10 py-5 hover:scale-[1.02] transition"
+    >
+      Secure Checkout
+    </Link>
+  </div>
 )}
 
     </div>

@@ -13,6 +13,9 @@ interface Props {
 export default function ProductClient({ product }: Props) {
   const [qty, setQty] = useState(1);
 
+  const isMadeToOrder =
+  product.availability === "made-to-order" || product.stock <= 0;
+
   return (
     <div className="relative min-h-screen overflow-hidden bg-white text-slate-900">
 
@@ -89,11 +92,27 @@ export default function ProductClient({ product }: Props) {
 
               {/* STOCK */}
 
-              <div className="mt-6 inline-flex items-center rounded-full bg-emerald-50 px-4 py-2 text-sm font-medium text-emerald-700">
-
-                ✓ {product.stock} Units Available
-
-              </div>
+              {isMadeToOrder ? (
+  <div className="mt-6 inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700">
+    Made to Order • {product.leadTime}
+  </div>
+) : (
+  <div className="mt-6 inline-flex items-center rounded-full bg-emerald-50 px-4 py-2 text-sm font-medium text-emerald-700">
+    {isMadeToOrder ? (
+  <div className="mt-6 inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700">
+    Made to Order • {product.leadTime}
+  </div>
+) : product.stock <= 2 ? (
+  <div className="mt-6 inline-flex items-center rounded-full bg-amber-50 px-4 py-2 text-sm font-medium text-amber-700">
+    Only {product.stock} Unit{product.stock > 1 ? "s" : ""} Left
+  </div>
+) : (
+  <div className="mt-6 inline-flex items-center rounded-full bg-emerald-50 px-4 py-2 text-sm font-medium text-emerald-700">
+    ✓ {product.stock} Units Available
+  </div>
+)}
+  </div>
+)}
 
               {/* QUANTITY */}
 
@@ -122,8 +141,12 @@ export default function ProductClient({ product }: Props) {
 
                   <button
                     onClick={() =>
-                      setQty(Math.min(product.stock, qty + 1))
-                    }
+  setQty(
+    isMadeToOrder
+      ? qty + 1
+      : Math.min(product.stock, qty + 1)
+  )
+}
                     className="h-12 w-12 rounded-r-full text-xl hover:bg-slate-100 transition"
                   >
                     +
@@ -157,6 +180,13 @@ export default function ProductClient({ product }: Props) {
 
 
               </div>
+              {isMadeToOrder && (
+  <div className="mt-8 rounded-2xl border border-blue-200 bg-blue-50 p-5 text-sm text-blue-800">
+    <strong>Made to Order.</strong><br />
+    This product is supplied on demand and is not stocked locally.
+    Estimated delivery time: approximately <strong>{product.leadTime}</strong>.
+  </div>
+)}
 
               {/* BUTTONS */}
 
@@ -166,12 +196,16 @@ export default function ProductClient({ product }: Props) {
                   onClick={() => {
 
                     addToCart({
-                      slug: product.slug,
-                      title: product.title,
-                      price: product.price,
-                      quantity: qty,
-                      image: product.image,
-                    });
+  slug: product.slug,
+  title: product.title,
+  price: product.price,
+  quantity: qty,
+  image: product.image,
+  availability: isMadeToOrder
+  ? "made-to-order"
+  : "in-stock",
+  leadTime: product.leadTime,
+});
 
                     window.location.href = "/cart";
 
@@ -205,8 +239,10 @@ export default function ProductClient({ product }: Props) {
                     <span>Availability</span>
 
                     <span className="font-medium text-slate-900">
-                      In Stock
-                    </span>
+  {isMadeToOrder
+  ? `Made to Order • ${product.leadTime}`
+  : "In Stock"}
+</span>
 
                   </div>
 

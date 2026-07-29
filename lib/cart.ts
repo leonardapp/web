@@ -4,6 +4,9 @@ export interface CartItem {
   price: number;
   quantity: number;
   image: string;
+
+  availability: "in-stock" | "made-to-order";
+  leadTime?: string;
 }
 
 export function getCart(): CartItem[] {
