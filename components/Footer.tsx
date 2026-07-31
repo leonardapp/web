@@ -23,14 +23,13 @@ export default function Footer() {
             </h3>
 
             <p className="mt-4 text-sm leading-relaxed text-slate-500 max-w-sm">
-              Enterprise Restaurant & Retail Operating System built for
-              modern hospitality infrastructure.
+              Enterprise Restaurant & Retail Operating System.
             </p>
 
             <div className="mt-6 flex items-center gap-3">
               <div className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse" />
               <span className="text-xs text-slate-400">
-                Infrastructure online
+                Platform Status: Operational
               </span>
             </div>
             <div className="hidden md:flex mt-5 items-center gap-5">

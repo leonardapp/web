@@ -108,10 +108,9 @@ export default function HomePage() {
               leading-relaxed
             "
           >
-            One ecosystem.
-Software. Hardware. Intelligence.
-      Hoxxes connects ordering, operations and customer experiences
-into one unified platform.
+            One ecosystem. Software. Hardware. Intelligence.
+
+POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Management and Analytics—all in one Restaurant & Retail Operating System.
           </motion.p>
 
           {/* BUTTONS */}
@@ -138,11 +137,11 @@ into one unified platform.
 
     <div className="text-center">
       <div className="text-xs uppercase tracking-[0.35em] text-slate-400">
-        Trusted by Businesses
+        Trusted by Restaurants & Retail Businesses
       </div>
 
       <p className="mt-2 text-sm text-slate-500">
-        Powering restaurants and retail operations across multiple locations.
+        Powering restaurants and retail with one unified platform.
       </p>
     </div>
 
@@ -845,9 +844,7 @@ memorable customer experiences.
   </h2>
 
           <p className="text-slate-400 mt-5 max-w-2xl mx-auto text-sm sm:text-base">
-            From single restaurants to enterprise chains —
-  Hoxxes connects ordering, payments,
-  operations and analytics into one platform.
+            From independent restaurants to enterprise chains, HOXXES delivers a complete Restaurant & Retail Operating System with POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Management, Analytics and AI—all in one cloud platform.
           </p>
         </div>
       </section>
@@ -860,8 +857,7 @@ memorable customer experiences.
   </h2>
 
   <p className="text-slate-500 mt-3 max-w-2xl mx-auto">
-    Deploy a unified platform across restaurants,
-    retail stores and enterprise locations.
+    Deploy a complete Restaurant & Retail Operating System with POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Management, Analytics from a single cloud platform.
   </p>
 
   <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">

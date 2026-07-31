@@ -15,13 +15,29 @@ export const hoxxesSchema = {
         url: `${siteUrl}/logo.png`,
       },
       description:
-        "HOXXES is a restaurant and retail operating system combining POS, QR Ordering, Self-Service Kiosks, Kitchen Display Systems, Digital Menus, Hardware and Business Automation.",
-      email: "info@hoxxes.com",
-      telephone: "+38348106060",
-      sameAs: [
-        "https://www.facebook.com/profile.php?id=61569182421739",
-        "https://www.instagram.com/hoxxes_innovation/",
-      ],
+  "HOXXES is a Restaurant & Retail Operating System that combines Restaurant POS, Retail POS, Self-Service Kiosks, Kitchen Display Systems (KDS), QR Ordering, Online Ordering, Inventory Management, Analytics and Business Automation into one unified platform.",
+
+knowsAbout: [
+  "Restaurant POS",
+  "Retail POS",
+  "Restaurant Management Software",
+  "Retail Management Software",
+  "QR Ordering",
+  "Online Ordering",
+  "Kitchen Display System",
+  "Self-Service Kiosk",
+  "Inventory Management",
+  "Business Analytics",
+  "Restaurant Automation",
+],
+
+email: "info@hoxxes.com",
+telephone: "+38348106060",
+
+sameAs: [
+  "https://www.facebook.com/profile.php?id=61569182421739",
+  "https://www.instagram.com/hoxxes_innovation/",
+],
       contactPoint: [
         {
           "@type": "ContactPoint",
@@ -62,37 +78,56 @@ export const hoxxesSchema = {
     },
 
     {
-      "@type": "SoftwareApplication",
-      "@id": `${siteUrl}/#software`,
-      name: "HOXXES",
-      applicationCategory: "BusinessApplication",
-      operatingSystem: "Web, Android, iOS",
-      url: siteUrl,
-      description:
-        "All-in-one restaurant operating system designed to manage orders, payments, kitchen operations, self-service kiosks and business automation.",
-      creator: {
-        "@id": `${siteUrl}/#organization`,
-      },
-      offers: {
-        "@type": "Offer",
-        priceCurrency: "EUR",
-        availability: "https://schema.org/InStock",
-        url: `${siteUrl}/pricing`,
-      },
-      featureList: [
-  "Restaurant POS",
-  "Android POS",
-  "QR Ordering",
-  "Online Ordering",
-  "Kitchen Display System",
-  "Self-Service Kiosk Software",
-  "Inventory Management",
-  "Workforce Management",
-  "Analytics Dashboard",
-  "HQ Control Center",
-  "Offline Mode",
-],
-    },
+  "@type": "SoftwareApplication",
+  "@id": `${siteUrl}/#software`,
+
+  name: "HOXXES",
+
+  applicationCategory: "BusinessApplication",
+  applicationSubCategory: "Restaurant & Retail Operating System",
+  applicationSuite: "HOXXES",
+
+  operatingSystem: "Web, Android",
+
+  softwareVersion: "Current",
+
+  url: siteUrl,
+
+  description:
+    "HOXXES is an all-in-one Restaurant & Retail Operating System designed to manage Restaurant POS, Retail POS, QR Ordering, Online Ordering, Kitchen Display System (KDS), inventory management, workforce management, analytics and business automation.",
+
+  creator: {
+    "@id": `${siteUrl}/#organization`,
+  },
+
+  audience: {
+    "@type": "BusinessAudience",
+    audienceType: "Restaurants and Retail Businesses",
+  },
+
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "EUR",
+    availability: "https://schema.org/InStock",
+    url: `${siteUrl}/pricing`,
+  },
+
+  featureList: [
+    "Restaurant POS",
+    "Retail POS",
+    "Android POS",
+    "Offline POS",
+    "QR Ordering",
+    "Online Ordering",
+    "Kitchen Display System (KDS)",
+    "Self-Service Kiosk",
+    "Inventory Management",
+    "Workforce Management",
+    "Analytics Dashboard",
+    "HQ Control Center",
+    "Business Automation",
+  ],
+},
 
     {
       "@type": "Brand",
@@ -135,24 +170,39 @@ export const hoxxesSchema = {
     },
 
     {
-      "@type": "Service",
-      "@id": `${siteUrl}/#retail-software`,
-      name: "Retail Management Software",
-      provider: {
-        "@id": `${siteUrl}/#organization`,
-      },
-      description:
-        "Retail operating system with point of sale, inventory control and business automation.",
-      serviceType: [
-        "Retail POS",
-        "Inventory Management",
-        "Business Automation",
-      ],
-      areaServed: {
-        "@type": "Place",
-        name: "Worldwide",
-      },
-    },
+  "@type": "Service",
+  "@id": `${siteUrl}/#retail-software`,
+
+  name: "Retail Management Software",
+
+  provider: {
+    "@id": `${siteUrl}/#organization`,
+  },
+
+  description:
+    "Retail operating system with Retail POS, inventory management, analytics and business automation.",
+
+  serviceType: [
+    "Retail POS",
+    "Inventory Management",
+    "Retail Management Software",
+    "Business Automation",
+    "Business Analytics",
+  ],
+
+  keywords: [
+    "Retail POS",
+    "Retail Software",
+    "Retail Management",
+    "Inventory Management",
+    "Business Analytics",
+  ],
+
+  areaServed: {
+    "@type": "Place",
+    name: "Worldwide",
+  },
+},
     {
   "@type": "Product",
   "@id": `${siteUrl}/#android-pos`,
@@ -172,6 +222,9 @@ export const hoxxesSchema = {
     "Enterprise Android POS terminal designed for restaurants and retail businesses, fully integrated with the HOXXES operating system.",
 
   "url": `${siteUrl}/hardware`,
+  isRelatedTo: {
+  "@id": `${siteUrl}/#software`,
+},
 
   "offers": {
     "@type": "Offer",
@@ -198,9 +251,12 @@ export const hoxxesSchema = {
   "category": "Self-Service Kiosk Hardware",
 
   "description":
-    "32-inch wall-mounted self-service kiosk integrated with HOXXES POS, payment terminals and restaurant ordering ecosystem.",
+    "32-inch wall-mounted self-service kiosk integrated with Restaurant POS, Kitchen Display System (KDS) and the HOXXES restaurant ordering ecosystem.",
 
   "url": `${siteUrl}/hardware`,
+  isRelatedTo: {
+  "@id": `${siteUrl}/#software`,
+},
 
   "offers": {
     "@type": "Offer",
@@ -246,7 +302,7 @@ export const hoxxesSchema = {
             "@type": "Service",
             name: "Restaurant POS System",
             description:
-              "Complete point of sale solution for restaurants with order management, payments and operational control.",
+              "Complete Restaurant POS solution with order management, inventory management and operational control.",
           },
         },
         {

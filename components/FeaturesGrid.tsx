@@ -8,48 +8,56 @@ import Button from "./Button";
 const features = [
   {
     title: "Restaurant POS",
+    description: "Cloud & offline restaurant POS.",
     image: "https://hoxxes.app/images/pos-operations2.png",
     focus: "50% 50%",
     href: "/software#restaurant-pos",
   },
   {
     title: "Operations Hub",
+    description: "Orders, tables and service.",
     image: "https://hoxxes.app/images/waiter-operations.png",
     focus: "50% 100%",
     href: "/software#waiter-operations",
   }, 
   {
     title: "QR Ordering",
+    description: "QR menu & mobile ordering.",
     image: "https://hoxxes.app/images/qr-ordering.png",
     focus: "30% 70%",
     href: "/software#qr-ordering",
   },
   {
     title: "Self-Service Kiosk",
+    description: "Self-ordering made simple.",
     image: "https://hoxxes.app/images/kiosk-ordering2.png",
     focus: "10% 100%",
     href: "/software#self-service-kiosk",
   },
   {
     title: "Online Ordering",
+    description: "Ordering, loyalty & rewards.",
     image: "https://hoxxes.app/images/online-ordering.png",
     focus: "90% 60%",
     href: "/software#online-ordering",
   },
   {
     title: "Kitchen Display System",
+    description: "Real-time kitchen workflow.",
     image: "https://hoxxes.app/images/kitchen-display-system.png",
     focus: "10% 100%",
     href: "/software#kitchen-display",
   },
   {
     title: "HQ Control Center",
+     description: "Multi-location management.",
     image: "https://hoxxes.app/images/dashboard-overview.png",
     focus: "0% 100%",
     href: "/software#hq-control-center",
   },
   {
     title: "Analytics Cloud",
+     description: "Real-time business insights.",
     image: "https://hoxxes.app/images/analytics-dashboard.png",
     focus: "50% 100%",
     href: "/software#analytics-cloud",
@@ -201,11 +209,15 @@ export default function HomeFeatures() {
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent backdrop-blur-[1px]" />
 
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="text-lg font-semibold drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]">
-                      {item.title}
-                    </h3>
-                  </div>
+                  <div className="absolute bottom-5 left-5 right-5 text-white">
+  <h3 className="text-xl font-semibold drop-shadow-[0_2px_20px_rgba(0,0,0,0.6)]">
+    {item.title}
+  </h3>
+
+  <p className="mt-1 text-sm text-white/85 leading-relaxed max-w-[240px]">
+    {item.description}
+  </p>
+</div>
                 </div>
               </Link>
             ))}
