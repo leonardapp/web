@@ -137,7 +137,7 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
 
     <div className="text-center">
       <div className="text-xs uppercase tracking-[0.35em] text-slate-400">
-        Trusted by Restaurants & Retail Businesses
+        Trusted by Restaurants & Retail
       </div>
 
       <p className="mt-2 text-sm text-slate-500">
@@ -829,6 +829,228 @@ memorable customer experiences.
     </div>
   </div>
 </section>
+{/* FAQ */}
+<section className="py-28 sm:py-32 bg-white border-t border-slate-200">
+  <div className="max-w-4xl mx-auto px-6">
+
+    <div className="text-center mb-16">
+
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        FAQ
+      </div>
+
+      <h2 className="mt-4 text-3xl sm:text-5xl font-semibold tracking-tight">
+        Frequently Asked Questions
+      </h2>
+
+      <p className="mt-5 text-slate-500 max-w-2xl mx-auto">
+        Find answers about HOXXES Restaurant & Retail Operating System, including POS, Self-Service Kiosks, Kitchen Display System (KDS), QR Ordering, Hardware, Integrations and Cloud Management.
+      </p>
+
+    </div>
+
+    <div className="divide-y divide-slate-200">
+
+      <details className="group py-7">
+        <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
+          What is HOXXES?
+          <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
+            +
+          </span>
+        </summary>
+        <p className="mt-5 text-slate-500 leading-7">
+          HOXXES is a Restaurant & Retail Operating System that combines Restaurant POS,
+          Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering,
+          Online Ordering, Analytics and AI into one unified platform.
+        </p>
+      </details>
+
+      <details className="group py-7">
+        <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
+          Does HOXXES work offline?
+          <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
+            +
+          </span>
+        </summary>
+        <p className="mt-5 text-slate-500 leading-7">
+          Yes. The Android POS application continues working offline and
+          automatically synchronizes data once the connection is restored.
+        </p>
+      </details>
+
+      <details className="group py-7">
+        <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
+          Does HOXXES support multiple locations?
+          <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
+            +
+          </span>
+        </summary>
+        <p className="mt-5 text-slate-500 leading-7">
+          Yes. Manage restaurants and retail locations from one centralized
+          HQ Control Center with real-time synchronization.
+        </p>
+      </details>
+
+      <details className="group py-7">
+        <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
+          Does HOXXES include Kitchen Display System (KDS)?
+          <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
+            +
+          </span>
+        </summary>
+        <p className="mt-5 text-slate-500 leading-7">
+          Yes. Orders from Restaurant POS, QR Ordering and Online Ordering
+          are routed instantly to kitchen stations.
+        </p>
+      </details>
+
+      <details className="group py-7">
+        <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
+          Does HOXXES support QR Ordering?
+          <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
+            +
+          </span>
+        </summary>
+        <p className="mt-5 text-slate-500 leading-7">
+          Yes. Customers can scan QR codes, browse digital menus,
+          place orders and call waiters directly from their phones.
+        </p>
+      </details>
+
+      <details className="group py-7">
+        <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
+          Does HOXXES include Self-Service Kiosks?
+          <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
+            +
+          </span>
+        </summary>
+        <p className="mt-5 text-slate-500 leading-7">
+          Yes. Fully branded self-service kiosks integrate seamlessly with
+          Restaurant POS, Kitchen Display System and Analytics.
+        </p>
+      </details>
+
+      <details className="group py-7">
+        <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
+          Does HOXXES include loyalty and membership?
+          <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
+            +
+          </span>
+        </summary>
+        <p className="mt-5 text-slate-500 leading-7">
+          Yes. HOXXES supports loyalty programs, membership,
+          digital wallet, vouchers and branded customer applications.
+        </p>
+      </details>
+
+      <details className="group py-7">
+        <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
+          Can I use my own hardware?
+          <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
+            +
+          </span>
+        </summary>
+        <p className="mt-5 text-slate-500 leading-7">
+          Yes. HOXXES supports compatible Android devices together with
+          enterprise hardware including POS terminals, kiosks and kitchen displays.
+        </p>
+      </details>
+
+      <details className="group py-7">
+        <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
+          Is HOXXES suitable for retail businesses?
+          <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
+            +
+          </span>
+        </summary>
+        <p className="mt-5 text-slate-500 leading-7">
+          Yes. Besides restaurants, HOXXES supports retail businesses with
+          inventory management and centralized operations.
+        </p>
+      </details>
+
+      <details className="group py-7">
+        <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
+          Does HOXXES support fiscal printers?
+          <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
+            +
+          </span>
+        </summary>
+        <p className="mt-5 text-slate-500 leading-7">
+          Yes. HOXXES integrates with supported fiscal printers and complies
+          with local fiscalization requirements where available.
+        </p>
+      </details>
+
+      <details className="group py-7">
+        <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
+          Is card payment integration available?
+          <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
+            +
+          </span>
+        </summary>
+        <p className="mt-5 text-slate-500 leading-7">
+          Card payment terminal integration is currently in development
+          and will be available in a future release.
+        </p>
+      </details>
+
+      <details className="group py-7">
+        <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
+          Can I migrate from another POS system?
+          <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
+            +
+          </span>
+        </summary>
+        <p className="mt-5 text-slate-500 leading-7">
+          Yes. Our team assists with menu import, configuration,
+          staff onboarding and data migration whenever possible.
+        </p>
+      </details>
+
+      <details className="group py-7">
+        <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
+          Does HOXXES support cloud management?
+          <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
+            +
+          </span>
+        </summary>
+        <p className="mt-5 text-slate-500 leading-7">
+          Yes. Every location is connected to a centralized cloud platform
+          for real-time monitoring, reporting and management.
+        </p>
+      </details>
+
+      <details className="group py-7">
+        <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
+          Can HOXXES be customized for my business?
+          <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
+            +
+          </span>
+        </summary>
+        <p className="mt-5 text-slate-500 leading-7">
+          Yes. HOXXES can be configured to match your workflows,
+          branding, menus and operational requirements.
+        </p>
+      </details>
+
+      <details className="group py-7">
+        <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
+          Which businesses use HOXXES?
+          <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
+            +
+          </span>
+        </summary>
+        <p className="mt-5 text-slate-500 leading-7">
+          HOXXES is designed for restaurants, cafés, bars,
+          bakeries, fast-food chains, hotels and retail businesses.
+        </p>
+      </details>
+
+    </div>
+
+  </div>
+</section>
 
       {/* VALUE STRIP */}
       <section className="relative py-28 sm:py-44 bg-black text-white text-center overflow-hidden">
@@ -844,10 +1066,12 @@ memorable customer experiences.
   </h2>
 
           <p className="text-slate-400 mt-5 max-w-2xl mx-auto text-sm sm:text-base">
-            From independent restaurants to enterprise chains, HOXXES delivers a complete Restaurant & Retail Operating System with POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Management, Analytics and AI—all in one cloud platform.
+            One cloud platform for POS, KDS, Self-Service Kiosks, QR Ordering and Retail operations.
           </p>
         </div>
       </section>
+
+      
       
 
       {/* CTA */}
@@ -857,7 +1081,7 @@ memorable customer experiences.
   </h2>
 
   <p className="text-slate-500 mt-3 max-w-2xl mx-auto">
-    Deploy a complete Restaurant & Retail Operating System with POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Management, Analytics from a single cloud platform.
+    Deploy POS, KDS, QR Ordering, Self-Service Kiosks and Analytics from one cloud platform.
   </p>
 
   <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
