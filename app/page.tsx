@@ -137,11 +137,11 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
 
     <div className="text-center">
       <div className="text-xs uppercase tracking-[0.35em] text-slate-400">
-        Trusted by Restaurants & Retail
+        Trusted by Businesses
       </div>
 
       <p className="mt-2 text-sm text-slate-500">
-        Powering restaurants and retail with one unified platform.
+        Powering modern restaurants and retail with one unified platform.
       </p>
     </div>
 
