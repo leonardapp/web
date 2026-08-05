@@ -11,6 +11,12 @@ export default function ShareStoryPage() {
 const [success, setSuccess] = useState(false);
 const [error, setError] = useState("");
 
+console.log({
+  success,
+  error,
+  loading,
+});
+
   const ratingLabels = {
   1: "Needs Improvement",
   2: "Fair",
@@ -52,8 +58,11 @@ console.log("Status:", res.status);
 console.log("Response:", data);
 
 if (!res.ok) {
-  throw new Error(data.error || "Request failed");
+  setError(data.error || "Request failed");
+  return;
 }
+
+console.log("SUCCESS");
 
 setError("");
 setSuccess(true);
@@ -61,11 +70,14 @@ setSuccess(true);
 e.currentTarget.reset();
 setRating(5);
 
-  } catch {
-    setError("Something went wrong. Please try again.");
-  } finally {
-    setLoading(false);
-  }
+  } catch (err) {
+  console.error("CATCH:", err);
+
+  setSuccess(false);
+  setError("Something went wrong. Please try again.");
+} finally {
+  setLoading(false);
+}
 };
 
   return (
