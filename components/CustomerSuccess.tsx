@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { Star, ArrowRight } from "lucide-react";
 
@@ -31,6 +32,8 @@ const stories = [
 ];
 
 export default function CustomerSuccess() {
+
+  const [current, setCurrent] = useState(0);
   return (
     <section className="pt-8 pb-20">
       <div className="max-w-6xl mx-auto px-6">
@@ -80,13 +83,13 @@ export default function CustomerSuccess() {
 
         {/* Mobile */}
 
-        <div className="md:hidden">
+        <div className="mt-4 md:hidden flex justify-center px-6">
 
-          <div className="rounded-3xl border border-slate-200 bg-white p-8">
+          <div className="w-full max-w-[320px] rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
 
             <div className="flex gap-1 mb-5">
 
-              {[...Array(stories[0].rating)].map((_, i) => (
+              {[...Array(stories[current].rating)].map((_, i) => (
                 <Star
                   key={i}
                   size={15}
@@ -96,18 +99,18 @@ export default function CustomerSuccess() {
 
             </div>
 
-            <p className="text-sm leading-8 text-slate-600">
-              "{stories[0].story}"
+            <p className="text-[15px] leading-7 text-slate-600">
+              {stories[current].story}
             </p>
 
-            <div className="mt-8 border-t border-slate-200 pt-5">
+            <div className="4 border-t border-slate-200 pt-4">
 
               <h3 className="font-medium">
-                {stories[0].company}
+                {stories[current].company}
               </h3>
 
               <p className="mt-1 text-sm text-slate-500">
-                {stories[0].owner}
+                {stories[current].owner}
               </p>
 
             </div>
@@ -115,6 +118,24 @@ export default function CustomerSuccess() {
           </div>
 
         </div>
+        <div className="mt-5 flex justify-center gap-2 md:hidden">
+
+  {stories.map((_, index) => (
+
+    <button
+      key={index}
+      onClick={() => setCurrent(index)}
+      aria-label={`Story ${index + 1}`}
+      className={`h-2 rounded-full transition-all duration-300 ${
+  current === index
+    ? "w-6 bg-emerald-600"
+    : "w-2 bg-slate-300 hover:bg-emerald-300"
+}`}
+    />
+
+  ))}
+
+</div>
 
         {/* CTA */}
 

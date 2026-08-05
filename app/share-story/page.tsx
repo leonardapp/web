@@ -39,21 +39,27 @@ const handleSubmit = async (
 
   try {
     const res = await fetch("/api/share-story", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    });
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(body),
+});
 
-    if (!res.ok) {
-      throw new Error();
-    }
+const data = await res.json();
 
-    setSuccess(true);
+console.log("Status:", res.status);
+console.log("Response:", data);
 
-    e.currentTarget.reset();
-    setRating(5);
+if (!res.ok) {
+  throw new Error(data.error || "Request failed");
+}
+
+setError("");
+setSuccess(true);
+
+e.currentTarget.reset();
+setRating(5);
 
   } catch {
     setError("Something went wrong. Please try again.");
