@@ -33,7 +33,8 @@ const handleSubmit = async (
   setSuccess(false);
   setError("");
 
-  const form = new FormData(e.currentTarget);
+  const formElement = e.currentTarget;
+const form = new FormData(formElement);
 
   const body = {
     rating,
@@ -67,7 +68,7 @@ console.log("SUCCESS");
 setError("");
 setSuccess(true);
 
-e.currentTarget.reset();
+formElement.reset();
 setRating(5);
 
   } catch (err) {
