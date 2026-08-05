@@ -2,11 +2,14 @@
 
 import { useState } from "react";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Star } from "lucide-react";
+
 
 export default function ShareStoryPage() {
   const [rating, setRating] = useState(5);
+  const [loading, setLoading] = useState(false);
+const [success, setSuccess] = useState(false);
+const [error, setError] = useState("");
 
   const ratingLabels = {
   1: "Needs Improvement",
@@ -14,6 +17,49 @@ export default function ShareStoryPage() {
   3: "Good",
   4: "Great",
   5: "Excellent",
+};
+const handleSubmit = async (
+  e: React.FormEvent<HTMLFormElement>
+) => {
+  e.preventDefault();
+
+  setLoading(true);
+  setSuccess(false);
+  setError("");
+
+  const form = new FormData(e.currentTarget);
+
+  const body = {
+    rating,
+    business: form.get("business"),
+    name: form.get("name"),
+    story: form.get("story"),
+    consent: form.get("consent") === "on",
+  };
+
+  try {
+    const res = await fetch("/api/share-story", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+
+    if (!res.ok) {
+      throw new Error();
+    }
+
+    setSuccess(true);
+
+    e.currentTarget.reset();
+    setRating(5);
+
+  } catch {
+    setError("Something went wrong. Please try again.");
+  } finally {
+    setLoading(false);
+  }
 };
 
   return (
@@ -52,8 +98,9 @@ export default function ShareStoryPage() {
           <div className="max-w-xl mx-auto px-6">
 
             <form
-              className="space-y-8"
-            >
+  onSubmit={handleSubmit}
+  className="space-y-8"
+>
 
               {/* Rating */}
 
@@ -172,10 +219,11 @@ export default function ShareStoryPage() {
               <label className="flex items-start gap-3">
 
                 <input
-                  type="checkbox"
-                  required
-                  className="mt-1 h-4 w-4 rounded border-slate-300 text-emerald-600"
-                />
+  type="checkbox"
+  name="consent"
+  required
+  className="mt-1 h-4 w-4 rounded border-slate-300 text-emerald-600"
+/>
 
                 <span className="text-sm leading-6 text-slate-500">
                   I agree that HOXXES may publish my review on its website.
@@ -187,15 +235,36 @@ export default function ShareStoryPage() {
               <div className="pt-4">
 
                 <button
-                  type="submit"
-                  className="w-full rounded-full bg-black py-3.5 text-white font-medium transition duration-300 hover:bg-slate-800"
-                >
-                  Submit My Review
-                </button>
+  type="submit"
+  disabled={loading}
+  className="w-full rounded-full bg-black py-3.5 text-white font-medium transition duration-300 hover:bg-slate-800 disabled:opacity-60"
+>
+  {loading ? "Submitting..." : "Submit My Review"}
+</button>
 
                 <p className="mt-4 text-center text-sm text-slate-500">
                   Usually takes less than a minute.
                 </p>
+
+                {success && (
+  <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-center">
+    <p className="font-medium text-emerald-700">
+      ✅ Thank you for your review!
+    </p>
+
+    <p className="mt-2 text-sm text-emerald-600">
+      Your review has been sent successfully and will be reviewed before publication.
+    </p>
+  </div>
+)}
+
+{error && (
+  <div className="mt-6 rounded-2xl border border-red-200 bg-red-50 p-4 text-center">
+    <p className="text-red-600">
+      {error}
+    </p>
+  </div>
+)}
 
               </div>
 
