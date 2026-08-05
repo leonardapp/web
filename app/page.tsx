@@ -6,6 +6,7 @@ import Button from "@/components/Button";
 import LogoMarquee from "@/components/LogoMarquee";
 import FeaturesGrid from "@/components/FeaturesGrid";
 import { QRCodeSVG } from "qrcode.react";
+import CustomerSuccess from "@/components/CustomerSuccess";
 
 
 const OFFER_END_DATE = "2026-07-17";
@@ -71,7 +72,7 @@ export default function HomePage() {
           
           <motion.div
             variants={fadeUp}
-            className="text-[10px] sm:text-xs tracking-[0.35em] text-slate-400 uppercase"
+            className="text-[10px] sm:text-xs tracking-[0.35em] text-emerald-600 uppercase"
           >
             Restaurant & Retail Operating System
           </motion.div>
@@ -136,7 +137,7 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
   <div className="max-w-6xl mx-auto px-6">
 
     <div className="text-center">
-      <div className="text-xs uppercase tracking-[0.35em] text-slate-400">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
         Trusted by Businesses
       </div>
 
@@ -149,9 +150,10 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
     <div className="relative overflow-hidden mt-4">
       <LogoMarquee />
     </div>
-
+    
   </div>
 </section>
+<CustomerSuccess />
 
 {/* NO GAP AT ALL */}
 <div className="m-0 p-0 leading-none" />
