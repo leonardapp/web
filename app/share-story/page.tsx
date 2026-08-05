@@ -73,8 +73,13 @@ setRating(5);
   } catch (err) {
   console.error("CATCH:", err);
 
+  if (err instanceof Error) {
+    setError(err.message);
+  } else {
+    setError("Unknown error");
+  }
+
   setSuccess(false);
-  setError("Something went wrong. Please try again.");
 } finally {
   setLoading(false);
 }
