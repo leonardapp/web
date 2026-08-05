@@ -4,12 +4,13 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
-import { spacing, text, layout } from "@/app/design-system";
+import { FaWindows, FaAndroid, FaApple } from "react-icons/fa";
 type Platform = "Windows" | "Android" | "iOS";
 
 const platforms = [
   {
     platform: "Windows" as Platform,
+    icon: FaWindows,
     title: "HOXXES POS (Web App)",
     desc: "Instant access to the POS system. No installation required.",
     link: "https://pos.hoxxes.com/#/login",
@@ -17,6 +18,7 @@ const platforms = [
   },
   {
     platform: "Android" as Platform,
+    icon: FaAndroid,
     title: "HOXXES Android Suite",
     desc: "POS, KDS, Kiosk & Mobile apps built for Android ecosystem.",
     link: "/apk",
@@ -24,6 +26,7 @@ const platforms = [
   },
   {
     platform: "iOS" as Platform,
+    icon: FaApple,
     title: "HOXXES iOS POS",
     desc: "Native POS experience for iPhone & iPad via App Store.",
     link: "https://apps.apple.com/sg/app/cloudpos-global/id6502969805",
@@ -76,10 +79,29 @@ export default function DownloadCenter() {
             Automatically optimized for your device and operating system.
           </p>
 
-          <div className="mt-4 text-sm text-slate-500">
-            Detected platform:{" "}
-            <span className="text-black font-medium">{os}</span>
-          </div>
+          <div className="mt-6 flex items-center justify-center gap-3">
+
+  <div className="flex h-12 w-12 items-center justify-center">
+
+    {os === "Windows" && (
+      <FaWindows size={22} className="text-emerald-600" />
+    )}
+
+    {os === "Android" && (
+      <FaAndroid size={22} className="text-emerald-600" />
+    )}
+
+    {os === "iOS" && (
+      <FaApple size={22} className="text-emerald-600" />
+    )}
+
+  </div>
+
+  <span className="text-sm text-slate-500">
+    Optimized for your device
+  </span>
+
+</div>
         </motion.div>
       </section>
 
@@ -87,7 +109,10 @@ export default function DownloadCenter() {
       <section className="max-w-6xl mx-auto px-6 pb-20 sm:pb-28">
         <div className="grid gap-6 md:grid-cols-3">
 
-          {platforms.map((p, i) => (
+          {platforms.map((p, i) => {
+  const Icon = p.icon;
+
+  return (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
@@ -101,9 +126,21 @@ export default function DownloadCenter() {
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-emerald-100/30 blur-2xl transition" />
 
               <div className="relative">
-                <div className="text-xs uppercase tracking-widest text-slate-400">
-                  {p.badge}
-                </div>
+                
+                <div className="mb-6 flex items-center justify-between">
+
+  <div className="flex h-14 w-14 items-center justify-center">
+    <Icon
+      size={28}
+      className="text-emerald-600"
+    />
+  </div>
+
+  <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">
+    {p.badge}
+  </span>
+
+</div>
 
                 <h2 className="mt-3 text-lg font-semibold">
                   {p.title}
@@ -121,7 +158,8 @@ export default function DownloadCenter() {
                 </Link>
               </div>
             </motion.div>
-          ))}
+  );
+})}
 
         </div>
       </section>

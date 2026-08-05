@@ -9,6 +9,7 @@ import { QRCodeSVG } from "qrcode.react";
 import CustomerSuccess from "@/components/CustomerSuccess";
 
 
+
 const OFFER_END_DATE = "2026-07-17";
 
 
@@ -113,6 +114,7 @@ export default function HomePage() {
 
 POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Management and Analytics—all in one Restaurant & Retail Operating System.
           </motion.p>
+          
 
           {/* BUTTONS */}
           <motion.div
@@ -123,13 +125,16 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
               Explore Platform
             </Button>
 
-            <Button href="/hardware" variant="outline">
-              Explore Hardware
+            <Button href="/learn-more" variant="outline">
+              Learn More
             </Button>
           </motion.div>
           
+          
         </motion.div>
+        
       </section>
+      
       
 
      {/* TRUSTED BY */}
@@ -210,17 +215,23 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
   </div>
 
   <div className="mt-8 flex flex-col sm:flex-row gap-3">
+
+  <div className="w-full sm:w-auto">
     <Button href="/hardware" variant="primary">
       Explore Hardware
     </Button>
+  </div>
 
+  <div className="w-full sm:w-auto">
     <Button href="/request-demo" variant="outline">
       Request Demo
     </Button>
   </div>
+
+</div>
 </motion.div>
 
-            {/* RIGHT */}
+{/* RIGHT */}
 <motion.div
   initial={{
     opacity: 0,
@@ -240,19 +251,18 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
     duration: 0.7,
     ease: [0.22, 1, 0.36, 1],
   }}
-  className="relative flex justify-center items-center scale-125 sm:scale-110 lg:scale-100"
+  className="relative z-0 flex justify-center items-center scale-125 sm:scale-110 lg:scale-100"
 >
-
   {/* Emerald Glow */}
-<div
-  className="absolute w-[700px] h-[700px] bg-emerald-400/20 rounded-full blur-[180px]"
-/>
+  <div
+    className="pointer-events-none absolute w-[700px] h-[700px] bg-emerald-400/20 rounded-full blur-[180px]"
+  />
 
-<img
-  src="https://hoxxes.app/images/kiosk.svg"
-  alt="Hoxxes Kiosk"
-  className="relative z-10 w-[125vw] sm:w-[90vw] lg:w-full lg:max-w-[1400px] object-contain"
-/>
+  <img
+    src="https://hoxxes.app/images/kiosk.svg"
+    alt="Hoxxes Kiosk"
+    className="pointer-events-none relative z-10 w-[125vw] sm:w-[90vw] lg:w-full lg:max-w-[1400px] object-contain"
+  />
 </motion.div>
 
            </div>
@@ -601,8 +611,8 @@ directly with your kitchen — without installing an app.
 </div>
 <section className="py-0 px-6 border-t border-slate-200">
  <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-    <Button href="/software" variant="primary">
-      Explore Platform
+    <Button href="/learn-more" variant="primary">
+      Learn More
     </Button>
 
     <Button href="/request-demo" variant="outline">
@@ -1089,10 +1099,6 @@ memorable customer experiences.
   <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
 <Button href="/request-demo" variant="primary">
     Request Demo
-  </Button>
-
-  <Button href="/software" variant="outline">
-    Explore Platform
   </Button>
 
   <Button href="/contact-sales" variant="outline">

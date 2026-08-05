@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 
+
 const features = [
   {
     title: "Restaurant POS",
@@ -164,13 +165,14 @@ export default function HomeFeatures() {
   }, []);
 
   return (
-    <section className="py-24 sm:py-32 bg-transparent">
+    <section className="pt-8 pb-24 sm:pt-14 sm:pb-32 bg-transparent">
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="relative">
           <div className="text-center mb-6">
   
 </div>
+
 
           {/* CAROUSEL */}
           <div
@@ -223,6 +225,7 @@ export default function HomeFeatures() {
             ))}
           </div>
           
+          
 
           {/* CONTROL BAR */}
           <div className="flex justify-center mt-6">
@@ -242,6 +245,7 @@ export default function HomeFeatures() {
                   </div>
                 ))}
               </div>
+              
 
               <button
                 onClick={() => setPaused((p) => !p)}
@@ -253,13 +257,13 @@ export default function HomeFeatures() {
                   <span className="text-xs font-bold">❚❚</span>
                 )}
               </button>
+              
 
             </div>
           </div>
 
         </div>
         
-
         <style jsx>{`
           .no-scrollbar::-webkit-scrollbar {
             display: none;
@@ -270,14 +274,11 @@ export default function HomeFeatures() {
           }
         `}</style>
         
-         <div className="mt-15 flex flex-col sm:flex-row justify-center gap-4">
-            <Button href="/software" variant="primary">
-              Explore Platform
-            </Button>
-        
-            <Button href="/request-demo" variant="outline">
+         <div className="mt-16 flex flex-col sm:flex-row justify-center gap-4">
+            <Button href="/request-demo" variant="primary">
               Request Demo
             </Button>
+        
           </div>
         
         
