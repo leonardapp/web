@@ -117,18 +117,30 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
           
 
           {/* BUTTONS */}
-          <motion.div
-            variants={fadeUp}
-            className="mt-10 flex flex-col sm:flex-row gap-3 justify-center"
-          >
-            <Button href="/software" variant="primary">
-              Explore Platform
-            </Button>
+         <motion.div
+  variants={fadeUp}
+  className="mt-10 flex flex-col items-center w-full"
+>
+  <div className="mb-4 text-center">
+    <div className="text-xs uppercase tracking-[0.3em] text-emerald-600 font-semibold">
+      30 Days Free
+    </div>
 
-            <Button href="/learn-more" variant="outline">
-              Learn More
-            </Button>
-          </motion.div>
+    <div className="mt-1 text-sm text-slate-500">
+      Start with a personalized demo.
+    </div>
+  </div>
+
+  <div className="flex flex-col sm:flex-row gap-3 justify-center w-full sm:w-auto">
+    <Button href="/request-demo" variant="primary">
+      Request Demo
+    </Button>
+
+    <Button href="/software" variant="outline">
+      Explore Platform
+    </Button>
+  </div>
+</motion.div>
           
           
         </motion.div>

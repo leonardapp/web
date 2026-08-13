@@ -80,11 +80,12 @@ export default function RequestDemoPage() {
     See HOXXES in action.
   </h1>
 <p className="mt-3 text-sm text-emerald-600 font-medium">
-  Discover how HOXXES fits your business.
+  Get a personalized demo + 30 days free.
 </p>
   <p className="mt-5 text-base text-slate-500 leading-relaxed">
   Tell us about your business and discover how HOXXES can streamline
-  operations, ordering, payments and multi-location management.
+  operations, ordering, payments and multi-location management — with
+  30 days free after your personalized demo.
 </p>
 <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
 
@@ -96,11 +97,11 @@ export default function RequestDemoPage() {
   </div>
 
   <div className="p-5 rounded-2xl border border-slate-200 bg-white">
-    <div className="font-semibold">Live Walkthrough</div>
-    <div className="text-sm text-slate-500 mt-1">
-      Tailored to your business
-    </div>
+  <div className="font-semibold">30 Days Free</div>
+  <div className="text-sm text-slate-500 mt-1">
+    Full access to HOXXES
   </div>
+</div>
 
   <div className="p-5 rounded-2xl border border-slate-200 bg-white">
     <div className="font-semibold">Deployment Plan</div>
@@ -206,17 +207,18 @@ export default function RequestDemoPage() {
         )}
 
         {success && (
-          <p className="text-green-600 text-sm">
-            ✅ Request sent successfully. Our team will contact you soon.
-          </p>
-        )}
+  <p className="text-green-600 text-sm">
+    ✅ Request sent successfully. Our team will contact you to schedule your
+    personalized demo and activate your 30-day free trial.
+  </p>
+)}
 
         <button
           disabled={loading}
           type="submit"
           className="w-full px-6 py-3 bg-black text-white rounded-xl font-medium hover:bg-slate-800 transition disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {loading ? "Sending..." : "Submit Request"}
+          {loading ? "Sending..." : "Request Demo & 30 Days Free"}
         </button>
 
       </form>
@@ -256,13 +258,24 @@ export default function RequestDemoPage() {
       </div>
 
       <h3 className="mt-4 text-2xl font-semibold">
-        What to expect from your demo.
+         What to expect from your demo & free trial.
       </h3>
 
       <p className="mt-4 text-slate-500">
         Manage operations, ordering, payments, workforce and analytics from a
         unified platform built for restaurants, retail and enterprise.
       </p>
+
+      <div className="mt-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+  <div className="font-semibold">
+    30-Day Free
+  </div>
+
+  <p className="mt-1 text-sm text-slate-500">
+    After your personalized demo, get 30 days of access to HOXXES
+    and experience the platform with your own business workflow.
+  </p>
+</div>
 
       <div className="mt-8 space-y-6">
 

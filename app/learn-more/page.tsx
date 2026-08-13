@@ -206,7 +206,7 @@ transition
 
       <div className="overflow-hidden rounded-[32px] max-w-5xl w-full">
         <img
-          src="https://hoxxes.app/images/punch-desktop.png"
+          src="https://hoxxes.app/images/punch.png"
           alt="HOXXES Workforce Management"
           className="w-full h-auto object-cover"
           loading="lazy"

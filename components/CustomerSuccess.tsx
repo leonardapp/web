@@ -151,7 +151,7 @@ export default function CustomerSuccess() {
 
           <Link
   href="/share-story"
-  className="group inline-flex items-center gap-2 mt-8 rounded-full bg-black px-7 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-slate-800 hover:gap-3"
+  className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 mt-8 rounded-full bg-black px-7 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-slate-800 hover:gap-3"
 >
   Share Your Story
 
