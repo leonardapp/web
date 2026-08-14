@@ -113,51 +113,54 @@ export default function DownloadCenter() {
   const Icon = p.icon;
 
   return (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -8 }}
-              transition={{ type: "spring", stiffness: 200 }}
-              className="group relative rounded-3xl border border-slate-200 bg-white p-7 shadow-sm hover:shadow-xl overflow-hidden"
-            >
-              {/* glow */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-emerald-100/30 blur-2xl transition" />
+    <Link
+      href={p.link}
+      key={i}
+      className="block"
+    >
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        whileHover={{ y: -8 }}
+        transition={{ type: "spring", stiffness: 200 }}
+        className="group relative cursor-pointer overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 shadow-sm hover:shadow-xl"
+      >
+        {/* glow */}
+        <div className="absolute inset-0 opacity-0 bg-emerald-100/30 blur-2xl transition group-hover:opacity-100" />
 
-              <div className="relative">
-                
-                <div className="mb-6 flex items-center justify-between">
+        <div className="relative">
 
-  <div className="flex h-14 w-14 items-center justify-center">
-    <Icon
-      size={28}
-      className="text-emerald-600"
-    />
-  </div>
+          <div className="mb-6 flex items-center justify-between">
 
-  <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">
-    {p.badge}
-  </span>
+            <div className="flex h-14 w-14 items-center justify-center">
+              <Icon
+                size={28}
+                className="text-emerald-600"
+              />
+            </div>
 
-</div>
+            <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">
+              {p.badge}
+            </span>
 
-                <h2 className="mt-3 text-lg font-semibold">
-                  {p.title}
-                </h2>
+          </div>
 
-                <p className="mt-2 text-sm text-slate-500 leading-relaxed">
-                  {p.desc}
-                </p>
+          <h2 className="mt-3 text-lg font-semibold">
+            {p.title}
+          </h2>
 
-                <Link
-                  href={p.link}
-                  className="mt-6 inline-flex items-center text-sm font-medium text-black hover:underline"
-                >
-                  Open download →
-                </Link>
-              </div>
-            </motion.div>
+          <p className="mt-2 text-sm leading-relaxed text-slate-500">
+            {p.desc}
+          </p>
+
+          <div className="mt-6 inline-flex items-center text-sm font-medium text-black group-hover:underline">
+            Open download →
+          </div>
+
+        </div>
+      </motion.div>
+    </Link>
   );
 })}
 

@@ -130,26 +130,47 @@ export default function Header() {
               
 
               {/* LINKS */}
-              <div className="flex flex-col gap-6 p-6 text-lg font-medium">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    className="text-slate-700 hover:text-black transition"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+<div className="flex flex-col p-6 text-lg font-medium">
 
-                <Link
-                  href="/download"
-                  onClick={() => setOpen(false)}
-                  className="text-slate-500 text-base pt-4 border-t"
-                >
-                  Download Center
-                </Link>
-              </div>
+  <div className="flex flex-col gap-6">
+    {navLinks
+      .filter((link) => link.label !== "Support")
+      .map((link) => (
+        <Link
+          key={link.href}
+          href={link.href}
+          onClick={() => setOpen(false)}
+          className="text-slate-700 hover:text-black transition"
+        >
+          {link.label}
+        </Link>
+      ))}
+  </div>
+
+  {/* SUPPORT & DOWNLOAD */}
+  <div className="my-6 border-t border-slate-200" />
+
+  <div className="flex flex-col gap-6">
+    <Link
+      href="/support"
+      onClick={() => setOpen(false)}
+      className="text-slate-700 hover:text-black transition"
+    >
+      Support
+    </Link>
+
+    <Link
+      href="/download"
+      onClick={() => setOpen(false)}
+      className="text-slate-700 hover:text-black transition"
+    >
+      Download Center
+    </Link>
+  </div>
+
+  <div className="mt-6 border-t border-slate-200" />
+
+</div>
 
               {/* ACTIONS */}
               <div className="mt-auto px-6 pt-6 pb-20 flex flex-col gap-3 border-t">
