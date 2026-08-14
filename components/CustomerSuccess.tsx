@@ -146,7 +146,7 @@ export default function CustomerSuccess() {
           </h3>
 
           <p className="mt-3 max-w-xl mx-auto text-slate-500">
-            Have HOXXES helped your business? We'd love to hear your story.
+            Has HOXXES helped your business? We'd love to hear your story.
           </p>
 
           <Link

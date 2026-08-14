@@ -74,6 +74,7 @@ export default function HomePage() {
           <motion.div
             variants={fadeUp}
             className="text-[10px] sm:text-xs tracking-[0.35em] text-emerald-600 uppercase"
+            
           >
             Restaurant & Retail Operating System
           </motion.div>
