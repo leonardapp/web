@@ -18,9 +18,9 @@ export default function SoftwarePage() {
 </div>
 
 <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
-  Built for real-time operations.
+  Restaurant & Retail Software
   <span className="block text-slate-500 mt-2">
-    Not static software.
+    Built for real-time operations.
   </span>
 </h1>
 
@@ -80,7 +80,7 @@ the login experience with your company logo.
   <div className="overflow-hidden rounded-[32px]">
     <img
       src="https://hoxxes.app/images/pos-operations2.png"
-      alt="Restaurant POS Operations"
+      alt="HOXXES Restaurant POS"
       className="w-full object-cover"
       loading="lazy"
     />
@@ -309,7 +309,7 @@ transition
       {/* REAL IMAGE */}
       <img
         src="https://hoxxes.app/images/qr-ordering.png"
-        alt="HOXXES QR Ordering"
+        alt="HOXXES QR Ordering System"
         className="w-full rounded-[32px]"
         loading="lazy"
       />

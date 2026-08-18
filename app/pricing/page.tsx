@@ -34,15 +34,15 @@ export default function PricingPage() {
 </div>
 
 <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
-  One platform.
+  Restaurant & Retail Software
   <span className="block text-slate-500">
     Pricing that scales with you.
   </span>
 </h1>
 
 <p className="mt-4 text-sm sm:text-base text-slate-500 max-w-2xl mx-auto">
-  Transparent pricing designed to scale from single locations
-  to enterprise operations.
+  Transparent pricing for restaurants, retail businesses and
+  multi-location operations, with the full HOXXES platform included.
 </p>
 <div className="mt-12 flex flex-col sm:flex-row justify-center gap-3">
 
@@ -284,19 +284,19 @@ Core platform capabilities are included with every subscription.
       </div>
 
       <ul className="mt-6 space-y-2 text-sm text-slate-600">
-        <li>✔ Web POS & Android POS</li>
-        <li>✔ QR Ordering & Online Ordering</li>
-        <li>✔ Inventory & Workforce Management</li>
-        <li>✔ Analytics & HQ Control Center</li>
+  <li>✔ Web POS & Android POS</li>
+  <li>✔ QR Ordering & Online Ordering</li>
+  <li>✔ Inventory & Workforce Management</li>
+  <li>✔ Analytics & HQ Control Center</li>
+  <li>✔ 30-Day Free Trial</li>
 
-        {isEnterprise && (
-  <>
-    <li>✔ 30-Day Free Trial</li>
-    <li>✔ Priority Technical Support</li>
-    <li>✔ Multi-location scaling tools</li>
-  </>
-)}
-      </ul>
+  {isEnterprise && (
+    <>
+      <li>✔ Priority Technical Support</li>
+      <li>✔ Multi-location scaling tools</li>
+    </>
+  )}
+</ul>
 
       <Link
         href="/request-demo"
@@ -346,12 +346,17 @@ Core platform capabilities are included with every subscription.
 
   <div className="text-center">
     <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-      Optional Platform Extensions
+      Platform Modules
     </div>
 
     <h2 className="mt-4 text-3xl font-semibold">
-      Extend your deployment.
+      Activate the modules you need.
     </h2>
+
+    <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
+  Connected modules are available across the HOXXES platform
+  and can be activated based on your operational requirements.
+</p>
   </div>
 
   <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-12">

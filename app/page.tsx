@@ -128,7 +128,7 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
     </div>
 
     <div className="mt-1 text-sm text-slate-500">
-      Start with a personalized demo.
+      Full platform access. Hardware sold separately.
     </div>
   </div>
 
@@ -160,7 +160,7 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
       </div>
 
       <p className="mt-2 text-sm text-slate-500">
-        Powering modern restaurants and retail with one unified platform.
+        Powering real-world restaurants and retail with one unified platform.
       </p>
     </div>
 
@@ -273,7 +273,7 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
 
   <img
     src="https://hoxxes.app/images/kiosk.svg"
-    alt="Hoxxes Kiosk"
+    alt="HOXXES Self-Service Kiosk"
     className="pointer-events-none relative z-10 w-[125vw] sm:w-[90vw] lg:w-full lg:max-w-[1400px] object-contain"
   />
 </motion.div>
@@ -282,11 +282,11 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
         </div>
       </section>
 
-{/* PLATFORM FLOW */}
-      
-<section id="platform-flow" className="py-5 sm:py-32 bg-transparent">
+{/* UNIFIED INFRASTRUCTURE */}
+<section className="py-28 sm:py-32 bg-transparent">
   <div className="max-w-6xl mx-auto px-6 text-center">
 
+    {/* Section Header */}
     <div className="text-xs uppercase tracking-[0.3em] text-emerald-600 mb-4">
       Unified Infrastructure
     </div>
@@ -295,76 +295,107 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
       One Platform. Four Ordering Channels.
     </h2>
 
-    <p className="mt-5 text-slate-500 max-w-3xl mx-auto">
-      Every order, payment and operation flows through a single infrastructure layer,
-      delivering complete visibility across ordering, kitchen operations,
-      inventory, workforce and multi-location management.
+    <p className="mt-5 text-slate-500 max-w-3xl mx-auto leading-7">
+      Every order flows into one connected platform, linking ordering,
+      kitchen operations, inventory, workforce and multi-location management
+      in real time.
     </p>
 
+    {/* ORDERING CHANNELS */}
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-16">
       {[
-        "QR Ordering",
-        "POS Ordering",
-        "Kiosk Ordering",
-        "Online Ordering",
+        {
+          title: "QR Ordering",
+          description: "Customers order directly from the table.",
+        },
+        {
+          title: "POS Ordering",
+          description: "Fast ordering through Web or Android POS.",
+        },
+        {
+          title: "Kiosk Ordering",
+          description: "Self-service ordering with a guided experience.",
+        },
+        {
+          title: "Online Ordering",
+          description: "Accept orders through your digital storefront.",
+        },
       ].map((item) => (
         <div
-          key={item}
-          className="bg-slate-50 border border-slate-200 rounded-2xl p-6"
+          key={item.title}
+          className="bg-slate-50 border border-slate-200 rounded-2xl p-6 min-h-[130px] flex flex-col items-center justify-center text-center"
         >
-          <div className="text-sm font-medium">{item}</div>
+          <div className="text-sm font-medium">
+            {item.title}
+          </div>
+
+          <p className="mt-2 text-xs leading-5 text-slate-500 max-w-[180px]">
+            {item.description}
+          </p>
         </div>
       ))}
     </div>
 
-    <div className="my-10 text-emerald-500 text-3xl">
-  ↓
-</div>
-
-    <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-black text-white font-medium tracking-wide">
-      HOXXES CORE PLATFORM
-    </div>
-
+    {/* FLOW ARROW */}
     <div className="my-10 text-emerald-500 text-3xl">
       ↓
     </div>
 
-    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-10">
-
-  {[
-  "Kitchen Display System",
-  "Customer Display System",
-  "Self-Service Kiosk",
-  "Caller ID",
-  "Payment Terminal Integration",
-].map((item, i, arr) => (
-  <div
-    key={item}
-    className={`rounded-2xl border border-slate-200 p-5 bg-slate-50
-min-h-[120px] flex flex-col items-center justify-center text-center
-${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
-`}
-  >
-    <div className="text-sm font-medium">
-      {item}
+    {/* CORE PLATFORM */}
+    <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-black text-white font-medium tracking-wide">
+      HOXXES CORE PLATFORM
     </div>
 
-    {item === "Payment Terminal Integration" && (
-      <div className="mt-2">
-        <span className="inline-flex px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[10px] uppercase tracking-wider font-medium">
-          Coming Soon
-        </span>
-      </div>
-    )}
-  </div>
-))}
+    <p className="mt-4 text-sm text-slate-500">
+      One operational layer connecting every part of your business.
+    </p>
 
-</div>
+    {/* FLOW ARROW */}
+    <div className="my-10 text-emerald-500 text-3xl">
+      ↓
+    </div>
+
+    {/* CONNECTED OPERATIONS */}
+    <div className="text-xs uppercase tracking-[0.3em] text-emerald-600 mb-5">
+      Connected Operations
+    </div>
+
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+      {[
+        "Kitchen Display System",
+        "Customer Display System",
+        "Self-Service Kiosk",
+        "Caller ID",
+        "Payment Terminal Integration",
+      ].map((item, i, arr) => (
+        <div
+          key={item}
+          className={`rounded-2xl border border-slate-200 p-5 bg-slate-50 min-h-[120px] flex flex-col items-center justify-center text-center ${
+            i === arr.length - 1
+              ? "col-span-2 md:col-span-1 opacity-75"
+              : ""
+          }`}
+        >
+          <div className="text-sm font-medium">
+            {item}
+          </div>
+
+          {item === "Payment Terminal Integration" && (
+            <div className="mt-2">
+              <span className="inline-flex px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[10px] uppercase tracking-wider font-medium">
+                Coming Soon
+              </span>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
 
   </div>
 </section>
 
      
+
 
 {/* QR ORDERING & TABLE MANAGEMENT */}
 
@@ -456,7 +487,7 @@ directly with your kitchen — without installing an app.
 
         <img
           src="https://hoxxes.app/images/qr-menu.jpg"
-          alt="Digital Menu"
+          alt="HOXXES Digital Menu QR Ordering"
           className="w-full"
         />
 
@@ -502,138 +533,157 @@ directly with your kitchen — without installing an app.
 </section>
 
 
-{/* EVERYTHING INCLUDED */}
+{/* CORE PLATFORM */}
 <section className="py-24 sm:py-32 bg-transparent">
   <div className="max-w-7xl mx-auto px-6">
 
+    {/* SECTION HEADER */}
     <div className="text-center mb-14">
       <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        Included With Every Deployment
+        Core Platform
       </div>
 
-      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-        Everything you need from day one.
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-tight">
+        Everything You Need to Run Your Operation.
       </h2>
 
-      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-        Every Hoxxes deployment includes ordering,
-        commerce, customer engagement and operational
-        management capabilities from a unified platform.
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500 leading-7">
+        Core platform capabilities for ordering, commerce, customer engagement
+        and operational management — all connected through one unified system.
       </p>
     </div>
 
+    {/* CORE CAPABILITIES */}
     <div className="grid md:grid-cols-3 gap-6">
 
-      {/* Ordering */}
+      {/* ORDERING */}
       <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
-        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-4">
+
+        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-5">
           Ordering Infrastructure
         </div>
 
         <div className="space-y-3 text-sm text-slate-700">
-          <div>✓ Web POS</div>
-          <div>✓ Android POS (Offline Ready)</div>
-          <div>✓ QR Ordering</div>
-          <div>✓ Android App</div>
-          <div>✓ iOS App</div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-emerald-600">✓</span>
+            Web POS
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-emerald-600">✓</span>
+            Android POS · Offline Ready
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-emerald-600">✓</span>
+            QR Ordering
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-emerald-600">✓</span>
+            Android App
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-emerald-600">✓</span>
+            iOS App
+          </div>
+
         </div>
       </div>
 
-      {/* Commerce */}
+      {/* COMMERCE */}
       <div className="rounded-3xl border border-slate-200 bg-white p-8">
-        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-4">
+
+        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-5">
           Commerce & Delivery
         </div>
 
         <div className="space-y-3 text-sm text-slate-700">
-          <div>✓ Delivery & Pickup</div>
-          <div>✓ E-Shop</div>
-          <div>✓ Online Ordering</div>
-          <div>✓ Membership</div>
-          <div>✓ Order History</div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-emerald-600">✓</span>
+            Delivery & Pickup
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-emerald-600">✓</span>
+            E-Shop
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-emerald-600">✓</span>
+            Online Ordering
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-emerald-600">✓</span>
+            Membership
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-emerald-600">✓</span>
+            Order History
+          </div>
+
         </div>
       </div>
 
-      {/* Operations */}
+      {/* OPERATIONS */}
       <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8">
-        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-4">
+
+        <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-5">
           Operations & Analytics
         </div>
 
         <div className="space-y-3 text-sm text-slate-700">
-          <div>✓ Wallet & Vouchers</div>
-          <div>✓ Analytics Dashboard</div>
-          <div>✓ Web Backoffice</div>
-          <div>✓ Inventory Management</div>
-          <div>✓ Workforce Management</div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-emerald-600">✓</span>
+            Wallet & Vouchers
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-emerald-600">✓</span>
+            Analytics Dashboard
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-emerald-600">✓</span>
+            Web Backoffice
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-emerald-600">✓</span>
+            Inventory Management
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-emerald-600">✓</span>
+            Workforce Management
+          </div>
+
         </div>
       </div>
 
     </div>
 
-    {/* Optional Modules */}
-    <div className="mt-14 rounded-3xl border border-slate-200 bg-white p-8">
+   
+    {/* CTA */}
+    <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4">
 
-      <div className="text-center">
-        <div className="text-xs uppercase tracking-[0.25em] text-slate-400">
-          Optional Infrastructure Modules
-        </div>
-        
+      <Button href="/learn-more" variant="primary">
+        Learn More
+      </Button>
 
-        <h3 className="mt-3 text-2xl font-semibold">
-          Extend your infrastructure.
-        </h3>
+      <Button href="/request-demo" variant="outline">
+        Request Demo
+      </Button>
 
-        <p className="mt-3 text-slate-500">
-          Additional modules available based on operational requirements.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-10">
-
-  {[
-  "Kitchen Display System",
-  "Customer Display System",
-  "Self-Service Kiosk",
-  "Caller ID",
-  "Payment Terminal Integration",
-].map((item, i, arr) => (
-  <div
-  key={item}
-  className={`rounded-2xl border border-slate-200 p-5 bg-slate-50
-  flex flex-col items-center justify-center text-center
-  ${
-    i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""
-  }`}
->
-  <div className="text-sm font-medium">
-    {item}
-  </div>
-
-  {item === "Payment Terminal Integration" && (
-    <div className="mt-2 text-[10px] uppercase tracking-wider text-emerald-600 font-medium">
-      Coming Soon
     </div>
-  )}
-</div>
-))}
-
-</div>
 
   </div>
-</div>
-<section className="py-0 px-6 border-t border-slate-200">
- <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-    <Button href="/learn-more" variant="primary">
-      Learn More
-    </Button>
-
-    <Button href="/request-demo" variant="outline">
-      Request Demo
-    </Button>
-  </div>
-
-</section>
 </section>
 
 
@@ -643,127 +693,129 @@ directly with your kitchen — without installing an app.
 <section id="multi-location" className="py-24 sm:py-32 bg-transparent">
   <div className="max-w-7xl mx-auto px-6">
 
-<div className="text-center mb-14">
-  <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-    Multi-Location Management
-  </div>
-
-  <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-    Manage every location from HQ.
-  </h2>
-
-  <p className="mt-5 max-w-3xl mx-auto text-slate-500">
-    Control products, ingredients, menus, pricing and operations
-    across all locations from a centralized management layer.
-  </p>
-</div>
-
-<div className="grid lg:grid-cols-2 gap-10 items-center">
-
-  <div className="space-y-6">
-
-    <div className="rounded-3xl border border-slate-200 p-6 bg-white">
-      <h3 className="font-semibold text-lg">
-        HQ Product & Menu Synchronization
-      </h3>
-
-      <p className="mt-2 text-slate-500 text-sm ">
-        Create products, ingredients, categories and menus once,
-        then synchronize them across one, multiple or all locations
-        with a single action.
-      </p>
-    </div>
-
-    <div className="rounded-3xl border border-slate-200 p-6 bg-white">
-      <h3 className="font-semibold text-lg">
-        Unified Pricing & Promotion Control
-      </h3>
-
-      <p className="mt-2 text-slate-500 text-sm">
-        Update prices, discounts and promotions centrally
-        without manually configuring every store.
-      </p>
-    </div>
-
-    <div className="rounded-3xl border border-slate-200 p-6 bg-white">
-      <h3 className="font-semibold text-lg">
-        Real-Time Operational Visibility
-      </h3>
-
-      <p className="mt-2 text-slate-500 text-sm">
-        Monitor sales, inventory, workforce and business
-        performance across every location from one dashboard.
-      </p>
-    </div>
-
-  </div>
-
-  <div className="rounded-3xl bg-slate-50 border border-slate-200 p-10">
-
-    <div className="text-center">
-
-      <div className="inline-flex px-6 py-3 rounded-2xl bg-black text-white font-medium">
-        HOXXES CONTROL CENTER
+    {/* SECTION HEADER */}
+    <div className="text-center mb-14">
+      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+        Multi-Location
       </div>
 
-      <div className="my-6 text-emerald-500 text-3xl">
-        ↓
+      <h2 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-tight">
+        Manage every location from HQ.
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500 leading-7">
+        Manage products, menus, pricing, inventory and operations across
+        every location from one centralized platform.
+      </p>
+    </div>
+
+    {/* CONTENT */}
+    <div className="grid lg:grid-cols-2 gap-10 items-center">
+
+      {/* FEATURES */}
+      <div className="space-y-6">
+
+        {/* PRODUCT & MENU */}
+        <div className="rounded-3xl border border-slate-200 p-6 bg-white">
+          <h3 className="font-semibold text-lg">
+            Centralized Products & Menus
+          </h3>
+
+          <p className="mt-2 text-slate-500 text-sm leading-6">
+            Create products, ingredients, categories and menus once,
+            then synchronize them across selected or all locations.
+          </p>
+        </div>
+
+        {/* PRICING */}
+        <div className="rounded-3xl border border-slate-200 p-6 bg-white">
+          <h3 className="font-semibold text-lg">
+            Unified Pricing & Promotions
+          </h3>
+
+          <p className="mt-2 text-slate-500 text-sm leading-6">
+            Update prices, discounts and promotions centrally without
+            manually configuring each location.
+          </p>
+        </div>
+
+        {/* VISIBILITY */}
+        <div className="rounded-3xl border border-slate-200 p-6 bg-white">
+          <h3 className="font-semibold text-lg">
+            Real-Time Operational Visibility
+          </h3>
+
+          <p className="mt-2 text-slate-500 text-sm leading-6">
+            Monitor sales, inventory, workforce and business performance
+            across every location from one centralized dashboard.
+          </p>
+        </div>
+
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      {/* HQ VISUAL */}
+      <div className="rounded-3xl bg-slate-50 border border-slate-200 p-10">
 
-        {[
-          "Location A",
-          "Location B",
-          "Location C",
-          "Location D",
-        ].map((item) => (
-          <div
-            key={item}
-            className="rounded-2xl border border-slate-200 bg-white p-5"
-          >
-            {item}
+        <div className="text-center">
+
+          {/* HQ */}
+          <div className="inline-flex px-6 py-3 rounded-2xl bg-black text-white font-medium tracking-wide">
+            HOXXES CONTROL CENTER
           </div>
-        ))}
 
-      </div>
+          {/* FLOW */}
+          <div className="my-6 text-emerald-500 text-3xl">
+            ↓
+          </div>
 
-      <div className="mt-8 flex flex-wrap justify-center gap-2 text-xs">
-        <span className="px-3 py-1 rounded-full bg-white border">
-          Products
-        </span>
+          {/* LOCATIONS */}
+          <div className="grid grid-cols-2 gap-4">
 
-        <span className="px-3 py-1 rounded-full bg-white border">
-          Ingredients
-        </span>
+            {[
+              "Location A",
+              "Location B",
+              "Location C",
+              "Location D",
+            ].map((item) => (
+              <div
+                key={item}
+                className="rounded-2xl border border-slate-200 bg-white p-5 text-sm font-medium"
+              >
+                {item}
+              </div>
+            ))}
 
-        <span className="px-3 py-1 rounded-full bg-white border">
-          Menus
-        </span>
+          </div>
 
-        <span className="px-3 py-1 rounded-full bg-white border">
-          Pricing
-        </span>
+          {/* CENTRALIZED CONTROLS */}
+          <div className="mt-8 flex flex-wrap justify-center gap-2 text-xs">
 
-        <span className="px-3 py-1 rounded-full bg-white border">
-          Promotions
-        </span>
+            {[
+              "Products",
+              "Ingredients",
+              "Menus",
+              "Pricing",
+              "Promotions",
+              "Synchronization",
+            ].map((item) => (
+              <span
+                key={item}
+                className="px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-600"
+              >
+                {item}
+              </span>
+            ))}
 
-        <span className="px-3 py-1 rounded-full bg-white border">
-          Synchronization
-        </span>
+          </div>
+
+        </div>
+
       </div>
 
     </div>
-
-  </div>
-
-</div>
 
   </div>
 </section>
-
-
     
       {/* HOLOBOX */}
       
@@ -780,9 +832,8 @@ directly with your kitchen — without installing an app.
       </h2>
 
       <p className="mt-5 max-w-3xl mx-auto text-slate-500 text-center">
-        Transform customer attention into unforgettable experiences
-        with holographic presentations, AI-powered virtual presenters
-        and immersive visual engagement.
+        Create immersive customer experiences with holographic visuals,
+        AI-powered virtual presenters and interactive digital content.
       </p>
     </div>
 
@@ -813,7 +864,7 @@ directly with your kitchen — without installing an app.
         transition={{ duration: 0.7 }}
       >
         <div className="inline-flex px-4 py-2 rounded-full bg-emerald-50 text-emerald-700 text-xs font-medium uppercase tracking-wider">
-          Interactive Experience Platform
+          Interactive Experience Hardware
         </div>
 
         <h3 className="mt-6 text-3xl font-semibold">
@@ -854,6 +905,7 @@ memorable customer experiences.
     </div>
   </div>
 </section>
+
 {/* FAQ */}
 <section className="py-28 sm:py-32 bg-transparent border-t border-slate-200">
   <div className="max-w-4xl mx-auto px-6">
@@ -868,207 +920,257 @@ memorable customer experiences.
         Frequently Asked Questions
       </h2>
 
-      <p className="mt-5 text-slate-500 max-w-2xl mx-auto">
-        Find answers about HOXXES Restaurant & Retail Operating System, including POS, Self-Service Kiosks, Kitchen Display System (KDS), QR Ordering, Hardware, Integrations and Cloud Management.
+      <p className="mt-5 text-slate-500 max-w-2xl mx-auto leading-7">
+        Find answers about HOXXES Restaurant & Retail Operating System,
+        including POS, QR Ordering, Self-Service Kiosks, Kitchen Display
+        System (KDS), hardware, integrations and cloud management.
       </p>
 
     </div>
 
     <div className="divide-y divide-slate-200">
 
+      {/* 1 */}
       <details className="group py-7">
         <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
           What is HOXXES?
+
           <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
             +
           </span>
         </summary>
+
         <p className="mt-5 text-slate-500 leading-7">
-          HOXXES is a Restaurant & Retail Operating System that combines Restaurant POS,
-          Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering,
+          HOXXES is a Restaurant & Retail Operating System that combines
+          POS, Self-Service Kiosks, Kitchen Display System (KDS), QR Ordering,
           Online Ordering, Analytics and AI into one unified platform.
         </p>
       </details>
 
+      {/* 2 */}
       <details className="group py-7">
         <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
           Does HOXXES work offline?
+
           <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
             +
           </span>
         </summary>
+
         <p className="mt-5 text-slate-500 leading-7">
           Yes. The Android POS application continues working offline and
           automatically synchronizes data once the connection is restored.
         </p>
       </details>
 
+      {/* 3 */}
       <details className="group py-7">
         <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
           Does HOXXES support multiple locations?
+
           <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
             +
           </span>
         </summary>
+
         <p className="mt-5 text-slate-500 leading-7">
           Yes. Manage restaurants and retail locations from one centralized
           HQ Control Center with real-time synchronization.
         </p>
       </details>
 
+      {/* 4 */}
       <details className="group py-7">
         <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
-          Does HOXXES include Kitchen Display System (KDS)?
+          Does HOXXES support Kitchen Display System (KDS)?
+
           <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
             +
           </span>
         </summary>
+
         <p className="mt-5 text-slate-500 leading-7">
-          Yes. Orders from Restaurant POS, QR Ordering and Online Ordering
-          are routed instantly to kitchen stations.
+          Yes. KDS is part of the HOXXES platform and can be activated
+          based on your operational requirements. Orders from POS,
+          QR Ordering and Online Ordering can be routed directly to
+          kitchen stations.
         </p>
       </details>
 
+      {/* 5 */}
       <details className="group py-7">
         <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
           Does HOXXES support QR Ordering?
+
           <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
             +
           </span>
         </summary>
+
         <p className="mt-5 text-slate-500 leading-7">
           Yes. Customers can scan QR codes, browse digital menus,
           place orders and call waiters directly from their phones.
         </p>
       </details>
 
+      {/* 6 */}
       <details className="group py-7">
         <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
-          Does HOXXES include Self-Service Kiosks?
+          Does HOXXES support Self-Service Kiosks?
+
           <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
             +
           </span>
         </summary>
+
         <p className="mt-5 text-slate-500 leading-7">
-          Yes. Fully branded self-service kiosks integrate seamlessly with
-          Restaurant POS, Kitchen Display System and Analytics.
+          Yes. Self-Service Kiosks are part of the HOXXES platform and
+          can be activated when needed. They integrate with POS, kitchen
+          operations and centralized management.
         </p>
       </details>
 
+      {/* 7 */}
       <details className="group py-7">
         <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
-          Does HOXXES include loyalty and membership?
+          Does HOXXES support loyalty and membership?
+
           <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
             +
           </span>
         </summary>
+
         <p className="mt-5 text-slate-500 leading-7">
-          Yes. HOXXES supports loyalty programs, membership,
-          digital wallet, vouchers and branded customer applications.
+          Yes. HOXXES supports loyalty programs, membership, digital wallets,
+          vouchers and branded customer applications.
         </p>
       </details>
 
+      {/* 8 */}
       <details className="group py-7">
         <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
           Can I use my own hardware?
+
           <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
             +
           </span>
         </summary>
+
         <p className="mt-5 text-slate-500 leading-7">
           Yes. HOXXES supports compatible Android devices together with
           enterprise hardware including POS terminals, kiosks and kitchen displays.
         </p>
       </details>
 
+      {/* 9 */}
       <details className="group py-7">
         <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
           Is HOXXES suitable for retail businesses?
+
           <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
             +
           </span>
         </summary>
+
         <p className="mt-5 text-slate-500 leading-7">
           Yes. Besides restaurants, HOXXES supports retail businesses with
-          inventory management and centralized operations.
+          POS, inventory management, online ordering and centralized operations.
         </p>
       </details>
 
+      {/* 10 */}
       <details className="group py-7">
         <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
           Does HOXXES support fiscal printers?
+
           <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
             +
           </span>
         </summary>
+
         <p className="mt-5 text-slate-500 leading-7">
-          Yes. HOXXES integrates with supported fiscal printers and complies
-          with local fiscalization requirements where available.
+          Yes. HOXXES integrates with supported fiscal printers and
+          local fiscalization requirements where available.
         </p>
       </details>
 
+      {/* 11 */}
       <details className="group py-7">
         <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
           Is card payment integration available?
+
           <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
             +
           </span>
         </summary>
+
         <p className="mt-5 text-slate-500 leading-7">
           Card payment terminal integration is currently in development
           and will be available in a future release.
         </p>
       </details>
 
+      {/* 12 */}
       <details className="group py-7">
         <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
           Can I migrate from another POS system?
+
           <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
             +
           </span>
         </summary>
+
         <p className="mt-5 text-slate-500 leading-7">
-          Yes. Our team assists with menu import, configuration,
-          staff onboarding and data migration whenever possible.
+          Yes. Our team assists with menu import, configuration, staff
+          onboarding and data migration whenever possible.
         </p>
       </details>
 
+      {/* 13 */}
       <details className="group py-7">
         <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
           Does HOXXES support cloud management?
+
           <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
             +
           </span>
         </summary>
+
         <p className="mt-5 text-slate-500 leading-7">
           Yes. Every location is connected to a centralized cloud platform
           for real-time monitoring, reporting and management.
         </p>
       </details>
 
+      {/* 14 */}
       <details className="group py-7">
         <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
           Can HOXXES be customized for my business?
+
           <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
             +
           </span>
         </summary>
+
         <p className="mt-5 text-slate-500 leading-7">
           Yes. HOXXES can be configured to match your workflows,
           branding, menus and operational requirements.
         </p>
       </details>
 
+      {/* 15 */}
       <details className="group py-7">
         <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-medium">
           Which businesses use HOXXES?
+
           <span className="text-3xl font-light text-slate-400 transition-transform duration-300 group-open:rotate-45">
             +
           </span>
         </summary>
+
         <p className="mt-5 text-slate-500 leading-7">
-          HOXXES is designed for restaurants, cafés, bars,
-          bakeries, fast-food chains, hotels and retail businesses.
+          HOXXES is designed for restaurants, cafés, bars, bakeries,
+          fast-food chains, hotels and retail businesses.
         </p>
       </details>
 
@@ -1085,13 +1187,12 @@ memorable customer experiences.
 
         <div className="relative z-10 px-6">
   <h2 className="relative z-20 text-2xl sm:text-4xl font-semibold">
-    The infrastructure behind
-    <br />
-    modern hospitality.
+    Built for Modern Restaurant & Retail Operations
+    
   </h2>
 
           <p className="text-slate-400 mt-5 max-w-2xl mx-auto text-sm sm:text-base">
-            One cloud platform for POS, KDS, Self-Service Kiosks, QR Ordering and Retail operations.
+            One unified platform connecting POS, QR Ordering, Self-Service Kiosks, Kitchen Display Systems, inventory and analytics.
           </p>
         </div>
       </section>
@@ -1102,11 +1203,11 @@ memorable customer experiences.
       {/* CTA */}
 <section className="py-24 sm:py-40 text-center px-6">
   <h2 className="text-2xl sm:text-3xl font-semibold">
-    Ready to modernize your operations?
+    Ready to get started?
   </h2>
 
   <p className="text-slate-500 mt-3 max-w-2xl mx-auto">
-    Deploy POS, KDS, QR Ordering, Self-Service Kiosks and Analytics from one cloud platform.
+    Experience the full HOXXES platform with 30 days of free access.
   </p>
 
   <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">

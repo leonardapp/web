@@ -5,39 +5,47 @@ const siteUrl = "https://hoxxes.com";
 export const hoxxesSchema = {
   "@context": "https://schema.org",
   "@graph": [
+
+    // =========================================================
+    // ORGANIZATION
+    // =========================================================
     {
       "@type": "Organization",
       "@id": `${siteUrl}/#organization`,
       name: "HOXXES",
       url: siteUrl,
+
       logo: {
         "@type": "ImageObject",
         url: `${siteUrl}/logo.png`,
       },
+
       description:
-  "HOXXES is a Restaurant & Retail Operating System that combines Restaurant POS, Retail POS, Self-Service Kiosks, Kitchen Display Systems (KDS), QR Ordering, Online Ordering, Inventory Management, Analytics and Business Automation into one unified platform.",
+        "HOXXES is a Restaurant & Retail Operating System that combines POS, QR Ordering, Online Ordering, Kitchen Display Systems, Self-Service Kiosks, Inventory Management, Analytics and business automation into one unified platform.",
 
-knowsAbout: [
-  "Restaurant POS",
-  "Retail POS",
-  "Restaurant Management Software",
-  "Retail Management Software",
-  "QR Ordering",
-  "Online Ordering",
-  "Kitchen Display System",
-  "Self-Service Kiosk",
-  "Inventory Management",
-  "Business Analytics",
-  "Restaurant Automation",
-],
+      knowsAbout: [
+        "Restaurant POS",
+        "Retail POS",
+        "Restaurant Management Software",
+        "Retail Management Software",
+        "QR Ordering",
+        "Online Ordering",
+        "Kitchen Display System",
+        "Self-Service Kiosk",
+        "Inventory Management",
+        "Workforce Management",
+        "Business Analytics",
+        "Restaurant Automation",
+      ],
 
-email: "info@hoxxes.com",
-telephone: "+38348106060",
+      email: "info@hoxxes.com",
+      telephone: "+38348106060",
 
-sameAs: [
-  "https://www.facebook.com/profile.php?id=61569182421739",
-  "https://www.instagram.com/hoxxes_innovation/",
-],
+      sameAs: [
+        "https://www.facebook.com/profile.php?id=61569182421739",
+        "https://www.instagram.com/hoxxes_innovation/",
+      ],
+
       contactPoint: [
         {
           "@type": "ContactPoint",
@@ -56,79 +64,9 @@ sameAs: [
       ],
     },
 
-    {
-      "@type": "WebSite",
-      "@id": `${siteUrl}/#website`,
-      url: siteUrl,
-      name: "HOXXES",
-      description:
-        "Restaurant & Retail Operating System with POS, Self-Service Kiosks, Kitchen Display Systems and Business Automation.",
-      publisher: {
-        "@id": `${siteUrl}/#organization`,
-      },
-      inLanguage: "en-US",
-      potentialAction: {
-        "@type": "SearchAction",
-        target: {
-          "@type": "EntryPoint",
-          urlTemplate: `${siteUrl}/search?q={search_term_string}`,
-        },
-        "query-input": "required name=search_term_string",
-      },
-    },
-
-    {
-  "@type": "SoftwareApplication",
-  "@id": `${siteUrl}/#software`,
-
-  name: "HOXXES",
-
-  applicationCategory: "BusinessApplication",
-  applicationSubCategory: "Restaurant & Retail Operating System",
-  applicationSuite: "HOXXES",
-
-  operatingSystem: "Web, Android",
-
-  softwareVersion: "Current",
-
-  url: siteUrl,
-
-  description:
-    "HOXXES is an all-in-one Restaurant & Retail Operating System designed to manage Restaurant POS, Retail POS, QR Ordering, Online Ordering, Kitchen Display System (KDS), inventory management, workforce management, analytics and business automation.",
-
-  creator: {
-    "@id": `${siteUrl}/#organization`,
-  },
-
-  audience: {
-    "@type": "BusinessAudience",
-    audienceType: "Restaurants and Retail Businesses",
-  },
-
-  offers: {
-    "@type": "Offer",
-    priceCurrency: "EUR",
-    availability: "https://schema.org/InStock",
-    url: `${siteUrl}/pricing`,
-  },
-
-  featureList: [
-    "Restaurant POS",
-    "Retail POS",
-    "Android POS",
-    "Offline POS",
-    "QR Ordering",
-    "Online Ordering",
-    "Kitchen Display System (KDS)",
-    "Self-Service Kiosk",
-    "Inventory Management",
-    "Workforce Management",
-    "Analytics Dashboard",
-    "HQ Control Center",
-    "Business Automation",
-  ],
-},
-
+    // =========================================================
+    // BRAND
+    // =========================================================
     {
       "@type": "Brand",
       "@id": `${siteUrl}/#brand`,
@@ -137,232 +75,278 @@ sameAs: [
       logo: `${siteUrl}/logo.png`,
     },
 
+    // =========================================================
+    // WEBSITE
+    // =========================================================
     {
-      "@type": "Service",
-      "@id": `${siteUrl}/#restaurant-software`,
-      name: "Restaurant Management Software",
-      provider: {
-        "@id": `${siteUrl}/#organization`,
-      },
-      description:
-        "Complete restaurant technology solution including POS, QR ordering, kitchen display systems, kiosks and automation tools.",
-      serviceType: [
-        "Restaurant POS Software",
-        "QR Ordering Software",
-        "Kitchen Display System",
-        "Self Ordering Kiosk",
-        "Digital Menu Software",
-      ],
-      areaServed: [
-  {
-    "@type": "Country",
-    name: "Kosovo",
-  },
-  {
-    "@type": "Place",
-    name: "Europe",
-  },
-  {
-    "@type": "Place",
-    name: "Worldwide",
-  },
-],
-    },
-
-    {
-  "@type": "Service",
-  "@id": `${siteUrl}/#retail-software`,
-
-  name: "Retail Management Software",
-
-  provider: {
-    "@id": `${siteUrl}/#organization`,
-  },
-
-  description:
-    "Retail operating system with Retail POS, inventory management, analytics and business automation.",
-
-  serviceType: [
-    "Retail POS",
-    "Inventory Management",
-    "Retail Management Software",
-    "Business Automation",
-    "Business Analytics",
-  ],
-
-  keywords: [
-    "Retail POS",
-    "Retail Software",
-    "Retail Management",
-    "Inventory Management",
-    "Business Analytics",
-  ],
-
-  areaServed: {
-    "@type": "Place",
-    name: "Worldwide",
-  },
-},
-    {
-  "@type": "Product",
-  "@id": `${siteUrl}/#android-pos`,
-  "name": "HOXXES Android POS Terminal",
-
-  "brand": {
-    "@id": `${siteUrl}/#brand`
-  },
-
-  "manufacturer": {
-    "@id": `${siteUrl}/#organization`
-  },
-
-  "category": "Restaurant POS Hardware",
-
-  "description":
-    "Enterprise Android POS terminal designed for restaurants and retail businesses, fully integrated with the HOXXES operating system.",
-
-  "url": `${siteUrl}/hardware`,
-  isRelatedTo: {
-  "@id": `${siteUrl}/#software`,
-},
-
-  "offers": {
-    "@type": "Offer",
-    "url": `${siteUrl}/hardware`,
-    "price": "677",
-    "priceCurrency": "EUR",
-    "availability": "https://schema.org/InStock"
-  }
-},
-{
-  "@type": "Product",
-  "@id": `${siteUrl}/#kiosk-slim`,
-
-  "name": "HOXXES Kiosk Slim 32\" Wall Mounted",
-
-  "brand": {
-    "@id": `${siteUrl}/#brand`
-  },
-
-  "manufacturer": {
-    "@id": `${siteUrl}/#organization`
-  },
-
-  "category": "Self-Service Kiosk Hardware",
-
-  "description":
-    "32-inch wall-mounted self-service kiosk integrated with Restaurant POS, Kitchen Display System (KDS) and the HOXXES restaurant ordering ecosystem.",
-
-  "url": `${siteUrl}/hardware`,
-  isRelatedTo: {
-  "@id": `${siteUrl}/#software`,
-},
-
-  "offers": {
-    "@type": "Offer",
-    "url": `${siteUrl}/hardware`,
-    "price": "1185",
-    "priceCurrency": "EUR",
-    "availability": "https://schema.org/PreOrder"
-  }
-},
-{
- "@type": "Service",
- "@id": `${siteUrl}/#deployment`,
- name: "HOXXES Deployment Services",
- provider: {
-   "@id": `${siteUrl}/#organization`
- },
- description:
-   "Complete restaurant technology deployment including software setup, Android hardware installation, integrations and operational support.",
- serviceType: [
-   "Restaurant Software Deployment",
-   "POS Installation",
-   "Hardware Setup",
-   "Technical Support",
-   "Restaurant Management Software",
-"Restaurant POS Software",
-"Restaurant POS System",
-"Program për Restorante",
-"Software për Restorante",
-"POS për Restorante",
-"QR Ordering",
-"Kitchen Display System",
-"Restaurant Automation"
- ]
-},
-        {
-      "@type": "OfferCatalog",
-      "@id": `${siteUrl}/#offers`,
-      name: "HOXXES Solutions",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Restaurant POS System",
-            description:
-              "Complete Restaurant POS solution with order management, inventory management and operational control.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "QR Ordering System",
-            description:
-              "Digital QR ordering solution allowing customers to browse menus and place orders directly from their devices.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Kitchen Display System",
-            description:
-              "Kitchen workflow management system that organizes orders and improves restaurant efficiency.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Self-Service Kiosk",
-            description:
-              "Self-ordering kiosk solution designed to reduce waiting time and increase customer experience.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Restaurant Automation",
-            description:
-              "Business automation tools helping restaurants optimize operations and increase productivity.",
-          },
-        },
-      ],
-    },
-
-    {
-      "@type": "WebPage",
-      "@id": `${siteUrl}/#homepage`,
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
       url: siteUrl,
-      name: "HOXXES - Restaurant & Retail Operating System",
+      name: "HOXXES",
       description:
-        "HOXXES provides restaurant and retail technology solutions including POS, QR Ordering, Kitchen Display Systems, Self-Service Kiosks and Business Automation.",
-      isPartOf: {
-        "@id": `${siteUrl}/#website`,
-      },
-      about: {
-        "@id": `${siteUrl}/#software`,
+        "Restaurant & Retail Operating System with POS, QR Ordering, Self-Service Kiosks, Kitchen Display Systems, inventory management and analytics.",
+      publisher: {
+        "@id": `${siteUrl}/#organization`,
       },
       inLanguage: "en-US",
     },
 
+    // =========================================================
+    // SOFTWARE APPLICATION
+    // =========================================================
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${siteUrl}/#software`,
+      name: "HOXXES",
+      applicationCategory: "BusinessApplication",
+      applicationSubCategory: "Restaurant & Retail Operating System",
+      applicationSuite: "HOXXES",
+
+      operatingSystem: "Web, Android",
+
+      url: siteUrl,
+
+      description:
+        "HOXXES is a Restaurant & Retail Operating System designed to manage POS, QR Ordering, Online Ordering, Kitchen Display Systems, Self-Service Kiosks, inventory, workforce, analytics and multi-location operations from one unified platform.",
+
+      creator: {
+        "@id": `${siteUrl}/#organization`,
+      },
+
+      publisher: {
+        "@id": `${siteUrl}/#organization`,
+      },
+
+      brand: {
+        "@id": `${siteUrl}/#brand`,
+      },
+
+      audience: {
+        "@type": "BusinessAudience",
+        audienceType: "Restaurants and Retail Businesses",
+      },
+
+      featureList: [
+        "Restaurant POS",
+        "Retail POS",
+        "Android POS",
+        "Offline POS",
+        "QR Ordering",
+        "Online Ordering",
+        "Kitchen Display System",
+        "Self-Service Kiosk",
+        "Customer Display System",
+        "Caller ID",
+        "Inventory Management",
+        "Workforce Management",
+        "Analytics Dashboard",
+        "HQ Control Center",
+        "Multi-Location Management",
+        "Business Automation",
+      ],
+    },
+
+    // =========================================================
+    // RESTAURANT SOFTWARE SERVICE
+    // =========================================================
+    {
+      "@type": "Service",
+      "@id": `${siteUrl}/#restaurant-software`,
+      name: "Restaurant Management Software",
+
+      provider: {
+        "@id": `${siteUrl}/#organization`,
+      },
+
+      serviceType: [
+        "Restaurant POS Software",
+        "Restaurant POS System",
+        "QR Ordering Software",
+        "Online Ordering",
+        "Kitchen Display System",
+        "Self-Service Kiosk",
+        "Digital Menu Software",
+        "Restaurant Automation",
+      ],
+
+      description:
+        "Restaurant technology platform combining POS, QR Ordering, Online Ordering, Kitchen Display Systems, Self-Service Kiosks, inventory management, analytics and operational tools.",
+
+      areaServed: [
+        {
+          "@type": "Country",
+          name: "Kosovo",
+        },
+        {
+          "@type": "Place",
+          name: "Europe",
+        },
+        {
+          "@type": "Place",
+          name: "Worldwide",
+        },
+      ],
+    },
+
+    // =========================================================
+    // RETAIL SOFTWARE SERVICE
+    // =========================================================
+    {
+      "@type": "Service",
+      "@id": `${siteUrl}/#retail-software`,
+      name: "Retail Management Software",
+
+      provider: {
+        "@id": `${siteUrl}/#organization`,
+      },
+
+      serviceType: [
+        "Retail POS",
+        "Retail Management Software",
+        "Inventory Management",
+        "Business Analytics",
+        "Business Automation",
+      ],
+
+      description:
+        "Retail operating system with POS, inventory management, analytics, ordering and centralized business operations.",
+
+      areaServed: {
+        "@type": "Place",
+        name: "Worldwide",
+      },
+    },
+
+    // =========================================================
+    // DEPLOYMENT SERVICES
+    // =========================================================
+    {
+      "@type": "Service",
+      "@id": `${siteUrl}/#deployment`,
+      name: "HOXXES Deployment Services",
+
+      provider: {
+        "@id": `${siteUrl}/#organization`,
+      },
+
+      serviceType: [
+        "Restaurant Software Deployment",
+        "POS Installation",
+        "Hardware Setup",
+        "Technical Support",
+      ],
+
+      description:
+        "HOXXES deployment services including software setup, hardware installation, integrations and operational support.",
+    },
+
+    // =========================================================
+    // ANDROID POS
+    // =========================================================
+    {
+      "@type": "Product",
+      "@id": `${siteUrl}/#android-pos`,
+      name: "HOXXES Android POS Terminal",
+
+      brand: {
+        "@id": `${siteUrl}/#brand`,
+      },
+
+      manufacturer: {
+        "@id": `${siteUrl}/#organization`,
+      },
+
+      category: "Restaurant POS Hardware",
+
+      description:
+        "Enterprise Android POS terminal designed for restaurants and retail businesses and integrated with the HOXXES operating system.",
+
+      url: `${siteUrl}/hardware`,
+
+      isRelatedTo: {
+        "@id": `${siteUrl}/#software`,
+      },
+
+      offers: {
+        "@type": "Offer",
+        url: `${siteUrl}/hardware`,
+        price: "677",
+        priceCurrency: "EUR",
+        availability: "https://schema.org/InStock",
+      },
+    },
+
+    // =========================================================
+    // KIOSK
+    // =========================================================
+    {
+      "@type": "Product",
+      "@id": `${siteUrl}/#kiosk-slim`,
+      name: 'HOXXES Kiosk Slim 32" Wall Mounted',
+
+      brand: {
+        "@id": `${siteUrl}/#brand`,
+      },
+
+      manufacturer: {
+        "@id": `${siteUrl}/#organization`,
+      },
+
+      category: "Self-Service Kiosk Hardware",
+
+      description:
+        "32-inch wall-mounted self-service kiosk integrated with HOXXES POS, Kitchen Display System and restaurant ordering operations.",
+
+      url: `${siteUrl}/hardware`,
+
+      isRelatedTo: {
+        "@id": `${siteUrl}/#software`,
+      },
+
+      offers: {
+        "@type": "Offer",
+        url: `${siteUrl}/hardware`,
+        price: "1185",
+        priceCurrency: "EUR",
+        availability: "https://schema.org/PreOrder",
+      },
+    },
+
+    // =========================================================
+    // WEB PAGE / HOMEPAGE
+    // =========================================================
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/#homepage`,
+      url: siteUrl,
+
+      name: "HOXXES - Restaurant & Retail Operating System",
+
+      description:
+        "HOXXES is a Restaurant & Retail Operating System connecting POS, QR Ordering, Online Ordering, Kitchen Display Systems, Self-Service Kiosks, inventory, analytics and multi-location operations.",
+
+      isPartOf: {
+        "@id": `${siteUrl}/#website`,
+      },
+
+      about: {
+        "@id": `${siteUrl}/#software`,
+      },
+
+      publisher: {
+        "@id": `${siteUrl}/#organization`,
+      },
+
+      inLanguage: "en-US",
+    },
+
+    // =========================================================
+    // FAQ
+    // =========================================================
     {
       "@type": "FAQPage",
       "@id": `${siteUrl}/#faq`,
+
       mainEntity: [
         {
           "@type": "Question",
@@ -370,51 +354,159 @@ sameAs: [
           acceptedAnswer: {
             "@type": "Answer",
             text:
-              "HOXXES is an all-in-one restaurant and retail operating system that combines POS, QR Ordering, Kitchen Display Systems, Self-Service Kiosks and business automation.",
+              "HOXXES is a Restaurant & Retail Operating System that combines POS, Self-Service Kiosks, Kitchen Display System (KDS), QR Ordering, Online Ordering, Analytics and AI into one unified platform.",
           },
         },
+
         {
           "@type": "Question",
-          name: "Does HOXXES support restaurant ordering?",
+          name: "Does HOXXES work offline?",
           acceptedAnswer: {
             "@type": "Answer",
             text:
-              "Yes. HOXXES supports QR ordering, waiter ordering, digital menus and automated order management.",
+              "Yes. The Android POS application continues working offline and automatically synchronizes data once the connection is restored.",
           },
         },
+
         {
           "@type": "Question",
-          name: "What businesses can use HOXXES?",
+          name: "Does HOXXES support multiple locations?",
           acceptedAnswer: {
             "@type": "Answer",
             text:
-              "HOXXES is designed for restaurants, cafes, bars, fast food businesses, retail stores and hospitality companies.",
+              "Yes. Restaurants and retail locations can be managed from one centralized HQ Control Center with real-time synchronization.",
           },
         },
+
         {
           "@type": "Question",
-          name: "Does HOXXES include a Kitchen Display System?",
+          name: "Does HOXXES support Kitchen Display System (KDS)?",
           acceptedAnswer: {
             "@type": "Answer",
             text:
-              "Yes. HOXXES provides Kitchen Display System capabilities to help kitchens manage incoming orders efficiently.",
+              "Yes. KDS is part of the HOXXES platform and can be activated based on operational requirements. Orders from POS, QR Ordering and Online Ordering can be routed directly to kitchen stations.",
           },
         },
+
         {
           "@type": "Question",
-          name: "Can HOXXES work with hardware devices?",
+          name: "Does HOXXES support QR Ordering?",
           acceptedAnswer: {
             "@type": "Answer",
             text:
-              "Yes. HOXXES supports restaurant hardware solutions including POS terminals, kiosks and kitchen displays.",
+              "Yes. Customers can scan QR codes, browse digital menus, place orders and call waiters directly from their phones.",
+          },
+        },
+
+        {
+          "@type": "Question",
+          name: "Does HOXXES support Self-Service Kiosks?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Yes. Self-Service Kiosks are part of the HOXXES platform and can be activated when needed. They integrate with POS, kitchen operations and centralized management.",
+          },
+        },
+
+        {
+          "@type": "Question",
+          name: "Does HOXXES support loyalty and membership?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Yes. HOXXES supports loyalty programs, membership, digital wallets, vouchers and branded customer applications.",
+          },
+        },
+
+        {
+          "@type": "Question",
+          name: "Can I use my own hardware?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Yes. HOXXES supports compatible Android devices together with enterprise hardware including POS terminals, kiosks and kitchen displays.",
+          },
+        },
+
+        {
+          "@type": "Question",
+          name: "Is HOXXES suitable for retail businesses?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Yes. Besides restaurants, HOXXES supports retail businesses with POS, inventory management, online ordering and centralized operations.",
+          },
+        },
+
+        {
+          "@type": "Question",
+          name: "Does HOXXES support fiscal printers?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Yes. HOXXES integrates with supported fiscal printers and local fiscalization requirements where available.",
+          },
+        },
+
+        {
+          "@type": "Question",
+          name: "Is card payment integration available?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Card payment terminal integration is currently in development and will be available in a future release.",
+          },
+        },
+
+        {
+          "@type": "Question",
+          name: "Can I migrate from another POS system?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Yes. The HOXXES team assists with menu import, configuration, staff onboarding and data migration whenever possible.",
+          },
+        },
+
+        {
+          "@type": "Question",
+          name: "Does HOXXES support cloud management?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Yes. Every location is connected to a centralized cloud platform for real-time monitoring, reporting and management.",
+          },
+        },
+
+        {
+          "@type": "Question",
+          name: "Can HOXXES be customized for my business?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Yes. HOXXES can be configured to match your workflows, branding, menus and operational requirements.",
+          },
+        },
+
+        {
+          "@type": "Question",
+          name: "Which businesses use HOXXES?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "HOXXES is designed for restaurants, cafés, bars, bakeries, fast-food chains, hotels and retail businesses.",
           },
         },
       ],
     },
 
+    // =========================================================
+    // BREADCRUMB
+    // =========================================================
     {
       "@type": "BreadcrumbList",
       "@id": `${siteUrl}/#breadcrumbs`,
+
       itemListElement: [
         {
           "@type": "ListItem",
@@ -422,63 +514,6 @@ sameAs: [
           name: "Home",
           item: siteUrl,
         },
-      ],
-    },
-
-    {
-      "@type": "Corporation",
-      "@id": `${siteUrl}/#company`,
-      name: "HOXXES",
-      url: siteUrl,
-      brand: {
-        "@id": `${siteUrl}/#brand`,
-      },
-    },
-
-    {
-      "@type": "HowTo",
-      "@id": `${siteUrl}/#how-it-works`,
-      name: "How HOXXES Works",
-      description:
-        "How restaurants use HOXXES to automate ordering, kitchen operations and customer experience.",
-      step: [
-        {
-          "@type": "HowToStep",
-          position: 1,
-          name: "Choose your solution",
-          text:
-            "Select the HOXXES tools that match your restaurant or retail business needs.",
-        },
-        {
-          "@type": "HowToStep",
-          position: 2,
-          name: "Connect your operations",
-          text:
-            "Connect POS, ordering channels, kitchen displays and hardware devices.",
-        },
-        {
-          "@type": "HowToStep",
-          position: 3,
-          name: "Automate your business",
-          text:
-            "Manage orders, improve efficiency and grow your business with HOXXES.",
-        },
-      ],
-    },
-
-    {
-      "@type": "Thing",
-      "@id": `${siteUrl}/#keywords`,
-      name: [
-        "Restaurant POS",
-        "Restaurant Management Software",
-        "QR Ordering Software",
-        "Kitchen Display System",
-        "Self Ordering Kiosk",
-        "Digital Menu",
-        "Restaurant Automation",
-        "Retail POS Software",
-        "Hospitality Technology",
       ],
     },
   ],

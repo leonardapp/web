@@ -28,7 +28,7 @@ const slides = [
     desc: "Orders flow directly to kitchen stations with live prioritization.",
     benefits: ["QR Scan", "Live Menu", "Waiter Call", "Real-time Sync"],
     image: "https://hoxxes.app/images/qr-ordering.png",
-    ffocusMobile: "30% 70%",
+    focusMobile: "30% 70%",
     focusDesktop: "50% 75%",
   },
   {
@@ -122,11 +122,12 @@ const slides = [
   </div>
 
   <h1 className="mt-4 text-3xl sm:text-5xl font-semibold">
-    Every order. Every screen. One real-time system.
+    Restaurant & Retail Software for Every Operation
   </h1>
 
   <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
-    A unified operating system that connects ordering, kitchen, payments and analytics into one live flow.
+    Connect POS, QR Ordering, Online Ordering, Kitchen Display Systems,
+  Self-Service Kiosks, analytics and multi-location operations in one platform.
   </p>
 
 </section>
@@ -152,7 +153,7 @@ const slides = [
               
               <Image
   src={s.image}
-  alt={s.title}
+  alt={`HOXXES ${s.title}`}
   fill
   className="object-cover"
   style={{
@@ -274,15 +275,15 @@ const slides = [
   <div className="max-w-4xl mx-auto text-center">
 
     <p className="text-3xl sm:text-5xl font-semibold leading-tight tracking-tight">
-      The best restaurant software
+      One platform for every operation.
       <span className="block text-slate-400">
-        disappears into the operation.
+        Built for restaurants and retail.
       </span>
     </p>
 
     <p className="mt-8 text-lg text-slate-500 max-w-2xl mx-auto">
-      HOXXES connects every order, every device and every location into
-      one real-time operating system.
+      HOXXES connects every order, every device and every location
+  into one real-time operating system.
     </p>
 
     <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4">

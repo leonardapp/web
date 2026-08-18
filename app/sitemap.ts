@@ -1,42 +1,67 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = "https://hoxxes.com";
+
   return [
     {
-      url: "https://hoxxes.com",
-      lastModified: new Date(),
+      url: baseUrl,
+      changeFrequency: "weekly",
+      priority: 1,
     },
+
     {
-      url: "https://hoxxes.com/software",
-      lastModified: new Date(),
+      url: `${baseUrl}/software`,
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
+
     {
-      url: "https://hoxxes.com/hardware",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://hoxxes.com/pricing",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://hoxxes.com/request-demo",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://hoxxes.com/contact-sales",
-      lastModified: new Date(),
-    },
-    {
-  url: "https://hoxxes.com/offers",
-  lastModified: new Date(),
+  url: `${baseUrl}/learn-more`,
+  changeFrequency: "weekly",
+  priority: 0.9,
 },
-{
-  url: "https://hoxxes.com/privacy-policy",
-  lastModified: new Date(),
-},
-{
-  url: "https://hoxxes.com/terms-and-conditions",
-  lastModified: new Date(),
-},
+
+    {
+      url: `${baseUrl}/hardware`,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+
+    {
+      url: `${baseUrl}/pricing`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+
+    {
+      url: `${baseUrl}/request-demo`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+
+    {
+      url: `${baseUrl}/contact-sales`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+
+    {
+      url: `${baseUrl}/offers`,
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+
+    {
+      url: `${baseUrl}/privacy-policy`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+
+    {
+      url: `${baseUrl}/terms-and-conditions`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
   ];
 }

@@ -67,7 +67,7 @@ export default function HardwarePage() {
         <div className="absolute inset-0">
           <img
   src="https://hoxxes.app/images/hero.png"
-  alt="Hardware"
+  alt="HOXXES Restaurant and Retail POS Hardware"
   className="w-full h-full object-cover scale-110"
   style={{
     objectPosition: "75% 20%",
@@ -89,11 +89,12 @@ export default function HardwarePage() {
 
   <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight">
     Built for
-    <span className="block text-white/70">modern commerce.</span>
+    <span className="block text-white/70">modern operations.</span>
   </h1>
 
   <p className="mt-6 text-white/70 text-base sm:text-lg max-w-2xl mx-auto">
-    A unified hardware ecosystem designed for restaurants, retail and enterprise operations.
+    POS terminals, self-service kiosks and kitchen displays designed
+  to work as one connected hardware ecosystem with HOXXES.
   </p>
 
   <div className="mt-10 flex justify-center gap-3">
@@ -269,7 +270,7 @@ export default function HardwarePage() {
                 <img
                   src={item.image}
                   className="relative w-full rounded-2xl shadow-2xl"
-                  alt={item.title}
+                  alt={`HOXXES ${item.title}`}
                 />
               </div>
             </div>
@@ -290,7 +291,7 @@ export default function HardwarePage() {
             <img
   src={`https://hoxxes.app/images/${openDimensions}-dimensions.png`}
   className="w-full max-h-[90vh] object-contain rounded-xl shadow-2xl"
-  alt="Product Dimensions"
+  alt={`HOXXES ${openDimensions} product dimensions`}
 />
 
             <button
