@@ -28,9 +28,9 @@ export default function AboutPage() {
 </h1>
 
          <p className="mt-6 text-base sm:text-lg md:text-xl text-slate-500 leading-relaxed max-w-3xl mx-auto">
-  HOXXES unifies POS, QR ordering, kiosks, kitchen operations, and analytics
-  into one real-time enterprise infrastructure layer — built for scale, speed,
-  and reliability.
+  HOXXES unifies POS, QR Ordering, Self-Service Kiosks, Kitchen Display Systems
+  and analytics into one connected operating platform for restaurants, retail
+  businesses and multi-location operations.
 </p>
 
 <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
@@ -154,21 +154,21 @@ export default function AboutPage() {
     <div className="p-8 border border-slate-200 rounded-3xl bg-white shadow-sm hover:shadow-xl transition">
       <h3 className="font-semibold">Restaurants</h3>
       <p className="mt-3 text-slate-500">
-        Ordering, kiosks, kitchen and guest experiences.
+        POS, QR Ordering, kiosks, kitchen operations and guest experiences.
       </p>
     </div>
 
     <div className="p-8 border border-slate-200 rounded-3xl bg-white shadow-sm hover:shadow-xl transition">
       <h3 className="font-semibold">Retail</h3>
       <p className="mt-3 text-slate-500">
-        Transactions, inventory and workforce management.
+        POS, inventory, workforce and centralized business operations.
       </p>
     </div>
 
     <div className="p-8 border border-slate-200 rounded-3xl bg-white shadow-sm hover:shadow-xl transition">
       <h3 className="font-semibold">Enterprise</h3>
       <p className="mt-3 text-slate-500">
-        Centralized infrastructure across multiple locations.
+        Centralized infrastructure across multiple locations and business units.
       </p>
     </div>
 
@@ -187,17 +187,17 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              title: "Reliability",
-              desc: "Systems designed to operate even offline with zero downtime logic.",
-            },
+  title: "Reliability",
+  desc: "Systems designed to continue operating offline and synchronize when connectivity is restored.",
+},
             {
-              title: "Enterprise Architecture",
-              desc: "Built for single stores, franchises, and global chains.",
-            },
+  title: "Enterprise Architecture",
+  desc: "Built to support single locations, franchises and multi-location operations.",
+},
             {
-              title: "Operational Intelligence",
-              desc: "Every order, payment, and update syncs instantly across devices.",
-            },
+  title: "Operational Intelligence",
+  desc: "Orders, payments and operational data stay connected across devices and locations.",
+},
           ].map((v, i) => (
             <motion.div
               key={i}
@@ -229,7 +229,7 @@ export default function AboutPage() {
 
     <p className="mt-5 text-slate-500 max-w-3xl mx-auto">
       HOXXES connects ordering, payments, kitchen operations,
-      workforce management, inventory and analytics into a unified platform.
+workforce management, inventory and analytics into a unified platform.
     </p>
   </div>
 

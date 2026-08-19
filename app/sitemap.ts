@@ -22,6 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   priority: 0.9,
 },
 
+{
+  url: `${baseUrl}/about-us`,
+  changeFrequency: "monthly",
+  priority: 0.7,
+},
+
     {
       url: `${baseUrl}/hardware`,
       changeFrequency: "weekly",

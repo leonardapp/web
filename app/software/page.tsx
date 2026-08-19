@@ -122,7 +122,7 @@ const slides = [
   </div>
 
   <h1 className="mt-4 text-3xl sm:text-5xl font-semibold">
-    Restaurant & Retail Software for Every Operation
+    Every order. Every screen. One real-time system.
   </h1>
 
   <p className="mt-4 text-slate-500 max-w-2xl mx-auto">

@@ -18,9 +18,9 @@ export default function SoftwarePage() {
 </div>
 
 <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
-  Restaurant & Retail Software
+  Not static software
   <span className="block text-slate-500 mt-2">
-    Built for real-time operations.
+    Built for real-time operations
   </span>
 </h1>
 
