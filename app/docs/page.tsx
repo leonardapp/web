@@ -137,6 +137,18 @@ export default function DocsPage() {
   and best practices across the entire HOXXES ecosystem.
 </p>
 
+<div className="mt-6 flex flex-col items-center gap-2">
+  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 bg-white/80 text-xs font-medium text-slate-600 shadow-sm">
+    <span>🇽🇰</span>
+    <span>Kosovo Documentation · Albanian</span>
+  </div>
+
+  <p className="text-xs text-slate-400 max-w-md">
+    This documentation is currently tailored for HOXXES operations in
+    Kosovo and is available in Albanian.
+  </p>
+</div>
+
         <div className="mt-10">
           <input
             value={search}

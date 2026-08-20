@@ -1,7 +1,7 @@
 import Button from "@/components/Button";
 import Header from "@/components/Header";
 
-const OFFER_DEADLINE = new Date(2026, 6, 18, 0, 0, 0); // 18 Korrik 00:00
+const OFFER_DEADLINE = new Date(2026, 8, 30, 23, 59, 59);
 
 function isOfferActive() {
   return Date.now() < OFFER_DEADLINE.getTime();
@@ -52,26 +52,25 @@ export default function OffersPage() {
   <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-24">
     <div className="max-w-4xl mx-auto text-center">
 
-      <div className="inline-flex items-center rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold tracking-wide text-red-600">
-        50% OFF • NEW SUBSCRIBERS • JULY 17 ONLY
-      </div>
+      
 
       <h1 className="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-[56px]">
         Transform Your Business with
-        <span className="block mt-2 text-red-600">
-          Exclusive Hoxxes Offers
-        </span>
+        <span className="block mt-2 text-orange-600">
+  Exclusive Hoxxes Offers
+</span>
       </h1>
 
       <p className="mt-6 text-base text-gray-600 sm:text-lg">
-        Save up to 50% on selected and enterprise solutions.
-        Offer valid only until July 17.
-      </p>
+  Explore exclusive savings and special bundles across
+  HOXXES software, self-service kiosks and enterprise solutions.
+  Offers valid until Sept 30.
+</p>
 
     </div>
   </div>
 </section>
-{/* 50% OFF NEW OFFER */}
+{/* 30% OFF NEW OFFER */}
 <section className="mx-auto max-w-7xl px-6 py-4 sm:py-16 lg:py-20">
   <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl">
     <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -79,22 +78,24 @@ export default function OffersPage() {
       {/* LEFT */}
       <div className="p-6 sm:p-8 lg:p-14">
 
-        <div className="inline-flex items-center rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-600">
-          50% OFF • FOR NEW SUBSCRIBERS ONLY
+        {/* OFFER BADGE */}
+        <div className="inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-4 py-2 text-sm font-semibold text-orange-600">
+          30% OFF • FOR NEW SUBSCRIBERS ONLY
         </div>
 
         <h2 className="mt-8 text-3xl font-bold text-gray-900 sm:text-4xl">
           HOXXES Platform
-for New Subscribers
+          <span className="block">for New Subscribers</span>
         </h2>
 
-        <div className="mt-4 flex items-center gap-3">
+        {/* PRICE */}
+        <div className="mt-4 flex flex-wrap items-center gap-3">
           <span className="text-2xl text-slate-400 line-through">
             €499 + VAT
           </span>
 
-          <span className="text-4xl font-bold text-red-600">
-            €249.5 + VAT
+          <span className="text-4xl font-bold text-orange-600">
+            €349.3 + VAT
           </span>
         </div>
 
@@ -110,7 +111,7 @@ for New Subscribers
           </h4>
 
           <ul className="mt-4 space-y-3 text-gray-700">
-             <li>• Restaurant POS System</li>
+            <li>• Restaurant POS System</li>
             <li>• QR Ordering & Online Ordering</li>
             <li>• Kitchen Display System (KDS)</li>
             <li>• Inventory & Workforce Management</li>
@@ -122,21 +123,22 @@ for New Subscribers
         {/* DEADLINE */}
         <div className="mt-8 rounded-2xl border border-red-200 bg-red-50 p-6">
           <p className="text-sm uppercase tracking-widest text-red-700">
-            50% Discount Ends July 17
+            30% Discount Ends Sept 30
           </p>
 
           <div className="mt-2 text-3xl font-bold text-gray-900">
-            July 17
+            Sept 30
           </div>
 
           <p className="mt-2 text-gray-700">
-            Valid only for new subscribers with payment completed before July 17, 2026.
+            Valid only for new subscribers with payment completed before Sept
+            30, 2026.
           </p>
         </div>
 
         {/* CTA */}
         <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-          <Button href="/request-demo?type=proforma&offer=smart-pos-50">
+          <Button href="/request-demo?type=proforma&offer=new-subscriber-30">
             Claim New Subscriber Offer
           </Button>
 
@@ -151,9 +153,9 @@ for New Subscribers
       </div>
 
       {/* RIGHT */}
-      <div className="flex items-center justify-center bg-gradient-to-br from-slate-50 to-red-50 p-6 sm:p-10">
+      <div className="flex items-center justify-center bg-gradient-to-br from-slate-50 to-orange-50 p-6 sm:p-10">
 
-        <div className="relative rounded-3xl overflow-hidden">
+        <div className="relative overflow-hidden rounded-3xl">
           <img
             src="https://hoxxes.app/images/pos-login.png"
             alt="HOXXES POS System"
@@ -174,7 +176,7 @@ for New Subscribers
             {/* Left */}
             <div className="p-6 sm:p-8 lg:p-14">
               <div className="inline-flex items-center rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-600">
-                Offer Ends July 17
+                Offer Ends Sept 30
               </div>
 
               <h2 className="mt-8 text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -241,22 +243,22 @@ for New Subscribers
                   <li>• POS Integration</li>
                   <li>• Kitchen Display Integration</li>
                   <li>• Installation & Configuration</li>
-                  <li>• Delivery Scheduled for July</li>
+                  <li>• Delivery & Deployment</li>
                 </ul>
               </div>
 
               {/* Deadline */}
               <div className="mt-10 rounded-2xl border border-red-200 bg-red-50 p-6">
                 <p className="text-sm uppercase tracking-widest text-red-700">
-                  Only Available Until July 17
+                  Only Available Until Sept 30
                 </p>
 
                 <div className="mt-2 text-3xl font-bold text-gray-900">
-                  July 17
+                  Sept 30
                 </div>
 
                 <p className="mt-2 text-gray-700">
-                  Offer valid only for payments completed before July 17.
+                  Offer valid only for payments completed before Sept 30, 2026.
                 </p>
               </div>
 
@@ -392,16 +394,16 @@ for New Subscribers
         {/* Deadline */}
         <div className="mt-8 rounded-2xl border border-red-200 bg-red-50 p-6">
           <p className="text-sm uppercase tracking-widest text-red-700">
-            Offer Ends July 17
+            Offer Ends Sept 30
           </p>
 
           <div className="mt-2 text-3xl font-bold text-gray-900">
-            July 17
+            Sept 30
           </div>
 
           <p className="mt-2 text-gray-700">
             Former showroom price €10,000 + VAT. Available now for only
-            €6,000 + VAT until July 17.
+            €6,000 + VAT until Sept 30.
           </p>
         </div>
 
@@ -428,7 +430,7 @@ for New Subscribers
   <div className="w-full max-w-[500px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
     <img
       src="https://hoxxes.app/images/holo.png"
-      alt="HOXXES Self-Service Kiosk"
+      alt='HOXXES HoloBox 86-inch Transparent Display'
       className="w-full object-contain"
     />
   </div>
@@ -464,7 +466,7 @@ for New Subscribers
       <section className="border-t border-gray-100 bg-gray-50">
         <div className="mx-auto max-w-7xl px-6 py-16 text-center sm:py-20">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-  Reserve Before July 17
+  Reserve Before Sept 30 to Secure Your Offer
 </h2>
 
 <p className="mx-auto mt-6 max-w-2xl text-base text-gray-600 sm:text-lg">

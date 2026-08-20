@@ -20,16 +20,17 @@ const hardware = [
       "Space-saving 32-inch wall-mounted self-service kiosk fully integrated with POS, payment terminals and the HOXXES ordering ecosystem.",
   },
   {
-    id: 2,
-    slug: "pos-terminal",
-    title: "POS Terminal",
-    subtitle: "Enterprise Dual-Screen POS",
-    price: 677,
-    availability: "in-stock",
-    image: "https://hoxxes.app/images/POS.png",
-    description:
-      "Enterprise dual-screen POS terminal featuring Offline Mode for uninterrupted operations.",
-  },
+  id: 2,
+  slug: "pos-terminal",
+  title: "POS Terminal",
+  subtitle: "Enterprise Dual-Screen POS",
+  price: 677,
+  availability: "sold-out",
+  leadTime: "Approx. 3 Months",
+  image: "https://hoxxes.app/images/POS.png",
+  description:
+    "Enterprise dual-screen POS terminal featuring Offline Mode for uninterrupted operations.",
+},
   {
     id: 3,
     slug: "kds-display",
@@ -188,24 +189,35 @@ export default function HardwarePage() {
   />
 
   <span className="text-sm text-slate-600">
-    {item.availability === "in-stock" && "In Stock"}
-    {item.availability === "made-to-order" && "Available on Order • 2 Weeks"}
-    {item.availability === "out-of-stock" && "Out of Stock"}
-  </span>
+  {item.availability === "in-stock" && "In Stock"}
+
+  {item.availability === "made-to-order" &&
+    `Made to Order • ${item.leadTime}`}
+
+  {item.availability === "sold-out" &&
+    "Sold Out • Available to Order"}
+</span>
 
 </div>
 
               {/* BADGE */}
-              <span
+<span
   className={`inline-block mt-3 text-xs px-3 py-1 rounded-full ${
-    item.availability === "made-to-order"
+    item.availability === "sold-out"
+      ? "bg-red-50 text-red-700"
+      : item.availability === "made-to-order"
       ? "bg-blue-100 text-blue-700"
-      : "bg-amber-100 text-amber-700"
+      : "bg-emerald-50 text-emerald-700"
   }`}
 >
-  {item.availability === "made-to-order"
-    ? "Made to Order • Delivery in 2 Weeks"
-    : "Limited Stock • Buy Now"}
+  {item.availability === "sold-out" &&
+    `Sold Out · Order with ${item.leadTime} Delivery`}
+
+  {item.availability === "made-to-order" &&
+    `Made to Order · ${item.leadTime}`}
+
+  {item.availability === "in-stock" &&
+    "In Stock · Buy Now"}
 </span>
 
               <div className="h-0" />

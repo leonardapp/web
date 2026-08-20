@@ -10,7 +10,7 @@ import CustomerSuccess from "@/components/CustomerSuccess";
 
 
 
-const OFFER_END_DATE = "2026-07-17";
+const OFFER_END_DATE = "2026-09-30";
 
 
 const offerActive =
@@ -70,10 +70,9 @@ export default function HomePage() {
           animate="show"
           transition={{ staggerChildren: 0.08 }}
         >
-          
-          <motion.div
+                   <motion.div
             variants={fadeUp}
-            className="text-[10px] sm:text-xs tracking-[0.35em] text-emerald-600 uppercase"
+            className="text-[10px] sm:text-xs tracking-[0.35em] text-slate-400 uppercase"
             
           >
             Restaurant & Retail Operating System
