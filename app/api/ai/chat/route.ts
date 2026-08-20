@@ -582,7 +582,7 @@ If information is unavailable, clearly state that you do not have confirmed info
 
           body: JSON.stringify({
             model:
-              "llama-3.1-8b-instant",
+              "openai/gpt-oss-20b",
 
             messages: [
               {
