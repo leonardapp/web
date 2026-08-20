@@ -13,6 +13,12 @@ import { Analytics } from "@vercel/analytics/react";
 export const metadata: Metadata = {
   metadataBase: new URL("https://hoxxes.com"),
 
+    icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+
   title: {
     default: "HOXXES | Restaurant & Retail Operating System",
     template: "%s | HOXXES",
