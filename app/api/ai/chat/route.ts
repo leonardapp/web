@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import { offers } from "@/lib/offers";
 
-
 // ===============================
 // STYLE CONTROL
 // ===============================
@@ -17,56 +16,48 @@ function enforceStyle(text: string) {
     ? text.replace(actions, "").trim()
     : text.trim();
 
-
   const sentences = mainText
     .split(/(?<=[.!?])\s+/)
     .filter(Boolean);
-
 
   mainText = sentences
     .slice(0, 2)
     .join(" ")
     .trim();
 
-
   return actions
     ? `${mainText}\n\n${actions}`
     : mainText;
 }
-
-
 
 // ===============================
 // URL SECURITY
 // ===============================
 
 function sanitizeOutput(text: string) {
-
   const allowedRoutes = [
-  "hoxxes.com/software",
-  "hoxxes.com/learn-more", // ADD
-  "hoxxes.com/hardware",
-  "hoxxes.com/pricing",
-  "hoxxes.com/download",
-  "hoxxes.com/apk",
-  "hoxxes.com/support",
-  "hoxxes.com/docs",
-  "hoxxes.com/about-us",
-  "hoxxes.com/offers",
-  "hoxxes.com/request-demo",
-];
-
+    "hoxxes.com/software",
+    "hoxxes.com/learn-more",
+    "hoxxes.com/hardware",
+    "hoxxes.com/pricing",
+    "hoxxes.com/download",
+    "hoxxes.com/apk",
+    "hoxxes.com/support",
+    "hoxxes.com/docs",
+    "hoxxes.com/about-us",
+    "hoxxes.com/offers",
+    "hoxxes.com/request-demo",
+  ];
 
   return text.replace(
     /(https?:\/\/[^\s]+|hoxxes\.com\/[^\s]+)/g,
     (url) => {
-
       const cleanUrl = url.replace(
         /^https?:\/\//,
         ""
       );
 
-      return allowedRoutes.some(route =>
+      return allowedRoutes.some((route) =>
         cleanUrl.includes(route)
       )
         ? url
@@ -75,73 +66,60 @@ function sanitizeOutput(text: string) {
   );
 }
 
-
-
 // ===============================
-// OFFERS
+// ACTIVE OFFERS
 // ===============================
 
 const activeOffers = offers.filter(
-  offer =>
+  (offer) =>
     new Date(offer.expiresAt).getTime() >
     Date.now()
 );
 
-
 const offersContext =
   activeOffers.length
     ? activeOffers
-        .map(o => `- ${o.title}`)
+        .map(
+          (offer) =>
+            `- ${offer.title} — Active until ${offer.expiresAt}`
+        )
         .join("\n")
     : "No active offers";
-
-
 
 // ===============================
 // API
 // ===============================
 
 export async function POST(req: Request) {
-
   try {
-
     const body = await req.json();
-
 
     const message =
       typeof body?.message === "string"
         ? body.message.trim()
         : "";
 
-
     if (!message) {
       return NextResponse.json(
         {
-          message:
-          "Please enter a message."
+          message: "Please enter a message.",
         },
         {
-          status:400
+          status: 400,
         }
       );
     }
 
-
-    if(message.length > 2000){
-
+    if (message.length > 2000) {
       return NextResponse.json(
         {
-          message:
-          "Message too long."
+          message: "Message too long.",
         },
         {
-          status:400
+          status: 400,
         }
       );
-
     }
-
-
 
     // ===============================
     // PROMPT INJECTION FILTER
@@ -156,67 +134,67 @@ export async function POST(req: Request) {
       "act as",
     ];
 
-
-    const normalized =
-      message
+    const normalized = message
       .toLowerCase()
-      .replace(/\s+/g," ");
+      .replace(/\s+/g, " ");
 
-
-    if(
+    if (
       blockedPatterns.some(
-        pattern =>
-        normalized.includes(pattern)
+        (pattern) =>
+          normalized.includes(pattern)
       )
-    ){
-
+    ) {
       return NextResponse.json(
         {
-          message:
-          "Request not allowed."
+          message: "Request not allowed.",
         },
         {
-          status:400
+          status: 400,
         }
       );
-
     }
 
-
-
     // ===============================
-// SAFE HISTORY
-// ===============================
+    // SAFE HISTORY
+    // ===============================
 
-type ChatMessage = {
-  role: "user" | "assistant";
-  content: string;
-};
+    type ChatMessage = {
+      role: "user" | "assistant";
+      content: string;
+    };
 
-const history: ChatMessage[] =
-  Array.isArray(body?.history)
-    ? body.history
-        .slice(-8)
-        .filter(
-          (item: unknown): item is ChatMessage =>
-            typeof item === "object" &&
-            item !== null &&
-            "role" in item &&
-            "content" in item &&
-            (
-              (item as ChatMessage).role === "user" ||
-              (item as ChatMessage).role === "assistant"
-            ) &&
-            typeof (item as ChatMessage).content === "string"
-        )
-        .map((item: ChatMessage) => ({
-          role: item.role,
-          content: item.content.slice(0, 800),
-        }))
-    : [];
-
-
-
+    const history: ChatMessage[] =
+      Array.isArray(body?.history)
+        ? body.history
+            .slice(-8)
+            .filter(
+              (
+                item: unknown
+              ): item is ChatMessage =>
+                typeof item === "object" &&
+                item !== null &&
+                "role" in item &&
+                "content" in item &&
+                (
+                  (item as ChatMessage).role ===
+                    "user" ||
+                  (item as ChatMessage).role ===
+                    "assistant"
+                ) &&
+                typeof (
+                  item as ChatMessage
+                ).content === "string"
+            )
+            .map(
+              (item: ChatMessage) => ({
+                role: item.role,
+                content: item.content.slice(
+                  0,
+                  800
+                ),
+              })
+            )
+        : [];
 
     // ===============================
     // SYSTEM PROMPT
@@ -228,7 +206,7 @@ You are Hoxxes AI.
 
 You represent HOXXES, a restaurant and retail operating system.
 
-Help businesses understand products, pricing, hardware and services.
+Help businesses understand products, pricing, hardware, offers and services.
 
 Always be professional, concise and accurate.
 
@@ -312,7 +290,6 @@ When possible, provide practical recommendations.
 
 If information is unavailable, say so honestly.
 
-
 LINK RULES:
 
 Only include links when they help the user continue.
@@ -325,8 +302,6 @@ Never list multiple links unless the user explicitly asks.
 
 Maximum one recommended link unless ACTIONS are required.
 
-
-
 PRODUCTS:
 
 - POS Software
@@ -338,11 +313,9 @@ PRODUCTS:
 - Multi-location Management
 - Android POS Terminal
 - Self-Service Kiosk
-
+- HoloBox
 
 Never invent products.
-
-
 
 OFFICIAL LINKS:
 
@@ -370,20 +343,34 @@ https://hoxxes.com/support
 LINK USAGE:
 
 - If the user asks for more details, deeper information, full explanation or wants to learn more about the software platform:
+
 Use:
 https://hoxxes.com/learn-more
 
 - If the user wants to explore the platform overview:
+
 Use:
 https://hoxxes.com/software
 
 - If the user wants pricing:
+
 Use:
 https://hoxxes.com/pricing
 
+- If the user wants to see current promotions or offers:
+
+Use:
+https://hoxxes.com/offers
+
 - If the user wants a personal presentation:
+
 Use:
 https://hoxxes.com/request-demo
+
+- If the user wants hardware information:
+
+Use:
+https://hoxxes.com/hardware
 
 ACTIONS:
 
@@ -395,6 +382,7 @@ Only include ACTIONS if the user intends to:
 - Request support
 - View pricing
 - Learn more
+- View offers
 
 Never include ACTIONS for simple questions.
 
@@ -425,8 +413,6 @@ info@hoxxes.com
 Phone:
 048 10 60 60
 
-
-
 PRICING:
 
 Software:
@@ -435,13 +421,17 @@ Software:
 Self-Service Kiosk:
 1,185€ excl. VAT
 
-
 Android POS:
 677€ excl. VAT
 
-
 Kitchen Display System (KDS):
 415€ excl. VAT
+
+HoloBox:
+6,000€ excl. VAT promotional price when the active HoloBox offer applies.
+
+Original HoloBox price:
+10,000€ excl. VAT
 
 Never calculate multi-location totals.
 
@@ -462,31 +452,66 @@ Kitchen Display System (KDS)
 - Android Kitchen Display
 - Fully integrated with the HOXXES platform
 - Price: 415€ excl. VAT
+- Typical delivery time: approximately 2 weeks
+
+HoloBox
+- 86" Transparent Display
+- Premium digital display solution
+- Fully integrated with the HOXXES ecosystem
+- Promotional price: 6,000€ excl. VAT when the active offer applies
+- Original price: 10,000€ excl. VAT
 
 Never guess hardware specifications.
 
 If unsure, clearly say the information is unavailable.
 
+AVAILABILITY:
+
+Android POS Terminal:
+- Currently sold out locally.
+- New units can be ordered.
+- Estimated delivery time: approximately 3 months.
+- If the user asks about purchasing an Android POS, explain that it is available to order with approximately 3 months delivery when applicable.
+
+Kitchen Display System:
+- Available on order.
+- Estimated delivery time: approximately 2 weeks.
+
+Never present sold-out hardware as locally in stock.
+
+ACTIVE OFFERS:
+
+${offersContext}
+
+Rules:
+
+- Only mention offers that are active above.
+- Never create discounts.
+- Never create prices.
+- Never invent an offer.
+- Never mention an expired offer as active.
+- If the user asks "What offers do you have?", summarize the active offers.
+- If HoloBox appears in the active offers list, mention its active promotional offer.
+- If no active offers exist, clearly say there are currently no active offers.
+- If the user asks for full offer details, use the active offer information and the official offers page.
+- Do not claim that an offer is active unless it appears in ACTIVE OFFERS above.
 
 FINAL RESPONSE CHECKLIST
 
 Before answering, verify that the response:
 
 ✓ Uses the user's language.
-
 ✓ Sounds like a human business consultant.
-
 ✓ Has correct grammar.
-
 ✓ Is factually accurate.
-
 ✓ Does not repeat itself.
-
 ✓ Does not sound robotic.
-
 ✓ Uses links only when useful.
-
 ✓ Uses ACTIONS only when required.
+✓ Does not invent products.
+✓ Does not invent prices.
+✓ Does not invent offers.
+✓ Does not present sold-out products as locally in stock.
 
 SUPPORT:
 
@@ -495,7 +520,6 @@ For technical issues, account problems or assistance:
 ACTIONS:
 - Request Demo → https://hoxxes.com/request-demo
 - Support → https://hoxxes.com/support
-
 
 KNOWLEDGE BOUNDARIES:
 
@@ -508,6 +532,7 @@ Only answer questions related to:
 - Self-Service Kiosks
 - Android POS
 - Kitchen Display Systems
+- HoloBox
 - QR Ordering
 - Inventory Management
 - Workforce Management
@@ -516,6 +541,7 @@ Only answer questions related to:
 - Hardware
 - Integrations
 - Customer support
+- Current HOXXES offers
 
 For general knowledge questions, answer normally without pretending they are related to HOXXES.
 
@@ -523,24 +549,7 @@ Never invent HOXXES products, services, partnerships or integrations.
 
 If information is unavailable, clearly state that you do not have confirmed information.
 
-
-ACTIVE OFFERS:
-
-${offersContext}
-
-
-Rules:
-
-- Only mention active offers above.
-- Never create discounts.
-- Never create prices.
 `;
-
-
-
-
-
-
 
     // ===============================
     // GROQ REQUEST
@@ -549,144 +558,103 @@ Rules:
     const controller =
       new AbortController();
 
-
     const timeout =
       setTimeout(
-        ()=>controller.abort(),
+        () => controller.abort(),
         10000
       );
-
-
 
     const response =
       await fetch(
         "https://api.groq.com/openai/v1/chat/completions",
         {
+          method: "POST",
 
-          method:"POST",
+          signal: controller.signal,
 
-          signal:
-          controller.signal,
-
-          headers:{
+          headers: {
             Authorization:
-            `Bearer ${process.env.GROQ_API_KEY}`,
+              `Bearer ${process.env.GROQ_API_KEY}`,
 
             "Content-Type":
-            "application/json"
+              "application/json",
           },
 
-
-          body:JSON.stringify({
-
+          body: JSON.stringify({
             model:
-            "llama-3.1-8b-instant",
+              "llama-3.1-8b-instant",
 
-            messages:[
+            messages: [
               {
-                role:"system",
-                content:
-                systemPrompt
+                role: "system",
+                content: systemPrompt,
               },
 
               ...history,
 
               {
-                role:"user",
-                content:
-                message
-              }
+                role: "user",
+                content: message,
+              },
             ],
 
+            temperature: 0.35,
 
-            temperature:
-            0.35,
-
-
-            max_tokens:
-            150
-
-          })
-
+            max_tokens: 150,
+          }),
         }
       );
-
 
     clearTimeout(timeout);
 
-
-
-    if(!response.ok){
-
+    if (!response.ok) {
       return NextResponse.json(
         {
           message:
-          "AI service unavailable."
+            "AI service unavailable.",
         },
         {
-          status:502
+          status: 502,
         }
       );
-
     }
-
-
 
     const data =
       await response.json();
 
-
     let output =
       data?.choices?.[0]
-      ?.message?.content
-      ||
+        ?.message?.content ||
       "No response.";
-
-
 
     output =
       sanitizeOutput(
         output.trim()
       );
 
-
     output =
       enforceStyle(
         output
       );
 
-
-
     return NextResponse.json({
-
-      message:
-      output
-
+      message: output,
     });
 
-
-
-  }
-
-
-  catch(error){
-
+  } catch (error) {
     console.error(
       "AI ERROR:",
       error
     );
 
-
     return NextResponse.json(
       {
         message:
-        "AI service unavailable."
+          "AI service unavailable.",
       },
       {
-        status:500
+        status: 500,
       }
     );
-
   }
-
 }
