@@ -83,6 +83,7 @@ export const hoxxesSchema = {
       "@id": `${siteUrl}/#website`,
       url: siteUrl,
       name: "HOXXES",
+      alternateName: "Hoxxes",
       description:
         "Restaurant & Retail Operating System with POS, QR Ordering, Self-Service Kiosks, Kitchen Display Systems, inventory management and analytics.",
       publisher: {
