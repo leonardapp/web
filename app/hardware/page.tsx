@@ -15,7 +15,7 @@ const hardware = [
     subtitle: '32" Wall-Mounted Self-Service Kiosk',
     price: 1185,
     availability: "in-stock",
-    image: "https://hoxxes.app/images/kiosk.svg",
+    image: "https://hoxxes.app/images/kiosk-produkt2.png",
     description:
       "Space-saving 32-inch wall-mounted self-service kiosk fully integrated with POS, payment terminals and the HOXXES ordering ecosystem.",
   },

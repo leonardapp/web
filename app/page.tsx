@@ -271,7 +271,7 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
   />
 
   <img
-    src="https://hoxxes.app/images/kiosk.svg"
+    src="https://hoxxes.app/images/kiosk-produkt.png"
     alt="HOXXES Self-Service Kiosk"
     className="pointer-events-none relative z-10 w-[125vw] sm:w-[90vw] lg:w-full lg:max-w-[1400px] object-contain"
   />
