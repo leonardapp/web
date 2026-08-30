@@ -282,7 +282,7 @@ export default function OffersPage() {
   {/* Product Photo */}
   <div className="w-full max-w-[500px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
     <img
-      src="https://hoxxes.app/images/kiosk.svg"
+      src="https://hoxxes.app/images/kiosk-produkt2.png"
       alt="HOXXES Self-Service Kiosk"
       className="w-full object-contain"
     />
