@@ -208,8 +208,9 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
   </h2>
 
   <p className="mt-6 text-slate-500 leading-relaxed">
-    Android-based self-service kiosks fully integrated with POS, KDS,
-    fiscal printers and payment terminals.
+    Slim, wall-mounted Android self-service kiosks with a 27" Full HD
+  touchscreen, designed for fast ordering and efficient use of space.
+  Fully integrated with POS, KDS, fiscal printers and payment terminals.
   </p>
   
 
@@ -271,7 +272,7 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
   />
 
   <img
-    src="https://hoxxes.app/images/kiosk-produkt.png"
+    src="https://hoxxes.app/images/kiosk.svg"
     alt="HOXXES Self-Service Kiosk"
     className="pointer-events-none relative z-10 w-[125vw] sm:w-[90vw] lg:w-full lg:max-w-[1400px] object-contain"
   />

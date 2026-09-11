@@ -35,8 +35,8 @@ const hardware = [
     id: 3,
     slug: "kds-display",
     title: "Kitchen Display System",
-    subtitle: 'ALLNET Touch Display 21" (PoE) Android',
-    price: 415,
+    subtitle: 'ALLNET PrimeOne Touch Display 21" (PoE) Android',
+    price: 662,
     availability: "made-to-order",
     image: "https://hoxxes.app/images/kds-allnet.png",
     description:
