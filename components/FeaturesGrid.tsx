@@ -185,8 +185,23 @@ export default function HomeFeatures() {
 
         <div className="relative">
 
-          <div className="text-center mb-6">
-          </div>
+          <div className="text-center mb-10 sm:mb-12">
+  <div className="text-xs uppercase tracking-[0.35em] text-emerald-600 font-semibold mb-4">
+    One Platform. Every Operation.
+  </div>
+
+  <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
+    Everything your business needs.
+    <span className="block text-slate-400">
+      Connected in one ecosystem.
+    </span>
+  </h2>
+
+  <p className="mt-5 max-w-2xl mx-auto text-sm sm:text-base text-slate-500 leading-relaxed">
+    From POS and ordering to kiosks, kitchen operations and analytics —
+    everything works together through HOXXES.
+  </p>
+</div>
 
           {/* =====================================================
               3D CAROUSEL
@@ -507,19 +522,16 @@ export default function HomeFeatures() {
             LEARN MORE
         ====================================================== */}
 
-        <div className="mt-16 text-center">
+        <div className="mt-12 text-center">
 
-          <p className="mb-4 text-sm text-slate-500">
-            Explore the complete HOXXES operating system.
-          </p>
-
+          
           <div className="mt-0 flex flex-col sm:flex-row justify-center gap-4">
 
             <Button
               href="/learn-more"
               variant="primary"
             >
-              Learn More
+              Explore HOXXES
             </Button>
 
           </div>

@@ -868,20 +868,18 @@ directly with your kitchen — without installing an app.
         </div>
 
         <h3 className="mt-6 text-3xl font-semibold">
-          Bring products and experiences to life.
+          Turn attention into experience.
         </h3>
 
         <p className="mt-4 text-slate-500 leading-relaxed">
-          Designed for retail locations, exhibitions,
-corporate environments and hospitality venues,
-HoloBox combines holographic visuals, AI-powered
-presenters and interactive content to create
-memorable customer experiences.
+          Designed for retail locations, exhibitions, corporate environments
+    and hospitality venues, HoloBox combines holographic visuals with
+    interactive digital content to create memorable customer experiences.
         </p>
 
         <div className="mt-8 grid sm:grid-cols-2 gap-3 text-sm text-slate-700">
           <div>✓ Holographic Product Showcase</div>
-          <div>✓ AI Virtual Presenter</div>
+          <div>✓ Interactive Digital Content</div>
           <div>✓ Product Demonstrations</div>
           <div>✓ Corporate Presentations</div>
           <div>✓ Events & Exhibitions</div>

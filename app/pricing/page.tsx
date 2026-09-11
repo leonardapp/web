@@ -274,6 +274,9 @@ Core platform capabilities are included with every subscription.
           {" "} / year / location
         </span>
       </div>
+      <div className="mt-2 text-sm text-emerald-600 font-medium">
+  Unlimited computers & users
+</div>
 
       <div className="mt-4 text-2xl font-semibold">
         €{total.toLocaleString()}
