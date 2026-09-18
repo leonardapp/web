@@ -59,10 +59,10 @@ export const products: Product[] = [
     description:
       "Recommended Android display for HOXXES Kitchen Display System.",
     image: "https://hoxxes.app/images/kds-allnet.png",
-    price: 662,
+    price: 550,
     stock: 0,
-    vat: 8,
-    availability: "made-to-order",
-    leadTime: "2 Weeks",
+    vat: 18,
+    availability: "in-stock",
+    leadTime: "Approx. 3 Months",
   },
 ];

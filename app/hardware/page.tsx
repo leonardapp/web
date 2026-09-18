@@ -17,7 +17,7 @@ const hardware = [
     availability: "in-stock",
     image: "https://hoxxes.app/images/kiosk.svg",
     description:
-      "Space-saving 32-inch wall-mounted self-service kiosk fully integrated with POS, payment terminals and the HOXXES ordering ecosystem.",
+  "Wall-mounted self-service kiosk featuring a cold-rolled steel enclosure, embedded PC with RK3568 processor, Masung E80I thermal printer and Newland EM25 QR code scanner. Designed with dedicated space for integrating a POS payment terminal.",
   },
   {
   id: 2,
@@ -29,18 +29,19 @@ const hardware = [
   leadTime: "Approx. 3 Months",
   image: "https://hoxxes.app/images/POS.png",
   description:
-    "Enterprise dual-screen POS terminal featuring Offline Mode for uninterrupted operations.",
+  "Enterprise dual-screen POS terminal equipped with a 15.6-inch main display and an 11.6-inch customer display, powered by the RK3576 processor with 4 GB RAM and 32 GB storage. Designed for fast, reliable point-of-sale operations with seamless integration into the HOXXES ecosystem.",
 },
   {
     id: 3,
     slug: "kds-display",
     title: "Kitchen Display System",
-    subtitle: 'ALLNET PrimeOne Touch Display 21" (PoE) Android',
-    price: 662,
-    availability: "made-to-order",
+    subtitle: 'Touch Display 21" Android',
+    price: 550,
+    availability: "sold-out",
+  leadTime: "Approx. 3 Months",
     image: "https://hoxxes.app/images/kds-allnet.png",
     description:
-      "Recommended Android display for HOXXES Kitchen Display System. This product is supplied on demand with an estimated delivery time of approximately 2 weeks.",
+  "21.5-inch Android touchscreen display powered by the RK3576 processor, with 4 GB RAM and 32 GB storage. Designed for reliable kitchen operations and seamless integration with the HOXXES Kitchen Display System.",
   },
   {
   id: 4,
@@ -51,7 +52,7 @@ const hardware = [
   availability: "in-stock",
   image: "https://hoxxes.app/images/holo.png",
   description:
-    "Premium transparent holographic display designed for retail, hospitality, exhibitions and immersive customer experiences.",
+  "Premium 86-inch transparent holographic display powered by Windows, designed to create immersive 3D visual experiences for retail, hospitality, exhibitions and modern customer environments.",
 },
 ];
 

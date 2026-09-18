@@ -97,13 +97,7 @@ export default function ProductClient({ product }: Props) {
 
               {/* STOCK */}
 
-              {isMadeToOrder ? (
-  <div className="mt-6 inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700">
-    Made to Order • {product.leadTime}
-  </div>
-) : (
-  <div className="mt-6 inline-flex items-center rounded-full bg-emerald-50 px-4 py-2 text-sm font-medium text-emerald-700">
-    {isMadeToOrder ? (
+{isMadeToOrder ? (
   <div className="mt-6 inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700">
     Made to Order • {product.leadTime}
   </div>
@@ -114,8 +108,6 @@ export default function ProductClient({ product }: Props) {
 ) : (
   <div className="mt-6 inline-flex items-center rounded-full bg-emerald-50 px-4 py-2 text-sm font-medium text-emerald-700">
     ✓ {product.stock} Units Available
-  </div>
-)}
   </div>
 )}
 
@@ -266,7 +258,7 @@ export default function ProductClient({ product }: Props) {
                     <span>Support</span>
 
                     <span className="font-medium text-slate-900">
-                      Included
+                      Technical Support Included
                     </span>
 
                   </div>
@@ -276,7 +268,7 @@ export default function ProductClient({ product }: Props) {
                     <span>Warranty</span>
 
                     <span className="font-medium text-slate-900">
-                      Manufacturer Warranty
+                      1-Year Technical Manufacturer Warranty
                     </span>
 
                   </div>
