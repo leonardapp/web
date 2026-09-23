@@ -619,11 +619,10 @@ ANDROID POS TERMINAL
 
 KITCHEN DISPLAY SYSTEM
 
-- ALLNET Touch Display 21" (PoE)
-- Android Kitchen Display
+- Touch Display 21.5" Android
+- Kitchen Display System
 - Fully integrated with the HOXXES platform
-- Price: 415€ excl. VAT
-- Typical delivery time: approximately 2 weeks
+- Price: 550€ excl. VAT
 
 HOLOBOX
 

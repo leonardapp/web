@@ -35,7 +35,7 @@ const hardware = [
     id: 3,
     slug: "kds-display",
     title: "Kitchen Display System",
-    subtitle: 'Touch Display 21" Android',
+    subtitle: 'Touch Display 21.5" Android',
     price: 550,
     availability: "sold-out",
   leadTime: "Approx. 3 Months",
