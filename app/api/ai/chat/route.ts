@@ -585,7 +585,7 @@ Android POS:
 
 Kitchen Display System:
 
-415€ excl. VAT
+550€ excl. VAT
 
 HoloBox:
 
