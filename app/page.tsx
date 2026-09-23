@@ -208,7 +208,7 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
   </h2>
 
   <p className="mt-6 text-slate-500 leading-relaxed">
-    Slim, wall-mounted Android self-service kiosks with a 27" Full HD
+    Slim, wall-mounted Android self-service kiosks with a 32" Full HD
   touchscreen, designed for fast ordering and efficient use of space.
   Fully integrated with POS, KDS, fiscal printers and payment terminals.
   </p>
