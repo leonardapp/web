@@ -15,20 +15,20 @@ const logos = [
 export default function LogoMarquee() {
   return (
     <div className="mt-10">
-  <Marquee
-    speed={28}
-    gradient={false}
-    pauseOnHover
-    autoFill
-  >
+      <Marquee
+        speed={28}
+        gradient={false}
+        pauseOnHover
+        autoFill
+      >
         {logos.map((logo) => (
-  <img
-    key={logo.name}
-    src={`https://hoxxes.app/images/${logo.file}`}
-    alt={logo.name}
-    className="h-10 md:h-12 lg:h-12 w-auto object-contain mx-10 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-  />
-))}
+          <img
+            key={logo.name}
+            src={`https://hoxxes.app/images/${logo.file}`}
+            alt={logo.name}
+            className="h-10 md:h-12 lg:h-12 w-auto object-contain mx-10 opacity-90 hover:opacity-100 transition-opacity duration-300"
+          />
+        ))}
       </Marquee>
     </div>
   );
