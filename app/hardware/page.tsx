@@ -238,23 +238,36 @@ export default function HardwarePage() {
 
               <div className="h-0" />
 
-              {/* LEARN MORE */}
-              <button
-                onClick={() =>
-                  setOpenIndex(openIndex === i ? null : i)
-                }
-                className="inline-block mt-8 text-sm font-medium text-black/70 hover:text-black transition"
-              >
-                Learn more →
-              </button>
+              {/* ACTIONS */}
+<div className="mt-8 flex items-center gap-6">
+  {/* LEARN MORE */}
+  <button
+    onClick={() =>
+      setOpenIndex(openIndex === i ? null : i)
+    }
+    className="group inline-flex items-center gap-2 text-sm font-medium tracking-wide text-black transition-all duration-300"
+  >
+    <span className="relative">
+      LEARN MORE
+      <span className="absolute -bottom-1 left-0 h-px w-0 bg-black transition-all duration-300 group-hover:w-full" />
+    </span>
 
-              {/* VIEW DIMENSIONS */}
-              <button
-                onClick={() => setOpenDimensions(item.slug)}
-                className="block mt-4 text-sm font-medium text-black/70 hover:text-black underline transition"
-              >
-                View Dimensions
-              </button>
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </button>
+
+  {/* VIEW DIMENSIONS */}
+  <button
+    onClick={() => setOpenDimensions(item.slug)}
+    className="group inline-flex items-center gap-2 rounded-full border border-black/15 bg-black/[0.02] px-4 py-2 text-xs font-medium tracking-[0.08em] text-black transition-all duration-300 hover:border-black/40 hover:bg-black hover:text-white"
+  >
+    VIEW DIMENSIONS
+    <span className="transition-transform duration-300 group-hover:translate-x-0.5">
+      ↗
+    </span>
+  </button>
+</div>
 
               {/* EXPAND */}
               <motion.div
