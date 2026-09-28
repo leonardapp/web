@@ -178,7 +178,7 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
 {/* FEATURES DIRECTLY */}
 <FeaturesGrid />
 
-  {/* ================= HARDWARE ================= */}
+ {/* ================= HARDWARE ================= */}
 <section
   id="hardware"
   className="relative py-24 sm:py-36 overflow-hidden"
@@ -219,19 +219,19 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6 }}
-        className="group rounded-3xl border border-slate-200 bg-white overflow-hidden hover:shadow-xl transition-all duration-300"
+        className="group flex flex-col h-full rounded-3xl border border-slate-200 bg-white overflow-hidden hover:shadow-xl transition-all duration-300"
       >
         {/* IMAGE */}
         <div className="h-[280px] flex items-center justify-center p-8">
           <img
             src="https://hoxxes.app/images/POS.png"
             alt="HOXXES POS"
-            className="w-[58%] max-w-[260px] object-contain group-hover:scale-105 transition-transform duration-500"
+            className="w-[70%] max-w-[300px] object-contain group-hover:scale-105 transition-transform duration-500"
           />
         </div>
 
         {/* CONTENT */}
-        <div className="p-7">
+        <div className="p-7 flex flex-col items-center text-center flex-1">
           <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-3">
             Point of Sale
           </div>
@@ -240,12 +240,12 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
             POS
           </h3>
 
-          <p className="mt-3 text-sm text-slate-500 leading-6">
+          <p className="mt-3 text-sm text-slate-500 leading-6 max-w-xs">
             Fast and reliable POS systems designed for everyday restaurant
             and retail operations.
           </p>
 
-          <div className="mt-6">
+          <div className="mt-auto pt-6 flex justify-center">
             <Button href="/hardware#pos" variant="primary">
               Buy Now
             </Button>
@@ -259,19 +259,19 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.7 }}
-        className="group rounded-3xl border border-slate-200 bg-white overflow-hidden hover:shadow-xl transition-all duration-300"
+        className="group flex flex-col h-full rounded-3xl border border-slate-200 bg-white overflow-hidden hover:shadow-xl transition-all duration-300"
       >
         {/* IMAGE */}
         <div className="h-[280px] flex items-center justify-center p-8">
           <img
             src="https://hoxxes.app/images/kiosk.svg"
             alt="HOXXES Self-Service Kiosk"
-            className="w-[52%] max-w-[230px] object-contain group-hover:scale-105 transition-transform duration-500"
+            className="w-[70%] max-w-[300px] object-contain group-hover:scale-105 transition-transform duration-500"
           />
         </div>
 
         {/* CONTENT */}
-        <div className="p-7">
+        <div className="p-7 flex flex-col items-center text-center flex-1">
           <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-3">
             Self-Service
           </div>
@@ -280,12 +280,12 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
             Kiosk
           </h3>
 
-          <p className="mt-3 text-sm text-slate-500 leading-6">
+          <p className="mt-3 text-sm text-slate-500 leading-6 max-w-xs">
             Self-service ordering with direct integration to POS,
             kitchen operations and payments.
           </p>
 
-          <div className="mt-6">
+          <div className="mt-auto pt-6 flex justify-center">
             <Button href="/hardware#kiosk" variant="primary">
               Buy Now
             </Button>
@@ -299,19 +299,19 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8 }}
-        className="group rounded-3xl border border-slate-200 bg-white overflow-hidden hover:shadow-xl transition-all duration-300"
+        className="group flex flex-col h-full rounded-3xl border border-slate-200 bg-white overflow-hidden hover:shadow-xl transition-all duration-300"
       >
         {/* IMAGE */}
         <div className="h-[280px] flex items-center justify-center p-8">
           <img
             src="https://hoxxes.app/images/kds-allnet.png"
             alt="HOXXES Kitchen Display System"
-            className="w-[62%] max-w-[270px] object-contain group-hover:scale-105 transition-transform duration-500"
+            className="w-[70%] max-w-[300px] object-contain group-hover:scale-105 transition-transform duration-500"
           />
         </div>
 
         {/* CONTENT */}
-        <div className="p-7">
+        <div className="p-7 flex flex-col items-center text-center flex-1">
           <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-3">
             Kitchen Operations
           </div>
@@ -320,12 +320,12 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
             KDS
           </h3>
 
-          <p className="mt-3 text-sm text-slate-500 leading-6">
+          <p className="mt-3 text-sm text-slate-500 leading-6 max-w-xs">
             Kitchen Display System designed to keep orders organized,
             visible and moving in real time.
           </p>
 
-          <div className="mt-6">
+          <div className="mt-auto pt-6 flex justify-center">
             <Button href="/hardware#kds" variant="primary">
               Buy Now
             </Button>
