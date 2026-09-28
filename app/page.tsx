@@ -178,109 +178,182 @@ POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Ma
 {/* FEATURES DIRECTLY */}
 <FeaturesGrid />
 
-  {/* KIOSK */}
-      
-      <section id="kiosk" className="relative py-24 sm:py-36 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white" />
-
-        <div className="relative max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-            {/* LEFT */}
-            <motion.div
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.4 }}
-  transition={{
-    duration: 0.9,
-    ease: [0.22, 1, 0.36, 1],
-  }}
+  {/* ================= HARDWARE ================= */}
+<section
+  id="hardware"
+  className="relative py-24 sm:py-36 overflow-hidden"
 >
-  <div className="text-xs tracking-[0.35em] text-emerald-600 font-semibold mb-5 text-center">
-    Flagship Hardware
-  </div>
+  <div className="relative max-w-7xl mx-auto px-6">
 
-  <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-center">
-    Self-service kiosks,
-    <span className="block text-slate-400">
-      fully integrated.
-    </span>
-  </h2>
+    {/* HEADER */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.7 }}
+      className="text-center max-w-3xl mx-auto"
+    >
+      <div className="text-xs tracking-[0.35em] text-emerald-600 font-semibold mb-5">
+        HOXXES HARDWARE
+      </div>
 
-  <p className="mt-6 text-slate-500 leading-relaxed">
-    Slim, wall-mounted Android self-service kiosks with a 32" Full HD
-  touchscreen, designed for fast ordering and efficient use of space.
-  Fully integrated with POS, KDS, fiscal printers and payment terminals.
-  </p>
-  
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
+        Hardware built to work
+        <span className="block text-slate-400">
+          as one with HOXXES.
+        </span>
+      </h2>
 
-  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-600">
-    {[
-  "Fully Integrated With POS",
-  "Connected To Kitchen Display System",
-  "Centralized Menu Management",
-  "Real-Time Reporting",
-  "Multi-Location Deployment",
-  "Integrated Thermal Printer",
-].map((f) => (
-      <div key={f}>✓ {f}</div>
-    ))}
-  </div>
+      <p className="mt-6 text-slate-500 leading-relaxed max-w-2xl mx-auto">
+        Purpose-built hardware for ordering, sales and kitchen operations —
+        fully connected to the HOXXES platform.
+      </p>
+    </motion.div>
 
-  <div className="mt-8 flex flex-col sm:flex-row gap-3">
+    {/* PRODUCTS */}
+    <div className="mt-16 grid md:grid-cols-3 gap-6">
 
-  <div className="w-full sm:w-auto">
-    <Button href="/hardware" variant="primary">
-      Explore Hardware
-    </Button>
-  </div>
-
-  <div className="w-full sm:w-auto">
-    <Button href="/request-demo" variant="outline">
-      Request Demo
-    </Button>
-  </div>
-
-</div>
-</motion.div>
-
-{/* RIGHT */}
-<motion.div
-  initial={{
-    opacity: 0,
-    y: 40,
-    scale: 0.96,
-  }}
-  whileInView={{
-    opacity: 1,
-    y: 0,
-    scale: 1,
-  }}
-  viewport={{
-    once: true,
-    amount: 0.15,
-  }}
-  transition={{
-    duration: 0.7,
-    ease: [0.22, 1, 0.36, 1],
-  }}
-  className="relative z-0 flex justify-center items-center scale-125 sm:scale-110 lg:scale-100"
->
-  {/* Emerald Glow */}
-  <div
-    className="pointer-events-none absolute w-[700px] h-[700px] bg-emerald-400/20 rounded-full blur-[180px]"
-  />
-
-  <img
-    src="https://hoxxes.app/images/kiosk.svg"
-    alt="HOXXES Self-Service Kiosk"
-    className="pointer-events-none relative z-10 w-[125vw] sm:w-[90vw] lg:w-full lg:max-w-[1400px] object-contain"
-  />
-</motion.div>
-
-           </div>
+      {/* ================= POS ================= */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+        className="group rounded-3xl border border-slate-200 bg-white overflow-hidden hover:shadow-xl transition-all duration-300"
+      >
+        {/* IMAGE */}
+        <div className="h-[280px] flex items-center justify-center p-8">
+          <img
+            src="https://hoxxes.app/images/POS.png"
+            alt="HOXXES POS"
+            className="w-[58%] max-w-[260px] object-contain group-hover:scale-105 transition-transform duration-500"
+          />
         </div>
-      </section>
+
+        {/* CONTENT */}
+        <div className="p-7">
+          <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-3">
+            Point of Sale
+          </div>
+
+          <h3 className="text-2xl font-semibold">
+            POS
+          </h3>
+
+          <p className="mt-3 text-sm text-slate-500 leading-6">
+            Fast and reliable POS systems designed for everyday restaurant
+            and retail operations.
+          </p>
+
+          <div className="mt-6">
+            <Button href="/hardware#pos" variant="primary">
+              Buy Now
+            </Button>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* ================= KIOSK ================= */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7 }}
+        className="group rounded-3xl border border-slate-200 bg-white overflow-hidden hover:shadow-xl transition-all duration-300"
+      >
+        {/* IMAGE */}
+        <div className="h-[280px] flex items-center justify-center p-8">
+          <img
+            src="https://hoxxes.app/images/kiosk.svg"
+            alt="HOXXES Self-Service Kiosk"
+            className="w-[52%] max-w-[230px] object-contain group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+
+        {/* CONTENT */}
+        <div className="p-7">
+          <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-3">
+            Self-Service
+          </div>
+
+          <h3 className="text-2xl font-semibold">
+            Kiosk
+          </h3>
+
+          <p className="mt-3 text-sm text-slate-500 leading-6">
+            Self-service ordering with direct integration to POS,
+            kitchen operations and payments.
+          </p>
+
+          <div className="mt-6">
+            <Button href="/hardware#kiosk" variant="primary">
+              Buy Now
+            </Button>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* ================= KDS ================= */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8 }}
+        className="group rounded-3xl border border-slate-200 bg-white overflow-hidden hover:shadow-xl transition-all duration-300"
+      >
+        {/* IMAGE */}
+        <div className="h-[280px] flex items-center justify-center p-8">
+          <img
+            src="https://hoxxes.app/images/kds-allnet.png"
+            alt="HOXXES Kitchen Display System"
+            className="w-[62%] max-w-[270px] object-contain group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+
+        {/* CONTENT */}
+        <div className="p-7">
+          <div className="text-xs uppercase tracking-[0.25em] text-emerald-600 mb-3">
+            Kitchen Operations
+          </div>
+
+          <h3 className="text-2xl font-semibold">
+            KDS
+          </h3>
+
+          <p className="mt-3 text-sm text-slate-500 leading-6">
+            Kitchen Display System designed to keep orders organized,
+            visible and moving in real time.
+          </p>
+
+          <div className="mt-6">
+            <Button href="/hardware#kds" variant="primary">
+              Buy Now
+            </Button>
+          </div>
+        </div>
+      </motion.div>
+
+    </div>
+
+    {/* SHOP CTA */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="mt-12 text-center"
+    >
+      <p className="text-sm text-slate-500 mb-5">
+        Browse and order HOXXES hardware online.
+      </p>
+
+      <Button href="/hardware" variant="outline">
+        View All Hardware
+      </Button>
+    </motion.div>
+
+  </div>
+</section>
 
 {/* UNIFIED INFRASTRUCTURE */}
 <section className="py-28 sm:py-32 bg-transparent">
