@@ -553,7 +553,7 @@ directly with your kitchen — without installing an app.
 
   <div className="flex justify-center">
 
-    <div className="relative w-[200px] sm:w-[220px] lg:w-[240px] rounded-[38px] bg-gradient-to-br from-slate-300 via-slate-700 to-slate-950 p-[3px] shadow-[0_30px_80px_rgba(0,0,0,0.28)] ring-1 ring-slate-400/30">
+    <div className="relative w-[200px] sm:w-[220px] lg:w-[240px] rounded-[38px] bg-black p-[5px] shadow-[0_30px_80px_rgba(0,0,0,0.28)] ring-1 ring-black/20">
 
       {/* Emerald Glow */}
       <div className="absolute inset-0 -z-10 flex items-center justify-center">
@@ -563,9 +563,9 @@ directly with your kitchen — without installing an app.
       <div className="rounded-[35px] overflow-hidden bg-white">
 
         <img
-          src="https://hoxxes.app/images/qr-menu.jpg"
-          alt="HOXXES Digital Menu QR Ordering"
-          className="w-full"
+         src="https://hoxxes.app/images/qr-menu.jpg"
+    alt="HOXXES Digital Menu QR Ordering"
+    className="w-full"
         />
 
       </div>
@@ -608,7 +608,7 @@ directly with your kitchen — without installing an app.
 </section>
 
 
-{/* CORE PLATFORM */}
+
 
 {/* CORE PLATFORM */}
 <section className="py-24 sm:py-32 bg-transparent">
