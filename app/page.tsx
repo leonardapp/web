@@ -112,8 +112,12 @@ export default function HomePage() {
           >
             One ecosystem. Software. Hardware. Intelligence.
 
-POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering, Inventory Management and Analytics—all in one Restaurant & Retail Operating System.
-          </motion.p>
+      <br />
+
+      POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering,
+      Inventory Management and Analytics—all in one Restaurant & Retail
+      Operating System.
+    </motion.p>
           
 
           {/* BUTTONS */}
@@ -549,14 +553,14 @@ directly with your kitchen — without installing an app.
 
   <div className="flex justify-center">
 
-    <div className="relative w-[200px] sm:w-[220px] lg:w-[240px] rounded-[40px] bg-black p-3 shadow-xl">
+    <div className="relative w-[200px] sm:w-[220px] lg:w-[240px] rounded-[38px] bg-gradient-to-br from-slate-300 via-slate-700 to-slate-950 p-[3px] shadow-[0_30px_80px_rgba(0,0,0,0.28)] ring-1 ring-slate-400/30">
 
       {/* Emerald Glow */}
       <div className="absolute inset-0 -z-10 flex items-center justify-center">
-  <div className="w-[450px] h-[450px] absolute inset-0 bg-emerald-400/20 rounded-full blur-[140px]" />
-</div>
+        <div className="w-[450px] h-[450px] absolute inset-0 bg-emerald-400/20 rounded-full blur-[140px]" />
+      </div>
 
-      <div className="rounded-[32px] overflow-hidden bg-white">
+      <div className="rounded-[35px] overflow-hidden bg-white">
 
         <img
           src="https://hoxxes.app/images/qr-menu.jpg"
@@ -570,41 +574,41 @@ directly with your kitchen — without installing an app.
 
   </div>
 
-
-
-
-
   <div className="flex flex-col items-center">
 
     <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-lg">
+
       <QRCodeSVG
         value="https://qr.hoxxes.com/qr/SSI718JKZ770"
         size={140}
         level="H"
       />
+
     </div>
 
     <p className="mt-5 text-sm text-slate-500 text-center">
       Scan the live demo and experience Smart QR Ordering.
     </p>
 
-  <a
-  href="https://qr.hoxxes.com/qr/SSI718JKZ770"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-6 w-full sm:w-auto rounded-full bg-black px-8 py-3 text-center text-sm font-medium text-white transition hover:bg-slate-800"
->
-  Explore Live Menu
-</a>
-    
+    <a
+      href="https://qr.hoxxes.com/qr/SSI718JKZ770"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-6 w-full sm:w-auto rounded-full bg-black px-8 py-3 text-center text-sm font-medium text-white transition hover:bg-slate-800"
+    >
+      Explore Live Menu
+    </a>
 
   </div>
- </div>
+
+</div>
 
 </div>
 
 </section>
 
+
+{/* CORE PLATFORM */}
 
 {/* CORE PLATFORM */}
 <section className="py-24 sm:py-32 bg-transparent">
