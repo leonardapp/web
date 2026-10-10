@@ -1,67 +1,83 @@
+
 "use client";
 
 import Link from "next/link";
 import Image from "next/image";
-import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 const features = [
   {
     title: "Point of Sale",
-    description: "Powerful tools to run your business in one place.",
+    description:
+      "Manage sales, orders and daily operations from one platform.",
     image: "https://hoxxes.app/images/pos.png",
     href: "/software",
   },
   {
-    title: "Hardware",
-    description: "POS terminals, kiosks and hardware built for your business.",
-    image: "https://hoxxes.app/images/hardware2.png",
-    href: "/hardware",
-  },
-  {
-    title: "Online Ordering",
-    description: "Turn your website into a powerful ordering channel.",
-    image: "https://hoxxes.app/images/online-ordering.png",
-    href: "/software",
-  },
-  {
-    title: "Marketing",
-    description: "Loyalty, gift cards, promotions and more.",
-    image: "https://hoxxes.app/images/marketing.png",
-    href: "/software",
-  },
-  {
-    title: "Kitchen Display System",
-    description: "Every order from every channel in one place.",
-    image: "https://hoxxes.app/images/kds.png",
-    href: "/software",
-  },
-  {
-    title: "Delivery Integrations",
-    description: "Connect your favorite delivery platforms.",
-    image: "https://hoxxes.app/images/integrations.png",
-    href: "/software",
-  },
-  {
-    title: "Payment Integrations",
-    description: "Integrated payments for seamless transactions.",
-    image: "https://hoxxes.app/images/Delivery.png",
-    href: "/software",
-  },
-  {
     title: "Operations Hub",
-    description: "Manage your daily operations from one place.",
+    description:
+      "Streamline daily workflows, staff activities and business operations.",
     image: "https://hoxxes.app/images/waiter2.png",
     href: "/software",
   },
   {
+    title: "Kitchen Display System",
+    description:
+      "Keep kitchen orders organized and service running smoothly.",
+    image: "https://hoxxes.app/images/kds.png",
+    href: "/software",
+  },
+  {
+    title: "Online Ordering",
+    description:
+      "Accept online orders through your own digital ordering channel.",
+    image: "https://hoxxes.app/images/delivery.png",
+    href: "/software",
+  },
+  {
     title: "QR Ordering",
-    description: "Let customers scan, browse and order instantly.",
+    description:
+      "Let customers browse your menu and order directly from their phones.",
     image: "https://hoxxes.app/images/qr.png",
     href: "/software",
+  },
+  {
+    title: "Delivery Integrations",
+    description:
+      "Connect delivery platforms and manage incoming orders in one place.",
+    image: "https://hoxxes.app/images/integrations.png",
+    href: "/software",
+  },
+  {
+    title: "Marketing",
+    description:
+      "Build customer loyalty with promotions, rewards and gift cards.",
+    image: "https://hoxxes.app/images/marketing.png",
+    href: "/software",
+  },
+  {
+    title: "Kiosk Ordering",
+    description:
+      "Let customers place orders quickly and independently.",
+    image: "https://hoxxes.app/images/kiosk-ordering.png",
+    href: "/software",
+  },
+  {
+    title: "Hardware",
+    description:
+      "Equip your business with POS terminals, self-service kiosks and Android KDS devices.",
+    image: "https://hoxxes.app/images/hardware2.png",
+    href: "/hardware",
   },
 ];
 
 const BRAND_GREEN = "#88D21A";
+const SWIPE_THRESHOLD = 45;
 
 export default function HomeFeatures() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -69,12 +85,17 @@ export default function HomeFeatures() {
   const [isMobile, setIsMobile] = useState(false);
 
   const activeIndexRef = useRef(0);
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(
-    null
-  );
+  const intervalRef =
+    useRef<ReturnType<typeof setInterval> | null>(null);
+
+  // References for touch gestures on mobile.
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+  const swipeHandled = useRef(false);
 
   const goToSlide = useCallback((index: number) => {
-    const nextIndex = (index + features.length) % features.length;
+    const nextIndex =
+      (index + features.length) % features.length;
 
     activeIndexRef.current = nextIndex;
     setActiveIndex(nextIndex);
@@ -88,13 +109,13 @@ export default function HomeFeatures() {
     goToSlide(activeIndexRef.current - 1);
   }, [goToSlide]);
 
+  // Detect mobile screen size.
   useEffect(() => {
     const updateScreenSize = () => {
       setIsMobile(window.innerWidth < 640);
     };
 
     updateScreenSize();
-
     window.addEventListener("resize", updateScreenSize);
 
     return () => {
@@ -102,6 +123,7 @@ export default function HomeFeatures() {
     };
   }, []);
 
+  // Automatically advance slides.
   useEffect(() => {
     if (paused) return;
 
@@ -117,6 +139,7 @@ export default function HomeFeatures() {
     };
   }, [paused, nextSlide]);
 
+  // Keyboard navigation.
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "ArrowRight") nextSlide();
@@ -129,6 +152,50 @@ export default function HomeFeatures() {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [nextSlide, previousSlide]);
+
+  // Start tracking the user's finger.
+  const handleTouchStart = (
+    event: React.TouchEvent<HTMLDivElement>
+  ) => {
+    touchStartX.current = event.touches[0].clientX;
+    touchStartY.current = event.touches[0].clientY;
+    swipeHandled.current = false;
+  };
+
+  // Detect a horizontal swipe and change the active card.
+  const handleTouchEnd = (
+    event: React.TouchEvent<HTMLDivElement>
+  ) => {
+    if (
+      touchStartX.current === null ||
+      touchStartY.current === null
+    ) {
+      return;
+    }
+
+    const deltaX =
+      event.changedTouches[0].clientX - touchStartX.current;
+
+    const deltaY =
+      event.changedTouches[0].clientY - touchStartY.current;
+
+    const isHorizontalSwipe =
+      Math.abs(deltaX) > SWIPE_THRESHOLD &&
+      Math.abs(deltaX) > Math.abs(deltaY) * 1.2;
+
+    if (isHorizontalSwipe) {
+      swipeHandled.current = true;
+
+      if (deltaX < 0) {
+        nextSlide();
+      } else {
+        previousSlide();
+      }
+    }
+
+    touchStartX.current = null;
+    touchStartY.current = null;
+  };
 
   const getCircularDistance = (index: number) => {
     let distance = index - activeIndex;
@@ -145,15 +212,13 @@ export default function HomeFeatures() {
   };
 
   return (
-    
-<section className="overflow-hidden bg-transparent py-10 sm:py-16">
-  <div className="mx-auto max-w-7xl px-4 sm:px-6">
-    {/* SECTION HEADER */}
-    <div className="mb-8 text-center sm:mb-12">
-      <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-600">
-        One Platform. Every Operation.
-      </p>
-
+    <section className="overflow-hidden bg-transparent py-10 sm:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        {/* SECTION HEADER */}
+        <div className="mb-8 text-center sm:mb-12">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-600">
+            One Platform. Every Operation.
+          </p>
 
           <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
             Everything your business needs.
@@ -163,16 +228,25 @@ export default function HomeFeatures() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-slate-500 sm:text-base">
-            From POS and ordering to hardware, kitchen operations,
-            payments and integrations — everything works together
-            through HOXXES.
+            From sales and ordering to hardware, kitchen
+            operations and integrations — everything works
+            together through HOXXES.
           </p>
         </div>
 
         {/* CAROUSEL */}
         <div
           className="relative mt-8 flex h-[440px] items-center justify-center overflow-visible sm:mt-12 sm:h-[510px]"
-          style={{ perspective: "1500px" }}
+          style={{
+            perspective: "1500px",
+            touchAction: "pan-y",
+          }}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          onTouchCancel={() => {
+            touchStartX.current = null;
+            touchStartY.current = null;
+          }}
         >
           {features.map((item, index) => {
             const distance = getCircularDistance(index);
@@ -183,7 +257,9 @@ export default function HomeFeatures() {
               ? absDistance <= 1
               : absDistance <= 2;
 
-            const translateX = distance * (isMobile ? 245 : 310);
+            const translateX =
+              distance * (isMobile ? 245 : 310);
+
             const rotateY = distance * -12;
 
             const translateZ = isActive
@@ -216,6 +292,13 @@ export default function HomeFeatures() {
                 href={item.href}
                 aria-label={`${item.title} — learn more`}
                 onClick={(event) => {
+                  // Prevent accidental navigation after swiping.
+                  if (swipeHandled.current) {
+                    event.preventDefault();
+                    swipeHandled.current = false;
+                    return;
+                  }
+
                   if (!isActive) {
                     event.preventDefault();
                     goToSlide(index);
@@ -268,19 +351,18 @@ export default function HomeFeatures() {
                     </svg>
                   </div>
 
-                  
-{/* PRODUCT IMAGE — FULL CARD */}
-<div className="absolute inset-0 z-10 overflow-hidden">
-  <Image
-    src={item.image}
-    alt={item.title}
-    fill
-    sizes="(max-width: 639px) 82vw, (max-width: 1023px) 48vw, 31vw"
-    className="object-cover transition-transform duration-500 group-hover:scale-[1.035]"
-    priority={index === 0}
-  />
-</div>
-
+                  {/* PRODUCT IMAGE — FULL CARD */}
+                  <div className="absolute inset-0 z-10 overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      sizes="(max-width: 639px) 82vw, (max-width: 1023px) 48vw, 31vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.035]"
+                      priority={index === 0}
+                      draggable={false}
+                    />
+                  </div>
 
                   {/* BOTTOM GRADIENT */}
                   <div className="absolute inset-x-0 bottom-0 z-20 h-[155px] bg-gradient-to-t from-[#477C0B]/90 via-[#5F9F12]/65 to-transparent" />
@@ -303,6 +385,7 @@ export default function HomeFeatures() {
 
         {/* CONTROLS */}
         <div className="mt-8 flex items-center justify-center gap-4 sm:mt-10">
+          {/* PREVIOUS */}
           <button
             type="button"
             onClick={previousSlide}
@@ -332,7 +415,9 @@ export default function HomeFeatures() {
                 type="button"
                 onClick={() => goToSlide(index)}
                 aria-label={`Go to ${item.title}`}
-                aria-current={index === activeIndex ? "true" : undefined}
+                aria-current={
+                  index === activeIndex ? "true" : undefined
+                }
                 className="h-2 overflow-hidden rounded-full bg-slate-200 transition-all duration-300"
                 style={{
                   width: index === activeIndex ? 26 : 8,
@@ -341,7 +426,8 @@ export default function HomeFeatures() {
                 <span
                   className="block h-full rounded-full transition-all duration-300"
                   style={{
-                    width: index === activeIndex ? "100%" : "0%",
+                    width:
+                      index === activeIndex ? "100%" : "0%",
                     backgroundColor: BRAND_GREEN,
                   }}
                 />
@@ -352,7 +438,9 @@ export default function HomeFeatures() {
           {/* PLAY / PAUSE */}
           <button
             type="button"
-            onClick={() => setPaused((current) => !current)}
+            onClick={() =>
+              setPaused((current) => !current)
+            }
             aria-label={paused ? "Play carousel" : "Pause carousel"}
             className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:border-[#88D21A] hover:text-[#6DAF12]"
           >
