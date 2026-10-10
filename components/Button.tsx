@@ -22,10 +22,14 @@ export default function Button({
     "inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 rounded-full text-sm font-medium transition-all duration-200";
 
   const styles = {
-    primary: "bg-black text-white hover:bg-slate-800 shadow-sm",
-    secondary: "bg-slate-100 text-black hover:bg-slate-200",
+    primary:
+      "bg-[#88d21a] text-[#17210c] hover:bg-[#76b915] shadow-sm",
+
+    secondary:
+      "bg-[#f5fce9] text-[#34520f] border border-[#e9f8d0] hover:bg-[#e9f8d0]",
+
     outline:
-      "border border-slate-300 text-black hover:bg-black hover:text-white",
+      "border border-[#88d21a] text-[#26351a] hover:bg-[#88d21a] hover:text-[#17210c]",
   };
 
   const content = (

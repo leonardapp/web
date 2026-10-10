@@ -124,11 +124,12 @@ export default function ProductClient({ product }: Props) {
                 <div className="inline-flex items-center rounded-full border border-slate-200 bg-white shadow-sm">
 
                   <button
-                    onClick={() => setQty(Math.max(1, qty - 1))}
-                    className="h-12 w-12 rounded-l-full text-xl hover:bg-slate-100 transition"
-                  >
-                    −
-                  </button>
+  onClick={() => setQty(Math.max(1, qty - 1))}
+  aria-label="Decrease quantity"
+  className="h-12 w-12 rounded-l-full text-xl text-[#26351a] transition hover:bg-[#f5fce9] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#88d21a]"
+>
+  −
+</button>
 
                   <span className="w-16 text-center text-lg font-semibold">
 
@@ -136,18 +137,19 @@ export default function ProductClient({ product }: Props) {
 
                   </span>
 
-                  <button
-                    onClick={() =>
-  setQty(
-    isMadeToOrder
-      ? qty + 1
-      : Math.min(product.stock, qty + 1)
-  )
-}
-                    className="h-12 w-12 rounded-r-full text-xl hover:bg-slate-100 transition"
-                  >
-                    +
-                  </button>
+                 <button
+  onClick={() =>
+    setQty(
+      isMadeToOrder
+        ? qty + 1
+        : Math.min(product.stock, qty + 1)
+    )
+  }
+  aria-label="Increase quantity"
+  className="h-12 w-12 rounded-r-full text-xl text-[#26351a] transition hover:bg-[#f5fce9] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#88d21a]"
+>
+  +
+</button>
 
                 </div>
 
@@ -187,43 +189,33 @@ export default function ProductClient({ product }: Props) {
 
               {/* BUTTONS */}
 
-              <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+  <button
+    onClick={() => {
+      addToCart({
+        slug: product.slug,
+        title: product.title,
+        price: product.price,
+        quantity: qty,
+        image: product.image,
+        availability: isMadeToOrder ? "made-to-order" : "in-stock",
+        leadTime: product.leadTime,
+      });
 
-                <button
-                  onClick={() => {
+      window.location.href = "/cart";
+    }}
+    className="flex-1 rounded-full bg-[#88d21a] px-8 py-4 font-medium text-[#17210c] transition hover:scale-[1.02] hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Add to Cart
+  </button>
 
-                    addToCart({
-  slug: product.slug,
-  title: product.title,
-  price: product.price,
-  quantity: qty,
-  image: product.image,
-  availability: isMadeToOrder
-  ? "made-to-order"
-  : "in-stock",
-  leadTime: product.leadTime,
-});
-
-                    window.location.href = "/cart";
-
-                  }}
-                  className="flex-1 rounded-full bg-black px-8 py-4 text-white font-medium transition hover:scale-[1.02] hover:bg-slate-900"
-                >
-
-                  Add to Cart
-
-                </button>
-
-                <Link
-                  href="/contact-sales"
-                  className="flex-1 rounded-full border border-slate-300 px-8 py-4 text-center font-medium transition hover:bg-slate-100"
-                >
-
-                  Request Quote
-
-                </Link>
-
-              </div>
+  <Link
+    href="/contact-sales"
+    className="flex-1 rounded-full border border-[#88d21a] px-8 py-4 text-center font-medium text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Request Quote
+  </Link>
+</div>
 
               {/* INFO */}
 

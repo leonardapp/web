@@ -170,7 +170,7 @@ export default function HomePage() {
     
   </div>
 </section>
-<CustomerSuccess />
+
 
 {/* NO GAP AT ALL */}
 <div className="m-0 p-0 leading-none" />
@@ -240,9 +240,9 @@ export default function HomePage() {
     </div>
 
     {/* CORE PLATFORM */}
-    <div className="inline-flex items-center px-8 py-4 rounded-2xl bg-black text-white font-medium tracking-wide">
-      HOXXES CORE PLATFORM
-    </div>
+    <div className="inline-flex items-center rounded-2xl bg-[#88d21a] px-8 py-4 font-medium tracking-wide text-[#17210c]">
+  HOXXES CORE PLATFORM
+</div>
 
     <p className="mt-4 text-sm text-slate-500">
       One operational layer connecting every part of your business.
@@ -412,13 +412,13 @@ directly with your kitchen — without installing an app.
     </p>
 
     <a
-      href="https://qr.hoxxes.com/qr/SSI718JKZ770"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="mt-6 w-full sm:w-auto rounded-full bg-black px-8 py-3 text-center text-sm font-medium text-white transition hover:bg-slate-800"
-    >
-      Explore Live Menu
-    </a>
+  href="https://qr.hoxxes.com/qr/SSI718JKZ770"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-6 w-full sm:w-auto rounded-full bg-[#88d21a] px-8 py-3 text-center text-sm font-semibold text-[#17210c] shadow-sm transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+>
+  Explore Live Menu
+</a>
 
   </div>
 
@@ -657,9 +657,9 @@ directly with your kitchen — without installing an app.
         <div className="text-center">
 
           {/* HQ */}
-          <div className="inline-flex px-6 py-3 rounded-2xl bg-black text-white font-medium tracking-wide">
-            HOXXES CONTROL CENTER
-          </div>
+          <div className="inline-flex items-center rounded-2xl bg-[#88d21a] px-6 py-3 font-medium tracking-wide text-[#17210c]">
+  HOXXES CONTROL CENTER
+</div>
 
           {/* FLOW */}
           <div className="my-6 text-emerald-500 text-3xl">
@@ -714,24 +714,27 @@ directly with your kitchen — without installing an app.
 
   </div>
 </section>
+<CustomerSuccess />
     
-      {/* HOLOBOX */}
-      
+  
+{/* HOLOBOX ADVERTISING */}
+
 <section id="holobox" className="py-24 sm:py-36 bg-white overflow-hidden">
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="text-center mb-16">
-      <div className="text-xs tracking-[0.35em] text-emerald-600 font-semibold mb-5 text-center">
-        Featured Hardware
+      <div className="text-xs tracking-[0.35em] text-emerald-600 font-semibold mb-5">
+        HOLOBOX ADVERTISING
       </div>
 
       <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
-        HoloBox Interactive Display
+        Put Your Brand in the Spotlight.
       </h2>
 
-      <p className="mt-5 max-w-3xl mx-auto text-slate-500 text-center">
-        Create immersive customer experiences with holographic visuals,
-        AI-powered virtual presenters and interactive digital content.
+      <p className="mt-5 max-w-3xl mx-auto text-slate-500">
+        Promote your business with engaging video advertising on HoloBox.
+        Choose your campaign duration, upload your video, and let your brand
+        stand out.
       </p>
     </div>
 
@@ -749,8 +752,9 @@ directly with your kitchen — without installing an app.
 
         <img
           src="https://hoxxes.app/images/holo.png"
-          alt="HOXXES HoloBox"
+          alt="HoloBox Advertising Display"
           className="relative z-10 w-full max-w-[500px] object-contain"
+          loading="lazy"
         />
       </motion.div>
 
@@ -762,38 +766,39 @@ directly with your kitchen — without installing an app.
         transition={{ duration: 0.7 }}
       >
         <div className="inline-flex px-4 py-2 rounded-full bg-emerald-50 text-emerald-700 text-xs font-medium uppercase tracking-wider">
-          Interactive Experience Hardware
+          Advertising Packages
         </div>
 
         <h3 className="mt-6 text-3xl font-semibold">
-          Turn attention into experience.
+          Make every second count.
         </h3>
 
         <p className="mt-4 text-slate-500 leading-relaxed">
-          Designed for retail locations, exhibitions, corporate environments
-    and hospitality venues, HoloBox combines holographic visuals with
-    interactive digital content to create memorable customer experiences.
+          Upload your promotional video and choose a package that fits
+          your business. Start with a free one-time demo, or select
+          a longer campaign to keep your brand visible on HoloBox.
+          All content is reviewed before publication.
         </p>
 
         <div className="mt-8 grid sm:grid-cols-2 gap-3 text-sm text-slate-700">
-          <div>✓ Holographic Product Showcase</div>
-          <div>✓ Interactive Digital Content</div>
-          <div>✓ Product Demonstrations</div>
-          <div>✓ Corporate Presentations</div>
-          <div>✓ Events & Exhibitions</div>
-          <div>✓ Interactive Customer Engagement</div>
+          <div>✓ Video Advertising</div>
+          <div>✓ Flexible Campaign Packages</div>
+          <div>✓ 1, 3, 6 & 12-Month Options</div>
+          <div>✓ Free One-Time Demo</div>
+          <div>✓ Simple Video Upload</div>
+          <div>✓ Content Review Before Display</div>
         </div>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-3">
-          <Button href="/hardware" variant="primary">
-            Explore Hardware
+          <Button
+            href="https://hoxxes.app/holobox/upload_form.html"
+            variant="primary"
+          >
+            Start Advertising
           </Button>
 
-          <Button
-  href="https://hoxxes.app/holobox/upload_form.html"
-  variant="outline"
->
-  Upload Content
+          <Button href="/hardware" variant="outline">
+            Explore Hardware
           </Button>
         </div>
       </motion.div>

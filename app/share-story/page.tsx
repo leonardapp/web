@@ -261,7 +261,7 @@ setRating(5);
                 <button
   type="submit"
   disabled={loading}
-  className="w-full rounded-full bg-black py-3.5 text-white font-medium transition duration-300 hover:bg-slate-800 disabled:opacity-60"
+  className="w-full rounded-full bg-[#88d21a] py-3.5 font-medium text-[#17210c] transition duration-300 hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
 >
   {loading ? "Submitting..." : "Submit My Review"}
 </button>
@@ -367,13 +367,13 @@ setRating(5);
       {/* Button */}
 
       <a
-        href="https://g.page/r/Cd1zEK7ogU0pEBM/review"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center justify-center mt-8 rounded-full border border-slate-300 bg-white px-8 py-3 text-sm font-medium text-slate-900 transition-all duration-300 hover:border-black hover:bg-white hover:shadow-md"
-      >
-        Leave a Google Review
-      </a>
+  href="https://g.page/r/Cd1zEK7ogU0pEBM/review"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-8 inline-flex items-center justify-center rounded-full border border-[#88d21a] bg-white px-8 py-3 text-sm font-medium text-[#26351a] transition-all duration-300 hover:bg-[#88d21a] hover:text-[#17210c] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+>
+  Leave a Google Review
+</a>
 
       {/* Footer */}
 

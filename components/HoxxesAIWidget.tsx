@@ -342,8 +342,8 @@ max-w-[calc(100vw-24px)]
       px-4
       py-2
       rounded-full
-      bg-white
-      text-black
+      bg-[#88d21a]
+text-[#17210c]
       text-xs
       font-medium
       transition
@@ -395,8 +395,8 @@ max-w-[calc(100vw-24px)]
                         text-sm
                         text-white/80
                         transition
-                        hover:border-white/20
-                        hover:bg-white/[0.06]
+                        hover:border-[#88d21a]/50
+hover:bg-[#88d21a]/10
                       "
                     >
                       <MessageSquare className="h-4 w-4 shrink-0" />
@@ -454,8 +454,8 @@ max-w-[calc(100vw-24px)]
                     items-center
                     justify-center
                     rounded-full
-                    bg-white
-                    text-black
+                    bg-[#88d21a]
+text-[#17210c]
                     transition
                     hover:scale-105
                     disabled:opacity-50

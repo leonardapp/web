@@ -64,11 +64,11 @@ export default function CartPage() {
           </p>
 
           <Link
-            href="/hardware"
-            className="mt-10 inline-block rounded-full bg-black px-8 py-4 text-white hover:scale-[1.02] transition"
-          >
-            Browse Hardware
-          </Link>
+  href="/hardware"
+  className="mt-10 inline-block rounded-full bg-[#88d21a] px-8 py-4 font-medium text-[#17210c] transition hover:scale-[1.02] hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+>
+  Browse Hardware
+</Link>
 
         </div>
 
@@ -121,19 +121,15 @@ export default function CartPage() {
                 <div className="flex items-center gap-3 mt-4">
 
   <button
-    onClick={() => {
-
-      const qty = Math.max(1, item.quantity - 1);
-
-      updateQuantity(item.slug, qty);
-
-      setItems(getCart());
-
-    }}
-    className="w-8 h-8 rounded-full border hover:bg-slate-100"
-  >
-    -
-  </button>
+  onClick={() => {
+    const qty = Math.max(1, item.quantity - 1);
+    updateQuantity(item.slug, qty);
+    setItems(getCart());
+  }}
+  className="h-8 w-8 rounded-full border border-[#88d21a] text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c]"
+>
+  -
+</button>
 
   <span className="w-8 text-center font-medium">
 
@@ -142,17 +138,14 @@ export default function CartPage() {
   </span>
 
   <button
-    onClick={() => {
-
-      updateQuantity(item.slug, item.quantity + 1);
-
-      setItems(getCart());
-
-    }}
-    className="w-8 h-8 rounded-full border hover:bg-slate-100"
-  >
-    +
-  </button>
+  onClick={() => {
+    updateQuantity(item.slug, item.quantity + 1);
+    setItems(getCart());
+  }}
+  className="h-8 w-8 rounded-full border border-[#88d21a] text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c]"
+>
+  +
+</button>
 
 </div>
 
@@ -204,18 +197,18 @@ export default function CartPage() {
 {items.length > 0 && (
   <div className="mt-10 flex flex-col sm:flex-row gap-4">
     <Link
-      href="/hardware"
-      className="flex-1 text-center rounded-full border border-slate-300 px-10 py-5 font-medium hover:bg-slate-100 transition"
-    >
-      Continue Shopping
-    </Link>
+  href="/hardware"
+  className="flex-1 rounded-full border border-[#88d21a] px-10 py-5 text-center font-medium text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+>
+  Continue Shopping
+</Link>
 
     <Link
-      href={`/checkout?product=${items[0].slug}&qty=${items[0].quantity}`}
-      className="flex-1 text-center rounded-full bg-black text-white px-10 py-5 hover:scale-[1.02] transition"
-    >
-      Secure Checkout
-    </Link>
+  href={`/checkout?product=${items[0].slug}&qty=${items[0].quantity}`}
+  className="flex-1 rounded-full bg-[#88d21a] px-10 py-5 text-center font-medium text-[#17210c] transition hover:scale-[1.02] hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+>
+  Secure Checkout
+</Link>
   </div>
 )}
 

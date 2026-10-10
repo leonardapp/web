@@ -44,28 +44,22 @@ export default function PricingPage() {
   Transparent pricing for restaurants, retail businesses and
   multi-location operations, with the full HOXXES platform included.
 </p>
-<div className="mt-12 flex flex-col sm:flex-row justify-center gap-3">
-
+<div className="mt-12 flex flex-col justify-center gap-3 sm:flex-row">
   <Link
     href="/request-demo"
-    className="px-6 py-3 rounded-full bg-black text-white 
-            hover:bg-slate-800 transition text-sm font-medium"
-    
+    className="rounded-full bg-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#17210c] shadow-sm transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
   >
     Request Demo
   </Link>
 
   <Link
     href="#pricing-calculator"
-    className="px-6 py-3 rounded-full border border-slate-300 
-            text-slate-700 hover:bg-black hover:text-white hover:border-black 
-            transition text-sm font-medium"
+    className="rounded-full border border-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
   >
     Calculate Pricing
   </Link>
-
 </div>
-      </section>
+</section>
       
       
         {/* PRICING MODELS */}
@@ -206,67 +200,66 @@ Core platform capabilities are included with every subscription.
 >
 
   {/* HEADER */}
-  <div className="text-center mb-12">
-    <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-      Pricing Calculator
-    </div>
-
-    <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">
-      Estimate your infrastructure licensing cost.
-    </h2>
-
-    <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
-      Adjust the number of locations and instantly calculate your annual
-      licensing cost.
-    </p>
+<div className="mb-12 text-center">
+  <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+    Pricing Calculator
   </div>
 
-  {/* CONTENT */}
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+  <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
+    Estimate your infrastructure licensing cost.
+  </h2>
 
-    {/* LEFT */}
-    <div className="space-y-6">
-      <div>
-        <div className="text-sm text-slate-500">
-          Number of locations
-        </div>
+  <p className="mx-auto mt-4 max-w-2xl text-slate-500">
+    Adjust the number of locations and instantly calculate your annual
+    licensing cost.
+  </p>
+</div>
 
-        <div className="text-3xl sm:text-4xl font-semibold mt-2">
-          {locations}
-        </div>
+{/* CONTENT */}
+<div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
+  {/* LEFT */}
+  <div className="space-y-6">
+    <div>
+      <div className="text-sm text-slate-500">
+        Number of locations
       </div>
 
-      <input
-        type="range"
-        min="1"
-        max="20"
-        value={locations}
-        onChange={(e) => setLocations(Number(e.target.value))}
-        className="w-full accent-black"
-      />
-
-      <div className="text-xs text-slate-400">
-        Drag to simulate your annual pricing instantly
+      <div className="mt-2 text-3xl font-semibold sm:text-4xl">
+        {locations}
       </div>
     </div>
 
-    {/* RIGHT CARD */}
-    <motion.div
-      key={locations}
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="border rounded-3xl p-5 sm:p-8 shadow-sm bg-white"
-    >
+    <input
+      type="range"
+      min="1"
+      max="20"
+      value={locations}
+      onChange={(e) => setLocations(Number(e.target.value))}
+      className="w-full accent-[#88d21a]"
+    />
 
-      {isEnterprise && (
-        <div className="text-xs uppercase text-emerald-600 mb-2">
-          Enterprise Volume Pricing Active
-        </div>
-      )}
+    <div className="text-xs text-slate-400">
+      Drag to simulate your annual pricing instantly
+    </div>
+  </div>
 
-      <div className="text-xs uppercase tracking-widest text-slate-400">
-        Pricing Tier
+  {/* RIGHT CARD */}
+  <motion.div
+    key={locations}
+    initial={{ opacity: 0, y: 12 }}
+    animate={{ opacity: 1, y: 0 }}
+    className="rounded-3xl border bg-white p-5 shadow-sm sm:p-8"
+  >
+    {isEnterprise && (
+      <div className="mb-2 text-xs uppercase text-emerald-600">
+        Enterprise Volume Pricing Active
       </div>
+    )}
+
+    <div className="text-xs uppercase tracking-widest text-slate-400">
+      Pricing Tier
+    </div>
+ 
 
       <div className="mt-3 text-3xl sm:text-4xl font-semibold">
         €{price}
@@ -302,17 +295,17 @@ Core platform capabilities are included with every subscription.
 </ul>
 
       <Link
-        href="/request-demo"
-        className="mt-6 w-full block text-center bg-black text-white py-3 rounded-full hover:bg-slate-800 transition"
-      >
-        Start Deployment
-      </Link>
+  href="/request-demo"
+  className="mt-6 block w-full rounded-full bg-[#88d21a] py-3 text-center font-medium text-[#17210c] shadow-sm transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+>
+  Start Deployment
+</Link>
 
-      <p className="text-xs text-slate-400 text-center mt-3">
-        VAT applies depending on region
-      </p>
+<p className="mt-3 text-center text-xs text-slate-400">
+  VAT applies depending on region
+</p>
 
-    </motion.div>
+</motion.div>
 
   </div>
 
@@ -415,11 +408,11 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
 </div>
 
             <Link
-              href="/contact-sales"
-              className="mt-5 w-full block text-center bg-black text-white py-2 rounded-full hover:bg-slate-800 transition"
-            >
-              Activate
-            </Link>
+  href="/contact-sales"
+  className="mt-5 block w-full rounded-full bg-[#88d21a] py-2 text-center font-medium text-[#17210c] transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+>
+  Activate
+</Link>
           </div>
 
           {/* TOKEN */}
@@ -437,11 +430,11 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
             </div>
 
             <Link
-              href="/contact-sales"
-              className="mt-5 w-full block text-center bg-black text-white py-2 rounded-full hover:bg-slate-800 transition"
-            >
-              Request Setup
-            </Link>
+  href="/contact-sales"
+  className="mt-5 block w-full rounded-full bg-[#88d21a] py-2 text-center font-medium text-[#17210c] transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+>
+  Request Setup
+</Link>
           </div>
           
         </div>
@@ -460,23 +453,21 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
 modern hospitality and retail operations.
 </p>
 
-  <div className="mt-8 flex justify-center items-center gap-3 flex-wrap">
+ <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+  <Link
+    href="/request-demo"
+    className="inline-flex w-auto items-center justify-center rounded-full bg-[#88d21a] px-5 py-2 text-sm font-medium text-[#17210c] transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Request Demo
+  </Link>
 
-    <Link
-      href="/request-demo"
-      className="inline-flex w-auto items-center justify-center px-5 py-2 rounded-full bg-black text-white text-sm font-medium hover:bg-slate-800 transition"
-    >
-      Request Demo
-    </Link>
-
-    <Link
-      href="/contact-sales"
-      className="inline-flex w-auto items-center justify-center px-5 py-2 rounded-full border border-slate-300 text-sm font-medium hover:bg-black hover:text-white transition"
-    >
-      Contact Sales
-    </Link>
-
-  </div>
+  <Link
+    href="/contact-sales"
+    className="inline-flex w-auto items-center justify-center rounded-full border border-[#88d21a] px-5 py-2 text-sm font-medium text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Contact Sales
+  </Link>
+</div>
 
 </section>
     

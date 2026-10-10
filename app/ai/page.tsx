@@ -126,12 +126,12 @@ export default function AIPage() {
         />
 
         <button
-          onClick={sendMessage}
-          disabled={loading}
-          className="bg-black text-white px-5 py-3 rounded-xl text-sm hover:opacity-90 disabled:opacity-50"
-        >
-          Send
-        </button>
+  onClick={sendMessage}
+  disabled={loading || !input.trim()}
+  className="rounded-xl bg-[#88d21a] px-5 py-3 text-sm font-medium text-[#17210c] transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+>
+  Send
+</button>
       </div>
     </div>
   );

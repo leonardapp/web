@@ -32,24 +32,19 @@ const stories = [
 ];
 
 export default function CustomerSuccess() {
-
   const [current, setCurrent] = useState(0);
+
   return (
     <section className="pt-8 pb-20">
-      <div className="max-w-6xl mx-auto px-6">
-
+      <div className="mx-auto max-w-6xl px-6">
         {/* Desktop */}
-
-        <div className="hidden md:grid grid-cols-3 gap-4">
-
+        <div className="hidden grid-cols-3 gap-4 md:grid">
           {stories.slice(0, 3).map((story) => (
-
             <div
               key={story.id}
               className="rounded-3xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:border-emerald-500 hover:shadow-md"
             >
-
-              <div className="flex gap-1 mb-4">
+              <div className="mb-4 flex gap-1">
                 {[...Array(story.rating)].map((_, i) => (
                   <Star
                     key={i}
@@ -59,36 +54,27 @@ export default function CustomerSuccess() {
                 ))}
               </div>
 
-              <p className="text-sm leading-7 text-slate-600 text-center md:text-left">
+              <p className="text-center text-sm leading-7 text-slate-600 md:text-left">
                 "{story.story}"
               </p>
 
               <div className="mt-6 border-t border-slate-200 pt-4 text-center md:text-left">
+                <h3 className="font-medium text-slate-900">
+                  {story.company}
+                </h3>
 
-  <h3 className="font-medium text-slate-900">
-    {story.company}
-  </h3>
-
-  <p className="mt-1 text-sm text-slate-500">
-    {story.owner}
-  </p>
-
-</div>
-
+                <p className="mt-1 text-sm text-slate-500">
+                  {story.owner}
+                </p>
+              </div>
             </div>
-
           ))}
-
         </div>
 
         {/* Mobile */}
-
-        <div className="mt-4 md:hidden flex justify-center px-6">
-
+        <div className="mt-4 flex justify-center px-6 md:hidden">
           <div className="w-full max-w-[320px] rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-
-            <div className="flex gap-1 mb-5">
-
+            <div className="mb-5 flex gap-1">
               {[...Array(stories[current].rating)].map((_, i) => (
                 <Star
                   key={i}
@@ -96,77 +82,67 @@ export default function CustomerSuccess() {
                   className="fill-amber-400 text-amber-400"
                 />
               ))}
-
             </div>
 
             <p className="text-[15px] leading-7 text-slate-600">
               {stories[current].story}
             </p>
 
-            <div className="4 border-t border-slate-200 pt-4">
-
-              <h3 className="font-medium">
+            <div className="mt-6 border-t border-slate-200 pt-4">
+              <h3 className="font-medium text-slate-900">
                 {stories[current].company}
               </h3>
 
               <p className="mt-1 text-sm text-slate-500">
                 {stories[current].owner}
               </p>
-
             </div>
-
           </div>
-
         </div>
+
+        {/* Mobile Navigation Dots */}
         <div className="mt-5 flex justify-center gap-2 md:hidden">
-
-  {stories.map((_, index) => (
-
-    <button
-      key={index}
-      onClick={() => setCurrent(index)}
-      aria-label={`Story ${index + 1}`}
-      className={`h-2 rounded-full transition-all duration-300 ${
-  current === index
-    ? "w-6 bg-emerald-600"
-    : "w-2 bg-slate-300 hover:bg-emerald-300"
-}`}
-    />
-
-  ))}
-
-</div>
+          {stories.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrent(index)}
+              aria-label={`Story ${index + 1}`}
+              aria-pressed={current === index}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                current === index
+                  ? "w-6 bg-emerald-600"
+                  : "w-2 bg-slate-300 hover:bg-emerald-300"
+              }`}
+            />
+          ))}
+        </div>
 
         {/* CTA */}
-
         <div className="mt-12 text-center">
-
           <h3 className="text-xl font-medium">
             Share your experience
           </h3>
 
-          <p className="mt-3 max-w-xl mx-auto text-slate-500">
+          <p className="mx-auto mt-3 max-w-xl text-slate-500">
             Has HOXXES helped your business? We'd love to hear your story.
           </p>
 
           <Link
-  href="/share-story"
-  className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 mt-8 rounded-full bg-black px-7 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-slate-800 hover:gap-3"
->
-  Share Your Story
+            href="/share-story"
+            className="group mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#88d21a] px-7 py-3 text-sm font-medium text-[#17210c] shadow-sm transition-all duration-300 hover:gap-3 hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2 sm:w-auto"
+          >
+            Share Your Story
 
-  <ArrowRight
-    size={16}
-    className="transition-transform duration-300 group-hover:translate-x-1"
-  />
-</Link>
+            <ArrowRight
+              size={16}
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            />
+          </Link>
 
           <p className="mt-4 text-xs text-slate-400">
             Every story is reviewed before publication.
           </p>
-
         </div>
-
       </div>
     </section>
   );

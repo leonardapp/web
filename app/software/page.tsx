@@ -31,26 +31,21 @@ centralized product synchronization and menu management into a single operating 
 </p>
 
         {/* CTA */}
-        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
-                   
-          <Link
-            href="/request-demo"
-            className="px-6 py-3 rounded-full bg-black text-white 
-            hover:bg-slate-800 transition text-sm font-medium"
-          >
-            Request Demo
-          </Link>
+        <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+  <Link
+    href="/request-demo"
+    className="rounded-full bg-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#17210c] shadow-sm transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Request Demo
+  </Link>
 
-          <Link
-            href="/hardware"
-            className="px-6 py-3 rounded-full border border-slate-300 
-            text-slate-700 hover:bg-black hover:text-white hover:border-black 
-            transition text-sm font-medium"
-          >
-            Explore Hardware
-          </Link>
-
-        </div>
+  <Link
+    href="/hardware"
+    className="rounded-full border border-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Explore Hardware
+  </Link>
+</div>
 
         
         </section> 
@@ -111,20 +106,21 @@ the login experience with your company logo.
   <Link
     href="/hardware"
     className="
-w-full sm:w-auto
-max-w-md
-px-6 py-3
-rounded-full
-border border-slate-300
-text-slate-700
-text-sm
-font-medium
-text-center
-hover:bg-black
-hover:text-white
-hover:border-black
-transition
-"
+      w-full sm:w-auto
+      max-w-md
+      rounded-full
+      border border-[#88d21a]
+      px-6 py-3
+      text-center text-sm font-medium
+      text-[#26351a]
+      transition
+      hover:bg-[#88d21a]
+      hover:text-[#17210c]
+      focus-visible:outline-none
+      focus-visible:ring-2
+      focus-visible:ring-[#88d21a]
+      focus-visible:ring-offset-2
+    "
   >
     Explore Compatible Hardware
   </Link>
@@ -432,20 +428,21 @@ with your own branding and promotional content.
   <Link
     href="/hardware"
     className="
-w-full sm:w-auto
-max-w-md
-px-6 py-3
-rounded-full
-border border-slate-300
-text-slate-700
-text-sm
-font-medium
-text-center
-hover:bg-black
-hover:text-white
-hover:border-black
-transition
-"
+      w-full sm:w-auto
+      max-w-md
+      rounded-full
+      border border-[#88d21a]
+      px-6 py-3
+      text-center text-sm font-medium
+      text-[#26351a]
+      transition
+      hover:bg-[#88d21a]
+      hover:text-[#17210c]
+      focus-visible:outline-none
+      focus-visible:ring-2
+      focus-visible:ring-[#88d21a]
+      focus-visible:ring-offset-2
+    "
   >
     Explore Compatible Hardware
   </Link>
@@ -496,53 +493,55 @@ transition
   <div>✓ Kitchen Sync</div>
   <div>✓ Mobile Ready</div>
     </div>
-    <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
+    <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
   <a
     href="https://order.hoxxes.com/store/4cbb7eb4-5ddc-4add-a203-fc535dc4686a"
     target="_blank"
     rel="noopener noreferrer"
     className="
-      px-6 py-3
+      inline-flex justify-center
       rounded-full
-      bg-black
-      text-white
-      text-sm
-      font-medium
-      text-center
-      justify-center
-      inline-flex
-      hover:bg-slate-800
+      bg-[#88d21a]
+      px-6 py-3
+      text-center text-sm font-medium
+      text-[#17210c]
+      shadow-sm
       transition
+      hover:bg-[#76b915]
+      focus-visible:outline-none
+      focus-visible:ring-2
+      focus-visible:ring-[#88d21a]
+      focus-visible:ring-offset-2
     "
   >
     View Live Store
   </a>
 
   <a
-  href="https://miniprogram.hoxxes.com/app/17420/4cbb7eb4-5ddc-4add-a203-fc535dc4686a"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="
-    px-6 py-3
-    rounded-full
-    border border-slate-300
-    text-slate-700
-    text-sm
-    font-medium
-    text-center
-    justify-center
-    inline-flex
-    hover:bg-black
-    hover:text-white
-    hover:border-black
-    transition
-  "
->
-  Open Membership App
-</a>
+    href="https://miniprogram.hoxxes.com/app/17420/4cbb7eb4-5ddc-4add-a203-fc535dc4686a"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      inline-flex justify-center
+      rounded-full
+      border border-[#88d21a]
+      px-6 py-3
+      text-center text-sm font-medium
+      text-[#26351a]
+      transition
+      hover:bg-[#88d21a]
+      hover:text-[#17210c]
+      focus-visible:outline-none
+      focus-visible:ring-2
+      focus-visible:ring-[#88d21a]
+      focus-visible:ring-offset-2
+    "
+  >
+    Open Membership App
+  </a>
 </div>
 
-  </div>
+</div>
 </section>
 
 {/* KDS */}
@@ -848,37 +847,28 @@ transition
           Enterprise-grade infrastructure for scalable hospitality systems.
         </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
-          
-           <Link
-            href="/request-demo"
-            className="px-6 py-3 rounded-full bg-black text-white 
-            hover:bg-slate-800 transition text-sm font-medium"
-          >
-            Request Demo
-          </Link>
+        <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+  <Link
+    href="/request-demo"
+    className="rounded-full bg-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#17210c] shadow-sm transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Request Demo
+  </Link>
 
-          <Link
-            href="/hardware"
-            className="px-6 py-3 rounded-full border border-slate-300 
-            text-slate-700 hover:bg-black hover:text-white hover:border-black 
-            transition text-sm font-medium"
-          >
-            Explore Hardware
-          </Link>
+  <Link
+    href="/hardware"
+    className="rounded-full border border-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Explore Hardware
+  </Link>
 
-          <Link
-            href="/pricing"
-            className="px-6 py-3 rounded-full border border-slate-300 
-            text-slate-700 hover:bg-black hover:text-white hover:border-black 
-            transition text-sm font-medium"
-          >
-            Pricing
-          </Link>
-          
-
-        </div>
-
+  <Link
+    href="/pricing"
+    className="rounded-full border border-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Pricing
+  </Link>
+</div>
       </section>
       
 

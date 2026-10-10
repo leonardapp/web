@@ -108,21 +108,21 @@ export default function HardwarePage() {
             to work as one connected hardware ecosystem with HOXXES.
           </p>
 
-          <div className="mt-10 flex justify-center gap-3">
-            <Link
-              href="/request-demo"
-              className="px-6 py-3 rounded-full bg-white text-black font-medium hover:scale-105 transition"
-            >
-              Request Demo
-            </Link>
+          <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+  <Link
+    href="/request-demo"
+    className="rounded-full bg-[#88d21a] px-6 py-3 text-center font-medium text-[#17210c] shadow-sm transition hover:scale-105 hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Request Demo
+  </Link>
 
-            <Link
-              href="/contact-sales"
-              className="px-6 py-3 rounded-full border border-white/30 text-white hover:bg-white/10 transition"
-            >
-              Contact Sales
-            </Link>
-          </div>
+  <Link
+    href="/contact-sales"
+    className="rounded-full border border-[#88d21a] px-6 py-3 text-center text-white transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Contact Sales
+  </Link>
+</div>
 
           {/* SCROLL INDICATOR */}
           <a
@@ -259,14 +259,14 @@ export default function HardwarePage() {
 
   {/* VIEW DIMENSIONS */}
   <button
-    onClick={() => setOpenDimensions(item.slug)}
-    className="group inline-flex items-center gap-2 rounded-full border border-black/15 bg-black/[0.02] px-4 py-2 text-xs font-medium tracking-[0.08em] text-black transition-all duration-300 hover:border-black/40 hover:bg-black hover:text-white"
-  >
-    VIEW DIMENSIONS
-    <span className="transition-transform duration-300 group-hover:translate-x-0.5">
-      ↗
-    </span>
-  </button>
+  onClick={() => setOpenDimensions(item.slug)}
+  className="group inline-flex items-center gap-2 rounded-full border border-[#88d21a] bg-white px-4 py-2 text-xs font-medium tracking-[0.08em] text-[#26351a] transition-all duration-300 hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+>
+  VIEW DIMENSIONS
+  <span className="transition-transform duration-300 group-hover:translate-x-0.5">
+    ↗
+  </span>
+</button>
 </div>
 
               {/* EXPAND */}
@@ -288,19 +288,19 @@ export default function HardwarePage() {
               <div className="mt-6 flex gap-3 flex-wrap">
                 {item.slug !== "holo" && (
                   <Link
-                    href={`/hardware/${item.slug}`}
-                    className="px-5 py-2 rounded-full bg-black text-white text-sm hover:scale-105 transition"
-                  >
-                    Buy Now
-                  </Link>
+  href={`/hardware/${item.slug}`}
+  className="rounded-full bg-[#88d21a] px-5 py-2 text-sm font-medium text-[#17210c] transition hover:scale-105 hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+>
+  Buy Now
+</Link>
                 )}
 
                 <Link
-                  href="/contact-sales"
-                  className="px-5 py-2 rounded-full border border-black/20 text-sm hover:bg-black/5 transition"
-                >
-                  Request Quote
-                </Link>
+  href="/contact-sales"
+  className="rounded-full border border-[#88d21a] px-5 py-2 text-sm font-medium text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+>
+  Request Quote
+</Link>
               </div>
             </div>
 
@@ -366,21 +366,21 @@ export default function HardwarePage() {
             SaaS platform.
           </p>
 
-          <div className="mt-10 flex justify-center gap-3">
-            <Link
-              href="/request-demo"
-              className="px-6 py-3 rounded-full bg-white text-black hover:scale-105 transition"
-            >
-              Request Demo
-            </Link>
+          <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+  <Link
+    href="/request-demo"
+    className="rounded-full bg-[#88d21a] px-6 py-3 text-center font-medium text-[#17210c] transition hover:scale-105 hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Request Demo
+  </Link>
 
-            <Link
-              href="/contact-sales"
-              className="px-6 py-3 rounded-full border border-white/30 hover:bg-white/10 transition"
-            >
-              Contact Sales
-            </Link>
-          </div>
+  <Link
+    href="/contact-sales"
+    className="rounded-full border border-[#88d21a] px-6 py-3 text-center text-white transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Contact Sales
+  </Link>
+</div>
         </motion.div>
       </section>
     </div>

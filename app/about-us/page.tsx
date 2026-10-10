@@ -33,25 +33,24 @@ export default function AboutPage() {
   businesses and multi-location operations.
 </p>
 
-<div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
-
-<Link
+<div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+  <Link
     href="/request-demo"
-    className="px-6 py-3 rounded-full bg-black text-white text-sm font-medium hover:bg-slate-800 transition"
+    className="rounded-full bg-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#17210c] shadow-sm transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
   >
     Request Demo
   </Link>
 
   <Link
     href="/software"
-    className="px-6 py-3 rounded-full border border-slate-300 text-sm font-medium hover:bg-black hover:text-white transition"
+    className="rounded-full border border-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
   >
     Explore Platform
   </Link>
 
   <Link
     href="/hardware"
-    className="px-6 py-3 rounded-full border border-slate-300 text-sm font-medium hover:bg-black hover:text-white transition"
+    className="rounded-full border border-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
   >
     Explore Hardware
   </Link>
@@ -271,23 +270,23 @@ workforce management, inventory and analytics into a unified platform.
   One platform powering ordering, payments and operations at scale.
 </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
-            <Link
-              href="/contact-sales"
-              className="px-6 py-3 rounded-full bg-white text-black font-medium hover:scale-105 transition"
-            >
-              Contact Sales
-            </Link>
+         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+  <Link
+    href="/contact-sales"
+    className="rounded-full bg-[#88d21a] px-6 py-3 text-center font-medium text-[#17210c] transition hover:scale-105 hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Contact Sales
+  </Link>
 
-            <Link
-              href="/request-demo"
-              className="px-6 py-3 rounded-full border border-white/30 hover:bg-white/10 transition"
-            >
-              Request Demo
-            </Link>
-          </div>
-        </div>
-      </section>
+  <Link
+    href="/request-demo"
+    className="rounded-full border border-[#88d21a] px-6 py-3 text-center text-white transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Request Demo
+  </Link>
+</div>
+</div>
+</section>
 
     
     </div>

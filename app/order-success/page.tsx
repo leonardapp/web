@@ -78,23 +78,21 @@ export default function OrderSuccessPage() {
 
         </div>
 
-        <div className="mt-10 flex justify-center gap-4 flex-wrap">
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
+  <Link
+    href="/hardware"
+    className="rounded-full border border-[#88d21a] px-8 py-4 text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Continue Shopping
+  </Link>
 
-          <Link
-            href="/hardware"
-            className="rounded-full border border-slate-300 px-8 py-4 hover:bg-slate-100 transition"
-          >
-            Continue Shopping
-          </Link>
-
-          <Link
-            href="/contact-sales"
-            className="rounded-full bg-black px-8 py-4 text-white hover:opacity-90 transition"
-          >
-            Contact Sales
-          </Link>
-
-        </div>
+  <Link
+    href="/contact-sales"
+    className="rounded-full bg-[#88d21a] px-8 py-4 font-medium text-[#17210c] transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Contact Sales
+  </Link>
+</div>
 
       </div>
 

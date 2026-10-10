@@ -214,12 +214,12 @@ export default function RequestDemoPage() {
 )}
 
         <button
-          disabled={loading}
-          type="submit"
-          className="w-full px-6 py-3 bg-black text-white rounded-xl font-medium hover:bg-slate-800 transition disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {loading ? "Sending..." : "Request Demo & 30 Days Free"}
-        </button>
+  disabled={loading}
+  type="submit"
+  className="w-full rounded-xl bg-[#88d21a] px-6 py-3 font-medium text-[#17210c] transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+>
+  {loading ? "Sending..." : "Request Demo & 30 Days Free"}
+</button>
 
       </form>
 
@@ -231,18 +231,18 @@ export default function RequestDemoPage() {
         <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
 
           <a
-            className="px-5 py-2 border border-slate-200 rounded-full text-black hover:bg-black hover:text-white transition"
-            href="mailto:info@hoxxes.com"
-          >
-            Contact Sales
-          </a>
+  className="rounded-full border border-[#88d21a] px-5 py-2 text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  href="mailto:info@hoxxes.com"
+>
+  Contact Sales
+</a>
 
-          <a
-            className="px-5 py-2 border border-slate-200 rounded-full text-black hover:bg-black hover:text-white transition"
-            href="tel:+38348106060"
-          >
-            Call Sales
-          </a>
+<a
+  className="rounded-full border border-[#88d21a] px-5 py-2 text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  href="tel:+38348106060"
+>
+  Call Sales
+</a>
 
         </div>
 

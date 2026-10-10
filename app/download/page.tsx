@@ -181,21 +181,21 @@ export default function DownloadCenter() {
             ensuring zero friction deployment across your ecosystem.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
-            <Link
-              href="/software"
-              className="px-6 py-3 rounded-full bg-white text-black font-medium hover:scale-105 transition"
-            >
-              Explore Software
-            </Link>
+         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+  <Link
+    href="/software"
+    className="rounded-full bg-[#88d21a] px-6 py-3 text-center font-medium text-[#17210c] transition hover:scale-105 hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Explore Software
+  </Link>
 
-            <Link
-              href="/hardware"
-              className="px-6 py-3 rounded-full border border-white/30 hover:bg-white/10 transition"
-            >
-              View Hardware
-            </Link>
-          </div>
+  <Link
+    href="/hardware"
+    className="rounded-full border border-[#88d21a] px-6 py-3 text-center text-white transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    View Hardware
+  </Link>
+</div>
         </div>
       </section>
     </div>

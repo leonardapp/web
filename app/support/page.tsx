@@ -57,23 +57,23 @@ export default function SupportPage() {
             documentation, ticketing, and engineering access in one system.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
-            <Link
-              href="/docs"
-              className="px-6 py-3 rounded-full border border-slate-300 text-sm font-medium hover:bg-black hover:text-white transition"
-            >
-              Open Docs
-            </Link>
+         <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+  <Link
+    href="/docs"
+    className="rounded-full border border-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Open Docs
+  </Link>
 
-            <Link
-              href="/ticket"
-              className="px-6 py-3 rounded-full bg-black text-white text-sm font-medium hover:bg-slate-800 transition"
-            >
-              Create Ticket
-            </Link>
-          </div>
-        </motion.div>
-      </section>
+  <Link
+    href="/ticket"
+    className="rounded-full bg-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#17210c] shadow-sm transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Create Ticket
+  </Link>
+</div>
+</motion.div>
+</section>
 
       {/* SUPPORT CARDS */}
       <section className="relative z-10 max-w-6xl mx-auto px-6 pb-24 sm:pb-32">
@@ -101,11 +101,11 @@ export default function SupportPage() {
                 </p>
 
                 <Link
-                  href={item.href}
-                  className="mt-8 inline-flex items-center justify-center px-5 py-3 rounded-full bg-black text-white text-sm font-medium hover:bg-slate-800 transition"
-                >
-                  {item.cta}
-                </Link>
+  href={item.href}
+  className="mt-8 inline-flex items-center justify-center rounded-full bg-[#88d21a] px-5 py-3 text-sm font-medium text-[#17210c] transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+>
+  {item.cta}
+</Link>
               </div>
             </motion.div>
           ))}
@@ -184,21 +184,21 @@ export default function SupportPage() {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
-              <Link
-                href="/contact-sales"
-                className="px-6 py-3 rounded-full border border-slate-300 text-sm font-medium hover:bg-black hover:text-white transition"
-              >
-                Contact Sales
-              </Link>
+            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+  <Link
+    href="/contact-sales"
+    className="rounded-full border border-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Contact Sales
+  </Link>
 
-              <Link
-                href="/ticket"
-                className="px-6 py-3 rounded-full bg-black text-white text-sm font-medium hover:bg-slate-800 transition"
-              >
-                Open Ticket
-              </Link>
-            </div>
+  <Link
+    href="/ticket"
+    className="rounded-full bg-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#17210c] transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Open Ticket
+  </Link>
+</div>
           </div>
         </div>
      
@@ -213,26 +213,21 @@ export default function SupportPage() {
     Access documentation, create tickets or contact our team directly.
   </p>
 
-  <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
+  <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+  <Link
+    href="/docs"
+    className="rounded-full border border-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Open Docs
+  </Link>
 
-    <Link
-      href="/docs"
-      className="px-6 py-3 rounded-full border border-slate-300
-      text-slate-700 hover:bg-black hover:text-white hover:border-black
-      transition text-sm font-medium"
-    >
-      Open Docs
-    </Link>
-
-    <Link
-      href="/ticket"
-      className="px-6 py-3 rounded-full bg-black text-white
-      hover:bg-slate-800 transition text-sm font-medium"
-    >
-      Create Ticket
-    </Link>
-
-  </div>
+  <Link
+    href="/ticket"
+    className="rounded-full bg-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#17210c] transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    Create Ticket
+  </Link>
+</div>
 
 </section>
 
