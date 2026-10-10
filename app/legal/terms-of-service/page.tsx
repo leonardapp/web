@@ -43,7 +43,7 @@ export default function TermsOfServicePage() {
           </h2>
 
           <p>
-            Hoxxes SHPK provides software solutions for restaurant,
+            Hoxxes L.L.C. provides software solutions for restaurant,
             hospitality, retail, ordering, inventory management,
             analytics, and related business operations.
           </p>
@@ -272,7 +272,7 @@ export default function TermsOfServicePage() {
             15. Contact Information
           </h2>
 
-          <p>Hoxxes SHPK</p>
+          <p>Hoxxes L.L.C.</p>
           <p>Prishtina, Kosovo</p>
           <p>Email: info@hoxxes.com</p>
         </section>

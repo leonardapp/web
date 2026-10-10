@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
         <section>
           <h2 className="text-2xl font-semibold mb-3">1. Introduction</h2>
           <p>
-            Hoxxes SHPK ("Hoxxes", "we", "our", or "us") respects your privacy
+            Hoxxes L.L.C. ("Hoxxes", "we", "our", or "us") respects your privacy
             and is committed to protecting your personal data.
           </p>
           <p className="mt-3">
@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
             2. Company Information
           </h2>
 
-          <p>Hoxxes SHPK</p>
+          <p>Hoxxes L.L.C.</p>
           <p>Prishtina, Kosovo</p>
           <p>Email: info@hoxxes.com</p>
         </section>

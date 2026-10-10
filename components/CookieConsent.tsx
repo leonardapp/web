@@ -60,7 +60,7 @@ export default function CookieConsent() {
 
 <button
   onClick={acceptCookies}
-  className="w-full sm:w-auto px-4 py-2 rounded-lg bg-black text-white hover:opacity-90"
+  className="w-full sm:w-auto rounded-lg bg-[#88d21a] px-4 py-2 font-medium text-[#17210c] transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
 >
   Accept Cookies
 </button>
