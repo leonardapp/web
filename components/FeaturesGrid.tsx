@@ -1,6 +1,5 @@
 
 "use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -14,7 +13,7 @@ const features = [
   {
     title: "Point of Sale",
     description:
-      "Manage sales, orders and daily operations from one platform.",
+      "Manage sales and orders online on Windows, or online and offline on Android.",
     image: "https://hoxxes.app/images/pos.png",
     href: "/software",
   },
@@ -41,11 +40,11 @@ const features = [
   },
   {
     title: "QR Ordering",
-    description:
-      "Let customers browse your menu and order directly from their phones.",
-    image: "https://hoxxes.app/images/qr.png",
-    href: "/software",
-  },
+description:
+"Let customers scan a QR code at their Table, and order directly from their phones.",
+image: "https://hoxxes.app/images/qr2.png",
+href: "/software",
+},
   {
     title: "Delivery Integrations",
     description:
@@ -74,6 +73,13 @@ const features = [
     image: "https://hoxxes.app/images/hardware2.png",
     href: "/hardware",
   },
+  {
+title: "Payment Integration",
+description:
+"Connect supported payment terminals to your Kiosk for seamless payments.",
+image: "https://hoxxes.app/images/payment.png",
+href: "/software",
+},
 ];
 
 const BRAND_GREEN = "#88D21A";
@@ -92,6 +98,10 @@ export default function HomeFeatures() {
   const touchStartX = useRef<number | null>(null);
   const touchStartY = useRef<number | null>(null);
   const swipeHandled = useRef(false);
+
+  // Autoplay timing.
+  const autoplayResumeAt = useRef(Date.now() + 4000);
+  const nextAutoplayAt = useRef(Date.now() + 4000);
 
   const goToSlide = useCallback((index: number) => {
     const nextIndex =
@@ -123,13 +133,25 @@ export default function HomeFeatures() {
     };
   }, []);
 
-  // Automatically advance slides.
+  // Automatically advance slides, respecting the pause after a swipe.
   useEffect(() => {
     if (paused) return;
 
+    // Preserve the normal 4-second wait when autoplay is resumed manually.
+    nextAutoplayAt.current = Math.max(
+      nextAutoplayAt.current,
+      Date.now() + 4000
+    );
+
     intervalRef.current = setInterval(() => {
+      const now = Date.now();
+
+      if (now < autoplayResumeAt.current) return;
+      if (now < nextAutoplayAt.current) return;
+
       nextSlide();
-    }, 4000);
+      nextAutoplayAt.current = Date.now() + 4000;
+    }, 250);
 
     return () => {
       if (intervalRef.current) {
@@ -185,6 +207,13 @@ export default function HomeFeatures() {
 
     if (isHorizontalSwipe) {
       swipeHandled.current = true;
+
+      // Wait 5 seconds after the latest swipe,
+      // then keep the normal 4-second interval.
+      const resumeAt = Date.now() + 5000;
+
+      autoplayResumeAt.current = resumeAt;
+      nextAutoplayAt.current = resumeAt + 4000;
 
       if (deltaX < 0) {
         nextSlide();

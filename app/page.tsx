@@ -59,102 +59,98 @@ export default function HomePage() {
       <Header />
       
 
-      {/* HERO */}
-      <section id="hero"
-        ref={ref}
-        className="max-w-5xl mx-auto text-center px-6 sm:px-8 lg:px-6 pt-28 sm:pt-32 lg:pt-36 pb-36 sm:pb-40"
-      >
-        
-        <motion.div
-          initial="hidden"
-          animate="show"
-          transition={{ staggerChildren: 0.08 }}
-        >
-                   <motion.div
-            variants={fadeUp}
-            className="text-[10px] sm:text-xs tracking-[0.35em] text-slate-400 uppercase"
-            
-          >
-            Restaurant & Retail Operating System
-          </motion.div>
+{/* HERO */}
+<section
+  id="hero"
+  ref={ref}
+  className="relative isolate w-full overflow-hidden bg-transparent text-center px-6 sm:px-8 lg:px-6 pt-28 sm:pt-32 lg:pt-36 pb-36 sm:pb-40"
+>
+  {/* BACKGROUND VIDEO */}
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="metadata"
+    aria-hidden="true"
+    tabIndex={-1}
+    className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40"
+  >
+    <source src="https://hoxxes.app/images/hero-video.mp4" type="video/mp4" />
+  </video>
 
-          <motion.h1
-            variants={fadeUp}
-            className="
-              mt-6
-              text-3xl
-              sm:text-4xl
-              md:text-5xl
-              lg:text-6xl
-              font-semibold
-              leading-[1.05]
-              tracking-tight
-            "
-          >
-            The Operating System
-            <span className="block text-slate-500 mt-2">
-              for Restaurants & Retail
-            </span>
-          </motion.h1>
+  {/* SOFT WHITE OVERLAY */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/55 via-white/60 to-white/95"
+  />
 
-          <motion.p
-            variants={fadeUp}
-            className="
-              mt-6
-              text-sm
-              sm:text-base
-              md:text-lg
-              text-slate-500
-              max-w-2xl
-              mx-auto
-              leading-relaxed
-            "
-          >
-            One ecosystem. Software. Hardware. Intelligence.
+  {/* HERO CONTENT */}
+  <motion.div
+    className="relative z-10 mx-auto max-w-5xl"
+    initial="hidden"
+    animate="show"
+    transition={{ staggerChildren: 0.08 }}
+  >
+    <motion.div
+      variants={fadeUp}
+      className="text-[10px] sm:text-xs tracking-[0.35em] text-slate-400 uppercase"
+    >
+      Restaurant & Retail Operating System
+    </motion.div>
 
+    <motion.h1
+      variants={fadeUp}
+      className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-tight"
+    >
+      The Operating System
+      <span className="block text-slate-500 mt-2">
+        for Restaurants & Retail
+      </span>
+    </motion.h1>
+
+    <motion.p
+      variants={fadeUp}
+      className="mt-6 text-sm sm:text-base md:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed"
+    >
+      One ecosystem. Software. Hardware. Intelligence.
       <br />
-
       POS, Self-Service Kiosk, Kitchen Display System (KDS), QR Ordering,
       Inventory Management and Analytics—all in one Restaurant & Retail
       Operating System.
     </motion.p>
-          
 
-          {/* BUTTONS */}
-         <motion.div
-  variants={fadeUp}
-  className="mt-10 flex flex-col items-center w-full"
->
-  <div className="mb-4 text-center">
-    <div className="text-xs uppercase tracking-[0.3em] text-emerald-600 font-semibold">
-      30 Days Free
-    </div>
+    {/* BUTTONS */}
+    <motion.div
+      variants={fadeUp}
+      className="mt-10 flex flex-col items-center w-full"
+    >
+      <div className="mb-4 text-center">
+        <div className="text-xs uppercase tracking-[0.3em] text-emerald-600 font-semibold">
+          30 Days Free
+        </div>
 
-    <div className="mt-1 text-sm text-slate-500">
-      Full platform access. Hardware sold separately.
-    </div>
-  </div>
+        <div className="mt-1 text-sm text-slate-500">
+          Full platform access. Hardware sold separately.
+        </div>
+      </div>
 
-  <div className="flex flex-col sm:flex-row gap-3 justify-center w-full sm:w-auto">
-    <Button href="/request-demo" variant="primary">
-      Request Demo
-    </Button>
+      <div className="flex flex-col sm:flex-row gap-3 justify-center w-full sm:w-auto">
+        <Button href="/request-demo" variant="primary">
+          Request Demo
+        </Button>
 
-    <Button href="/software" variant="outline">
-      Explore Platform
-    </Button>
-  </div>
-</motion.div>
-          
-          
-        </motion.div>
-        
-      </section>
-      
-      
+        <Button href="/software" variant="outline">
+          Explore Platform
+        </Button>
+      </div>
+    </motion.div>
+    
+  </motion.div>
+</section>     
 
      {/* TRUSTED BY */}
-<section className="pb-4">
+<section className="pt-6 pb-12 sm:pt-8 sm:pb-16">
   <div className="max-w-6xl mx-auto px-6">
 
     <div className="text-center">
