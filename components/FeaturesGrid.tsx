@@ -45,6 +45,13 @@ description:
 image: "https://hoxxes.app/images/qr2.png",
 href: "/software",
 },
+{
+    title: "Kiosk Ordering",
+    description:
+      "Let customers place orders quickly and independently.",
+    image: "https://hoxxes.app/images/kiosk-ordering.png",
+    href: "/software",
+  },
   {
     title: "Delivery Integrations",
     description:
@@ -59,13 +66,7 @@ href: "/software",
     image: "https://hoxxes.app/images/marketing.png",
     href: "/software",
   },
-  {
-    title: "Kiosk Ordering",
-    description:
-      "Let customers place orders quickly and independently.",
-    image: "https://hoxxes.app/images/kiosk-ordering.png",
-    href: "/software",
-  },
+  
   {
     title: "Hardware",
     description:

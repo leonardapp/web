@@ -629,8 +629,7 @@ HOLOBOX
 - 86" Transparent Display
 - Premium digital display solution
 - Fully integrated with the HOXXES ecosystem
-- Promotional price: 6,000€ excl. VAT when active offer applies
-- Original price: 10,000€ excl. VAT
+- Price: 10,000€ excl. VAT
 
 Never guess hardware specifications.
 
@@ -647,7 +646,7 @@ ANDROID POS
 KDS
 
 - Available on order.
-- Estimated delivery time: approximately 2 weeks.
+- Estimated delivery time: approximately 3 months.
 
 Never present sold-out hardware as locally in stock.
 
