@@ -220,6 +220,7 @@ return (
 
                 <input
                   type="radio"
+                  className="accent-[#88d21a] focus:ring-[#88d21a]"
                   checked={payment === "cod"}
                   onChange={() => setPayment("cod")}
                 />
@@ -243,6 +244,7 @@ return (
 
                 <input
                   type="radio"
+                  className="accent-[#88d21a] focus:ring-[#88d21a]"
                   checked={payment === "bank"}
                   onChange={() => setPayment("bank")}
                 />
@@ -445,7 +447,7 @@ return (
                         <button
               onClick={submitOrder}
               disabled={loading}
-              className="mt-8 w-full rounded-full bg-black py-4 text-white transition hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-60"
+              className="mt-8 w-full rounded-full bg-[#88d21a] py-4 font-medium text-[#17210c] transition hover:scale-[1.02] hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
             >
               {loading
                 ? "Submitting..."
@@ -460,7 +462,7 @@ return (
 
             <Link
               href="/hardware"
-              className="mt-6 block text-center text-slate-500 transition hover:text-black"
+              className="mt-6 block text-center text-slate-600 transition hover:text-[#52820f] hover:underline"
             >
               Continue Shopping
             </Link>

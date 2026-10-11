@@ -31,7 +31,7 @@ export const products: Product[] = [
     description: "Space-saving kiosk fully integrated with HOXXES.",
     image: "https://hoxxes.app/images/kiosk.svg",
     price: 1185,
-    stock: 4,
+    stock: 5,
     vat: 18,
     availability: "in-stock",
     leadTime: "3 Months",
@@ -55,7 +55,7 @@ export const products: Product[] = [
     id: 3,
     slug: "kds-display",
     title: "Kitchen Display System",
-    subtitle: 'ALLNET Touch Display 21" (PoE) Android',
+    subtitle: 'Touch Display 21.5" Android',
     description:
       "Recommended Android display for HOXXES Kitchen Display System.",
     image: "https://hoxxes.app/images/kds-allnet.png",
@@ -63,6 +63,6 @@ export const products: Product[] = [
     stock: 0,
     vat: 18,
     availability: "in-stock",
-    leadTime: "Approx. 3 Months",
+    leadTime: "3 Months",
   },
 ];
