@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Header from "@/components/Header";
-
+import IndustriesSection from "@/components/IndustriesSection";
 export default function SoftwarePage() {
  
   return (
@@ -10,25 +10,15 @@ export default function SoftwarePage() {
       
       {/* HEADER */}
       <Header />
+      
+
 
       {/* HERO */}
       <section className="max-w-6xl mx-auto px-6 pt-24 sm:pt-28 lg:pt-32 pb-32 sm:pb-20 text-center">
        <div className="text-[10px] sm:text-xs uppercase tracking-[0.35em] text-slate-400">
-  Restaurant • Retail • Enterprise
+  
 </div>
-
-<h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05]">
-  Not static software
-  <span className="block text-slate-500 mt-2">
-    Built for real-time operations
-  </span>
-</h1>
-
-<p className="mt-6 max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-slate-500 leading-relaxed">
-  Built for restaurants, retail businesses and multi-location operations.
-HOXXES unifies ordering, payments, workforce, inventory, analytics,
-centralized product synchronization and menu management into a single operating system.
-</p>
+<IndustriesSection />
 
         {/* CTA */}
         <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
