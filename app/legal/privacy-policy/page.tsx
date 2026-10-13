@@ -291,7 +291,7 @@ export default function PrivacyPolicyPage() {
             14. Contact Us
           </h2>
 
-          <p>Hoxxes SHPK</p>
+          <p>Hoxxes L.L.C.</p>
           <p>Prishtina, Kosovo</p>
           <p>Email: info@hoxxes.com</p>
         </section>
