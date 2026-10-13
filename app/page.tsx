@@ -757,7 +757,8 @@ export default function HomePage() {
 </section>
 
   
-{/* CORE PLATFORM — BRAND CTA */}
+
+{/* CITY PARTNER — BRAND CTA */}
 <section className="px-4 py-12 sm:px-6 sm:py-16">
   <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[30px] bg-gradient-to-r from-[#88d21a] via-[#70b914] to-[#52820f] px-7 py-10 text-white shadow-xl shadow-[#52820f]/15 sm:px-12 sm:py-14 lg:px-12 lg:py-12">
 
@@ -776,30 +777,30 @@ export default function HomePage() {
       {/* LEFT: HEADLINE */}
       <div className="flex flex-col items-start justify-between gap-8">
         <div>
-          
           <h2 className="max-w-xl text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-[52px]">
-            Your business.
+            Your Network.
             <br />
-            One connected
+            Your City.
             <br />
-            platform.
+            Your Opportunity.
           </h2>
         </div>
 
         <p className="max-w-md text-sm leading-6 text-white/85 sm:text-base">
-          Software and hardware working together to simplify
-          your daily operations.
-        </p>
+  Connect local businesses with Hoxxes.
+  <br />
+  Be the One Who Brings Innovation to Your City.
+</p>
       </div>
 
       {/* RIGHT: BENEFITS + ACTIONS */}
-      <div className="flex flex-col justify-between gap-10">
+      <div className="relative flex flex-col justify-between gap-10">
 
-        <div className="space-y-5">
+        <div className="space-y-5 lg:pr-32 lg:pt-1">
           {[
-            "Everything connected in one place.",
-            "More control over daily operations.",
-            "Built to grow with your business.",
+            "Introduce local businesses to Hoxxes.",
+            "Build relationships in your city.",
+            "Grow through successful partnerships.",
           ].map((item) => (
             <div key={item} className="flex items-start gap-3">
               <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-white/80 text-sm leading-none">
@@ -822,90 +823,85 @@ export default function HomePage() {
           ))}
         </div>
 
-{/* HOXXES PREMIUM SEAL */}
-<div className="pointer-events-none absolute right-5 top-5 z-10 sm:right-9 sm:top-8">
-  <div className="relative flex h-[108px] w-[108px] rotate-6 items-center justify-center rounded-full border-2 border-white/80 bg-[#17210c]/15 shadow-[0_8px_30px_rgba(23,33,12,0.22)] backdrop-blur-sm transition-transform duration-500 sm:h-[132px] sm:w-[132px]">
+        {/* HOXXES PREMIUM SEAL */}
+        <div className="pointer-events-none absolute right-0 top-0 z-10 hidden sm:block lg:right-0 lg:top-0">
+          <div className="relative flex h-[108px] w-[108px] rotate-6 items-center justify-center rounded-full border-2 border-white/80 bg-[#17210c]/15 shadow-[0_8px_30px_rgba(23,33,12,0.22)] backdrop-blur-sm transition-transform duration-500 sm:h-[132px] sm:w-[132px]">
 
-    {/* Outer ring */}
-    <div className="absolute inset-[5px] rounded-full border border-dashed border-white/70" />
+            <div className="absolute inset-[5px] rounded-full border border-dashed border-white/70" />
 
-    {/* Circular text */}
-    <svg
-      viewBox="0 0 120 120"
-      className="absolute inset-0 h-full w-full"
-      aria-hidden="true"
-    >
-      <defs>
-        <path
-          id="hoxxes-seal-circle"
-          d="M 60,60 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0"
-        />
-      </defs>
+            <svg
+              viewBox="0 0 120 120"
+              className="absolute inset-0 h-full w-full"
+              aria-hidden="true"
+            >
+              <defs>
+                <path
+                  id="hoxxes-seal-circle"
+                  d="M 60,60 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0"
+                />
+              </defs>
 
-      <text
-        fill="white"
-        fontSize="8.5"
-        fontWeight="700"
-        letterSpacing="2"
-      >
-        <textPath href="#hoxxes-seal-circle" startOffset="0%">
-          SOFTWARE • HARDWARE • ONE PLATFORM •
-        </textPath>
-      </text>
-    </svg>
+              <text
+                fill="white"
+                fontSize="8.5"
+                fontWeight="700"
+                letterSpacing="2"
+              >
+                <textPath href="#hoxxes-seal-circle" startOffset="0%">
+                  SOFTWARE • HARDWARE • ONE PLATFORM •
+                </textPath>
+              </text>
+            </svg>
 
-    {/* Center mark */}
-    <div className="flex flex-col items-center justify-center text-center">
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="white"
-        strokeWidth="1.8"
-        className="h-7 w-7 sm:h-8 sm:w-8"
-        aria-hidden="true"
-      >
-        <path
-          d="M12 3 19 6v5c0 4.5-2.8 7.8-7 10-4.2-2.2-7-5.5-7-10V6l7-3Z"
-          strokeLinejoin="round"
-        />
-        <path
-          d="m9 12 2 2 4-4"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
+            <div className="flex flex-col items-center justify-center text-center">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                strokeWidth="1.8"
+                className="h-7 w-7 sm:h-8 sm:w-8"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 3 19 6v5c0 4.5-2.8 7.8-7 10-4.2-2.2-7-5.5-7-10V6l7-3Z"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="m9 12 2 2 4-4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
 
-      <span className="mt-1 text-[10px] font-extrabold tracking-[0.16em] text-white sm:text-xs">
-        HOXXES
-      </span>
-    </div>
-  </div>
-</div>
+              <span className="mt-1 text-[10px] font-extrabold tracking-[0.16em] text-white sm:text-xs">
+                HOXXES
+              </span>
+            </div>
+          </div>
+        </div>
 
-        
-{/* BUTTONS */}
-<div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-  <a
-    href="/request-demo"
-    className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white bg-transparent px-6 py-3 text-center text-sm font-medium text-white transition-colors duration-200 hover:bg-white/10"
-  >
-    Request Demo
-  </a>
+        {/* BUTTONS */}
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <a
+            href="/request-demo"
+            className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white bg-transparent px-6 py-3 text-center text-sm font-medium text-white transition-colors duration-200 hover:bg-white/10"
+          >
+            Request Demo
+          </a>
 
-  
-<a
-  href="/pricing"
-  className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white bg-white px-6 py-3 text-center text-sm font-medium text-[#52820f] transition-colors duration-200 hover:bg-[#88d21a] hover:text-[#17210c]"
->
-  Compare Plans
-</a>
-
-</div>
+          <a
+            href="https://hoxxes.app/city-partner/"
+            className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white bg-white px-6 py-3 text-center text-sm font-medium text-[#52820f] transition-colors duration-200 hover:bg-[#88d21a] hover:text-[#17210c]"
+          >
+            Become a City Partner
+          </a>
+        </div>
 
       </div>
     </div>
   </div>
 </section>
+
       
 
 {/* MULTI-LOCATION MANAGEMENT */}

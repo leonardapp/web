@@ -47,7 +47,7 @@ export default function SettingsPage() {
         }}
       />
 
-      <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-emerald-200/30 blur-[160px] rounded-full" />
+      <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#88d21a]/20 blur-[160px] rounded-full" />
 
       {/* HERO */}
       <section className="max-w-4xl mx-auto text-center px-6 py-24">
