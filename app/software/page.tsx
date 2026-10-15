@@ -108,7 +108,7 @@ export default function SoftwarePage() {
 
             {/* KDS floats from the opposite corner to avoid a static, stacked look. */}
             
-<div className="hoxxes-float-delay absolute bottom-[-75px] right-0 z-20 w-[40%] sm:bottom-0 sm:right-1 sm:w-[36%]">
+<div className="hoxxes-float-delay absolute bottom-[-50px] right-0 z-20 w-[40%] sm:bottom-0 sm:right-1 sm:w-[36%]">
   <img
     src="https://hoxxes.app/images/KDS-hero.png"
     alt="HOXXES Kitchen Display System"
