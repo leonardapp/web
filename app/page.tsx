@@ -773,6 +773,36 @@ export default function HomePage() {
     />
 
     <div className="relative grid gap-10 lg:grid-cols-2 lg:items-stretch">
+      {/* HOXXES PREMIUM SEAL */}
+<div className="pointer-events-none absolute right-3 top-3 z-20 sm:right-6 sm:top-6">
+  <div className="relative flex h-[76px] w-[76px] rotate-6 items-center justify-center rounded-full border-2 border-white/80 bg-[#17210c]/15 shadow-[0_8px_30px_rgba(23,33,12,0.22)] backdrop-blur-sm transition-transform duration-500 sm:h-[132px] sm:w-[132px]">
+    <div className="absolute inset-[5px] rounded-full border border-dashed border-white/70" />
+
+    <svg viewBox="0 0 120 120" className="absolute inset-0 h-full w-full" aria-hidden="true">
+      <defs>
+        <path
+          id="hoxxes-seal-circle"
+          d="M 60,60 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0"
+        />
+      </defs>
+      <text fill="white" fontSize="8.5" fontWeight="700" letterSpacing="2">
+        <textPath href="#hoxxes-seal-circle" startOffset="0%">
+          SOFTWARE • HARDWARE • ONE PLATFORM •
+        </textPath>
+      </text>
+    </svg>
+
+    <div className="flex flex-col items-center justify-center text-center">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" className="h-5 w-5 sm:h-8 sm:w-8" aria-hidden="true">
+        <path d="M12 3 19 6v5c0 4.5-2.8 7.8-7 10-4.2-2.2-7-5.5-7-10V6l7-3Z" strokeLinejoin="round" />
+        <path d="m9 12 2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+      <span className="mt-1 text-[8px] font-extrabold tracking-[0.12em] text-white sm:text-xs">
+        HOXXES
+      </span>
+    </div>
+  </div>
+</div>
 
       {/* LEFT: HEADLINE */}
       <div className="flex flex-col items-start justify-between gap-8">
@@ -823,62 +853,8 @@ export default function HomePage() {
           ))}
         </div>
 
-        {/* HOXXES PREMIUM SEAL */}
-        <div className="pointer-events-none absolute right-0 top-0 z-10 hidden sm:block lg:right-0 lg:top-0">
-          <div className="relative flex h-[108px] w-[108px] rotate-6 items-center justify-center rounded-full border-2 border-white/80 bg-[#17210c]/15 shadow-[0_8px_30px_rgba(23,33,12,0.22)] backdrop-blur-sm transition-transform duration-500 sm:h-[132px] sm:w-[132px]">
-
-            <div className="absolute inset-[5px] rounded-full border border-dashed border-white/70" />
-
-            <svg
-              viewBox="0 0 120 120"
-              className="absolute inset-0 h-full w-full"
-              aria-hidden="true"
-            >
-              <defs>
-                <path
-                  id="hoxxes-seal-circle"
-                  d="M 60,60 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0"
-                />
-              </defs>
-
-              <text
-                fill="white"
-                fontSize="8.5"
-                fontWeight="700"
-                letterSpacing="2"
-              >
-                <textPath href="#hoxxes-seal-circle" startOffset="0%">
-                  SOFTWARE • HARDWARE • ONE PLATFORM •
-                </textPath>
-              </text>
-            </svg>
-
-            <div className="flex flex-col items-center justify-center text-center">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="white"
-                strokeWidth="1.8"
-                className="h-7 w-7 sm:h-8 sm:w-8"
-                aria-hidden="true"
-              >
-                <path
-                  d="M12 3 19 6v5c0 4.5-2.8 7.8-7 10-4.2-2.2-7-5.5-7-10V6l7-3Z"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="m9 12 2 2 4-4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-
-              <span className="mt-1 text-[10px] font-extrabold tracking-[0.16em] text-white sm:text-xs">
-                HOXXES
-              </span>
-            </div>
-          </div>
-        </div>
+        
+           
 
         {/* BUTTONS */}
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
