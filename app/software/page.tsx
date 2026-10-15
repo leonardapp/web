@@ -107,21 +107,10 @@ export default function SoftwarePage() {
             </div>
 
             {/* KDS floats from the opposite corner to avoid a static, stacked look. */}
-            
-<div className="hoxxes-float-delay absolute bottom-[-50px] right-0 z-20 w-[40%] sm:bottom-0 sm:right-1 sm:w-[36%]">
-  <img
-    src="https://hoxxes.app/images/KDS-hero.png"
-    alt="HOXXES Kitchen Display System"
-    className="aspect-[1.2/1] w-full object-contain drop-shadow-[0_18px_24px_rgba(15,23,42,.2)] transition-transform duration-500 hover:scale-105"
-  />
-  <div className="flex items-center justify-between gap-2 rounded-full border border-white/80 bg-white/90 px-3 py-1.5 shadow-md backdrop-blur-md">
-    <span className="text-[10px] font-semibold text-slate-700 sm:text-xs">
-      Kitchen Display
-    </span>
-    <span className="h-2 w-2 shrink-0 rounded-full bg-[#88d21a] shadow-[0_0_0_4px_rgba(136,210,26,.16)]" />
-  </div>
-</div>
-
+            <div className="hoxxes-float-delay absolute bottom-0 right-0 z-20 w-[40%] sm:right-1 sm:w-[36%]">
+              <img src="https://hoxxes.app/images/KDS-hero.png" alt="HOXXES Kitchen Display System" className="aspect-[1.2/1] w-full object-contain drop-shadow-[0_18px_24px_rgba(15,23,42,.2)] transition-transform duration-500 hover:scale-105" />
+              <div className="flex items-center justify-between gap-2 rounded-full border border-white/80 bg-white/90 px-3 py-1.5 shadow-md backdrop-blur-md"><span className="text-[10px] font-semibold text-slate-700 sm:text-xs">Kitchen Display</span><span className="h-2 w-2 shrink-0 rounded-full bg-[#88d21a] shadow-[0_0_0_4px_rgba(136,210,26,.16)]" /></div>
+            </div>
 
             {/* Small status chip, kept away from the product images. */}
             <div className="hoxxes-float absolute right-0 top-[43%] z-30 flex -translate-y-1/2 items-center gap-2 rounded-full border border-white/90 bg-white/90 px-3 py-2 shadow-lg backdrop-blur-md sm:right-0 sm:px-4 sm:py-3">
