@@ -42,14 +42,14 @@ const features = [
     title: "QR Ordering",
 description:
 "Let customers scan a QR code at their Table, and order directly from their phones.",
-image: "https://hoxxes.app/images/qr2.png",
+image: "https://hoxxes.app/images/qr3.png",
 href: "/software",
 },
 {
     title: "Kiosk Ordering",
     description:
       "Let customers place orders quickly and independently.",
-    image: "https://hoxxes.app/images/kiosk-ordering.png",
+    image: "https://hoxxes.app/images/kiosk-ordering3.png",
     href: "/software",
   },
   {
@@ -71,7 +71,7 @@ href: "/software",
     title: "Hardware",
     description:
       "Equip your business with POS terminals, self-service kiosks and Android KDS devices.",
-    image: "https://hoxxes.app/images/hardware2.png",
+    image: "https://hoxxes.app/images/hardware3.png",
     href: "/hardware",
   },
   {
