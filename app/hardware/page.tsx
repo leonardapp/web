@@ -33,9 +33,22 @@ const hardware = [
     description:
       "Enterprise dual-screen POS terminal equipped with a 15.6-inch main display and an 11.6-inch customer display, powered by the RK3576 processor with 4 GB RAM and 32 GB storage. Designed for fast, reliable point-of-sale operations with seamless integration into the HOXXES ecosystem.",
   },
+  {
+  id: 3,
+  slug: "pos-terminal-single",
+  anchor: "pos-single",
+  title: "POS Terminal",
+  subtitle: "Single-Screen POS",
+  price: 507,
+  availability: "sold-out",
+  leadTime: "Approx. 3 Months",
+  image: "https://hoxxes.app/images/pos-single.png",
+  description:
+    "Compact single-screen Android POS terminal equipped with a 15.6-inch powered by the RK3568 processor, with 2 GB RAM and 32 GB storage. Designed for reliable point-of-sale operations and seamless integration with the HOXXES ecosystem.",
+},
 
   {
-    id: 3,
+    id: 4,
     slug: "kds-display",
     anchor: "kds",
     title: "Kitchen Display System",
@@ -49,7 +62,7 @@ const hardware = [
   },
 
   {
-    id: 4,
+    id: 5,
     slug: "holo",
     anchor: "holo",
     title: 'HoloBox 86"',
