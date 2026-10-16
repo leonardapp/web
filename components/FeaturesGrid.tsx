@@ -14,7 +14,7 @@ const features = [
     title: "Point of Sale",
     description:
       "Manage sales and orders online on Windows, or online and offline on Android.",
-    image: "https://hoxxes.app/images/pos.png",
+    image: "https://hoxxes.app/images/pos2.png",
     href: "/software",
   },
   {
