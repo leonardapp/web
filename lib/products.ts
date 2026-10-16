@@ -47,7 +47,7 @@ export const products: Product[] = [
     price: 677,
     stock: 0,
     vat: 18,
-    availability: "sold-out",
+    availability: "in-stock",
     leadTime: "3 Months",
   },
 
@@ -61,7 +61,7 @@ export const products: Product[] = [
   price: 507,
   stock: 0,
   vat: 18,
-  availability: "sold-out",
+  availability: "in-stock",
   leadTime: "3 Months",
 },
 
@@ -76,7 +76,7 @@ export const products: Product[] = [
   price: 550,
   stock: 0,
   vat: 18,
-  availability: "sold-out",
+  availability: "in-stock",
   leadTime: "3 Months",
 },
 ];
