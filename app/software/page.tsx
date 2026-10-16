@@ -112,10 +112,7 @@ export default function SoftwarePage() {
               <div className="flex items-center justify-between gap-2 rounded-full border border-white/80 bg-white/90 px-3 py-1.5 shadow-md backdrop-blur-md"><span className="text-[10px] font-semibold text-slate-700 sm:text-xs">Kitchen Display</span><span className="h-2 w-2 shrink-0 rounded-full bg-[#88d21a] shadow-[0_0_0_4px_rgba(136,210,26,.16)]" /></div>
             </div>
 
-            {/* Small status chip, kept away from the product images. */}
-            <div className="hoxxes-float absolute right-0 top-[43%] z-30 flex -translate-y-1/2 items-center gap-2 rounded-full border border-white/90 bg-white/90 px-3 py-2 shadow-lg backdrop-blur-md sm:right-0 sm:px-4 sm:py-3">
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#88d21a]/20 text-sm text-[#527f10]">✓</span><span className="text-[10px] font-semibold text-slate-700 sm:text-xs">Connected in one place</span>
-            </div>
+            
           </div>
         </div>
       </section>
