@@ -229,8 +229,8 @@ export default function ProductClient({ product }: Props) {
 
                     <span className="font-medium text-slate-900">
   {isMadeToOrder
-  ? `Made to Order • {item.leadTime?.replace(/^Approx\.\s*/i, "")}`
-  : "In Stock"}
+    ? `Made to Order • ${(product.leadTime ?? "To be confirmed").replace(/^Approx\.\s*/i, "")}`
+    : `In Stock • ${product.stock} Units`}
 </span>
 
                   </div>
