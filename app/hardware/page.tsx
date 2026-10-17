@@ -15,7 +15,7 @@ const hardware = [
     subtitle: '32" Wall-Mounted Self-Service Kiosk',
     price: 1185,
     availability: "in-stock",
-    image: "https://hoxxes.app/images/kiosk.svg",
+    image: "https://hoxxes.app/images/kiosk.png",
     description:
       "Wall-mounted self-service kiosk featuring a cold-rolled steel enclosure, embedded PC with RK3568 processor, Masung E80I thermal printer and Newland EM25 QR code scanner. Designed with dedicated space for integrating a POS payment terminal.",
   },
