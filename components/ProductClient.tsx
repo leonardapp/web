@@ -260,7 +260,7 @@ export default function ProductClient({ product }: Props) {
                     <span>Warranty</span>
 
                     <span className="font-medium text-slate-900">
-                      1-Year Technical Manufacturer Warranty
+                      1-Year Manufacturer Warranty
                     </span>
 
                   </div>
