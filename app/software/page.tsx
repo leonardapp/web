@@ -212,6 +212,24 @@ const modules: SoftwareModule[] = [
   },
 ];
 
+
+function getExternalLinkClasses(
+  variant: "primary" | "secondary" | "outline" = "secondary",
+) {
+  const base =
+    "inline-flex min-h-11 w-full sm:w-auto items-center justify-center gap-2 rounded-full px-5 py-3 text-center text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2";
+
+  const styles = {
+    primary: "bg-[#88d21a] text-[#17210c] hover:bg-[#76b915] shadow-sm",
+    secondary:
+      "border border-[#e9f8d0] bg-[#f5fce9] text-[#34520f] hover:bg-[#e9f8d0]",
+    outline:
+      "border border-[#88d21a] text-[#26351a] hover:bg-[#88d21a] hover:text-[#17210c]",
+  };
+
+  return `${base} ${styles[variant]}`;
+}
+
 function ModuleCard({ module }: { module: SoftwareModule }) {
   return (
     <article
@@ -277,25 +295,33 @@ function ModuleCard({ module }: { module: SoftwareModule }) {
 
         {module.link && (
           <div className="mt-auto flex flex-col items-stretch justify-center gap-3 border-t border-slate-100 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center">
-            <Button
-              href={module.link.href}
-              target={module.link.href.startsWith("http") ? "_blank" : undefined}
-              rel={module.link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              variant={module.link.style ?? "secondary"}
-              className="min-h-11 px-5"
-            >
-              {module.link.label} <span aria-hidden="true">↗</span>
-            </Button>
-            {module.id === "online-ordering" && (
+            {module.link.href.startsWith("http") ? (
+              <a
+                href={module.link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={getExternalLinkClasses(module.link.style ?? "secondary")}
+              >
+                {module.link.label} <span aria-hidden="true">↗</span>
+              </a>
+            ) : (
               <Button
+                href={module.link.href}
+                variant={module.link.style ?? "secondary"}
+                className="min-h-11 px-5"
+              >
+                {module.link.label} <span aria-hidden="true">↗</span>
+              </Button>
+            )}
+            {module.id === "online-ordering" && (
+              <a
                 href="https://miniprogram.hoxxes.com/app/17420/4cbb7eb4-5ddc-4add-a203-fc535dc4686a"
                 target="_blank"
                 rel="noopener noreferrer"
-                variant="outline"
-                className="min-h-11 px-5"
+                className={getExternalLinkClasses("outline")}
               >
                 Open Membership App <span aria-hidden="true">↗</span>
-              </Button>
+              </a>
             )}
           </div>
         )}
@@ -383,13 +409,18 @@ export default function SoftwarePage() {
               >
                 See HOXXES in action <span aria-hidden="true">↗</span>
               </Button>
-              <Button href="https://hoxxes.com/download" target="_blank" rel="noopener noreferrer" variant="outline" className="px-6 py-3.5">
+              <a
+                href="https://hoxxes.com/download"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-[#88d21a] px-6 py-3.5 text-sm font-medium text-[#26351a] transition-all duration-200 hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2 sm:w-auto"
+              >
                 <svg aria-hidden="true" className="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 3v12m0 0 4-4m-4 4-4-4" />
                   <path d="M5 17v3h14v-3" />
                 </svg>
                 Download Center
-              </Button>
+              </a>
             </div>
 
           </div>
