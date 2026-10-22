@@ -289,19 +289,29 @@ export default function HomePage() {
           {/* ORDER */}
           <div className="group rounded-2xl border border-slate-200/80 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-[#88d21a]/50 hover:shadow-lg">
             <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f5fce9] text-[#52820f] transition-colors group-hover:bg-[#88d21a]/20">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                className="h-5 w-5"
-                aria-hidden="true"
-              >
-                <path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6" />
-                <circle cx="10" cy="20" r="1" />
-                <circle cx="18" cy="20" r="1" />
-                <path d="M10 11h6M13 8v6" />
-              </svg>
+              
+<svg
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="1.7"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+  className="h-5 w-5"
+  aria-hidden="true"
+>
+  {/* Tabletop */}
+  <path d="M3 8h18" />
+  <path d="M4 8l1-2h14l1 2" />
+
+  {/* Table leg */}
+  <path d="M12 8v10" />
+
+  {/* Base */}
+  <path d="M8 20h8" />
+  <path d="M10 18h4l2 2H8l2-2Z" />
+</svg>
+
             </div>
 
             <h3 className="mt-4 font-semibold text-[#17210c]">
@@ -317,17 +327,29 @@ export default function HomePage() {
           {/* WAITER */}
           <div className="group rounded-2xl border border-slate-200/80 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-[#88d21a]/50 hover:shadow-lg">
             <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f5fce9] text-[#52820f] transition-colors group-hover:bg-[#88d21a]/20">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                className="h-5 w-5"
-                aria-hidden="true"
-              >
-                <path d="M12 3a7 7 0 0 0-7 7v4a2 2 0 0 0 2 2h2v-6H7a5 5 0 0 1 10 0h-2v6h2a2 2 0 0 0 2-2v-4a7 7 0 0 0-7-7z" />
-                <path d="M16 19c-.8 1.2-2 2-4 2" />
-              </svg>
+              
+<svg
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="1.7"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+  className="h-5 w-5"
+  aria-hidden="true"
+>
+  {/* Serving tray */}
+  <path d="M2 7h20l-1.5 2H3.5L2 7Z" />
+  
+  {/* Hand holding the tray */}
+  <path d="M9 9c.2-1.1 1-1.8 2-1.8h2.5c.7 0 1.2.5 1.2 1.1" />
+  <path d="M10 9.2l2.1-1.3M12 9.2l2.3-1.2" />
+  
+  {/* Waiter's arm and sleeve */}
+  <path d="M3 22l-2-2 5.2-5.2 1.5-4.1c.3-.8 1.1-1.2 1.8-.9.7.3 1 1.1.7 1.8l-.8 2.1 5-3.2c.7-.5 1.5-.3 1.9.3.4.6.2 1.4-.4 1.8l-6.4 4.5L5 22" />
+  <path d="M3 19l2 2" />
+</svg>
+
             </div>
 
             <h3 className="mt-4 font-semibold text-[#17210c]">

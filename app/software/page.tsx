@@ -366,9 +366,9 @@ export default function SoftwarePage() {
         <div className="relative mx-auto grid max-w-7xl items-center gap-7 lg:grid-cols-[0.9fr_1.1fr] lg:gap-x-10 lg:gap-y-0">
           {/* Intro stays first on every screen. */}
           <div className="hoxxes-reveal relative z-10 mx-auto max-w-2xl text-center lg:col-start-1 lg:row-start-1 lg:mx-0 lg:text-left">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#88d21a]/40 bg-white/80 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate-600 shadow-sm sm:text-xs">
-              <span className="h-2 w-2 rounded-full bg-[#88d21a] shadow-[0_0_0_4px_rgba(136,210,26,.15)]" /> Restaurant · Retail · Enterprise
-            </div>
+            <div className="text-xs uppercase tracking-[0.35em] text-slate-400">
+        Restaurant · Retail · Enterprise
+      </div>
             <h1 className="mt-6 text-[2.5rem] font-semibold leading-[1.03] tracking-[-0.045em] sm:text-5xl md:text-6xl xl:text-[4.5rem]">
               Your whole business.
               <span className="mt-2 block text-slate-400">One connected system.</span>
@@ -443,10 +443,9 @@ export default function SoftwarePage() {
         <div className="relative mx-auto max-w-7xl">
           {/* CENTERED SECTION HEADING */}
           <div className="mx-auto mb-8 max-w-3xl pt-16 text-center sm:mb-10 sm:pt-20 lg:pt-24">
-            <p className="inline-flex items-center gap-2 rounded-full border border-[#88d21a]/30 bg-white/90 px-3.5 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#4d790e] shadow-sm sm:text-xs">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#88d21a]" aria-hidden="true" />
-              The HOXXES ecosystem
-            </p>
+  <p className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+    The HOXXES ecosystem
+  </p>
 
             <h2 className="mt-5 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem]">
               Everything your operation needs.
