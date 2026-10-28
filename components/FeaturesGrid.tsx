@@ -52,6 +52,14 @@ href: "/software",
     image: "https://hoxxes.app/images/kiosk-ordering3.png",
     href: "/software",
   },
+  
+{
+  title: "Order Display System",
+  description:
+    "Display order statuses in real time, keeping customers informed.",
+  image: "https://hoxxes.app/images/ods.png",
+  href: "/software",
+},
   {
     title: "Delivery Integrations",
     description:
@@ -363,6 +371,15 @@ export default function HomeFeatures() {
 
                   {/* SUBTLE PLATFORM / FLOOR */}
                   <div className="absolute inset-x-0 bottom-[100px] h-[70px] bg-gradient-to-b from-white/[0.08] to-black/[0.08]" />
+
+{/* CATEGORY LABEL — HARDWARE ONLY */}
+{item.title === "Hardware" && (
+  <div className="absolute left-4 top-4 z-30">
+    <span className="inline-flex items-center rounded-full border border-white/30 bg-black/35 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.16em] text-white backdrop-blur-md sm:text-[10px]">
+      Physical Devices
+    </span>
+  </div>
+)}
 
                   {/* ARROW */}
                   <div className="absolute right-4 top-4 z-30 flex h-9 w-9 items-center justify-center rounded-full border border-white/80 bg-white/[0.06] text-white transition duration-300 group-hover:bg-white group-hover:text-[#6DAF12]">
