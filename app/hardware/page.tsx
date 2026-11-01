@@ -28,14 +28,14 @@ const hardware: HardwareItem[] = [
     slug: "kiosk-slim",
     anchor: "kiosk",
     title: "Kiosk Slim",
-    subtitle: '37" Wall-Mounted Self-Service Kiosk',
+    subtitle: '32" Wall-Mounted Self-Service Kiosk',
     price: 1185,
     availability: "in-stock",
     image: "https://hoxxes.app/images/kiosk1.png",
     description:
       "Wall-mounted self-service kiosk featuring a cold-rolled steel enclosure, embedded PC with RK3568 processor, Masung E80I thermal printer and Newland EM25 QR code scanner. Designed with dedicated space for integrating a POS payment terminal.",
     category: "Kiosks",
-    highlights: ["37-inch self-service experience", "Integrated thermal printer", "QR code scanner"],
+    highlights: ["32-inch self-service experience", "Integrated thermal printer", "QR code scanner"],
   },
   {
     id: 2,
