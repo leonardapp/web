@@ -198,15 +198,17 @@ export default function HomeFeatures() {
               className="group relative block aspect-[0.78] w-[86vw] max-w-[440px] shrink-0 snap-center overflow-hidden rounded-[24px] bg-[#88D21A] shadow-sm transition-shadow duration-300 hover:shadow-xl sm:w-[calc((100%-2rem)/3)] lg:aspect-[0.72] lg:w-auto lg:max-w-none lg:shrink"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[#88D21A] via-[#80C718] to-[#5F9F12]" />
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                sizes="(max-width: 639px) 86vw, (max-width: 1023px) 30vw, 25vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-[1.035]"
-                priority={index === 0}
-                draggable={false}
-              />
+              
+<Image
+  src={item.image}
+  alt={item.title}
+  fill
+  sizes="(max-width: 639px) 86vw, (max-width: 1023px) 30vw, 25vw"
+  className="object-cover scale-[1.12] transition-transform duration-500 group-hover:scale-[1.18]"
+  priority={index === 0}
+  draggable={false}
+/>
+
               <div className="absolute inset-x-0 bottom-0 z-10 h-[38%] bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
 
               {item.title === "Hardware" && (

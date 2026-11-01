@@ -136,9 +136,7 @@ export default function HomePage() {
   </div>
 
   <div className="flex flex-col sm:flex-row gap-3 justify-center w-full sm:w-auto">
-    <Button href="/request-demo" variant="primary">
-      Request Demo
-    </Button>
+    
 
     <Button href="/software" variant="outline">
       Explore Platform
@@ -411,10 +409,10 @@ export default function HomePage() {
               href="https://qr.hoxxes.com/qr/SSI718JKZ770"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#88d21a] px-6 py-3 text-sm font-semibold text-[#17210c] transition duration-200 hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+              className="mt-4 inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#88d21a] px-6 py-3 text-sm font-medium text-[#17210c] transition duration-200 hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
             >
               Explore Live Menu
-              <span aria-hidden="true">↗</span>
+              
             </a>
           </div>
 

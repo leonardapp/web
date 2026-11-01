@@ -3,7 +3,7 @@
 import Button from "@/components/Button";
 import Header from "@/components/Header";
 import IndustriesSection from "@/components/IndustriesSection";
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type Feature = {
   title: string;
@@ -125,20 +125,36 @@ const modules: SoftwareModule[] = [
     link: { label: "Confirm Compatibility", href: "/contact-sales", style: "primary" },
   },
   {
-    id: "online-ordering",
-    eyebrow: "Online Ordering",
-    title: "Your own branded ordering page.",
-    description:
-      "Give customers a branded online ordering experience for delivery, pickup and customer engagement.",
-    image: "https://hoxxes.app/images/online-ordering.png",
-    imageAlt: "HOXXES online ordering storefront",
-    features: [
-      { title: "Make ordering easy", description: "Share a dedicated ordering link and mobile-ready storefront." },
-      { title: "Build customer loyalty", description: "Support membership, loyalty, wallet and voucher features where configured." },
-      { title: "Connect to operations", description: "Bring online orders into the HOXXES POS and kitchen workflow." },
-    ],
-    link: { label: "View Live Store", href: "https://order.hoxxes.com/store/4cbb7eb4-5ddc-4add-a203-fc535dc4686a", style: "primary" },
+  id: "online-ordering",
+  eyebrow: "Online Ordering",
+  title: "Your own branded eShop & Mini App.",
+  description:
+    "Get a dedicated eShop for delivery and pickup orders, plus a Mini App for membership, vouchers, digital wallet and points, with map-based delivery zones.",
+  image: "https://hoxxes.app/images/online-ordering.png",
+  imageAlt: "HOXXES branded eShop and customer Mini App",
+  features: [
+    {
+      title: "Dedicated eShop",
+      description:
+        "Share your link anywhere and receive direct delivery and pickup orders in HOXXES.",
+    },
+    {
+      title: "Customer Mini App",
+      description:
+        "Membership, vouchers, digital wallet and points history in one place.",
+    },
+    {
+      title: "Delivery & Pickup",
+      description:
+        "Offer pickup and delivery within your predefined map area.",
+    },
+  ],
+  link: {
+    label: "Explore Online Ordering",
+    href: "https://order.hoxxes.com/store/4cbb7eb4-5ddc-4add-a203-fc535dc4686a",
+    style: "primary",
   },
+},
   {
     id: "delivery-integrations",
     eyebrow: "Delivery Integrations",
@@ -302,7 +318,7 @@ function ModuleCard({ module }: { module: SoftwareModule }) {
                 rel="noopener noreferrer"
                 className={getExternalLinkClasses(module.link.style ?? "secondary")}
               >
-                {module.link.label} <span aria-hidden="true">↗</span>
+                {module.link.label}
               </a>
             ) : (
               <Button
@@ -310,7 +326,7 @@ function ModuleCard({ module }: { module: SoftwareModule }) {
                 variant={module.link.style ?? "secondary"}
                 className="min-h-11 px-5"
               >
-                {module.link.label} <span aria-hidden="true">↗</span>
+                {module.link.label}
               </Button>
             )}
             {module.id === "online-ordering" && (
@@ -320,7 +336,7 @@ function ModuleCard({ module }: { module: SoftwareModule }) {
                 rel="noopener noreferrer"
                 className={getExternalLinkClasses("outline")}
               >
-                Open Membership App <span aria-hidden="true">↗</span>
+                Open Membership App
               </a>
             )}
           </div>
@@ -331,6 +347,17 @@ function ModuleCard({ module }: { module: SoftwareModule }) {
 }
 
 export default function SoftwarePage() {
+  const [moduleSearch, setModuleSearch] = useState("");
+  const filteredModules = useMemo(() => {
+    const query = moduleSearch.trim().toLowerCase();
+    if (!query) return modules;
+    return modules.filter((module) =>
+      [module.title, module.eyebrow, module.description,
+        ...module.features.flatMap((feature) => [feature.title, feature.description])]
+        .some((value) => value.toLowerCase().includes(query))
+    );
+  }, [moduleSearch]);
+
   useEffect(() => {
     const feature = new URLSearchParams(window.location.search).get("feature");
     if (!feature) return;
@@ -369,10 +396,14 @@ export default function SoftwarePage() {
             <div className="text-xs uppercase tracking-[0.35em] text-slate-400">
         Restaurant · Retail · Enterprise
       </div>
-            <h1 className="mt-6 text-[2.5rem] font-semibold leading-[1.03] tracking-[-0.045em] sm:text-5xl md:text-6xl xl:text-[4.5rem]">
-              Your whole business.
-              <span className="mt-2 block text-slate-400">One connected system.</span>
-            </h1>
+            
+<h1 className="mt-5 text-[2.15rem] font-semibold leading-[1.08] tracking-[-0.045em] sm:mt-6 sm:text-5xl sm:leading-[1.03] md:text-6xl xl:text-[4.5rem]">
+  <span className="block">Your whole business.</span>
+  <span className="mt-1 block text-slate-400 sm:mt-2">
+    One connected system.
+  </span>
+</h1>
+
             <p className="mx-auto mt-5 max-w-lg text-sm leading-6 text-slate-600 sm:text-base sm:leading-7 lg:mx-0">
               Connect ordering, sales, kitchen operations and business insights in one platform — giving your team the tools to work smarter and helping you stay in control.
             </p>
@@ -402,25 +433,17 @@ export default function SoftwarePage() {
           {/* Mobile places these actions below the visual; desktop keeps them below the intro. */}
           <div className="hoxxes-reveal relative z-10 mx-auto w-full max-w-xl text-center [animation-delay:220ms] lg:col-start-1 lg:row-start-2 lg:mx-0 lg:text-left">
             <div className="mt-5 flex flex-col justify-center gap-3 sm:flex-row sm:items-center lg:justify-start">
-              <Button
-                href="/request-demo"
-                variant="primary"
-                className="px-6 py-3.5 shadow-[0_8px_24px_rgba(136,210,26,.25)]"
-              >
-                See HOXXES in action <span aria-hidden="true">↗</span>
-              </Button>
-              <a
-                href="https://hoxxes.com/download"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-[#88d21a] px-6 py-3.5 text-sm font-medium text-[#26351a] transition-all duration-200 hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2 sm:w-auto"
-              >
-                <svg aria-hidden="true" className="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 3v12m0 0 4-4m-4 4-4-4" />
-                  <path d="M5 17v3h14v-3" />
-                </svg>
-                Download Center
-              </a>
+              
+              
+<a
+  href="https://hoxxes.app/hardware"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-[#88d21a] px-6 py-3.5 text-sm font-medium text-[#26351a] transition-all duration-200 hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2 sm:w-auto"
+>
+  Explore Android Hardware
+</a>
+
             </div>
 
           </div>
@@ -457,42 +480,74 @@ export default function SoftwarePage() {
             </p>
           </div>
 
-          {/* QUICK LINKS — GROUPED AS A LIGHT NAVIGATION PANEL */}
-          <nav
-            aria-label="Software feature navigation"
-            className="mx-auto mb-10 flex max-w-5xl flex-wrap justify-center gap-2 rounded-2xl border border-slate-200/80 bg-white/80 p-3 shadow-[0_8px_28px_rgba(15,23,42,.035)] sm:mb-14 sm:gap-2.5 sm:p-4"
-          >
-            {[
-              ["Restaurant POS", "#pos"],
-              ["Operations Hub", "#operations-hub"],
-              ["Workforce", "#workforce-management"],
-              ["QR Ordering", "#qr-ordering"],
-              ["Self-Service Kiosk", "#kiosk"],
-              ["Payments", "#payment-integration"],
-              ["Online Ordering", "#online-ordering"],
-              ["Delivery Integrations", "#delivery-integrations"],
-              ["Kitchen Display", "#kds"],
-              ["Promotions", "#promotions"],
-              ["HQ Control Center", "#hq-control-center"],
-              ["Analytics", "#analytics-dashboard"],
-            ].map(([label, href]) => (
-              <a
-                key={href}
-                href={href}
-                className="inline-flex min-h-10 items-center justify-center gap-1.5 rounded-full border border-slate-200 bg-white px-3.5 py-2 text-center text-xs font-medium text-slate-600 transition-colors duration-200 hover:border-[#88d21a]/70 hover:bg-[#f7fceb] hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2 sm:px-4"
+          {/* SEARCH — FIND A MODULE WITHOUT A LONG SHORTCUT LIST */}
+          <div className="mx-auto mb-10 max-w-2xl sm:mb-14">
+            <label htmlFor="ecosystem-search" className="mb-3 block text-center text-sm font-medium text-slate-700">
+              Find the tools your team needs
+            </label>
+            <div className="group relative">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400 transition-colors group-focus-within:text-[#5d9510]"
               >
-                {label}
-                <span aria-hidden="true" className="text-slate-400">↗</span>
-              </a>
-            ))}
-          </nav>
+                <circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" strokeWidth="1.7" />
+                <path d="m16 16 4.2 4.2" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+              </svg>
+              <input
+                id="ecosystem-search"
+                type="search"
+                value={moduleSearch}
+                onChange={(event) => setModuleSearch(event.target.value)}
+                placeholder="Search POS, QR Ordering, Analytics…"
+                aria-describedby="ecosystem-search-hint"
+                className="min-h-14 w-full rounded-2xl border border-slate-200 bg-white py-4 pl-12 pr-12 text-sm text-slate-800 shadow-[0_8px_28px_rgba(15,23,42,.045)] outline-none transition-all placeholder:text-slate-400 hover:border-slate-300 focus:border-[#88d21a] focus:ring-4 focus:ring-[#88d21a]/15"
+              />
+              {moduleSearch && (
+                <button
+                  type="button"
+                  onClick={() => setModuleSearch("")}
+                  aria-label="Clear search"
+                  className="absolute right-3 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full text-slate-400 transition hover:bg-slate-100 hover:text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a]"
+                >
+                  <span aria-hidden="true" className="text-xl leading-none">×</span>
+                </button>
+              )}
+            </div>
+            <p id="ecosystem-search-hint" className="mt-3 text-center text-xs text-slate-500" aria-live="polite">
+              {moduleSearch.trim()
+                ? `${filteredModules.length} ${filteredModules.length === 1 ? "module" : "modules"} found`
+                : `${modules.length} connected solutions · Search by product or capability`}
+            </p>
+          </div>
 
           {/* SOFTWARE MODULE CARDS */}
-          <div className="grid items-stretch gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3 xl:gap-7">
-            {modules.map((module) => (
-              <ModuleCard key={module.id} module={module} />
-            ))}
-          </div>
+          {filteredModules.length > 0 ? (
+            <div className="grid items-stretch gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3 xl:gap-7">
+              {filteredModules.map((module) => (
+                <ModuleCard key={module.id} module={module} />
+              ))}
+            </div>
+          ) : (
+            <div className="rounded-3xl border border-dashed border-slate-300 bg-white/70 px-5 py-14 text-center">
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f2f9e8] text-[#5d9510]">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" className="h-6 w-6">
+                  <circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" strokeWidth="1.7" />
+                  <path d="m16 16 4.2 4.2" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+                </svg>
+              </div>
+              <h3 className="mt-4 text-lg font-semibold text-slate-900">No matching modules</h3>
+              <p className="mt-2 text-sm text-slate-500">Try another product name or capability.</p>
+              <button
+                type="button"
+                onClick={() => setModuleSearch("")}
+                className="mt-5 inline-flex min-h-10 items-center justify-center rounded-full bg-[#88d21a] px-5 py-2 text-sm font-medium text-[#17210c] transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+              >
+                Clear search
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -514,14 +569,12 @@ export default function SoftwarePage() {
               Let’s find the right HOXXES setup for your business.
             </p>
             <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-              <Button href="/request-demo" variant="primary" className="px-6 py-3.5">
-                Request Demo <span aria-hidden="true">↗</span>
+              <Button href="/hardware" variant="primary" className="px-6 py-3.5">
+                Explore Android Hardware 
               </Button>
-              <Button href="/hardware" variant="secondary" className="px-6 py-3.5">
-                Explore Hardware <span aria-hidden="true">↗</span>
-              </Button>
+              
               <Button href="/pricing" variant="outline" className="px-6 py-3.5">
-                Pricing <span aria-hidden="true">↗</span>
+                Pricing 
               </Button>
             </div>
           </div>
