@@ -10,7 +10,7 @@ import CustomerSuccess from "@/components/CustomerSuccess";
 
 
 
-const OFFER_END_DATE = "2026-09-30";
+const OFFER_END_DATE = "2026-11-08";
 
 
 const offerActive =
@@ -63,7 +63,7 @@ export default function HomePage() {
 <section
   id="hero"
   ref={ref}
-  className="relative isolate w-full overflow-hidden bg-transparent text-center px-6 sm:px-8 lg:px-6 pt-28 sm:pt-32 lg:pt-36 pb-36 sm:pb-40"
+  className="relative isolate w-full overflow-hidden bg-transparent text-center px-6 sm:px-8 lg:px-6 pt-28 sm:pt-32 lg:pt-36 pb-16 sm:pb-20"
 >
   {/* BACKGROUND VIDEO */}
   <video
@@ -120,57 +120,48 @@ export default function HomePage() {
       Operating System.
     </motion.p>
 
-    {/* BUTTONS */}
-    <motion.div
-      variants={fadeUp}
-      className="mt-10 flex flex-col items-center w-full"
-    >
-      <div className="mb-4 text-center">
-        <div className="text-xs uppercase tracking-[0.3em] text-emerald-600 font-semibold">
-          30 Days Free
-        </div>
-
-        <div className="mt-1 text-sm text-slate-500">
-          Full platform access. Hardware sold separately.
-        </div>
-      </div>
-
-      <div className="flex flex-col sm:flex-row gap-3 justify-center w-full sm:w-auto">
-        <Button href="/request-demo" variant="primary">
-          Request Demo
-        </Button>
-
-        <Button href="/software" variant="outline">
-          Explore Platform
-        </Button>
-      </div>
-    </motion.div>
-    
-  </motion.div>
-</section>     
-
-     {/* TRUSTED BY */}
-<section className="pt-6 pb-12 sm:pt-8 sm:pb-16">
-  <div className="max-w-6xl mx-auto px-6">
-
-    <div className="text-center">
-      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-        Trusted by Businesses
-      </div>
-
-      <p className="mt-2 text-sm text-slate-500">
-        Powering real-world restaurants and retail with one unified platform.
-      </p>
+   
+<motion.div
+  variants={fadeUp}
+  className="mt-10 flex flex-col items-center w-full"
+>
+  <div className="mb-4 text-center">
+    <div className="text-xs uppercase tracking-[0.3em] text-emerald-600 font-semibold">
+      30 Days Free
     </div>
 
-    {/* LOGOS */}
-    <div className="relative overflow-hidden mt-4">
-      <LogoMarquee />
+    <div className="mt-1 text-sm text-slate-500">
+      Full platform access. Hardware sold separately.
     </div>
-    
   </div>
-</section>
 
+  <div className="flex flex-col sm:flex-row gap-3 justify-center w-full sm:w-auto">
+    <Button href="/request-demo" variant="primary">
+      Request Demo
+    </Button>
+
+    <Button href="/software" variant="outline">
+      Explore Platform
+    </Button>
+
+    <Button href="/hardware" variant="outline">
+      Buy Hardware
+    </Button>
+  </div>
+  {/* CUSTOMER LOGOS */}
+<motion.div
+  variants={fadeUp}
+  className="mt-12 sm:mt-14 mx-auto w-full max-w-5xl"
+>
+  <div className="relative w-full overflow-hidden">
+    <LogoMarquee />
+  </div>
+</motion.div>
+</motion.div>
+</motion.div>
+</section>
+    
+    
 
 {/* NO GAP AT ALL */}
 <div className="m-0 p-0 leading-none" />

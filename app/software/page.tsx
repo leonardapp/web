@@ -145,7 +145,7 @@ const modules: SoftwareModule[] = [
     title: "Manage incoming delivery orders in one place.",
     description:
       "Bring supported delivery-platform orders into a more unified workflow for your team.",
-    image: "https://hoxxes.app/images/delivery-Integration.png",
+    image: "https://hoxxes.app/images/delivery-Integration2.png",
     imageAlt: "HOXXES delivery integrations",
     features: [
       { title: "Unify incoming orders", description: "Reduce the need to monitor separate order channels." },
@@ -174,7 +174,7 @@ const modules: SoftwareModule[] = [
     title: "Promotions that run themselves.",
     description:
       "Schedule promotional rules and campaigns to reduce repetitive manual changes across supported channels.",
-    image: "https://hoxxes.app/images/analytics-dashboard.png",
+    image: "https://hoxxes.app/images/promotion.png",
     imageAlt: "HOXXES business dashboard",
     features: [
       { title: "Schedule promotions", description: "Configure campaigns by date and time." },

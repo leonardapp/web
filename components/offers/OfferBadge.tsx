@@ -1,10 +1,12 @@
+
 "use client";
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
-const OFFER_DEADLINE = "2026-09-30T23:59:59+02:00";
+// Oferta përfundon më 8 nëntor 2026, ora 23:59:59 në Kosovë (UTC+1)
+const OFFER_DEADLINE = "2026-11-08T23:59:59+01:00";
 
 const SHOW_DURATION = 8000;
 const FIRST_SHOW_DELAY = 4000;
@@ -28,7 +30,7 @@ export default function OfferBadge() {
 
     const now = Date.now();
 
-    // Prevent the badge from appearing too frequently
+    // Prevent showing the badge too frequently
     if (now - lastShown.current < SCROLL_COOLDOWN) {
       return;
     }
@@ -43,6 +45,7 @@ export default function OfferBadge() {
 
     hideTimer.current = setTimeout(() => {
       setVisible(false);
+      hideTimer.current = null;
     }, SHOW_DURATION);
   };
 
@@ -54,12 +57,12 @@ export default function OfferBadge() {
       showOffer();
     }, FIRST_SHOW_DELAY);
 
-    // Repeat every 90 seconds
+    // Repeat every 90 seconds (subject to cooldown)
     repeatTimer.current = setInterval(() => {
       showOffer();
     }, REPEAT_INTERVAL);
 
-    // Show again after meaningful scroll
+    // Show after meaningful scroll
     const handleScroll = () => {
       if (window.scrollY >= SCROLL_TRIGGER) {
         showOffer();
@@ -85,6 +88,7 @@ export default function OfferBadge() {
     };
   }, []);
 
+  // Do not render after campaign expiry
   if (!isOfferActive()) return null;
 
   return (
@@ -93,9 +97,9 @@ export default function OfferBadge() {
         <motion.div
           initial={{
             opacity: 0,
-            x: 120,
-            y: 15,
-            scale: 0.88,
+            x: 80,
+            y: 12,
+            scale: 0.92,
           }}
           animate={{
             opacity: 1,
@@ -105,14 +109,14 @@ export default function OfferBadge() {
           }}
           exit={{
             opacity: 0,
-            x: 100,
-            y: 10,
-            scale: 0.9,
+            x: 60,
+            y: 8,
+            scale: 0.94,
           }}
           transition={{
             type: "spring",
             stiffness: 220,
-            damping: 20,
+            damping: 22,
             mass: 0.7,
           }}
           className="
@@ -122,17 +126,18 @@ export default function OfferBadge() {
             sm:top-24
             sm:right-8
             z-50
+            max-w-[calc(100vw-1rem)]
           "
         >
           <Link
             href="/offers"
             aria-label="View special offers"
-            className="group block"
+            className="group block rounded-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-500/50"
           >
-            {/* SUBTLE PULSE */}
+            {/* Subtle pulse */}
             <motion.div
               animate={{
-                scale: [1, 1.025, 1],
+                scale: [1, 1.02, 1],
               }}
               transition={{
                 duration: 2,
@@ -141,11 +146,11 @@ export default function OfferBadge() {
                 ease: "easeInOut",
               }}
             >
-              {/* OFFER CARD */}
+              {/* Offer card */}
               <div
                 className="
                   relative
-                  w-28
+                  w-32
                   sm:w-44
                   rounded-2xl
                   border
@@ -154,7 +159,7 @@ export default function OfferBadge() {
                   from-amber-400
                   via-orange-500
                   to-red-500
-                  p-2
+                  p-3
                   sm:p-4
                   text-white
                   shadow-[0_15px_40px_rgba(249,115,22,.35)]
@@ -164,10 +169,10 @@ export default function OfferBadge() {
                   group-hover:scale-105
                 "
               >
-                {/* LIVE */}
+                {/* LIVE badge */}
                 <motion.div
                   animate={{
-                    scale: [1, 1.05, 1],
+                    scale: [1, 1.04, 1],
                   }}
                   transition={{
                     duration: 1.6,
@@ -183,7 +188,7 @@ export default function OfferBadge() {
                     bg-white
                     px-2
                     py-1
-                    text-[7px]
+                    text-[8px]
                     sm:text-[9px]
                     font-bold
                     uppercase
@@ -195,25 +200,26 @@ export default function OfferBadge() {
                   LIVE
                 </motion.div>
 
-                {/* LABEL */}
+                {/* Label */}
                 <div
                   className="
-                    text-[8px]
+                    text-[9px]
                     sm:text-[10px]
                     uppercase
-                    tracking-[0.2em]
+                    tracking-[0.15em]
+                    sm:tracking-[0.2em]
                     text-white/90
                   "
                 >
                   Special Offers
                 </div>
 
-                {/* OFFERS */}
+                {/* Title */}
                 <div
                   className="
                     mt-1
                     sm:mt-2
-                    text-lg
+                    text-xl
                     sm:text-2xl
                     font-black
                     leading-none
@@ -223,12 +229,12 @@ export default function OfferBadge() {
                   OFFERS
                 </div>
 
-                {/* DESCRIPTION */}
+                {/* Description */}
                 <div
                   className="
                     mt-1
                     sm:mt-2
-                    text-[9px]
+                    text-[10px]
                     sm:text-xs
                     text-white/90
                   "
@@ -236,7 +242,7 @@ export default function OfferBadge() {
                   Limited Time
                 </div>
 
-                {/* DEADLINE */}
+                {/* Deadline */}
                 <div
                   className="
                     mt-2
@@ -244,12 +250,12 @@ export default function OfferBadge() {
                     border-t
                     border-white/25
                     pt-2
-                    text-[8px]
+                    text-[9px]
                     sm:text-[10px]
-                    font-medium
+                    font-semibold
                   "
                 >
-                  Until Sept 30 →
+                  Until Nov 8 →
                 </div>
               </div>
             </motion.div>

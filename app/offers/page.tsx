@@ -1,484 +1,329 @@
+
 import Button from "@/components/Button";
 import Header from "@/components/Header";
 
-const OFFER_DEADLINE = new Date(2026, 8, 30, 23, 59, 59);
-
-function isOfferActive() {
-  return Date.now() < OFFER_DEADLINE.getTime();
-}
 export const metadata = {
-  title: "Offers | HOXXES",
+  title: "Special Offer | HOXXES",
   description:
-    "Limited-time offers on HOXXES software, self-service kiosks and business solutions.",
+    "Buy a HOXXES self-service kiosk, get an Android Stick 8K free and enjoy an additional 10% online discount. November 2–8, 2026.",
 };
 
+const OFFER = {
+  start: "November 2, 2026",
+  end: "November 8, 2026",
+  period: "November 2–8, 2026",
+  hardwareUrl: "/hardware",
+  contactPhone: "+38348106060",
+  productImage: "https://hoxxes.app/images/kiosk.png",
+};
+
+const steps = [
+  {
+    number: "01",
+    title: "Choose Your Kiosk",
+    description:
+      "Explore the available HOXXES self-service kiosk models.",
+  },
+  {
+    number: "02",
+    title: "Shop Online",
+    description:
+      "Purchase an eligible kiosk during the promotional period.",
+  },
+  {
+    number: "03",
+    title: "Enjoy Your Benefits",
+    description:
+      "Receive the eligible 10% online discount and complimentary Android Stick 8K according to the offer terms.",
+  },
+];
+
 export default function OffersPage() {
-   const offerActive = isOfferActive();
-  if (!offerActive) {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-transparent">
+    <main className="min-h-screen overflow-x-clip bg-white text-gray-900">
       <Header />
 
-      <section className="flex min-h-[70vh] items-center justify-center px-6 text-center">
-        <div>
-          <div className="text-xs uppercase tracking-[0.35em] text-slate-400">
-            HOXXES Offers
-          </div>
+      {/* HERO */}
+      <section className="relative isolate overflow-hidden bg-[#071b08] text-white">
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -z-20 bg-gradient-to-br from-[#071b08] via-[#102c0b] to-[#28530d]"
+        />
 
-          <h1 className="mt-6 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-            No Active Offers
-          </h1>
+        <div
+          aria-hidden="true"
+          className="absolute -right-24 -top-24 -z-10 h-64 w-64 rounded-full bg-[#88d21a]/20 blur-3xl sm:h-96 sm:w-96"
+        />
 
-          <p className="mt-5 max-w-xl text-slate-500">
-            There are currently no active promotions.
-            Check back soon for future offers.
-          </p>
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+          <div className="mx-auto max-w-5xl text-center">
+            <div className="inline-flex max-w-full items-center justify-center rounded-full border border-[#88d21a]/40 bg-[#88d21a]/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[#b5f45d] sm:px-5 sm:text-xs sm:tracking-[0.2em]">
+              HOXXES Special Offer
+            </div>
 
-          <div className="mt-8">
-            <Button href="/contact-sales">
-              Contact Sales
-            </Button>
+            <h1 className="mt-6 text-4xl font-black leading-[1.05] tracking-tight sm:mt-8 sm:text-6xl lg:text-7xl">
+              BUY A KIOSK.
+              <span className="mt-2 block text-[#88d21a]">
+                GET MORE.
+              </span>
+            </h1>
+
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/75 sm:mt-6 sm:text-xl">
+              Purchase a HOXXES self-service kiosk,
+              get an Android Stick 8K FREE and enjoy
+              an additional 10% online discount.
+            </p>
+
+            {/* CTA */}
+            <div className="mx-auto mt-8 flex w-full max-w-md flex-col items-stretch justify-center gap-3 sm:mt-10 sm:max-w-none sm:flex-row sm:items-center">
+              <div className="w-full sm:w-auto">
+                <Button href={OFFER.hardwareUrl}>
+                  Shop Hardware Online
+                </Button>
+              </div>
+
+              <a
+                href={`tel:${OFFER.contactPhone}`}
+                className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] sm:w-auto sm:px-7 sm:text-base"
+              >
+                Contact Sales
+              </a>
+            </div>
+
+            {/* CAMPAIGN PERIOD */}
+            <div className="mt-6 inline-flex flex-wrap items-center justify-center gap-2 text-sm text-white/70">
+              <span aria-hidden="true">📅</span>
+              <span>
+                Promotional period:{" "}
+                <strong className="text-white">
+                  {OFFER.period}
+                </strong>
+              </span>
+            </div>
           </div>
         </div>
       </section>
-    </main>
-  );
-}
-  return (
-    <main className="min-h-screen overflow-x-hidden">
-      <Header />
-      {/* Hero */}
-<section className="relative overflow-hidden border-b border-gray-100 pt-16">
-  <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-24">
-    <div className="max-w-4xl mx-auto text-center">
 
-      
+      {/* MAIN OFFER */}
+      <section
+        aria-labelledby="offer-details-heading"
+        className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
+      >
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          {/* PRODUCT */}
+          <div className="relative mx-auto w-full max-w-xl">
+            <div
+              aria-hidden="true"
+              className="absolute inset-8 rounded-full bg-[#88d21a]/15 blur-3xl"
+            />
 
-      <h1 className="mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-[56px]">
-        Transform Your Business with
-        <span className="block mt-2 text-orange-600">
-  Exclusive Hoxxes Offers
-</span>
-      </h1>
+            <div className="relative overflow-hidden rounded-3xl border border-gray-100 bg-white p-4 shadow-xl sm:p-8 lg:p-10">
+              <div className="mb-4 flex flex-wrap items-center justify-between gap-3 sm:mb-6">
+                <span className="rounded-full bg-[#88d21a]/15 px-3 py-2 text-[10px] font-bold uppercase tracking-wide text-[#477d0a] sm:px-4 sm:text-xs">
+                  Self-Service Kiosk
+                </span>
 
-      <p className="mt-6 text-base text-gray-600 sm:text-lg">
-  Explore exclusive savings and special bundles across
-  HOXXES software, self-service kiosks and enterprise solutions.
-  Offers valid until Sept 30.
-</p>
+                <span className="text-xs font-semibold uppercase tracking-wider text-gray-400">
+                  HOXXES
+                </span>
+              </div>
 
-    </div>
-  </div>
-</section>
-{/* 30% OFF NEW OFFER */}
-<section className="mx-auto max-w-7xl px-6 py-4 sm:py-16 lg:py-20">
-  <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl">
-    <div className="grid grid-cols-1 lg:grid-cols-2">
+              <div className="flex min-h-[260px] items-center justify-center sm:min-h-[420px]">
+                <img
+                  src={OFFER.productImage}
+                  alt="HOXXES Self-Service Kiosk"
+                  width={700}
+                  height={900}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="mx-auto max-h-[340px] w-full object-contain sm:max-h-[500px] lg:max-h-[560px]"
+                />
+              </div>
 
-      {/* LEFT */}
-      <div className="p-6 sm:p-8 lg:p-14">
+              <div className="mt-4 border-t border-gray-100 pt-5 text-center sm:mt-6">
+                <h2 className="text-xl font-bold text-gray-900 sm:text-2xl">
+                  HOXXES Self-Service Kiosk
+                </h2>
 
-        {/* OFFER BADGE */}
-        <div className="inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-4 py-2 text-sm font-semibold text-orange-600">
-          30% OFF • FOR NEW SUBSCRIBERS ONLY
-        </div>
-
-        <h2 className="mt-8 text-3xl font-bold text-gray-900 sm:text-4xl">
-          HOXXES Platform
-          <span className="block">for New Subscribers</span>
-        </h2>
-
-        {/* PRICE */}
-        <div className="mt-4 flex flex-wrap items-center gap-3">
-          <span className="text-2xl text-slate-400 line-through">
-            €499 + VAT
-          </span>
-
-          <span className="text-4xl font-bold text-orange-600">
-            €349.3 + VAT
-          </span>
-        </div>
-
-        <p className="mt-4 text-base text-gray-600 sm:text-lg">
-          Complete digital ordering system including QR menu, POS integration
-          and live order management for restaurants.
-        </p>
-
-        {/* FEATURES */}
-        <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-          <h4 className="text-lg font-semibold text-gray-900">
-            What's Included
-          </h4>
-
-          <ul className="mt-4 space-y-3 text-gray-700">
-            <li>• Restaurant POS System</li>
-            <li>• QR Ordering & Online Ordering</li>
-            <li>• Kitchen Display System (KDS)</li>
-            <li>• Inventory & Workforce Management</li>
-            <li>• HQ Multi-Location Control Center</li>
-            <li>• Analytics Cloud Dashboard</li>
-          </ul>
-        </div>
-
-        {/* DEADLINE */}
-        <div className="mt-8 rounded-2xl border border-red-200 bg-red-50 p-6">
-          <p className="text-sm uppercase tracking-widest text-red-700">
-            30% Discount Ends Sept 30
-          </p>
-
-          <div className="mt-2 text-3xl font-bold text-gray-900">
-            Sept 30
+                <p className="mt-2 text-sm leading-relaxed text-gray-500">
+                  Smart ordering for modern businesses.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <p className="mt-2 text-gray-700">
-            Valid only for new subscribers with payment completed before Sept
-            30, 2026.
-          </p>
-        </div>
+          {/* OFFER DETAILS */}
+          <div className="min-w-0">
+            <div className="inline-flex rounded-full bg-[#88d21a]/15 px-4 py-2 text-xs font-bold uppercase tracking-wide text-[#477d0a] sm:text-sm">
+              Limited-Time Promotion
+            </div>
 
-        {/* CTA */}
-        <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-          <Button href="/request-demo?type=proforma&offer=new-subscriber-30">
-            Claim New Subscriber Offer
-          </Button>
+            <h2
+              id="offer-details-heading"
+              className="mt-5 text-3xl font-black leading-tight tracking-tight text-gray-900 sm:mt-6 sm:text-5xl"
+            >
+              Buy the kiosk.
+              <span className="mt-2 block text-[#65a914]">
+                Get these benefits.
+              </span>
+            </h2>
 
-          <a
-            href="tel:+38348106060"
-            className="inline-flex items-center justify-center rounded-full border border-gray-300 px-6 py-3 font-medium text-gray-900 transition hover:bg-gray-50"
-          >
-            Call Sales
-          </a>
-        </div>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-gray-600 sm:text-base">
+              Upgrade your ordering experience with
+              HOXXES and enjoy more value with your
+              purchase.
+            </p>
 
-      </div>
-
-      {/* RIGHT */}
-      <div className="flex items-center justify-center bg-gradient-to-br from-slate-50 to-orange-50 p-6 sm:p-10">
-
-        <div className="relative overflow-hidden rounded-3xl">
-          <img
-            src="https://hoxxes.app/images/pos-login.png"
-            alt="HOXXES POS System"
-            className="w-full object-contain"
-          />
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</section>
-
-        {/* Main Offer */}
-      <section className="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:py-20">
-        <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2">
-            {/* Left */}
-            <div className="p-6 sm:p-8 lg:p-14">
-              <div className="inline-flex items-center rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-600">
-                Offer Ends Sept 30
+            {/* BENEFIT 1 */}
+            <div className="mt-7 flex items-start gap-3 rounded-2xl border border-gray-200 p-4 sm:gap-4 sm:p-6">
+              <div
+                aria-hidden="true"
+                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#88d21a]/15 text-2xl sm:h-14 sm:w-14"
+              >
+                🎁
               </div>
 
-              <h2 className="mt-8 text-3xl font-bold text-gray-900 sm:text-4xl">
-  2 Self-Service Kiosks
-</h2>
-
-<div className="mt-4 text-4xl font-bold text-emerald-600">
-  €2,118 + VAT
-</div>
-
-              <p className="mt-4 text-base text-gray-600 sm:text-lg">
-                Receive 2 wall-mounted self-service kiosks and enjoy
-                12 months of HOXXES software at no additional cost.
-              </p>
-
-              <div className="mt-8 rounded-2xl border border-green-200 bg-green-50 p-6">
-                <p className="text-xs font-medium uppercase tracking-widest text-green-700">
-                  Included
+              <div className="min-w-0">
+                <p className="text-[10px] font-bold uppercase tracking-wider text-[#65a914] sm:text-xs">
+                  Complimentary Gift
                 </p>
 
-                <h3 className="mt-2 text-xl font-bold text-green-700 sm:text-2xl">
-                  12 Months FREE Subscription
+                <h3 className="mt-1 text-xl font-black text-gray-900 sm:text-2xl">
+                  Android Stick 8K
                 </h3>
 
-                <p className="mt-2 text-sm text-green-700">
-                  Save on software costs during your first year.
+                <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                  Get an Android Stick 8K at no additional
+                  cost for your Order Display System (ODS),
+                  with the purchase of an eligible kiosk.
                 </p>
-              </div>
-
-              {/* Benefits */}
-<div className="mt-10">
-  <h4 className="text-lg font-semibold text-gray-900">
-    Why This Offer
-  </h4>
-
-  <div className="mt-6 grid gap-4 sm:grid-cols-2">
-    <div className="rounded-2xl border border-gray-200 p-5 font-medium text-gray-800">
-      ✓ Reduce Waiting Lines
-    </div>
-
-    <div className="rounded-2xl border border-gray-200 p-5 font-medium text-gray-800">
-      ✓ Increase Order Volume
-    </div>
-
-    <div className="rounded-2xl border border-gray-200 p-5 font-medium text-gray-800">
-      ✓ Improve Customer Experience
-    </div>
-
-    <div className="rounded-2xl border border-gray-200 p-5 font-medium text-gray-800">
-      ✓ Fully Integrated with POS & Kitchen
-    </div>
-  </div>
-</div>
-
-              {/* Included */}
-              <div className="mt-10 rounded-2xl border border-gray-200 bg-gray-50 p-6">
-                <h4 className="text-lg font-semibold text-gray-900">
-                  What's Included
-                </h4>
-
-                <ul className="mt-4 space-y-3 text-gray-700">
-                  <li>• 2 Wall-Mounted Self-Service Kiosks</li>
-                  <li>• HOXXES Software License</li>
-                  <li>• POS Integration</li>
-                  <li>• Kitchen Display Integration</li>
-                  <li>• Installation & Configuration</li>
-                  <li>• Delivery & Deployment</li>
-                </ul>
-              </div>
-
-              {/* Deadline */}
-              <div className="mt-10 rounded-2xl border border-red-200 bg-red-50 p-6">
-                <p className="text-sm uppercase tracking-widest text-red-700">
-                  Only Available Until Sept 30
-                </p>
-
-                <div className="mt-2 text-3xl font-bold text-gray-900">
-                  Sept 30
-                </div>
-
-                <p className="mt-2 text-gray-700">
-                  Offer valid only for payments completed before Sept 30, 2026.
-                </p>
-              </div>
-
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <Button href="/request-demo?type=proforma&offer=kiosk-bundle">
-  Request Proforma Invoice
-</Button>
-
-                <a
-              href="tel:+38348106060"
-              className="inline-flex items-center justify-center rounded-full border border-gray-300 px-6 py-3 font-medium text-gray-900 transition hover:bg-gray-50"
-            >
-              Call Sales
-            </a>
               </div>
             </div>
 
-            {/* Right */}
-<div className="flex flex-col items-center justify-center gap-6 bg-gradient-to-br from-slate-50 to-emerald-50 p-6 sm:p-10">
+            {/* BENEFIT 2 */}
+            <div className="mt-4 flex items-start gap-3 rounded-2xl border border-[#88d21a]/40 bg-[#88d21a]/5 p-4 sm:gap-4 sm:p-6">
+              <div
+                aria-hidden="true"
+                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#88d21a]/20 text-2xl font-black text-[#477d0a] sm:h-14 sm:w-14"
+              >
+                %
+              </div>
 
-  {/* Product Photo */}
-  <div className="w-full max-w-[500px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-    <img
-      src="https://hoxxes.app/images/kiosk.svg"
-      alt="HOXXES Self-Service Kiosk"
-      className="w-full object-contain"
-    />
-  </div>
+              <div className="min-w-0">
+                <p className="text-[10px] font-bold uppercase tracking-wider text-[#65a914] sm:text-xs">
+                  Online Exclusive
+                </p>
 
-  {/* Technical Drawing */}
-  <a
-    href="https://hoxxes.app/images/kiosk-slim-dimensions.png"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="block"
-  >
-    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-      <img
-        src="https://hoxxes.app/images/kiosk-slim-dimensions.png"
-        alt="HOXXES Kiosk Dimensions"
-        className="w-full max-w-[650px] object-contain transition hover:scale-[1.02]"
-      />
-    </div>
+                <h3 className="mt-1 text-3xl font-black text-gray-900 sm:text-4xl">
+                  10% OFF
+                </h3>
 
-    <p className="mt-2 text-center text-xs text-slate-500">
-      Click to enlarge
-    </p>
-  </a>
+                <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                  Enjoy an additional 10% online discount
+                  on eligible kiosk purchases through
+                  the HOXXES Hardware store.
+                </p>
+              </div>
+            </div>
 
-</div>
+            {/* VALIDITY */}
+            <div className="mt-6 flex items-start gap-3 text-sm text-gray-500">
+              <span aria-hidden="true" className="text-xl">
+                📅
+              </span>
 
+              <div>
+                <strong className="text-gray-900">
+                  {OFFER.period}
+                </strong>
+                <span className="mt-1 block">
+                  Promotional period
+                </span>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-7 w-full sm:w-auto">
+              <Button href={OFFER.hardwareUrl}>
+                Shop Now &amp; Save 10%
+              </Button>
+            </div>
+
+            <p className="mt-4 text-xs leading-relaxed text-gray-400">
+              Offer applies to eligible kiosk models
+              and purchases made during the promotional
+              period. Discount eligibility, gift
+              fulfillment and applicable terms must be
+              confirmed at checkout.
+            </p>
           </div>
         </div>
       </section>
-      {/* Holobox Offer */}
-<section className="mx-auto max-w-7xl px-6 pb-16">
-  <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl">
-    <div className="grid grid-cols-1 lg:grid-cols-2">
 
-      {/* Left */}
-      <div className="p-6 sm:p-8 lg:p-14">
+      {/* HOW IT WORKS */}
+      <section className="border-y border-gray-100 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#65a914] sm:text-sm sm:tracking-[0.2em]">
+              Simple. Smart. Online.
+            </p>
 
-        <div className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-700">
-          40% OFF • LIMITED OFFER
-        </div>
-
-        <div className="mt-6 flex items-center gap-3">
-          <span className="text-2xl text-slate-400 line-through">
-            €10,000 + VAT
-          </span>
-
-          <span className="text-4xl font-bold text-emerald-600">
-            €6,000 + VAT
-          </span>
-        </div>
-
-        <p className="mt-2 text-sm font-medium text-emerald-600">
-          Save €4,000 • 40% OFF
-        </p>
-
-        <h2 className="mt-8 text-3xl font-bold text-gray-900 sm:text-4xl">
-          HoloBox 86" Transparent Display
-        </h2>
-
-        <p className="mt-4 text-base text-gray-600 sm:text-lg">
-          Premium transparent display designed for product showcases,
-          exhibitions, retail environments and immersive brand experiences.
-        </p>
-
-        {/* Specifications */}
-        <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-          <h4 className="text-lg font-semibold text-gray-900">
-            Specifications
-          </h4>
-
-          <ul className="mt-4 space-y-3 text-gray-700">
-            <li>• 86" Transparent LCD</li>
-            <li>• 4K UHD (3840 × 2160)</li>
-            <li>• 208.2 × 124.3 × 60 cm</li>
-            <li>• 220V Power</li>
-          </ul>
-        </div>
-
-        {/* Included */}
-        <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-          <h4 className="text-lg font-semibold text-gray-900">
-            What's Included
-          </h4>
-
-          <ul className="mt-4 space-y-3 text-gray-700">
-            <li>• 86" Touch LCD Display</li>
-            <li>• Integrated Mini PC</li>
-            <li>• Windows OS</li>
-            <li>• 1 Year Warranty</li>
-          </ul>
-        </div>
-
-        {/* Unique */}
-        <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-6">
-          <p className="text-xs font-medium uppercase tracking-widest text-amber-700">
-            Unique in Kosovo
-          </p>
-
-          <h3 className="mt-2 text-xl font-bold text-amber-700 sm:text-2xl">
-            The Only Holobox Available in Kosovo
-          </h3>
-
-          <p className="mt-2 text-sm text-amber-700">
-            Demo unit in excellent condition with 1 year technical warranty.
-          </p>
-        </div>
-
-        {/* Deadline */}
-        <div className="mt-8 rounded-2xl border border-red-200 bg-red-50 p-6">
-          <p className="text-sm uppercase tracking-widest text-red-700">
-            Offer Ends Sept 30
-          </p>
-
-          <div className="mt-2 text-3xl font-bold text-gray-900">
-            Sept 30
+            <h2 className="mt-4 text-3xl font-black tracking-tight text-gray-900 sm:text-4xl">
+              Get your offer in 3 steps.
+            </h2>
           </div>
 
-          <p className="mt-2 text-gray-700">
-            Former showroom price €10,000 + VAT. Available now for only
-            €6,000 + VAT until Sept 30.
-          </p>
-        </div>
+          <div className="mt-9 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+            {steps.map((step) => (
+              <div
+                key={step.number}
+                className="rounded-3xl border border-gray-200 bg-white p-6 sm:p-7"
+              >
+                <span className="text-4xl font-black text-[#88d21a]">
+                  {step.number}
+                </span>
 
-        {/* CTA */}
-        <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-          <Button href="/contact-sales">
-            Request Offer
-          </Button>
+                <h3 className="mt-4 text-lg font-bold text-gray-900 sm:mt-5 sm:text-xl">
+                  {step.title}
+                </h3>
 
-          <a
-            href="tel:+38348106060"
-            className="inline-flex items-center justify-center rounded-full border border-gray-300 px-6 py-3 font-medium text-gray-900 transition hover:bg-gray-50"
-          >
-            Call Sales
-          </a>
-        </div>
+                <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
 
-      </div>
-
-      {/* Right */}
-<div className="flex flex-col items-center justify-center gap-6 bg-gradient-to-br from-slate-50 to-amber-50 p-6 sm:p-10">
-
-    {/* Product Photo */}
-  <div className="w-full max-w-[500px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-    <img
-      src="https://hoxxes.app/images/holo.png"
-      alt='HOXXES HoloBox 86-inch Transparent Display'
-      className="w-full object-contain"
-    />
-  </div>
-
-  {/* Technical Drawing */}
-  <a
-    href="https://hoxxes.app/images/holo-dimensions.png"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="block"
-  >
-    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-      <img
-        src="https://hoxxes.app/images/holo-dimensions.png"
-        alt="Holobox Dimensions"
-        className="w-full max-w-[650px] object-contain transition hover:scale-[1.02]"
-      />
-    </div>
-
-    <p className="mt-2 text-center text-xs text-slate-500">
-      Click to enlarge
-    </p>
-  </a>
-
-</div>
-
-    </div>
-  </div>
-</section>
-      
-
-      {/* Contact */}
-      <section className="border-t border-gray-100 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 py-16 text-center sm:py-20">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-  Reserve Before Sept 30 to Secure Your Offer
-</h2>
-
-<p className="mx-auto mt-6 max-w-2xl text-base text-gray-600 sm:text-lg">
-  Limited-time offers available while stock and promotional inventory last.
-</p>
-
-        
-          <div className="mt-10">
-            <Button href="/contact-sales">
-              Contact Sales
+          <div className="mx-auto mt-9 w-full max-w-md text-center sm:mt-10 sm:max-w-none">
+            <Button href={OFFER.hardwareUrl}>
+              Explore HOXXES Hardware
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* FOOTER CTA */}
+      <section className="overflow-hidden bg-[#071b08] px-4 py-14 text-center text-white sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="text-3xl font-black leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            Ready to upgrade your business?
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/70 sm:mt-5 sm:text-base">
+            Discover smarter ordering with HOXXES.
+            Shop online during our promotional week.
+          </p>
+
+          <div className="mt-7">
+            <Button href={OFFER.hardwareUrl}>
+              Buy Your Kiosk Online
+            </Button>
+          </div>
+
+          <p className="mt-8 text-xs text-white/50 sm:text-sm">
+            HOXXES — Smart Ordering. Smarter Business.
+          </p>
         </div>
       </section>
     </main>

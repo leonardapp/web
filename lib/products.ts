@@ -29,12 +29,12 @@ export const products: Product[] = [
     title: "Kiosk Slim",
     subtitle: '32" Wall Mounted Self-Service Kiosk',
     description: "Space-saving kiosk fully integrated with HOXXES.",
-    image: "https://hoxxes.app/images/kiosk.svg",
+    image: "https://hoxxes.app/images/kiosk1.png",
     price: 1185,
     stock: 5,
     vat: 18,
     availability: "in-stock",
-    leadTime: "3 Months",
+    leadTime: "Up to 2 Months",
   },
 
   {
@@ -48,7 +48,7 @@ export const products: Product[] = [
     stock: 0,
     vat: 18,
     availability: "in-stock",
-    leadTime: "3 Months",
+    leadTime: "Up to 2 Months",
   },
 
   {
@@ -62,7 +62,7 @@ export const products: Product[] = [
   stock: 0,
   vat: 18,
   availability: "in-stock",
-  leadTime: "3 Months",
+  leadTime: "Up to 2 Months",
 },
 
 {
@@ -77,6 +77,6 @@ export const products: Product[] = [
   stock: 0,
   vat: 18,
   availability: "in-stock",
-  leadTime: "3 Months",
+  leadTime: "Up to 2 Months",
 },
 ];
