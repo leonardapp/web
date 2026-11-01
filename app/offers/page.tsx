@@ -14,7 +14,7 @@ const OFFER = {
   period: "November 2–8, 2026",
   hardwareUrl: "/hardware",
   contactPhone: "+38348106060",
-  productImage: "https://hoxxes.app/images/kiosk.png",
+  productImage: "https://hoxxes.app/images/kiosk1.png",
 };
 
 const steps = [
