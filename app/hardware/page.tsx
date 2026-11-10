@@ -377,14 +377,14 @@ export default function HardwarePage() {
                               className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-full bg-[#88d21a] px-4 text-sm font-semibold text-[#17210c] transition hover:bg-[#9be62c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
                             >
                               {item.availability === "in-stock" ? "View & Buy" : "Order Details"}
-                              <span aria-hidden="true">→</span>
+                              
                             </Link>
                           ) : (
                             <Link
                               href="/contact-sales"
                               className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-full bg-[#88d21a] px-4 text-sm font-semibold text-[#17210c] transition hover:bg-[#9be62c]"
                             >
-                              Enquire Now <span aria-hidden="true">→</span>
+                              Enquire Now 
                             </Link>
                           )}
                           <Link
@@ -447,7 +447,7 @@ export default function HardwarePage() {
               href="/contact-sales"
               className="mt-8 inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#88d21a] px-6 font-semibold text-[#17210c] transition hover:bg-[#9be62c]"
             >
-              Talk to Sales <span aria-hidden="true">↗</span>
+              Talk to Sales 
             </Link>
           </div>
 
@@ -485,14 +485,9 @@ export default function HardwarePage() {
                 href="/contact-sales"
                 className="inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#88d21a] px-7 font-semibold text-[#17210c] transition hover:bg-[#9be62c]"
               >
-                Request a Quote <span aria-hidden="true">↗</span>
+                Request a Quote 
               </Link>
-              <Link
-                href="/request-demo"
-                className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/25 px-7 font-semibold text-white transition hover:border-white/50 hover:bg-white/5"
-              >
-                Request Demo
-              </Link>
+              
             </div>
           </div>
         </div>

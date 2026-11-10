@@ -45,13 +45,7 @@ export default function PricingPage() {
   multi-location operations, with the full HOXXES platform included.
 </p>
 <div className="mt-12 flex flex-col justify-center gap-3 sm:flex-row">
-  <Link
-    href="/request-demo"
-    className="rounded-full bg-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#17210c] shadow-sm transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
-  >
-    Request Demo
-  </Link>
-
+  
   <Link
     href="#pricing-calculator"
     className="rounded-full border border-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
@@ -330,10 +324,14 @@ Core platform capabilities are included with every subscription.
       <div className="text-sm text-slate-500">€399 / year</div>
     </div>
 
-    <div className="border rounded-2xl p-5">
-      <div className="font-medium">10+ Locations</div>
-      <div className="text-sm text-slate-500">€349 / year</div>
-    </div>
+    <div className="relative border border-[#88d21a] rounded-2xl p-5">
+  <span className="absolute -top-3 right-4 rounded-full bg-[#88d21a] px-3 py-1 text-xs font-semibold text-[#17210c]">
+    Best Price
+  </span>
+
+  <div className="font-medium">10+ Locations</div>
+  <div className="text-sm text-slate-500">€349 / year</div>
+</div>
 
   </div>
 </section>
@@ -342,38 +340,33 @@ Core platform capabilities are included with every subscription.
 
   <div className="text-center">
     <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
-      Platform Modules
+      Included platform modules
     </div>
 
     <h2 className="mt-4 text-3xl font-semibold">
-      Activate the modules you need.
+      The modules you need are included.
     </h2>
 
     <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
-  Connected modules are available across the HOXXES platform
-  and can be activated based on your operational requirements.
-</p>
+      The HOXXES modules shown below are included in your annual platform
+      license — no separate module subscription fees.
+    </p>
   </div>
 
-  <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-12">
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-5xl mx-auto">
 
-    {[
-  "Kitchen Display System",
-  "Customer Display System",
-  "Self-Service Kiosk",
-  "Caller ID",
-  "Payment Terminal Integration",
-].map((item, i, arr) => (
-  <div
-    key={item}
-    className={`rounded-2xl border border-slate-200 p-5 bg-slate-50
-min-h-[120px] flex flex-col items-center justify-center text-center
-${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
-`}
-    
-  >
-    <div className="text-sm font-medium">
-      {item}
+  {[
+    "Kitchen Display System",
+    "Customer Display System",
+    "Self-Service Kiosk",
+    "Caller ID",
+  ].map((item) => (
+    <div
+      key={item}
+      className="rounded-2xl border border-slate-200 p-5 bg-slate-50 min-h-[120px] flex flex-col items-center justify-center text-center"
+    >
+      <div className="text-sm font-medium">
+        {item}
     </div>
 
     {item === "Payment Terminal Integration" && (
@@ -389,18 +382,33 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
 </section>
       
 
-      {/* ADD-ONS */}
+      {/* ADDITIONAL SERVICES */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
+        <div className="mb-12 text-center">
+          <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+            Additional services
+          </div>
+
+          <h2 className="mt-4 text-3xl font-semibold">
+            Extra support when you need it.
+          </h2>
+
+          <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
+            The platform modules are included in your license. Only the
+            additional services below are charged separately.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
           {/* SUPPORT */}
           <div className="border rounded-3xl p-6 sm:p-8 bg-slate-50 text-center">
             <h3 className="text-lg font-semibold">
-              Operational Assistance
+              Additional Assistance
             </h3>
 
             <p className="text-sm text-slate-500 mt-2">
-              5 hours monthly support for operations & training
+              Optional 5 hours of monthly operational support and training.
             </p>
 
             <div className="mt-4 text-xl font-semibold">
@@ -415,19 +423,25 @@ ${i === arr.length - 1 ? "col-span-2 md:col-span-1" : ""}
 </Link>
           </div>
 
-          {/* TOKEN */}
+          {/* BANK POS INTEGRATION */}
           <div className="border rounded-3xl p-6 sm:p-8 text-center">
-            <h3 className="text-lg font-semibold">
-              POS Payment Token
+            
+
+            <h3 className="mt-3 text-lg font-semibold">
+              Bank POS Integration
             </h3>
 
             <p className="text-sm text-slate-500 mt-2">
-              Required for each kiosk or POS device handling payments
+              Connect your bank POS terminal directly with the HOXXES platform.
             </p>
 
-            <div className="mt-4 text-sm font-medium">
-              Payment terminal integration licensing
+            <div className="mt-4 text-sm font-semibold text-slate-800">
+              One-time implementation fee
             </div>
+
+            <p className="mt-2 text-xs text-slate-400">
+              Pricing depends on the bank implementation model.
+            </p>
 
             <Link
   href="/contact-sales"
@@ -454,12 +468,7 @@ modern hospitality and retail operations.
 </p>
 
  <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-  <Link
-    href="/request-demo"
-    className="inline-flex w-auto items-center justify-center rounded-full bg-[#88d21a] px-5 py-2 text-sm font-medium text-[#17210c] transition hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
-  >
-    Request Demo
-  </Link>
+  
 
   <Link
     href="/contact-sales"
