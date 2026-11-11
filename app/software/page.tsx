@@ -322,14 +322,14 @@ function QRStoryCard() {
   ];
 
   return (
-    <article id="qr-ordering" className="scroll-mt-24 overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white p-5 shadow-[0_10px_36px_rgba(15,23,42,.05)] sm:p-7 lg:p-9 md:col-span-2 xl:col-span-3">
+    <article id="qr-ordering" className="scroll-mt-24 col-span-full w-full max-w-none min-w-0 overflow-hidden rounded-[1.5rem] border border-slate-200/80 bg-white p-4 shadow-[0_10px_36px_rgba(15,23,42,.05)] sm:rounded-[2rem] sm:p-7 lg:p-9">
       <div className="mx-auto mb-8 max-w-2xl text-center sm:mb-10">
         <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#5d9510] sm:text-xs">QR Ordering</p>
         <h2 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl lg:text-4xl">One scan. Endless possibilities.</h2>
         <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">A smarter dining experience for your guests and complete control for your business — all connected through one QR system.</p>
       </div>
 
-      <div className="grid items-stretch gap-4 md:grid-cols-3 md:gap-5">
+      <div className="grid w-full min-w-0 items-stretch gap-4 md:grid-cols-3 md:gap-5">
         <section className="flex min-w-0 flex-col overflow-hidden rounded-[1.5rem] border border-slate-200/80 bg-[#fbfcf9] p-4 sm:p-5">
           <div className="mb-4 flex items-center gap-3"><span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#eaf6d9] text-xs font-bold text-[#527f12]">01</span><div><p className="text-xs font-semibold uppercase tracking-wider text-[#5d9510]">Scan</p><h3 className="text-base font-semibold text-slate-900">Scan & Discover</h3></div></div>
           <div className="relative min-h-[320px] flex-1 overflow-hidden rounded-2xl bg-[#eef4e7] sm:min-h-[360px]">
@@ -363,6 +363,35 @@ function QRStoryCard() {
               </div>
             ))}
           </div>
+
+          {/* REPEAT ORDERS & COUNTER ALERT */}
+          <div className="mt-4 rounded-xl border border-[#88d21a]/25 bg-white p-3 shadow-sm">
+            <div className="flex items-start gap-2.5">
+              <span className="relative mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#f0f8e5] text-[#5d9510]">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+                  <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9" />
+                  <path d="M10 21h4" />
+                </svg>
+                <span className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[9px] font-bold text-white">1</span>
+              </span>
+              <div className="min-w-0">
+                <h4 className="text-sm font-semibold text-slate-900">Order Again, Anytime</h4>
+                <p className="mt-1 text-xs leading-5 text-slate-500">
+                  New orders ring at the counter and are added to the same table.
+                </p>
+              </div>
+            </div>
+            <div className="mt-3 flex items-center justify-between gap-2 rounded-lg bg-[#f7faf3] px-2.5 py-2">
+              <div className="flex min-w-0 items-center gap-2">
+                <span className="h-2 w-2 shrink-0 rounded-full bg-[#88d21a]" />
+                <span className="truncate text-[10px] font-medium text-slate-600">New order received</span>
+              </div>
+              <span className="flex shrink-0 items-center gap-1.5 text-[10px] text-slate-500">
+                Table 04
+                <span className="flex h-4 min-w-4 items-center justify-center rounded-full bg-red-500 px-1 text-[9px] font-bold text-white">1</span>
+              </span>
+            </div>
+          </div>
         </section>
 
         <section className="flex min-w-0 flex-col rounded-[1.5rem] border border-slate-200/80 bg-[#fbfcf9] p-4 sm:p-5">
@@ -377,7 +406,7 @@ function QRStoryCard() {
           </div>
           <p className="mt-4 text-sm leading-6 text-slate-600">No technical assistance. No waiting. Full control from your Back Office.</p>
           <a href="https://qr.hoxxes.com/qr/SSI718JKZ770" target="_blank" rel="noopener noreferrer" className={`${getExternalLinkClasses("primary")} mt-auto`}>
-            Explore Live Menu <span aria-hidden="true">↗</span>
+            Explore Live Menu
           </a>
         </section>
       </div>

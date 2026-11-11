@@ -202,7 +202,7 @@ export default function HomePage() {
     </motion.div>
 
     {/* STORY GRID */}
-    <div className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-3">
+    <div className="grid grid-cols-1 items-stretch gap-4 sm:gap-5 md:grid-cols-3">
 
       {/* STEP 01 — SCAN */}
       <motion.div
@@ -210,9 +210,9 @@ export default function HomePage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.55 }}
-        className="flex h-full flex-col overflow-hidden rounded-[28px] border border-slate-200/80 bg-white"
+        className="flex h-full flex-col overflow-hidden rounded-[24px] border border-slate-200/80 bg-white sm:rounded-[28px]"
       >
-        <div className="p-6 sm:p-7">
+        <div className="p-5 sm:p-7">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold tracking-[0.2em] text-[#52820f]">
               STEP 01
@@ -230,13 +230,29 @@ export default function HomePage() {
             One simple scan opens your digital menu instantly.
             No app installation. No waiting.
           </p>
+
+          {/* QUICK SCAN HIGHLIGHT */}
+          <div className="mt-6 flex items-center gap-3 rounded-2xl border border-[#88d21a]/15 bg-[#f8faf6] p-3.5 sm:mt-7 sm:p-4">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-[#52820f] shadow-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                <path d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4" />
+                <rect x="8" y="8" width="8" height="8" rx="1" />
+                <path d="M10.5 10.5h3v3h-3z" />
+              </svg>
+            </div>
+            <div className="min-w-0">
+              <p className="text-sm font-semibold text-[#17210c]">Your menu, one scan away</p>
+              <p className="mt-1 text-xs leading-5 text-slate-500">Guests scan the table QR and start browsing instantly.</p>
+            </div>
+            <span className="ml-auto h-2.5 w-2.5 shrink-0 rounded-full bg-[#88d21a] shadow-[0_0_0_4px_rgba(136,210,26,0.12)]" />
+          </div>
         </div>
 
         {/* PHONE VISUAL */}
-        <div className="relative mt-auto flex min-h-[310px] items-end justify-center overflow-hidden bg-[#f6f9f1] px-6 pt-6">
+        <div className="relative mt-auto flex min-h-[230px] items-end justify-center overflow-hidden bg-[#f6f9f1] px-5 pt-5 sm:min-h-[310px] sm:px-6 sm:pt-6">
           <div className="absolute left-1/2 top-10 h-52 w-52 -translate-x-1/2 rounded-full bg-[#88d21a]/15 blur-3xl" />
 
-          <div className="relative w-[190px] overflow-hidden rounded-t-[30px] border-[5px] border-b-0 border-[#17210c] bg-white shadow-[0_15px_45px_rgba(23,33,12,0.16)] sm:w-[205px]">
+          <div className="relative w-[150px] overflow-hidden rounded-t-[26px] border-[4px] border-b-0 border-[#17210c] bg-white shadow-[0_15px_45px_rgba(23,33,12,0.16)] sm:w-[205px] sm:rounded-t-[30px] sm:border-[5px]">
             <img
               src="https://hoxxes.app/images/qr-menu.jpg"
               alt="HOXXES digital menu displayed on a smartphone"
@@ -260,9 +276,9 @@ export default function HomePage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.55, delay: 0.12 }}
-        className="flex h-full flex-col overflow-hidden rounded-[28px] border border-slate-200/80 bg-white"
+        className="flex h-full flex-col overflow-hidden rounded-[24px] border border-slate-200/80 bg-white sm:rounded-[28px]"
       >
-        <div className="p-6 sm:p-7">
+        <div className="p-5 sm:p-7">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold tracking-[0.2em] text-[#52820f]">
               STEP 02
@@ -277,16 +293,15 @@ export default function HomePage() {
           </h3>
 
           <p className="mt-3 min-h-[72px] text-sm leading-6 text-slate-500">
-            Everything guests need is right at their fingertips,
-            directly from their table.
+            Browse the menu and order anytime from the table.
           </p>
         </div>
 
         {/* CUSTOMER ACTIONS */}
-        <div className="mt-auto flex flex-1 flex-col justify-center gap-3 bg-[#f6f9f1] p-6 sm:p-7">
+        <div className="mt-auto flex flex-1 flex-col justify-center gap-2.5 bg-[#f6f9f1] p-5 sm:gap-3 sm:p-7">
 
           {/* MENU */}
-          <div className="flex items-center gap-4 rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+          <div className="flex items-center gap-3 rounded-2xl border border-slate-100 bg-white p-3 shadow-sm sm:gap-4 sm:p-4">
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#f5fce9] text-[#52820f]">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-5 w-5">
                 <path d="M5 4.5A2.5 2.5 0 0 1 7.5 2H20v17H7.5A2.5 2.5 0 0 0 5 21.5z" />
@@ -300,7 +315,7 @@ export default function HomePage() {
           </div>
 
           {/* ORDER */}
-          <div className="flex items-center gap-4 rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+          <div className="flex items-center gap-3 rounded-2xl border border-slate-100 bg-white p-3 shadow-sm sm:gap-4 sm:p-4">
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#f5fce9] text-[#52820f]">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
                 <path d="M3 8h18M4 8l1-2h14l1 2M12 8v10M8 20h8" />
@@ -313,7 +328,7 @@ export default function HomePage() {
           </div>
 
           {/* WAITER */}
-          <div className="flex items-center gap-4 rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+          <div className="flex items-center gap-3 rounded-2xl border border-slate-100 bg-white p-3 shadow-sm sm:gap-4 sm:p-4">
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#f5fce9] text-[#52820f]">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
                 <path d="M12 3v3M5 8h14M7 8l-2 12h14L17 8" />
@@ -327,7 +342,7 @@ export default function HomePage() {
           </div>
 
           {/* BILL */}
-          <div className="flex items-center gap-4 rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+          <div className="flex items-center gap-3 rounded-2xl border border-slate-100 bg-white p-3 shadow-sm sm:gap-4 sm:p-4">
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#f5fce9] text-[#52820f]">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-5 w-5">
                 <rect x="5" y="2.5" width="14" height="19" rx="2" />
@@ -340,6 +355,45 @@ export default function HomePage() {
             </div>
           </div>
 
+          {/* REPEAT ORDERS — COUNTER NOTIFICATION */}
+          <div className="rounded-2xl border border-[#88d21a]/20 bg-white p-3 shadow-sm sm:p-4">
+            <div className="flex items-start gap-3">
+              <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#f5fce9] text-[#52820f]">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                  <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9" />
+                  <path d="M10 21h4" />
+                </svg>
+                <span className="absolute -right-1 -top-1 h-2.5 w-2.5 rounded-full border-2 border-white bg-red-500" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <h4 className="text-sm font-semibold text-[#17210c]">Order Again, Anytime</h4>
+                <p className="mt-1 text-xs leading-5 text-slate-500">
+                  Order again anytime. The counter gets a bell alert, and each order is added to the same table.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-3 flex items-center justify-between gap-3 rounded-xl bg-[#f8faf6] px-3 py-2.5">
+              <div className="flex min-w-0 items-center gap-2">
+                <span className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white text-[#52820f] shadow-sm">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+                    <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9" />
+                    <path d="M10 21h4" />
+                  </svg>
+                  <span className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[9px] font-bold text-white">1</span>
+                </span>
+                <div className="min-w-0">
+                  <p className="text-[11px] font-semibold text-[#17210c]">New order received</p>
+                  <p className="text-[10px] text-slate-500">Counter notification</p>
+                </div>
+              </div>
+              <div className="flex shrink-0 items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-2.5 py-1.5">
+                <span className="text-[10px] font-medium text-slate-500">Table 04</span>
+                <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-bold text-white">1</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </motion.div>
 
@@ -349,9 +403,9 @@ export default function HomePage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.55, delay: 0.24 }}
-        className="flex h-full flex-col overflow-hidden rounded-[28px] border border-slate-200/80 bg-white"
+        className="flex h-full flex-col overflow-hidden rounded-[24px] border border-slate-200/80 bg-white sm:rounded-[28px]"
       >
-        <div className="p-6 sm:p-7">
+        <div className="p-5 sm:p-7">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold tracking-[0.2em] text-[#52820f]">
               STEP 03
@@ -371,9 +425,9 @@ export default function HomePage() {
         </div>
 
         {/* MANAGEMENT VISUAL */}
-        <div className="flex flex-1 flex-col bg-[#f6f9f1] p-6 sm:p-7">
+        <div className="flex flex-1 flex-col bg-[#f6f9f1] p-5 sm:p-7">
 
-          <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm">
+          <div className="rounded-2xl border border-slate-200/80 bg-white p-3.5 shadow-sm sm:p-4">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#88d21a]/15 text-[#52820f]">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-5 w-5">
@@ -392,7 +446,7 @@ export default function HomePage() {
               </span>
             </div>
 
-            <div className="mt-5 space-y-3">
+            <div className="mt-4 space-y-2 sm:mt-5 sm:space-y-3">
               <div className="flex items-center justify-between rounded-xl bg-[#f8faf6] p-3">
                 <div>
                   <p className="text-xs font-semibold text-[#17210c]">Static QR Code</p>
@@ -410,7 +464,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="mt-4 grid grid-cols-2 gap-2">
+            <div className="mt-3 grid grid-cols-2 gap-x-2 gap-y-1.5 sm:mt-4 sm:gap-2">
               {[
                 "Instant activation",
                 "4 download styles",
@@ -427,13 +481,13 @@ export default function HomePage() {
             </div>
           </div>
 
-          <p className="mt-4 text-center text-xs leading-5 text-[#52820f]">
+          <p className="mt-3 text-center text-xs leading-5 text-[#52820f] sm:mt-4">
             No technical assistance. No waiting. Full control from your Back Office.
           </p>
 
           {/* LIVE DEMO */}
-          <div className="mt-auto pt-6">
-            <div className="flex items-center gap-4 rounded-2xl bg-[#17210c] p-4 text-white">
+          <div className="mt-4 pt-2 sm:mt-auto sm:pt-6">
+            <div className="flex items-center gap-3 rounded-2xl bg-[#17210c] p-3.5 text-white sm:gap-4 sm:p-4">
               <div className="shrink-0 rounded-lg bg-white p-2">
                 <QRCodeSVG
                   value="https://qr.hoxxes.com/qr/SSI718JKZ770"
