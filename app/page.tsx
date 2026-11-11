@@ -168,11 +168,13 @@ export default function HomePage() {
 <FeaturesGrid />
 
 
-{/* QR ORDERING & TABLE MANAGEMENT */}
+
+
+{/* QR ORDERING — 3 STEP STORY */}
 
 <section
   id="qr-ordering"
-  className="relative overflow-hidden bg-transparent py-20 sm:py-32"
+  className="relative overflow-hidden bg-transparent py-20 sm:py-24"
 >
   <div className="mx-auto max-w-7xl px-6">
 
@@ -180,275 +182,295 @@ export default function HomePage() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="mx-auto mb-16 max-w-3xl text-center"
+      className="mx-auto mb-14 max-w-3xl text-center"
     >
-      <div className="text-xs uppercase tracking-[0.35em] text-emerald-600">
+      <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#52820f]">
         Smart QR Ordering
-      </div>
+      </span>
 
-      <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-        Everything your table needs. One QR code.
+      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[#17210c] sm:text-4xl lg:text-5xl">
+        One scan.
+        <span className="text-[#88d21a]"> Endless possibilities.</span>
       </h2>
 
-      <p className="mx-auto mt-5 max-w-2xl leading-7 text-slate-500">
-        Give guests complete control of their dining experience.
-        They can browse your menu, place orders, call a waiter and
-        check their table bill — all from their own phone, without
-        downloading an app.
+      <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-500">
+        A smarter dining experience for your guests and complete
+        control for your business — all connected through one QR system.
       </p>
     </motion.div>
 
+    {/* STORY GRID */}
+    <div className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-3">
 
-    {/* MAIN EXPERIENCE */}
-    <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
-
-      {/* ORIGINAL PHONE PREVIEW */}
+      {/* STEP 01 — SCAN */}
       <motion.div
-        initial={{ opacity: 0, x: -24 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.25 }}
-        transition={{ duration: 0.7 }}
-        className="relative flex justify-center"
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.55 }}
+        className="flex h-full flex-col overflow-hidden rounded-[28px] border border-slate-200/80 bg-white"
       >
-        <div
-          aria-hidden="true"
-          className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#88d21a]/10 blur-3xl sm:h-96 sm:w-96"
-        />
+        <div className="p-6 sm:p-7">
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-bold tracking-[0.2em] text-[#52820f]">
+              STEP 01
+            </span>
+            <span className="rounded-full bg-[#f5fce9] px-3 py-1 text-xs font-semibold text-[#52820f]">
+              Scan
+            </span>
+          </div>
 
-        <div className="relative w-[220px] overflow-hidden rounded-[38px] border-[5px] border-[#17210c] bg-white shadow-[0_30px_80px_rgba(23,33,12,0.18)] sm:w-[260px]">
-          <div className="overflow-hidden rounded-[32px]">
+          <h3 className="mt-5 text-2xl font-semibold text-[#17210c]">
+            Scan & Discover
+          </h3>
+
+          <p className="mt-3 min-h-[72px] text-sm leading-6 text-slate-500">
+            One simple scan opens your digital menu instantly.
+            No app installation. No waiting.
+          </p>
+        </div>
+
+        {/* PHONE VISUAL */}
+        <div className="relative mt-auto flex min-h-[310px] items-end justify-center overflow-hidden bg-[#f6f9f1] px-6 pt-6">
+          <div className="absolute left-1/2 top-10 h-52 w-52 -translate-x-1/2 rounded-full bg-[#88d21a]/15 blur-3xl" />
+
+          <div className="relative w-[190px] overflow-hidden rounded-t-[30px] border-[5px] border-b-0 border-[#17210c] bg-white shadow-[0_15px_45px_rgba(23,33,12,0.16)] sm:w-[205px]">
             <img
               src="https://hoxxes.app/images/qr-menu.jpg"
-              alt="HOXXES digital restaurant menu on a smartphone"
+              alt="HOXXES digital menu displayed on a smartphone"
               className="block h-auto w-full"
               loading="lazy"
             />
           </div>
-        </div>
 
-        <div className="absolute bottom-7 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-slate-200/80 bg-white/95 px-4 py-2.5 shadow-lg backdrop-blur">
-          <span className="h-2 w-2 rounded-full bg-[#88d21a]" />
-          <span className="text-xs font-medium text-[#17210c]">
-            No app download required
-          </span>
+          <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-slate-200 bg-white px-3 py-2 shadow-md">
+            <span className="h-2 w-2 rounded-full bg-[#88d21a]" />
+            <span className="text-[11px] font-medium text-[#17210c]">
+              No app required
+            </span>
+          </div>
         </div>
       </motion.div>
 
-
-      {/* FEATURES + LIVE QR */}
+      {/* STEP 02 — INTERACT */}
       <motion.div
-        initial={{ opacity: 0, x: 24 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.25 }}
-        transition={{ duration: 0.7 }}
-        className="mx-auto w-full max-w-lg"
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.55, delay: 0.12 }}
+        className="flex h-full flex-col overflow-hidden rounded-[28px] border border-slate-200/80 bg-white"
       >
+        <div className="p-6 sm:p-7">
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-bold tracking-[0.2em] text-[#52820f]">
+              STEP 02
+            </span>
+            <span className="rounded-full bg-[#f5fce9] px-3 py-1 text-xs font-semibold text-[#52820f]">
+              Interact
+            </span>
+          </div>
 
-        {/* FOUR FEATURES */}
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <h3 className="mt-5 text-2xl font-semibold text-[#17210c]">
+            Order & Enjoy
+          </h3>
+
+          <p className="mt-3 min-h-[72px] text-sm leading-6 text-slate-500">
+            Everything guests need is right at their fingertips,
+            directly from their table.
+          </p>
+        </div>
+
+        {/* CUSTOMER ACTIONS */}
+        <div className="mt-auto flex flex-1 flex-col justify-center gap-3 bg-[#f6f9f1] p-6 sm:p-7">
 
           {/* MENU */}
-          <div className="group rounded-2xl border border-slate-200/80 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-[#88d21a]/50 hover:shadow-lg">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f5fce9] text-[#52820f] transition-colors group-hover:bg-[#88d21a]/20">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                className="h-5 w-5"
-                aria-hidden="true"
-              >
+          <div className="flex items-center gap-4 rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#f5fce9] text-[#52820f]">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-5 w-5">
                 <path d="M5 4.5A2.5 2.5 0 0 1 7.5 2H20v17H7.5A2.5 2.5 0 0 0 5 21.5z" />
                 <path d="M5 4.5v17M9 7h7M9 11h7" />
               </svg>
             </div>
-
-            <h3 className="mt-4 font-semibold text-[#17210c]">
-              Browse the Menu
-            </h3>
-
-            <p className="mt-2 text-sm leading-6 text-slate-500">
-              Explore products, descriptions and prices directly from a phone.
-            </p>
+            <div>
+              <h4 className="text-sm font-semibold text-[#17210c]">Browse the Menu</h4>
+              <p className="mt-1 text-xs text-slate-500">Explore products and prices</p>
+            </div>
           </div>
-
 
           {/* ORDER */}
-          <div className="group rounded-2xl border border-slate-200/80 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-[#88d21a]/50 hover:shadow-lg">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f5fce9] text-[#52820f] transition-colors group-hover:bg-[#88d21a]/20">
-              
-<svg
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  strokeWidth="1.7"
-  strokeLinecap="round"
-  strokeLinejoin="round"
-  className="h-5 w-5"
-  aria-hidden="true"
->
-  {/* Tabletop */}
-  <path d="M3 8h18" />
-  <path d="M4 8l1-2h14l1 2" />
-
-  {/* Table leg */}
-  <path d="M12 8v10" />
-
-  {/* Base */}
-  <path d="M8 20h8" />
-  <path d="M10 18h4l2 2H8l2-2Z" />
-</svg>
-
+          <div className="flex items-center gap-4 rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#f5fce9] text-[#52820f]">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                <path d="M3 8h18M4 8l1-2h14l1 2M12 8v10M8 20h8" />
+              </svg>
             </div>
-
-            <h3 className="mt-4 font-semibold text-[#17210c]">
-              Order at the Table
-            </h3>
-
-            <p className="mt-2 text-sm leading-6 text-slate-500">
-              Place orders from the table without waiting to give them manually.
-            </p>
+            <div>
+              <h4 className="text-sm font-semibold text-[#17210c]">Order at the Table</h4>
+              <p className="mt-1 text-xs text-slate-500">Place orders directly</p>
+            </div>
           </div>
-
 
           {/* WAITER */}
-          <div className="group rounded-2xl border border-slate-200/80 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-[#88d21a]/50 hover:shadow-lg">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f5fce9] text-[#52820f] transition-colors group-hover:bg-[#88d21a]/20">
-              
-<svg
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  strokeWidth="1.7"
-  strokeLinecap="round"
-  strokeLinejoin="round"
-  className="h-5 w-5"
-  aria-hidden="true"
->
-  {/* Serving tray */}
-  <path d="M2 7h20l-1.5 2H3.5L2 7Z" />
-  
-  {/* Hand holding the tray */}
-  <path d="M9 9c.2-1.1 1-1.8 2-1.8h2.5c.7 0 1.2.5 1.2 1.1" />
-  <path d="M10 9.2l2.1-1.3M12 9.2l2.3-1.2" />
-  
-  {/* Waiter's arm and sleeve */}
-  <path d="M3 22l-2-2 5.2-5.2 1.5-4.1c.3-.8 1.1-1.2 1.8-.9.7.3 1 1.1.7 1.8l-.8 2.1 5-3.2c.7-.5 1.5-.3 1.9.3.4.6.2 1.4-.4 1.8l-6.4 4.5L5 22" />
-  <path d="M3 19l2 2" />
-</svg>
-
+          <div className="flex items-center gap-4 rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#f5fce9] text-[#52820f]">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                <path d="M12 3v3M5 8h14M7 8l-2 12h14L17 8" />
+                <path d="M9 13h6" />
+              </svg>
             </div>
-
-            <h3 className="mt-4 font-semibold text-[#17210c]">
-              Call Your Waiter
-            </h3>
-
-            <p className="mt-2 text-sm leading-6 text-slate-500">
-              Request assistance directly from your table when needed.
-            </p>
+            <div>
+              <h4 className="text-sm font-semibold text-[#17210c]">Call Your Waiter</h4>
+              <p className="mt-1 text-xs text-slate-500">Request assistance anytime</p>
+            </div>
           </div>
 
-
           {/* BILL */}
-          <div className="group rounded-2xl border border-slate-200/80 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-[#88d21a]/50 hover:shadow-lg">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f5fce9] text-[#52820f] transition-colors group-hover:bg-[#88d21a]/20">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                className="h-5 w-5"
-                aria-hidden="true"
-              >
+          <div className="flex items-center gap-4 rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#f5fce9] text-[#52820f]">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-5 w-5">
                 <rect x="5" y="2.5" width="14" height="19" rx="2" />
                 <path d="M9 7h6M9 11h6M9 15h2M14 15h1" />
               </svg>
             </div>
-
-            <h3 className="mt-4 font-semibold text-[#17210c]">
-              View Your Bill
-            </h3>
-
-            <p className="mt-2 text-sm leading-6 text-slate-500">
-              Check the current table bill and the amount due.
-            </p>
+            <div>
+              <h4 className="text-sm font-semibold text-[#17210c]">View Your Bill</h4>
+              <p className="mt-1 text-xs text-slate-500">Check your current bill</p>
+            </div>
           </div>
 
         </div>
+      </motion.div>
 
-
-        {/* LIVE QR DEMO */}
-        <div className="mt-6 flex flex-col gap-5 rounded-2xl border border-slate-200/80 bg-white p-5 sm:flex-row sm:items-center sm:p-6">
-
-          <div className="flex shrink-0 justify-center rounded-xl border border-slate-100 bg-white p-2">
-            <QRCodeSVG
-              value="https://qr.hoxxes.com/qr/SSI718JKZ770"
-              size={112}
-              level="H"
-              bgColor="#ffffff"
-              fgColor="#17210c"
-            />
+      {/* STEP 03 — MANAGE */}
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.55, delay: 0.24 }}
+        className="flex h-full flex-col overflow-hidden rounded-[28px] border border-slate-200/80 bg-white"
+      >
+        <div className="p-6 sm:p-7">
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-bold tracking-[0.2em] text-[#52820f]">
+              STEP 03
+            </span>
+            <span className="rounded-full bg-[#f5fce9] px-3 py-1 text-xs font-semibold text-[#52820f]">
+              Manage
+            </span>
           </div>
 
-          <div className="min-w-0 flex-1 text-center sm:text-left">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-emerald-600">
-              Try it yourself
-            </p>
+          <h3 className="mt-5 text-2xl font-semibold text-[#17210c]">
+            Stay in Control
+          </h3>
 
-            <h3 className="mt-2 text-lg font-semibold text-[#17210c]">
-              Experience Smart QR Ordering
-            </h3>
+          <p className="mt-3 min-h-[72px] text-sm leading-6 text-slate-500">
+            Manage every table QR code directly from your HOXXES Back Office.
+          </p>
+        </div>
 
-            <p className="mt-2 text-sm leading-6 text-slate-500">
-              Scan the code to explore the live menu from your phone.
-            </p>
+        {/* MANAGEMENT VISUAL */}
+        <div className="flex flex-1 flex-col bg-[#f6f9f1] p-6 sm:p-7">
 
-            <a
-              href="https://qr.hoxxes.com/qr/SSI718JKZ770"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#88d21a] px-6 py-3 text-sm font-medium text-[#17210c] transition duration-200 hover:bg-[#76b915] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
-            >
-              Explore Live Menu
-              
-            </a>
+          <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm">
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#88d21a]/15 text-[#52820f]">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-5 w-5">
+                  <rect x="3" y="3" width="7" height="7" rx="1" />
+                  <rect x="14" y="3" width="7" height="7" rx="1" />
+                  <rect x="3" y="14" width="7" height="7" rx="1" />
+                  <path d="M14 14h3v3h-3zM20 14v2M14 20h2M20 19v2M18 21h3" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-[#17210c]">QR Management</p>
+                <p className="text-xs text-slate-500">Back Office</p>
+              </div>
+              <span className="ml-auto rounded-full bg-[#88d21a]/15 px-2.5 py-1 text-[10px] font-semibold text-[#52820f]">
+                Active
+              </span>
+            </div>
+
+            <div className="mt-5 space-y-3">
+              <div className="flex items-center justify-between rounded-xl bg-[#f8faf6] p-3">
+                <div>
+                  <p className="text-xs font-semibold text-[#17210c]">Static QR Code</p>
+                  <p className="mt-1 text-[11px] text-slate-500">Permanent table code</p>
+                </div>
+                <span className="h-2 w-2 rounded-full bg-[#88d21a]" />
+              </div>
+
+              <div className="flex items-center justify-between rounded-xl bg-[#f8faf6] p-3">
+                <div>
+                  <p className="text-xs font-semibold text-[#17210c]">Temporary QR Code</p>
+                  <p className="mt-1 text-[11px] text-slate-500">Create when needed</p>
+                </div>
+                <span className="h-2 w-2 rounded-full bg-[#88d21a]" />
+              </div>
+            </div>
+
+            <div className="mt-4 grid grid-cols-2 gap-2">
+              {[
+                "Instant activation",
+                "4 download styles",
+                "One-click copy",
+                "Delete anytime",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-1.5 text-[11px] text-slate-600">
+                  <svg viewBox="0 0 20 20" fill="none" className="h-3.5 w-3.5 shrink-0 text-[#72b914]">
+                    <path d="m4 10 4 4 8-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <p className="mt-4 text-center text-xs leading-5 text-[#52820f]">
+            No technical assistance. No waiting. Full control from your Back Office.
+          </p>
+
+          {/* LIVE DEMO */}
+          <div className="mt-auto pt-6">
+            <div className="flex items-center gap-4 rounded-2xl bg-[#17210c] p-4 text-white">
+              <div className="shrink-0 rounded-lg bg-white p-2">
+                <QRCodeSVG
+                  value="https://qr.hoxxes.com/qr/SSI718JKZ770"
+                  size={76}
+                  level="H"
+                  bgColor="#ffffff"
+                  fgColor="#17210c"
+                />
+              </div>
+
+              <div className="min-w-0">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#a9d96a]">
+                  Live Demo
+                </p>
+                <p className="mt-1 text-sm font-semibold">
+                  Try Smart QR Ordering
+                </p>
+                <a
+                  href="https://qr.hoxxes.com/qr/SSI718JKZ770"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-[#a9d96a] transition hover:text-white"
+                >
+                  Explore Live Menu
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
           </div>
 
         </div>
-
       </motion.div>
 
     </div>
-
-
-    {/* BOTTOM VALUE STATEMENT */}
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.25 }}
-      transition={{ duration: 0.6 }}
-      className="mx-auto mt-16 flex max-w-3xl flex-wrap items-center justify-center gap-x-7 gap-y-3 border-t border-slate-200/70 pt-8 text-sm text-slate-500"
-    >
-      <span className="inline-flex items-center gap-2">
-        <span className="text-[#52820f]">✓</span>
-        No app installation
-      </span>
-
-      <span className="inline-flex items-center gap-2">
-        <span className="text-[#52820f]">✓</span>
-        Direct table ordering
-      </span>
-
-      <span className="inline-flex items-center gap-2">
-        <span className="text-[#52820f]">✓</span>
-        A smoother guest experience
-      </span>
-    </motion.div>
-
   </div>
 </section>
+
 
 {/* UNIFIED INFRASTRUCTURE */}
 

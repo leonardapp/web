@@ -49,7 +49,7 @@ const modules: SoftwareModule[] = [
       { title: "Stay operational", description: "Use Android POS with offline capabilities where supported by your setup." },
       { title: "Understand performance", description: "Access sales reports, customer information and business insights." },
     ],
-    link: { label: "Compatible Hardware", href: "/hardware", style: "secondary" },
+    link: { label: "Compatible Hardware", href: "/hardware", style: "primary" },
   },
   {
     id: "operations-hub",
@@ -92,7 +92,7 @@ const modules: SoftwareModule[] = [
       { title: "Keep menus current", description: "Synchronize menu content and manage QR codes." },
       { title: "Improve table service", description: "Support waiter calls and bill tracking where enabled." },
     ],
-    link: { label: "Explore Live Menu", href: "https://qr.hoxxes.com/qr/SSI718JKZ770", style: "primary" },
+    link: { label: "Live Menu", href: "https://qr.hoxxes.com/qr/SSI718JKZ770", style: "primary" },
   },
   {
     id: "kiosk",
@@ -119,10 +119,10 @@ const modules: SoftwareModule[] = [
     imageAlt: "HOXXES payment terminal integration",
     features: [
       { title: "Explore payment options", description: "Review integration possibilities for your kiosk setup." },
-      { title: "Confirm compatibility", description: "Check terminal compatibility and availability with our team." },
+      { title: "Check compatibility", description: "Verify terminal compatibility and availability with our team." },
       { title: "Plan your deployment", description: "Choose the configuration that fits your business." },
     ],
-    link: { label: "Confirm Compatibility", href: "/contact-sales", style: "primary" },
+    link: { label: "Check Compatibility", href: "/contact-sales", style: "primary" },
   },
   {
   id: "online-ordering",
@@ -250,97 +250,132 @@ function ModuleCard({ module }: { module: SoftwareModule }) {
   return (
     <article
       id={module.id}
-      className="group flex h-full scroll-mt-24 flex-col overflow-hidden rounded-[1.5rem] border border-slate-200/80 bg-white shadow-[0_8px_28px_rgba(15,23,42,.045)] transition duration-300 hover:-translate-y-1 hover:border-[#88d21a]/60 hover:shadow-[0_20px_48px_rgba(15,23,42,.10)]"
+      className="group flex h-full scroll-mt-24 flex-col overflow-hidden rounded-[1.75rem] border border-slate-200/80 bg-white shadow-[0_8px_30px_rgba(15,23,42,.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#88d21a]/60 hover:shadow-[0_22px_55px_rgba(15,23,42,.10)]"
     >
-      {/* All module images use the same 16:9 frame. */}
-      <div className="relative aspect-video w-full shrink-0 overflow-hidden bg-slate-100">
+      <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-[#f1f4ed]">
         <img
           src={module.image}
           alt={module.imageAlt}
-          className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.025]"
+          className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.035]"
           loading="lazy"
           width={1200}
-          height={675}
+          height={750}
         />
-        <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/[0.03]" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#10180b]/20 via-transparent to-white/5" />
+        <span className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/90 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-[#456b13] shadow-sm backdrop-blur sm:text-[11px]">
+          <span className="h-1.5 w-1.5 rounded-full bg-[#88d21a]" />
+          {module.eyebrow}
+        </span>
       </div>
 
       <div className="flex flex-1 flex-col p-5 sm:p-6 lg:p-7">
-        <p className="inline-flex w-fit items-center gap-2 rounded-full bg-[#f5fce9] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#4d790e] sm:text-[11px]">
-          <span className="h-1.5 w-1.5 rounded-full bg-[#88d21a]" aria-hidden="true" />
-          {module.eyebrow}
-        </p>
-
-        <h2 className="mt-4 text-xl font-semibold leading-snug tracking-tight text-slate-900 sm:text-[1.35rem]">
+        <h2 className="text-xl font-semibold leading-snug tracking-tight text-slate-900 sm:text-[1.4rem]">
           {module.title}
         </h2>
-
         <p className="mt-3 text-sm leading-6 text-slate-600">
           {module.description}
         </p>
 
-        <ul className="mt-6 space-y-4 border-t border-slate-100 pt-6">
-          {module.features.map((feature) => (
-            <li key={feature.title} className="flex items-start gap-3">
-              <svg
-                aria-hidden="true"
-                className="mt-0.5 h-[19px] w-[19px] shrink-0 text-[#5d9510]"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <circle cx="12" cy="12" r="9.25" stroke="currentColor" strokeWidth="1.6" />
-                <path
-                  d="m8 12.2 2.5 2.5 5.5-5.7"
-                  stroke="currentColor"
-                  strokeWidth="1.7"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+        <div className="mt-6 space-y-4 border-t border-slate-100 pt-5">
+          {module.features.map((feature, index) => (
+            <div key={feature.title} className="flex items-start gap-3">
+              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#f1f9e6] text-[11px] font-semibold text-[#568611]">
+                {String(index + 1).padStart(2, "0")}
+              </span>
               <div>
-                <h3 className="text-sm font-semibold leading-5 text-slate-900">
-                  {feature.title}
-                </h3>
-                <p className="mt-1 text-[13px] leading-5 text-slate-500 sm:text-sm sm:leading-6">
-                  {feature.description}
-                </p>
+                <h3 className="text-sm font-semibold leading-5 text-slate-900">{feature.title}</h3>
+                <p className="mt-1 text-[13px] leading-5 text-slate-500 sm:text-sm sm:leading-6">{feature.description}</p>
               </div>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
 
         {module.link && (
-          <div className="mt-auto flex flex-col items-stretch justify-center gap-3 border-t border-slate-100 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center">
+          <div className="mt-auto flex flex-col items-stretch gap-2.5 border-t border-slate-100 pt-6 sm:flex-row sm:flex-wrap">
             {module.link.href.startsWith("http") ? (
-              <a
-                href={module.link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={getExternalLinkClasses(module.link.style ?? "secondary")}
-              >
-                {module.link.label}
+              <a href={module.link.href} target="_blank" rel="noopener noreferrer" className={getExternalLinkClasses(module.link.style ?? "secondary")}>
+                {module.link.label}<span aria-hidden="true">↗</span>
               </a>
             ) : (
-              <Button
-                href={module.link.href}
-                variant={module.link.style ?? "secondary"}
-                className="min-h-11 px-5"
-              >
+              <Button href={module.link.href} variant={module.link.style ?? "secondary"} className="min-h-11 px-5">
                 {module.link.label}
               </Button>
             )}
             {module.id === "online-ordering" && (
-              <a
-                href="https://miniprogram.hoxxes.app/app/18839/a119d2d9-1b87-4b8f-8a60-efb4b56e5522"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={getExternalLinkClasses("outline")}
-              >
-                Membership App
+              <a href="https://miniprogram.hoxxes.app/app/18839/a119d2d9-1b87-4b8f-8a60-efb4b56e5522" target="_blank" rel="noopener noreferrer" className={getExternalLinkClasses("outline")}>
+                Membership App <span aria-hidden="true">↗</span>
               </a>
             )}
           </div>
         )}
+      </div>
+    </article>
+  );
+}
+
+function QRStoryCard() {
+  const steps = [
+    { number: "01", title: "Scan & Discover", description: "One simple scan opens your digital menu instantly. No app installation. No waiting." },
+    { number: "02", title: "Order & Enjoy", description: "Guests can browse the menu, order at the table, call a waiter and view their bill." },
+    { number: "03", title: "Stay in Control", description: "Create and manage table QR codes directly from your HOXXES Back Office." },
+  ];
+
+  return (
+    <article id="qr-ordering" className="scroll-mt-24 overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white p-5 shadow-[0_10px_36px_rgba(15,23,42,.05)] sm:p-7 lg:p-9 md:col-span-2 xl:col-span-3">
+      <div className="mx-auto mb-8 max-w-2xl text-center sm:mb-10">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#5d9510] sm:text-xs">QR Ordering</p>
+        <h2 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl lg:text-4xl">One scan. Endless possibilities.</h2>
+        <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">A smarter dining experience for your guests and complete control for your business — all connected through one QR system.</p>
+      </div>
+
+      <div className="grid items-stretch gap-4 md:grid-cols-3 md:gap-5">
+        <section className="flex min-w-0 flex-col overflow-hidden rounded-[1.5rem] border border-slate-200/80 bg-[#fbfcf9] p-4 sm:p-5">
+          <div className="mb-4 flex items-center gap-3"><span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#eaf6d9] text-xs font-bold text-[#527f12]">01</span><div><p className="text-xs font-semibold uppercase tracking-wider text-[#5d9510]">Scan</p><h3 className="text-base font-semibold text-slate-900">Scan & Discover</h3></div></div>
+          <div className="relative min-h-[320px] flex-1 overflow-hidden rounded-2xl bg-[#eef4e7] sm:min-h-[360px]">
+            <img
+              src="https://hoxxes.app/images/qr-ordering.png"
+              alt="HOXXES QR ordering experience"
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <p className="mt-4 text-center text-xs font-medium text-[#527f12]">No app required</p>
+          <p className="mt-2 text-sm leading-6 text-slate-600">One simple scan opens your digital menu instantly. No app installation. No waiting.</p>
+        </section>
+
+        <section className="flex min-w-0 flex-col rounded-[1.5rem] border border-slate-200/80 bg-[#fbfcf9] p-4 sm:p-5">
+          <div className="mb-4 flex items-center gap-3"><span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#eaf6d9] text-xs font-bold text-[#527f12]">02</span><div><p className="text-xs font-semibold uppercase tracking-wider text-[#5d9510]">Interact</p><h3 className="text-base font-semibold text-slate-900">Order & Enjoy</h3></div></div>
+          <p className="mb-5 text-sm leading-6 text-slate-600">Everything guests need, right on their phone.</p>
+          <div className="space-y-3">
+            {[
+              ["Browse the Menu", "Explore products, options and prices."],
+              ["Order at the Table", "Send orders directly to your team."],
+              ["Call Your Waiter", "Request assistance when needed."],
+              ["View Your Bill", "Keep track of the table bill."],
+            ].map(([title, description]) => (
+              <div key={title} className="flex items-start gap-3 rounded-xl border border-slate-100 bg-white p-3">
+                <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#f0f8e5] text-[#5d9510]">✓</span>
+                <div><h4 className="text-sm font-semibold text-slate-900">{title}</h4><p className="mt-1 text-xs leading-5 text-slate-500">{description}</p></div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="flex min-w-0 flex-col rounded-[1.5rem] border border-slate-200/80 bg-[#fbfcf9] p-4 sm:p-5">
+          <div className="mb-4 flex items-center gap-3"><span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#eaf6d9] text-xs font-bold text-[#527f12]">03</span><div><p className="text-xs font-semibold uppercase tracking-wider text-[#5d9510]">Manage</p><h3 className="text-base font-semibold text-slate-900">Stay in Control</h3></div></div>
+          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3"><div><p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Back Office</p><p className="mt-1 text-sm font-semibold text-slate-900">QR Management</p></div><span className="rounded-full bg-[#eff8e4] px-2.5 py-1 text-[10px] font-semibold text-[#568611]">Active</span></div>
+            <div className="space-y-3 py-4">
+              <div className="rounded-xl bg-[#f7faF3] p-3"><p className="text-xs font-semibold text-slate-800">Static QR Code</p><p className="mt-1 text-[11px] leading-4 text-slate-500">Permanent code for each table</p></div>
+              <div className="rounded-xl bg-[#f7faF3] p-3"><p className="text-xs font-semibold text-slate-800">Temporary QR Code</p><p className="mt-1 text-[11px] leading-4 text-slate-500">Create a code whenever you need it</p></div>
+            </div>
+            <div className="grid grid-cols-2 gap-2 border-t border-slate-100 pt-3 text-[10px] font-medium text-slate-600"><span>✓ Instant activation</span><span>✓ 4 download styles</span><span>✓ One-click copy</span><span>✓ Delete anytime</span></div>
+          </div>
+          <p className="mt-4 text-sm leading-6 text-slate-600">No technical assistance. No waiting. Full control from your Back Office.</p>
+          <a href="https://qr.hoxxes.com/qr/SSI718JKZ770" target="_blank" rel="noopener noreferrer" className={`${getExternalLinkClasses("primary")} mt-auto`}>
+            Explore Live Menu <span aria-hidden="true">↗</span>
+          </a>
+        </section>
       </div>
     </article>
   );
@@ -441,7 +476,7 @@ export default function SoftwarePage() {
   rel="noopener noreferrer"
   className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-[#88d21a] px-6 py-3.5 text-sm font-medium text-[#26351a] transition-all duration-200 hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2 sm:w-auto"
 >
-  Hardware
+  Explore Hardware
 </a>
 
             </div>
@@ -526,7 +561,11 @@ export default function SoftwarePage() {
           {filteredModules.length > 0 ? (
             <div className="grid items-stretch gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3 xl:gap-7">
               {filteredModules.map((module) => (
-                <ModuleCard key={module.id} module={module} />
+                module.id === "qr-ordering" ? (
+                  <QRStoryCard key={module.id} />
+                ) : (
+                  <ModuleCard key={module.id} module={module} />
+                )
               ))}
             </div>
           ) : (
