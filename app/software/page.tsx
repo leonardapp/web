@@ -258,6 +258,7 @@ function ModuleCard({ module }: { module: SoftwareModule }) {
           alt={module.imageAlt}
           className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.035]"
           loading="lazy"
+          decoding="async"
           width={1200}
           height={750}
         />
@@ -337,6 +338,9 @@ function QRStoryCard() {
               alt="HOXXES QR ordering experience"
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
+              decoding="async"
+              width={1200}
+              height={800}
             />
           </div>
           <p className="mt-4 text-center text-xs font-medium text-[#527f12]">No app required</p>
@@ -451,16 +455,16 @@ export default function SoftwarePage() {
             <div className="pointer-events-none absolute left-[18%] top-[12%] h-[58%] w-[76%] rounded-[3rem] border border-slate-200/70 rotate-[4deg]" />
 
             <div className="absolute inset-x-5 top-14 z-[1] rounded-[1.6rem] bg-white/80 p-2 shadow-[0_28px_70px_rgba(15,23,42,.16)] ring-1 ring-white/90 backdrop-blur-sm sm:inset-x-10 sm:top-12 sm:rounded-[2rem] sm:p-3">
-              <img src="https://hoxxes.app/images/pos-menu.png" alt="HOXXES POS dashboard" className="aspect-[1.42/1] w-full rounded-[1.2rem] object-cover object-top sm:rounded-[1.5rem]" fetchPriority="high" />
+              <img src="https://hoxxes.app/images/pos-menu.png" alt="HOXXES POS dashboard" className="aspect-[1.42/1] w-full rounded-[1.2rem] object-cover object-top sm:rounded-[1.5rem]" width={1200} height={845} loading="eager" decoding="async" fetchPriority="high" />
             </div>
 
             <div className="hoxxes-float absolute left-0 top-0 z-20 w-[35%] sm:left-1 sm:w-[32%]">
-              <img src="https://hoxxes.app/images/QR-hero.png" alt="HOXXES QR Ordering" className="aspect-[1.05/1] w-full object-contain drop-shadow-[0_16px_20px_rgba(15,23,42,.18)] transition-transform duration-500 hover:scale-105" />
+              <img src="https://hoxxes.app/images/QR-hero.png" alt="HOXXES QR Ordering" className="aspect-[1.05/1] w-full object-contain drop-shadow-[0_16px_20px_rgba(15,23,42,.18)] transition-transform duration-500 hover:scale-105" width={600} height={570} loading="lazy" decoding="async" />
               <div className="mt-1 inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/85 px-3 py-1.5 text-[10px] font-semibold text-slate-700 shadow-md backdrop-blur-md sm:text-xs">QR Ordering <span className="text-[#5d9510]">↗</span></div>
             </div>
 
             <div className="hoxxes-float-delay absolute bottom-0 right-0 z-20 w-[40%] sm:right-1 sm:w-[36%]">
-              <img src="https://hoxxes.app/images/KDS-hero.png" alt="HOXXES Kitchen Display System" className="aspect-[1.2/1] w-full object-contain drop-shadow-[0_18px_24px_rgba(15,23,42,.2)] transition-transform duration-500 hover:scale-105" />
+              <img src="https://hoxxes.app/images/KDS-hero.png" alt="HOXXES Kitchen Display System" className="aspect-[1.2/1] w-full object-contain drop-shadow-[0_18px_24px_rgba(15,23,42,.2)] transition-transform duration-500 hover:scale-105" width={700} height={580} loading="lazy" decoding="async" />
               <div className="flex items-center justify-between gap-2 rounded-full border border-white/80 bg-white/90 px-3 py-1.5 shadow-md backdrop-blur-md"><span className="text-[10px] font-semibold text-slate-700 sm:text-xs">Kitchen Display</span><span className="h-2 w-2 shrink-0 rounded-full bg-[#88d21a] shadow-[0_0_0_4px_rgba(136,210,26,.16)]" /></div>
             </div>
           </div>
