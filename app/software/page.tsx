@@ -49,7 +49,7 @@ const modules: SoftwareModule[] = [
       { title: "Stay operational", description: "Use Android POS with offline capabilities where supported by your setup." },
       { title: "Understand performance", description: "Access sales reports, customer information and business insights." },
     ],
-    link: { label: "Explore Compatible Hardware", href: "/hardware", style: "secondary" },
+    link: { label: "Compatible Hardware", href: "/hardware", style: "secondary" },
   },
   {
     id: "operations-hub",
@@ -92,7 +92,7 @@ const modules: SoftwareModule[] = [
       { title: "Keep menus current", description: "Synchronize menu content and manage QR codes." },
       { title: "Improve table service", description: "Support waiter calls and bill tracking where enabled." },
     ],
-    link: { label: "Explore Live Menu", href: "https://qr.hoxxes.com/qr/SSI718JKZ770", style: "secondary" },
+    link: { label: "Explore Live Menu", href: "https://qr.hoxxes.com/qr/SSI718JKZ770", style: "primary" },
   },
   {
     id: "kiosk",
@@ -107,7 +107,7 @@ const modules: SoftwareModule[] = [
       { title: "Promote relevant items", description: "Use upselling and promotional content in the kiosk experience." },
       { title: "Connect the workflow", description: "Send orders into the connected POS and kitchen workflow." },
     ],
-    link: { label: "Explore Compatible Hardware", href: "/hardware", style: "secondary" },
+    link: { label: "Compatible Hardware", href: "/hardware", style: "primary" },
   },
   {
     id: "payment-integration",
@@ -150,8 +150,8 @@ const modules: SoftwareModule[] = [
     },
   ],
   link: {
-    label: "Explore Online Ordering",
-    href: "https://order.hoxxes.com/store/4cbb7eb4-5ddc-4add-a203-fc535dc4686a",
+    label: "eShop",
+    href: "https://order.hoxxes.app/store/a119d2d9-1b87-4b8f-8a60-efb4b56e5522",
     style: "primary",
   },
 },
@@ -168,7 +168,7 @@ const modules: SoftwareModule[] = [
       { title: "Support the team", description: "Keep incoming order workflows more organized." },
       { title: "Confirm supported services", description: "Ask our team which platforms are available for your setup." },
     ],
-    link: { label: "Ask About Integrations", href: "/contact-sales", style: "secondary" },
+    link: { label: "Delivery Integrations", href: "/contact-sales", style: "secondary" },
   },
   {
     id: "kds",
@@ -331,12 +331,12 @@ function ModuleCard({ module }: { module: SoftwareModule }) {
             )}
             {module.id === "online-ordering" && (
               <a
-                href="https://miniprogram.hoxxes.com/app/17420/4cbb7eb4-5ddc-4add-a203-fc535dc4686a"
+                href="https://miniprogram.hoxxes.app/app/18839/a119d2d9-1b87-4b8f-8a60-efb4b56e5522"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={getExternalLinkClasses("outline")}
               >
-                Open Membership App
+                Membership App
               </a>
             )}
           </div>
@@ -441,7 +441,7 @@ export default function SoftwarePage() {
   rel="noopener noreferrer"
   className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-[#88d21a] px-6 py-3.5 text-sm font-medium text-[#26351a] transition-all duration-200 hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2 sm:w-auto"
 >
-  Explore Android Hardware
+  Hardware
 </a>
 
             </div>
@@ -570,7 +570,7 @@ export default function SoftwarePage() {
             </p>
             <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
               <Button href="/hardware" variant="primary" className="px-6 py-3.5">
-                Explore Android Hardware 
+                Android Hardware 
               </Button>
               
               <Button href="/pricing" variant="outline" className="px-6 py-3.5">
