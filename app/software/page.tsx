@@ -183,22 +183,18 @@ const modules: SoftwareModule[] = [
     {
       title: "Order Layouts",
       description: "Classic, Tiled and Split layouts for organizing kitchen orders.",
-      icon: "layout-dashboard",
     },
     {
       title: "Ticket Customization",
       description: "Customize ticket content, typography, colors and live preview.",
-      icon: "sliders-horizontal",
     },
     {
       title: "Modifier Highlights",
       description: "Create custom styles to highlight modifiers and toppings.",
-      icon: "palette",
     },
     {
       title: "System & Connectivity",
       description: "Language settings, SSE support and connection recovery.",
-      icon: "settings",
     },
   ],
 },
