@@ -170,20 +170,39 @@ const modules: SoftwareModule[] = [
     ],
     link: { label: "Delivery Integrations", href: "/contact-sales", style: "secondary" },
   },
-  {
-    id: "kds",
-    eyebrow: "Kitchen Display System",
-    title: "Every order. Every station. In real time.",
-    description:
-      "Orders flow from POS, QR and online channels into the kitchen, helping teams prepare, prioritize and deliver orders.",
-    image: "https://hoxxes.app/images/kitchen-display-system.png",
-    imageAlt: "HOXXES Kitchen Display System",
-    features: [
-      { title: "Organize kitchen orders", description: "View incoming orders and their current status." },
-      { title: "Route work to stations", description: "Distribute orders to designated kitchen stations where configured." },
-      { title: "Track kitchen performance", description: "Review preparation times and service insights where available." },
-    ],
-  },
+  
+{
+  id: "kds",
+  eyebrow: "Kitchen Display System",
+  title: "Smarter kitchen operations.",
+  description:
+    "A flexible KDS experience designed around your kitchen workflow.",
+  image: "https://hoxxes.app/images/kitchen-display-system.png",
+  imageAlt: "HOXXES Kitchen Display System",
+  features: [
+    {
+      title: "Order Layouts",
+      description: "Classic, Tiled and Split layouts for organizing kitchen orders.",
+      icon: "layout-dashboard",
+    },
+    {
+      title: "Ticket Customization",
+      description: "Customize ticket content, typography, colors and live preview.",
+      icon: "sliders-horizontal",
+    },
+    {
+      title: "Modifier Highlights",
+      description: "Create custom styles to highlight modifiers and toppings.",
+      icon: "palette",
+    },
+    {
+      title: "System & Connectivity",
+      description: "Language settings, SSE support and connection recovery.",
+      icon: "settings",
+    },
+  ],
+},
+
   {
     id: "promotions",
     eyebrow: "Promotions Automation",
