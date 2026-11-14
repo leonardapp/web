@@ -519,7 +519,7 @@ export default function SoftwarePage() {
               
               
 <a
-  href="https://hoxxes.app/download"
+  href="https://hoxxes.com/downloads"
   target="_blank"
   rel="noopener noreferrer"
   className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-[#88d21a] px-6 py-3.5 text-sm font-medium text-[#26351a] transition-all duration-200 hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2 sm:w-auto"

@@ -617,7 +617,7 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.45, delay: index * 0.08 }}
-            className="group flex min-h-[190px] flex-col items-center justify-center rounded-2xl border border-slate-200/80 bg-white p-5 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#88d21a]/60 hover:shadow-[0_16px_35px_rgba(23,33,12,0.07)] sm:p-6"
+            className="group flex aspect-square flex-col items-center justify-center rounded-2xl border border-slate-200/80 bg-white p-3 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#88d21a]/60 hover:shadow-[0_16px_35px_rgba(23,33,12,0.07)] sm:p-4"
           >
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#f5fce9] text-[#52820f] transition-colors duration-300 group-hover:bg-[#88d21a]/20">
               {item.icon}
@@ -745,7 +745,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-3 lg:gap-5">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
 
           {[
             {

@@ -199,21 +199,16 @@ export default function HardwarePage() {
               >
                 Shop Hardware <span aria-hidden="true">↓</span>
               </a>
-              <Link
-                href="/contact-sales"
-                className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/35 px-7 font-medium text-white transition hover:border-[#88d21a] hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a]"
-              >
-                Contact Sales
-              </Link>
+              
             </div>
 
-            <div className="mt-12 flex flex-wrap gap-x-7 gap-y-3 text-[10px] font-semibold tracking-[0.2em] text-white/55 sm:text-xs">
-              <span>POS SYSTEMS</span>
-              <span className="text-[#88d21a]">/</span>
-              <span>SELF-SERVICE</span>
-              <span className="text-[#88d21a]">/</span>
-              <span>KITCHEN & DISPLAY</span>
-            </div>
+            <div className="mt-8 flex w-full items-center justify-between gap-1 whitespace-nowrap text-[9px] font-semibold tracking-[0.08em] text-white/65 min-[375px]:text-[10px] min-[375px]:tracking-[0.1em] sm:mt-12 sm:justify-start sm:gap-x-7 sm:text-xs sm:tracking-[0.2em]">
+  <span>POS SYSTEMS</span>
+  <span className="text-[#88d21a]">/</span>
+  <span>SELF-SERVICE</span>
+  <span className="text-[#88d21a]">/</span>
+  <span>KITCHEN & DISPLAY</span>
+</div>
           </motion.div>
         </div>
       </section>
