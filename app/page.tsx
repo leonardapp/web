@@ -143,7 +143,7 @@ export default function HomePage() {
     </Button>
 
     <Button href="/hardware" variant="outline">
-      Buy Hardware
+      Shop Hardware
     </Button>
   </div>
   {/* CUSTOMER LOGOS */}
@@ -505,15 +505,15 @@ export default function HomePage() {
                 <p className="mt-1 text-sm font-semibold">
                   Try Smart QR Ordering
                 </p>
-                <a
-                  href="https://qr.hoxxes.com/qr/SSI718JKZ770"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-[#a9d96a] transition hover:text-white"
-                >
-                  Explore Live Menu
-                  <span aria-hidden="true">↗</span>
-                </a>
+               <a
+  href="https://qr.hoxxes.com/qr/SSI718JKZ770"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-3 inline-flex items-center justify-center gap-2 rounded-xl bg-[#88d21a] px-4 py-2.5 text-sm font-bold text-[#17210c] shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#9be52b] hover:shadow-lg active:scale-95"
+>
+  Explore Live Menu
+
+</a>
               </div>
             </div>
           </div>
@@ -561,6 +561,24 @@ export default function HomePage() {
 
         {[
           {
+  title: "POS & Mobile Ordering",
+  description: "Manage orders across POS and mobile apps.",
+  icon: (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      className="h-6 w-6"
+      aria-hidden="true"
+    >
+      <rect x="3" y="2" width="13" height="20" rx="2" />
+      <path d="M6 6h7M6 10h7M6 14h3M6 18h7" />
+      <rect x="18" y="7" width="4" height="10" rx="1" />
+    </svg>
+  ),
+},
+          {
             title: "QR Ordering",
             description: "Guests browse menus and order directly from the table.",
             icon: (
@@ -569,16 +587,6 @@ export default function HomePage() {
                 <rect x="14" y="3" width="7" height="7" rx="1" />
                 <rect x="3" y="14" width="7" height="7" rx="1" />
                 <path d="M14 14h3v3h-3zM19 14h2M14 19h7" />
-              </svg>
-            ),
-          },
-          {
-            title: "POS Ordering",
-            description: "Process orders through Web or Android POS.",
-            icon: (
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-6 w-6" aria-hidden="true">
-                <rect x="4" y="2" width="16" height="20" rx="2" />
-                <path d="M8 6h8M8 10h8M8 14h2M14 14h2M8 18h8" />
               </svg>
             ),
           },
@@ -593,9 +601,9 @@ export default function HomePage() {
             ),
           },
           {
-            title: "Online Ordering",
-            description: "Accept orders through your digital storefront.",
-            icon: (
+            title: "Online Ordering & Delivery",
+  description: "Accept online and delivery orders.",
+  icon: (
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-6 w-6" aria-hidden="true">
                 <circle cx="12" cy="12" r="9" />
                 <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
@@ -737,7 +745,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-3 lg:gap-5">
 
           {[
             {
@@ -746,20 +754,26 @@ export default function HomePage() {
               icon: "kitchen",
             },
             {
+  title: "Kitchen Printer",
+  description: "Kitchen order ticket printing",
+  icon: "printer",
+},
+            {
+  title: "Order Display System",
+  description: "Order status and progress display",
+  icon: "display",
+},
+            {
               title: "Customer Display System",
               description: "Customer-facing order display",
               icon: "display",
-            },
-            {
-              title: "Self-Service Kiosk",
-              description: "Automated ordering",
-              icon: "kiosk",
             },
             {
               title: "Caller ID",
               description: "Incoming call identification",
               icon: "phone",
             },
+            
             {
               title: "Payment Terminal Integration",
               description: "Connected payment workflow",
@@ -810,6 +824,19 @@ export default function HomePage() {
                     <path d="M5 3h4l2 5-3 2a15 15 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2Z" />
                   </svg>
                 )}
+                {item.icon === "printer" && (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.7"
+    className="h-5 w-5"
+    aria-hidden="true"
+  >
+    <path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+    <path d="M6 14h12v7H6zM17 12h1" />
+  </svg>
+)}
 
                 {item.icon === "payment" && (
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-5 w-5" aria-hidden="true">
@@ -1394,7 +1421,7 @@ export default function HomePage() {
           </Button>
 
           <Button href="/hardware" variant="outline">
-            Explore Hardware
+            Shop Hardware
           </Button>
         </div>
       </motion.div>

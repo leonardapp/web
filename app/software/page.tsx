@@ -122,7 +122,7 @@ const modules: SoftwareModule[] = [
       { title: "Check compatibility", description: "Verify terminal compatibility and availability with our team." },
       { title: "Plan your deployment", description: "Choose the configuration that fits your business." },
     ],
-    link: { label: "Check Compatibility", href: "/contact-sales", style: "primary" },
+    
   },
   {
   id: "online-ordering",
@@ -310,7 +310,7 @@ function ModuleCard({ module }: { module: SoftwareModule }) {
           <div className="mt-auto flex flex-col items-stretch gap-2.5 border-t border-slate-100 pt-6 sm:flex-row sm:flex-wrap">
             {module.link.href.startsWith("http") ? (
               <a href={module.link.href} target="_blank" rel="noopener noreferrer" className={getExternalLinkClasses(module.link.style ?? "secondary")}>
-                {module.link.label}<span aria-hidden="true">↗</span>
+                {module.link.label}
               </a>
             ) : (
               <Button href={module.link.href} variant={module.link.style ?? "secondary"} className="min-h-11 px-5">
@@ -319,7 +319,7 @@ function ModuleCard({ module }: { module: SoftwareModule }) {
             )}
             {module.id === "online-ordering" && (
               <a href="https://miniprogram.hoxxes.app/app/18839/a119d2d9-1b87-4b8f-8a60-efb4b56e5522" target="_blank" rel="noopener noreferrer" className={getExternalLinkClasses("outline")}>
-                Membership App <span aria-hidden="true">↗</span>
+                Membership App
               </a>
             )}
           </div>
@@ -519,12 +519,12 @@ export default function SoftwarePage() {
               
               
 <a
-  href="https://hoxxes.app/hardware"
+  href="https://hoxxes.app/download"
   target="_blank"
   rel="noopener noreferrer"
   className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-[#88d21a] px-6 py-3.5 text-sm font-medium text-[#26351a] transition-all duration-200 hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2 sm:w-auto"
 >
-  Explore Hardware
+  Download Apps
 </a>
 
             </div>
@@ -657,7 +657,7 @@ export default function SoftwarePage() {
             </p>
             <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
               <Button href="/hardware" variant="primary" className="px-6 py-3.5">
-                Android Hardware 
+                Shop Hardware 
               </Button>
               
               <Button href="/pricing" variant="outline" className="px-6 py-3.5">
