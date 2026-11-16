@@ -94,11 +94,8 @@ const features = [
 
 const BRAND_GREEN = "#88D21A";
 
-// Hardware gets priority on mobile.
-const mobileFeatures = [
-  features[11],
-  ...features.filter((_, index) => index !== 11),
-];
+// Keep the original feature order on mobile.
+const mobileFeatures = features;
 
 export default function HomeFeatures() {
   // Desktop / tablet state
@@ -432,7 +429,7 @@ export default function HomeFeatures() {
                     <div className="absolute left-4 top-4 z-20">
                       <span className="inline-flex items-center gap-1.5 rounded-full border border-white/40 bg-black/40 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.15em] text-white backdrop-blur-lg">
                         <span className="h-1.5 w-1.5 rounded-full bg-[#88D21A]" />
-                        Physical Devices
+                        Shop Hardware
                       </span>
                     </div>
                   )}
@@ -534,7 +531,7 @@ export default function HomeFeatures() {
               {item.title === "Hardware" && (
                 <div className="absolute left-4 top-4 z-20">
                   <span className="inline-flex items-center rounded-full border border-white/35 bg-black/35 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.16em] text-white backdrop-blur-md sm:text-[10px]">
-                    Physical Devices
+                    Shop Hardware
                   </span>
                 </div>
               )}
