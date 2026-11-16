@@ -4,6 +4,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 
+import { BookOpen, TicketPlus } from "lucide-react";
+
+
 const supportOptions = [
   {
     number: "01",
@@ -119,20 +122,25 @@ export default function SupportPage() {
             with our team whenever you need assistance.
           </p>
 
-          <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-            <Link
-              href="/docs"
-              className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#88d21a] px-7 py-3 text-sm font-semibold text-[#17210c] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#76b915] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
-            >
-              Explore Documentation
-            </Link>
-            <Link
-              href="/ticket"
-              className="inline-flex min-h-12 items-center justify-center rounded-full border border-slate-200 bg-white px-7 py-3 text-sm font-semibold text-slate-700 transition duration-200 hover:-translate-y-0.5 hover:border-[#88d21a] hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
-            >
-              Create a Ticket
-            </Link>
-          </div>
+          
+<div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+  <Link
+    href="/docs"
+    className="inline-flex min-h-12 items-center justify-center gap-2.5 rounded-full bg-[#88d21a] px-7 py-3 text-sm font-semibold text-[#17210c] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#76b915] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    <BookOpen size={19} strokeWidth={2} />
+    Guides
+  </Link>
+
+  <Link
+    href="/ticket"
+    className="inline-flex min-h-12 items-center justify-center gap-2.5 rounded-full border border-slate-200 bg-white px-7 py-3 text-sm font-semibold text-slate-700 transition duration-200 hover:-translate-y-0.5 hover:border-[#88d21a] hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
+  >
+    <TicketPlus size={19} strokeWidth={2} />
+    Create a Ticket
+  </Link>
+</div>
+
         </motion.div>
       </section>
 
