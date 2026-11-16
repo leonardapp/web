@@ -79,7 +79,7 @@ const supportOptions = [
 
 const cardMotion = {
   hidden: { opacity: 0, y: 20 },
-  visible: (index) => ({
+  visible: (index: number) => ({
     opacity: 1,
     y: 0,
     transition: { duration: 0.5, delay: index * 0.08 },
