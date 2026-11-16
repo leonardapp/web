@@ -65,7 +65,7 @@ export default function Header() {
   }, [open]);
 
   // ==========================================
-  // CLOSE LOGIN DROPDOWN
+  // CLOSE DROPDOWNS
   // Outside click + Escape
   // ==========================================
   useEffect(() => {
@@ -79,6 +79,7 @@ export default function Header() {
       ) {
         setLoginOpen(false);
       }
+
     };
 
     const handleKeyDown = (event) => {
@@ -141,11 +142,11 @@ export default function Header() {
     </Link>
   );
 
+  // ==========================================
+  // HEADER
+  // ==========================================
   return (
     <>
-      {/* ======================================
-          HEADER
-      ====================================== */}
       <header className="fixed left-0 right-0 top-0 z-[9999] border-b border-slate-200 bg-white/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
 
@@ -176,17 +177,37 @@ export default function Header() {
             aria-label="Main navigation"
             className="hidden items-center gap-5 text-sm font-medium text-slate-600 lg:flex xl:gap-8"
           >
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="group relative whitespace-nowrap transition-colors hover:text-[#6cab12]"
-              >
-                {link.label}
+            
+{navLinks.map((link) => (
+  <Link
+    key={link.href}
+    href={link.href}
+    className="group relative inline-flex items-center gap-1.5 whitespace-nowrap transition-colors hover:text-[#6cab12]"
+  >
+    {link.label}
 
-                <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#88d21a] transition-all duration-300 group-hover:w-full" />
-              </Link>
-            ))}
+    {link.label === "Support" && (
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M3 14v-3a9 9 0 0 1 18 0v3" />
+        <path d="M5 14h2a2 2 0 0 1 2 2v3H7a4 4 0 0 1-4-4v-1a1 1 0 0 1 1-1Z" />
+        <path d="M19 14h-2a2 2 0 0 0-2 2v3h2a4 4 0 0 0 4-4v-1a1 1 0 0 0-1-1Z" />
+      </svg>
+    )}
+
+    <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#88d21a] transition-all duration-300 group-hover:w-full" />
+  </Link>
+))}
+
           </nav>
 
           {/* RIGHT ACTIONS */}
@@ -195,9 +216,24 @@ export default function Header() {
             {/* DOWNLOAD CENTER */}
             <Link
               href="/download"
-              className="hidden whitespace-nowrap text-sm text-slate-600 transition hover:text-[#6cab12] xl:block"
+              className="hidden xl:inline-flex items-center gap-1.5 whitespace-nowrap text-sm font-medium text-slate-600 transition hover:text-[#6cab12]"
             >
-              Download Center
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <path d="m7 10 5 5 5-5M12 15V3" />
+              </svg>
+
+              Downloads
             </Link>
 
             {/* SHOPPING CART */}
@@ -276,13 +312,7 @@ export default function Header() {
                           strokeLinejoin="round"
                           aria-hidden="true"
                         >
-                          <rect
-                            x="3"
-                            y="4"
-                            width="18"
-                            height="13"
-                            rx="2"
-                          />
+                          <rect x="3" y="4" width="18" height="13" rx="2" />
                           <path d="M8 21h8M12 17v4M7 8h10M7 12h6" />
                         </svg>
                       </span>
@@ -320,13 +350,7 @@ export default function Header() {
                           strokeLinejoin="round"
                           aria-hidden="true"
                         >
-                          <rect
-                            x="3"
-                            y="3"
-                            width="18"
-                            height="18"
-                            rx="3"
-                          />
+                          <rect x="3" y="3" width="18" height="18" rx="3" />
                           <path d="M3 9h18M9 21V9M13 13h4M13 17h4" />
                         </svg>
                       </span>
@@ -437,6 +461,7 @@ export default function Header() {
                 >
                   <FaBagShopping size={18} />
                   <span>Cart</span>
+
                   {cartCount > 0 && (
                     <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-[#88d21a] px-1 text-[10px] font-semibold text-[#17210c]">
                       {cartCount > 99 ? "99+" : cartCount}
@@ -445,7 +470,7 @@ export default function Header() {
                 </Link>
               </div>
 
-              {/* COMPACT MOBILE NAVIGATION */}
+              {/* MOBILE NAVIGATION */}
               <nav
                 aria-label="Mobile navigation links"
                 className="flex flex-col px-6 py-4"
@@ -466,21 +491,58 @@ export default function Header() {
                     ))}
                 </div>
 
-                {/* SECONDARY LINKS — SAME DIVIDED ROW STYLE */}
+                {/* SECONDARY LINKS */}
                 <div className="mt-6 flex flex-col border-y border-slate-200">
+
+                  {/* SUPPORT CENTER */}
                   <Link
                     href="/support"
                     onClick={closeMenu}
-                    className="py-3 text-base font-medium text-slate-700 transition hover:text-[#6cab12]"
+                    className="flex items-center gap-3 py-3 text-base font-medium text-slate-700 transition hover:text-[#6cab12]"
                   >
-                    Support Center
+                    <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#f0f8e5] text-[#52820f]">
+                      <svg
+                        width="19"
+                        height="19"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M3 14v-3a9 9 0 0 1 18 0v3" />
+                        <path d="M5 14h2a2 2 0 0 1 2 2v3H7a4 4 0 0 1-4-4v-1a1 1 0 0 1 1-1Z" />
+                        <path d="M19 14h-2a2 2 0 0 0-2 2v3h2a4 4 0 0 0 4-4v-1a1 1 0 0 0-1-1Z" />
+                      </svg>
+                    </span>
+                    Support
                   </Link>
+
+                  {/* DOWNLOAD CENTER */}
                   <Link
                     href="/download"
                     onClick={closeMenu}
-                    className="py-3 text-base font-medium text-slate-700 transition hover:text-[#6cab12]"
+                    className="flex items-center gap-3 py-3 text-base font-medium text-slate-700 transition hover:text-[#6cab12]"
                   >
-                    Download Center
+                    <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#f0f8e5] text-[#52820f]">
+                      <svg
+                        width="19"
+                        height="19"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <path d="m7 10 5 5 5-5M12 15V3" />
+                      </svg>
+                    </span>
+                    Downloads
                   </Link>
                 </div>
               </nav>

@@ -237,7 +237,7 @@ export default function HardwarePage() {
       {/* INTRO + PRODUCTS */}
       <section id="products" className="scroll-mt-24 px-6 py-20 sm:px-10 sm:py-24 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end text-center lg:text-left">
             <div className="max-w-3xl">
               <p className="text-xs font-bold tracking-[0.2em] text-[#5e9210]">
                 HARDWARE STORE
@@ -252,7 +252,7 @@ export default function HardwarePage() {
             </div>
 
             <div className="w-full lg:max-w-xs">
-              <label htmlFor="hardware-search" className="mb-2 block text-xs font-semibold text-black/60">
+              <label htmlFor="hardware-search" className="mb-2 block text-xs font-semibold text-black/60 text-left sm:text-sm">
                 Search products
               </label>
               <div className="relative">
@@ -277,7 +277,7 @@ export default function HardwarePage() {
           </div>
 
           {/* FILTERS */}
-          <div className="mt-9 flex gap-2 overflow-x-auto pb-2" aria-label="Filter hardware by category">
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-2" aria-label="Filter hardware by category">
             {categories.map((category) => {
               const selected = activeCategory === category;
               return (

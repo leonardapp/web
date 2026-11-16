@@ -101,7 +101,7 @@ export default function AboutPage() {
               href="/hardware"
               className="rounded-full border border-[#88d21a] px-6 py-3 text-center text-sm font-medium text-[#26351a] transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
             >
-              Explore Hardware
+              Shop Hardware
             </Link>
           </div>
         </motion.div>

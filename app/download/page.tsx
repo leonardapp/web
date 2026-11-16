@@ -193,7 +193,7 @@ export default function DownloadCenter() {
     href="/hardware"
     className="rounded-full border border-[#88d21a] px-6 py-3 text-center text-white transition hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2"
   >
-    View Hardware
+    Shop Hardware
   </Link>
 </div>
         </div>

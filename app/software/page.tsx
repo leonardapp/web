@@ -49,7 +49,7 @@ const modules: SoftwareModule[] = [
       { title: "Stay operational", description: "Use Android POS with offline capabilities where supported by your setup." },
       { title: "Understand performance", description: "Access sales reports, customer information and business insights." },
     ],
-    link: { label: "Compatible Hardware", href: "/hardware", style: "primary" },
+    link: { label: "Compatible Hardware", href: "/hardware", style: "outline" },
   },
   {
     id: "operations-hub",
@@ -107,7 +107,7 @@ const modules: SoftwareModule[] = [
       { title: "Promote relevant items", description: "Use upselling and promotional content in the kiosk experience." },
       { title: "Connect the workflow", description: "Send orders into the connected POS and kitchen workflow." },
     ],
-    link: { label: "Compatible Hardware", href: "/hardware", style: "primary" },
+    link: { label: "Compatible Hardware", href: "/hardware", style: "outline" },
   },
   {
     id: "payment-integration",
@@ -168,7 +168,7 @@ const modules: SoftwareModule[] = [
       { title: "Support the team", description: "Keep incoming order workflows more organized." },
       { title: "Confirm supported services", description: "Ask our team which platforms are available for your setup." },
     ],
-    link: { label: "Delivery Integrations", href: "/contact-sales", style: "secondary" },
+    link: { label: "Delivery Integrations", href: "/contact-sales", style: "outline" },
   },
   
 {
@@ -307,7 +307,7 @@ function ModuleCard({ module }: { module: SoftwareModule }) {
         </div>
 
         {module.link && (
-          <div className="mt-auto flex flex-col items-stretch gap-2.5 border-t border-slate-100 pt-6 sm:flex-row sm:flex-wrap">
+          <div className="mt-auto flex flex-col items-stretch gap-2.5 border-t border-slate-100 pt-6 sm:flex-row sm:flex-wrap lg:items-center lg:justify-center">
             {module.link.href.startsWith("http") ? (
               <a href={module.link.href} target="_blank" rel="noopener noreferrer" className={getExternalLinkClasses(module.link.style ?? "secondary")}>
                 {module.link.label}
@@ -420,7 +420,7 @@ function QRStoryCard() {
             <div className="grid grid-cols-2 gap-2 border-t border-slate-100 pt-3 text-[10px] font-medium text-slate-600"><span>✓ Instant activation</span><span>✓ 4 download styles</span><span>✓ One-click copy</span><span>✓ Delete anytime</span></div>
           </div>
           <p className="mt-4 text-sm leading-6 text-slate-600">No technical assistance. No waiting. Full control from your Back Office.</p>
-          <a href="https://qr.hoxxes.com/qr/SSI718JKZ770" target="_blank" rel="noopener noreferrer" className={`${getExternalLinkClasses("primary")} mt-auto`}>
+          <a href="https://qr.hoxxes.com/qr/SSI718JKZ770" target="_blank" rel="noopener noreferrer" className={`${getExternalLinkClasses("primary")} mt-auto lg:self-center`}>
             Explore Live Menu
           </a>
         </section>
