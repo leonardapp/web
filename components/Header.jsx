@@ -9,8 +9,8 @@ import { FaInstagram, FaFacebookF } from "react-icons/fa";
 import { FaBagShopping } from "react-icons/fa6";
 import { getCart } from "@/lib/cart";
 
-const POS_URL = "https://pos.hoxxes.com/#/login";
-const BACKOFFICE_URL = "https://backoffice.hoxxes.com/#/login";
+const POS_URL = "https://pos.hoxxes.app/#/login";
+const BACKOFFICE_URL = "https://backoffice.hoxxes.app/#/login";
 
 const navLinks = [
   { href: "/software", label: "Software" },

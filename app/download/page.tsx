@@ -13,7 +13,7 @@ const platforms = [
     icon: FaWindows,
     title: "HOXXES POS (Web App)",
     desc: "Instant access to the POS system. No installation required.",
-    link: "https://pos.hoxxes.com/#/login",
+    link: "https://pos.hoxxes.app/#/login",
     badge: "Instant Access",
   },
   {
@@ -29,7 +29,7 @@ const platforms = [
     icon: FaApple,
     title: "HOXXES iOS POS",
     desc: "Native POS experience for iPhone & iPad via App Store.",
-    link: "https://apps.apple.com/sg/app/cloudpos-global/id6502969805",
+    link: "https://apps.apple.com/cn/app/cloudpos-us/id6746558380?l=en-GB",
     badge: "App Store",
   },
 ];
