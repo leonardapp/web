@@ -5,13 +5,13 @@ import Header from "@/components/Header";
 export const metadata = {
   title: "Special Offer | HOXXES",
   description:
-    "Buy a HOXXES self-service kiosk, get an Android Stick 8K free and enjoy an additional 10% online discount. November 2–8, 2026.",
+    "Buy a HOXXES self-service kiosk, get an Android Stick 8K free and enjoy an additional 10% online discount. November 2–December 31, 2026.",
 };
 
 const OFFER = {
   start: "November 2, 2026",
-  end: "November 8, 2026",
-  period: "November 2–8, 2026",
+  end: "December 31, 2026",
+  period: "November – December 31, 2026",
   hardwareUrl: "/hardware",
   contactPhone: "+38348106060",
   productImage: "https://hoxxes.app/images/kiosk1.png",
@@ -55,7 +55,7 @@ export default function OffersPage() {
           className="absolute -right-24 -top-24 -z-10 h-64 w-64 rounded-full bg-[#88d21a]/20 blur-3xl sm:h-96 sm:w-96"
         />
 
-        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+        <div className="mx-auto max-w-7xl px-4 pt-24 pb-14 sm:px-6 sm:pt-28 sm:pb-20 lg:px-8 lg:pt-32 lg:pb-28">
           <div className="mx-auto max-w-5xl text-center">
             <div className="inline-flex max-w-full items-center justify-center rounded-full border border-[#88d21a]/40 bg-[#88d21a]/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[#b5f45d] sm:px-5 sm:text-xs sm:tracking-[0.2em]">
               HOXXES Special Offer

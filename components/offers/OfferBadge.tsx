@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Oferta përfundon më 8 nëntor 2026, ora 23:59:59 në Kosovë (UTC+1)
-const OFFER_DEADLINE = "2026-11-08T23:59:59+01:00";
+const OFFER_DEADLINE = "2027-01-01T00:00:00+01:00";
 
 const SHOW_DURATION = 8000;
 const FIRST_SHOW_DELAY = 4000;

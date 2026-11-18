@@ -10,7 +10,7 @@ import CustomerSuccess from "@/components/CustomerSuccess";
 
 
 
-const OFFER_END_DATE = "2026-11-08";
+const OFFER_END_DATE = "2027-01-01";
 
 
 const offerActive =
