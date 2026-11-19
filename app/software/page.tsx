@@ -168,7 +168,6 @@ const modules: SoftwareModule[] = [
       { title: "Support the team", description: "Keep incoming order workflows more organized." },
       { title: "Confirm supported services", description: "Ask our team which platforms are available for your setup." },
     ],
-    link: { label: "Delivery Integrations", href: "/contact-sales", style: "outline" },
   },
   
 {
@@ -492,26 +491,34 @@ export default function SoftwarePage() {
             </p>
           </div>
 
-          {/* On mobile, the image appears before the hero buttons. On desktop it sits to the right. */}
-          <div className="hoxxes-reveal relative mx-auto min-h-[340px] w-full max-w-2xl [animation-delay:120ms] sm:min-h-[460px] lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:min-h-[500px]">
-            <div className="pointer-events-none absolute inset-x-8 top-12 bottom-6 rounded-full bg-[#88d21a]/15 blur-3xl" />
-            <div className="pointer-events-none absolute left-[12%] top-[17%] h-[58%] w-[76%] rounded-[3rem] border border-[#88d21a]/15 rotate-[-5deg]" />
-            <div className="pointer-events-none absolute left-[18%] top-[12%] h-[58%] w-[76%] rounded-[3rem] border border-slate-200/70 rotate-[4deg]" />
+          
 
-            <div className="absolute inset-x-5 top-14 z-[1] rounded-[1.6rem] bg-white/80 p-2 shadow-[0_28px_70px_rgba(15,23,42,.16)] ring-1 ring-white/90 backdrop-blur-sm sm:inset-x-10 sm:top-12 sm:rounded-[2rem] sm:p-3">
-              <img src="https://hoxxes.app/images/pos-menu.png" alt="HOXXES POS dashboard" className="aspect-[1.42/1] w-full rounded-[1.2rem] object-cover object-top sm:rounded-[1.5rem]" width={1200} height={845} loading="eager" decoding="async" fetchPriority="high" />
-            </div>
+{/* HOXXES Ecosystem Hero Visual */}
+<div className="hoxxes-reveal relative mx-auto flex min-h-[340px] w-full max-w-2xl items-center justify-center [animation-delay:120ms] sm:min-h-[460px] lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:min-h-[500px]">
 
-            <div className="hoxxes-float absolute left-0 top-0 z-20 w-[35%] sm:left-1 sm:w-[32%]">
-              <img src="https://hoxxes.app/images/QR-hero.png" alt="HOXXES QR Ordering" className="aspect-[1.05/1] w-full object-contain drop-shadow-[0_16px_20px_rgba(15,23,42,.18)] transition-transform duration-500 hover:scale-105" width={600} height={570} loading="lazy" decoding="async" />
-              <div className="mt-1 inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/85 px-3 py-1.5 text-[10px] font-semibold text-slate-700 shadow-md backdrop-blur-md sm:text-xs">QR Ordering <span className="text-[#5d9510]">↗</span></div>
-            </div>
+  {/* Soft green ambient glow */}
+  <div className="pointer-events-none absolute inset-x-0 top-8 bottom-4 rounded-full bg-[#88d21a]/15 blur-3xl" />
 
-            <div className="hoxxes-float-delay absolute bottom-0 right-0 z-20 w-[40%] sm:right-1 sm:w-[36%]">
-              <img src="https://hoxxes.app/images/KDS-hero.png" alt="HOXXES Kitchen Display System" className="aspect-[1.2/1] w-full object-contain drop-shadow-[0_18px_24px_rgba(15,23,42,.2)] transition-transform duration-500 hover:scale-105" width={700} height={580} loading="lazy" decoding="async" />
-              <div className="flex items-center justify-between gap-2 rounded-full border border-white/80 bg-white/90 px-3 py-1.5 shadow-md backdrop-blur-md"><span className="text-[10px] font-semibold text-slate-700 sm:text-xs">Kitchen Display</span><span className="h-2 w-2 shrink-0 rounded-full bg-[#88d21a] shadow-[0_0_0_4px_rgba(136,210,26,.16)]" /></div>
-            </div>
-          </div>
+  {/* Subtle decorative frame */}
+  <div className="pointer-events-none absolute left-[10%] top-[14%] h-[65%] w-[82%] rotate-[-4deg] rounded-[3rem] border border-[#88d21a]/15" />
+
+  {/* Hero image */}
+  <div className="relative z-[1] w-full overflow-hidden rounded-[1.5rem] lg:left-[-3%] lg:top-[-12px] lg:w-[110%]">
+  <img
+    src="https://hoxxes.app/images/hoxxes-hero-ecosystem.png"
+    alt="HOXXES Restaurant Technology Ecosystem"
+    className="block h-auto w-full rounded-[1.5rem] object-contain mix-blend-multiply"
+    width={1728}
+    height={972}
+    loading="eager"
+    decoding="async"
+    fetchPriority="high"
+  />
+</div>
+
+
+</div>
+
 
           {/* Mobile places these actions below the visual; desktop keeps them below the intro. */}
           <div className="hoxxes-reveal relative z-10 mx-auto w-full max-w-xl text-center [animation-delay:220ms] lg:col-start-1 lg:row-start-2 lg:mx-0 lg:text-left">
@@ -520,7 +527,6 @@ export default function SoftwarePage() {
               
 <a
   href="https://hoxxes.com/download"
-  target="_blank"
   rel="noopener noreferrer"
   className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-[#88d21a] px-6 py-3.5 text-sm font-medium text-[#26351a] transition-all duration-200 hover:bg-[#88d21a] hover:text-[#17210c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#88d21a] focus-visible:ring-offset-2 sm:w-auto"
 >
