@@ -24,113 +24,102 @@ type SoftwareModule = {
 const featureTargets: Record<string, string> = {
   pos: "pos",
   "operations-hub": "operations-hub",
+  "mobile-applications": "mobile-applications",
   kds: "kds",
   "online-ordering": "online-ordering",
   "qr-ordering": "qr-ordering",
   kiosk: "kiosk",
   "delivery-integrations": "delivery-integrations",
   marketing: "promotions",
-  "payment-integration": "payment-integration",
   "analytics-dashboard": "analytics-dashboard",
   "hq-control-center": "hq-control-center",
+  ods: "ods",
+  "kitchen-printer": "kitchen-printer",
+  fiscalization: "fiscalization",
+  "kiosk-payment-integration": "kiosk-payment-integration",
 };
 
 const modules: SoftwareModule[] = [
-  {
+
+{
     id: "pos",
     eyebrow: "Point of Sale",
     title: "Restaurant POS",
     description:
-      "Manage orders, tables, payments and reporting from one connected POS platform. Use the web POS or Android POS application according to your operation.",
-    image: "https://hoxxes.app/images/pos-operations2.png",
+      "Run dine-in, takeaway and delivery sales through one connected point-of-sale platform. Choose Web POS or an Android POS terminal, available in single-screen and dual-screen configurations, with offline operation on supported Android setups.",
+    image: "https://hoxxes.app/images/pos-operations3.png",
     imageAlt: "HOXXES Restaurant POS interface",
     features: [
-      { title: "Manage every order", description: "Handle dine-in, takeaway and delivery orders in one workflow." },
-      { title: "Stay operational", description: "Use Android POS with offline capabilities where supported by your setup." },
-      { title: "Understand performance", description: "Access sales reports, customer information and business insights." },
+      { title: "Manage every order", description: "Handle dine-in, takeaway and delivery orders through one POS workflow." },
+      { title: "Flexible POS access", description: "Choose Web POS or Android POS, with offline capabilities on supported Android setups." },
+      { title: "Control sales and payments", description: "Manage transactions, payment methods and sales activity from your POS." },
     ],
-    link: { label: "Compatible Hardware", href: "/hardware", style: "outline" },
+    link: { label: "Shop POS Terminals", href: "/hardware", style: "primary" },
   },
-  {
-    id: "operations-hub",
-    eyebrow: "Operations Hub",
-    title: "Manage operations from anywhere.",
-    description:
-      "Give staff, managers and business owners a unified view of day-to-day restaurant operations from supported devices.",
-    image: "https://hoxxes.app/images/waiter-operations.png",
-    imageAlt: "HOXXES operations management",
-    features: [
-      { title: "Coordinate service", description: "Access ordering and table workflows from your operations tools." },
-      { title: "Keep an eye on sales", description: "Review live sales and operational information." },
-      { title: "Support every role", description: "Provide manager and owner views alongside staff workflows." },
-    ],
-  },
-  {
-    id: "workforce-management",
-    eyebrow: "Workforce Management",
-    title: "Attendance with location verification.",
-    description:
-      "Manage employee attendance with desktop and mobile punch in/out and configurable working zones.",
-    image: "https://hoxxes.app/images/punch.png",
-    imageAlt: "HOXXES workforce attendance interface",
-    features: [
-      { title: "Record attendance", description: "Let employees punch in and punch out." },
-      { title: "Verify work zones", description: "Configure allowed locations and location radius." },
-      { title: "Review attendance", description: "Check attendance history, employee records and status exceptions." },
-    ],
-  },
-  {
-    id: "qr-ordering",
-    eyebrow: "QR Ordering",
-    title: "Every table becomes a digital ordering point.",
-    description:
-      "Customers scan a QR code to browse the menu, place orders, call a waiter and track their bill.",
-    image: "https://hoxxes.app/images/qr-ordering.png",
-    imageAlt: "HOXXES QR ordering experience",
-    features: [
-      { title: "Order from the table", description: "Let guests browse menus and submit orders through QR." },
-      { title: "Keep menus current", description: "Synchronize menu content and manage QR codes." },
-      { title: "Improve table service", description: "Support waiter calls and bill tracking where enabled." },
-    ],
-    link: { label: "Live Menu", href: "https://qr.hoxxes.com/qr/SSI718JKZ770", style: "primary" },
-  },
-  {
+
+{
+  id: "mobile-applications",
+  eyebrow: "Mobile Apps for Staff",
+  title: "Smarter Staff Operations.",
+  description:
+    "Empower your staff to take customer orders directly from their mobile devices. Orders are sent to HOXXES in real time, helping your team serve faster and keep kitchen operations connected.",
+  image: "https://hoxxes.app/images/waiter-operations2.png",
+  imageAlt: "Restaurant staff taking customer orders using Android and iOS mobile devices",
+  features: [
+    {
+      title: "Android & iOS applications",
+      description: "Equip your waiters with mobile applications available on Android and iOS devices."
+    },
+    {
+      title: "Real-time order taking",
+      description: "Let staff select products, customize orders and submit them directly from the table."
+    },
+    {
+      title: "Connected kitchen workflow",
+      description: "Orders are instantly transferred to the kitchen workflow, reducing manual communication and delays."
+    },
+  ],
+},
+
+{
     id: "kiosk",
     eyebrow: "Self-Service Kiosk",
     title: "Let customers order independently.",
     description:
-      "Offer a branded self-service ordering experience connected with HOXXES POS, Kitchen Display System and analytics.",
-    image: "https://hoxxes.app/images/kiosk-ordering2.png",
+      "Offer a branded self-service ordering experience on a dedicated Android kiosk, connected with HOXXES POS, Kitchen Display System and analytics.",
+    image: "https://hoxxes.app/images/kiosk-ordering1.png",
     imageAlt: "HOXXES self-service kiosk",
     features: [
       { title: "Simplify ordering", description: "Guide customers through a self-ordering journey." },
       { title: "Promote relevant items", description: "Use upselling and promotional content in the kiosk experience." },
       { title: "Connect the workflow", description: "Send orders into the connected POS and kitchen workflow." },
     ],
-    link: { label: "Compatible Hardware", href: "/hardware", style: "outline" },
+    link: { label: "Shop Self-Service Kiosks", href: "/hardware", style: "primary" },
   },
-  {
-    id: "payment-integration",
-    eyebrow: "Payment Integration",
-    title: "Connect supported payment terminals.",
+
+{
+    id: "qr-ordering",
+    eyebrow: "QR Ordering",
+    title: "Every table becomes a digital ordering point.",
     description:
-      "Explore payment-terminal integration options for the HOXXES self-service experience.",
-    image: "https://hoxxes.app/images/payment-intg.png",
-    imageAlt: "HOXXES payment terminal integration",
+      "Customers scan a QR code to browse the menu, place orders, call a waiter and track their bill.",
+    image: "https://hoxxes.com/images/qr-ordering2.png",
+    imageAlt: "HOXXES QR ordering experience",
     features: [
-      { title: "Explore payment options", description: "Review integration possibilities for your kiosk setup." },
-      { title: "Check compatibility", description: "Verify terminal compatibility and availability with our team." },
-      { title: "Plan your deployment", description: "Choose the configuration that fits your business." },
+      { title: "Order from the table", description: "Let guests browse menus and submit orders through QR." },
+      { title: "Keep menus current", description: "Synchronize menu content and manage QR codes." },
+      { title: "Improve table service", description: "Support waiter calls and bill tracking where enabled." },
     ],
-    
+    link: { label: "Live Menu", href: "https://qr.hoxxes.app/qr/SSI904ZSF640", style: "primary" },
   },
-  {
+
+{
   id: "online-ordering",
   eyebrow: "Online Ordering",
   title: "Your own branded eShop & Mini App.",
   description:
     "Get a dedicated eShop for delivery and pickup orders, plus a Mini App for membership, vouchers, digital wallet and points, with map-based delivery zones.",
-  image: "https://hoxxes.app/images/online-ordering.png",
+  image: "https://hoxxes.app/images/online-ordering-new.png",
   imageAlt: "HOXXES branded eShop and customer Mini App",
   features: [
     {
@@ -155,28 +144,29 @@ const modules: SoftwareModule[] = [
     style: "primary",
   },
 },
-  {
+
+{
     id: "delivery-integrations",
-    eyebrow: "Delivery Integrations",
-    title: "Manage incoming delivery orders in one place.",
+    eyebrow: "Third-Party Order Management",
+    title: "Manage third-party orders with separate reporting.",
     description:
-      "Bring supported delivery-platform orders into a more unified workflow for your team.",
+      "Process third-party orders directly through HOXXES by selecting the delivery channel, specifying the recipient and adding the ordered products. These orders bypass the standard POS checkout process and are recorded in a separate third-party sales report.",
     image: "https://hoxxes.app/images/delivery-Integration2.png",
-    imageAlt: "HOXXES delivery integrations",
+    imageAlt: "HOXXES third-party order management",
     features: [
-      { title: "Unify incoming orders", description: "Reduce the need to monitor separate order channels." },
-      { title: "Support the team", description: "Keep incoming order workflows more organized." },
-      { title: "Confirm supported services", description: "Ask our team which platforms are available for your setup." },
+      { title: "Dedicated order workflow", description: "Select the delivery channel, specify the recipient and add the products included in the order." },
+      { title: "POS checkout bypass", description: "Process third-party orders without going through the standard cash register closing process." },
+      { title: "Separate sales reporting", description: "Keep third-party orders in a dedicated report, separate from regular POS sales and daily shift reports." },
     ],
   },
-  
+
 {
   id: "kds",
   eyebrow: "Kitchen Display System",
   title: "Smarter kitchen operations.",
   description:
-    "A flexible KDS experience designed around your kitchen workflow.",
-  image: "https://hoxxes.app/images/kitchen-display-system.png",
+    "Keep kitchen teams aligned with the HOXXES Android Kitchen Display System, running on dedicated screens that organize incoming orders and connect preparation workflows with order status displays.",
+  image: "https://hoxxes.app/images/kitchen-display-system2.png",
   imageAlt: "HOXXES Kitchen Display System",
   features: [
     {
@@ -193,12 +183,116 @@ const modules: SoftwareModule[] = [
     },
     {
       title: "System & Connectivity",
-      description: "Language settings, SSE support and connection recovery.",
+      description: "Language settings, real-time updates and connection recovery.",
+    },
+  ],
+  link: { label: "Shop KDS Displays", href: "/hardware", style: "primary" },
+},
+
+{
+    id: "kitchen-printer",
+    eyebrow: "Kitchen Printer Integration",
+    title: "Connect kitchen printing to your order flow.",
+    description:
+      "Route order details to compatible kitchen printers as part of the configured HOXXES POS and kitchen workflow.",
+    image: "https://hoxxes.app/images/kitchen-printer.png",
+    imageAlt: "HOXXES kitchen printer integration",
+    features: [
+      { title: "Print order tickets", description: "Send order details to configured kitchen printers." },
+      { title: "Organize preparation", description: "Support printer routing based on the configured operation." },
+      { title: "Work with POS", description: "Connect kitchen printing with supported HOXXES order workflows." },
+    ],
+  },
+
+{
+    id: "ods",
+    eyebrow: "Order Display System",
+    title: "Keep customers informed at pickup.",
+    description:
+      "Run the HOXXES Android Order Display System on a dedicated customer-facing screen to show order progress and ready-to-collect orders, connected to the kitchen workflow.",
+    image: "https://hoxxes.app/images/order-display.png",
+    imageAlt: "HOXXES Order Display System",
+    features: [
+      { title: "Show order progress", description: "Present order statuses on a dedicated customer display." },
+      { title: "Connect with KDS", description: "Receive preparation status updates from the connected Kitchen Display System." },
+      { title: "Improve pickup flow", description: "Help customers identify when their orders are ready." },
+    ],
+    link: { label: "Shop ODS Displays", href: "/hardware", style: "primary" },
+  },
+
+{
+    id: "kiosk-payment-integration",
+    eyebrow: "HOXXES Kiosk Payment Integration",
+    title: "Accept card payments directly at your kiosk.",
+    description:
+      "Connect compatible bank payment terminals to HOXXES self-service kiosks through HOXXES Payment Bridge, allowing customers to pay by card during the kiosk ordering process.",
+    image: "https://hoxxes.app/images/payment-intg2.png",
+    imageAlt: "HOXXES kiosk connected to a bank payment terminal",
+    features: [
+      { title: "Bank terminal connection", description: "Link compatible bank payment terminals with HOXXES self-service kiosks through HOXXES Payment Bridge." },
+      { title: "Card payment at checkout", description: "Allow customers to complete kiosk orders by paying with a bank card at the connected terminal." },
+      { title: "Integrated payment flow", description: "Connect the kiosk checkout with the supported terminal and bank integration configuration." },
+    ],
+  },
+
+{
+  id: "fiscalization",
+  eyebrow: "Fiscalization & Digital Receipts",
+  title: "Flexible fiscalization for modern businesses.",
+  description:
+    "HOXXES supports two fiscalization approaches: traditional certified fiscal cash registers and a dedicated SEF application that operates in full coordination with the HOXXES platform.",
+  image: "https://hoxxes.app/images/fiscal-printer.png",
+  imageAlt: "HOXXES fiscalization and digital receipt solutions",
+  features: [
+    {
+      title: "Traditional fiscal cash registers",
+      description:
+        "Connect certified fiscal cash registers through authorized operators, with dedicated hardware and an annual subscription."
+    },
+    {
+      title: "Dedicated SEF application",
+      description:
+        "A separately developed application works in coordination with HOXXES, supporting the required onboarding process and communication with the fiscal system."
+    },
+    {
+      title: "Real-time fiscal operations",
+      description:
+        "Declare invoices in real time and process invoice returns and cancellations through the coordinated workflow."
     },
   ],
 },
 
-  {
+{
+    id: "operations-hub",
+    eyebrow: "Operations Hub",
+    title: "Stay connected to your business operations.",
+    description:
+      "Access key operational information through the HOXXES Operations Hub mobile app and stay connected with your business while away from the counter.",
+    image: "https://hoxxes.app/images/report-over.png",
+    imageAlt: "HOXXES Operations Hub mobile app",
+    features: [
+      { title: "Operational overview", description: "Keep important business activity accessible from your mobile device." },
+      { title: "On-the-go access", description: "Stay connected to your HOXXES operations when you are away from the POS." },
+      { title: "One connected platform", description: "Access the operational information made available to your account through HOXXES." },
+    ],
+  },
+
+{
+    id: "workforce-management",
+    eyebrow: "Workforce Management",
+    title: "Attendance with location verification.",
+    description:
+      "Manage employee attendance with desktop and mobile punch in/out and configurable working zones.",
+    image: "https://hoxxes.app/images/punch.png",
+    imageAlt: "HOXXES workforce attendance interface",
+    features: [
+      { title: "Record attendance", description: "Let employees punch in and punch out." },
+      { title: "Verify work zones", description: "Configure allowed locations and location radius." },
+      { title: "Review attendance", description: "Check attendance history, employee records and status exceptions." },
+    ],
+  },
+
+{
     id: "promotions",
     eyebrow: "Promotions Automation",
     title: "Promotions that run themselves.",
@@ -212,7 +306,8 @@ const modules: SoftwareModule[] = [
       { title: "Support loyalty campaigns", description: "Coordinate voucher, membership and loyalty initiatives where enabled." },
     ],
   },
-  {
+
+{
     id: "hq-control-center",
     eyebrow: "HQ Control Center",
     title: "Control every location from a single HQ.",
@@ -226,7 +321,8 @@ const modules: SoftwareModule[] = [
       { title: "Review business activity", description: "Access HQ reporting and KPI views." },
     ],
   },
-  {
+
+{
     id: "analytics-dashboard",
     eyebrow: "Analytics Cloud",
     title: "Complete operational visibility.",
@@ -240,6 +336,8 @@ const modules: SoftwareModule[] = [
       { title: "Follow key indicators", description: "Use dashboards and KPI tracking to support decisions." },
     ],
   },
+
+
 ];
 
 
@@ -348,7 +446,7 @@ function QRStoryCard() {
           <div className="mb-4 flex items-center gap-3"><span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#eaf6d9] text-xs font-bold text-[#527f12]">01</span><div><p className="text-xs font-semibold uppercase tracking-wider text-[#5d9510]">Scan</p><h3 className="text-base font-semibold text-slate-900">Scan & Discover</h3></div></div>
           <div className="relative min-h-[320px] flex-1 overflow-hidden rounded-2xl bg-[#eef4e7] sm:min-h-[360px]">
             <img
-              src="https://hoxxes.app/images/qr-ordering.png"
+              src="https://hoxxes.app/images/qr-ordering2.png"
               alt="HOXXES QR ordering experience"
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
@@ -419,7 +517,7 @@ function QRStoryCard() {
             <div className="grid grid-cols-2 gap-2 border-t border-slate-100 pt-3 text-[10px] font-medium text-slate-600"><span>✓ Instant activation</span><span>✓ 4 download styles</span><span>✓ One-click copy</span><span>✓ Delete anytime</span></div>
           </div>
           <p className="mt-4 text-sm leading-6 text-slate-600">No technical assistance. No waiting. Full control from your Back Office.</p>
-          <a href="https://qr.hoxxes.com/qr/SSI718JKZ770" target="_blank" rel="noopener noreferrer" className={`${getExternalLinkClasses("primary")} mt-auto lg:self-center`}>
+          <a href="https://qr.hoxxes.app/qr/SSI904ZSF640" target="_blank" rel="noopener noreferrer" className={`${getExternalLinkClasses("primary")} mt-auto lg:self-center`}>
             Explore Live Menu
           </a>
         </section>

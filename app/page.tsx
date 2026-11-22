@@ -490,7 +490,7 @@ export default function HomePage() {
             <div className="flex items-center gap-3 rounded-2xl bg-[#17210c] p-3.5 text-white sm:gap-4 sm:p-4">
               <div className="shrink-0 rounded-lg bg-white p-2">
                 <QRCodeSVG
-                  value="https://qr.hoxxes.com/qr/SSI718JKZ770"
+                  value="https://qr.hoxxes.app/qr/SSI904ZSF640"
                   size={76}
                   level="H"
                   bgColor="#ffffff"
@@ -506,7 +506,7 @@ export default function HomePage() {
                   Try Smart QR Ordering
                 </p>
                <a
-  href="https://qr.hoxxes.com/qr/SSI718JKZ770"
+  href="https://qr.hoxxes.app/qr/SSI904ZSF640"
   target="_blank"
   rel="noopener noreferrer"
   className="mt-3 inline-flex items-center justify-center gap-2 rounded-xl bg-[#88d21a] px-4 py-2.5 text-sm font-bold text-[#17210c] shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#9be52b] hover:shadow-lg active:scale-95"
