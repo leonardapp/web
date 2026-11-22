@@ -255,7 +255,7 @@ export default function OfferBadge() {
                     font-semibold
                   "
                 >
-                  Until Nov 8 →
+                  Until Dec 31 →
                 </div>
               </div>
             </motion.div>

@@ -42,20 +42,36 @@ const featureTargets: Record<string, string> = {
 const modules: SoftwareModule[] = [
 
 {
-    id: "pos",
-    eyebrow: "Point of Sale",
-    title: "Restaurant POS",
-    description:
-      "Run dine-in, takeaway and delivery sales through one connected point-of-sale platform. Choose Web POS or an Android POS terminal, available in single-screen and dual-screen configurations, with offline operation on supported Android setups.",
-    image: "https://hoxxes.app/images/pos-operations3.png",
-    imageAlt: "HOXXES Restaurant POS interface",
-    features: [
-      { title: "Manage every order", description: "Handle dine-in, takeaway and delivery orders through one POS workflow." },
-      { title: "Flexible POS access", description: "Choose Web POS or Android POS, with offline capabilities on supported Android setups." },
-      { title: "Control sales and payments", description: "Manage transactions, payment methods and sales activity from your POS." },
-    ],
-    link: { label: "Shop POS Terminals", href: "/hardware", style: "primary" },
-  },
+  id: "pos",
+  eyebrow: "HOXXES POS",
+  title: "Point of Sale",
+  description:
+    "Run dine-in, takeaway and delivery sales through one connected point-of-sale platform. Choose Web POS or an Android POS terminal, available in single-screen and dual-screen configurations, with offline operation on supported Android setups.",
+  image: "https://hoxxes.app/images/pos-operations4.png",
+  imageAlt: "HOXXES Point of Sale interface",
+  features: [
+    {
+      title: "Manage every order",
+      description:
+        "Handle dine-in, takeaway and delivery orders through one POS workflow."
+    },
+    {
+      title: "Flexible POS access",
+      description:
+        "Choose Web POS or Android POS, with offline capabilities on supported Android setups."
+    },
+    {
+      title: "Control sales and payments",
+      description:
+        "Manage transactions, payment methods and sales activity from your POS."
+    },
+  ],  
+  link: {
+  label: "Shop POS Terminals",
+  href: "/hardware/pos-terminal",
+  style: "primary",
+},
+},
 
 {
   id: "mobile-applications",
@@ -94,7 +110,11 @@ const modules: SoftwareModule[] = [
       { title: "Promote relevant items", description: "Use upselling and promotional content in the kiosk experience." },
       { title: "Connect the workflow", description: "Send orders into the connected POS and kitchen workflow." },
     ],
-    link: { label: "Shop Self-Service Kiosks", href: "/hardware", style: "primary" },
+    link: {
+  label: "Shop Kiosk",
+  href: "/hardware/kiosk-slim",
+  style: "primary",
+},
   },
 
 {
@@ -151,7 +171,7 @@ const modules: SoftwareModule[] = [
     title: "Manage third-party orders with separate reporting.",
     description:
       "Process third-party orders directly through HOXXES by selecting the delivery channel, specifying the recipient and adding the ordered products. These orders bypass the standard POS checkout process and are recorded in a separate third-party sales report.",
-    image: "https://hoxxes.app/images/delivery-Integration2.png",
+    image: "https://hoxxes.app/images/delivery-Integration3.png",
     imageAlt: "HOXXES third-party order management",
     features: [
       { title: "Dedicated order workflow", description: "Select the delivery channel, specify the recipient and add the products included in the order." },
@@ -186,23 +206,39 @@ const modules: SoftwareModule[] = [
       description: "Language settings, real-time updates and connection recovery.",
     },
   ],
-  link: { label: "Shop KDS Displays", href: "/hardware", style: "primary" },
+  link: {
+  label: "Shop KDS Displays",
+  href: "/hardware/kds-display",
+  style: "primary",
+},
 },
 
 {
-    id: "kitchen-printer",
-    eyebrow: "Kitchen Printer Integration",
-    title: "Connect kitchen printing to your order flow.",
-    description:
-      "Route order details to compatible kitchen printers as part of the configured HOXXES POS and kitchen workflow.",
-    image: "https://hoxxes.app/images/kitchen-printer.png",
-    imageAlt: "HOXXES kitchen printer integration",
-    features: [
-      { title: "Print order tickets", description: "Send order details to configured kitchen printers." },
-      { title: "Organize preparation", description: "Support printer routing based on the configured operation." },
-      { title: "Work with POS", description: "Connect kitchen printing with supported HOXXES order workflows." },
-    ],
-  },
+  id: "kitchen-printer",
+  eyebrow: "Kitchen Printer Integration",
+  title: "Route every item to the right printer.",
+  description:
+    "Connect compatible kitchen printers to the HOXXES POS workflow and configure exactly which products are printed at each station. Route food, drinks or specific menu items to their designated printers automatically.",
+  image: "https://hoxxes.app/images/kitchen-printer.png",
+  imageAlt: "HOXXES kitchen printer integration",
+  features: [
+    {
+      title: "Product-based printing",
+      description:
+        "Configure printers to receive only selected products, such as food items, drinks or specific menu products."
+    },
+    {
+      title: "Separate preparation stations",
+      description:
+        "Route kitchen orders to food printers and beverage orders to dedicated bar printers."
+    },
+    {
+      title: "Connected POS workflow",
+      description:
+        "Automatically send the relevant order details to the configured printers when orders are placed."
+    },
+  ],
+},
 
 {
     id: "ods",
@@ -263,19 +299,31 @@ const modules: SoftwareModule[] = [
 },
 
 {
-    id: "operations-hub",
-    eyebrow: "Operations Hub",
-    title: "Stay connected to your business operations.",
-    description:
-      "Access key operational information through the HOXXES Operations Hub mobile app and stay connected with your business while away from the counter.",
-    image: "https://hoxxes.app/images/report-over.png",
-    imageAlt: "HOXXES Operations Hub mobile app",
-    features: [
-      { title: "Operational overview", description: "Keep important business activity accessible from your mobile device." },
-      { title: "On-the-go access", description: "Stay connected to your HOXXES operations when you are away from the POS." },
-      { title: "One connected platform", description: "Access the operational information made available to your account through HOXXES." },
-    ],
-  },
+  id: "inventory-management",
+  eyebrow: "Inventory & Recipe Management",
+  title: "Stay in control of every ingredient.",
+  description:
+    "Connect inventory management with Cookbook recipes to automatically deduct ingredients as sales happen. Monitor stock levels, receive low-stock alerts and automatically mark unavailable products as out of stock across your digital menus.",
+  image: "https://hoxxes.app/images/inventor.png",
+  imageAlt: "HOXXES inventory and recipe management",
+  features: [
+    {
+      title: "Recipe-based stock deduction",
+      description:
+        "Use Cookbook recipes to automatically deduct the required ingredients from inventory whenever a product is sold."
+    },
+    {
+      title: "Stock limits & low-stock alerts",
+      description:
+        "Set minimum stock limits and receive notifications when ingredients or products reach their defined thresholds."
+    },
+    {
+      title: "Automatic out-of-stock updates",
+      description:
+        "When available stock is depleted, products are automatically marked as out of stock in digital menus, preventing customers from placing unavailable orders."
+    },
+  ],
+},
 
 {
     id: "workforce-management",
@@ -283,7 +331,7 @@ const modules: SoftwareModule[] = [
     title: "Attendance with location verification.",
     description:
       "Manage employee attendance with desktop and mobile punch in/out and configurable working zones.",
-    image: "https://hoxxes.app/images/punch.png",
+    image: "https://hoxxes.app/images/punch2.png",
     imageAlt: "HOXXES workforce attendance interface",
     features: [
       { title: "Record attendance", description: "Let employees punch in and punch out." },
@@ -298,7 +346,7 @@ const modules: SoftwareModule[] = [
     title: "Promotions that run themselves.",
     description:
       "Schedule promotional rules and campaigns to reduce repetitive manual changes across supported channels.",
-    image: "https://hoxxes.app/images/promotion.png",
+    image: "https://hoxxes.app/images/promotion2.png",
     imageAlt: "HOXXES business dashboard",
     features: [
       { title: "Schedule promotions", description: "Configure campaigns by date and time." },
@@ -313,7 +361,7 @@ const modules: SoftwareModule[] = [
     title: "Control every location from a single HQ.",
     description:
       "Coordinate reporting, menus, pricing, campaigns and operational oversight across locations.",
-    image: "https://hoxxes.app/images/dashboard-overview.png",
+    image: "https://hoxxes.app/images/hq.png",
     imageAlt: "HOXXES HQ Control Center",
     features: [
       { title: "Centralize management", description: "Manage menu administration and product synchronization." },
@@ -323,19 +371,31 @@ const modules: SoftwareModule[] = [
   },
 
 {
-    id: "analytics-dashboard",
-    eyebrow: "Analytics Cloud",
-    title: "Complete operational visibility.",
-    description:
-      "Monitor sales, inventory, workforce and multi-location performance from a unified dashboard.",
-    image: "https://hoxxes.app/images/analytics-dashboard.png",
-    imageAlt: "HOXXES analytics dashboard",
-    features: [
-      { title: "Understand sales", description: "Review sales performance and business trends." },
-      { title: "Monitor operations", description: "Bring inventory and workforce information into view." },
-      { title: "Follow key indicators", description: "Use dashboards and KPI tracking to support decisions." },
-    ],
-  },
+  id: "analytics-dashboard",
+  eyebrow: "Analytics Cloud",
+  title: "Complete operational visibility.",
+  description:
+    "Get a complete view of your business through detailed reports and analytics on desktop, Android and iOS. Monitor performance wherever you are.",
+  image: "https://hoxxes.app/images/analytics-dashboard2.png",
+  imageAlt: "HOXXES analytics dashboard on desktop, Android and iOS",
+  features: [
+    {
+      title: "Track business performance",
+      description:
+        "Review sales, revenue, orders and business trends through detailed reports."
+    },
+    {
+      title: "Access reports anywhere",
+      description:
+        "Monitor your business from your desktop or mobile device using Android and iOS."
+    },
+    {
+      title: "Make informed decisions",
+      description:
+        "Use daily, weekly and hourly analytics to understand performance and identify trends."
+    },
+  ],
+},
 
 
 ];
