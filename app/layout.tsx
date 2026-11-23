@@ -7,63 +7,45 @@ import CookieConsent from "@/components/CookieConsent";
 import OfferBadge from "@/components/offers/OfferBadge";
 
 import type { Metadata } from "next";
+import hoxxesSchema from "@/lib/schema";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hoxxes.com"),
-
-    icons: {
+  alternates: {
+    canonical: "/",
+  },
+  icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
-
   title: {
     default: "HOXXES | Restaurant & Retail Operating System",
     template: "%s | HOXXES",
   },
-
   description:
-    "HOXXES is a Restaurant & Retail Operating System combining POS, QR Ordering, Online Ordering, Kitchen Display Systems, Self-Service Kiosks, inventory management and analytics in one unified platform.",
-
+    "HOXXES connects restaurant and retail operations through POS, QR ordering, online ordering, kitchen display systems, self-service kiosks and business management tools.",
   applicationName: "HOXXES",
-
-  authors: [
-    {
-      name: "HOXXES",
-      url: "https://hoxxes.com",
-    },
-  ],
-
+  authors: [{ name: "HOXXES", url: "https://hoxxes.com" }],
   creator: "HOXXES",
   publisher: "HOXXES",
-
   openGraph: {
     title: "HOXXES | Restaurant & Retail Operating System",
     description:
-      "One unified platform for restaurant and retail operations — POS, QR Ordering, Online Ordering, KDS, Self-Service Kiosks, inventory and analytics.",
+      "One connected platform for restaurant and retail operations — POS, QR ordering, online ordering, KDS and self-service kiosks.",
+    url: "https://hoxxes.com",
     siteName: "HOXXES",
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "HOXXES Restaurant & Retail Operating System",
-      },
-    ],
   },
-
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "HOXXES | Restaurant & Retail Operating System",
     description:
-      "One unified platform for restaurant and retail operations — POS, QR Ordering, KDS, Self-Service Kiosks, inventory and analytics.",
-    images: ["/og-image.png"],
+      "One connected platform for restaurant and retail operations — POS, QR ordering, online ordering, KDS and self-service kiosks.",
   },
-
   robots: {
     index: true,
     follow: true,
@@ -85,6 +67,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen overflow-x-hidden bg-white text-slate-900 antialiased selection:bg-emerald-200/50">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(hoxxesSchema).replace(/</g, "\\u003c"),
+          }}
+        />
 
         {/* Background */}
         <div className="fixed inset-0 -z-10 pointer-events-none">

@@ -1,4 +1,9 @@
 import Header from "@/components/Header";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false, noarchive: true },
+};
 
 export default function ApkLayout({
   children,
@@ -7,22 +12,10 @@ export default function ApkLayout({
 }) {
   return (
     <div className="h-screen flex flex-col overflow-hidden bg-transparent text-slate-900">
-
-      {/* HEADER */}
       <header className="shrink-0 z-50">
         <Header />
       </header>
-
-      {/* CONTENT AREA (ONLY SCROLL ZONE) */}
-      <main className="flex-1 relative overflow-hidden">
-        {children}
-      </main>
-
-      {/* FOOTER (optional) */}
-      {/* <footer className="shrink-0">
-        Footer here
-      </footer> */}
-
+      <main className="flex-1 relative overflow-hidden">{children}</main>
     </div>
   );
 }

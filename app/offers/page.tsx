@@ -6,6 +6,14 @@ export const metadata = {
   title: "Special Offer | HOXXES",
   description:
     "Buy a HOXXES self-service kiosk, get an Android Stick 8K free and enjoy an additional 10% online discount. November 2–December 31, 2026.",
+  alternates: { canonical: "/offers" },
+  openGraph: {
+    title: "HOXXES Special Offer | Self-Service Kiosk",
+    description:
+      "Explore the HOXXES self-service kiosk promotion, available during the published promotional period.",
+    url: "/offers",
+    type: "website",
+  },
 };
 
 const OFFER = {
