@@ -57,7 +57,7 @@ export const products: Product[] = [
   title: "POS Terminal",
   subtitle: "Single-Screen POS",
   description: "Android POS terminal",
-  image: "https://hoxxes.app/images/pos-single.png",
+  image: "https://hoxxes.app/images/pos-single1.png",
   price: 507,
   stock: 0,
   vat: 18,
