@@ -8,8 +8,8 @@ import {
   MessageSquare,
   MessageCircle,
   Send,
-  Sparkles,
   ChevronDown,
+  Bot,
 } from "lucide-react";
 
 type Message = {
@@ -23,9 +23,9 @@ type ChatAction = {
 };
 
 const starterQuestions = [
-  "Request a Demo",
-  "View Pricing",
-  "What hardware do I need?",
+  "What can HOXXES do for my business?",
+  "Which hardware and solutions do I need?",
+  "How does HOXXES pricing work?",
 ];
 
 export default function HoxxesAIWidget() {
@@ -54,7 +54,7 @@ export default function HoxxesAIWidget() {
       const parsed = lines
         .map((line): ChatAction | null => {
           const match = line.match(
-            /(.+?)\s*→\s*(https?:\/\/\S+)/ 
+            /(.+?)\s*→\s*(https?:\/\/[^\s]+)/
           );
 
           if (!match) return null;
@@ -99,7 +99,7 @@ export default function HoxxesAIWidget() {
         {
           role: "assistant",
           content:
-            "👋 Welcome to Hoxxes AI! What would you like to explore today?",
+            "👋 Hi! How can I help your business today?",
         },
       ]);
 
@@ -164,76 +164,73 @@ export default function HoxxesAIWidget() {
 
   return (
     <>
-      
+      {/* FLOATING AI BUTTON */}
+      <AnimatePresence>
+        {!open && (
+          <motion.button
+            type="button"
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            transition={{ duration: 0.2 }}
+            onClick={() => setOpen(true)}
+            aria-label="Open Hoxxes AI Chat"
+            title="Hoxxes AI Chat"
+            className="
+              fixed
+              bottom-4
+              right-4
+              md:bottom-6
+              md:right-6
+              z-[9999]
+              flex
+              h-12
+              w-12
+              items-center
+              justify-center
+              rounded-full
+              border
+              border-transparent
+              bg-transparent
+              text-[#88d21a]
+              shadow-none
+              transition-all
+              duration-300
+              hover:bg-black/10
+              hover:border-white/10
+              hover:scale-110
+              focus-visible:outline-none
+              focus-visible:ring-2
+              focus-visible:ring-[#88d21a]
+              active:scale-95
+            "
+          >
+            {/* ORIGINAL CHAT ICON */}
+            <MessageCircle
+              className="h-11 w-11"
+              strokeWidth={2}
+              aria-hidden="true"
+            />
 
-{/* FLOATING AI BUTTON */}
-<AnimatePresence>
-  {!open && (
-    <motion.button
-      type="button"
-      initial={{ opacity: 0, scale: 0.8, y: 20 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.8, y: 20 }}
-      transition={{ duration: 0.2 }}
-      onClick={() => setOpen(true)}
-      aria-label="Open Hoxxes AI Chat"
-      title="Hoxxes AI Chat"
-      className="
-        fixed
-        bottom-4
-        right-4
-        md:bottom-6
-        md:right-6
-        z-[9999]
-        flex
-        h-12
-        w-12
-        items-center
-        justify-center
-        rounded-full
-        border
-        border-transparent
-        bg-transparent
-        text-[#88d21a]
-        shadow-none
-        transition-all
-        duration-300
-        hover:bg-black/10
-        hover:border-white/10
-        hover:scale-110
-        focus-visible:outline-none
-        focus-visible:ring-2
-        focus-visible:ring-[#88d21a]
-        active:scale-95
-      "
-    >
-      {/* CHAT ICON */}
-      <MessageCircle
-        className="h-9 w-9"
-        strokeWidth={2}
-        aria-hidden="true"
-      />
-
-      {/* AI STATUS INDICATOR */}
-      <span
-        className="
-          absolute
-          right-[1px]
-          top-[1px]
-          h-3
-          w-3
-          rounded-full
-          border-2
-          border-white
-          bg-[#88d21a]
-        "
-        aria-hidden="true"
-      />
-    </motion.button>
-  )}
-</AnimatePresence>
-
-
+            {/* AI ROBOT ICON */}
+            <Bot
+              className="
+                pointer-events-none
+                absolute
+                left-1/2
+                top-1/2
+                h-6
+                w-6
+                -translate-x-1/2
+                -translate-y-1/2
+                text-[#88d21a]
+                stroke-[1.8]
+              "
+              aria-hidden="true"
+            />
+          </motion.button>
+        )}
+      </AnimatePresence>
 
       {/* CHAT PANEL */}
       <AnimatePresence>

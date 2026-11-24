@@ -459,7 +459,18 @@ export default function Header() {
                   className="inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm text-slate-600 transition hover:bg-[#f5fce9] hover:text-[#52820f]"
                   aria-label={`Shopping cart, ${cartCount} items`}
                 >
-                  <FaBagShopping size={18} />
+                  <motion.span
+  initial={{ x: -30, opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+  transition={{
+    duration: 0.5,
+    ease: "easeOut",
+    delay: 0.2,
+  }}
+  className="inline-flex"
+>
+  <FaBagShopping size={18} />
+</motion.span>
                   <span>Cart</span>
 
                   {cartCount > 0 && (
@@ -475,21 +486,38 @@ export default function Header() {
                 aria-label="Mobile navigation links"
                 className="flex flex-col px-6 py-4"
               >
-                {/* MAIN LINKS */}
-                <div className="flex flex-col gap-3">
-                  {navLinks
-                    .filter((link) => link.label !== "Support")
-                    .map((link) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        onClick={closeMenu}
-                        className="py-1 text-base font-medium text-slate-700 transition hover:text-[#6cab12]"
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
-                </div>
+                
+{/* MAIN LINKS */}
+<div className="flex flex-col gap-3">
+  {navLinks
+    .filter((link) => link.label !== "Support")
+    .map((link) => (
+      <Link
+        key={link.href}
+        href={link.href}
+        onClick={closeMenu}
+        className="grid w-fit grid-cols-[76px_18px] items-center gap-2 py-2 text-base font-medium text-slate-700 transition hover:text-[#6cab12]"
+      >
+        <span>{link.label}</span>
+
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+          className="text-slate-400"
+        >
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </Link>
+    ))}
+</div>
+
 
                 {/* SECONDARY LINKS */}
                 <div className="mt-6 flex flex-col border-y border-slate-200">
